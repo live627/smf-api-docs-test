@@ -1,10 +1,8 @@
 ---
 layout: default
-title: Subs-MessageIndex.php
+title: ./Sources/Subs-MessageIndex.php
 count: 1
 ---
-
-# ./Sources/Subs-MessageIndex.php
 
 ### getBoardList
 
@@ -16,7 +14,7 @@ Executes the query and returns the list
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-array|$boardListOptions|An array of options for the board list
+`array`|`$boardListOptions`|An array of options for the board list
 

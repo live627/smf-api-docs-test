@@ -1,10 +1,8 @@
 ---
 layout: default
-title: ManagePermissions.php
+title: ./Sources/ManagePermissions.php
 count: 21
 ---
-
-# ./Sources/ManagePermissions.php
 
 ### ModifyPermissions
 
@@ -17,7 +15,6 @@ Checks the permissions, based on the sub-action.
 Called by ?action=managepermissions.
 
 Uses ManagePermissions language file.
-
 
 ### PermissionIndex
 
@@ -32,14 +29,12 @@ Creates an array of all the groups with the number of members and permissions.
 Uses ManagePermissions language file.
 Uses ManagePermissions template file.
 
-
 ### PermissionByBoard
 
 ```php
 function PermissionByBoard()
 ```
 Handle permissions by board... more or less. :P
-
 
 
 
@@ -53,14 +48,12 @@ permission manager index.
 
 
 
-
 ### ModifyMembergroup
 
 ```php
 function ModifyMembergroup()
 ```
 Initializes the necessary to modify a membergroup's permissions.
-
 
 
 
@@ -73,7 +66,6 @@ This function actually saves modifications to a membergroup's board permissions.
 
 
 
-
 ### GeneralPermissionSettings
 
 ```php
@@ -83,9 +75,9 @@ A screen to set some general settings for permissions.
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-bool|$return_config|Whether to return the $config_vars array (used for admin search)
+`bool`|`$return_config`|Whether to return the $config_vars array (used for admin search)
 
 ### setPermissionLevel
 
@@ -96,11 +88,11 @@ Set the permission level for a specific profile, group, or group for a profile.
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$level|The level ('restrict', 'standard', etc.)
-int|$group|The group to set the permission for
-string&#124;int|$profile|The ID of the permissions profile or 'null' if we're setting it for a group
+`string`|`$level`|The level ('restrict', 'standard', etc.)
+`int`|`$group`|The group to set the permission for
+`string&#124;int`|`$profile`|The ID of the permissions profile or 'null' if we're setting it for a group
 
 ### loadAllPermissions
 
@@ -108,7 +100,6 @@ string&#124;int|$profile|The ID of the permissions profile or 'null' if we're se
 function loadAllPermissions()
 ```
 Load permissions into $context['permissions'].
-
 
 
 
@@ -128,10 +119,10 @@ compatibility, it is also possible to pass group IDs in via the
 $excluded_groups parameter, which will exclude the groups from the forms for
 all of the permissions passed in via $permissions.
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-array|$permissions|The permissions to display inline
-array|$excluded_groups|The IDs of one or more groups to exclude
+`array`|`$permissions`|The permissions to display inline
+`array`|`$excluded_groups`|The IDs of one or more groups to exclude
 
 Uses ManagePermissions language
 Uses ManagePermissions template
@@ -146,9 +137,9 @@ Show a collapsible box to set a specific permission.
 The function is called by templates to show a list of permissions settings.
 Calls the template function template_inline_permissions().
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$permission|The permission to display inline
+`string`|`$permission`|The permission to display inline
 
 ### save_inline_permissions
 
@@ -159,9 +150,9 @@ Save the permissions of a form containing inline permissions.
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-array|$permissions|The permissions to save
+`array`|`$permissions`|The permissions to save
 
 ### loadPermissionProfiles
 
@@ -169,7 +160,6 @@ array|$permissions|The permissions to save
 function loadPermissionProfiles()
 ```
 Load permissions profiles.
-
 
 
 
@@ -182,7 +172,6 @@ Add/Edit/Delete profiles.
 
 
 
-
 ### updateChildPermissions
 
 ```php
@@ -192,10 +181,10 @@ This function updates the permissions of any groups based off this group.
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-null&#124;array|$parents|The parent groups
-null&#124;int|$profile|the ID of a permissions profile to update
+`null&#124;array`|`$parents`|The parent groups
+`null&#124;int`|`$profile`|the ID of a permissions profile to update
 
 ### loadIllegalPermissions
 
@@ -203,7 +192,6 @@ null&#124;int|$profile|the ID of a permissions profile to update
 function loadIllegalPermissions()
 ```
 Load permissions someone cannot grant.
-
 
 
 
@@ -217,7 +205,6 @@ Loads the permissions that can not be given to guests.
 Stores the permissions in $context['non_guest_permissions'].
 Also populates $context['permissions_excluded'] with the info.
 
-
 ### loadIllegalBBCHtmlGroups
 
 ```php
@@ -226,7 +213,6 @@ function loadIllegalBBCHtmlGroups()
 Loads a list of membergroups who cannot be granted the bbc_html permission.
 
 Stores the groups in $context['permissions_excluded']['bbc_html'].
-
 
 ### removeIllegalBBCHtmlPermission
 
@@ -237,9 +223,9 @@ Removes the bbc_html permission from anyone who shouldn't have it
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-bool|$reload|Before acting, refresh the list of membergroups who cannot be granted the bbc_html permission
+`bool`|`$reload`|Before acting, refresh the list of membergroups who cannot be granted the bbc_html permission
 
 ### updateBoardManagers
 
@@ -250,14 +236,12 @@ Makes sure $modSettings['board_manager_groups'] is up to date.
 
 
 
-
 ### ModifyPostModeration
 
 ```php
 function ModifyPostModeration()
 ```
 Present a nice way of applying post moderation.
-
 
 
 

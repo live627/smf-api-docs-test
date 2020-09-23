@@ -1,10 +1,8 @@
 ---
 layout: default
-title: Subs-Members.php
+title: ./Sources/Subs-Members.php
 count: 11
 ---
-
-# ./Sources/Subs-Members.php
 
 ### deleteMembers
 
@@ -24,10 +22,10 @@ error logs, ban logs and moderation logs.
 ban entries, theme settings, moderator positions, poll and votes.
   - updates member statistics afterwards.
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-int&#124;array|$users|The ID of a user or an array of user IDs
-bool|$check_not_admin|Whether to verify that the users aren't admins
+`int&#124;array`|`$users`|The ID of a user or an array of user IDs
+`bool`|`$check_not_admin`|Whether to verify that the users aren't admins
 
 ### registerMember
 
@@ -44,10 +42,10 @@ Allows to perform several checks on the input, e.g. reserved names.
 The function will adjust member statistics.
 If an error is detected will fatal error on all errors unless return_errors is true.
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-array|$regOptions|An array of registration options
-bool|$return_errors|Whether to return the errors
+`array`|`$regOptions`|An array of registration options
+`bool`|`$return_errors`|Whether to return the errors
 
 ### isReservedName
 
@@ -62,12 +60,12 @@ Check if a name is in the reserved words list.
 - the id_member variable is used to ignore duplicate matches with the
 current member.
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$name|The name to check
-int|$current_id_member|The ID of the current member (to avoid false positives with the current member)
-bool|$is_name|Whether we're checking against reserved names or just usernames
-bool|$fatal|Whether to die with a fatal error if the name is reserved
+`string`|`$name`|The name to check
+`int`|`$current_id_member`|The ID of the current member (to avoid false positives with the current member)
+`bool`|`$is_name`|Whether we're checking against reserved names or just usernames
+`bool`|`$fatal`|Whether to die with a fatal error if the name is reserved
 
 ### groupsAllowedTo
 
@@ -80,10 +78,10 @@ If board_id is not null, a board permission is assumed.
 
 The function takes different permission settings into account.
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$permission|The permission to check
-int|$board_id|= null If set, checks permissions for the specified board
+`string`|`$permission`|The permission to check
+`int`|`$board_id`|= null If set, checks permissions for the specified board
 
 ### membersAllowedTo
 
@@ -97,10 +95,10 @@ If board_id is not null, a board permission is assumed.
 Takes different permission settings into account.
 Takes possible moderators (on board 'board_id') into account.
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$permission|The permission to check
-int|$board_id|If set, checks permission for that specific board
+`string`|`$permission`|The permission to check
+`int`|`$board_id`|If set, checks permission for that specific board
 
 ### reattributePosts
 
@@ -113,12 +111,12 @@ Reattribute guest posts to a specified member.
 Does not check for any permissions.
 If add_to_post_count is set, the member's post count is increased.
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-int|$memID|The ID of the original poster
-bool&#124;string|$email|If set, should be the email of the poster
-bool&#124;string|$membername|If set, the membername of the poster
-bool|$post_count|Whether to adjust post counts
+`int`|`$memID`|The ID of the original poster
+`bool&#124;string`|`$email`|If set, should be the email of the poster
+`bool&#124;string`|`$membername`|If set, the membername of the poster
+`bool`|`$post_count`|Whether to adjust post counts
 
 ### BuddyListToggle
 
@@ -131,7 +129,6 @@ Requires profile_identity_own permission.
 Called by ?action=buddy;u=x;session_id=y.
 Redirects to ?action=profile;u=x.
 
-
 ### list_getMembers
 
 ```php
@@ -141,14 +138,14 @@ Callback for createList().
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-int|$start|Which item to start with (for pagination purposes)
-int|$items_per_page|How many items to show per page
-string|$sort|An SQL query indicating how to sort the results
-string|$where|An SQL query used to filter the results
-array|$where_params|An array of parameters for $where
-bool|$get_duplicates|Whether to get duplicates (used for the admin member list)
+`int`|`$start`|Which item to start with (for pagination purposes)
+`int`|`$items_per_page`|How many items to show per page
+`string`|`$sort`|An SQL query indicating how to sort the results
+`string`|`$where`|An SQL query used to filter the results
+`array`|`$where_params`|An array of parameters for $where
+`bool`|`$get_duplicates`|Whether to get duplicates (used for the admin member list)
 
 ### list_getNumMembers
 
@@ -159,10 +156,10 @@ Callback for createList().
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$where|An SQL query to filter the results
-array|$where_params|An array of parameters for $where
+`string`|`$where`|An SQL query to filter the results
+`array`|`$where_params`|An array of parameters for $where
 
 ### populateDuplicateMembers
 
@@ -173,9 +170,9 @@ Find potential duplicate registration members based on the same IP address
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-array|$members|An array of members
+`array`|`$members`|An array of members
 
 ### generateValidationCode
 
@@ -183,7 +180,6 @@ array|$members|An array of members
 function generateValidationCode()
 ```
 Generate a random validation code.
-
 
 
 

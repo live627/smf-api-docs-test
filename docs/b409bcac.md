@@ -1,10 +1,8 @@
 ---
 layout: default
-title: RepairBoards.php
+title: ./Sources/RepairBoards.php
 count: 5
 ---
-
-# ./Sources/RepairBoards.php
 
 ### RepairBoards
 
@@ -17,7 +15,6 @@ Requires the admin_forum permission.
 Calls createSalvageArea() to create a new board, if necessary.
 Accessed by ?action=admin;area=repairboards.
 
-
 ### pauseRepairProcess
 
 ```php
@@ -29,12 +26,12 @@ Called when 3 or more seconds have passed while searching for errors.
 If max_substep is set, $_GET['substep'] / $max_substep is the percent
 done this step is.
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-array|$to_fix|An array of information about what to fix
-string|$current_step_description|The description of the current step
-int|$max_substep|The maximum substep to reach before pausing
-bool|$force|Whether to force pausing even if we don't really need to
+`array`|`$to_fix`|An array of information about what to fix
+`string`|`$current_step_description`|The description of the current step
+`int`|`$max_substep`|The maximum substep to reach before pausing
+`bool`|`$force`|Whether to force pausing even if we don't really need to
 
 ### loadForumTests
 
@@ -42,7 +39,6 @@ bool|$force|Whether to force pausing even if we don't really need to
 function loadForumTests()
 ```
 Load up all the tests we might want to do ;)
-
 
 
 
@@ -56,9 +52,9 @@ Checks for errors in steps, until 5 seconds have passed.
 It keeps track of the errors it did find, so that the actual repair
 won't have to recheck everything.
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-bool|$do_fix|Whether to actually fix the errors or just return the info
+`bool`|`$do_fix`|Whether to actually fix the errors or just return the info
 
 ### createSalvageArea
 
@@ -68,5 +64,4 @@ function createSalvageArea()
 Create a salvage area for repair purposes, if one doesn't already exist.
 
 Uses the forum's default language, and checks based on that name.
-
 

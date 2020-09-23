@@ -1,10 +1,8 @@
 ---
 layout: default
-title: ScheduledTasks.php
+title: ./Sources/ScheduledTasks.php
 count: 15
 ---
-
-# ./Sources/ScheduledTasks.php
 
 ### AutoTask
 
@@ -12,7 +10,6 @@ count: 15
 function AutoTask()
 ```
 This function works out what to do!
-
 
 
 
@@ -25,14 +22,12 @@ Do some daily cleaning up.
 
 
 
-
 ### scheduled_daily_digest
 
 ```php
 function scheduled_daily_digest()
 ```
 Send out a daily email of all subscribed topics.
-
 
 
 
@@ -45,7 +40,6 @@ Like the daily stuff - just seven times less regular ;)
 
 
 
-
 ### ReduceMailQueue
 
 ```php
@@ -55,11 +49,11 @@ Send a group of emails from the mail queue.
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-bool&#124;int|$number|The number to send each loop through or false to use the standard limits
-bool|$override_limit|Whether to bypass the limit
-bool|$force_send|Whether to forcibly send the messages now (useful when using cron jobs)
+`bool&#124;int`|`$number`|The number to send each loop through or false to use the standard limits
+`bool`|`$override_limit`|Whether to bypass the limit
+`bool`|`$force_send`|Whether to forcibly send the messages now (useful when using cron jobs)
 
 ### CalculateNextTrigger
 
@@ -70,10 +64,10 @@ Calculate the next time the passed tasks should be triggered.
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string&#124;array|$tasks|The ID of a single task or an array of tasks
-bool|$forceUpdate|Whether to force the tasks to run now
+`string&#124;array`|`$tasks`|The ID of a single task or an array of tasks
+`bool`|`$forceUpdate`|Whether to force the tasks to run now
 
 ### next_time
 
@@ -84,11 +78,11 @@ Simply returns a time stamp of the next instance of these time parameters.
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-int|$regularity|The regularity
-string|$unit|What unit are we using - 'm' for minutes, 'd' for days, 'w' for weeks or anything else for seconds
-int|$offset|The offset
+`int`|`$regularity`|The regularity
+`string`|`$unit`|What unit are we using - 'm' for minutes, 'd' for days, 'w' for weeks or anything else for seconds
+`int`|`$offset`|The offset
 
 ### loadEssentialThemeData
 
@@ -96,7 +90,6 @@ int|$offset|The offset
 function loadEssentialThemeData()
 ```
 This loads the bare minimum data to allow us to load language files!
-
 
 
 
@@ -109,14 +102,12 @@ This retieves data (e.g. last version of SMF) from sm.org
 
 
 
-
 ### scheduled_birthdayemails
 
 ```php
 function scheduled_birthdayemails()
 ```
 Happy birthday!!
-
 
 
 
@@ -129,14 +120,12 @@ Weekly maintenance
 
 
 
-
 ### scheduled_paid_subscriptions
 
 ```php
 function scheduled_paid_subscriptions()
 ```
 Perform the standard checks on expiring/near expiring subscriptions.
-
 
 
 
@@ -150,7 +139,6 @@ This function uses opendir cycling through all the attachments
 
 
 
-
 ### scheduled_remove_topic_redirect
 
 ```php
@@ -160,14 +148,12 @@ Check for move topic notices that have past their best by date
 
 
 
-
 ### scheduled_remove_old_drafts
 
 ```php
 function scheduled_remove_old_drafts()
 ```
 Check for old drafts and remove them
-
 
 
 

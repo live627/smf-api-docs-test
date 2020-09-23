@@ -1,10 +1,8 @@
 ---
 layout: default
-title: DbSearch-postgresql.php
+title: ./Sources/DbSearch-postgresql.php
 count: 5
 ---
-
-# ./Sources/DbSearch-postgresql.php
 
 ### db_search_init
 
@@ -12,7 +10,6 @@ count: 5
 function db_search_init()
 ```
 Add the file functions to the $smcFunc array.
-
 
 
 
@@ -25,9 +22,9 @@ This function will tell you whether this database type supports this search type
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$search_type|The search type
+`string`|`$search_type`|The search type
 
 ### smf_db_search_query
 
@@ -38,12 +35,12 @@ Returns the correct query for this search type.
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$identifier|A query identifier
-string|$db_string|The query text
-array|$db_values|An array of values to pass to $smcFunc['db_query']
-resource|$connection|The current DB connection resource
+`string`|`$identifier`|A query identifier
+`string`|`$db_string`|The query text
+`array`|`$db_values`|An array of values to pass to $smcFunc['db_query']
+`resource`|`$connection`|The current DB connection resource
 
 ### smf_db_create_word_search
 
@@ -54,9 +51,9 @@ Highly specific function, to create the custom word index table.
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$size|The column size type (int, mediumint (8), etc.). Not used here.
+`string`|`$size`|The column size type (int, mediumint (8), etc.). Not used here.
 
 ### smf_db_search_language
 
@@ -64,7 +61,6 @@ string|$size|The column size type (int, mediumint (8), etc.). Not used here.
 function smf_db_search_language()
 ```
 Return the language for the textsearch index
-
 
 
 

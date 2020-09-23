@@ -1,10 +1,8 @@
 ---
 layout: default
-title: Stats.template.php
+title: ./Themes/default/Stats.template.php
 count: 1
 ---
-
-# ./Themes/default/Stats.template.php
 
 ### template_main
 
@@ -12,7 +10,6 @@ count: 1
 function template_main()
 ```
 The stats page.
-
 
 
 

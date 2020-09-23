@@ -1,10 +1,8 @@
 ---
 layout: default
-title: Display.php
+title: ./Sources/Display.php
 count: 4
 ---
-
-# ./Sources/Display.php
 
 ### Display
 
@@ -20,7 +18,6 @@ It jumps to the correct post depending on a number/time/IS_MSG passed.
 It depends on the messages_per_page, defaultMaxMessages and enableAllMessages settings.
 It is accessed by ?topic=id_topic.START.
 
-
 ### prepareDisplayContext
 
 ```php
@@ -32,9 +29,9 @@ It actually gets and prepares the message context.
 This function will start over from the beginning if reset is set to true, which is
 useful for showing an index before or after the posts.
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-bool|$reset|Whether or not to reset the db seek pointer
+`bool`|`$reset`|Whether or not to reset the db seek pointer
 
 ### Download
 
@@ -45,14 +42,12 @@ Once upon a time, this function handled downloading attachments.
 
 Now it's just an alias retained for the sake of backwards compatibility.
 
-
 ### QuickInTopicModeration
 
 ```php
 function QuickInTopicModeration()
 ```
 In-topic quick moderation.
-
 
 
 

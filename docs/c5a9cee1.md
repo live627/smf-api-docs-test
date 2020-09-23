@@ -1,10 +1,8 @@
 ---
 layout: default
-title: Agreement.php
+title: ./Sources/Agreement.php
 count: 5
 ---
-
-# ./Sources/Agreement.php
 
 ### prepareAgreementContext
 

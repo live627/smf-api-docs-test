@@ -1,10 +1,8 @@
 ---
 layout: default
-title: Notify.php
+title: ./Sources/Notify.php
 count: 3
 ---
-
-# ./Sources/Notify.php
 
 ### BoardNotify
 
@@ -17,7 +15,6 @@ Must be called with a board specified in the URL.
 Only uses the template if no mode (or subaction) was given.
 Redirects the user back to the board after it is done.
 Accessed via ?action=notifyboard.
-
 
 ### TopicNotify
 
@@ -32,7 +29,6 @@ The mode can be from 0 to 3
 Upon successful completion of action will direct user back to topic.
 Accessed via ?action=notifytopic.
 
-
 ### AnnouncementsNotify
 
 ```php
@@ -42,5 +38,4 @@ Turn off/on notifications for announcements.
 
 Only uses the template if no mode was given.
 Accessed via ?action=notifyannouncements.
-
 

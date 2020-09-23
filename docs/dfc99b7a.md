@@ -1,10 +1,8 @@
 ---
 layout: default
-title: Subs-Graphics.php
+title: ./Sources/Subs-Graphics.php
 count: 15
 ---
-
-# ./Sources/Subs-Graphics.php
 
 ### downloadAvatar
 
@@ -19,12 +17,12 @@ downloads a file from a url and stores it locally for avatar use by id_member.
 - updates the database info for the member's avatar.
 - returns whether the download and resize was successful.
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$url|The full path to the temporary file
-int|$memID|The member ID
-int|$max_width|The maximum allowed width for the avatar
-int|$max_height|The maximum allowed height for the avatar
+`string`|`$url`|The full path to the temporary file
+`int`|`$memID`|The member ID
+`int`|`$max_width`|The maximum allowed width for the avatar
+`int`|`$max_height`|The maximum allowed height for the avatar
 
 ### createThumbnail
 
@@ -35,11 +33,11 @@ Create a thumbnail of the given source.
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$source|The name of the source image
-int|$max_width|The maximum allowed width
-int|$max_height|The maximum allowed height
+`string`|`$source`|The name of the source image
+`int`|`$max_width`|The maximum allowed width
+`int`|`$max_height`|The maximum allowed height
 
 ### reencodeImage
 
@@ -52,10 +50,10 @@ Used to re-econodes an image to a specified image format
 - the file would have the format preferred_format if possible, otherwise the default format is jpeg.
 - the function makes sure that all non-essential image contents are disposed.
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$fileName|The path to the file
-int|$preferred_format|The preferred format - 0 to automatically determine, 1 for gif, 2 for jpg, 3 for png, 6 for bmp and 15 for wbmp
+`string`|`$fileName`|The path to the file
+`int`|`$preferred_format`|The preferred format - 0 to automatically determine, 1 for gif, 2 for jpg, 3 for png, 6 for bmp and 15 for wbmp
 
 ### checkImageContents
 
@@ -66,10 +64,10 @@ Searches through the file to see if there's potentially harmful non-binary conte
 
 - if extensiveCheck is true, searches for asp/php short tags as well.
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$fileName|The path to the file
-bool|$extensiveCheck|Whether to perform extensive checks
+`string`|`$fileName`|The path to the file
+`bool`|`$extensiveCheck`|Whether to perform extensive checks
 
 ### checkGD
 
@@ -78,7 +76,6 @@ function checkGD()
 ```
 Sets a global $gd2 variable needed by some functions to determine
 whether the GD2 library is present.
-
 
 
 
@@ -91,14 +88,12 @@ Checks whether the Imagick class is present.
 
 
 
-
 ### checkMagickWand
 
 ```php
 function checkMagickWand()
 ```
 Checks whether the MagickWand extension is present.
-
 
 
 
@@ -111,9 +106,9 @@ See if we have enough memory to thumbnail an image
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-array|$sizes|image size
+`array`|`$sizes`|image size
 
 ### resizeImageFile
 
@@ -126,13 +121,13 @@ Puts the resized image at the destination location.
 The file would have the format preferred_format if possible,
 otherwise the default format is jpeg.
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$source|The path to the source image
-string|$destination|The path to the destination image
-int|$max_width|The maximum allowed width
-int|$max_height|The maximum allowed height
-int|$preferred_format|- The preferred format (0 to use jpeg, 1 for gif, 2 to force jpeg, 3 for png, 6 for bmp and 15 for wbmp)
+`string`|`$source`|The path to the source image
+`string`|`$destination`|The path to the destination image
+`int`|`$max_width`|The maximum allowed width
+`int`|`$max_height`|The maximum allowed height
+`int`|`$preferred_format`|- The preferred format (0 to use jpeg, 1 for gif, 2 to force jpeg, 3 for png, 6 for bmp and 15 for wbmp)
 
 ### resizeImage
 
@@ -148,16 +143,16 @@ if possible, default is jpeg.
 
 Uses Imagemagick (IMagick or MagickWand extension) or GD
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-resource|$src_img|The source image
-string|$destName|The path to the destination image
-int|$src_width|The width of the source image
-int|$src_height|The height of the source image
-int|$max_width|The maximum allowed width
-int|$max_height|The maximum allowed height
-bool|$force_resize|= false Whether to forcibly resize it
-int|$preferred_format|- 1 for gif, 2 for jpeg, 3 for png, 6 for bmp or 15 for wbmp
+`resource`|`$src_img`|The source image
+`string`|`$destName`|The path to the destination image
+`int`|`$src_width`|The width of the source image
+`int`|`$src_height`|The height of the source image
+`int`|`$max_width`|The maximum allowed width
+`int`|`$max_height`|The maximum allowed height
+`bool`|`$force_resize`|= false Whether to forcibly resize it
+`int`|`$preferred_format`|- 1 for gif, 2 for jpeg, 3 for png, 6 for bmp or 15 for wbmp
 
 ### imagecopyresamplebicubic
 
@@ -168,18 +163,18 @@ Copy image.
 
 Used when imagecopyresample() is not available.
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-resource|$dst_img|The destination image - a GD image resource
-resource|$src_img|The source image - a GD image resource
-int|$dst_x|The "x" coordinate of the destination image
-int|$dst_y|The "y" coordinate of the destination image
-int|$src_x|The "x" coordinate of the source image
-int|$src_y|The "y" coordinate of the source image
-int|$dst_w|The width of the destination image
-int|$dst_h|The height of the destination image
-int|$src_w|The width of the destination image
-int|$src_h|The height of the destination image
+`resource`|`$dst_img`|The destination image - a GD image resource
+`resource`|`$src_img`|The source image - a GD image resource
+`int`|`$dst_x`|The "x" coordinate of the destination image
+`int`|`$dst_y`|The "y" coordinate of the destination image
+`int`|`$src_x`|The "x" coordinate of the source image
+`int`|`$src_y`|The "y" coordinate of the source image
+`int`|`$dst_w`|The width of the destination image
+`int`|`$dst_h`|The height of the destination image
+`int`|`$src_w`|The width of the destination image
+`int`|`$src_h`|The height of the destination image
 
 ### imagecreatefrombmp
 
@@ -191,9 +186,9 @@ It only supports uncompressed bitmaps.
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$filename|The name of the file
+`string`|`$filename`|The name of the file
 
 ### gif_outputAsPng
 
@@ -204,11 +199,11 @@ Writes a gif file to disk as a png file.
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-\gif_file|$gif|A gif image resource
-string|$lpszFileName|The name of the file
-int|$background_color|The background color
+`\gif_file`|`$gif`|A gif image resource
+`string`|`$lpszFileName`|The name of the file
+`int`|`$background_color`|The background color
 
 ### showCodeImage
 
@@ -221,9 +216,9 @@ Requires the GD extension.
 Uses a random font for each letter from default_theme_dir/fonts.
 Outputs a gif or a png (depending on whether gif ix supported).
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$code|The code to display
+`string`|`$code`|The code to display
 
 ### showLetterImage
 
@@ -235,7 +230,7 @@ Show a letter for the visual verification code.
 Alternative function for showCodeImage() in case GD is missing.
 Includes an image from a random sub directory of default_theme_dir/fonts.
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$letter|A letter to show as an image
+`string`|`$letter`|A letter to show as an image
 

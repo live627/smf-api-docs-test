@@ -1,10 +1,8 @@
 ---
 layout: default
-title: Post.php
+title: ./Sources/Post.php
 count: 8
 ---
-
-# ./Sources/Post.php
 
 ### Post
 
@@ -19,9 +17,9 @@ Handles showing the post screen, loading the post to be modified, and loading an
 - shows options for the editing and posting of calendar events and attachments, as well as the posting of polls.
 - accessed from ?action=post.
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-array|$post_errors|Holds any errors found while tyring to post
+`array`|`$post_errors`|Holds any errors found while tyring to post
 
 ### Post2
 
@@ -35,7 +33,6 @@ handles attachment, post, and calendar saving.
 sends off notifications, and allows for announcements and moderation.
 accessed from ?action=post2.
 
-
 ### AnnounceTopic
 
 ```php
@@ -48,7 +45,6 @@ requires the announce_topic permission.
 uses the ManageMembers template and Post language file.
 call the right function based on the sub-action.
 
-
 ### AnnouncementSelectMembergroup
 
 ```php
@@ -57,7 +53,6 @@ function AnnouncementSelectMembergroup()
 Allow a user to chose the membergroups to send the announcement to.
 
 lets the user select the membergroups that will receive the topic announcement.
-
 
 ### AnnouncementSend
 
@@ -71,7 +66,6 @@ composes notification messages in all languages needed.
 does the actual sending of the topic announcements in chunks.
 calculates a rough estimate of the percentage items sent.
 
-
 ### getTopic
 
 ```php
@@ -82,7 +76,6 @@ Get the topic for display purposes.
 gets a summary of the most recent posts in a topic.
 depends on the topicSummaryPosts setting.
 if you are editing a post, only shows posts previous to that post.
-
 
 ### QuoteFast
 
@@ -95,7 +88,6 @@ uses the Post language file.
 uses special (sadly browser dependent) javascript to parse entities for internationalization reasons.
 accessed with ?action=quotefast.
 
-
 ### JavaScriptModify
 
 ```php
@@ -103,7 +95,6 @@ function JavaScriptModify()
 ```
 Used to edit the body or subject of a message inline
 called from action=jsmodify from script and topic js
-
 
 
 

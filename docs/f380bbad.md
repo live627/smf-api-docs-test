@@ -1,10 +1,8 @@
 ---
 layout: default
-title: Load.php
+title: ./Sources/Load.php
 count: 31
 ---
-
-# ./Sources/Load.php
 
 ### reloadSettings
 
@@ -12,7 +10,6 @@ count: 31
 function reloadSettings()
 ```
 Load the $modSettings array.
-
 
 
 
@@ -32,7 +29,6 @@ What it does:
 	- if validation fails for the user, $id_member is set to 0.
 	- updates the last visit time when needed.
 
-
 ### loadMinUserInfo
 
 ```php
@@ -42,9 +38,9 @@ Load minimal user info from members table.
 
 Intended for use by background tasks that need to populate $user_info.
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-int&#124;array|$user_ids|The users IDs to get the data for.
+`int&#124;array`|`$user_ids`|The users IDs to get the data for.
 
 ### loadBoard
 
@@ -62,14 +58,12 @@ What it does:
 - adds group id 3 if the user is a local moderator for the board they are in.
 - prevents access if user is not in proper group nor a local moderator of the board.
 
-
 ### loadPermissions
 
 ```php
 function loadPermissions()
 ```
 Load this user's permissions.
-
 
 
 
@@ -82,11 +76,11 @@ Loads an array of users' data by ID or member_name.
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-array&#124;string|$users|An array of users by id or name or a single username/id
-bool|$is_name|Whether $users contains names
-string|$set|What kind of data to load (normal, profile, minimal)
+`array&#124;string`|`$users`|An array of users by id or name or a single username/id
+`bool`|`$is_name`|Whether $users contains names
+`string`|`$set`|What kind of data to load (normal, profile, minimal)
 
 ### loadMemberContext
 
@@ -97,10 +91,10 @@ Loads the user's basic values... meant for template/theme usage.
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-int|$user|The ID of a user previously loaded by {@link loadMemberData()}
-bool|$display_custom_fields|Whether or not to display custom profile fields
+`int`|`$user`|The ID of a user previously loaded by {@link loadMemberData()}
+`bool`|`$display_custom_fields`|Whether or not to display custom profile fields
 
 ### loadMemberCustomFields
 
@@ -111,10 +105,10 @@ Loads the user's custom profile fields
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-int&#124;array|$users|A single user ID or an array of user IDs
-string&#124;array|$params|Either a string or an array of strings with profile field names
+`int&#124;array`|`$users`|A single user ID or an array of user IDs
+`string&#124;array`|`$params`|Either a string or an array of strings with profile field names
 
 ### detectBrowser
 
@@ -123,7 +117,6 @@ function detectBrowser()
 ```
 Loads information about what browser the user is viewing with and places it in $context
  - uses the class from {@link Class-BrowserDetect.php}
-
 
 
 
@@ -136,9 +129,9 @@ Are we using this browser?
 
 Wrapper function for detectBrowser
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$browser|The browser we are checking for.
+`string`|`$browser`|The browser we are checking for.
 
 ### loadTheme
 
@@ -149,10 +142,10 @@ Load a theme, by ID.
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-int|$id_theme|The ID of the theme to load
-bool|$initialize|Whether or not to initialize a bunch of theme-related variables/settings
+`int`|`$id_theme`|The ID of the theme to load
+`bool`|`$initialize`|Whether or not to initialize a bunch of theme-related variables/settings
 
 ### loadTemplate
 
@@ -165,11 +158,11 @@ What this function does:
 - loads a template file with the name template_name from the current, default, or base theme.
 - detects a wrong default theme directory and tries to work around it.
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$template_name|The name of the template to load
-array&#124;string|$style_sheets|The name of a single stylesheet or an array of names of stylesheets to load
-bool|$fatal|If true, dies with an error message if the template cannot be found
+`string`|`$template_name`|The name of the template to load
+`array&#124;string`|`$style_sheets`|The name of a single stylesheet or an array of names of stylesheets to load
+`bool`|`$fatal`|If true, dies with an error message if the template cannot be found
 
 ### loadSubTemplate
 
@@ -183,10 +176,10 @@ What it does:
  - if ?debug is in the query string, shows administrators a marker after every sub template
 for debugging purposes.
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$sub_template_name|The name of the sub-template to load
-bool|$fatal|Whether to die with an error if the sub-template can't be loaded
+`string`|`$sub_template_name`|The name of the sub-template to load
+`bool`|`$fatal`|Whether to die with an error if the sub-template can't be loaded
 
 ### loadCSSFile
 
@@ -197,10 +190,10 @@ Add a CSS file for output later
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$fileName|The name of the file to load
-array|$params|An array of parameters
+`string`|`$fileName`|The name of the file to load
+`array`|`$params`|An array of parameters
 Keys are the following:
 	- ['external'] (true/false): define if the file is a externally located file. Needs to be set to true if you are loading an external file
 	- ['default_theme'] (true/false): force use of default theme url
@@ -211,7 +204,7 @@ Keys are the following:
  - ['minimize'] boolean to add your file to the main minimized file. Useful when you have a file thats loaded everywhere and for everyone.
  - ['order_pos'] int define the load order, when not define it's loaded in the middle, before index.css = -500, after index.css = 500, middle = 3000, end (i.e. after responsive.css) = 10000
  - ['attributes'] array extra attributes to add to the element
-string|$id|An ID to stick on the end of the filename for caching purposes
+`string`|`$id`|An ID to stick on the end of the filename for caching purposes
 
 ### addInlineCss
 
@@ -224,9 +217,9 @@ Add a block of inline css code to be executed later
   or for scripts that require help from PHP/whatever, this can be useful.
 - all code added with this function is added to the same <style> tag so do make sure your css is valid!
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$css|Some css code
+`string`|`$css`|Some css code
 
 ### loadJavaScriptFile
 
@@ -237,10 +230,10 @@ Add a Javascript file for output later
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$fileName|The name of the file to load
-array|$params|An array of parameter info
+`string`|`$fileName`|The name of the file to load
+`array`|`$params`|An array of parameter info
 Keys are the following:
 	- ['external'] (true/false): define if the file is a externally located file. Needs to be set to true if you are loading an external file
 	- ['default_theme'] (true/false): force use of default theme url
@@ -252,7 +245,7 @@ default theme if not found in the current theme
  - ['seed'] (true/false/string): if true or null, use cache stale, false do not, or used a supplied string
  - ['minimize'] boolean to add your file to the main minimized file. Useful when you have a file thats loaded everywhere and for everyone.
  - ['attributes'] array extra attributes to add to the element
-string|$id|An ID to stick on the end of the filename
+`string`|`$id`|An ID to stick on the end of the filename
 
 ### addJavaScriptVar
 
@@ -264,11 +257,11 @@ Cleaner and easier (for modders) than to use the function below.
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$key|The key for this variable
-string|$value|The value
-bool|$escape|Whether or not to escape the value
+`string`|`$key`|The key for this variable
+`string`|`$value`|The value
+`bool`|`$escape`|Whether or not to escape the value
 
 ### addInlineJavaScript
 
@@ -281,10 +274,10 @@ Add a block of inline Javascript code to be executed later
   or for scripts that require help from PHP/whatever, this can be useful.
 - all code added with this function is added to the same <script> tag so do make sure your JS is clean!
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$javascript|Some JS code
-bool|$defer|Whether the script should load in <head> or before the closing <html> tag
+`string`|`$javascript`|Some JS code
+`bool`|`$defer`|Whether the script should load in <head> or before the closing <html> tag
 
 ### loadLanguage
 
@@ -295,12 +288,12 @@ Load a language file.  Tries the current and default themes as well as the user 
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$template_name|The name of a template file
-string|$lang|A specific language to load this file from
-bool|$fatal|Whether to die with an error if it can't be loaded
-bool|$force_reload|Whether to load the file again if it's already loaded
+`string`|`$template_name`|The name of a template file
+`string`|`$lang`|A specific language to load this file from
+`bool`|`$fatal`|Whether to die with an error if it can't be loaded
+`bool`|`$force_reload`|Whether to load the file again if it's already loaded
 
 ### getBoardParents
 
@@ -312,9 +305,9 @@ It finds all the parents of id_parent, and that board itself.
 
 Additionally, it detects the moderators of said boards.
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-int|$id_parent|The ID of the parent board
+`int`|`$id_parent`|The ID of the parent board
 
 ### getLanguages
 
@@ -325,9 +318,9 @@ Attempt to reload our known languages.
 
 It will try to choose only utf8 or non-utf8 languages.
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-bool|$use_cache|Whether or not to use the cache
+`bool`|`$use_cache`|Whether or not to use the cache
 
 ### censorText
 
@@ -342,10 +335,10 @@ What this function does:
 show_no_censored is enabled, does not censor, unless force is also set.
  - it caches the list of censored words to reduce parsing.
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|&$text|The text to censor
-bool|$force|Whether to censor the text regardless of settings
+`string`|`&$text`|The text to censor
+`bool`|`$force`|Whether to censor the text regardless of settings
 
 ### template_include
 
@@ -359,10 +352,10 @@ Load the template/language file using require
 - outputs a parse error if the file did not exist or contained errors.
 - attempts to detect the error and line, and show detailed information.
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$filename|The name of the file to include
-bool|$once|If true only includes the file once (like include_once)
+`string`|`$filename`|The name of the file to include
+`bool`|`$once`|If true only includes the file once (like include_once)
 
 ### loadDatabase
 
@@ -370,7 +363,6 @@ bool|$once|If true only includes the file once (like include_once)
 function loadDatabase()
 ```
 Initialize a database connection.
-
 
 
 
@@ -383,10 +375,10 @@ Try to load up a supported caching method. This is saved in $cacheAPI if we are 
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$overrideCache|Try to use a different cache method other than that defined in $cache_accelerator.
-bool|$fallbackSMF|Use the default SMF method if the accelerator fails.
+`string`|`$overrideCache`|Try to use a different cache method other than that defined in $cache_accelerator.
+`bool`|`$fallbackSMF`|Use the default SMF method if the accelerator fails.
 
 ### cache_quick_get
 
@@ -397,13 +389,13 @@ Try to retrieve a cache entry. On failure, call the appropriate function.
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$key|The key for this entry
-string|$file|The file associated with this entry
-string|$function|The function to call
-array|$params|Parameters to be passed to the specified function
-int|$level|The cache level
+`string`|`$key`|The key for this entry
+`string`|`$file`|The file associated with this entry
+`string`|`$function`|The function to call
+`array`|`$params`|Parameters to be passed to the specified function
+`int`|`$level`|The cache level
 
 ### cache_put_data
 
@@ -422,11 +414,11 @@ Puts value in the cache under key for ttl seconds.
  Zend: http://files.zend.com/help/Zend-Platform/output_cache_functions.htm
  Zend: http://files.zend.com/help/Zend-Platform/zend_cache_functions.htm
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$key|A key for this value
-mixed|$value|The data to cache
-int|$ttl|How long (in seconds) the data should be cached for
+`string`|`$key`|A key for this value
+`mixed`|`$value`|The data to cache
+`int`|`$ttl`|How long (in seconds) the data should be cached for
 
 ### cache_get_data
 
@@ -438,10 +430,10 @@ Gets the value from the cache specified by key, so long as it is not older than 
 - It may often "miss", so shouldn't be depended on.
 - It supports the same as cache_put_data().
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$key|The key for the value to retrieve
-int|$ttl|The maximum age of the cached data
+`string`|`$key`|The key for the value to retrieve
+`int`|`$ttl`|The maximum age of the cached data
 
 ### clean_cache
 
@@ -457,9 +449,9 @@ Type can be user, data or left blank
  - If no type is specified will perform a complete cache clearing
 For cache engines that do not distinguish on types, a full cache flush will be done
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$type|The cache type ('memcached', 'apc', 'xcache', 'zend' or something else for SMF's file cache)
+`string`|`$type`|The cache type ('memcached', 'apc', 'xcache', 'zend' or something else for SMF's file cache)
 
 ### set_avatar_data
 
@@ -473,9 +465,9 @@ Makes assumptions based on the data provided, the following keys are required:
 - email The user's email. Used to get the gravatar info
 - filename The attachment filename
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-array|$data|An array of raw info
+`array`|`$data`|An array of raw info
 
 ### get_auth_secret
 
@@ -485,5 +477,4 @@ function get_auth_secret()
 Gets, and if necessary creates, the authentication secret to use for cookies, tokens, etc.
 
 Note: Never use the $auth_secret variable directly. Always call this function instead.
-
 

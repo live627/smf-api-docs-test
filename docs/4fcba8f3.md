@@ -1,10 +1,8 @@
 ---
 layout: default
-title: Reminder.template.php
+title: ./Themes/default/Reminder.template.php
 count: 5
 ---
-
-# ./Themes/default/Reminder.template.php
 
 ### template_main
 
@@ -12,7 +10,6 @@ count: 5
 function template_main()
 ```
 The main "Here's how you can reset your password" page
-
 
 
 
@@ -25,14 +22,12 @@ The page to pick an option - secret question/answer (if set) or email
 
 
 
-
 ### template_sent
 
 ```php
 function template_sent()
 ```
 Just a simple "We sent you an email. Click the link in it to continue." message
-
 
 
 
@@ -45,14 +40,12 @@ Template for setting the new password
 
 
 
-
 ### template_ask
 
 ```php
 function template_ask()
 ```
 The page that asks a user to answer their secret question
-
 
 
 

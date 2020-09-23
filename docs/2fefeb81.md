@@ -1,10 +1,8 @@
 ---
 layout: default
-title: Printpage.template.php
+title: ./Themes/default/Printpage.template.php
 count: 4
 ---
-
-# ./Themes/default/Printpage.template.php
 
 ### template_print_above
 
@@ -12,7 +10,6 @@ count: 4
 function template_print_above()
 ```
 The header. Defines the look and layout of the page as well as a form for choosing print options.
-
 
 
 
@@ -25,7 +22,6 @@ The main page. This shows the relevant info in a printer-friendly format
 
 
 
-
 ### template_print_below
 
 ```php
@@ -35,14 +31,12 @@ The footer.
 
 
 
-
 ### template_print_options
 
 ```php
 function template_print_options()
 ```
 Displays the print page options
-
 
 
 

@@ -1,10 +1,8 @@
 ---
 layout: default
-title: Agreement.template.php
+title: ./Themes/default/Agreement.template.php
 count: 1
 ---
-
-# ./Themes/default/Agreement.template.php
 
 ### template_main
 
@@ -12,7 +10,6 @@ count: 1
 function template_main()
 ```
 Simple Machines Forum (SMF)
-
 
 
 

@@ -1,10 +1,8 @@
 ---
 layout: default
-title: ManageNews.template.php
+title: ./Themes/default/ManageNews.template.php
 count: 4
 ---
-
-# ./Themes/default/ManageNews.template.php
 
 ### template_email_members
 
@@ -12,7 +10,6 @@ count: 4
 function template_email_members()
 ```
 The template for sending newsletters
-
 
 
 
@@ -25,7 +22,6 @@ The form for composing a newsletter
 
 
 
-
 ### template_email_members_send
 
 ```php
@@ -35,14 +31,12 @@ The page shown while the newsletter is being sent
 
 
 
-
 ### template_news_lists
 
 ```php
 function template_news_lists()
 ```
 The settings page.
-
 
 
 

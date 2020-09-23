@@ -1,10 +1,8 @@
 ---
 layout: default
-title: GenericMenu.template.php
+title: ./Themes/default/GenericMenu.template.php
 count: 4
 ---
-
-# ./Themes/default/GenericMenu.template.php
 
 ### template_generic_menu_dropdown_above
 
@@ -12,7 +10,6 @@ count: 4
 function template_generic_menu_dropdown_above()
 ```
 This contains the HTML for the menu bar at the top of the admin center.
-
 
 
 
@@ -25,7 +22,6 @@ Part of the admin layer - used with generic_menu_dropdown_above to close the adm
 
 
 
-
 ### template_generic_menu
 
 ```php
@@ -35,9 +31,9 @@ The template for displaying a menu
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-array|$menu_context|An array of menu information
+`array`|`$menu_context`|An array of menu information
 
 ### template_generic_menu_tabs
 
@@ -48,7 +44,7 @@ The code for displaying the menu
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-array|$menu_context|An array of menu context data
+`array`|`$menu_context`|An array of menu context data
 

@@ -1,10 +1,8 @@
 ---
 layout: default
-title: Profile.php
+title: ./Sources/Profile.php
 count: 4
 ---
-
-# ./Sources/Profile.php
 
 ### ModifyProfile
 
@@ -15,9 +13,9 @@ The main designating function for modifying profiles. Loads up info, determins w
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-array|$post_errors|Any errors that occurred
+`array`|`$post_errors`|Any errors that occurred
 
 ### profile_popup
 
@@ -28,9 +26,9 @@ Set up the requirements for the profile popup - the area that is shown as the po
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-int|$memID|The ID of the member
+`int`|`$memID`|The ID of the member
 
 ### alerts_popup
 
@@ -41,9 +39,9 @@ Set up the requirements for the alerts popup - the area that shows all the alert
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-int|$memID|The ID of the member
+`int`|`$memID`|The ID of the member
 
 ### loadCustomFields
 
@@ -54,8 +52,8 @@ Load any custom fields for this area... no area means load all, 'summary' loads 
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-int|$memID|The ID of the member
-string|$area|Which area to load fields for
+`int`|`$memID`|The ID of the member
+`string`|`$area`|Which area to load fields for
 

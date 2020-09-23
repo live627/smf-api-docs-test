@@ -1,10 +1,8 @@
 ---
 layout: default
-title: ManagePermissions.template.php
+title: ./Themes/default/ManagePermissions.template.php
 count: 7
 ---
-
-# ./Themes/default/ManagePermissions.template.php
 
 ### template_permission_index
 
@@ -12,7 +10,6 @@ count: 7
 function template_permission_index()
 ```
 The main manage permissions page
-
 
 
 
@@ -25,14 +22,12 @@ THe page that shows which permissions profile applies to each board
 
 
 
-
 ### template_edit_profiles
 
 ```php
 function template_edit_profiles()
 ```
 Edit permission profiles (predefined).
-
 
 
 
@@ -45,7 +40,6 @@ Modify a group's permissions
 
 
 
-
 ### template_modify_group_display
 
 ```php
@@ -55,9 +49,9 @@ The way of looking at permissions.
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$type|The permissions type
+`string`|`$type`|The permissions type
 
 ### template_inline_permissions
 
@@ -68,14 +62,12 @@ A form for displaying inline permissions, such as on a settings page.
 
 
 
-
 ### template_postmod_permissions
 
 ```php
 function template_postmod_permissions()
 ```
 Edit post moderation permissions.
-
 
 
 

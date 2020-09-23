@@ -1,10 +1,8 @@
 ---
 layout: default
-title: Profile-Export.php
+title: ./Sources/Profile-Export.php
 count: 7
 ---
-
-# ./Sources/Profile-Export.php
 
 ### export_profile_data
 
@@ -15,9 +13,9 @@ Initiates exports a member's profile, posts, and personal messages to a file.
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-int|$uid|The ID of the member whose data we're exporting.
+`int`|`$uid`|The ID of the member whose data we're exporting.
 
 ### download_export_file
 
@@ -28,9 +26,9 @@ Downloads exported profile data file.
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-int|$uid|The ID of the member whose data we're exporting.
+`int`|`$uid`|The ID of the member whose data we're exporting.
 
 ### export_attachment
 
@@ -41,9 +39,9 @@ Allows a member to export their attachments.
 
 Mostly just a wrapper for showAttachment() but with a few tweaks.
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-int|$uid|The ID of the member whose data we're exporting.
+`int`|`$uid`|The ID of the member whose data we're exporting.
 
 ### get_export_formats
 
@@ -51,7 +49,6 @@ int|$uid|The ID of the member whose data we're exporting.
 function get_export_formats()
 ```
 Helper function that defines data export formats in a single location.
-
 
 
 
@@ -66,7 +63,6 @@ The directory is created if it does not yet exist, and is secured using the
 same method that we use to secure attachment directories. Files in this
 directory can only be downloaded via the download_export_file() function.
 
-
 ### get_xslt_stylesheet
 
 ```php
@@ -77,10 +73,10 @@ into the desired output format.
 
 
 
-Type|Parameter|Name
+Type|Parameter|Description
 ---|---|---
-string|$format|The desired output format. Currently accepts 'HTML' and 'XML_XSLT'.
-int|$uid|The ID of the member whose data we're exporting.
+`string`|`$format`|The desired output format. Currently accepts 'HTML' and 'XML_XSLT'.
+`int`|`$uid`|The ID of the member whose data we're exporting.
 
 ### export_load_css_js
 
@@ -88,7 +84,6 @@ int|$uid|The ID of the member whose data we're exporting.
 function export_load_css_js()
 ```
 Loads and prepares CSS and JavaScript for insertion into an XSLT stylesheet.
-
 
 
 
