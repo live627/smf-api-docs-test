@@ -16,7 +16,7 @@ The main designating function for modifying profiles. Loads up info, determins w
 
 Type|Parameter|Description
 ---|---|---
-```php array```|```php $post_errors```|Any errors that occurred
+`array`|`$post_errors`|Any errors that occurred
 
 ### profile_popup
 
@@ -29,7 +29,7 @@ Set up the requirements for the profile popup - the area that is shown as the po
 
 Type|Parameter|Description
 ---|---|---
-```php int```|```php $memID```|The ID of the member
+`int`|`$memID`|The ID of the member
 
 ### alerts_popup
 
@@ -42,7 +42,7 @@ Set up the requirements for the alerts popup - the area that shows all the alert
 
 Type|Parameter|Description
 ---|---|---
-```php int```|```php $memID```|The ID of the member
+`int`|`$memID`|The ID of the member
 
 ### loadCustomFields
 
@@ -55,6 +55,6 @@ Load any custom fields for this area... no area means load all, 'summary' loads 
 
 Type|Parameter|Description
 ---|---|---
-```php int```|```php $memID```|The ID of the member
-```php string```|```php $area```|Which area to load fields for
+`int`|`$memID`|The ID of the member
+`string`|`$area`|Which area to load fields for
 

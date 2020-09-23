@@ -52,7 +52,7 @@ The way of looking at permissions.
 
 Type|Parameter|Description
 ---|---|---
-```php string```|```php $type```|The permissions type
+`string`|`$type`|The permissions type
 
 ### template_inline_permissions
 

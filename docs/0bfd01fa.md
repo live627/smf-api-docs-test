@@ -52,9 +52,9 @@ Send a group of emails from the mail queue.
 
 Type|Parameter|Description
 ---|---|---
-```php bool&#124;int```|```php $number```|The number to send each loop through or false to use the standard limits
-```php bool```|```php $override_limit```|Whether to bypass the limit
-```php bool```|```php $force_send```|Whether to forcibly send the messages now (useful when using cron jobs)
+`bool&#124;int`|`$number`|The number to send each loop through or false to use the standard limits
+`bool`|`$override_limit`|Whether to bypass the limit
+`bool`|`$force_send`|Whether to forcibly send the messages now (useful when using cron jobs)
 
 ### CalculateNextTrigger
 
@@ -67,8 +67,8 @@ Calculate the next time the passed tasks should be triggered.
 
 Type|Parameter|Description
 ---|---|---
-```php string&#124;array```|```php $tasks```|The ID of a single task or an array of tasks
-```php bool```|```php $forceUpdate```|Whether to force the tasks to run now
+`string&#124;array`|`$tasks`|The ID of a single task or an array of tasks
+`bool`|`$forceUpdate`|Whether to force the tasks to run now
 
 ### next_time
 
@@ -81,9 +81,9 @@ Simply returns a time stamp of the next instance of these time parameters.
 
 Type|Parameter|Description
 ---|---|---
-```php int```|```php $regularity```|The regularity
-```php string```|```php $unit```|What unit are we using - 'm' for minutes, 'd' for days, 'w' for weeks or anything else for seconds
-```php int```|```php $offset```|The offset
+`int`|`$regularity`|The regularity
+`string`|`$unit`|What unit are we using - 'm' for minutes, 'd' for days, 'w' for weeks or anything else for seconds
+`int`|`$offset`|The offset
 
 ### loadEssentialThemeData
 

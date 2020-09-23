@@ -20,7 +20,7 @@ Handles showing the post screen, loading the post to be modified, and loading an
 
 Type|Parameter|Description
 ---|---|---
-```php array```|```php $post_errors```|Holds any errors found while tyring to post
+`array`|`$post_errors`|Holds any errors found while tyring to post
 
 ### Post2
 

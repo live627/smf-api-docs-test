@@ -29,10 +29,10 @@ done this step is.
 
 Type|Parameter|Description
 ---|---|---
-```php array```|```php $to_fix```|An array of information about what to fix
-```php string```|```php $current_step_description```|The description of the current step
-```php int```|```php $max_substep```|The maximum substep to reach before pausing
-```php bool```|```php $force```|Whether to force pausing even if we don't really need to
+`array`|`$to_fix`|An array of information about what to fix
+`string`|`$current_step_description`|The description of the current step
+`int`|`$max_substep`|The maximum substep to reach before pausing
+`bool`|`$force`|Whether to force pausing even if we don't really need to
 
 ### loadForumTests
 
@@ -55,7 +55,7 @@ won't have to recheck everything.
 
 Type|Parameter|Description
 ---|---|---
-```php bool```|```php $do_fix```|Whether to actually fix the errors or just return the info
+`bool`|`$do_fix`|Whether to actually fix the errors or just return the info
 
 ### createSalvageArea
 

@@ -16,7 +16,7 @@ Initiates exports a member's profile, posts, and personal messages to a file.
 
 Type|Parameter|Description
 ---|---|---
-```php int```|```php $uid```|The ID of the member whose data we're exporting.
+`int`|`$uid`|The ID of the member whose data we're exporting.
 
 ### download_export_file
 
@@ -29,7 +29,7 @@ Downloads exported profile data file.
 
 Type|Parameter|Description
 ---|---|---
-```php int```|```php $uid```|The ID of the member whose data we're exporting.
+`int`|`$uid`|The ID of the member whose data we're exporting.
 
 ### export_attachment
 
@@ -42,7 +42,7 @@ Mostly just a wrapper for showAttachment() but with a few tweaks.
 
 Type|Parameter|Description
 ---|---|---
-```php int```|```php $uid```|The ID of the member whose data we're exporting.
+`int`|`$uid`|The ID of the member whose data we're exporting.
 
 ### get_export_formats
 
@@ -76,8 +76,8 @@ into the desired output format.
 
 Type|Parameter|Description
 ---|---|---
-```php string```|```php $format```|The desired output format. Currently accepts 'HTML' and 'XML_XSLT'.
-```php int```|```php $uid```|The ID of the member whose data we're exporting.
+`string`|`$format`|The desired output format. Currently accepts 'HTML' and 'XML_XSLT'.
+`int`|`$uid`|The ID of the member whose data we're exporting.
 
 ### export_load_css_js
 
