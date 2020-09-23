@@ -1,0 +1,6 @@
+name: Unofficial SMF API Documentation
+baseurl: /smf-api-docs-test
+source: /docs
+markdown: redcarpet
+pygments: true
+startinline: true

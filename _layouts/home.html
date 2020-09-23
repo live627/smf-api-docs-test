@@ -1,0 +1,10 @@
+{% include head.html %}
+    <article> {{ content }}</article>
+    <ul>{% for p in site.pages %}{% if p.home %}{% else %}
+        <li>
+            <a {% if p.url == page.url %}class="active"{% endif %} href="{{ site.baseurl }}{{ p.url }}">
+                {{ p.title }}
+            </a> — {{ p.title }} functions
+        </li>{% endif %}{% endfor %}
+    </ul>
+{% include foot.html %}
