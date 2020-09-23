@@ -41,7 +41,7 @@ Intended for use by background tasks that need to populate $user_info.
 
 Type|Parameter|Description
 ---|---|---
-`php int&#124;array`|`php $user_ids`|The users IDs to get the data for.
+```php int&#124;array```|```php $user_ids```|The users IDs to get the data for.
 
 ### loadBoard
 
@@ -79,9 +79,9 @@ Loads an array of users' data by ID or member_name.
 
 Type|Parameter|Description
 ---|---|---
-`php array&#124;string`|`php $users`|An array of users by id or name or a single username/id
-`php bool`|`php $is_name`|Whether $users contains names
-`php string`|`php $set`|What kind of data to load (normal, profile, minimal)
+```php array&#124;string```|```php $users```|An array of users by id or name or a single username/id
+```php bool```|```php $is_name```|Whether $users contains names
+```php string```|```php $set```|What kind of data to load (normal, profile, minimal)
 
 ### loadMemberContext
 
@@ -94,8 +94,8 @@ Loads the user's basic values... meant for template/theme usage.
 
 Type|Parameter|Description
 ---|---|---
-`php int`|`php $user`|The ID of a user previously loaded by {@link loadMemberData()}
-`php bool`|`php $display_custom_fields`|Whether or not to display custom profile fields
+```php int```|```php $user```|The ID of a user previously loaded by {@link loadMemberData()}
+```php bool```|```php $display_custom_fields```|Whether or not to display custom profile fields
 
 ### loadMemberCustomFields
 
@@ -108,8 +108,8 @@ Loads the user's custom profile fields
 
 Type|Parameter|Description
 ---|---|---
-`php int&#124;array`|`php $users`|A single user ID or an array of user IDs
-`php string&#124;array`|`php $params`|Either a string or an array of strings with profile field names
+```php int&#124;array```|```php $users```|A single user ID or an array of user IDs
+```php string&#124;array```|```php $params```|Either a string or an array of strings with profile field names
 
 ### detectBrowser
 
@@ -132,7 +132,7 @@ Wrapper function for detectBrowser
 
 Type|Parameter|Description
 ---|---|---
-`php string`|`php $browser`|The browser we are checking for.
+```php string```|```php $browser```|The browser we are checking for.
 
 ### loadTheme
 
@@ -145,8 +145,8 @@ Load a theme, by ID.
 
 Type|Parameter|Description
 ---|---|---
-`php int`|`php $id_theme`|The ID of the theme to load
-`php bool`|`php $initialize`|Whether or not to initialize a bunch of theme-related variables/settings
+```php int```|```php $id_theme```|The ID of the theme to load
+```php bool```|```php $initialize```|Whether or not to initialize a bunch of theme-related variables/settings
 
 ### loadTemplate
 
@@ -161,9 +161,9 @@ What this function does:
 
 Type|Parameter|Description
 ---|---|---
-`php string`|`php $template_name`|The name of the template to load
-`php array&#124;string`|`php $style_sheets`|The name of a single stylesheet or an array of names of stylesheets to load
-`php bool`|`php $fatal`|If true, dies with an error message if the template cannot be found
+```php string```|```php $template_name```|The name of the template to load
+```php array&#124;string```|```php $style_sheets```|The name of a single stylesheet or an array of names of stylesheets to load
+```php bool```|```php $fatal```|If true, dies with an error message if the template cannot be found
 
 ### loadSubTemplate
 
@@ -179,8 +179,8 @@ for debugging purposes.
 
 Type|Parameter|Description
 ---|---|---
-`php string`|`php $sub_template_name`|The name of the sub-template to load
-`php bool`|`php $fatal`|Whether to die with an error if the sub-template can't be loaded
+```php string```|```php $sub_template_name```|The name of the sub-template to load
+```php bool```|```php $fatal```|Whether to die with an error if the sub-template can't be loaded
 
 ### loadCSSFile
 
@@ -193,8 +193,8 @@ Add a CSS file for output later
 
 Type|Parameter|Description
 ---|---|---
-`php string`|`php $fileName`|The name of the file to load
-`php array`|`php $params`|An array of parameters
+```php string```|```php $fileName```|The name of the file to load
+```php array```|```php $params```|An array of parameters
 Keys are the following:
 	- ['external'] (true/false): define if the file is a externally located file. Needs to be set to true if you are loading an external file
 	- ['default_theme'] (true/false): force use of default theme url
@@ -205,7 +205,7 @@ Keys are the following:
  - ['minimize'] boolean to add your file to the main minimized file. Useful when you have a file thats loaded everywhere and for everyone.
  - ['order_pos'] int define the load order, when not define it's loaded in the middle, before index.css = -500, after index.css = 500, middle = 3000, end (i.e. after responsive.css) = 10000
  - ['attributes'] array extra attributes to add to the element
-`php string`|`php $id`|An ID to stick on the end of the filename for caching purposes
+```php string```|```php $id```|An ID to stick on the end of the filename for caching purposes
 
 ### addInlineCss
 
@@ -220,7 +220,7 @@ Add a block of inline css code to be executed later
 
 Type|Parameter|Description
 ---|---|---
-`php string`|`php $css`|Some css code
+```php string```|```php $css```|Some css code
 
 ### loadJavaScriptFile
 
@@ -233,8 +233,8 @@ Add a Javascript file for output later
 
 Type|Parameter|Description
 ---|---|---
-`php string`|`php $fileName`|The name of the file to load
-`php array`|`php $params`|An array of parameter info
+```php string```|```php $fileName```|The name of the file to load
+```php array```|```php $params```|An array of parameter info
 Keys are the following:
 	- ['external'] (true/false): define if the file is a externally located file. Needs to be set to true if you are loading an external file
 	- ['default_theme'] (true/false): force use of default theme url
@@ -246,7 +246,7 @@ default theme if not found in the current theme
  - ['seed'] (true/false/string): if true or null, use cache stale, false do not, or used a supplied string
  - ['minimize'] boolean to add your file to the main minimized file. Useful when you have a file thats loaded everywhere and for everyone.
  - ['attributes'] array extra attributes to add to the element
-`php string`|`php $id`|An ID to stick on the end of the filename
+```php string```|```php $id```|An ID to stick on the end of the filename
 
 ### addJavaScriptVar
 
@@ -260,9 +260,9 @@ Cleaner and easier (for modders) than to use the function below.
 
 Type|Parameter|Description
 ---|---|---
-`php string`|`php $key`|The key for this variable
-`php string`|`php $value`|The value
-`php bool`|`php $escape`|Whether or not to escape the value
+```php string```|```php $key```|The key for this variable
+```php string```|```php $value```|The value
+```php bool```|```php $escape```|Whether or not to escape the value
 
 ### addInlineJavaScript
 
@@ -277,8 +277,8 @@ Add a block of inline Javascript code to be executed later
 
 Type|Parameter|Description
 ---|---|---
-`php string`|`php $javascript`|Some JS code
-`php bool`|`php $defer`|Whether the script should load in <head> or before the closing <html> tag
+```php string```|```php $javascript```|Some JS code
+```php bool```|```php $defer```|Whether the script should load in <head> or before the closing <html> tag
 
 ### loadLanguage
 
@@ -291,10 +291,10 @@ Load a language file.  Tries the current and default themes as well as the user 
 
 Type|Parameter|Description
 ---|---|---
-`php string`|`php $template_name`|The name of a template file
-`php string`|`php $lang`|A specific language to load this file from
-`php bool`|`php $fatal`|Whether to die with an error if it can't be loaded
-`php bool`|`php $force_reload`|Whether to load the file again if it's already loaded
+```php string```|```php $template_name```|The name of a template file
+```php string```|```php $lang```|A specific language to load this file from
+```php bool```|```php $fatal```|Whether to die with an error if it can't be loaded
+```php bool```|```php $force_reload```|Whether to load the file again if it's already loaded
 
 ### getBoardParents
 
@@ -308,7 +308,7 @@ Additionally, it detects the moderators of said boards.
 
 Type|Parameter|Description
 ---|---|---
-`php int`|`php $id_parent`|The ID of the parent board
+```php int```|```php $id_parent```|The ID of the parent board
 
 ### getLanguages
 
@@ -321,7 +321,7 @@ It will try to choose only utf8 or non-utf8 languages.
 
 Type|Parameter|Description
 ---|---|---
-`php bool`|`php $use_cache`|Whether or not to use the cache
+```php bool```|```php $use_cache```|Whether or not to use the cache
 
 ### censorText
 
@@ -338,8 +338,8 @@ show_no_censored is enabled, does not censor, unless force is also set.
 
 Type|Parameter|Description
 ---|---|---
-`php string`|`php &$text`|The text to censor
-`php bool`|`php $force`|Whether to censor the text regardless of settings
+```php string```|```php &$text```|The text to censor
+```php bool```|```php $force```|Whether to censor the text regardless of settings
 
 ### template_include
 
@@ -355,8 +355,8 @@ Load the template/language file using require
 
 Type|Parameter|Description
 ---|---|---
-`php string`|`php $filename`|The name of the file to include
-`php bool`|`php $once`|If true only includes the file once (like include_once)
+```php string```|```php $filename```|The name of the file to include
+```php bool```|```php $once```|If true only includes the file once (like include_once)
 
 ### loadDatabase
 
@@ -378,8 +378,8 @@ Try to load up a supported caching method. This is saved in $cacheAPI if we are 
 
 Type|Parameter|Description
 ---|---|---
-`php string`|`php $overrideCache`|Try to use a different cache method other than that defined in $cache_accelerator.
-`php bool`|`php $fallbackSMF`|Use the default SMF method if the accelerator fails.
+```php string```|```php $overrideCache```|Try to use a different cache method other than that defined in $cache_accelerator.
+```php bool```|```php $fallbackSMF```|Use the default SMF method if the accelerator fails.
 
 ### cache_quick_get
 
@@ -392,11 +392,11 @@ Try to retrieve a cache entry. On failure, call the appropriate function.
 
 Type|Parameter|Description
 ---|---|---
-`php string`|`php $key`|The key for this entry
-`php string`|`php $file`|The file associated with this entry
-`php string`|`php $function`|The function to call
-`php array`|`php $params`|Parameters to be passed to the specified function
-`php int`|`php $level`|The cache level
+```php string```|```php $key```|The key for this entry
+```php string```|```php $file```|The file associated with this entry
+```php string```|```php $function```|The function to call
+```php array```|```php $params```|Parameters to be passed to the specified function
+```php int```|```php $level```|The cache level
 
 ### cache_put_data
 
@@ -417,9 +417,9 @@ Puts value in the cache under key for ttl seconds.
 
 Type|Parameter|Description
 ---|---|---
-`php string`|`php $key`|A key for this value
-`php mixed`|`php $value`|The data to cache
-`php int`|`php $ttl`|How long (in seconds) the data should be cached for
+```php string```|```php $key```|A key for this value
+```php mixed```|```php $value```|The data to cache
+```php int```|```php $ttl```|How long (in seconds) the data should be cached for
 
 ### cache_get_data
 
@@ -433,8 +433,8 @@ Gets the value from the cache specified by key, so long as it is not older than 
 
 Type|Parameter|Description
 ---|---|---
-`php string`|`php $key`|The key for the value to retrieve
-`php int`|`php $ttl`|The maximum age of the cached data
+```php string```|```php $key```|The key for the value to retrieve
+```php int```|```php $ttl```|The maximum age of the cached data
 
 ### clean_cache
 
@@ -452,7 +452,7 @@ For cache engines that do not distinguish on types, a full cache flush will be d
 
 Type|Parameter|Description
 ---|---|---
-`php string`|`php $type`|The cache type ('memcached', 'apc', 'xcache', 'zend' or something else for SMF's file cache)
+```php string```|```php $type```|The cache type ('memcached', 'apc', 'xcache', 'zend' or something else for SMF's file cache)
 
 ### set_avatar_data
 
@@ -468,7 +468,7 @@ Makes assumptions based on the data provided, the following keys are required:
 
 Type|Parameter|Description
 ---|---|---
-`php array`|`php $data`|An array of raw info
+```php array```|```php $data```|An array of raw info
 
 ### get_auth_secret
 

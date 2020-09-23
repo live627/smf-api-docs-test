@@ -34,7 +34,7 @@ The template for displaying a menu
 
 Type|Parameter|Description
 ---|---|---
-`php array`|`php $menu_context`|An array of menu information
+```php array```|```php $menu_context```|An array of menu information
 
 ### template_generic_menu_tabs
 
@@ -47,5 +47,5 @@ The code for displaying the menu
 
 Type|Parameter|Description
 ---|---|---
-`php array`|`php $menu_context`|An array of menu context data
+```php array```|```php $menu_context```|An array of menu context data
 

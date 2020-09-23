@@ -17,5 +17,5 @@ Executes the query and returns the list
 
 Type|Parameter|Description
 ---|---|---
-`php array`|`php $boardListOptions`|An array of options for the board list
+```php array```|```php $boardListOptions```|An array of options for the board list
 

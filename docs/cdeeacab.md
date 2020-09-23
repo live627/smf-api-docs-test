@@ -32,7 +32,7 @@ useful for showing an index before or after the posts.
 
 Type|Parameter|Description
 ---|---|---
-`php bool`|`php $reset`|Whether or not to reset the db seek pointer
+```php bool```|```php $reset```|Whether or not to reset the db seek pointer
 
 ### Download
 
