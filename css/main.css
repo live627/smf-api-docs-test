@@ -111,11 +111,9 @@ header {
    }
   }
 
-ul {
-  list-style:none;
-}
 nav ul,
 aside ul {
+  list-style:none;
   padding:0;
 }
 aside ul {
