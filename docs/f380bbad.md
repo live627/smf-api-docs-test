@@ -15,6 +15,7 @@ Load the $modSettings array.
 
 
 
+
 ### loadUserSettings
 
 ```php
@@ -31,6 +32,7 @@ What it does:
 	- if validation fails for the user, $id_member is set to 0.
 	- updates the last visit time when needed.
 
+
 ### loadMinUserInfo
 
 ```php
@@ -43,6 +45,7 @@ Intended for use by background tasks that need to populate $user_info.
 Type|Parameter|Name
 ---|---|---
 int&#124;array|$user_ids|The users IDs to get the data for.
+
 ### loadBoard
 
 ```php
@@ -59,12 +62,14 @@ What it does:
 - adds group id 3 if the user is a local moderator for the board they are in.
 - prevents access if user is not in proper group nor a local moderator of the board.
 
+
 ### loadPermissions
 
 ```php
 function loadPermissions()
 ```
 Load this user's permissions.
+
 
 
 
@@ -82,6 +87,7 @@ Type|Parameter|Name
 array&#124;string|$users|An array of users by id or name or a single username/id
 bool|$is_name|Whether $users contains names
 string|$set|What kind of data to load (normal, profile, minimal)
+
 ### loadMemberContext
 
 ```php
@@ -95,6 +101,7 @@ Type|Parameter|Name
 ---|---|---
 int|$user|The ID of a user previously loaded by {@link loadMemberData()}
 bool|$display_custom_fields|Whether or not to display custom profile fields
+
 ### loadMemberCustomFields
 
 ```php
@@ -108,6 +115,7 @@ Type|Parameter|Name
 ---|---|---
 int&#124;array|$users|A single user ID or an array of user IDs
 string&#124;array|$params|Either a string or an array of strings with profile field names
+
 ### detectBrowser
 
 ```php
@@ -115,6 +123,7 @@ function detectBrowser()
 ```
 Loads information about what browser the user is viewing with and places it in $context
  - uses the class from {@link Class-BrowserDetect.php}
+
 
 
 
@@ -130,6 +139,7 @@ Wrapper function for detectBrowser
 Type|Parameter|Name
 ---|---|---
 string|$browser|The browser we are checking for.
+
 ### loadTheme
 
 ```php
@@ -143,6 +153,7 @@ Type|Parameter|Name
 ---|---|---
 int|$id_theme|The ID of the theme to load
 bool|$initialize|Whether or not to initialize a bunch of theme-related variables/settings
+
 ### loadTemplate
 
 ```php
@@ -159,6 +170,7 @@ Type|Parameter|Name
 string|$template_name|The name of the template to load
 array&#124;string|$style_sheets|The name of a single stylesheet or an array of names of stylesheets to load
 bool|$fatal|If true, dies with an error message if the template cannot be found
+
 ### loadSubTemplate
 
 ```php
@@ -175,6 +187,7 @@ Type|Parameter|Name
 ---|---|---
 string|$sub_template_name|The name of the sub-template to load
 bool|$fatal|Whether to die with an error if the sub-template can't be loaded
+
 ### loadCSSFile
 
 ```php
@@ -199,6 +212,7 @@ Keys are the following:
  - ['order_pos'] int define the load order, when not define it's loaded in the middle, before index.css = -500, after index.css = 500, middle = 3000, end (i.e. after responsive.css) = 10000
  - ['attributes'] array extra attributes to add to the element
 string|$id|An ID to stick on the end of the filename for caching purposes
+
 ### addInlineCss
 
 ```php
@@ -213,6 +227,7 @@ Add a block of inline css code to be executed later
 Type|Parameter|Name
 ---|---|---
 string|$css|Some css code
+
 ### loadJavaScriptFile
 
 ```php
@@ -238,6 +253,7 @@ default theme if not found in the current theme
  - ['minimize'] boolean to add your file to the main minimized file. Useful when you have a file thats loaded everywhere and for everyone.
  - ['attributes'] array extra attributes to add to the element
 string|$id|An ID to stick on the end of the filename
+
 ### addJavaScriptVar
 
 ```php
@@ -253,6 +269,7 @@ Type|Parameter|Name
 string|$key|The key for this variable
 string|$value|The value
 bool|$escape|Whether or not to escape the value
+
 ### addInlineJavaScript
 
 ```php
@@ -268,6 +285,7 @@ Type|Parameter|Name
 ---|---|---
 string|$javascript|Some JS code
 bool|$defer|Whether the script should load in <head> or before the closing <html> tag
+
 ### loadLanguage
 
 ```php
@@ -283,6 +301,7 @@ string|$template_name|The name of a template file
 string|$lang|A specific language to load this file from
 bool|$fatal|Whether to die with an error if it can't be loaded
 bool|$force_reload|Whether to load the file again if it's already loaded
+
 ### getBoardParents
 
 ```php
@@ -296,6 +315,7 @@ Additionally, it detects the moderators of said boards.
 Type|Parameter|Name
 ---|---|---
 int|$id_parent|The ID of the parent board
+
 ### getLanguages
 
 ```php
@@ -308,6 +328,7 @@ It will try to choose only utf8 or non-utf8 languages.
 Type|Parameter|Name
 ---|---|---
 bool|$use_cache|Whether or not to use the cache
+
 ### censorText
 
 ```php
@@ -325,6 +346,7 @@ Type|Parameter|Name
 ---|---|---
 string|&$text|The text to censor
 bool|$force|Whether to censor the text regardless of settings
+
 ### template_include
 
 ```php
@@ -341,12 +363,14 @@ Type|Parameter|Name
 ---|---|---
 string|$filename|The name of the file to include
 bool|$once|If true only includes the file once (like include_once)
+
 ### loadDatabase
 
 ```php
 function loadDatabase()
 ```
 Initialize a database connection.
+
 
 
 
@@ -363,6 +387,7 @@ Type|Parameter|Name
 ---|---|---
 string|$overrideCache|Try to use a different cache method other than that defined in $cache_accelerator.
 bool|$fallbackSMF|Use the default SMF method if the accelerator fails.
+
 ### cache_quick_get
 
 ```php
@@ -379,6 +404,7 @@ string|$file|The file associated with this entry
 string|$function|The function to call
 array|$params|Parameters to be passed to the specified function
 int|$level|The cache level
+
 ### cache_put_data
 
 ```php
@@ -401,6 +427,7 @@ Type|Parameter|Name
 string|$key|A key for this value
 mixed|$value|The data to cache
 int|$ttl|How long (in seconds) the data should be cached for
+
 ### cache_get_data
 
 ```php
@@ -415,6 +442,7 @@ Type|Parameter|Name
 ---|---|---
 string|$key|The key for the value to retrieve
 int|$ttl|The maximum age of the cached data
+
 ### clean_cache
 
 ```php
@@ -432,6 +460,7 @@ For cache engines that do not distinguish on types, a full cache flush will be d
 Type|Parameter|Name
 ---|---|---
 string|$type|The cache type ('memcached', 'apc', 'xcache', 'zend' or something else for SMF's file cache)
+
 ### set_avatar_data
 
 ```php
@@ -447,6 +476,7 @@ Makes assumptions based on the data provided, the following keys are required:
 Type|Parameter|Name
 ---|---|---
 array|$data|An array of raw info
+
 ### get_auth_secret
 
 ```php
@@ -455,4 +485,5 @@ function get_auth_secret()
 Gets, and if necessary creates, the authentication secret to use for cookies, tokens, etc.
 
 Note: Never use the $auth_secret variable directly. Always call this function instead.
+
 

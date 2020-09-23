@@ -15,12 +15,14 @@ This contains the HTML for the menu bar at the top of the admin center.
 
 
 
+
 ### template_generic_menu_dropdown_below
 
 ```php
 function template_generic_menu_dropdown_below()
 ```
 Part of the admin layer - used with generic_menu_dropdown_above to close the admin content div.
+
 
 
 
@@ -36,6 +38,7 @@ The template for displaying a menu
 Type|Parameter|Name
 ---|---|---
 array|$menu_context|An array of menu information
+
 ### template_generic_menu_tabs
 
 ```php
@@ -48,3 +51,4 @@ The code for displaying the menu
 Type|Parameter|Name
 ---|---|---
 array|$menu_context|An array of menu context data
+

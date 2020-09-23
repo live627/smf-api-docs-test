@@ -15,12 +15,14 @@ The main notification bar.
 
 
 
+
 ### template_notify_board
 
 ```php
 function template_notify_board()
 ```
 Board notification bar.
+
 
 
 
@@ -33,12 +35,14 @@ function template_notify_announcements()
 
 
 
+
 ### template_notify_pref_changed
 
 ```php
 function template_notify_pref_changed()
 ```
 Displays a message indicating the user's notification preferences were successfully changed
+
 
 
 

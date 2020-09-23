@@ -28,6 +28,7 @@ Type|Parameter|Name
 ---|---|---
 int&#124;array|$users|The ID of a user or an array of user IDs
 bool|$check_not_admin|Whether to verify that the users aren't admins
+
 ### registerMember
 
 ```php
@@ -47,6 +48,7 @@ Type|Parameter|Name
 ---|---|---
 array|$regOptions|An array of registration options
 bool|$return_errors|Whether to return the errors
+
 ### isReservedName
 
 ```php
@@ -66,6 +68,7 @@ string|$name|The name to check
 int|$current_id_member|The ID of the current member (to avoid false positives with the current member)
 bool|$is_name|Whether we're checking against reserved names or just usernames
 bool|$fatal|Whether to die with a fatal error if the name is reserved
+
 ### groupsAllowedTo
 
 ```php
@@ -81,6 +84,7 @@ Type|Parameter|Name
 ---|---|---
 string|$permission|The permission to check
 int|$board_id|= null If set, checks permissions for the specified board
+
 ### membersAllowedTo
 
 ```php
@@ -97,6 +101,7 @@ Type|Parameter|Name
 ---|---|---
 string|$permission|The permission to check
 int|$board_id|If set, checks permission for that specific board
+
 ### reattributePosts
 
 ```php
@@ -114,6 +119,7 @@ int|$memID|The ID of the original poster
 bool&#124;string|$email|If set, should be the email of the poster
 bool&#124;string|$membername|If set, the membername of the poster
 bool|$post_count|Whether to adjust post counts
+
 ### BuddyListToggle
 
 ```php
@@ -124,6 +130,7 @@ This simple function adds/removes the passed user from the current users buddy l
 Requires profile_identity_own permission.
 Called by ?action=buddy;u=x;session_id=y.
 Redirects to ?action=profile;u=x.
+
 
 ### list_getMembers
 
@@ -142,6 +149,7 @@ string|$sort|An SQL query indicating how to sort the results
 string|$where|An SQL query used to filter the results
 array|$where_params|An array of parameters for $where
 bool|$get_duplicates|Whether to get duplicates (used for the admin member list)
+
 ### list_getNumMembers
 
 ```php
@@ -155,6 +163,7 @@ Type|Parameter|Name
 ---|---|---
 string|$where|An SQL query to filter the results
 array|$where_params|An array of parameters for $where
+
 ### populateDuplicateMembers
 
 ```php
@@ -167,12 +176,14 @@ Find potential duplicate registration members based on the same IP address
 Type|Parameter|Name
 ---|---|---
 array|$members|An array of members
+
 ### generateValidationCode
 
 ```php
 function generateValidationCode()
 ```
 Generate a random validation code.
+
 
 
 

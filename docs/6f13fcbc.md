@@ -19,3 +19,4 @@ Executes the query and returns the list
 Type|Parameter|Name
 ---|---|---
 array|$boardListOptions|An array of options for the board list
+

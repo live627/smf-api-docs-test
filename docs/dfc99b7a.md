@@ -25,6 +25,7 @@ string|$url|The full path to the temporary file
 int|$memID|The member ID
 int|$max_width|The maximum allowed width for the avatar
 int|$max_height|The maximum allowed height for the avatar
+
 ### createThumbnail
 
 ```php
@@ -39,6 +40,7 @@ Type|Parameter|Name
 string|$source|The name of the source image
 int|$max_width|The maximum allowed width
 int|$max_height|The maximum allowed height
+
 ### reencodeImage
 
 ```php
@@ -54,6 +56,7 @@ Type|Parameter|Name
 ---|---|---
 string|$fileName|The path to the file
 int|$preferred_format|The preferred format - 0 to automatically determine, 1 for gif, 2 for jpg, 3 for png, 6 for bmp and 15 for wbmp
+
 ### checkImageContents
 
 ```php
@@ -67,6 +70,7 @@ Type|Parameter|Name
 ---|---|---
 string|$fileName|The path to the file
 bool|$extensiveCheck|Whether to perform extensive checks
+
 ### checkGD
 
 ```php
@@ -74,6 +78,7 @@ function checkGD()
 ```
 Sets a global $gd2 variable needed by some functions to determine
 whether the GD2 library is present.
+
 
 
 
@@ -86,12 +91,14 @@ Checks whether the Imagick class is present.
 
 
 
+
 ### checkMagickWand
 
 ```php
 function checkMagickWand()
 ```
 Checks whether the MagickWand extension is present.
+
 
 
 
@@ -107,6 +114,7 @@ See if we have enough memory to thumbnail an image
 Type|Parameter|Name
 ---|---|---
 array|$sizes|image size
+
 ### resizeImageFile
 
 ```php
@@ -125,6 +133,7 @@ string|$destination|The path to the destination image
 int|$max_width|The maximum allowed width
 int|$max_height|The maximum allowed height
 int|$preferred_format|- The preferred format (0 to use jpeg, 1 for gif, 2 to force jpeg, 3 for png, 6 for bmp and 15 for wbmp)
+
 ### resizeImage
 
 ```php
@@ -149,6 +158,7 @@ int|$max_width|The maximum allowed width
 int|$max_height|The maximum allowed height
 bool|$force_resize|= false Whether to forcibly resize it
 int|$preferred_format|- 1 for gif, 2 for jpeg, 3 for png, 6 for bmp or 15 for wbmp
+
 ### imagecopyresamplebicubic
 
 ```php
@@ -170,6 +180,7 @@ int|$dst_w|The width of the destination image
 int|$dst_h|The height of the destination image
 int|$src_w|The width of the destination image
 int|$src_h|The height of the destination image
+
 ### imagecreatefrombmp
 
 ```php
@@ -183,6 +194,7 @@ It only supports uncompressed bitmaps.
 Type|Parameter|Name
 ---|---|---
 string|$filename|The name of the file
+
 ### gif_outputAsPng
 
 ```php
@@ -197,6 +209,7 @@ Type|Parameter|Name
 \gif_file|$gif|A gif image resource
 string|$lpszFileName|The name of the file
 int|$background_color|The background color
+
 ### showCodeImage
 
 ```php
@@ -211,6 +224,7 @@ Outputs a gif or a png (depending on whether gif ix supported).
 Type|Parameter|Name
 ---|---|---
 string|$code|The code to display
+
 ### showLetterImage
 
 ```php
@@ -224,3 +238,4 @@ Includes an image from a random sub directory of default_theme_dir/fonts.
 Type|Parameter|Name
 ---|---|---
 string|$letter|A letter to show as an image
+

@@ -18,6 +18,7 @@ Initiates exports a member's profile, posts, and personal messages to a file.
 Type|Parameter|Name
 ---|---|---
 int|$uid|The ID of the member whose data we're exporting.
+
 ### download_export_file
 
 ```php
@@ -30,6 +31,7 @@ Downloads exported profile data file.
 Type|Parameter|Name
 ---|---|---
 int|$uid|The ID of the member whose data we're exporting.
+
 ### export_attachment
 
 ```php
@@ -42,12 +44,14 @@ Mostly just a wrapper for showAttachment() but with a few tweaks.
 Type|Parameter|Name
 ---|---|---
 int|$uid|The ID of the member whose data we're exporting.
+
 ### get_export_formats
 
 ```php
 function get_export_formats()
 ```
 Helper function that defines data export formats in a single location.
+
 
 
 
@@ -61,6 +65,7 @@ Returns the path to a secure directory for storing exported profile data.
 The directory is created if it does not yet exist, and is secured using the
 same method that we use to secure attachment directories. Files in this
 directory can only be downloaded via the download_export_file() function.
+
 
 ### get_xslt_stylesheet
 
@@ -76,12 +81,14 @@ Type|Parameter|Name
 ---|---|---
 string|$format|The desired output format. Currently accepts 'HTML' and 'XML_XSLT'.
 int|$uid|The ID of the member whose data we're exporting.
+
 ### export_load_css_js
 
 ```php
 function export_load_css_js()
 ```
 Loads and prepares CSS and JavaScript for insertion into an XSLT stylesheet.
+
 
 
 

@@ -15,12 +15,14 @@ The main manage permissions page
 
 
 
+
 ### template_by_board
 
 ```php
 function template_by_board()
 ```
 THe page that shows which permissions profile applies to each board
+
 
 
 
@@ -33,12 +35,14 @@ Edit permission profiles (predefined).
 
 
 
+
 ### template_modify_group
 
 ```php
 function template_modify_group()
 ```
 Modify a group's permissions
+
 
 
 
@@ -54,6 +58,7 @@ The way of looking at permissions.
 Type|Parameter|Name
 ---|---|---
 string|$type|The permissions type
+
 ### template_inline_permissions
 
 ```php
@@ -63,12 +68,14 @@ A form for displaying inline permissions, such as on a settings page.
 
 
 
+
 ### template_postmod_permissions
 
 ```php
 function template_postmod_permissions()
 ```
 Edit post moderation permissions.
+
 
 
 

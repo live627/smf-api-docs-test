@@ -18,6 +18,7 @@ Only uses the template if no mode (or subaction) was given.
 Redirects the user back to the board after it is done.
 Accessed via ?action=notifyboard.
 
+
 ### TopicNotify
 
 ```php
@@ -31,6 +32,7 @@ The mode can be from 0 to 3
 Upon successful completion of action will direct user back to topic.
 Accessed via ?action=notifytopic.
 
+
 ### AnnouncementsNotify
 
 ```php
@@ -40,4 +42,5 @@ Turn off/on notifications for announcements.
 
 Only uses the template if no mode was given.
 Accessed via ?action=notifyannouncements.
+
 

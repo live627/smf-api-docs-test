@@ -18,6 +18,7 @@ Called by ?action=managepermissions.
 
 Uses ManagePermissions language file.
 
+
 ### PermissionIndex
 
 ```php
@@ -31,12 +32,14 @@ Creates an array of all the groups with the number of members and permissions.
 Uses ManagePermissions language file.
 Uses ManagePermissions template file.
 
+
 ### PermissionByBoard
 
 ```php
 function PermissionByBoard()
 ```
 Handle permissions by board... more or less. :P
+
 
 
 
@@ -50,6 +53,7 @@ permission manager index.
 
 
 
+
 ### ModifyMembergroup
 
 ```php
@@ -59,12 +63,14 @@ Initializes the necessary to modify a membergroup's permissions.
 
 
 
+
 ### ModifyMembergroup2
 
 ```php
 function ModifyMembergroup2()
 ```
 This function actually saves modifications to a membergroup's board permissions.
+
 
 
 
@@ -80,6 +86,7 @@ A screen to set some general settings for permissions.
 Type|Parameter|Name
 ---|---|---
 bool|$return_config|Whether to return the $config_vars array (used for admin search)
+
 ### setPermissionLevel
 
 ```php
@@ -94,12 +101,14 @@ Type|Parameter|Name
 string|$level|The level ('restrict', 'standard', etc.)
 int|$group|The group to set the permission for
 string&#124;int|$profile|The ID of the permissions profile or 'null' if we're setting it for a group
+
 ### loadAllPermissions
 
 ```php
 function loadAllPermissions()
 ```
 Load permissions into $context['permissions'].
+
 
 
 
@@ -126,6 +135,7 @@ array|$excluded_groups|The IDs of one or more groups to exclude
 
 Uses ManagePermissions language
 Uses ManagePermissions template
+
 ### theme_inline_permissions
 
 ```php
@@ -139,6 +149,7 @@ Calls the template function template_inline_permissions().
 Type|Parameter|Name
 ---|---|---
 string|$permission|The permission to display inline
+
 ### save_inline_permissions
 
 ```php
@@ -151,6 +162,7 @@ Save the permissions of a form containing inline permissions.
 Type|Parameter|Name
 ---|---|---
 array|$permissions|The permissions to save
+
 ### loadPermissionProfiles
 
 ```php
@@ -160,12 +172,14 @@ Load permissions profiles.
 
 
 
+
 ### EditPermissionProfiles
 
 ```php
 function EditPermissionProfiles()
 ```
 Add/Edit/Delete profiles.
+
 
 
 
@@ -182,12 +196,14 @@ Type|Parameter|Name
 ---|---|---
 null&#124;array|$parents|The parent groups
 null&#124;int|$profile|the ID of a permissions profile to update
+
 ### loadIllegalPermissions
 
 ```php
 function loadIllegalPermissions()
 ```
 Load permissions someone cannot grant.
+
 
 
 
@@ -201,6 +217,7 @@ Loads the permissions that can not be given to guests.
 Stores the permissions in $context['non_guest_permissions'].
 Also populates $context['permissions_excluded'] with the info.
 
+
 ### loadIllegalBBCHtmlGroups
 
 ```php
@@ -209,6 +226,7 @@ function loadIllegalBBCHtmlGroups()
 Loads a list of membergroups who cannot be granted the bbc_html permission.
 
 Stores the groups in $context['permissions_excluded']['bbc_html'].
+
 
 ### removeIllegalBBCHtmlPermission
 
@@ -222,6 +240,7 @@ Removes the bbc_html permission from anyone who shouldn't have it
 Type|Parameter|Name
 ---|---|---
 bool|$reload|Before acting, refresh the list of membergroups who cannot be granted the bbc_html permission
+
 ### updateBoardManagers
 
 ```php
@@ -231,12 +250,14 @@ Makes sure $modSettings['board_manager_groups'] is up to date.
 
 
 
+
 ### ModifyPostModeration
 
 ```php
 function ModifyPostModeration()
 ```
 Present a nice way of applying post moderation.
+
 
 
 

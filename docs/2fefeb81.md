@@ -15,12 +15,14 @@ The header. Defines the look and layout of the page as well as a form for choosi
 
 
 
+
 ### template_main
 
 ```php
 function template_main()
 ```
 The main page. This shows the relevant info in a printer-friendly format
+
 
 
 
@@ -33,12 +35,14 @@ The footer.
 
 
 
+
 ### template_print_options
 
 ```php
 function template_print_options()
 ```
 Displays the print page options
+
 
 
 

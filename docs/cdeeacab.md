@@ -20,6 +20,7 @@ It jumps to the correct post depending on a number/time/IS_MSG passed.
 It depends on the messages_per_page, defaultMaxMessages and enableAllMessages settings.
 It is accessed by ?topic=id_topic.START.
 
+
 ### prepareDisplayContext
 
 ```php
@@ -34,6 +35,7 @@ useful for showing an index before or after the posts.
 Type|Parameter|Name
 ---|---|---
 bool|$reset|Whether or not to reset the db seek pointer
+
 ### Download
 
 ```php
@@ -43,12 +45,14 @@ Once upon a time, this function handled downloading attachments.
 
 Now it's just an alias retained for the sake of backwards compatibility.
 
+
 ### QuickInTopicModeration
 
 ```php
 function QuickInTopicModeration()
 ```
 In-topic quick moderation.
+
 
 
 
