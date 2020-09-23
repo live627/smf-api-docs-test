@@ -1,5 +1,6 @@
 ---
 layout: default
+navtitle: ManageErrors.php
 title: ./Sources/ManageErrors.php
 count: 4
 ---

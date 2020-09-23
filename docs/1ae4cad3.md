@@ -1,5 +1,6 @@
 ---
 layout: default
+navtitle: ManageNews.template.php
 title: ./Themes/default/ManageNews.template.php
 count: 4
 ---

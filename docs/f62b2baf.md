@@ -1,5 +1,6 @@
 ---
 layout: default
+navtitle: ManagePermissions.php
 title: ./Sources/ManagePermissions.php
 count: 21
 ---
@@ -77,7 +78,7 @@ A screen to set some general settings for permissions.
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether to return the $config_vars array (used for admin search)
+`php bool`|`php $return_config`|Whether to return the $config_vars array (used for admin search)
 
 ### setPermissionLevel
 
@@ -90,9 +91,9 @@ Set the permission level for a specific profile, group, or group for a profile.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$level`|The level ('restrict', 'standard', etc.)
-`int`|`$group`|The group to set the permission for
-`string&#124;int`|`$profile`|The ID of the permissions profile or 'null' if we're setting it for a group
+`php string`|`php $level`|The level ('restrict', 'standard', etc.)
+`php int`|`php $group`|The group to set the permission for
+`php string&#124;int`|`php $profile`|The ID of the permissions profile or 'null' if we're setting it for a group
 
 ### loadAllPermissions
 
@@ -121,8 +122,8 @@ all of the permissions passed in via $permissions.
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$permissions`|The permissions to display inline
-`array`|`$excluded_groups`|The IDs of one or more groups to exclude
+`php array`|`php $permissions`|The permissions to display inline
+`php array`|`php $excluded_groups`|The IDs of one or more groups to exclude
 
 Uses ManagePermissions language
 Uses ManagePermissions template
@@ -139,7 +140,7 @@ Calls the template function template_inline_permissions().
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$permission`|The permission to display inline
+`php string`|`php $permission`|The permission to display inline
 
 ### save_inline_permissions
 
@@ -152,7 +153,7 @@ Save the permissions of a form containing inline permissions.
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$permissions`|The permissions to save
+`php array`|`php $permissions`|The permissions to save
 
 ### loadPermissionProfiles
 
@@ -183,8 +184,8 @@ This function updates the permissions of any groups based off this group.
 
 Type|Parameter|Description
 ---|---|---
-`null&#124;array`|`$parents`|The parent groups
-`null&#124;int`|`$profile`|the ID of a permissions profile to update
+`php null&#124;array`|`php $parents`|The parent groups
+`php null&#124;int`|`php $profile`|the ID of a permissions profile to update
 
 ### loadIllegalPermissions
 
@@ -225,7 +226,7 @@ Removes the bbc_html permission from anyone who shouldn't have it
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$reload`|Before acting, refresh the list of membergroups who cannot be granted the bbc_html permission
+`php bool`|`php $reload`|Before acting, refresh the list of membergroups who cannot be granted the bbc_html permission
 
 ### updateBoardManagers
 

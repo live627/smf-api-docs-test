@@ -1,5 +1,6 @@
 ---
 layout: default
+navtitle: Printpage.template.php
 title: ./Themes/default/Printpage.template.php
 count: 4
 ---

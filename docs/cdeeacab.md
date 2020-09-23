@@ -1,5 +1,6 @@
 ---
 layout: default
+navtitle: Display.php
 title: ./Sources/Display.php
 count: 4
 ---
@@ -31,7 +32,7 @@ useful for showing an index before or after the posts.
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$reset`|Whether or not to reset the db seek pointer
+`php bool`|`php $reset`|Whether or not to reset the db seek pointer
 
 ### Download
 

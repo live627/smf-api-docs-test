@@ -1,5 +1,6 @@
 ---
 layout: default
+navtitle: Agreement.php
 title: ./Sources/Agreement.php
 count: 5
 ---

@@ -1,5 +1,6 @@
 ---
 layout: default
+navtitle: GenericMenu.template.php
 title: ./Themes/default/GenericMenu.template.php
 count: 4
 ---
@@ -33,7 +34,7 @@ The template for displaying a menu
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$menu_context`|An array of menu information
+`php array`|`php $menu_context`|An array of menu information
 
 ### template_generic_menu_tabs
 
@@ -46,5 +47,5 @@ The code for displaying the menu
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$menu_context`|An array of menu context data
+`php array`|`php $menu_context`|An array of menu context data
 

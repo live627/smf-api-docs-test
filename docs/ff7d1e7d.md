@@ -1,5 +1,6 @@
 ---
 layout: default
+navtitle: Subs-Members.php
 title: ./Sources/Subs-Members.php
 count: 11
 ---
@@ -24,8 +25,8 @@ ban entries, theme settings, moderator positions, poll and votes.
 
 Type|Parameter|Description
 ---|---|---
-`int&#124;array`|`$users`|The ID of a user or an array of user IDs
-`bool`|`$check_not_admin`|Whether to verify that the users aren't admins
+`php int&#124;array`|`php $users`|The ID of a user or an array of user IDs
+`php bool`|`php $check_not_admin`|Whether to verify that the users aren't admins
 
 ### registerMember
 
@@ -44,8 +45,8 @@ If an error is detected will fatal error on all errors unless return_errors is t
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$regOptions`|An array of registration options
-`bool`|`$return_errors`|Whether to return the errors
+`php array`|`php $regOptions`|An array of registration options
+`php bool`|`php $return_errors`|Whether to return the errors
 
 ### isReservedName
 
@@ -62,10 +63,10 @@ current member.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$name`|The name to check
-`int`|`$current_id_member`|The ID of the current member (to avoid false positives with the current member)
-`bool`|`$is_name`|Whether we're checking against reserved names or just usernames
-`bool`|`$fatal`|Whether to die with a fatal error if the name is reserved
+`php string`|`php $name`|The name to check
+`php int`|`php $current_id_member`|The ID of the current member (to avoid false positives with the current member)
+`php bool`|`php $is_name`|Whether we're checking against reserved names or just usernames
+`php bool`|`php $fatal`|Whether to die with a fatal error if the name is reserved
 
 ### groupsAllowedTo
 
@@ -80,8 +81,8 @@ The function takes different permission settings into account.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$permission`|The permission to check
-`int`|`$board_id`|= null If set, checks permissions for the specified board
+`php string`|`php $permission`|The permission to check
+`php int`|`php $board_id`|= null If set, checks permissions for the specified board
 
 ### membersAllowedTo
 
@@ -97,8 +98,8 @@ Takes possible moderators (on board 'board_id') into account.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$permission`|The permission to check
-`int`|`$board_id`|If set, checks permission for that specific board
+`php string`|`php $permission`|The permission to check
+`php int`|`php $board_id`|If set, checks permission for that specific board
 
 ### reattributePosts
 
@@ -113,10 +114,10 @@ If add_to_post_count is set, the member's post count is increased.
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$memID`|The ID of the original poster
-`bool&#124;string`|`$email`|If set, should be the email of the poster
-`bool&#124;string`|`$membername`|If set, the membername of the poster
-`bool`|`$post_count`|Whether to adjust post counts
+`php int`|`php $memID`|The ID of the original poster
+`php bool&#124;string`|`php $email`|If set, should be the email of the poster
+`php bool&#124;string`|`php $membername`|If set, the membername of the poster
+`php bool`|`php $post_count`|Whether to adjust post counts
 
 ### BuddyListToggle
 
@@ -140,12 +141,12 @@ Callback for createList().
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$start`|Which item to start with (for pagination purposes)
-`int`|`$items_per_page`|How many items to show per page
-`string`|`$sort`|An SQL query indicating how to sort the results
-`string`|`$where`|An SQL query used to filter the results
-`array`|`$where_params`|An array of parameters for $where
-`bool`|`$get_duplicates`|Whether to get duplicates (used for the admin member list)
+`php int`|`php $start`|Which item to start with (for pagination purposes)
+`php int`|`php $items_per_page`|How many items to show per page
+`php string`|`php $sort`|An SQL query indicating how to sort the results
+`php string`|`php $where`|An SQL query used to filter the results
+`php array`|`php $where_params`|An array of parameters for $where
+`php bool`|`php $get_duplicates`|Whether to get duplicates (used for the admin member list)
 
 ### list_getNumMembers
 
@@ -158,8 +159,8 @@ Callback for createList().
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$where`|An SQL query to filter the results
-`array`|`$where_params`|An array of parameters for $where
+`php string`|`php $where`|An SQL query to filter the results
+`php array`|`php $where_params`|An array of parameters for $where
 
 ### populateDuplicateMembers
 
@@ -172,7 +173,7 @@ Find potential duplicate registration members based on the same IP address
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$members`|An array of members
+`php array`|`php $members`|An array of members
 
 ### generateValidationCode
 

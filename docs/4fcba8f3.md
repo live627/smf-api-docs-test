@@ -1,5 +1,6 @@
 ---
 layout: default
+navtitle: Reminder.template.php
 title: ./Themes/default/Reminder.template.php
 count: 5
 ---

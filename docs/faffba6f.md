@@ -1,5 +1,6 @@
 ---
 layout: default
+navtitle: Notify.php
 title: ./Sources/Notify.php
 count: 3
 ---

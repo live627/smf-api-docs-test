@@ -1,5 +1,6 @@
 ---
 layout: default
+navtitle: Post.php
 title: ./Sources/Post.php
 count: 8
 ---
@@ -19,7 +20,7 @@ Handles showing the post screen, loading the post to be modified, and loading an
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$post_errors`|Holds any errors found while tyring to post
+`php array`|`php $post_errors`|Holds any errors found while tyring to post
 
 ### Post2
 

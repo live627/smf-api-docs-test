@@ -1,5 +1,6 @@
 ---
 layout: default
+navtitle: ManagePermissions.template.php
 title: ./Themes/default/ManagePermissions.template.php
 count: 7
 ---
@@ -51,7 +52,7 @@ The way of looking at permissions.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$type`|The permissions type
+`php string`|`php $type`|The permissions type
 
 ### template_inline_permissions
 
