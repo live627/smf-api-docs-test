@@ -124,10 +124,7 @@ all of the permissions passed in via $permissions.
 Type|Parameter|Description
 ---|---|---
 `array`|`$permissions`|The permissions to display inline
-`array`|`$excluded_groups`|The IDs of one or more groups to exclude<br />
-<br />
-Uses ManagePermissions language<br />
-Uses ManagePermissions template
+`array`|`$excluded_groups`|The IDs of one or more groups to exclude<br><br>Uses ManagePermissions language<br>Uses ManagePermissions template
 
 ### theme_inline_permissions
 

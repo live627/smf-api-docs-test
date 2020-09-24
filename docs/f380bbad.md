@@ -195,17 +195,7 @@ Add a CSS file for output later
 Type|Parameter|Description
 ---|---|---
 `string`|`$fileName`|The name of the file to load
-`array`|`$params`|An array of parameters<br />
-Keys are the following:<br />
-	- ['external'] (true/false): define if the file is a externally located file. Needs to be set to true if you are loading an external file<br />
-	- ['default_theme'] (true/false): force use of default theme url<br />
-	- ['force_current'] (true/false): if this is false, we will attempt to load the file from the default theme if not found in the current theme<br />
- - ['validate'] (true/false): if true script will validate the local file exists<br />
- - ['rtl'] (string): additional file to load in RTL mode<br />
- - ['seed'] (true/false/string): if true or null, use cache stale, false do not, or used a supplied string<br />
- - ['minimize'] boolean to add your file to the main minimized file. Useful when you have a file thats loaded everywhere and for everyone.<br />
- - ['order_pos'] int define the load order, when not define it's loaded in the middle, before index.css = -500, after index.css = 500, middle = 3000, end (i.e. after responsive.css) = 10000<br />
- - ['attributes'] array extra attributes to add to the element
+`array`|`$params`|An array of parameters<br>Keys are the following:<br>	- ['external'] (true/false): define if the file is a externally located file. Needs to be set to true if you are loading an external file<br>	- ['default_theme'] (true/false): force use of default theme url<br>	- ['force_current'] (true/false): if this is false, we will attempt to load the file from the default theme if not found in the current theme<br> - ['validate'] (true/false): if true script will validate the local file exists<br> - ['rtl'] (string): additional file to load in RTL mode<br> - ['seed'] (true/false/string): if true or null, use cache stale, false do not, or used a supplied string<br> - ['minimize'] boolean to add your file to the main minimized file. Useful when you have a file thats loaded everywhere and for everyone.<br> - ['order_pos'] int define the load order, when not define it's loaded in the middle, before index.css = -500, after index.css = 500, middle = 3000, end (i.e. after responsive.css) = 10000<br> - ['attributes'] array extra attributes to add to the element
 `string`|`$id`|An ID to stick on the end of the filename for caching purposes
 
 ### addInlineCss
@@ -235,18 +225,7 @@ Add a Javascript file for output later
 Type|Parameter|Description
 ---|---|---
 `string`|`$fileName`|The name of the file to load
-`array`|`$params`|An array of parameter info<br />
-Keys are the following:<br />
-	- ['external'] (true/false): define if the file is a externally located file. Needs to be set to true if you are loading an external file<br />
-	- ['default_theme'] (true/false): force use of default theme url<br />
-	- ['defer'] (true/false): define if the file should load in <head> or before the closing <html> tag<br />
-	- ['force_current'] (true/false): if this is false, we will attempt to load the file from the<br />
-default theme if not found in the current theme<br />
-- ['async'] (true/false): if the script should be loaded asynchronously (HTML5)<br />
- - ['validate'] (true/false): if true script will validate the local file exists<br />
- - ['seed'] (true/false/string): if true or null, use cache stale, false do not, or used a supplied string<br />
- - ['minimize'] boolean to add your file to the main minimized file. Useful when you have a file thats loaded everywhere and for everyone.<br />
- - ['attributes'] array extra attributes to add to the element
+`array`|`$params`|An array of parameter info<br>Keys are the following:<br>	- ['external'] (true/false): define if the file is a externally located file. Needs to be set to true if you are loading an external file<br>	- ['default_theme'] (true/false): force use of default theme url<br>	- ['defer'] (true/false): define if the file should load in <head> or before the closing <html> tag<br>	- ['force_current'] (true/false): if this is false, we will attempt to load the file from the<br>default theme if not found in the current theme<br>- ['async'] (true/false): if the script should be loaded asynchronously (HTML5)<br> - ['validate'] (true/false): if true script will validate the local file exists<br> - ['seed'] (true/false/string): if true or null, use cache stale, false do not, or used a supplied string<br> - ['minimize'] boolean to add your file to the main minimized file. Useful when you have a file thats loaded everywhere and for everyone.<br> - ['attributes'] array extra attributes to add to the element
 `string`|`$id`|An ID to stick on the end of the filename
 
 ### addJavaScriptVar
