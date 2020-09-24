@@ -181,6 +181,11 @@ footer, footer a, header a
 {
 	color: #fff !important;
 }
+footer img {
+	vertical-align: middle;
+}
+table {border-collapse: collapse;}
+td    {padding: 0 0.75e,}
 pre {
 	padding: 16px;
 	background-color: #f6f8fa;
