@@ -42,7 +42,7 @@ Intended for use by background tasks that need to populate $user_info.
 
 Type|Parameter|Description
 ---|---|---
-`int\|array`|`$user_ids`|The users IDs to get the data for.
+`int`\|`array`|`$user_ids`|The users IDs to get the data for.
 
 ### loadBoard
 
@@ -80,7 +80,7 @@ Loads an array of users' data by ID or member_name.
 
 Type|Parameter|Description
 ---|---|---
-`array\|string`|`$users`|An array of users by id or name or a single username/id
+`array`\|`string`|`$users`|An array of users by id or name or a single username/id
 `bool`|`$is_name`|Whether $users contains names
 `string`|`$set`|What kind of data to load (normal, profile, minimal)
 
@@ -109,8 +109,8 @@ Loads the user's custom profile fields
 
 Type|Parameter|Description
 ---|---|---
-`int\|array`|`$users`|A single user ID or an array of user IDs
-`string\|array`|`$params`|Either a string or an array of strings with profile field names
+`int`\|`array`|`$users`|A single user ID or an array of user IDs
+`string`\|`array`|`$params`|Either a string or an array of strings with profile field names
 
 ### detectBrowser
 
@@ -163,7 +163,7 @@ What this function does:
 Type|Parameter|Description
 ---|---|---
 `string`|`$template_name`|The name of the template to load
-`array\|string`|`$style_sheets`|The name of a single stylesheet or an array of names of stylesheets to load
+`array`\|`string`|`$style_sheets`|The name of a single stylesheet or an array of names of stylesheets to load
 `bool`|`$fatal`|If true, dies with an error message if the template cannot be found
 
 ### loadSubTemplate
@@ -195,16 +195,16 @@ Add a CSS file for output later
 Type|Parameter|Description
 ---|---|---
 `string`|`$fileName`|The name of the file to load
-`array`|`$params`|An array of parameters
-Keys are the following:
-	- ['external'] (true/false): define if the file is a externally located file. Needs to be set to true if you are loading an external file
-	- ['default_theme'] (true/false): force use of default theme url
-	- ['force_current'] (true/false): if this is false, we will attempt to load the file from the default theme if not found in the current theme
- - ['validate'] (true/false): if true script will validate the local file exists
- - ['rtl'] (string): additional file to load in RTL mode
- - ['seed'] (true/false/string): if true or null, use cache stale, false do not, or used a supplied string
- - ['minimize'] boolean to add your file to the main minimized file. Useful when you have a file thats loaded everywhere and for everyone.
- - ['order_pos'] int define the load order, when not define it's loaded in the middle, before index.css = -500, after index.css = 500, middle = 3000, end (i.e. after responsive.css) = 10000
+`array`|`$params`|An array of parameters<br />
+Keys are the following:<br />
+	- ['external'] (true/false): define if the file is a externally located file. Needs to be set to true if you are loading an external file<br />
+	- ['default_theme'] (true/false): force use of default theme url<br />
+	- ['force_current'] (true/false): if this is false, we will attempt to load the file from the default theme if not found in the current theme<br />
+ - ['validate'] (true/false): if true script will validate the local file exists<br />
+ - ['rtl'] (string): additional file to load in RTL mode<br />
+ - ['seed'] (true/false/string): if true or null, use cache stale, false do not, or used a supplied string<br />
+ - ['minimize'] boolean to add your file to the main minimized file. Useful when you have a file thats loaded everywhere and for everyone.<br />
+ - ['order_pos'] int define the load order, when not define it's loaded in the middle, before index.css = -500, after index.css = 500, middle = 3000, end (i.e. after responsive.css) = 10000<br />
  - ['attributes'] array extra attributes to add to the element
 `string`|`$id`|An ID to stick on the end of the filename for caching purposes
 
@@ -235,17 +235,17 @@ Add a Javascript file for output later
 Type|Parameter|Description
 ---|---|---
 `string`|`$fileName`|The name of the file to load
-`array`|`$params`|An array of parameter info
-Keys are the following:
-	- ['external'] (true/false): define if the file is a externally located file. Needs to be set to true if you are loading an external file
-	- ['default_theme'] (true/false): force use of default theme url
-	- ['defer'] (true/false): define if the file should load in <head> or before the closing <html> tag
-	- ['force_current'] (true/false): if this is false, we will attempt to load the file from the
-default theme if not found in the current theme
-- ['async'] (true/false): if the script should be loaded asynchronously (HTML5)
- - ['validate'] (true/false): if true script will validate the local file exists
- - ['seed'] (true/false/string): if true or null, use cache stale, false do not, or used a supplied string
- - ['minimize'] boolean to add your file to the main minimized file. Useful when you have a file thats loaded everywhere and for everyone.
+`array`|`$params`|An array of parameter info<br />
+Keys are the following:<br />
+	- ['external'] (true/false): define if the file is a externally located file. Needs to be set to true if you are loading an external file<br />
+	- ['default_theme'] (true/false): force use of default theme url<br />
+	- ['defer'] (true/false): define if the file should load in <head> or before the closing <html> tag<br />
+	- ['force_current'] (true/false): if this is false, we will attempt to load the file from the<br />
+default theme if not found in the current theme<br />
+- ['async'] (true/false): if the script should be loaded asynchronously (HTML5)<br />
+ - ['validate'] (true/false): if true script will validate the local file exists<br />
+ - ['seed'] (true/false/string): if true or null, use cache stale, false do not, or used a supplied string<br />
+ - ['minimize'] boolean to add your file to the main minimized file. Useful when you have a file thats loaded everywhere and for everyone.<br />
  - ['attributes'] array extra attributes to add to the element
 `string`|`$id`|An ID to stick on the end of the filename
 

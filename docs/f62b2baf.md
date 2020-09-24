@@ -94,7 +94,7 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$level`|The level ('restrict', 'standard', etc.)
 `int`|`$group`|The group to set the permission for
-`string\|int`|`$profile`|The ID of the permissions profile or 'null' if we're setting it for a group
+`string`\|`int`|`$profile`|The ID of the permissions profile or 'null' if we're setting it for a group
 
 ### loadAllPermissions
 
@@ -124,9 +124,9 @@ all of the permissions passed in via $permissions.
 Type|Parameter|Description
 ---|---|---
 `array`|`$permissions`|The permissions to display inline
-`array`|`$excluded_groups`|The IDs of one or more groups to exclude
-
-Uses ManagePermissions language
+`array`|`$excluded_groups`|The IDs of one or more groups to exclude<br />
+<br />
+Uses ManagePermissions language<br />
 Uses ManagePermissions template
 
 ### theme_inline_permissions
@@ -185,8 +185,8 @@ This function updates the permissions of any groups based off this group.
 
 Type|Parameter|Description
 ---|---|---
-`null\|array`|`$parents`|The parent groups
-`null\|int`|`$profile`|the ID of a permissions profile to update
+`null`\|`array`|`$parents`|The parent groups
+`null`\|`int`|`$profile`|the ID of a permissions profile to update
 
 ### loadIllegalPermissions
 
