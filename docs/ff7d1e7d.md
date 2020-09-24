@@ -25,7 +25,7 @@ ban entries, theme settings, moderator positions, poll and votes.
 
 Type|Parameter|Description
 ---|---|---
-`int&#124;array`|`$users`|The ID of a user or an array of user IDs
+`int\|array`|`$users`|The ID of a user or an array of user IDs
 `bool`|`$check_not_admin`|Whether to verify that the users aren't admins
 
 ### registerMember
@@ -115,8 +115,8 @@ If add_to_post_count is set, the member's post count is increased.
 Type|Parameter|Description
 ---|---|---
 `int`|`$memID`|The ID of the original poster
-`bool&#124;string`|`$email`|If set, should be the email of the poster
-`bool&#124;string`|`$membername`|If set, the membername of the poster
+`bool\|string`|`$email`|If set, should be the email of the poster
+`bool\|string`|`$membername`|If set, the membername of the poster
 `bool`|`$post_count`|Whether to adjust post counts
 
 ### BuddyListToggle
