@@ -4,7 +4,8 @@ navtitle: Profile.php
 title: ./Sources/Profile.php
 count: 4
 ---
-
+* auto-gen TOC:
+{:toc}
 ### ModifyProfile
 
 ```php

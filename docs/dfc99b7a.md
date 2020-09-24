@@ -4,7 +4,8 @@ navtitle: Subs-Graphics.php
 title: ./Sources/Subs-Graphics.php
 count: 15
 ---
-
+* auto-gen TOC:
+{:toc}
 ### downloadAvatar
 
 ```php

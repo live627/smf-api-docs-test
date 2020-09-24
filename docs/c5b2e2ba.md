@@ -4,7 +4,8 @@ navtitle: Notify.template.php
 title: ./Themes/default/Notify.template.php
 count: 4
 ---
-
+* auto-gen TOC:
+{:toc}
 ### template_main
 
 ```php

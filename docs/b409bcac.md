@@ -4,7 +4,8 @@ navtitle: RepairBoards.php
 title: ./Sources/RepairBoards.php
 count: 5
 ---
-
+* auto-gen TOC:
+{:toc}
 ### RepairBoards
 
 ```php

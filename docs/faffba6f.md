@@ -4,7 +4,8 @@ navtitle: Notify.php
 title: ./Sources/Notify.php
 count: 3
 ---
-
+* auto-gen TOC:
+{:toc}
 ### BoardNotify
 
 ```php

@@ -4,7 +4,8 @@ navtitle: ManageErrors.php
 title: ./Sources/ManageErrors.php
 count: 4
 ---
-
+* auto-gen TOC:
+{:toc}
 ### ViewErrorLog
 
 ```php

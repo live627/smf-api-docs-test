@@ -4,7 +4,8 @@ navtitle: Post.php
 title: ./Sources/Post.php
 count: 8
 ---
-
+* auto-gen TOC:
+{:toc}
 ### Post
 
 ```php

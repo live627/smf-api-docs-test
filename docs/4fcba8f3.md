@@ -4,7 +4,8 @@ navtitle: Reminder.template.php
 title: ./Themes/default/Reminder.template.php
 count: 5
 ---
-
+* auto-gen TOC:
+{:toc}
 ### template_main
 
 ```php

@@ -4,7 +4,8 @@ navtitle: Agreement.php
 title: ./Sources/Agreement.php
 count: 5
 ---
-
+* auto-gen TOC:
+{:toc}
 ### prepareAgreementContext
 
 ```php

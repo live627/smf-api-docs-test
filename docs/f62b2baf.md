@@ -4,7 +4,8 @@ navtitle: ManagePermissions.php
 title: ./Sources/ManagePermissions.php
 count: 21
 ---
-
+* auto-gen TOC:
+{:toc}
 ### ModifyPermissions
 
 ```php

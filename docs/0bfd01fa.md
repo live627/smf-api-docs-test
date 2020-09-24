@@ -4,7 +4,8 @@ navtitle: ScheduledTasks.php
 title: ./Sources/ScheduledTasks.php
 count: 15
 ---
-
+* auto-gen TOC:
+{:toc}
 ### AutoTask
 
 ```php

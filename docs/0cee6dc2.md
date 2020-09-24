@@ -4,7 +4,8 @@ navtitle: GenericMenu.template.php
 title: ./Themes/default/GenericMenu.template.php
 count: 4
 ---
-
+* auto-gen TOC:
+{:toc}
 ### template_generic_menu_dropdown_above
 
 ```php

@@ -4,7 +4,8 @@ navtitle: Display.php
 title: ./Sources/Display.php
 count: 4
 ---
-
+* auto-gen TOC:
+{:toc}
 ### Display
 
 ```php

@@ -4,7 +4,8 @@ navtitle: Load.php
 title: ./Sources/Load.php
 count: 31
 ---
-
+* auto-gen TOC:
+{:toc}
 ### reloadSettings
 
 ```php

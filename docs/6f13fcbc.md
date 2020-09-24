@@ -4,7 +4,8 @@ navtitle: Subs-MessageIndex.php
 title: ./Sources/Subs-MessageIndex.php
 count: 1
 ---
-
+* auto-gen TOC:
+{:toc}
 ### getBoardList
 
 ```php

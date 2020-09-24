@@ -4,7 +4,8 @@ navtitle: ManagePermissions.template.php
 title: ./Themes/default/ManagePermissions.template.php
 count: 7
 ---
-
+* auto-gen TOC:
+{:toc}
 ### template_permission_index
 
 ```php

@@ -4,7 +4,8 @@ navtitle: Printpage.template.php
 title: ./Themes/default/Printpage.template.php
 count: 4
 ---
-
+* auto-gen TOC:
+{:toc}
 ### template_print_above
 
 ```php

@@ -4,7 +4,8 @@ navtitle: ManageNews.template.php
 title: ./Themes/default/ManageNews.template.php
 count: 4
 ---
-
+* auto-gen TOC:
+{:toc}
 ### template_email_members
 
 ```php
