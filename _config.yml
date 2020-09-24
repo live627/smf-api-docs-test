@@ -1,5 +1,4 @@
 name: Unofficial SMF API Documentation
 baseurl: /smf-api-docs-test
-source: /docs
-markdown: commonmark
+markdown: GFM
 highlighter: rouge
