@@ -173,13 +173,11 @@ footer
 {
 	margin-top: 20px;
 	background: #0f293b;
-	padding: 20px 0;
 	text-align: center;
-	box-shadow: 0 -7px #143c57;
 }
 footer, footer a, header a
 {
-	color: #fff !important;
+	color: #fff;
 }
 footer img {
 	vertical-align: middle;
