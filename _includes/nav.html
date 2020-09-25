@@ -2,7 +2,7 @@
     <p{% if g[0] == page.group %} class="open"{% endif %}></ul>
         {{ g[1].name }}
     </p>
-    <ul>{% for p in site.pages | sort: 'title' %}{% if site.data.groups[p.group] %}
+    <ul>{% for p in site.pages | sort: 'title' %}{% if g[0] == p.group %}
         <li>
             <a {% if p.url == page.url %}class="active"{% endif %} href="{{ site.baseurl }}{{ p.url }}">
                 {{ p.navtitle }}
@@ -13,6 +13,6 @@
 <script>
     for (let el of document.querySelectorAll('nav p'))
         el.addEventListener('click', function() {
-            this.classList.toggle(open);
+            this.classList.toggle('open');
         }, false);
 </script>

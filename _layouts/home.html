@@ -3,7 +3,7 @@
         <dl>{% for g in site.data.groups %}
             <dt>
                 {{ g[1].name }}
-            </dt>{% for p in site.pages | sort: 'title' %}{% if site.data.groups[p.group] %}
+            </dt>{% for p in site.pages | sort: 'title' %}{% if g[0] == p.group %}
             <dd>
                 <a href="{{ site.baseurl }}{{ p.url }}">
                     {{ p.title }}

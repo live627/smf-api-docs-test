@@ -122,67 +122,18 @@ dt {
 dd+dt {
 	margin-top: 1em;
 }
-nav ul,
-aside ul {
+nav ul {
   list-style:none;
-  padding:0;
+	padding: 0.5em;
 }
-aside ul {
-  height:40px;
-  background: #eee;
-  background: -moz-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#dddddd));
-  background: -webkit-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: -o-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: -ms-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-
-  border-radius:5px;
-  border:1px solid #d2d2d2;
-  box-shadow:inset #fff 0 1px 0, inset rgba(0,0,0,0.03) 0 -1px 0;
-  width:270px;
 }
-
-aside li {
-  width:89px;
-  float:left;
-  border-right:1px solid #d2d2d2;
-  height:40px;
-}
-
-aside ul a {
-  line-height:1;
-  font-size:11px;
-  color:#999;
-  display:block;
-  text-align:center;
-  padding-top:6px;
-  height:40px;
-}
-
-strong {
-  color:#222;
-  font-weight:700;
-}
-
-aside ul li + li {
-  width:88px;
-  border-left:1px solid #fff;
-}
-
-aside ul li + li + li {
-  border-right:none;
-  width:89px;
-}
-
-aside ul a strong {
-  font-size:14px;
-  display:block;
+nav p{
+	font-weight: bold;
+	border-bottom: 1px solid #D8D2C2;
+	cursor:pointer;
 }
 nav p:before{
     content: "\25b8";
-    float:right;
-    color:gray;
 }
 nav p.open:before{
     content: "\25be";
