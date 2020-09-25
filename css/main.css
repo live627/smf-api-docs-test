@@ -182,15 +182,15 @@ aside ul a strong {
   font-size:14px;
   display:block;
 }
-nav p.open:before{
+nav p:before{
     content: "\25b8";
     float:right;
     color:gray;
 }
-nav p:before{
+nav p.open:before{
     content: "\25be";
 }
-nav p + ul {
+nav p:not(.open) + ul {
   display:none;
 }
 footer
