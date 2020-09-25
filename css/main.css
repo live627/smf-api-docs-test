@@ -1,3 +1,4 @@
+
 @import url(http://fonts.googleapis.com/css?family=Oswald);
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans);
 
@@ -110,7 +111,7 @@ header {
     max-height: 50px;
    }
   }
-dl,dt,dd {
+dl,dt,dd,nav ul,nav p {
 	margin: 0;
 	padding: 0;
 }
@@ -124,9 +125,7 @@ dd+dt {
 }
 nav ul {
   list-style:none;
-	padding: 0.5em;
-}
-}
+	padding: 0.5em;}
 nav p{
 	font-weight: bold;
 	border-bottom: 1px solid #D8D2C2;
