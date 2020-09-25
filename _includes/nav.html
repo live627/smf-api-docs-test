@@ -1,9 +1,22 @@
-<nav class="nav-primary">
-    <ul>{% for p in site.pages %}{% if p.group == page.group %}
+<nav class="nav-primary">{% for g in site.data.groups %}
+    <p{% if g.name == page.group %} class="open"{% endif %}></ul>
+        {{ g.name }}
+    </p>{% for p in site.pages | sort: 'title' %}{% if site.data.groups[p.group] %}
+    <ul {% if p.group == page.group %} class="active"{% endif %}></ul>
         <li>
             <a {% if p.url == page.url %}class="active"{% endif %} href="{{ site.baseurl }}{{ p.url }}">
                 {{ p.navtitle }}
             </a>
         </li>{% endif %}{% endfor %}
-    </ul>
+    </ul>{% endfor %}
 </nav>
+<script>
+    for (let el of document.querySelectorAll('nav ul:not(.active)'))
+        el.className = 'hidden';
+    for (let el of document.querySelectorAll('nav p'))
+        el.addEventListener('click', function() {
+            for (let el of document.querySelectorAll('nav ul:not(.active)')
+                el.className = 'hidden';
+            this.classList.toggle(open);
+        }, false);
+</script>
