@@ -1,3 +1,6 @@
 func:
     name: Function Database
     counter: functions
+hooks:
+    name: Integration Hooks
+    counter: hooks
