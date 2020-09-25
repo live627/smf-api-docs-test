@@ -1,5 +1,5 @@
 <nav class="nav-primary">
-    <ul>{% for p in site.pages %}{% if p.home %}{% else %}
+    <ul>{% for p in site.pages %}{% if p.group == page.group %}
         <li>
             <a {% if p.url == page.url %}class="active"{% endif %} href="{{ site.baseurl }}{{ p.url }}">
                 {{ p.navtitle }}

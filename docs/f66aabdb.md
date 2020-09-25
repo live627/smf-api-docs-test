@@ -1,5 +1,6 @@
 ---
 layout: default
+group: func
 navtitle: Post.php
 title: ./Sources/Post.php
 count: 8

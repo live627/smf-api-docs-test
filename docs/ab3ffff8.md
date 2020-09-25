@@ -1,5 +1,6 @@
 ---
 layout: default
+group: func
 navtitle: ManagePermissions.template.php
 title: ./Themes/default/ManagePermissions.template.php
 count: 7

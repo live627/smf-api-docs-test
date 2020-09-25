@@ -1,5 +1,6 @@
 ---
 layout: default
+group: func
 navtitle: Notify.php
 title: ./Sources/Notify.php
 count: 3

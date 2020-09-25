@@ -1,5 +1,6 @@
 ---
 layout: default
+group: func
 navtitle: GenericMenu.template.php
 title: ./Themes/default/GenericMenu.template.php
 count: 4

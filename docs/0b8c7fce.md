@@ -1,5 +1,6 @@
 ---
 layout: default
+group: func
 navtitle: ManageErrors.php
 title: ./Sources/ManageErrors.php
 count: 4

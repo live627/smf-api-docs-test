@@ -1,5 +1,6 @@
 ---
 layout: default
+group: func
 navtitle: Agreement.template.php
 title: ./Themes/default/Agreement.template.php
 count: 1

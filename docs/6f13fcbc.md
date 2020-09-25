@@ -1,5 +1,6 @@
 ---
 layout: default
+group: func
 navtitle: Subs-MessageIndex.php
 title: ./Sources/Subs-MessageIndex.php
 count: 1

@@ -1,5 +1,6 @@
 ---
 layout: default
+group: func
 navtitle: Notify.template.php
 title: ./Themes/default/Notify.template.php
 count: 4

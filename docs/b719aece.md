@@ -1,5 +1,6 @@
 ---
 layout: default
+group: func
 navtitle: Profile.php
 title: ./Sources/Profile.php
 count: 4

@@ -1,5 +1,6 @@
 ---
 layout: default
+group: func
 navtitle: Reminder.template.php
 title: ./Themes/default/Reminder.template.php
 count: 5

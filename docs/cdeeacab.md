@@ -1,5 +1,6 @@
 ---
 layout: default
+group: func
 navtitle: Display.php
 title: ./Sources/Display.php
 count: 4

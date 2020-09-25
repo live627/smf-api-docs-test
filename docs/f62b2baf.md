@@ -1,5 +1,6 @@
 ---
 layout: default
+group: func
 navtitle: ManagePermissions.php
 title: ./Sources/ManagePermissions.php
 count: 21

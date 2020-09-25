@@ -1,5 +1,6 @@
 ---
 layout: default
+group: func
 navtitle: Subs-Graphics.php
 title: ./Sources/Subs-Graphics.php
 count: 15

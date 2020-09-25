@@ -1,5 +1,6 @@
 ---
 layout: default
+group: func
 navtitle: Load.php
 title: ./Sources/Load.php
 count: 31

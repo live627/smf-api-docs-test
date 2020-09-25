@@ -1,11 +1,15 @@
 {% include head.html %}
     <article> {{ content }}
-        <ul>{% for p in site.pages %}{% if p.home %}{% else %}
+        <dl>{% for g in site.data.groups %}
+            <dt>
+                {{ g.name }}
+            </dt>
+        <dl>{% for p in site.pages | sort: 'title' %}{% if p.group == g.name %}
             <li>
-                <a {% if p.url == page.url %}class="active"{% endif %} href="{{ site.baseurl }}{{ p.url }}">
+                <a href="{{ site.baseurl }}{{ p.url }}">
                     {{ p.title }}
-                </a> — {{ p.count }} functions
-            </li>{% endif %}{% endfor %}
-        </ul>
+                </a>{% if p.count %} — {{ p.count }} {{ site.data.groups[p.group].name }}{% endif %}
+            </li>{% endif %}{% endfor %}{% endfor %}
+        </dl>
     </article>
 {% include foot.html %}

@@ -1,5 +1,6 @@
 ---
 layout: default
+group: func
 navtitle: ScheduledTasks.php
 title: ./Sources/ScheduledTasks.php
 count: 15

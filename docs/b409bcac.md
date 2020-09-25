@@ -1,5 +1,6 @@
 ---
 layout: default
+group: func
 navtitle: RepairBoards.php
 title: ./Sources/RepairBoards.php
 count: 5

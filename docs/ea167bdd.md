@@ -1,5 +1,6 @@
 ---
 layout: default
+group: func
 navtitle: DbSearch-postgresql.php
 title: ./Sources/DbSearch-postgresql.php
 count: 5
