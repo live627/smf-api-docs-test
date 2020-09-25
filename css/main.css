@@ -130,6 +130,7 @@ nav p{
 	font-weight: bold;
 	border-bottom: 1px solid #D8D2C2;
 	cursor:pointer;
+	padding-bottom: .1em;
 }
 nav p:before{
     content: "\25b8";
