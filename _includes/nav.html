@@ -1,14 +1,14 @@
 <nav class="nav-primary">{% for g in site.data.groups %}
     <p{% if g[0] == page.group %} class="open"{% endif %}></ul>
         {{ g[1].name }}
-    </p>{% for p in site.pages | sort: 'title' %}{% if site.data.groups[p.group] %}
-    <ul {% if p.group == page.group %} class="active"{% endif %}></ul>
+    </p>
+    <ul>{% for p in site.pages | sort: 'title' %}{% if site.data.groups[p.group] %}
         <li>
             <a {% if p.url == page.url %}class="active"{% endif %} href="{{ site.baseurl }}{{ p.url }}">
                 {{ p.navtitle }}
             </a>
-        </li>{% endif %}
-    </ul>{% endfor %}{% endfor %}
+        </li>{% endif %}{% endfor %}
+    </ul>{% endfor %}
 </nav>
 <script>
     for (let el of document.querySelectorAll('nav p'))

@@ -110,20 +110,17 @@ header {
     max-height: 50px;
    }
   }
-dl {
+dl,dt,dd {
 	margin: 0;
 	padding: 0;
 }
 
 dt {
-	margin: 0;
-	padding: 0;
 	font-weight: bold;
 }
 
-dd {
-	margin: 0 0 1em 0;
-	padding: 0;
+dd+dt {
+	margin-top: 1em;
 }
 nav ul,
 aside ul {
