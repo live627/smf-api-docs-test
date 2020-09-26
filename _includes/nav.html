@@ -1,5 +1,5 @@
 <nav class="nav-primary">{% for g in site.data.groups %}
-    <p{% if g[0] == page.group %} class="open"{% endif %}></ul>
+    <p{% if g[0] == page.group %} class="open"{% endif %}>
         {{ g[1].name }}
     </p>
     <ul>{% for p in site.pages | sort: 'title' %}{% if g[0] == p.group %}
