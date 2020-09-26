@@ -22,7 +22,7 @@ Type|Parameter|Description
 `array`|`&$posts`|Associative array of posts with message ids as keys
 
 Called from
-: queryPosts()
+: ssi_queryPosts()
 
 ### integrate_ssi_recentTopics
 
@@ -35,7 +35,7 @@ Type|Parameter|Description
 `array`|`&$posts`|List of posts
 
 Called from
-: recentTopics()
+: ssi_recentTopics()
 
 ### integrate_ssi_topPoster
 
@@ -48,7 +48,7 @@ Type|Parameter|Description
 `array`|`&$return`|List of members.
 
 Called from
-: topPoster()
+: ssi_topPoster()
 
 Notes
 : Each element has the following definition:
@@ -72,7 +72,7 @@ Type|Parameter|Description
 `array`|`&$boards`|List of boards.
 
 Called from
-: topBoards()
+: ssi_topBoards()
 
 Notes
 : Each element has the following definition:
