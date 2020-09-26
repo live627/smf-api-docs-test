@@ -21,7 +21,6 @@ Type|Parameter|Description
 ---|---|---
 `array`|`&$posts`|Associative array of posts with message ids as keys
 
-
 Called from
 : queryPosts()
 
@@ -37,6 +36,7 @@ Type|Parameter|Description
 
 Called from
 : recentTopics()
+
 ### integrate_ssi_topPoster
 
 ```php
@@ -49,6 +49,7 @@ Type|Parameter|Description
 
 Called from
 : topPoster()
+
 Notes
 : Each element has the following definition:
 
@@ -59,6 +60,7 @@ Notes
     `string`|`link`|HTML formatted link to their profile
     `string`|`posts`|Number of posts
 : Numeric values are strings because the native mysqld driver only returns strings.
+
 ### integrate_ssi_topBoards
 
 ```php
@@ -67,7 +69,24 @@ call_integration_hook('integrate_ssi_topBoards', array(&$boards)
 
 Type|Parameter|Description
 ---|---|---
-`array`|`&$boards`|desc
+`array`|`&$boards`|List of boards.
+
+Called from
+: topBoards()
+
+Notes
+: Each element has the following definition:
+
+    Type|Key|Description
+    ---|---|---
+    `string`|`id`|The board id
+    `string`|`num_posts`|Number of posts
+    `string`|`num_topics`|Number of topcs
+    `string`|`name`|The board real name; this is the name that can be changed at will
+    `bool`|`new`|Whether it has new posts or not (in reverse)
+    `string`|`href`|URL
+    `string`|`link`|HTML formatted link to their profile
+: Numeric values are strings because the native mysqld driver only returns strings.
 
 ### integrate_ssi_topTopics
 
