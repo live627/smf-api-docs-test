@@ -168,6 +168,22 @@ pre {
 	background-color: rgba(27,31,35,.05);
 	border-radius: 6px;
 }
+table + dl {
+	margin: 2em 0;
+}
+
+table + dl dt {
+	position: relative;
+	left: 0;
+	top: 1.1em;
+	width: 10em;
+	font-weight: bold;
+}
+
+table + dl dd {
+	margin: 0 0 0 6em;
+	padding: 0 0 .5em .5em;
+}
 .highlight .hll { background-color: #ffffcc }
 .highlight  { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */

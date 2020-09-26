@@ -41,13 +41,16 @@ Type|Parameter|Description
 ---|---|---
 `var`|`&$return`|List of members.
 
+Notes
 : Each element has the following definition:
 
-    Type|Parameter|Description
+    Type|Key|Description
     ---|---|---
     `string`|`id`|The member id
     `string`|`name`|The member real name; this is the name that can be changed at will
-
+    `string`|`link`|HTML formatted link to their profile
+    `string`|`posts`|Number of posts
+: Numeric values are strings because the native mysqld driver only returns strings.
 ### integrate_ssi_topBoards
 
 ```php
