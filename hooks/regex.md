@@ -3,15 +3,13 @@ layout: default
 group: hooks
 title: Regular expression to filter calls
 ---
-
-https://regex101.com/r/qMjHcm/1
+* auto-gen TOC:
+{:toc}
+<https://regex101.com/r/qMjHcm/4>
 
 ```php
-$re = '/.+(call_integration_hook\(\'(?P<hook>[\w]+)\'(?P<param>|[^\)]+)\)).+/';
-$str = 'grep -nHIirF -- call_integration_hook (in directory: C:\\Users\\John\\repos\\SMF2.1)
-./docs/c1e16296.md:548:### call_integration_hook
-./docs/c1e16296.md:551:function call_integration_hook($hook, $parameters = array())
-./index.php:137:	call_integration_hook(\'integrate_autoload\', array(&$classMap));
+$re = '/.+(call_integration_hook\(\'(?P<hook>[\w]+)\'[, array\(]*(?P<param>|[^\)]+)\)).+/';
+$str = './index.php:137:	call_integration_hook(\'integrate_autoload\', array(&$classMap));
 ./index.php:244:	call_integration_hook(\'integrate_pre_log_stats\', array(&$no_stat_actions));
 ./index.php:403:	call_integration_hook(\'integrate_actions\', array(&$actionArray));
 ./Sources/Admin.php:732:	call_integration_hook(\'integrate_admin_search\', array(&$language_files, &$include_files, &$settings_search));
@@ -415,12 +413,3610 @@ $str = 'grep -nHIirF -- call_integration_hook (in directory: C:\\Users\\John\\re
 ./SSI.php:2337:	call_integration_hook(\'integrate_ssi_recentEvents\', array(&$return));
 ./SSI.php:2486:	call_integration_hook(\'integrate_ssi_recentAttachments\', array(&$attachments));
 ./Themes/default/index.template.php:637:		call_integration_hook(\'integrate_\' . $list_class . \'_quickbuttons\', array(&$list_items));
-./Themes/default/Post.template.php:472:		call_integration_hook(\'integrate_upload_template\');
-Search completed with 407 matches.
-';
-$subst = '\\n### $2\\`\\n\\n``php\\n$1\\n\\```\\nType|Parameter|Description\\n---|---|---\\nvar|$3|desc\\n';
+./Themes/default/Post.template.php:472:		call_integration_hook(\'integrate_upload_template\');';
+$subst = '### $2\\n\\n```php\\n$1\\n```\\nType|Parameter|Description\\n---|---|---\\n`var`|`$3`|desc\\n';
 
 $result = preg_replace($re, $subst, $str);
 
 echo "The result of the substitution is ".$result;
 ```
+
+### Output
+``````
+### integrate_autoload
+
+```php
+call_integration_hook('integrate_autoload', array(&$classMap)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$classMap`|desc
+
+### integrate_pre_log_stats
+
+```php
+call_integration_hook('integrate_pre_log_stats', array(&$no_stat_actions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$no_stat_actions`|desc
+
+### integrate_actions
+
+```php
+call_integration_hook('integrate_actions', array(&$actionArray)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$actionArray`|desc
+
+### integrate_admin_search
+
+```php
+call_integration_hook('integrate_admin_search', array(&$language_files, &$include_files, &$settings_search)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$language_files, &$include_files, &$settings_search`|desc
+
+### integrate_manage_logs
+
+```php
+call_integration_hook('integrate_manage_logs', array(&$log_functions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$log_functions`|desc
+
+### integrate_attachment_upload
+
+```php
+call_integration_hook('integrate_attachment_upload', array()
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_mark_read_button
+
+```php
+call_integration_hook('integrate_mark_read_button')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_calendar_buttons
+
+```php
+call_integration_hook('integrate_calendar_buttons')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_display_topic
+
+```php
+call_integration_hook('integrate_display_topic', array(&$topic_selects, &$topic_tables, &$topic_parameters)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$topic_selects, &$topic_tables, &$topic_parameters`|desc
+
+### integrate_poll_buttons
+
+```php
+call_integration_hook('integrate_poll_buttons')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_display_message_list
+
+```php
+call_integration_hook('integrate_display_message_list', array(&$messages, &$posters)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$messages, &$posters`|desc
+
+### integrate_query_message
+
+```php
+call_integration_hook('integrate_query_message', array(&$msg_selects, &$msg_tables, &$msg_parameters)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$msg_selects, &$msg_tables, &$msg_parameters`|desc
+
+### integrate_display_buttons
+
+```php
+call_integration_hook('integrate_display_buttons', array(&$context['normal_buttons'])
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$context['normal_buttons']`|desc
+
+### integrate_mod_buttons
+
+```php
+call_integration_hook('integrate_mod_buttons', array(&$context['mod_buttons'])
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$context['mod_buttons']`|desc
+
+### integrate_prepare_display_context
+
+```php
+call_integration_hook('integrate_prepare_display_context', array(&$output, &$message, $counter)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$output, &$message, $counter`|desc
+
+### integrate_error_types
+
+```php
+call_integration_hook('integrate_error_types', array(&$other_error_types, &$error_type, $error_message, $file, $line)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$other_error_types, &$error_type, $error_message, $file, $line`|desc
+
+### integrate_output_error
+
+```php
+call_integration_hook('integrate_output_error', array($message, $error_type, $error_level, $file, $line)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$message, $error_type, $error_level, $file, $line`|desc
+
+### integrate_manage_groups
+
+```php
+call_integration_hook('integrate_manage_groups', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_manage_help
+
+```php
+call_integration_hook('integrate_manage_help', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_helpadmin
+
+```php
+call_integration_hook('integrate_helpadmin')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_valid_likes
+
+```php
+call_integration_hook('integrate_valid_likes', array($this->_type, $this->_content, $this->_sa, $this->_js, $this->_extra)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$this->_type, $this->_content, $this->_sa, $this->_js, $this->_extra`|desc
+
+### integrate_issue_like_before
+
+```php
+call_integration_hook('integrate_issue_like_before', array(&$type, &$content, &$user, &$time)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$type, &$content, &$user, &$time`|desc
+
+### integrate_issue_like
+
+```php
+call_integration_hook('integrate_issue_like', array($this)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$this`|desc
+
+### integrate_likes_json_response
+
+```php
+call_integration_hook('integrate_likes_json_response', array(&$print)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$print`|desc
+
+### integrate_load_average
+
+```php
+call_integration_hook('integrate_load_average', array($modSettings['load_average'])
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$modSettings['load_average']`|desc
+
+### integrate_pre_load
+
+```php
+call_integration_hook('integrate_pre_load')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_verify_user
+
+```php
+call_integration_hook('integrate_verify_user')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_force_tfasetup
+
+```php
+call_integration_hook('integrate_force_tfasetup', array(&$force_tfasetup)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$force_tfasetup`|desc
+
+### integrate_verify_tfa
+
+```php
+call_integration_hook('integrate_verify_tfa', array($id_member, $user_settings)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$id_member, $user_settings`|desc
+
+### integrate_user_info
+
+```php
+call_integration_hook('integrate_user_info')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_load_min_user_settings_columns
+
+```php
+call_integration_hook('integrate_load_min_user_settings_columns', array(&$columns_to_load)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$columns_to_load`|desc
+
+### integrate_load_min_user_settings
+
+```php
+call_integration_hook('integrate_load_min_user_settings', array(&$user_info_min)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$user_info_min`|desc
+
+### integrate_load_board
+
+```php
+call_integration_hook('integrate_load_board', array(&$custom_column_selects, &$custom_column_parameters)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$custom_column_selects, &$custom_column_parameters`|desc
+
+### integrate_board_info
+
+```php
+call_integration_hook('integrate_board_info', array(&$board_info, $row)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$board_info, $row`|desc
+
+### integrate_load_member_data
+
+```php
+call_integration_hook('integrate_load_member_data', array(&$select_columns, &$select_tables, &$set)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$select_columns, &$select_tables, &$set`|desc
+
+### integrate_member_context
+
+```php
+call_integration_hook('integrate_member_context', array(&$memberContext[$user], $user, $display_custom_fields)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$memberContext[$user], $user, $display_custom_fields`|desc
+
+### integrate_pre_load_theme
+
+```php
+call_integration_hook('integrate_pre_load_theme', array(&$id_theme)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$id_theme`|desc
+
+### integrate_simple_actions
+
+```php
+call_integration_hook('integrate_simple_actions', array(&$simpleActions, &$simpleAreas, &$simpleSubActions, &$extraParams, &$xmlActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$simpleActions, &$simpleAreas, &$simpleSubActions, &$extraParams, &$xmlActions`|desc
+
+### integrate_load_theme
+
+```php
+call_integration_hook('integrate_load_theme')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+./Sources/Load.php:3609:	if (function_exists('call_integration_hook'))
+### pre_cache_quick_get
+
+```php
+call_integration_hook('pre_cache_quick_get', array(&$key, &$file, &$function, &$params, &$level)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$key, &$file, &$function, &$params, &$level`|desc
+
+./Sources/Load.php:3632:	if (function_exists('call_integration_hook'))
+### post_cache_quick_get
+
+```php
+call_integration_hook('post_cache_quick_get', array(&$cache_block)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$cache_block`|desc
+
+./Sources/Load.php:3674:	if (function_exists('call_integration_hook'))
+### cache_put_data
+
+```php
+call_integration_hook('cache_put_data', array(&$key, &$value, &$ttl)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$key, &$value, &$ttl`|desc
+
+./Sources/Load.php:3724:	if (function_exists('call_integration_hook') && isset($value))
+### cache_get_data
+
+```php
+call_integration_hook('cache_get_data', array(&$key, &$ttl, &$value)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$key, &$ttl, &$value`|desc
+
+### integrate_clean_cache
+
+```php
+call_integration_hook('integrate_clean_cache')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_set_avatar_data
+
+```php
+call_integration_hook('integrate_set_avatar_data', array(&$image, &$data)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$image, &$data`|desc
+
+### integrate_log_types
+
+```php
+call_integration_hook('integrate_log_types', array(&$log_types, &$always_log)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$log_types, &$always_log`|desc
+
+### integrate_validate_login
+
+```php
+call_integration_hook('integrate_validate_login', array($_POST['user'], isset($_POST['passwrd'])
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$_POST['user'], isset($_POST['passwrd']`|desc
+
+### integrate_other_passwords
+
+```php
+call_integration_hook('integrate_other_passwords', array(&$other_passwords)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$other_passwords`|desc
+
+### integrate_login
+
+```php
+call_integration_hook('integrate_login', array($user_settings['member_name'], null, $modSettings['cookieTime'])
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$user_settings['member_name'], null, $modSettings['cookieTime']`|desc
+
+### integrate_logout
+
+```php
+call_integration_hook('integrate_logout', array($user_settings['member_name'])
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$user_settings['member_name']`|desc
+
+### integrate_manage_attachments
+
+```php
+call_integration_hook('integrate_manage_attachments', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_modify_attachment_settings
+
+```php
+call_integration_hook('integrate_modify_attachment_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_attachment_settings
+
+```php
+call_integration_hook('integrate_save_attachment_settings')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_modify_avatar_settings
+
+```php
+call_integration_hook('integrate_modify_avatar_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_avatar_settings
+
+```php
+call_integration_hook('integrate_save_avatar_settings')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_attachments_browse
+
+```php
+call_integration_hook('integrate_attachments_browse', array(&$listOptions, &$titles, &$list_title)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$listOptions, &$titles, &$list_title`|desc
+
+### integrate_attachment_remove
+
+```php
+call_integration_hook('integrate_attachment_remove', array(&$filesRemoved, $attachments)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$filesRemoved, $attachments`|desc
+
+### integrate_remove_attachments
+
+```php
+call_integration_hook('integrate_remove_attachments', array($attach)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$attach`|desc
+
+### integrate_repair_attachments_nomsg
+
+```php
+call_integration_hook('integrate_repair_attachments_nomsg', array(&$ignore_ids, $_GET['substep'], $_GET['substep'] + 500)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$ignore_ids, $_GET['substep'], $_GET['substep'] + 500`|desc
+
+### integrate_approve_attachments
+
+```php
+call_integration_hook('integrate_approve_attachments', array($attachments)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$attachments`|desc
+
+### integrate_manage_bans
+
+```php
+call_integration_hook('integrate_manage_bans', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_ban_edit_list
+
+```php
+call_integration_hook('integrate_ban_edit_list', array(&$listOptions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$listOptions`|desc
+
+### integrate_ban_edit_new
+
+```php
+call_integration_hook('integrate_ban_edit_new', array()
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_ban_list
+
+```php
+call_integration_hook('integrate_ban_list', array(&$ban_items)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$ban_items`|desc
+
+### integrate_load_addtional_ip_ban
+
+```php
+call_integration_hook('integrate_load_addtional_ip_ban', array(&$search_list)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$search_list`|desc
+
+### integrate_edit_bans
+
+```php
+call_integration_hook('integrate_edit_bans', array(&$ban_info, empty($_REQUEST['bg'])
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$ban_info, empty($_REQUEST['bg']`|desc
+
+### integrate_edit_bans_post
+
+```php
+call_integration_hook('integrate_edit_bans_post', array()
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_save_triggers
+
+```php
+call_integration_hook('integrate_save_triggers', array(&$ban_triggers, &$ban_group)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$ban_triggers, &$ban_group`|desc
+
+### integrate_remove_triggers
+
+```php
+call_integration_hook('integrate_remove_triggers', array(&$items_ids, $group_id)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$items_ids, $group_id`|desc
+
+### integrate_manage_boards
+
+```php
+call_integration_hook('integrate_manage_boards', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_boards_main
+
+```php
+call_integration_hook('integrate_boards_main')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_edit_category
+
+```php
+call_integration_hook('integrate_edit_category')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_edit_board
+
+```php
+call_integration_hook('integrate_edit_board')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_modify_board_settings
+
+```php
+call_integration_hook('integrate_modify_board_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_board_settings
+
+```php
+call_integration_hook('integrate_save_board_settings')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_manage_calendar
+
+```php
+call_integration_hook('integrate_manage_calendar', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_modify_calendar_settings
+
+```php
+call_integration_hook('integrate_modify_calendar_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_calendar_settings
+
+```php
+call_integration_hook('integrate_save_calendar_settings')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_manage_languages
+
+```php
+call_integration_hook('integrate_manage_languages', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_language_settings
+
+```php
+call_integration_hook('integrate_language_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_language_settings
+
+```php
+call_integration_hook('integrate_save_language_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_modifylanguages
+
+```php
+call_integration_hook('integrate_modifylanguages', array(&$themes, &$lang_dirs, &$allows_add_remove, &$additional_string_types)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$themes, &$lang_dirs, &$allows_add_remove, &$additional_string_types`|desc
+
+### integrate_language_edit_helptext
+
+```php
+call_integration_hook('integrate_language_edit_helptext', array(&$special_groups)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$special_groups`|desc
+
+### integrate_manage_mail
+
+```php
+call_integration_hook('integrate_manage_mail', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_modify_mail_settings
+
+```php
+call_integration_hook('integrate_modify_mail_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_mail_settings
+
+```php
+call_integration_hook('integrate_save_mail_settings')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_manage_maintenance
+
+```php
+call_integration_hook('integrate_manage_maintenance', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_convert_msgbody
+
+```php
+call_integration_hook('integrate_convert_msgbody', array($body_type)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$body_type`|desc
+
+### integrate_manage_membergroups
+
+```php
+call_integration_hook('integrate_manage_membergroups', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_pre_add_membergroup
+
+```php
+call_integration_hook('integrate_pre_add_membergroup', array()
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_add_membergroup
+
+```php
+call_integration_hook('integrate_add_membergroup', array($id_group, $postCountBasedGroup)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$id_group, $postCountBasedGroup`|desc
+
+### integrate_save_membergroup
+
+```php
+call_integration_hook('integrate_save_membergroup', array((int)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`int`|desc
+
+### integrate_view_membergroup
+
+```php
+call_integration_hook('integrate_view_membergroup')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_modify_membergroup_settings
+
+```php
+call_integration_hook('integrate_modify_membergroup_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_membergroup_settings
+
+```php
+call_integration_hook('integrate_save_membergroup_settings')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_manage_members
+
+```php
+call_integration_hook('integrate_manage_members', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_view_members_params
+
+```php
+call_integration_hook('integrate_view_members_params', array(&$params)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$params`|desc
+
+### integrate_activate
+
+```php
+call_integration_hook('integrate_activate', array($member['username'])
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$member['username']`|desc
+
+### integrate_manage_news
+
+```php
+call_integration_hook('integrate_manage_news', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_modify_news_settings
+
+```php
+call_integration_hook('integrate_modify_news_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_news_settings
+
+```php
+call_integration_hook('integrate_save_news_settings')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_manage_subscriptions
+
+```php
+call_integration_hook('integrate_manage_subscriptions', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_delete_subscription
+
+```php
+call_integration_hook('integrate_delete_subscription', array($context['sub_id'])
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$context['sub_id']`|desc
+
+### integrate_save_subscription
+
+```php
+call_integration_hook('integrate_save_subscription', array(($context['action_type'] == 'add' ? $id_subscribe : $context['sub_id'])
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$context['action_type'] == 'add' ? $id_subscribe : $context['sub_id']`|desc
+
+### integrate_manage_permissions
+
+```php
+call_integration_hook('integrate_manage_permissions', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_modify_permission_settings
+
+```php
+call_integration_hook('integrate_modify_permission_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_permission_settings
+
+```php
+call_integration_hook('integrate_save_permission_settings')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_load_permission_levels
+
+```php
+call_integration_hook('integrate_load_permission_levels', array(&$groupLevels, &$boardLevels)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$groupLevels, &$boardLevels`|desc
+
+### integrate_load_permissions
+
+```php
+call_integration_hook('integrate_load_permissions', array(&$permissionGroups, &$permissionList, &$leftPermissionGroups, &$hiddenPermissions, &$relabelPermissions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$permissionGroups, &$permissionList, &$leftPermissionGroups, &$hiddenPermissions, &$relabelPermissions`|desc
+
+### integrate_load_illegal_permissions
+
+```php
+call_integration_hook('integrate_load_illegal_permissions')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_load_illegal_guest_permissions
+
+```php
+call_integration_hook('integrate_load_illegal_guest_permissions')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_post_moderation_mapping
+
+```php
+call_integration_hook('integrate_post_moderation_mapping', array(&$mappings)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$mappings`|desc
+
+### integrate_manage_posts
+
+```php
+call_integration_hook('integrate_manage_posts', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_save_censors
+
+```php
+call_integration_hook('integrate_save_censors', array(&$updates)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$updates`|desc
+
+### integrate_censors
+
+```php
+call_integration_hook('integrate_censors')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_modify_post_settings
+
+```php
+call_integration_hook('integrate_modify_post_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_post_settings
+
+```php
+call_integration_hook('integrate_save_post_settings')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_modify_topic_settings
+
+```php
+call_integration_hook('integrate_modify_topic_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_topic_settings
+
+```php
+call_integration_hook('integrate_save_topic_settings')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_manage_registrations
+
+```php
+call_integration_hook('integrate_manage_registrations', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_modify_registration_settings
+
+```php
+call_integration_hook('integrate_modify_registration_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_registration_settings
+
+```php
+call_integration_hook('integrate_save_registration_settings')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_manage_scheduled_tasks
+
+```php
+call_integration_hook('integrate_manage_scheduled_tasks', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_scheduled_tasks_settings
+
+```php
+call_integration_hook('integrate_scheduled_tasks_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_scheduled_tasks_settings
+
+```php
+call_integration_hook('integrate_save_scheduled_tasks_settings', array(&$save_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$save_vars`|desc
+
+### integrate_manage_search
+
+```php
+call_integration_hook('integrate_manage_search', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_modify_search_settings
+
+```php
+call_integration_hook('integrate_modify_search_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_search_settings
+
+```php
+call_integration_hook('integrate_save_search_settings')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_modify_search_weights
+
+```php
+call_integration_hook('integrate_modify_search_weights', array(&$factors)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$factors`|desc
+
+### integrate_save_search_weights
+
+```php
+call_integration_hook('integrate_save_search_weights')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_manage_search_engines
+
+```php
+call_integration_hook('integrate_manage_search_engines', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_modify_search_engine_settings
+
+```php
+call_integration_hook('integrate_modify_search_engine_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_search_engine_settings
+
+```php
+call_integration_hook('integrate_save_search_engine_settings')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_server_settings
+
+```php
+call_integration_hook('integrate_server_settings', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_general_settings
+
+```php
+call_integration_hook('integrate_general_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_general_settings
+
+```php
+call_integration_hook('integrate_save_general_settings')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_database_settings
+
+```php
+call_integration_hook('integrate_database_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_database_settings
+
+```php
+call_integration_hook('integrate_save_database_settings')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_cookie_settings
+
+```php
+call_integration_hook('integrate_cookie_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_cookie_settings
+
+```php
+call_integration_hook('integrate_save_cookie_settings')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_general_security_settings
+
+```php
+call_integration_hook('integrate_general_security_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_general_security_settings
+
+```php
+call_integration_hook('integrate_save_general_security_settings')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_modify_cache_settings
+
+```php
+call_integration_hook('integrate_modify_cache_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_cache_settings
+
+```php
+call_integration_hook('integrate_save_cache_settings')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_export_settings
+
+```php
+call_integration_hook('integrate_export_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_export_settings
+
+```php
+call_integration_hook('integrate_save_export_settings')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_loadavg_settings
+
+```php
+call_integration_hook('integrate_loadavg_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_loadavg_settings
+
+```php
+call_integration_hook('integrate_save_loadavg_settings')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_prepare_db_settings
+
+```php
+call_integration_hook('integrate_prepare_db_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_modify_features
+
+```php
+call_integration_hook('integrate_modify_features', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_modify_modifications
+
+```php
+call_integration_hook('integrate_modify_modifications', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_modify_basic_settings
+
+```php
+call_integration_hook('integrate_modify_basic_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_basic_settings
+
+```php
+call_integration_hook('integrate_save_basic_settings')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_modify_bbc_settings
+
+```php
+call_integration_hook('integrate_modify_bbc_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_bbc_settings
+
+```php
+call_integration_hook('integrate_save_bbc_settings', array($bbcTags)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$bbcTags`|desc
+
+### integrate_layout_settings
+
+```php
+call_integration_hook('integrate_layout_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_layout_settings
+
+```php
+call_integration_hook('integrate_save_layout_settings')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_likes_settings
+
+```php
+call_integration_hook('integrate_likes_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_likes_settings
+
+```php
+call_integration_hook('integrate_save_likes_settings')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_mentions_settings
+
+```php
+call_integration_hook('integrate_mentions_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_mentions_settings
+
+```php
+call_integration_hook('integrate_save_mentions_settings')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_warning_settings
+
+```php
+call_integration_hook('integrate_warning_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_warning_settings
+
+```php
+call_integration_hook('integrate_save_warning_settings', array(&$save_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$save_vars`|desc
+
+### integrate_spam_settings
+
+```php
+call_integration_hook('integrate_spam_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_spam_settings
+
+```php
+call_integration_hook('integrate_save_spam_settings', array(&$save_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$save_vars`|desc
+
+### integrate_signature_settings
+
+```php
+call_integration_hook('integrate_signature_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_apply_signature_settings
+
+```php
+call_integration_hook('integrate_apply_signature_settings', array(&$sig, $sig_limits, $disabledTags)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$sig, $sig_limits, $disabledTags`|desc
+
+### integrate_save_signature_settings
+
+```php
+call_integration_hook('integrate_save_signature_settings', array(&$sig_limits, &$bbcTags)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$sig_limits, &$bbcTags`|desc
+
+### integrate_prune_settings
+
+```php
+call_integration_hook('integrate_prune_settings', array(&$config_vars, &$prune_toggle, false)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars, &$prune_toggle, false`|desc
+
+### integrate_prune_settings
+
+```php
+call_integration_hook('integrate_prune_settings', array(&$savevar, &$prune_toggle, true)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$savevar, &$prune_toggle, true`|desc
+
+### integrate_general_mod_settings
+
+```php
+call_integration_hook('integrate_general_mod_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_general_mod_settings
+
+```php
+call_integration_hook('integrate_save_general_mod_settings', array(&$save_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$save_vars`|desc
+
+### integrate_manage_smileys
+
+```php
+call_integration_hook('integrate_manage_smileys', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_modify_smiley_settings
+
+```php
+call_integration_hook('integrate_modify_smiley_settings', array(&$config_vars)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$config_vars`|desc
+
+### integrate_save_smiley_settings
+
+```php
+call_integration_hook('integrate_save_smiley_settings')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_memberlist_buttons
+
+```php
+call_integration_hook('integrate_memberlist_buttons')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### mention_insert_
+
+```php
+call_integration_hook('mention_insert_' . $content_type, array($content_id, &$members)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`. $content_type, array($content_id, &$members`|desc
+
+### integrate_pre_messageindex
+
+```php
+call_integration_hook('integrate_pre_messageindex', array(&$sort_methods, &$sort_methods_table)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$sort_methods, &$sort_methods_table`|desc
+
+### integrate_message_index
+
+```php
+call_integration_hook('integrate_message_index', array(&$message_index_selects, &$message_index_tables, &$message_index_parameters, &$message_index_wheres, &$topic_ids, &$message_index_topic_wheres)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$message_index_selects, &$message_index_tables, &$message_index_parameters, &$message_index_wheres, &$topic_ids, &$message_index_topic_wheres`|desc
+
+### integrate_quick_mod_actions
+
+```php
+call_integration_hook('integrate_quick_mod_actions')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_messageindex_buttons
+
+```php
+call_integration_hook('integrate_messageindex_buttons', array(&$context['normal_buttons'])
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$context['normal_buttons']`|desc
+
+### integrate_mod_centre_blocks
+
+```php
+call_integration_hook('integrate_mod_centre_blocks', array(&$valid_blocks)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$valid_blocks`|desc
+
+### integrate_warning_log_actions
+
+```php
+call_integration_hook('integrate_warning_log_actions', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_viewModLog
+
+```php
+call_integration_hook('integrate_viewModLog', array(&$listOptions, &$moderation_menu_name)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$listOptions, &$moderation_menu_name`|desc
+
+### integrate_movetopic2_end
+
+```php
+call_integration_hook('integrate_movetopic2_end')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_xmlfeeds
+
+```php
+call_integration_hook('integrate_xmlfeeds', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_xml_data
+
+```php
+call_integration_hook('integrate_xml_data', array(&$xml_data, &$feed_meta, &$namespaces, &$extraFeedTags, &$forceCdataKeys, &$nsKeys, $xml_format, $subaction, &$doctype)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$xml_data, &$feed_meta, &$namespaces, &$extraFeedTags, &$forceCdataKeys, &$nsKeys, $xml_format, $subaction, &$doctype`|desc
+
+### integrate_fix_url
+
+```php
+call_integration_hook('integrate_fix_url', array(&$val)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$val`|desc
+
+### integrate_package_get
+
+```php
+call_integration_hook('integrate_package_get', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_package_download
+
+```php
+call_integration_hook('integrate_package_download')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_package_upload
+
+```php
+call_integration_hook('integrate_package_upload')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_manage_packages
+
+```php
+call_integration_hook('integrate_manage_packages', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_modification_types
+
+```php
+call_integration_hook('integrate_modification_types')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_packages_sort_id
+
+```php
+call_integration_hook('integrate_packages_sort_id', array(&$sort_id, &$packages)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$sort_id, &$packages`|desc
+
+### integrate_conversation_buttons
+
+```php
+call_integration_hook('integrate_conversation_buttons')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_prepare_pm_context
+
+```php
+call_integration_hook('integrate_prepare_pm_context', array(&$output, &$message, $counter)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$output, &$message, $counter`|desc
+
+### integrate_search_pm_context
+
+```php
+call_integration_hook('integrate_search_pm_context')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_pm_post
+
+```php
+call_integration_hook('integrate_pm_post')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_pm_error
+
+```php
+call_integration_hook('integrate_pm_error')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_poll_vote
+
+```php
+call_integration_hook('integrate_poll_vote', array(&$row['id_poll'], &$pollOptions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$row['id_poll'], &$pollOptions`|desc
+
+### integrate_poll_add_edit
+
+```php
+call_integration_hook('integrate_poll_add_edit', array($bcinfo['id_poll'], $isEdit)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$bcinfo['id_poll'], $isEdit`|desc
+
+### integrate_poll_remove
+
+```php
+call_integration_hook('integrate_poll_remove', array($pollID)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$pollID`|desc
+
+### integrate_post_start
+
+```php
+call_integration_hook('integrate_post_start')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_preview_post
+
+```php
+call_integration_hook('integrate_preview_post', array(&$form_message, &$form_subject)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$form_message, &$form_subject`|desc
+
+### integrate_post_errors
+
+```php
+call_integration_hook('integrate_post_errors', array(&$post_errors, &$minor_errors, $form_message, $form_subject)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$post_errors, &$minor_errors, $form_message, $form_subject`|desc
+
+### integrate_post_end
+
+```php
+call_integration_hook('integrate_post_end')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_post2_start
+
+```php
+call_integration_hook('integrate_post2_start', array(&$post_errors)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$post_errors`|desc
+
+### integrate_post2_pre
+
+```php
+call_integration_hook('integrate_post2_pre', array(&$post_errors)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$post_errors`|desc
+
+### integrate_poll_add_edit
+
+```php
+call_integration_hook('integrate_poll_add_edit', array($id_poll, false)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$id_poll, false`|desc
+
+### integrate_post2_end
+
+```php
+call_integration_hook('integrate_post2_end')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_getTopic_previous_post
+
+```php
+call_integration_hook('integrate_getTopic_previous_post', array(&$row)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$row`|desc
+
+### integrate_post_JavascriptModify
+
+```php
+call_integration_hook('integrate_post_JavascriptModify', array(&$post_errors, $row)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$post_errors, $row`|desc
+
+### integrate_jsmodify_xml
+
+```php
+call_integration_hook('integrate_jsmodify_xml')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_post_moderation
+
+```php
+call_integration_hook('integrate_post_moderation', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_activate
+
+```php
+call_integration_hook('integrate_activate', array($user_profile[$memID]['member_name'])
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$user_profile[$memID]['member_name']`|desc
+
+### integrate_export_xslt_variables
+
+```php
+call_integration_hook('integrate_export_xslt_variables', array(&$xslt_variables, $format)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$xslt_variables, $format`|desc
+
+### integrate_export_xslt_stylesheet
+
+```php
+call_integration_hook('integrate_export_xslt_stylesheet', array(&$stylesheet, $format)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$stylesheet, $format`|desc
+
+### integrate_pre_css_output
+
+```php
+call_integration_hook('integrate_pre_css_output')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_pre_javascript_output
+
+```php
+call_integration_hook('integrate_pre_javascript_output', array(false)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`false`|desc
+
+### integrate_pre_javascript_output
+
+```php
+call_integration_hook('integrate_pre_javascript_output', array(true)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`true`|desc
+
+### integrate_reset_pass
+
+```php
+call_integration_hook('integrate_reset_pass', array($cur_profile['member_name'], $value, $_POST['passwrd1'])
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$cur_profile['member_name'], $value, $_POST['passwrd1']`|desc
+
+### integrate_load_profile_fields
+
+```php
+call_integration_hook('integrate_load_profile_fields', array(&$profile_fields)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$profile_fields`|desc
+
+### integrate_setup_profile_context
+
+```php
+call_integration_hook('integrate_setup_profile_context', array(&$fields)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$fields`|desc
+
+### integrate_save_custom_profile_fields
+
+```php
+call_integration_hook('integrate_save_custom_profile_fields', array(&$changes, &$log_changes, &$errors, $returnErrors, $memID, $area, $sanitize, &$deletes)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$changes, &$log_changes, &$errors, $returnErrors, $memID, $area, $sanitize, &$deletes`|desc
+
+### integrate_remove_buddy
+
+```php
+call_integration_hook('integrate_remove_buddy', array($memID)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$memID`|desc
+
+### integrate_add_buddies
+
+```php
+call_integration_hook('integrate_add_buddies', array($memID, &$new_buddies)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$memID, &$new_buddies`|desc
+
+### integrate_view_buddies
+
+```php
+call_integration_hook('integrate_view_buddies', array($memID)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$memID`|desc
+
+### integrate_theme_options
+
+```php
+call_integration_hook('integrate_theme_options')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_alert_types
+
+```php
+call_integration_hook('integrate_alert_types', array(&$alert_types, &$group_options)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$alert_types, &$group_options`|desc
+
+### integrate_profile_profileSaveGroups
+
+```php
+call_integration_hook('integrate_profile_profileSaveGroups', array($value, $additional_groups)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$value, $additional_groups`|desc
+
+### before_profile_save_avatar
+
+```php
+call_integration_hook('before_profile_save_avatar', array(&$value)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$value`|desc
+
+### after_profile_save_avatar
+
+```php
+call_integration_hook('after_profile_save_avatar')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_fetch_alerts
+
+```php
+call_integration_hook('integrate_fetch_alerts', array(&$alerts, &$formats)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$alerts, &$formats`|desc
+
+### integrate_profile_showPosts
+
+```php
+call_integration_hook('integrate_profile_showPosts')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_profile_stats
+
+```php
+call_integration_hook('integrate_profile_stats', array($memID, &$context['text_stats'])
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$memID, &$context['text_stats']`|desc
+
+### integrate_profile_trackip
+
+```php
+call_integration_hook('integrate_profile_trackip', array($ip_string, $ip_var)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$ip_string, $ip_var`|desc
+
+### integrate_pre_profile_areas
+
+```php
+call_integration_hook('integrate_pre_profile_areas', array(&$profile_areas)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$profile_areas`|desc
+
+### integrate_verify_password
+
+```php
+call_integration_hook('integrate_verify_password', array($cur_profile['member_name'], $password, false)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$cur_profile['member_name'], $password, false`|desc
+
+### integrate_profile_save
+
+```php
+call_integration_hook('integrate_profile_save', array(&$profile_vars, &$post_errors, $memID, $cur_profile, $current_area)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$profile_vars, &$post_errors, $memID, $cur_profile, $current_area`|desc
+
+### integrate_reset_pass
+
+```php
+call_integration_hook('integrate_reset_pass', array($cur_profile['member_name'], $cur_profile['member_name'], $_POST['passwrd2'])
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$cur_profile['member_name'], $cur_profile['member_name'], $_POST['passwrd2']`|desc
+
+### integrate_profile_popup
+
+```php
+call_integration_hook('integrate_profile_popup', array(&$profile_items)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$profile_items`|desc
+
+### integrate_load_custom_profile_fields
+
+```php
+call_integration_hook('integrate_load_custom_profile_fields', array($memID, $area)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$memID, $area`|desc
+
+### integrate_recent_RecentPosts
+
+```php
+call_integration_hook('integrate_recent_RecentPosts')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_recent_buttons
+
+```php
+call_integration_hook('integrate_recent_buttons')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_unread_list
+
+```php
+call_integration_hook('integrate_unread_list')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_activate
+
+```php
+call_integration_hook('integrate_activate', array($regOptions['username'])
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$regOptions['username']`|desc
+
+### integrate_activate
+
+```php
+call_integration_hook('integrate_activate', array($row['member_name'])
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$row['member_name']`|desc
+
+### integrate_reset_pass
+
+```php
+call_integration_hook('integrate_reset_pass', array($username, $username, $_POST['passwrd1'])
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$username, $username, $_POST['passwrd1']`|desc
+
+### integrate_reset_pass
+
+```php
+call_integration_hook('integrate_reset_pass', array($row['member_name'], $row['member_name'], $_POST['passwrd1'])
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$row['member_name'], $row['member_name'], $_POST['passwrd1']`|desc
+
+### integrate_remove_topics_before
+
+```php
+call_integration_hook('integrate_remove_topics_before', array($topics, $recycle_board)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$topics, $recycle_board`|desc
+
+### integrate_remove_topics
+
+```php
+call_integration_hook('integrate_remove_topics', array($topics)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$topics`|desc
+
+### integrate_remove_message
+
+```php
+call_integration_hook('integrate_remove_message', array($message, $row, $recycle)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$message, $row, $recycle`|desc
+
+### integrate_reported_
+
+```php
+call_integration_hook('integrate_reported_' . $context['report_type'], array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`. $context['report_type'], array(&$subActions`|desc
+
+### integrate_report_types
+
+```php
+call_integration_hook('integrate_report_types')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_report_buttons
+
+```php
+call_integration_hook('integrate_report_buttons')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_reports_boardperm
+
+```php
+call_integration_hook('integrate_reports_boardperm', array(&$disabled_permissions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$disabled_permissions`|desc
+
+### integrate_reports_groupperm
+
+```php
+call_integration_hook('integrate_reports_groupperm', array(&$disabled_permissions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$disabled_permissions`|desc
+
+### integrate_daily_maintenance
+
+```php
+call_integration_hook('integrate_daily_maintenance')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_daily_digest_lang
+
+```php
+call_integration_hook('integrate_daily_digest_lang', array(&$langtxt, $lang)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$langtxt, $lang`|desc
+
+### integrate_daily_digest_email
+
+```php
+call_integration_hook('integrate_daily_digest_email', array(&$email, $types, $notify_types, $langtxt)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$email, $types, $notify_types, $langtxt`|desc
+
+### integrate_weekly_maintenance
+
+```php
+call_integration_hook('integrate_weekly_maintenance')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_search
+
+```php
+call_integration_hook('integrate_search')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_search_weights
+
+```php
+call_integration_hook('integrate_search_weights', array(&$weight_factors)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$weight_factors`|desc
+
+### integrate_search_sort_columns
+
+```php
+call_integration_hook('integrate_search_sort_columns', array(&$sort_columns)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$sort_columns`|desc
+
+### integrate_search_params
+
+```php
+call_integration_hook('integrate_search_params', array(&$search_params)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$search_params`|desc
+
+### integrate_search_blacklisted_words
+
+```php
+call_integration_hook('integrate_search_blacklisted_words', array(&$blacklisted_words)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$blacklisted_words`|desc
+
+### integrate_search_errors
+
+```php
+call_integration_hook('integrate_search_errors')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_subject_only_search_query
+
+```php
+call_integration_hook('integrate_subject_only_search_query', array(&$subject_query, &$subject_query_params)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subject_query, &$subject_query_params`|desc
+
+### integrate_subject_search_query
+
+```php
+call_integration_hook('integrate_subject_search_query', array(&$subject_query)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subject_query`|desc
+
+### integrate_main_search_query
+
+```php
+call_integration_hook('integrate_main_search_query', array(&$main_query)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$main_query`|desc
+
+### integrate_search_message_list
+
+```php
+call_integration_hook('integrate_search_message_list', array(&$msg_list, &$posters)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$msg_list, &$posters`|desc
+
+### integrate_quick_mod_actions_search
+
+```php
+call_integration_hook('integrate_quick_mod_actions_search')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_search_message_context
+
+```php
+call_integration_hook('integrate_search_message_context', array(&$output, &$message, $counter)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$output, &$message, $counter`|desc
+
+### integrate_validateSession
+
+```php
+call_integration_hook('integrate_validateSession', array(&$types)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$types`|desc
+
+### integrate_verify_password
+
+```php
+call_integration_hook('integrate_verify_password', array($user_info['username'], $_POST[$type . '_pass'], false)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$user_info['username'], $_POST[$type . '_pass'], false`|desc
+
+### integrate_post_ban_permissions
+
+```php
+call_integration_hook('integrate_post_ban_permissions', array(&$denied_permissions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$denied_permissions`|desc
+
+### integrate_warn_permissions
+
+```php
+call_integration_hook('integrate_warn_permissions', array(&$permission_change)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$permission_change`|desc
+
+### integrate_heavy_permissions_session
+
+```php
+call_integration_hook('integrate_heavy_permissions_session', array(&$heavy_permissions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$heavy_permissions`|desc
+
+### integrate_spam_protection
+
+```php
+call_integration_hook('integrate_spam_protection', array(&$timeOverrides)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$timeOverrides`|desc
+
+### integrate_load_session
+
+```php
+call_integration_hook('integrate_load_session')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_session_handlers
+
+```php
+call_integration_hook('integrate_session_handlers')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_pre_download_request
+
+```php
+call_integration_hook('integrate_pre_download_request')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_download_request
+
+```php
+call_integration_hook('integrate_download_request', array(&$attachRequest)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$attachRequest`|desc
+
+### integrate_split_topic
+
+```php
+call_integration_hook('integrate_split_topic', array($split1, $split2, $new_subject, $id_board)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$split1, $split2, $new_subject, $id_board`|desc
+
+### integrate_merge_topic
+
+```php
+call_integration_hook('integrate_merge_topic', array($merged_topic, $updated_topics, $deleted_topics, $deleted_polls)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$merged_topic, $updated_topics, $deleted_topics, $deleted_polls`|desc
+
+### integrate_forum_stats
+
+```php
+call_integration_hook('integrate_forum_stats')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+./Sources/Subs-Admin.php:904:	if (function_exists('call_integration_hook'))
+### integrate_update_settings_file
+
+```php
+call_integration_hook('integrate_update_settings_file', array(&$settings_defs)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$settings_defs`|desc
+
+### integrate_attachment_upload
+
+```php
+call_integration_hook('integrate_attachment_upload', array()
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_createAttachment
+
+```php
+call_integration_hook('integrate_createAttachment', array(&$attachmentOptions, &$attachmentInserts)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$attachmentOptions, &$attachmentInserts`|desc
+
+### integrate_assign_attachments
+
+```php
+call_integration_hook('integrate_assign_attachments', array(&$attachIDs, &$msgID)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$attachIDs, &$msgID`|desc
+
+### integrate_pre_parseAttachBBC
+
+```php
+call_integration_hook('integrate_pre_parseAttachBBC', array($attachID, $msgID)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$attachID, $msgID`|desc
+
+### integrate_post_parseAttachBBC
+
+```php
+call_integration_hook('integrate_post_parseAttachBBC', array(&$attachContext)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$attachContext`|desc
+
+### integrate_cookie_data
+
+```php
+call_integration_hook('integrate_cookie_data', array($data, &$custom_data)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$data, &$custom_data`|desc
+
+### integrate_validateSession
+
+```php
+call_integration_hook('integrate_validateSession', array(&$types)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$types`|desc
+
+### integrate_reset_pass
+
+```php
+call_integration_hook('integrate_reset_pass', array($old_user, $user, $newPassword)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$old_user, $user, $newPassword`|desc
+
+### integrate_mod_cache
+
+```php
+call_integration_hook('integrate_mod_cache')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_cookie
+
+```php
+call_integration_hook('integrate_cookie', array($name, $value, $expire, $path, $domain, $secure, $httponly)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$name, $value, $expire, $path, $domain, $secure, $httponly`|desc
+
+### integrate_pre_boardindex
+
+```php
+call_integration_hook('integrate_pre_boardindex', array(&$board_index_selects, &$board_index_parameters)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$board_index_selects, &$board_index_parameters`|desc
+
+### integrate_boardindex_board
+
+```php
+call_integration_hook('integrate_boardindex_board', array(&$this_category, $row_board)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$this_category, $row_board`|desc
+
+### integrate_getboardtree
+
+```php
+call_integration_hook('integrate_getboardtree', array($board_index_options, &$categories)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$board_index_options, &$categories`|desc
+
+### integrate_getboardtree
+
+```php
+call_integration_hook('integrate_getboardtree', array($board_index_options, &$this_category)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$board_index_options, &$this_category`|desc
+
+### integrate_pre_modify_board
+
+```php
+call_integration_hook('integrate_pre_modify_board', array($id, &$boardOptions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$id, &$boardOptions`|desc
+
+### integrate_modify_board
+
+```php
+call_integration_hook('integrate_modify_board', array($id, $boardOptions, &$boardUpdates, &$boardUpdateParameters)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$id, $boardOptions, &$boardUpdates, &$boardUpdateParameters`|desc
+
+### integrate_create_board
+
+```php
+call_integration_hook('integrate_create_board', array(&$boardOptions, &$board_columns, &$board_parameters)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$boardOptions, &$board_columns, &$board_parameters`|desc
+
+### integrate_delete_board
+
+```php
+call_integration_hook('integrate_delete_board', array($boards_to_remove, &$moveChildrenTo)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$boards_to_remove, &$moveChildrenTo`|desc
+
+### integrate_pre_boardtree
+
+```php
+call_integration_hook('integrate_pre_boardtree', array(&$boardColumns, &$boardParameters, &$boardJoins, &$boardWhere, &$boardOrder)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$boardColumns, &$boardParameters, &$boardJoins, &$boardWhere, &$boardOrder`|desc
+
+### integrate_boardtree_board
+
+```php
+call_integration_hook('integrate_boardtree_board', array($row)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$row`|desc
+
+### integrate_create_event
+
+```php
+call_integration_hook('integrate_create_event', array(&$eventOptions, &$event_columns, &$event_parameters)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$eventOptions, &$event_columns, &$event_parameters`|desc
+
+### integrate_modify_event
+
+```php
+call_integration_hook('integrate_modify_event', array($event_id, &$eventOptions, &$event_columns, &$event_parameters)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$event_id, &$eventOptions, &$event_columns, &$event_parameters`|desc
+
+### integrate_remove_event
+
+```php
+call_integration_hook('integrate_remove_event', array($event_id)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$event_id`|desc
+
+### integrate_pre_modify_category
+
+```php
+call_integration_hook('integrate_pre_modify_category', array($cat_id, &$catOptions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$cat_id, &$catOptions`|desc
+
+### integrate_modify_category
+
+```php
+call_integration_hook('integrate_modify_category', array($cat_id, &$catUpdates, &$catParameters)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$cat_id, &$catUpdates, &$catParameters`|desc
+
+### integrate_create_category
+
+```php
+call_integration_hook('integrate_create_category', array(&$catOptions, &$cat_columns, &$cat_parameters)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$catOptions, &$cat_columns, &$cat_parameters`|desc
+
+### integrate_delete_category
+
+```php
+call_integration_hook('integrate_delete_category', array($categories, &$moveBoardsTo)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$categories, &$moveBoardsTo`|desc
+
+### integrate_load_message_icons
+
+```php
+call_integration_hook('integrate_load_message_icons', array(&$icons)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$icons`|desc
+
+### integrate_bbc_buttons
+
+```php
+call_integration_hook('integrate_bbc_buttons', array(&$context['bbc_tags'], &$editor_tag_map)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$context['bbc_tags'], &$editor_tag_map`|desc
+
+### integrate_sceditor_options
+
+```php
+call_integration_hook('integrate_sceditor_options', array(&$sce_options)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$sce_options`|desc
+
+### integrate_create_control_verification_pre
+
+```php
+call_integration_hook('integrate_create_control_verification_pre', array(&$verificationOptions, $do_test)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$verificationOptions, $do_test`|desc
+
+### integrate_create_control_verification_test
+
+```php
+call_integration_hook('integrate_create_control_verification_test', array($thisVerification, &$verification_errors)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$thisVerification, &$verification_errors`|desc
+
+### integrate_create_control_verification_refresh
+
+```php
+call_integration_hook('integrate_create_control_verification_refresh', array($thisVerification)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$thisVerification`|desc
+
+### integrate_create_control_verification_post
+
+```php
+call_integration_hook('integrate_create_control_verification_post', array(&$verification_errors, $do_test)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$verification_errors, $do_test`|desc
+
+### integrate_autosuggest
+
+```php
+call_integration_hook('integrate_autosuggest', array(&$searchTypes)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$searchTypes`|desc
+
+### integrate_
+
+```php
+call_integration_hook('integrate_' . $listOptions['id'], array(&$listOptions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`. $listOptions['id'], array(&$listOptions`|desc
+
+### integrate_delete_membergroups
+
+```php
+call_integration_hook('integrate_delete_membergroups', array($groups)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$groups`|desc
+
+### integrate_add_members_to_group
+
+```php
+call_integration_hook('integrate_add_members_to_group', array($members, $group, &$group_names)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$members, $group, &$group_names`|desc
+
+### integrate_getMembergroupList
+
+```php
+call_integration_hook('integrate_getMembergroupList', array(&$groupCache, $group)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$groupCache, $group`|desc
+
+### integrate_delete_members
+
+```php
+call_integration_hook('integrate_delete_members', array($users)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$users`|desc
+
+### integrate_register_check
+
+```php
+call_integration_hook('integrate_register_check', array(&$regOptions, &$reg_errors)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$regOptions, &$reg_errors`|desc
+
+### integrate_register
+
+```php
+call_integration_hook('integrate_register', array(&$regOptions, &$theme_vars, &$knownInts, &$knownFloats)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$regOptions, &$theme_vars, &$knownInts, &$knownFloats`|desc
+
+### integrate_post_register
+
+```php
+call_integration_hook('integrate_post_register', array(&$regOptions, &$theme_vars, &$memberID)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$regOptions, &$theme_vars, &$memberID`|desc
+
+### integrate_register_after
+
+```php
+call_integration_hook('integrate_register_after', array($regOptions, $memberID)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$regOptions, $memberID`|desc
+
+### integrate_check_name
+
+```php
+call_integration_hook('integrate_check_name', array($checkName, &$is_reserved, $current_id_member, $is_name)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$checkName, &$is_reserved, $current_id_member, $is_name`|desc
+
+### integrate_reattribute_posts
+
+```php
+call_integration_hook('integrate_reattribute_posts', array($memID, $email, $membername, $post_count, &$updated)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$memID, $email, $membername, $post_count, &$updated`|desc
+
+### integrate_
+
+```php
+call_integration_hook('integrate_' . $menu_context['current_action'] . '_areas', array(&$menuData)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`. $menu_context['current_action'] . '_areas', array(&$menuData`|desc
+
+### integrate_preparsecode
+
+```php
+call_integration_hook('integrate_preparsecode', array(&$message, $previewing)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$message, $previewing`|desc
+
+### integrate_unpreparsecode
+
+```php
+call_integration_hook('integrate_unpreparsecode', array(&$message)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$message`|desc
+
+### integrate_outgoing_email
+
+```php
+call_integration_hook('integrate_outgoing_email', array(&$subject, &$message, &$headers, &$to_array)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subject, &$message, &$headers, &$to_array`|desc
+
+### integrate_personal_message
+
+```php
+call_integration_hook('integrate_personal_message', array(&$recipients, &$from, &$subject, &$message)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$recipients, &$from, &$subject, &$message`|desc
+
+### integrate_personal_message_after
+
+```php
+call_integration_hook('integrate_personal_message_after', array(&$id_pm, &$log, &$recipients, &$from, &$subject, &$message)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$id_pm, &$log, &$recipients, &$from, &$subject, &$message`|desc
+
+### integrate_create_post
+
+```php
+call_integration_hook('integrate_create_post', array(&$msgOptions, &$topicOptions, &$posterOptions, &$message_columns, &$message_parameters)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$msgOptions, &$topicOptions, &$posterOptions, &$message_columns, &$message_parameters`|desc
+
+### integrate_after_create_post
+
+```php
+call_integration_hook('integrate_after_create_post', array($msgOptions, $topicOptions, $posterOptions, $message_columns, $message_parameters)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$msgOptions, $topicOptions, $posterOptions, $message_columns, $message_parameters`|desc
+
+### integrate_before_create_topic
+
+```php
+call_integration_hook('integrate_before_create_topic', array(&$msgOptions, &$topicOptions, &$posterOptions, &$topic_columns, &$topic_parameters)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$msgOptions, &$topicOptions, &$posterOptions, &$topic_columns, &$topic_parameters`|desc
+
+### integrate_create_topic
+
+```php
+call_integration_hook('integrate_create_topic', array(&$msgOptions, &$topicOptions, &$posterOptions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$msgOptions, &$topicOptions, &$posterOptions`|desc
+
+### integrate_modify_topic
+
+```php
+call_integration_hook('integrate_modify_topic', array(&$topics_columns, &$update_parameters, &$msgOptions, &$topicOptions, &$posterOptions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$topics_columns, &$update_parameters, &$msgOptions, &$topicOptions, &$posterOptions`|desc
+
+### integrate_modify_post
+
+```php
+call_integration_hook('integrate_modify_post', array(&$messages_columns, &$update_parameters, &$msgOptions, &$topicOptions, &$posterOptions, &$messageInts)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$messages_columns, &$update_parameters, &$msgOptions, &$topicOptions, &$posterOptions, &$messageInts`|desc
+
+### integrate_after_approve_posts
+
+```php
+call_integration_hook('integrate_after_approve_posts', array($approve, $msgs, $topic_changes, $member_post_changes)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$approve, $msgs, $topic_changes, $member_post_changes`|desc
+
+### integrate_get_single_theme
+
+```php
+call_integration_hook('integrate_get_single_theme', array(&$themeValues, $id)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$themeValues, $id`|desc
+
+### integrate_get_all_themes
+
+```php
+call_integration_hook('integrate_get_all_themes', array(&$themeValues, $enable_only)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$themeValues, $enable_only`|desc
+
+### integrate_get_installed_themes
+
+```php
+call_integration_hook('integrate_get_installed_themes', array(&$themeValues)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$themeValues`|desc
+
+### integrate_theme_install
+
+```php
+call_integration_hook('integrate_theme_install', array(&$context['to_install'], $id_theme)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$context['to_install'], $id_theme`|desc
+
+### integrate_change_member_data
+
+```php
+call_integration_hook('integrate_change_member_data', array($member_names, $var, &$data[$var], &$knownInts, &$knownFloats)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$member_names, $var, &$data[$var], &$knownInts, &$knownFloats`|desc
+
+### integrate_pre_parsebbc
+
+```php
+call_integration_hook('integrate_pre_parsebbc', array(&$message, &$smileys, &$cache_id, &$parse_tags)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$message, &$smileys, &$cache_id, &$parse_tags`|desc
+
+### integrate_attach_bbc_validate
+
+```php
+call_integration_hook('integrate_attach_bbc_validate', array(&$returnContext, $currentAttachment, $tag, $data, $disabled, $params)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$returnContext, $currentAttachment, $tag, $data, $disabled, $params`|desc
+
+### integrate_bbc_codes
+
+```php
+call_integration_hook('integrate_bbc_codes', array(&$codes, &$no_autolink_tags)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$codes, &$no_autolink_tags`|desc
+
+### integrate_bbc_print
+
+```php
+call_integration_hook('integrate_bbc_print', array(&$disabled)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$disabled`|desc
+
+### integrate_post_parsebbc
+
+```php
+call_integration_hook('integrate_post_parsebbc', array(&$message, &$smileys, &$cache_id, &$parse_tags)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$message, &$smileys, &$cache_id, &$parse_tags`|desc
+
+### integrate_smileys
+
+```php
+call_integration_hook('integrate_smileys', array(&$smileyPregSearch, &$smileyPregReplacements)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$smileyPregSearch, &$smileyPregReplacements`|desc
+
+### integrate_proxy
+
+```php
+call_integration_hook('integrate_proxy', array($url, &$proxied_url)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$url, &$proxied_url`|desc
+
+### integrate_redirect
+
+```php
+call_integration_hook('integrate_redirect', array(&$setLocation, &$refresh, &$permanent)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$setLocation, &$refresh, &$permanent`|desc
+
+### integrate_exit
+
+```php
+call_integration_hook('integrate_exit', array($do_footer)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$do_footer`|desc
+
+### integrate_theme_context
+
+```php
+call_integration_hook('integrate_theme_context')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_security_files
+
+```php
+call_integration_hook('integrate_security_files', array(&$securityFiles)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$securityFiles`|desc
+
+### integrate_pre_javascript_output
+
+```php
+call_integration_hook('integrate_pre_javascript_output', array(&$do_deferred)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$do_deferred`|desc
+
+### integrate_pre_css_output
+
+```php
+call_integration_hook('integrate_pre_css_output')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_menu_buttons
+
+```php
+call_integration_hook('integrate_menu_buttons', array(&$buttons)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$buttons`|desc
+
+### integrate_current_action
+
+```php
+call_integration_hook('integrate_current_action', array(&$current_action)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$current_action`|desc
+
+./Sources/Subs.php:5039:function call_integration_hook($hook, $parameters = array())
+### integrate_find_like_author
+
+```php
+call_integration_hook('integrate_find_like_author', array($this->_details['content_type'], $this->_details['content_id'])
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$this->_details['content_type'], $this->_details['content_id']`|desc
+
+### integrate_manage_themes
+
+```php
+call_integration_hook('integrate_manage_themes', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_theme_options
+
+```php
+call_integration_hook('integrate_theme_options')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_theme_settings
+
+```php
+call_integration_hook('integrate_theme_settings')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_wrap_action
+
+```php
+call_integration_hook('integrate_wrap_action')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_egg_nog
+
+```php
+call_integration_hook('integrate_egg_nog')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### who_allowed
+
+```php
+call_integration_hook('who_allowed', array(&$allowedActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$allowedActions`|desc
+
+### integrate_whos_online
+
+```php
+call_integration_hook('integrate_whos_online', array($actions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`$actions`|desc
+
+### whos_online_after
+
+```php
+call_integration_hook('whos_online_after', array(&$urls, &$data)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$urls, &$data`|desc
+
+### integrate_credits
+
+```php
+call_integration_hook('integrate_credits')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_XMLhttpMain_subActions
+
+```php
+call_integration_hook('integrate_XMLhttpMain_subActions', array(&$subActions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$subActions`|desc
+
+### integrate_autoload
+
+```php
+call_integration_hook('integrate_autoload', array(&$classMap)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$classMap`|desc
+
+### integrate_SSI
+
+```php
+call_integration_hook('integrate_SSI')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_ssi_queryPosts
+
+```php
+call_integration_hook('integrate_ssi_queryPosts', array(&$posts)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$posts`|desc
+
+### integrate_ssi_recentTopics
+
+```php
+call_integration_hook('integrate_ssi_recentTopics', array(&$posts)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$posts`|desc
+
+### integrate_ssi_topPoster
+
+```php
+call_integration_hook('integrate_ssi_topPoster', array(&$return)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$return`|desc
+
+### integrate_ssi_topBoards
+
+```php
+call_integration_hook('integrate_ssi_topBoards', array(&$boards)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$boards`|desc
+
+### integrate_ssi_topTopics
+
+```php
+call_integration_hook('integrate_ssi_topTopics', array(&$topics, $type)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$topics, $type`|desc
+
+### integrate_ssi_queryMembers
+
+```php
+call_integration_hook('integrate_ssi_queryMembers', array(&$members)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$members`|desc
+
+### integrate_ssi_boardStats
+
+```php
+call_integration_hook('integrate_ssi_boardStats', array(&$totals)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$totals`|desc
+
+### integrate_ssi_whosOnline
+
+```php
+call_integration_hook('integrate_ssi_whosOnline', array(&$return)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$return`|desc
+
+### integrate_ssi_recentPoll
+
+```php
+call_integration_hook('integrate_ssi_recentPoll', array(&$return, $topPollInstead)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$return, $topPollInstead`|desc
+
+### integrate_ssi_showPoll
+
+```php
+call_integration_hook('integrate_ssi_showPoll', array(&$return)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$return`|desc
+
+### integrate_ssi_news
+
+```php
+call_integration_hook('integrate_ssi_news')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+
+### integrate_ssi_calendar
+
+```php
+call_integration_hook('integrate_ssi_calendar', array(&$return, $eventOptions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$return, $eventOptions`|desc
+
+### integrate_ssi_calendar
+
+```php
+call_integration_hook('integrate_ssi_calendar', array(&$return, $eventOptions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$return, $eventOptions`|desc
+
+### integrate_ssi_calendar
+
+```php
+call_integration_hook('integrate_ssi_calendar', array(&$return, $eventOptions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$return, $eventOptions`|desc
+
+### integrate_ssi_calendar
+
+```php
+call_integration_hook('integrate_ssi_calendar', array(&$return, $eventOptions)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$return, $eventOptions`|desc
+
+### integrate_ssi_boardNews
+
+```php
+call_integration_hook('integrate_ssi_boardNews', array(&$return)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$return`|desc
+
+### integrate_ssi_recentEvents
+
+```php
+call_integration_hook('integrate_ssi_recentEvents', array(&$return)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$return`|desc
+
+### integrate_ssi_recentAttachments
+
+```php
+call_integration_hook('integrate_ssi_recentAttachments', array(&$attachments)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`&$attachments`|desc
+
+### integrate_
+
+```php
+call_integration_hook('integrate_' . $list_class . '_quickbuttons', array(&$list_items)
+```
+Type|Parameter|Description
+---|---|---
+`var`|`. $list_class . '_quickbuttons', array(&$list_items`|desc
+
+### integrate_upload_template
+
+```php
+call_integration_hook('integrate_upload_template')
+```
+Type|Parameter|Description
+---|---|---
+`var`|``|desc
+``````
