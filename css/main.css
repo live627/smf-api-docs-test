@@ -60,6 +60,7 @@ header {
  
   #main > article {
    margin: 4px;
+   overflow: auto;
    padding: 5px;
    -webkit-flex: 3 1 60%;
            flex: 3 1 60%;
