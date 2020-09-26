@@ -1,12 +1,11 @@
-@import url(http://fonts.googleapis.com/css?family=Oswald);
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+@import url(https://fonts.googleapis.com/css2?family=Lato&family=Roboto);
 
 * {
 	box-sizing: border-box;
     }
 
 body {
-	font-family: 'Open Sans', Arial, sans-serif;
+	font-family: Roboto, Arial, sans-serif;
 	margin: 0 auto;
 	padding: 0;
     }
@@ -26,7 +25,7 @@ a small {
 h1,
 h2,
 header {
-	font-family: 'Oswald', Arial, sans-serif;
+	font-family: Lato, Arial, sans-serif;
     }
 
 header {
