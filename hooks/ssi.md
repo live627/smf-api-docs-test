@@ -96,7 +96,24 @@ call_integration_hook('integrate_ssi_topTopics', array(&$topics, $type)
 
 Type|Parameter|Description
 ---|---|---
-`array`|`&$topics, $type`|desc
+`array`|`&$topics`|List of topics
+`array`|`$type`|How the query was sorted; can be either `replies` or `views`
+
+Called from
+: ssi_toptopics()
+
+Notes
+: Each element has the following definition:
+
+    Type|Key|Description
+    ---|---|---
+    `string`|`id`|The topic id
+    `string`|`num_replies`|Number of replies
+    `string`|`num_views`|Number of views
+    `string`|`subject`|The subject of the topic
+    `string`|`href`|URL
+    `string`|`link`|HTML formatted link
+: Numeric values are strings because the native mysqld driver only returns strings.
 
 ### integrate_ssi_queryMembers
 
@@ -106,7 +123,10 @@ call_integration_hook('integrate_ssi_queryMembers', array(&$members)
 
 Type|Parameter|Description
 ---|---|---
-`array`|`&$members`|desc
+`array`|`&$members`|list of member ids
+
+What...
+: Srsly, why is this even here? This is the point wheere I wonder... what is the point of most of these SSI hooks?
 
 ### integrate_ssi_boardStats
 

@@ -169,17 +169,18 @@ pre {
 	border-radius: 6px;
 }
 table + dl dt {
-	position: relative;
+	font-weight: bold;
 	left: 0;
+	margin: 0;
+	position: relative;
 	top: 1.1em;
 	width: 10em;
-	font-weight: bold;
 }
-
 table + dl dd {
-	border-left: 1px solid #000;
 	margin: 0 0 0 11em;
-	padding: 0 0 .5em .5em;
+}
+table + dl dd + dd {
+	padding-top: 0.5em;
 }
 .highlight .hll { background-color: #ffffcc }
 .highlight  { background: #f8f8f8; }
