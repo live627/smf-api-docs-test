@@ -5,7 +5,7 @@ title: Modifying application flow
 ---
 * auto-gen TOC:
 {:toc}
-#### integrate_buffer
+### integrate_buffer
 
 Type|Parameter|Description
 ---|---|---
@@ -17,7 +17,7 @@ Called from
 Notes
 : It MUST return a `string`, exactly like a normal buffer callback would, because it really is one!
 
-#### integrate_exit
+### integrate_exit
 
 Type|Parameter|Description
 ---|---|---
@@ -30,7 +30,7 @@ Notes
 : This is among the very last calls before the program is done running.
 : Run any last minute cleanup, a final shutdown on external apps, close connections, and free any resources. Can also be used with portals or other output handling functions.
 
-#### integrate_fix_url
+### integrate_fix_url
 
 Type|Parameter|Description
 ---|---|---
@@ -42,7 +42,7 @@ Called from
 Notes
 : This won't be called if the possible URL starts with `$scripturl`.
 
-#### integrate_redirect
+### integrate_redirect
 
 Type|Parameter|Description
 ---|---|---
