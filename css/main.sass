@@ -50,46 +50,37 @@ h4
   font-size: 18px
   line-height: 20px
 
-#main
-  min-height: 800px
-  margin: 0px
-  padding: 0px
-  display: -webkit-flex
-  display: flex
-  -webkit-flex-flow: row
-  flex-flow: row
-
-  >
-    article
-      margin: 4px
-      overflow: auto
-      padding: 5px
-      -webkit-flex: 3 1 60%
-      flex: 3 1 60%
-      -webkit-order: 2
-      order: 2
-
-    nav
-      margin: 4px
-      padding: 5px
-      -webkit-flex: 1 6 20%
-      flex: 1 6 20%
-      -webkit-order: 1
-      order: 1
-
-    aside
-      margin: 4px
-      padding: 5px
-      -webkit-flex: 1 6 20%
-      flex: 1 6 20%
-      -webkit-order: 3
-      order: 3
+@media (min-width: 768px)
+  #main
+    width: 65rem;
+    margin: 0 auto;
+    display: flex
+    flex-flow: row
+  
+    >
+      article
+        margin: 4px
+        overflow: auto
+        padding: 5px
+        flex: 3 1 60%
+        order: 2
+  
+      nav
+        margin: 4px
+        padding: 5px
+        flex: 1 6 20%
+        order: 1
+  
+      aside
+        margin: 4px
+        padding: 5px
+        flex: 1 6 20%
+        order: 3
 
 footer
   display: block
   margin: 4px
   padding: 5px
-  min-height: 100px
   margin-top: 20px
   background: #0f293b
   text-align: center
@@ -360,27 +351,3 @@ code[class], tt
 
   .il
     color: #666666
-
-@media all and (max-width: 640px)
-  #main
-    -webkit-flex-flow: column
-    flex-direction: column
-
-    >
-      article
-        -webkit-order: 0
-        order: 0
-
-      nav, aside
-        -webkit-order: 0
-        order: 0
-        min-height: 50px
-        max-height: 50px
-
-  #page
-    -webkit-flex-flow: column
-    flex-direction: column
-
-  header, footer
-    min-height: 50px
-    max-height: 50px
