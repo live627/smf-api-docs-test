@@ -9,7 +9,7 @@ title: Modifying application flow
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$buffer`|Callback to `[ob_start()](https://www.php.net/manual/en/function.ob-start.php)`
+`string`|`$buffer`|Callback to [`ob_start()`](https://www.php.net/manual/en/function.ob-start.php)
 
 Called from
 : obExit()
