@@ -21,7 +21,7 @@ Notes
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$do_footer`whether the footer should be output| or not
+`bool`|`$do_footer`|whether the footer should be output or not
 
 Called from
 : obExit()
