@@ -1,0 +1,36 @@
+---
+layout: default
+group: func
+navtitle: Recent.php
+title: ./Sources/Recent.php
+count: 3
+---
+* auto-gen TOC:
+{:toc}
+### getLastPost
+
+```php
+function getLastPost()
+```
+Get the latest post made on the system
+
+- respects approved, recycled, and board permissions
+
+### RecentPosts
+
+```php
+function RecentPosts()
+```
+Find the ten most recent posts.
+
+
+
+### UnreadTopics
+
+```php
+function UnreadTopics()
+```
+Find unread topics and replies.
+
+
+
