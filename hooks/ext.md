@@ -43,13 +43,13 @@ Type|Parameter|Description
 `array`|`&$simpleSubActions`|Parent action => array of areas (`$_GET['area']`)
 `array`|`&$simpleSubActions`|Parent action => array of subactions (`$_GET['sa']`)
 `array`|`&$extraParams`|List of request params that trigger XML output regardless of the presence of other params
-`array`|`&$xmlActions`|List of actions that specifically uses XML output (but still require `?xml`)
+`array`|`&$xmlActions`|List of actions that specifically use XML output (but still require `?xml`)
 
 Called from
 : `loadTheme()` in `./Sources/Load.php`
 
 Notes
-: If you want to output XML then you may be better off appending `?xml` to the query strinng in the address bar as this loads the XML template file, removes any template layers, and pumps out the correct `Content-Type` header.
+: XML mode loads the XML template file, removes any template layers, and pumps out the correct `Content-Type` header.
 : Currently ?area=popup and any other simple actions that don't actually exist (e.g. you intended to use ?action=myAction;area=simpleArea but call just ?area=simpleArea) then the board index loads without full templates) If any of the URL schemes above apply then the index template will not be loaded.
 : You should avoid generic areas and subactions for this purpose as they may break other mods using similar names (they will no longer load templates as expected).
 
@@ -73,56 +73,7 @@ function my_simple_actions(&$simpleActions, &$simpleAreas, $simpleSubActions, &$
 	// Applies to /index.php?action=myxmlaction
 	$xmlActions[] = 'myxmlaction';
 }
-```
-### who_allowed
-
-```php
-call_integration_hook('who_allowed', array(&$allowedActions)
-```
-
-Type|Parameter|Description
----|---|---
-`array`|`&$allowedActions`|desc
-
-### integrate_whos_online
-
-```php
-call_integration_hook('integrate_whos_online', array($actions)
-```
-
-Type|Parameter|Description
----|---|---
-`array`|`$actions`|desc
-
-### whos_online_after
-
-```php
-call_integration_hook('whos_online_after', array(&$urls, &$data)
-```
-
-Type|Parameter|Description
----|---|---
-`array`|`&$urls, &$data`|desc
-
-### integrate_credits
-
-```php
-call_integration_hook('integrate_credits')
-```
-
-Type|Parameter|Description
----|---|---
-`array`|``|desc
-
-### integrate_XMLhttpMain_subActions
-
-```php
-call_integration_hook('integrate_XMLhttpMain_subActions', array(&$subActions)
-```
-
-Type|Parameter|Description
----|---|---
-`array`|`&$subActions`|desc
+``
 
 ### integrate_autoload
 
