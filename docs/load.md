@@ -75,24 +75,24 @@ Load this user's permissions.
 ```php
 function loadMemberData($users, $is_name = false, $set = 'normal')
 ```
-Loads user data, either by id or member_name, and can load one or many users' data together.
+Loads an array of users' data by ID or member_name.
 
-User data is loaded with minimal processing into the global `$user_profiles` array, keyed by user id.
+
 
 Type|Parameter|Description
 ---|---|---
-`mixed`|`$users`|This can be either a single value or an array, representing a single user or multiple users.
-`bool`|`$is_name`|If this parameter is true, treat the value(s) in `$users` as user names, otherwise they are numeric user ids.
-`string`|`$set`|Complexity of data to load, from `minimal`, `normal`, `profile`, each successively increasing in complexity.
+`array&#124;string`|`$users`|An array of users by id or name or a single username/id
+`bool`|`$is_name`|Whether $users contains names
+`string`|`$set`|What kind of data to load (normal, profile, minimal)
 
 ### loadMemberContext
 
 ```php
 function loadMemberContext($user, $display_custom_fields = false)
 ```
-Processes all the data previously loaded by {@link loadMemberData()} into a form more readily usable for SMF.
+Loads the user's basic values... meant for template/theme usage.
 
-The results are stored in the global `$memberContext` array, keyed by user id.
+
 
 Type|Parameter|Description
 ---|---|---
@@ -163,7 +163,7 @@ What this function does:
 
 Type|Parameter|Description
 ---|---|---
-`string&#124;false`|`$template_name`|The name of the template to load
+`string`|`$template_name`|The name of the template to load
 `array&#124;string`|`$style_sheets`|The name of a single stylesheet or an array of names of stylesheets to load
 `bool`|`$fatal`|If true, dies with an error message if the template cannot be found
 
@@ -182,7 +182,7 @@ for debugging purposes.
 Type|Parameter|Description
 ---|---|---
 `string`|`$sub_template_name`|The name of the sub-template to load
-`bool&#124;string`|`$fatal`|Whether to die with an error if the sub-template can't be loaded
+`bool`|`$fatal`|Whether to die with an error if the sub-template can't be loaded
 
 ### loadCSSFile
 

@@ -110,7 +110,7 @@ Type|Parameter|Description
 ---|---|---
 `array`|`$error_types`|An array of strings indicating which type of errors occurred
 `array`|`$named_recipients`|
-``|`$recipient_ids`|
+`null`|`$recipient_ids`|
 
 ### MessagePost2
 

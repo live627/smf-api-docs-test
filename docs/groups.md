@@ -79,5 +79,5 @@ Type|Parameter|Description
 `int`|`$items_per_page`|The number of items per page
 `string`|`$sort`|An SQL sort expression (column/direction)
 `string`|`$where`|Data for the WHERE clause
-`array`|`$where_parameters`|Parameter values to be inserted into the WHERE clause
+`string`|`$where_parameters`|Parameter values to be inserted into the WHERE clause
 

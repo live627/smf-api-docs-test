@@ -3,7 +3,7 @@ layout: default
 group: func
 navtitle: Subs.php
 title: ./Sources/Subs.php
-count: 80
+count: 87
 ---
 * auto-gen TOC:
 {:toc}
@@ -131,7 +131,7 @@ Type|Parameter|Description
 ### timeformat
 
 ```php
-function timeformat($log_time, $show_today = true, $offset_type = false, $process_safe = false)
+function timeformat($log_time, $show_today = true, $tzid = null)
 ```
 Format a time to make it look purdy.
 
@@ -144,9 +144,13 @@ Format a time to make it look purdy.
 Type|Parameter|Description
 ---|---|---
 `int`|`$log_time`|A timestamp
-`bool&#124;string`|`$show_today`|Whether to show "Today"/"Yesterday" or just a date. If a string is specified, that is used to temporarily override the date format.
-`bool&#124;string`|`$offset_type`|If false, uses both user time offset and forum offset. If 'forum', uses only the forum offset. Otherwise no offset is applied.
-`bool`|`$process_safe`|Activate setlocale check for changes at runtime. Slower, but safer.
+`bool&#124;string`|`$show_today`|Whether to show "Today"/"Yesterday" or just a date.
+If a string is specified, that is used to temporarily override the date format.
+`null&#124;string`|`$tzid`|Time zone to use when generating the formatted string.
+If empty, the user's time zone will be used.
+If set to 'forum', the value of $modSettings['default_timezone'] will be used.
+If set to a valid time zone identifier, that will be used.
+Otherwise, the value of date_default_timezone_get() will be used.
 
 ### get_date_or_time_format
 
@@ -162,6 +166,45 @@ Type|Parameter|Description
 `string`|`$type`|Either 'date' or 'time'.
 `string`|`$format`|A strftime() format to process. Defaults to $user_info['time_format'].
 
+### smf_strftime
+
+```php
+function smf_strftime(string $format, int $timestamp = null, string $tzid = null)
+```
+Replacement for strftime() that is compatible with PHP 8.1+.
+
+This does not use the system's strftime library or locale setting,
+so results may vary in a few cases from the results of strftime():
+
+ - %a, %A, %b, %B, %p, %P: Output will use SMF's language strings
+   to localize these values. If SMF's language strings have not
+   been loaded, PHP's default English strings will be used.
+
+ - %c, %x, %X: Output will always use ISO format.
+
+Type|Parameter|Description
+---|---|---
+`string`|`$format`|A strftime() format string.
+`int&#124;null`|`$timestamp`|A Unix timestamp.
+If null, defaults to the current time.
+`string&#124;null`|`$tzid`|Time zone identifier.
+If null, uses default time zone.
+
+### smf_gmstrftime
+
+```php
+function smf_gmstrftime(string $format, int $timestamp = null)
+```
+Replacement for gmstrftime() that is compatible with PHP 8.1+.
+
+Calls smf_strftime() with the $tzid parameter set to 'UTC'.
+
+Type|Parameter|Description
+---|---|---
+`string`|`$format`|A strftime() format string.
+`int&#124;null`|`$timestamp`|A Unix timestamp.
+If null, defaults to the current time.
+
 ### un_htmlspecialchars
 
 ```php
@@ -175,6 +218,53 @@ replaces '&nbsp;' with a simple space character.
 Type|Parameter|Description
 ---|---|---
 `string`|`$string`|A string
+
+### sanitize_chars
+
+```php
+function sanitize_chars($string, $level = 0, $substitute = null)
+```
+Replaces invalid characters with a substitute.
+
+!!! Warning !!! Setting $substitute to '' in order to delete invalid
+characters from the string can create unexpected security problems. See
+https://www.unicode.org/reports/tr36/#Deletion_of_Noncharacters for an
+explanation.
+
+Type|Parameter|Description
+---|---|---
+`string`|`$string`|The string to sanitize.
+`int`|`$level`|Controls filtering of invisible formatting characters.
+0: Allow valid formatting characters. Use for sanitizing text in posts.
+1: Allow necessary formatting characters. Use for sanitizing usernames.
+2: Disallow all formatting characters. Use for internal comparisions
+   only, such as in the word censor, search contexts, etc.
+Default: 0.
+`string&#124;null`|`$substitute`|Replacement string for the invalid characters.
+If not set, the Unicode replacement character (U+FFFD) will be used
+(or a fallback like "?" if necessary).
+
+### normalize_spaces
+
+```php
+function normalize_spaces($string, $vspace = true, $hspace = false, $options = array())
+```
+Normalizes space characters and line breaks.
+
+
+
+Type|Parameter|Description
+---|---|---
+`string`|`$string`|The string to sanitize.
+`bool`|`$vspace`|If true, replaces all line breaks and vertical space
+characters with "\n". Default: true.
+`bool`|`$hspace`|If true, replaces horizontal space characters with a
+plain " " character. (Note: tabs are not replaced unless the
+'replace_tabs' option is supplied.) Default: false.
+`array`|`$options`|An array of boolean options. Possible values are:
+- no_breaks: Vertical spaces are replaced by " " instead of "\n".
+- replace_tabs: If true, tabs are are replaced by " " chars.
+- collapse_hspace: If true, removes extra horizontal spaces.
 
 ### shorten_subject
 
@@ -198,13 +288,15 @@ Type|Parameter|Description
 ```php
 function forum_time($use_user_offset = true, $timestamp = null)
 ```
-Gets the current time with offset.
+Deprecated function that formerly applied manual offsets to Unix timestamps
+in order to provide a fake version of time zone support on ancient versions
+of PHP. It now simply returns an unaltered timestamp.
 
-- always applies the offset in the time_offset setting.
+
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$use_user_offset`|Whether to apply the user's offset as well
+`bool`|`$use_user_offset`|This parameter is deprecated and nonfunctional
 `int`|`$timestamp`|A timestamp (null to use current time)
 
 ### permute
@@ -220,6 +312,15 @@ returns an array containing each permutation.
 Type|Parameter|Description
 ---|---|---
 `array`|`$array`|An array
+
+### get_signature_allowed_bbc_tags
+
+```php
+function get_signature_allowed_bbc_tags()
+```
+Return an array with allowed bbc tags for signatures, that can be passed to parse_bbc().
+
+
 
 ### parse_bbc
 
@@ -1034,10 +1135,25 @@ Check if the connection is using https.
 
 
 
+### parse_iri
+
+```php
+function parse_iri($iri, $component = -1)
+```
+A wrapper for `parse_url($url)` that can handle URLs with international
+characters (a.k.a. IRIs)
+
+
+
+Type|Parameter|Description
+---|---|---
+`string`|`$iri`|The IRI to parse.
+`int`|`$component`|Optional parameter to pass to parse_url().
+
 ### validate_iri
 
 ```php
-function validate_iri($iri, $flags = null)
+function validate_iri($iri, $flags = 0)
 ```
 A wrapper for `filter_var($url, FILTER_VALIDATE_URL)` that can handle URLs
 with international characters (a.k.a. IRIs)
@@ -1063,6 +1179,21 @@ feed the result of this function to iri_to_url()
 Type|Parameter|Description
 ---|---|---
 `string`|`$iri`|The IRI to sanitize.
+
+### normalize_iri
+
+```php
+function normalize_iri($iri)
+```
+Performs Unicode normalization on IRIs.
+
+Internally calls sanitize_iri(), then performs Unicode normalization on the
+IRI as a whole, using NFKC normalization for the domain name (see RFC 3491)
+and NFC normalization for the rest.
+
+Type|Parameter|Description
+---|---|---
+`string`|`$iri`|The IRI to normalize.
 
 ### iri_to_url
 

@@ -14,7 +14,9 @@ function utf8_strtolower($string)
 ```
 Converts the given UTF-8 string into lowercase.
 
-Equivalent to mb_strtolower($string, 'UTF-8')
+Equivalent to mb_strtolower($string, 'UTF-8'), except that we can keep the
+output consistent across PHP versions and up to date with the latest version
+of Unicode.
 
 Type|Parameter|Description
 ---|---|---
@@ -27,7 +29,24 @@ function utf8_strtoupper($string)
 ```
 Convert the given UTF-8 string to uppercase.
 
-Equivalent to mb_strtoupper($string, 'UTF-8')
+Equivalent to mb_strtoupper($string, 'UTF-8'), except that we can keep the
+output consistent across PHP versions and up to date with the latest version
+of Unicode.
+
+Type|Parameter|Description
+---|---|---
+`string`|`$string`|The string
+
+### utf8_casefold
+
+```php
+function utf8_casefold($string)
+```
+Casefolds the given UTF-8 string.
+
+Equivalent to mb_convert_case($string, MB_CASE_FOLD, 'UTF-8'), except that
+we can keep the output consistent across PHP versions and up to date with
+the latest version of Unicode.
 
 Type|Parameter|Description
 ---|---|---
@@ -85,32 +104,66 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$string`|The string
 
+### utf8_normalize_kc_casefold
+
+```php
+function utf8_normalize_kc_casefold($string)
+```
+Casefolds UTF-8 via Compatibility Composition Casefolding.
+
+Used by idn_to_ascii polyfill in Subs-Compat.php
+
+Type|Parameter|Description
+---|---|---
+`string`|`$string`|The string
+
+### utf8_decompose
+
+```php
+function utf8_decompose($chars, $compatibility = false)
+```
+Helper function for utf8_normalize_d and utf8_normalize_kd.
+
+
+
+Type|Parameter|Description
+---|---|---
+`array`|`$chars`|Array of Unicode characters
+
 ### utf8_compose
 
 ```php
-function utf8_compose($string)
+function utf8_compose($chars)
 ```
-Helper function for utf8_normalize_c and utf8_normalize_kc
+Helper function for utf8_normalize_c and utf8_normalize_kc.
 
 
 
-### utf8_normalize_d_maps
+Type|Parameter|Description
+---|---|---
+`array`|`$chars`|Array of decomposed Unicode characters
+
+### utf8_sanitize_invisibles
 
 ```php
-function utf8_normalize_d_maps()
+function utf8_sanitize_invisibles($string, $level, $substitute)
 ```
-### utf8_normalize_kd_maps
+Helper function for sanitize_chars() that deals with invisible characters.
 
-```php
-function utf8_normalize_kd_maps()
-```
-### utf8_compose_maps
+This function deals with control characters, private use characters,
+non-characters, and characters that are invisible by definition in the
+Unicode standard. It does not deal with characters that are supposed to be
+visible according to the Unicode standard, and makes no attempt to compensate
+for possibly incomplete Unicode support in text rendering engines on client
+devices.
 
-```php
-function utf8_compose_maps()
-```
-### utf8_combining_classes
+Type|Parameter|Description
+---|---|---
+`string`|`$string`|The string to sanitize.
+`int`|`$level`|Controls how invisible formatting characters are handled.
+0: Allow valid formatting characters. Use for sanitizing text in posts.
+1: Allow necessary formatting characters. Use for sanitizing usernames.
+2: Disallow all formatting characters. Use for internal comparisions
+   only, such as in the word censor, search contexts, etc.
+`string`|`$substitute`|Replacement string for the invalid characters.
 
-```php
-function utf8_combining_classes()
-```

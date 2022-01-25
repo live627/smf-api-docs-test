@@ -3,7 +3,7 @@ layout: default
 group: func
 navtitle: Security.php
 title: ./Sources/Security.php
-count: 22
+count: 19
 ---
 * auto-gen TOC:
 {:toc}
@@ -243,7 +243,7 @@ Type|Parameter|Description
 ### spamProtection
 
 ```php
-function spamProtection($error_type, $only_return_result = true)
+function spamProtection($error_type, $only_return_result = false)
 ```
 This function attempts to protect from spammed messages and the like.
 
@@ -281,11 +281,6 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$override`|An option to override (either 'SAMEORIGIN' or 'DENY')
 
-### get_allowed_http_origin
-
-```php
-function get_allowed_http_origin($origin)
-```
 ### corsPolicyHeader
 
 ```php
@@ -298,45 +293,4 @@ This sets the Access-Control-Allow-Origin header.
 Type|Parameter|Description
 ---|---|---
 `bool`|`$set_header`|(Default: true): When false, we will do the logic, but not send the headers.  The relevant logic is still saved in the $context and can be sent manually.
-
-### FindCorsBaseUrl
-
-```php
-function FindCorsBaseUrl($url, $sub_domain = false)
-```
-Helper function to figure out a urls base domain.
-
-IP addresses are not supported.
-
-Type|Parameter|Description
----|---|---
-`string`|`$url`|The url/domain/host we are attempting to vaalidate for the base domain.
-`bool`|`$sub_domain`|(Default: false): When true it will lowest level of a domain off before performing any other logic.
-
-### get_domain
-
-```php
-function get_domain($hostname)
-```
-Remove subdomains from hostnames
-
-IP addresses are not supported.
-
-Some example conversions include:
-
-- domain.com -> domain.com
-- sub.domain.com -> domain.com
-- www.domain.com -> domain.com
-- www.sub.sub.domain.com -> domain.com
-- domain.co.uk -> domain.co.uk
-- sub.domain.co.uk -> domain.co.uk
-- www.domain.co.uk -> domain.co.uk
-- www.sub.sub.domain.co.uk -> domain.co.uk
-
-Only works well with TLDs that do not use a dot seperator,
-although accomodations are made for ccSLDs.
-
-Type|Parameter|Description
----|---|---
-`string`|`$hostname`|
 

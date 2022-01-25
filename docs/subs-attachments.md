@@ -126,8 +126,8 @@ Assigns the given attachments to the given message ID.
 
 Type|Parameter|Description
 ---|---|---
-``|`$attachIDs`|array of attachment IDs to assign.
-``|`$msgID`|integer the message ID.
+`null`|`$attachIDs`|array of attachment IDs to assign.
+`null`|`$msgID`|integer the message ID.
 
 ### parseAttachBBC
 

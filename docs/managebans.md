@@ -177,7 +177,7 @@ Doesn't clean the inputs
 
 Type|Parameter|Description
 ---|---|---
-`int[]&#124;int`|`$items_ids`|The items to remove
+`array`|`$items_ids`|The items to remove
 `bool&#124;int`|`$group_id`|The ID of the group these triggers are associated with or false if deleting them from all groups
 
 ### removeBanGroups
@@ -400,8 +400,8 @@ It's practically the reverse function of ip2range().
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$low`|The low end of the range in IPv4 format
-`string`|`$high`|The high end of the range in IPv4 format
+`array`|`$low`|The low end of the range in IPv4 format
+`array`|`$high`|The high end of the range in IPv4 format
 
 ### checkExistingTriggerIP
 

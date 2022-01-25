@@ -175,7 +175,7 @@ The stats section of the info center
 ```php
 function template_ic_block_online()
 ```
-The who's online section of the admin center
+The who's online section of the info center
 
 
 

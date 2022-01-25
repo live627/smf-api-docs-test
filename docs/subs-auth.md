@@ -222,7 +222,7 @@ Quickly find out what moderation authority this user has
 ### smf_setcookie
 
 ```php
-function smf_setcookie($name, $value = '', $expire = 0, $path = '', $domain = '', $secure = null, $httponly = true)
+function smf_setcookie($name, $value = '', $expire = 0, $path = '', $domain = '', $secure = null, $httponly = true, $samesite = null)
 ```
 A wrapper for setcookie that gives integration hook access to it
 
@@ -237,6 +237,7 @@ Type|Parameter|Description
 `string`|`$domain`|= ''
 `bool`|`$secure`|= false
 `bool`|`$httponly`|= true
+`string`|`$samesite`|= lax
 
 ### hash_password
 

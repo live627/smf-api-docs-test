@@ -3,7 +3,7 @@ layout: default
 group: func
 navtitle: ManageMaintenance.php
 title: ./Sources/ManageMaintenance.php
-count: 27
+count: 28
 ---
 * auto-gen TOC:
 {:toc}
@@ -66,9 +66,9 @@ Find and fix all errors on the forum.
 ```php
 function MaintainCleanCache()
 ```
-Wipes the whole cache directory.
+Wipes the whole cache.
 
-This only applies to SMF's own cache directory, though.
+
 
 ### MaintainEmptyUnimportantLogs
 
@@ -227,6 +227,11 @@ it requires the admin_forum permission.
 The function redirects back to action=admin;area=maintain;sa=members when complete.
 It is accessed via ?action=admin;area=maintain;sa=members;activity=recountposts
 
+### RebuildSettingsFile
+
+```php
+function RebuildSettingsFile()
+```
 ### list_integration_hooks
 
 ```php
@@ -241,7 +246,7 @@ Allows for removal or disabling of selected hooks
 ### get_files_recursive
 
 ```php
-function get_files_recursive($dir_path)
+function get_files_recursive(string $dirname) : array
 ```
 Gets all of the files in a directory and its children directories
 
@@ -249,12 +254,12 @@ Gets all of the files in a directory and its children directories
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$dir_path`|The path to the directory
+`string`|`$dirname`|The path to the directory
 
 ### get_integration_hooks_data
 
 ```php
-function get_integration_hooks_data($start, $per_page, $sort)
+function get_integration_hooks_data($start, $per_page, $sort, $filtered_hooks, $normalized_boarddir, $normalized_sourcedir)
 ```
 Callback function for the integration hooks list (list_integration_hooks)
 Gets all of the hooks in the system and their status
@@ -267,16 +272,6 @@ Type|Parameter|Description
 `int`|`$per_page`|How many items to display on each page
 `string`|`$sort`|A string indicating how to sort things
 
-### get_integration_hooks_count
-
-```php
-function get_integration_hooks_count()
-```
-Simply returns the total count of integration hooks
-Used by the integration hooks list function (list_integration_hooks)
-
-
-
 ### get_integration_hooks
 
 ```php
@@ -286,10 +281,10 @@ Parses modSettings to create integration hook array
 
 
 
-### get_hook_info_from_raw
+### parse_integration_hook
 
 ```php
-function get_hook_info_from_raw($rawData)
+function parse_integration_hook(string $hook, string $rawData)
 ```
 Parses each hook data and returns an array.
 
@@ -297,8 +292,14 @@ Parses each hook data and returns an array.
 
 Type|Parameter|Description
 ---|---|---
+`string`|`$hook`|
 `string`|`$rawData`|A string as it was saved to the DB.
 
+### get_defined_functions_in_file
+
+```php
+function get_defined_functions_in_file(string $file) : array
+```
 ### fixchardb__callback
 
 ```php

@@ -3,7 +3,7 @@ layout: default
 group: func
 navtitle: Subs-Package.php
 title: ./Sources/Subs-Package.php
-count: 31
+count: 30
 ---
 * auto-gen TOC:
 {:toc}
@@ -12,9 +12,9 @@ count: 31
 ```php
 function read_tgz_file($gzfilename, $destination, $single_file = false, $overwrite = false, $files_to_extract = null)
 ```
-Reads a .tar.gz file, filename, in and extracts file(s) from it.
+Reads an archive from either a remote location or from the local filesystem.
 
-essentially just a shortcut for read_tgz_data().
+
 
 Type|Parameter|Description
 ---|---|---
@@ -27,7 +27,7 @@ Type|Parameter|Description
 ### read_tgz_data
 
 ```php
-function read_tgz_data($gzfilename, $destination, $single_file = false, $overwrite = false, $files_to_extract = null)
+function read_tgz_data($data, $destination, $single_file = false, $overwrite = false, $files_to_extract = null)
 ```
 Extracts a file or files from the .tar.gz contained in data.
 
@@ -49,35 +49,18 @@ if files_to_extract is not equal to null only extracts file within this array.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$gzfilename`|The name of the file
-`string`|`$destination`|The destination
+`string`|`$data`|The gzipped tarball
+`null&#124;string`|`$destination`|The destination
 `bool`|`$single_file`|Whether to only extract a single file
 `bool`|`$overwrite`|Whether to overwrite existing data
 `null&#124;array`|`$files_to_extract`|If set, only extracts the specified files
-
-### read_zip_file
-
-```php
-function read_zip_file($file, $destination, $single_file = false, $overwrite = false, $files_to_extract = null)
-```
-Extract zip data. A functional copy of {@list read_zip_data()}.
-
-
-
-Type|Parameter|Description
----|---|---
-`string`|`$file`|Input filename
-`string`|`$destination`|Null to display a listing of files in the archive, the destination for the files in the archive or the name of a single file to display (if $single_file is true)
-`bool`|`$single_file`|If true, returns the contents of the file specified by destination or false if the file can't be found (default value is false).
-`bool`|`$overwrite`|If true, will overwrite files with newer modication times. Default is false.
-`array`|`$files_to_extract`|Specific files to extract
 
 ### read_zip_data
 
 ```php
 function read_zip_data($data, $destination, $single_file = false, $overwrite = false, $files_to_extract = null)
 ```
-Extract zip data. .
+Extract zip data.
 
 If single_file is true, destination can start with * and / to signify that the file may come from any directory.
 Destination should not begin with a / if single_file is true.
