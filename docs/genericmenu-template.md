@@ -10,7 +10,7 @@ count: 4
 ### template_generic_menu_dropdown_above
 
 ```php
-function template_generic_menu_dropdown_above()
+function template_generic_menu_dropdown_above(): void
 ```
 This contains the HTML for the menu bar at the top of the admin center.
 
@@ -19,7 +19,7 @@ This contains the HTML for the menu bar at the top of the admin center.
 ### template_generic_menu_dropdown_below
 
 ```php
-function template_generic_menu_dropdown_below()
+function template_generic_menu_dropdown_below(): void
 ```
 Part of the admin layer - used with generic_menu_dropdown_above to close the admin content div.
 
@@ -28,7 +28,7 @@ Part of the admin layer - used with generic_menu_dropdown_above to close the adm
 ### template_generic_menu
 
 ```php
-function template_generic_menu(&$menu_context)
+function template_generic_menu(array &$menu_context): void
 ```
 The template for displaying a menu
 
@@ -41,7 +41,7 @@ Type|Parameter|Description
 ### template_generic_menu_tabs
 
 ```php
-function template_generic_menu_tabs(&$menu_context)
+function template_generic_menu_tabs(array &$menu_context): void
 ```
 The code for displaying the menu
 

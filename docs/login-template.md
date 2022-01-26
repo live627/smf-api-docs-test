@@ -10,7 +10,7 @@ count: 8
 ### template_login
 
 ```php
-function template_login()
+function template_login(): void
 ```
 This is just the basic "login" form.
 
@@ -19,7 +19,7 @@ This is just the basic "login" form.
 ### template_login_tfa
 
 ```php
-function template_login_tfa()
+function template_login_tfa(): void
 ```
 TFA authentication form
 
@@ -28,7 +28,7 @@ TFA authentication form
 ### template_kick_guest
 
 ```php
-function template_kick_guest()
+function template_kick_guest(): void
 ```
 Tell a guest to get lost or login!
 
@@ -37,7 +37,7 @@ Tell a guest to get lost or login!
 ### template_maintenance
 
 ```php
-function template_maintenance()
+function template_maintenance(): void
 ```
 This is for maintenance mode.
 
@@ -46,7 +46,7 @@ This is for maintenance mode.
 ### template_admin_login
 
 ```php
-function template_admin_login()
+function template_admin_login(): void
 ```
 This is for the security stuff - makes administrators login every so often.
 
@@ -55,7 +55,7 @@ This is for the security stuff - makes administrators login every so often.
 ### template_retry_activate
 
 ```php
-function template_retry_activate()
+function template_retry_activate(): void
 ```
 Activate your account manually?
 
@@ -64,7 +64,7 @@ Activate your account manually?
 ### template_resend
 
 ```php
-function template_resend()
+function template_resend(): void
 ```
 The form for resending the activation code.
 
@@ -73,7 +73,7 @@ The form for resending the activation code.
 ### template_logout
 
 ```php
-function template_logout()
+function template_logout(): void
 ```
 Confirm a logout.
 

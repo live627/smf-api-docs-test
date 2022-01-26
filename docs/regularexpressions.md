@@ -10,7 +10,7 @@ count: 4
 ### utf8_regex_properties
 
 ```php
-function utf8_regex_properties()
+function utf8_regex_properties(): array
 ```
 Helper function for utf8_sanitize_invisibles.
 
@@ -26,7 +26,7 @@ run "php -f other/update_unicode_data.php" on the command line.
 ### utf8_regex_variation_selectors
 
 ```php
-function utf8_regex_variation_selectors()
+function utf8_regex_variation_selectors(): array
 ```
 Helper function for utf8_sanitize_invisibles.
 
@@ -40,7 +40,7 @@ run "php -f other/update_unicode_data.php" on the command line.
 ### utf8_regex_joining_type
 
 ```php
-function utf8_regex_joining_type()
+function utf8_regex_joining_type(): array
 ```
 Helper function for utf8_sanitize_invisibles.
 
@@ -53,7 +53,7 @@ run "php -f other/update_unicode_data.php" on the command line.
 ### utf8_regex_indic
 
 ```php
-function utf8_regex_indic()
+function utf8_regex_indic(): array
 ```
 Helper function for utf8_sanitize_invisibles.
 

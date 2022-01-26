@@ -10,7 +10,7 @@ count: 2
 ### template_ban_edit
 
 ```php
-function template_ban_edit()
+function template_ban_edit(): void
 ```
 Add or edit a ban
 
@@ -19,7 +19,7 @@ Add or edit a ban
 ### template_ban_edit_trigger
 
 ```php
-function template_ban_edit_trigger()
+function template_ban_edit_trigger(): void
 ```
 Add or edit a ban trigger
 

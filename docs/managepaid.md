@@ -10,7 +10,7 @@ count: 13
 ### ManagePaidSubscriptions
 
 ```php
-function ManagePaidSubscriptions()
+function ManagePaidSubscriptions(): void
 ```
 The main entrance point for the 'Paid Subscription' screen, calling
 the right function based on the given sub-action.
@@ -22,7 +22,7 @@ It requires admin_forum permission for admin based actions.
 ### ModifySubscriptionSettings
 
 ```php
-function ModifySubscriptionSettings($return_config = false)
+function ModifySubscriptionSettings(bool $return_config = false): void|array
 ```
 Set any setting related to paid subscriptions, i.e.
 
@@ -37,7 +37,7 @@ Type|Parameter|Description
 ### ViewSubscriptions
 
 ```php
-function ViewSubscriptions()
+function ViewSubscriptions(): void
 ```
 View a list of all the current subscriptions
 Requires the admin_forum permission.
@@ -47,7 +47,7 @@ Accessed from ?action=admin;area=paidsubscribe;sa=view.
 ### ModifySubscription
 
 ```php
-function ModifySubscription()
+function ModifySubscription(): void
 ```
 Adding, editing and deleting subscriptions.
 
@@ -56,7 +56,7 @@ Accessed from ?action=admin;area=paidsubscribe;sa=modify.
 ### ViewSubscribedUsers
 
 ```php
-function ViewSubscribedUsers()
+function ViewSubscribedUsers(): void
 ```
 View all the users subscribed to a particular subscription.
 
@@ -68,7 +68,7 @@ Subscription ID is required, in the form of $_GET['sid'].
 ### list_getSubscribedUserCount
 
 ```php
-function list_getSubscribedUserCount($id_sub, $search_string, $search_vars = array())
+function list_getSubscribedUserCount(int $id_sub, string $search_string, array $search_vars = array()): int
 ```
 Returns how many people are subscribed to a paid subscription.
 
@@ -83,7 +83,7 @@ Type|Parameter|Description
 ### list_getSubscribedUsers
 
 ```php
-function list_getSubscribedUsers($start, $items_per_page, $sort, $id_sub, $search_string, $search_vars = array())
+function list_getSubscribedUsers(int $start, int $items_per_page, string $sort, int $id_sub, string $search_string, array $search_vars = array()): array
 ```
 Return the subscribed users list, for the given parameters.
 
@@ -101,7 +101,7 @@ Type|Parameter|Description
 ### ModifyUserSubscription
 
 ```php
-function ModifyUserSubscription()
+function ModifyUserSubscription(): void
 ```
 Edit or add a user subscription.
 
@@ -110,7 +110,7 @@ Accessed from ?action=admin;area=paidsubscribe;sa=modifyuser.
 ### reapplySubscriptions
 
 ```php
-function reapplySubscriptions($users)
+function reapplySubscriptions(array $users): void
 ```
 Reapplies all subscription rules for each of the users.
 
@@ -123,7 +123,7 @@ Type|Parameter|Description
 ### addSubscription
 
 ```php
-function addSubscription($id_subscribe, $id_member, $renewal = 0, $forceStartTime = 0, $forceEndTime = 0)
+function addSubscription(int $id_subscribe, int $id_member, int|string $renewal = 0, int $forceStartTime = 0, int $forceEndTime = 0): void
 ```
 Add or extend a subscription of a user.
 
@@ -140,7 +140,7 @@ Type|Parameter|Description
 ### removeSubscription
 
 ```php
-function removeSubscription($id_subscribe, $id_member, $delete = false)
+function removeSubscription(int $id_subscribe, int $id_member, bool $delete = false): void
 ```
 Removes a subscription from a user, as in removes the groups.
 
@@ -155,7 +155,7 @@ Type|Parameter|Description
 ### loadSubscriptions
 
 ```php
-function loadSubscriptions()
+function loadSubscriptions(): void
 ```
 This just kind of caches all the subscription data.
 
@@ -164,7 +164,7 @@ This just kind of caches all the subscription data.
 ### loadPaymentGateways
 
 ```php
-function loadPaymentGateways()
+function loadPaymentGateways(): array
 ```
 Load all the payment gateways.
 

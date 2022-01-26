@@ -10,7 +10,7 @@ count: 19
 ### template_sendbody
 
 ```php
-function template_sendbody()
+function template_sendbody(): void
 ```
 This defines the XML for sending the body of a message
 
@@ -19,7 +19,7 @@ This defines the XML for sending the body of a message
 ### template_quotefast
 
 ```php
-function template_quotefast()
+function template_quotefast(): void
 ```
 This defines the XML for the AJAX quote feature
 
@@ -28,7 +28,7 @@ This defines the XML for the AJAX quote feature
 ### template_modifyfast
 
 ```php
-function template_modifyfast()
+function template_modifyfast(): void
 ```
 This defines the XML for the inline edit feature
 
@@ -37,7 +37,7 @@ This defines the XML for the inline edit feature
 ### template_modifydone
 
 ```php
-function template_modifydone()
+function template_modifydone(): void
 ```
 The XML for handling things when you're done editing a post inline
 
@@ -46,7 +46,7 @@ The XML for handling things when you're done editing a post inline
 ### template_modifytopicdone
 
 ```php
-function template_modifytopicdone()
+function template_modifytopicdone(): void
 ```
 This handles things when editing a topic's subject from the messageindex.
 
@@ -55,7 +55,7 @@ This handles things when editing a topic's subject from the messageindex.
 ### template_post
 
 ```php
-function template_post()
+function template_post(): void
 ```
 The massive XML for previewing posts.
 
@@ -64,7 +64,7 @@ The massive XML for previewing posts.
 ### template_pm
 
 ```php
-function template_pm()
+function template_pm(): void
 ```
 All the XML for previewing a PM
 
@@ -73,7 +73,7 @@ All the XML for previewing a PM
 ### template_warning
 
 ```php
-function template_warning()
+function template_warning(): void
 ```
 The XML for previewing a warning
 
@@ -82,7 +82,7 @@ The XML for previewing a warning
 ### template_stats
 
 ```php
-function template_stats()
+function template_stats(): void
 ```
 The XML for hiding/showing stats sections via AJAX
 
@@ -91,7 +91,7 @@ The XML for hiding/showing stats sections via AJAX
 ### template_split
 
 ```php
-function template_split()
+function template_split(): void
 ```
 The XML for selecting items to split
 
@@ -115,7 +115,7 @@ function theme_linktree()
 ### template_results
 
 ```php
-function template_results()
+function template_results(): void
 ```
 XML for search results
 
@@ -124,7 +124,7 @@ XML for search results
 ### template_jump_to
 
 ```php
-function template_jump_to()
+function template_jump_to(): void
 ```
 The XML for the Jump To box
 
@@ -133,7 +133,7 @@ The XML for the Jump To box
 ### template_message_icons
 
 ```php
-function template_message_icons()
+function template_message_icons(): void
 ```
 The XML for displaying a column of message icons and selecting one via AJAX
 
@@ -142,7 +142,7 @@ The XML for displaying a column of message icons and selecting one via AJAX
 ### template_check_username
 
 ```php
-function template_check_username()
+function template_check_username(): void
 ```
 The XML for instantly showing whether a username is valid on the registration page
 
@@ -151,7 +151,7 @@ The XML for instantly showing whether a username is valid on the registration pa
 ### template_generic_xml
 
 ```php
-function template_generic_xml()
+function template_generic_xml(): void
 ```
 This prints XML in its most generic form.
 
@@ -160,7 +160,7 @@ This prints XML in its most generic form.
 ### template_generic_xml_recursive
 
 ```php
-function template_generic_xml_recursive($xml_data, $parent_ident, $child_ident, $level)
+function template_generic_xml_recursive(array $xml_data, string $parent_ident, string $child_ident, int $level): void
 ```
 Recursive function for displaying generic XML data.
 

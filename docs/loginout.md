@@ -10,7 +10,7 @@ count: 9
 ### Login
 
 ```php
-function Login()
+function Login(): void
 ```
 Ask them for their login information. (shows a page for the user to type
  in their username and password.)
@@ -23,7 +23,7 @@ Uses Login template and language file with the login sub-template.
 ### Login2
 
 ```php
-function Login2()
+function Login2(): void
 ```
 Actually logs you in.
 
@@ -39,7 +39,7 @@ On error, uses the same templates Login() uses.
 ### LoginTFA
 
 ```php
-function LoginTFA()
+function LoginTFA(): void
 ```
 Allows the user to enter their Two-Factor Authentication code
 
@@ -48,7 +48,7 @@ Allows the user to enter their Two-Factor Authentication code
 ### checkActivation
 
 ```php
-function checkActivation()
+function checkActivation(): void
 ```
 Check activation status of the current user.
 
@@ -57,7 +57,7 @@ Check activation status of the current user.
 ### DoLogin
 
 ```php
-function DoLogin()
+function DoLogin(): void
 ```
 Perform the logging in. (set cookie, call hooks, etc)
 
@@ -66,7 +66,7 @@ Perform the logging in. (set cookie, call hooks, etc)
 ### Logout
 
 ```php
-function Logout($internal = false, $redirect = true)
+function Logout(bool $internal = false, bool $redirect = true): void
 ```
 Logs the current user out of their account.
 
@@ -82,7 +82,7 @@ Type|Parameter|Description
 ### md5_hmac
 
 ```php
-function md5_hmac($data, $key)
+function md5_hmac(string $data, string $key): string
 ```
 MD5 Encryption used for older passwords. (SMF 1.0.x/YaBB SE 1.5.x hashing)
 
@@ -96,7 +96,7 @@ Type|Parameter|Description
 ### phpBB3_password_check
 
 ```php
-function phpBB3_password_check($passwd, $passwd_hash)
+function phpBB3_password_check(string $passwd, string $passwd_hash): string
 ```
 Custom encryption for phpBB3 based passwords.
 
@@ -110,7 +110,7 @@ Type|Parameter|Description
 ### validatePasswordFlood
 
 ```php
-function validatePasswordFlood($id_member, $member_name, $password_flood_value = false, $was_correct = false, $tfa = false)
+function validatePasswordFlood(int $id_member, string $member_name, bool|string $password_flood_value = false, bool $was_correct = false, bool $tfa = false): void
 ```
 This protects against brute force attacks on a member's password.
 

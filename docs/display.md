@@ -10,7 +10,7 @@ count: 4
 ### Display
 
 ```php
-function Display()
+function Display(): void
 ```
 The central part of the board - topic display.
 
@@ -24,7 +24,7 @@ It is accessed by ?topic=id_topic.START.
 ### prepareDisplayContext
 
 ```php
-function prepareDisplayContext($reset = false)
+function prepareDisplayContext(bool $reset = false): array
 ```
 Callback for the message display.
 
@@ -39,7 +39,7 @@ Type|Parameter|Description
 ### Download
 
 ```php
-function Download()
+function Download(): void
 ```
 Once upon a time, this function handled downloading attachments.
 
@@ -48,7 +48,7 @@ Now it's just an alias retained for the sake of backwards compatibility.
 ### QuickInTopicModeration
 
 ```php
-function QuickInTopicModeration()
+function QuickInTopicModeration(): void
 ```
 In-topic quick moderation.
 

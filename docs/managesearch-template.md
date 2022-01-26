@@ -10,7 +10,7 @@ count: 8
 ### template_modify_weights
 
 ```php
-function template_modify_weights()
+function template_modify_weights(): void
 ```
 Modify the search weights.
 
@@ -19,7 +19,7 @@ Modify the search weights.
 ### template_select_search_method
 
 ```php
-function template_select_search_method()
+function template_select_search_method(): void
 ```
 Select the search method.
 
@@ -28,7 +28,7 @@ Select the search method.
 ### template_create_index
 
 ```php
-function template_create_index()
+function template_create_index(): void
 ```
 Create a search index.
 
@@ -37,7 +37,7 @@ Create a search index.
 ### template_create_index_progress
 
 ```php
-function template_create_index_progress()
+function template_create_index_progress(): void
 ```
 Display a progress page while creating a search index.
 
@@ -46,7 +46,7 @@ Display a progress page while creating a search index.
 ### template_create_index_done
 
 ```php
-function template_create_index_done()
+function template_create_index_done(): void
 ```
 Done creating a search index.
 
@@ -55,7 +55,7 @@ Done creating a search index.
 ### template_spider_edit
 
 ```php
-function template_spider_edit()
+function template_spider_edit(): void
 ```
 Add or edit a search engine spider.
 
@@ -64,7 +64,7 @@ Add or edit a search engine spider.
 ### template_show_spider_logs
 
 ```php
-function template_show_spider_logs()
+function template_show_spider_logs(): void
 ```
 Show... spider... logs.
 
@@ -73,7 +73,7 @@ Show... spider... logs.
 ### template_show_spider_stats
 
 ```php
-function template_show_spider_stats()
+function template_show_spider_stats(): void
 ```
 Show... spider... stats.
 

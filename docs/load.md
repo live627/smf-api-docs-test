@@ -10,7 +10,7 @@ count: 31
 ### reloadSettings
 
 ```php
-function reloadSettings()
+function reloadSettings(): void
 ```
 Load the $modSettings array.
 
@@ -19,7 +19,7 @@ Load the $modSettings array.
 ### loadUserSettings
 
 ```php
-function loadUserSettings()
+function loadUserSettings(): void
 ```
 Load all the important user information.
 
@@ -35,7 +35,7 @@ What it does:
 ### loadMinUserInfo
 
 ```php
-function loadMinUserInfo($user_ids = array())
+function loadMinUserInfo(int|array $user_ids = array()): array
 ```
 Load minimal user info from members table.
 
@@ -48,7 +48,7 @@ Type|Parameter|Description
 ### loadBoard
 
 ```php
-function loadBoard()
+function loadBoard(): void
 ```
 Check for moderators and see if they have access to the board.
 
@@ -64,7 +64,7 @@ What it does:
 ### loadPermissions
 
 ```php
-function loadPermissions()
+function loadPermissions(): void
 ```
 Load this user's permissions.
 
@@ -73,7 +73,7 @@ Load this user's permissions.
 ### loadMemberData
 
 ```php
-function loadMemberData($users, $is_name = false, $set = 'normal')
+function loadMemberData(array|string $users, bool $is_name = false, string $set = 'normal'): array
 ```
 Loads an array of users' data by ID or member_name.
 
@@ -88,7 +88,7 @@ Type|Parameter|Description
 ### loadMemberContext
 
 ```php
-function loadMemberContext($user, $display_custom_fields = false)
+function loadMemberContext(int $user, bool $display_custom_fields = false): bool|array
 ```
 Loads the user's basic values... meant for template/theme usage.
 
@@ -102,7 +102,7 @@ Type|Parameter|Description
 ### loadMemberCustomFields
 
 ```php
-function loadMemberCustomFields($users, $params)
+function loadMemberCustomFields(int|array $users, string|array $params): array|bool
 ```
 Loads the user's custom profile fields
 
@@ -116,7 +116,7 @@ Type|Parameter|Description
 ### detectBrowser
 
 ```php
-function detectBrowser()
+function detectBrowser(): void
 ```
 Loads information about what browser the user is viewing with and places it in $context
  - uses the class from {@link Class-BrowserDetect.php}
@@ -126,7 +126,7 @@ Loads information about what browser the user is viewing with and places it in $
 ### isBrowser
 
 ```php
-function isBrowser($browser)
+function isBrowser(string $browser): bool
 ```
 Are we using this browser?
 
@@ -139,7 +139,7 @@ Type|Parameter|Description
 ### loadTheme
 
 ```php
-function loadTheme($id_theme = 0, $initialize = true)
+function loadTheme(int $id_theme = 0, bool $initialize = true): void
 ```
 Load a theme, by ID.
 
@@ -153,7 +153,7 @@ Type|Parameter|Description
 ### loadTemplate
 
 ```php
-function loadTemplate($template_name, $style_sheets = array(), $fatal = true)
+function loadTemplate(string $template_name, array|string $style_sheets = array(), bool $fatal = true): bool
 ```
 Load a template - if the theme doesn't include it, use the default.
 
@@ -170,7 +170,7 @@ Type|Parameter|Description
 ### loadSubTemplate
 
 ```php
-function loadSubTemplate($sub_template_name, $fatal = false)
+function loadSubTemplate(string $sub_template_name, bool $fatal = false): void
 ```
 Load a sub-template.
 
@@ -187,7 +187,7 @@ Type|Parameter|Description
 ### loadCSSFile
 
 ```php
-function loadCSSFile($fileName, $params = array(), $id = '')
+function loadCSSFile(string $fileName, array $params = array(), string $id = ''): void
 ```
 Add a CSS file for output later
 
@@ -212,7 +212,7 @@ Keys are the following:
 ### addInlineCss
 
 ```php
-function addInlineCss($css)
+function addInlineCss(string $css): void|bool
 ```
 Add a block of inline css code to be executed later
 
@@ -227,7 +227,7 @@ Type|Parameter|Description
 ### loadJavaScriptFile
 
 ```php
-function loadJavaScriptFile($fileName, $params = array(), $id = '')
+function loadJavaScriptFile(string $fileName, array $params = array(), string $id = ''): void
 ```
 Add a Javascript file for output later
 
@@ -253,7 +253,7 @@ default theme if not found in the current theme
 ### addJavaScriptVar
 
 ```php
-function addJavaScriptVar($key, $value, $escape = false)
+function addJavaScriptVar(string $key, string $value, bool $escape = false): void
 ```
 Add a Javascript variable for output later (for feeding text strings and similar to JS)
 Cleaner and easier (for modders) than to use the function below.
@@ -269,7 +269,7 @@ Type|Parameter|Description
 ### addInlineJavaScript
 
 ```php
-function addInlineJavaScript($javascript, $defer = false)
+function addInlineJavaScript(string $javascript, bool $defer = false): void|bool
 ```
 Add a block of inline Javascript code to be executed later
 
@@ -285,7 +285,7 @@ Type|Parameter|Description
 ### loadLanguage
 
 ```php
-function loadLanguage($template_name, $lang = '', $fatal = true, $force_reload = false)
+function loadLanguage(string $template_name, string $lang = '', bool $fatal = true, bool $force_reload = false): string
 ```
 Load a language file.  Tries the current and default themes as well as the user and global languages.
 
@@ -301,7 +301,7 @@ Type|Parameter|Description
 ### getBoardParents
 
 ```php
-function getBoardParents($id_parent)
+function getBoardParents(int $id_parent): array
 ```
 Get all parent boards (requires first parent as parameter)
 It finds all the parents of id_parent, and that board itself.
@@ -315,7 +315,7 @@ Type|Parameter|Description
 ### getLanguages
 
 ```php
-function getLanguages($use_cache = true)
+function getLanguages(bool $use_cache = true): array
 ```
 Attempt to reload our known languages.
 
@@ -328,7 +328,7 @@ Type|Parameter|Description
 ### censorText
 
 ```php
-function censorText(&$text, $force = false)
+function censorText(string &$text, bool $force = false): string
 ```
 Replace all vulgar words with respective proper words. (substring or whole words..)
 What this function does:
@@ -346,7 +346,7 @@ Type|Parameter|Description
 ### template_include
 
 ```php
-function template_include($filename, $once = false)
+function template_include(string $filename, bool $once = false): void
 ```
 Load the template/language file using require
 	- loads the template or language file specified by filename.
@@ -363,7 +363,7 @@ Type|Parameter|Description
 ### loadDatabase
 
 ```php
-function loadDatabase()
+function loadDatabase(): void
 ```
 Initialize a database connection.
 
@@ -372,7 +372,7 @@ Initialize a database connection.
 ### loadCacheAccelerator
 
 ```php
-function loadCacheAccelerator($overrideCache = '', $fallbackSMF = true)
+function loadCacheAccelerator(string $overrideCache = '', bool $fallbackSMF = true): object|false
 ```
 Try to load up a supported caching method. This is saved in $cacheAPI if we are not overriding it.
 
@@ -386,7 +386,7 @@ Type|Parameter|Description
 ### cache_quick_get
 
 ```php
-function cache_quick_get($key, $file, $function, $params, $level = 1)
+function cache_quick_get(string $key, string $file, string $function, array $params, int $level = 1): string
 ```
 Try to retrieve a cache entry. On failure, call the appropriate function.
 
@@ -403,7 +403,7 @@ Type|Parameter|Description
 ### cache_put_data
 
 ```php
-function cache_put_data($key, $value, $ttl = 120)
+function cache_put_data(string $key, mixed $value, int $ttl = 120): void
 ```
 Puts value in the cache under key for ttl seconds.
 
@@ -424,7 +424,7 @@ Type|Parameter|Description
 ### cache_get_data
 
 ```php
-function cache_get_data($key, $ttl = 120)
+function cache_get_data(string $key, int $ttl = 120): ?array
 ```
 Gets the value from the cache specified by key, so long as it is not older than ttl seconds.
 
@@ -439,7 +439,7 @@ Type|Parameter|Description
 ### clean_cache
 
 ```php
-function clean_cache($type = '')
+function clean_cache(string $type = ''): void
 ```
 Empty out the cache in use as best it can
 
@@ -457,7 +457,7 @@ Type|Parameter|Description
 ### set_avatar_data
 
 ```php
-function set_avatar_data($data = array())
+function set_avatar_data(array $data = array()): array
 ```
 Helper function to set an array of data for an user's avatar.
 
@@ -473,7 +473,7 @@ Type|Parameter|Description
 ### get_auth_secret
 
 ```php
-function get_auth_secret()
+function get_auth_secret(): string
 ```
 Gets, and if necessary creates, the authentication secret to use for cookies, tokens, etc.
 

@@ -10,7 +10,7 @@ count: 11
 ### ShowXmlFeed
 
 ```php
-function ShowXmlFeed()
+function ShowXmlFeed(): void
 ```
 Outputs xml data representing recent information or a profile.
 
@@ -42,7 +42,7 @@ function buildXmlFeed($xml_format, $xml_data, $feed_meta, $subaction)
 ### fix_possible_url
 
 ```php
-function fix_possible_url($val)
+function fix_possible_url(string $val): string
 ```
 Called from dumpTags to convert data to xml
 Finds urls for local site and sanitizes them
@@ -56,7 +56,7 @@ Type|Parameter|Description
 ### cdata_parse
 
 ```php
-function cdata_parse($data, $ns = '', $force = false)
+function cdata_parse(string $data, string $ns = '', bool $force = false): string
 ```
 Ensures supplied data is properly encapsulated in cdata xml tags
 Called from getXmlProfile in News.php
@@ -72,7 +72,7 @@ Type|Parameter|Description
 ### dumpTags
 
 ```php
-function dumpTags($data, $i, $xml_format = '', $forceCdataKeys = array(), $nsKeys = array())
+function dumpTags(array $data, int $i, string $xml_format = '', array $forceCdataKeys = array(), array $nsKeys = array()): void
 ```
 Formats data retrieved in other functions into xml format.
 
@@ -90,7 +90,7 @@ Type|Parameter|Description
 ### getXmlMembers
 
 ```php
-function getXmlMembers($xml_format, $ascending = false)
+function getXmlMembers(string $xml_format, bool $ascending = false): array
 ```
 Retrieve the list of members from database.
 
@@ -104,7 +104,7 @@ Type|Parameter|Description
 ### getXmlNews
 
 ```php
-function getXmlNews($xml_format, $ascending = false)
+function getXmlNews(string $xml_format, bool $ascending = false): array
 ```
 Get the latest topics information from a specific board,
 to display later.
@@ -119,7 +119,7 @@ Type|Parameter|Description
 ### getXmlRecent
 
 ```php
-function getXmlRecent($xml_format)
+function getXmlRecent(string $xml_format): array
 ```
 Get the recent topics to display.
 
@@ -132,7 +132,7 @@ Type|Parameter|Description
 ### getXmlProfile
 
 ```php
-function getXmlProfile($xml_format)
+function getXmlProfile(string $xml_format): array
 ```
 Get the profile information for member into an array,
 which will be generated to match the xml_format.
@@ -146,7 +146,7 @@ Type|Parameter|Description
 ### getXmlPosts
 
 ```php
-function getXmlPosts($xml_format, $ascending = false)
+function getXmlPosts(string $xml_format, bool $ascending = false): array
 ```
 Get a user's posts.
 
@@ -160,7 +160,7 @@ Type|Parameter|Description
 ### getXmlPMs
 
 ```php
-function getXmlPMs($xml_format, $ascending = false)
+function getXmlPMs(string $xml_format, bool $ascending = false): array
 ```
 Get a user's personal messages.
 

@@ -10,7 +10,7 @@ count: 22
 ### setLoginCookie
 
 ```php
-function setLoginCookie($cookie_length, $id, $password = '')
+function setLoginCookie(int $cookie_length, int $id, string $password = ''): void
 ```
 Sets the SMF-style login cookie and session based on the id_member and password passed.
 
@@ -30,7 +30,7 @@ Type|Parameter|Description
 ### setTFACookie
 
 ```php
-function setTFACookie($cookie_length, $id, $secret)
+function setTFACookie(int $cookie_length, int $id, string $secret): void
 ```
 Sets Two Factor Auth cookie
 
@@ -45,7 +45,7 @@ Type|Parameter|Description
 ### url_parts
 
 ```php
-function url_parts($local, $global)
+function url_parts(bool $local, bool $global): array
 ```
 Get the domain and path for the cookie
 - normally, local and global should be the localCookies and globalCookies settings, respectively.
@@ -60,7 +60,7 @@ Type|Parameter|Description
 ### KickGuest
 
 ```php
-function KickGuest()
+function KickGuest(): void
 ```
 Throws guests out to the login screen when guest access is off.
 
@@ -70,7 +70,7 @@ Throws guests out to the login screen when guest access is off.
 ### InMaintenance
 
 ```php
-function InMaintenance()
+function InMaintenance(): void
 ```
 Display a message about the forum being in maintenance mode.
 
@@ -80,7 +80,7 @@ Display a message about the forum being in maintenance mode.
 ### adminLogin
 
 ```php
-function adminLogin($type = 'admin')
+function adminLogin(string $type = 'admin'): void
 ```
 Question the verity of the admin by asking for his or her password.
 
@@ -95,7 +95,7 @@ Type|Parameter|Description
 ### adminLogin_outputPostVars
 
 ```php
-function adminLogin_outputPostVars($k, $v)
+function adminLogin_outputPostVars(string $k, string $v): string
 ```
 Used by the adminLogin() function.
 
@@ -109,7 +109,7 @@ Type|Parameter|Description
 ### construct_query_string
 
 ```php
-function construct_query_string($get)
+function construct_query_string(string $get): string
 ```
 Properly urlencodes a string to be used in a query
 
@@ -122,7 +122,7 @@ Type|Parameter|Description
 ### findMembers
 
 ```php
-function findMembers($names, $use_wildcards = false, $buddies_only = false, $max = 500)
+function findMembers(array $names, bool $use_wildcards = false, bool $buddies_only = false, int $max = 500): array
 ```
 Finds members by email address, username, or real name.
 
@@ -139,7 +139,7 @@ Type|Parameter|Description
 ### JSMembers
 
 ```php
-function JSMembers()
+function JSMembers(): void
 ```
 Called by index.php?action=findmember.
 
@@ -150,7 +150,7 @@ Called by index.php?action=findmember.
 ### RequestMembers
 
 ```php
-function RequestMembers()
+function RequestMembers(): void
 ```
 Outputs each member name on its own line.
 
@@ -159,7 +159,7 @@ Outputs each member name on its own line.
 ### resetPassword
 
 ```php
-function resetPassword($memID, $username = null)
+function resetPassword(int $memID, string $username = null): void
 ```
 Generates a random password for a user and emails it to them.
 
@@ -177,7 +177,7 @@ Type|Parameter|Description
 ### validateUsername
 
 ```php
-function validateUsername($memID, $username, $return_error = false, $check_reserved_name = true)
+function validateUsername(int $memID, string $username, bool $return_error = false, bool $check_reserved_name = true): ?array
 ```
 Checks a username obeys a load of rules
 
@@ -193,7 +193,7 @@ Type|Parameter|Description
 ### validatePassword
 
 ```php
-function validatePassword($password, $username, $restrict_in = array())
+function validatePassword(string $password, string $username, array $restrict_in = array()): ?string
 ```
 Checks whether a password meets the current forum rules
 - called when registering/choosing a password.
@@ -211,7 +211,7 @@ Type|Parameter|Description
 ### rebuildModCache
 
 ```php
-function rebuildModCache()
+function rebuildModCache(): void
 ```
 Quickly find out what moderation authority this user has
 - builds the moderator, group and board level querys for the user
@@ -222,7 +222,7 @@ Quickly find out what moderation authority this user has
 ### smf_setcookie
 
 ```php
-function smf_setcookie($name, $value = '', $expire = 0, $path = '', $domain = '', $secure = null, $httponly = true, $samesite = null)
+function smf_setcookie(string $name, string $value = '', int $expire = 0, string $path = '', string $domain = '', bool $secure = null, bool $httponly = true, string $samesite = null): void
 ```
 A wrapper for setcookie that gives integration hook access to it
 
@@ -242,7 +242,7 @@ Type|Parameter|Description
 ### hash_password
 
 ```php
-function hash_password($username, $password, $cost = null)
+function hash_password(string $username, string $password, int $cost = null): string
 ```
 Hashes username with password
 
@@ -257,7 +257,7 @@ Type|Parameter|Description
 ### hash_salt
 
 ```php
-function hash_salt($password, $salt)
+function hash_salt(string $password, string $salt): string
 ```
 Hashes password with salt and authentication secret. This is solely used for cookies.
 
@@ -271,7 +271,7 @@ Type|Parameter|Description
 ### hash_verify_password
 
 ```php
-function hash_verify_password($username, $password, $hash)
+function hash_verify_password(string $username, string $password, string $hash): bool
 ```
 Verifies a raw SMF password against the bcrypt'd string
 
@@ -286,7 +286,7 @@ Type|Parameter|Description
 ### hash_length
 
 ```php
-function hash_length()
+function hash_length(): int
 ```
 Returns the length for current hash
 
@@ -295,7 +295,7 @@ Returns the length for current hash
 ### hash_benchmark
 
 ```php
-function hash_benchmark($hashTime = 0.2)
+function hash_benchmark(float $hashTime = 0.2): int
 ```
 Benchmarks the server to figure out an appropriate cost factor (minimum 9)
 
@@ -308,7 +308,7 @@ Type|Parameter|Description
 ### hash_equals
 
 ```php
-function hash_equals($known_string, $user_string)
+function hash_equals(string $known_string, string $user_string): bool
 ```
 A compatibility function for when PHP's "hash_equals" function isn't available
 

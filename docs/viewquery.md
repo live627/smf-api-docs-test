@@ -10,7 +10,7 @@ count: 1
 ### ViewQuery
 
 ```php
-function ViewQuery()
+function ViewQuery(): void
 ```
 Show the database queries for debugging
 What this does:

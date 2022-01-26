@@ -10,7 +10,7 @@ count: 8
 ### Post
 
 ```php
-function Post($post_errors = array())
+function Post(array $post_errors = array()): void
 ```
 Handles showing the post screen, loading the post to be modified, and loading any post quoted.
 
@@ -27,7 +27,7 @@ Type|Parameter|Description
 ### Post2
 
 ```php
-function Post2()
+function Post2(): void
 ```
 Posts or saves the message composed with Post().
 
@@ -39,7 +39,7 @@ accessed from ?action=post2.
 ### AnnounceTopic
 
 ```php
-function AnnounceTopic()
+function AnnounceTopic(): void
 ```
 Handle the announce topic function (action=announce).
 
@@ -51,7 +51,7 @@ call the right function based on the sub-action.
 ### AnnouncementSelectMembergroup
 
 ```php
-function AnnouncementSelectMembergroup()
+function AnnouncementSelectMembergroup(): void
 ```
 Allow a user to chose the membergroups to send the announcement to.
 
@@ -60,7 +60,7 @@ lets the user select the membergroups that will receive the topic announcement.
 ### AnnouncementSend
 
 ```php
-function AnnouncementSend()
+function AnnouncementSend(): void
 ```
 Send the announcement in chunks.
 
@@ -72,7 +72,7 @@ calculates a rough estimate of the percentage items sent.
 ### getTopic
 
 ```php
-function getTopic()
+function getTopic(): void
 ```
 Get the topic for display purposes.
 
@@ -83,7 +83,7 @@ if you are editing a post, only shows posts previous to that post.
 ### QuoteFast
 
 ```php
-function QuoteFast()
+function QuoteFast(): void
 ```
 Loads a post an inserts it into the current editing text box.
 
@@ -94,7 +94,7 @@ accessed with ?action=quotefast.
 ### JavaScriptModify
 
 ```php
-function JavaScriptModify()
+function JavaScriptModify(): void
 ```
 Used to edit the body or subject of a message inline
 called from action=jsmodify from script and topic js

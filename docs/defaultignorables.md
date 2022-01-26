@@ -10,7 +10,7 @@ count: 1
 ### utf8_default_ignorables
 
 ```php
-function utf8_default_ignorables()
+function utf8_default_ignorables(): array
 ```
 Helper function for utf8_normalize_kc_casefold.
 

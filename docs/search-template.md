@@ -10,7 +10,7 @@ count: 2
 ### template_main
 
 ```php
-function template_main()
+function template_main(): void
 ```
 The main search form
 
@@ -19,7 +19,7 @@ The main search form
 ### template_results
 
 ```php
-function template_results()
+function template_results(): void
 ```
 The search results page.
 

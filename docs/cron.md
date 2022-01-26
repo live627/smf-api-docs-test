@@ -10,7 +10,7 @@ count: 5
 ### fetch_task
 
 ```php
-function fetch_task()
+function fetch_task(): bool|array
 ```
 The heart of this cron handler.
 
@@ -19,7 +19,7 @@ The heart of this cron handler.
 ### perform_task
 
 ```php
-function perform_task($task_details)
+function perform_task(array $task_details): bool|void
 ```
 This actually handles the task
 
@@ -32,7 +32,7 @@ Type|Parameter|Description
 ### cleanRequest_cron
 
 ```php
-function cleanRequest_cron()
+function cleanRequest_cron(): void
 ```
 Cleans up the request variables
 
@@ -41,7 +41,7 @@ Cleans up the request variables
 ### smf_error_handler_cron
 
 ```php
-function smf_error_handler_cron($error_level, $error_string, $file, $line)
+function smf_error_handler_cron(int $error_level, string $error_string, string $file, int $line): void
 ```
 The error handling function
 
@@ -57,7 +57,7 @@ Type|Parameter|Description
 ### obExit_cron
 
 ```php
-function obExit_cron()
+function obExit_cron(): void
 ```
 The exit function
 

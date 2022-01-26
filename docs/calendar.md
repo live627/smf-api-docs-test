@@ -10,7 +10,7 @@ count: 4
 ### CalendarMain
 
 ```php
-function CalendarMain()
+function CalendarMain(): void
 ```
 Show the calendar.
 
@@ -25,7 +25,7 @@ It is accessed through ?action=calendar.
 ### CalendarPost
 
 ```php
-function CalendarPost()
+function CalendarPost(): void
 ```
 This function processes posting/editing/deleting a calendar event.
 
@@ -39,7 +39,7 @@ It is accessed with ?action=calendar;sa=post.
 ### iCalDownload
 
 ```php
-function iCalDownload()
+function iCalDownload(): void
 ```
 This function offers up a download of an event in iCal 2.0 format.
 
@@ -51,7 +51,7 @@ Sets a sequence number if the event has been modified
 ### clock
 
 ```php
-function clock()
+function clock(): void
 ```
 Nothing to see here. Move along.
 

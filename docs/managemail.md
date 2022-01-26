@@ -10,7 +10,7 @@ count: 9
 ### ManageMail
 
 ```php
-function ManageMail()
+function ManageMail(): void
 ```
 Main dispatcher. This function checks permissions and passes control through to the relevant section.
 
@@ -19,7 +19,7 @@ Main dispatcher. This function checks permissions and passes control through to 
 ### BrowseMailQueue
 
 ```php
-function BrowseMailQueue()
+function BrowseMailQueue(): void
 ```
 Display the mail queue.
 
@@ -28,7 +28,7 @@ Display the mail queue.
 ### list_getMailQueue
 
 ```php
-function list_getMailQueue($start, $items_per_page, $sort)
+function list_getMailQueue(int $start, int $items_per_page, string $sort): array
 ```
 This function grabs the mail queue items from the database, according to the params given.
 
@@ -43,7 +43,7 @@ Type|Parameter|Description
 ### list_getMailQueueSize
 
 ```php
-function list_getMailQueueSize()
+function list_getMailQueueSize(): int
 ```
 Returns the total count of items in the mail queue.
 
@@ -52,7 +52,7 @@ Callback for $listOptions['get_count'] in BrowseMailQueue
 ### ModifyMailSettings
 
 ```php
-function ModifyMailSettings($return_config = false)
+function ModifyMailSettings(bool $return_config = false): void|array
 ```
 Allows to view and modify the mail settings.
 
@@ -65,7 +65,7 @@ Type|Parameter|Description
 ### ClearMailQueue
 
 ```php
-function ClearMailQueue()
+function ClearMailQueue(): void
 ```
 This function clears the mail queue of all emails, and at the end redirects to browse.
 
@@ -74,7 +74,7 @@ This function clears the mail queue of all emails, and at the end redirects to b
 ### pauseMailQueueClear
 
 ```php
-function pauseMailQueueClear()
+function pauseMailQueueClear(): void
 ```
 Used for pausing the mail queue.
 
@@ -83,7 +83,7 @@ Used for pausing the mail queue.
 ### TestMailSend
 
 ```php
-function TestMailSend()
+function TestMailSend(): void
 ```
 Test mail sending ability.
 
@@ -92,7 +92,7 @@ Test mail sending ability.
 ### time_since
 
 ```php
-function time_since($time_diff)
+function time_since(int $time_diff): string
 ```
 Little utility function to calculate how long ago a time was.
 

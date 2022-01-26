@@ -10,7 +10,7 @@ count: 16
 ### AutoTask
 
 ```php
-function AutoTask()
+function AutoTask(): void
 ```
 This function works out what to do!
 
@@ -19,7 +19,7 @@ This function works out what to do!
 ### scheduled_daily_maintenance
 
 ```php
-function scheduled_daily_maintenance()
+function scheduled_daily_maintenance(): void
 ```
 Do some daily cleaning up.
 
@@ -28,7 +28,7 @@ Do some daily cleaning up.
 ### scheduled_daily_digest
 
 ```php
-function scheduled_daily_digest()
+function scheduled_daily_digest(): void
 ```
 Send out a daily email of all subscribed topics.
 
@@ -37,7 +37,7 @@ Send out a daily email of all subscribed topics.
 ### scheduled_weekly_digest
 
 ```php
-function scheduled_weekly_digest()
+function scheduled_weekly_digest(): void
 ```
 Like the daily stuff - just seven times less regular ;)
 
@@ -46,7 +46,7 @@ Like the daily stuff - just seven times less regular ;)
 ### ReduceMailQueue
 
 ```php
-function ReduceMailQueue($number = false, $override_limit = false, $force_send = false)
+function ReduceMailQueue(bool|int $number = false, bool $override_limit = false, bool $force_send = false): bool
 ```
 Send a group of emails from the mail queue.
 
@@ -61,7 +61,7 @@ Type|Parameter|Description
 ### CalculateNextTrigger
 
 ```php
-function CalculateNextTrigger($tasks = array(), $forceUpdate = false)
+function CalculateNextTrigger(string|array $tasks = array(), bool $forceUpdate = false): void
 ```
 Calculate the next time the passed tasks should be triggered.
 
@@ -75,7 +75,7 @@ Type|Parameter|Description
 ### next_time
 
 ```php
-function next_time($regularity, $unit, $offset)
+function next_time(int $regularity, string $unit, int $offset): int
 ```
 Simply returns a time stamp of the next instance of these time parameters.
 
@@ -90,7 +90,7 @@ Type|Parameter|Description
 ### loadEssentialThemeData
 
 ```php
-function loadEssentialThemeData()
+function loadEssentialThemeData(): void
 ```
 This loads the bare minimum data to allow us to load language files!
 
@@ -99,7 +99,7 @@ This loads the bare minimum data to allow us to load language files!
 ### scheduled_fetchSMfiles
 
 ```php
-function scheduled_fetchSMfiles()
+function scheduled_fetchSMfiles(): void
 ```
 This retieves data (e.g. last version of SMF) from sm.org
 
@@ -108,7 +108,7 @@ This retieves data (e.g. last version of SMF) from sm.org
 ### scheduled_birthdayemails
 
 ```php
-function scheduled_birthdayemails()
+function scheduled_birthdayemails(): void
 ```
 Happy birthday!!
 
@@ -117,7 +117,7 @@ Happy birthday!!
 ### scheduled_weekly_maintenance
 
 ```php
-function scheduled_weekly_maintenance()
+function scheduled_weekly_maintenance(): void
 ```
 Weekly maintenance
 
@@ -126,7 +126,7 @@ Weekly maintenance
 ### scheduled_paid_subscriptions
 
 ```php
-function scheduled_paid_subscriptions()
+function scheduled_paid_subscriptions(): void
 ```
 Perform the standard checks on expiring/near expiring subscriptions.
 
@@ -135,7 +135,7 @@ Perform the standard checks on expiring/near expiring subscriptions.
 ### scheduled_remove_temp_attachments
 
 ```php
-function scheduled_remove_temp_attachments()
+function scheduled_remove_temp_attachments(): void
 ```
 Check for un-posted attachments is something we can do once in a while :P
 This function uses opendir cycling through all the attachments
@@ -145,7 +145,7 @@ This function uses opendir cycling through all the attachments
 ### scheduled_remove_topic_redirect
 
 ```php
-function scheduled_remove_topic_redirect()
+function scheduled_remove_topic_redirect(): void
 ```
 Check for move topic notices that have past their best by date
 
@@ -154,7 +154,7 @@ Check for move topic notices that have past their best by date
 ### scheduled_remove_old_drafts
 
 ```php
-function scheduled_remove_old_drafts()
+function scheduled_remove_old_drafts(): void
 ```
 Check for old drafts and remove them
 
@@ -163,7 +163,7 @@ Check for old drafts and remove them
 ### scheduled_prune_log_topics
 
 ```php
-function scheduled_prune_log_topics()
+function scheduled_prune_log_topics(): void
 ```
 Prune log_topics, log_boards & log_mark_boards_read.
 

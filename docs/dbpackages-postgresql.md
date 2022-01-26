@@ -10,7 +10,7 @@ count: 12
 ### db_packages_init
 
 ```php
-function db_packages_init()
+function db_packages_init(): void
 ```
 Add the file functions to the $smcFunc array.
 
@@ -19,7 +19,7 @@ Add the file functions to the $smcFunc array.
 ### smf_db_create_table
 
 ```php
-function smf_db_create_table($table_name, $columns, $indexes = array(), $parameters = array(), $if_exists = 'ignore', $error = 'fatal')
+function smf_db_create_table(string $table_name, array $columns, array $indexes = array(), array $parameters = array(), string $if_exists = 'ignore', string $error = 'fatal'): void
 ```
 This function can be used to create a table without worrying about schema
  compatibilities across supported database systems.
@@ -58,7 +58,7 @@ Type|Parameter|Description
 ### smf_db_drop_table
 
 ```php
-function smf_db_drop_table($table_name, $parameters = array(), $error = 'fatal')
+function smf_db_drop_table(string $table_name, array $parameters = array(), string $error = 'fatal'): bool
 ```
 Drop a table and its associated sequences.
 
@@ -73,7 +73,7 @@ Type|Parameter|Description
 ### smf_db_add_column
 
 ```php
-function smf_db_add_column($table_name, $column_info, $parameters = array(), $if_exists = 'update', $error = 'fatal')
+function smf_db_add_column(string $table_name, array $column_info, array $parameters = array(), string $if_exists = 'update', string $error = 'fatal'): bool
 ```
 This function adds a column.
 
@@ -90,7 +90,7 @@ Type|Parameter|Description
 ### smf_db_remove_column
 
 ```php
-function smf_db_remove_column($table_name, $column_name, $parameters = array(), $error = 'fatal')
+function smf_db_remove_column(string $table_name, string $column_name, array $parameters = array(), string $error = 'fatal'): bool
 ```
 Removes a column.
 
@@ -106,7 +106,7 @@ Type|Parameter|Description
 ### smf_db_change_column
 
 ```php
-function smf_db_change_column($table_name, $old_column, $column_info)
+function smf_db_change_column(string $table_name, string $old_column, array $column_info): bool
 ```
 Change a column.
 
@@ -121,7 +121,7 @@ Type|Parameter|Description
 ### smf_db_add_index
 
 ```php
-function smf_db_add_index($table_name, $index_info, $parameters = array(), $if_exists = 'update', $error = 'fatal')
+function smf_db_add_index(string $table_name, array $index_info, array $parameters = array(), string $if_exists = 'update', string $error = 'fatal'): bool
 ```
 Add an index.
 
@@ -138,7 +138,7 @@ Type|Parameter|Description
 ### smf_db_remove_index
 
 ```php
-function smf_db_remove_index($table_name, $index_name, $parameters = array(), $error = 'fatal')
+function smf_db_remove_index(string $table_name, string $index_name, array $parameters = array(), string $error = 'fatal'): bool
 ```
 Remove an index.
 
@@ -154,7 +154,7 @@ Type|Parameter|Description
 ### smf_db_calculate_type
 
 ```php
-function smf_db_calculate_type($type_name, $type_size = null, $reverse = false)
+function smf_db_calculate_type(string $type_name, int $type_size = null, bool $reverse = false): array
 ```
 Get the schema formatted name for a type.
 
@@ -169,7 +169,7 @@ Type|Parameter|Description
 ### smf_db_table_structure
 
 ```php
-function smf_db_table_structure($table_name)
+function smf_db_table_structure(string $table_name): array
 ```
 Get table structure.
 
@@ -182,7 +182,7 @@ Type|Parameter|Description
 ### smf_db_list_columns
 
 ```php
-function smf_db_list_columns($table_name, $detail = false, $parameters = array())
+function smf_db_list_columns(string $table_name, bool $detail = false, array $parameters = array()): array
 ```
 Return column information for a table.
 
@@ -197,7 +197,7 @@ Type|Parameter|Description
 ### smf_db_list_indexes
 
 ```php
-function smf_db_list_indexes($table_name, $detail = false, $parameters = array())
+function smf_db_list_indexes(string $table_name, bool $detail = false, array $parameters = array()): array
 ```
 Get index information.
 

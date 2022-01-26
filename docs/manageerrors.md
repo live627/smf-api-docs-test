@@ -10,7 +10,7 @@ count: 4
 ### ViewErrorLog
 
 ```php
-function ViewErrorLog()
+function ViewErrorLog(): void
 ```
 View the forum's error log.
 
@@ -21,7 +21,7 @@ It is accessed from ?action=admin;area=logs;sa=errorlog.
 ### deleteErrors
 
 ```php
-function deleteErrors()
+function deleteErrors(): void
 ```
 Delete all or some of the errors in the error log.
 
@@ -33,7 +33,7 @@ Redirects back to the error log when done.
 ### ViewFile
 
 ```php
-function ViewFile()
+function ViewFile(): void
 ```
 View a file specified in $_REQUEST['file'], with php highlighting on it
 Preconditions:
@@ -47,7 +47,7 @@ The function will try to get the 20 lines before and after the specified line.
 ### ViewBacktrace
 
 ```php
-function ViewBacktrace()
+function ViewBacktrace(): void
 ```
 View a backtrace specified in $_REQUEST['backtrace'], with php highlighting on it
 Preconditions:

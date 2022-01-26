@@ -10,7 +10,7 @@ count: 2
 ### template_main
 
 ```php
-function template_main()
+function template_main(): void
 ```
 Displays a sortable listing of all members registered on the forum.
 
@@ -19,7 +19,7 @@ Displays a sortable listing of all members registered on the forum.
 ### template_search
 
 ```php
-function template_search()
+function template_search(): void
 ```
 A page allowing people to search the member list.
 

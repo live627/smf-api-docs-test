@@ -10,7 +10,7 @@ count: 3
 ### Who
 
 ```php
-function Who()
+function Who(): void
 ```
 Who's online, and what are they doing?
 This function prepares the who's online data for the Who template.
@@ -25,7 +25,7 @@ Uses Who language file.
 ### determineActions
 
 ```php
-function determineActions($urls, $preferred_prefix = false)
+function determineActions(mixed $urls, string|bool $preferred_prefix = false): array
 ```
 This function determines the actions of the members passed in urls.
 
@@ -49,7 +49,7 @@ Type|Parameter|Description
 ### Credits
 
 ```php
-function Credits($in_admin = false)
+function Credits(bool $in_admin = false): void
 ```
 It prepares credit and copyright information for the credits page or the admin page
 

@@ -10,7 +10,7 @@ count: 1
 ### utf8_strtolower_maps
 
 ```php
-function utf8_strtolower_maps()
+function utf8_strtolower_maps(): array
 ```
 Helper function for utf8_strtolower.
 

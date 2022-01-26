@@ -10,7 +10,7 @@ count: 6
 ### RegCenter
 
 ```php
-function RegCenter()
+function RegCenter(): void
 ```
 Entrance point for the registration center, it checks permissions and forwards
 to the right function based on the subaction.
@@ -24,7 +24,7 @@ Uses Register template.
 ### AdminRegister
 
 ```php
-function AdminRegister()
+function AdminRegister(): void
 ```
 This function allows the admin to register a new member by hand.
 
@@ -35,7 +35,7 @@ Requires the moderate_forum permission.
 ### EditAgreement
 
 ```php
-function EditAgreement()
+function EditAgreement(): void
 ```
 Allows the administrator to edit the registration agreement, and choose whether
 it should be shown or not. It writes and saves the agreement to the agreement.txt
@@ -47,7 +47,7 @@ Requires the admin_forum permission.
 ### SetReserved
 
 ```php
-function SetReserved()
+function SetReserved(): void
 ```
 Set the names under which users are not allowed to register.
 
@@ -57,7 +57,7 @@ Requires the admin_forum permission.
 ### ModifyRegistrationSettings
 
 ```php
-function ModifyRegistrationSettings($return_config = false)
+function ModifyRegistrationSettings(bool $return_config = false): void|array
 ```
 This function handles registration settings, and provides a few pretty stats too while it's at it.
 
@@ -72,5 +72,6 @@ Type|Parameter|Description
 ### EditPrivacyPolicy
 
 ```php
+// Sure, you can sell my personal info for profit (...or not)
 function EditPrivacyPolicy()
 ```

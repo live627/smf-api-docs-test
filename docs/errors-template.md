@@ -10,7 +10,7 @@ count: 5
 ### template_fatal_error
 
 ```php
-function template_fatal_error()
+function template_fatal_error(): void
 ```
 THis displays a fatal error message
 
@@ -19,7 +19,7 @@ THis displays a fatal error message
 ### template_error_log
 
 ```php
-function template_error_log()
+function template_error_log(): void
 ```
 This template handles the error log in the admin center.
 
@@ -28,7 +28,7 @@ This template handles the error log in the admin center.
 ### template_show_file
 
 ```php
-function template_show_file()
+function template_show_file(): void
 ```
 This template shows a snippet of code from a file and highlights which line caused the error.
 
@@ -37,7 +37,7 @@ This template shows a snippet of code from a file and highlights which line caus
 ### template_attachment_errors
 
 ```php
-function template_attachment_errors()
+function template_attachment_errors(): void
 ```
 This template handles showing attachment-related errors
 
@@ -46,7 +46,7 @@ This template handles showing attachment-related errors
 ### template_show_backtrace
 
 ```php
-function template_show_backtrace()
+function template_show_backtrace(): void
 ```
 This template shows a backtrace of the given error
 

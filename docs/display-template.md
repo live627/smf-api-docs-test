@@ -10,7 +10,7 @@ count: 3
 ### template_main
 
 ```php
-function template_main()
+function template_main(): void
 ```
 This template handles displaying a topic
 
@@ -19,7 +19,7 @@ This template handles displaying a topic
 ### template_single_post
 
 ```php
-function template_single_post($message)
+function template_single_post(array $message): void
 ```
 Template for displaying a single post.
 
@@ -32,7 +32,7 @@ Type|Parameter|Description
 ### template_quickreply
 
 ```php
-function template_quickreply()
+function template_quickreply(): void
 ```
 The template for displaying the quick reply box.
 

@@ -10,7 +10,7 @@ count: 1
 ### smf_main
 
 ```php
-function smf_main()
+function smf_main(): array|string|void
 ```
 The main dispatcher.
 

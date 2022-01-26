@@ -10,7 +10,7 @@ count: 8
 ### ManageScheduledTasks
 
 ```php
-function ManageScheduledTasks()
+function ManageScheduledTasks(): void
 ```
 Scheduled tasks management dispatcher. This function checks permissions and delegates
 to the appropriate function based on the sub-action.
@@ -23,7 +23,7 @@ Uses ManageScheduledTasks language file
 ### ScheduledTasks
 
 ```php
-function ScheduledTasks()
+function ScheduledTasks(): void
 ```
 List all the scheduled task in place on the forum.
 
@@ -32,7 +32,7 @@ List all the scheduled task in place on the forum.
 ### list_getScheduledTasks
 
 ```php
-function list_getScheduledTasks($start, $items_per_page, $sort)
+function list_getScheduledTasks(int $start, int $items_per_page, string $sort): array
 ```
 Callback function for createList() in ScheduledTasks().
 
@@ -47,7 +47,7 @@ Type|Parameter|Description
 ### EditTask
 
 ```php
-function EditTask()
+function EditTask(): void
 ```
 Function for editing a task.
 
@@ -56,7 +56,7 @@ Function for editing a task.
 ### TaskLog
 
 ```php
-function TaskLog()
+function TaskLog(): void
 ```
 Show the log of all tasks that have taken place.
 
@@ -65,7 +65,7 @@ Uses ManageScheduledTasks language file
 ### list_getTaskLogEntries
 
 ```php
-function list_getTaskLogEntries($start, $items_per_page, $sort)
+function list_getTaskLogEntries(int $start, int $items_per_page, string $sort): array
 ```
 Callback function for createList() in TaskLog().
 
@@ -80,7 +80,7 @@ Type|Parameter|Description
 ### list_getNumTaskLogEntries
 
 ```php
-function list_getNumTaskLogEntries()
+function list_getNumTaskLogEntries(): int
 ```
 Callback function for createList() in TaskLog().
 
@@ -89,7 +89,7 @@ Callback function for createList() in TaskLog().
 ### TaskSettings
 
 ```php
-function TaskSettings($return_config = false)
+function TaskSettings(bool $return_config = false): void|array
 ```
 This handles settings related to scheduled tasks
 

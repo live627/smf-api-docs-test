@@ -10,7 +10,7 @@ count: 1
 ### getBoardIndex
 
 ```php
-function getBoardIndex($board_index_options)
+function getBoardIndex(array $board_index_options): array
 ```
 Fetches a list of boards and (optional) categories including
 statistical information, child boards and moderators.

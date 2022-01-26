@@ -10,7 +10,7 @@ count: 9
 ### AdminMain
 
 ```php
-function AdminMain()
+function AdminMain(): void
 ```
 The main admin handling function.<br>
 It initialises all the basic context required for the admin center.<br>
@@ -22,7 +22,7 @@ If the passed section is not found it shows the admin home page.
 ### AdminHome
 
 ```php
-function AdminHome()
+function AdminHome(): void
 ```
 The main administration section.
 
@@ -37,7 +37,7 @@ It requires the moderate_forum, manage_membergroups, manage_bans,
 ### DisplayAdminFile
 
 ```php
-function DisplayAdminFile()
+function DisplayAdminFile(): void
 ```
 Get one of the admin information files from Simple Machines.
 
@@ -46,7 +46,7 @@ Get one of the admin information files from Simple Machines.
 ### AdminSearch
 
 ```php
-function AdminSearch()
+function AdminSearch(): void
 ```
 This function allocates out all the search stuff.
 
@@ -55,7 +55,7 @@ This function allocates out all the search stuff.
 ### AdminSearchInternal
 
 ```php
-function AdminSearchInternal()
+function AdminSearchInternal(): void
 ```
 A complicated but relatively quick internal search.
 
@@ -64,7 +64,7 @@ A complicated but relatively quick internal search.
 ### AdminSearchMember
 
 ```php
-function AdminSearchMember()
+function AdminSearchMember(): void
 ```
 All this does is pass through to manage members.
 
@@ -73,7 +73,7 @@ All this does is pass through to manage members.
 ### AdminSearchOM
 
 ```php
-function AdminSearchOM()
+function AdminSearchOM(): void
 ```
 This file allows the user to search the SM online manual for a little of help.
 
@@ -82,7 +82,7 @@ This file allows the user to search the SM online manual for a little of help.
 ### AdminLogs
 
 ```php
-function AdminLogs()
+function AdminLogs(): void
 ```
 This function decides which log to load.
 
@@ -91,7 +91,7 @@ This function decides which log to load.
 ### AdminEndSession
 
 ```php
-function AdminEndSession()
+function AdminEndSession(): void
 ```
 This ends a admin session, requiring authentication to access the ACP again.
 

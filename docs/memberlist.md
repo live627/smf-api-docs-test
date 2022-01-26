@@ -10,7 +10,7 @@ count: 5
 ### Memberlist
 
 ```php
-function Memberlist()
+function Memberlist(): void
 ```
 Shows a listing of registered members.
 
@@ -25,7 +25,7 @@ Uses Memberlist template, main sub template.
 ### MLAll
 
 ```php
-function MLAll()
+function MLAll(): void
 ```
 List all members, page by page, with sorting.
 
@@ -36,7 +36,7 @@ Calls printMemberListRows to retrieve the results of the query.
 ### MLSearch
 
 ```php
-function MLSearch()
+function MLSearch(): void
 ```
 Search for members, or display search results.
 
@@ -47,7 +47,7 @@ Search for members, or display search results.
 ### printMemberListRows
 
 ```php
-function printMemberListRows($request)
+function printMemberListRows(resource $request): void
 ```
 Retrieves results of the request passed to it
 Puts results of request into the context for the sub template.
@@ -61,7 +61,7 @@ Type|Parameter|Description
 ### getCustFieldsMList
 
 ```php
-function getCustFieldsMList()
+function getCustFieldsMList(): array
 ```
 Sets the label, sort and join info for every custom field column.
 

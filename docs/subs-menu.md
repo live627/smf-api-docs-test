@@ -10,7 +10,7 @@ count: 2
 ### createMenu
 
 ```php
-function createMenu($menuData, $menuOptions = array())
+function createMenu(array $menuData, array $menuOptions = array()): bool|array
 ```
 Create a menu.
 
@@ -24,7 +24,7 @@ Type|Parameter|Description
 ### destroyMenu
 
 ```php
-function destroyMenu($menu_id = 'last')
+function destroyMenu(string $menu_id = 'last'): bool|void
 ```
 Delete a menu.
 

@@ -10,7 +10,7 @@ count: 10
 ### log_error
 
 ```php
-function log_error($error_message, $error_type = 'general', $file = null, $line = null)
+function log_error(string $error_message, string|bool $error_type = 'general', string $file = null, int $line = null): string
 ```
 Log an error, if the error logging is enabled.
 
@@ -28,7 +28,7 @@ Type|Parameter|Description
 ### fatal_error
 
 ```php
-function fatal_error($error, $log = 'general', $status = 500)
+function fatal_error(string $error, string|bool $log = 'general', int $status = 500): void
 ```
 An irrecoverable error. This function stops execution and displays an error message.
 
@@ -43,7 +43,7 @@ Type|Parameter|Description
 ### fatal_lang_error
 
 ```php
-function fatal_lang_error($error, $log = 'general', $sprintf = array(), $status = 403)
+function fatal_lang_error(string $error, string|false $log = 'general', array $sprintf = array(), int $status = 403): void
 ```
 Shows a fatal error with a message stored in the language file.
 
@@ -64,7 +64,7 @@ Type|Parameter|Description
 ### smf_error_handler
 
 ```php
-function smf_error_handler($error_level, $error_string, $file, $line)
+function smf_error_handler(int $error_level, string $error_string, string $file, int $line): void
 ```
 Handler for standard error messages, standard PHP error handler replacement.
 
@@ -80,7 +80,7 @@ Type|Parameter|Description
 ### setup_fatal_error_context
 
 ```php
-function setup_fatal_error_context($error_message, $error_code = null)
+function setup_fatal_error_context(string $error_message, string $error_code = null): void|false
 ```
 It is called by {@link fatal_error()} and {@link fatal_lang_error()}.
 
@@ -94,7 +94,7 @@ Type|Parameter|Description
 ### display_maintenance_message
 
 ```php
-function display_maintenance_message()
+function display_maintenance_message(): void
 ```
 Show a message for the (full block) maintenance mode.
 
@@ -105,7 +105,7 @@ It stops further execution of the script.
 ### display_db_error
 
 ```php
-function display_db_error()
+function display_db_error(): void
 ```
 Show an error message for the connection problems.
 
@@ -116,7 +116,7 @@ It stops further execution of the script.
 ### display_loadavg_error
 
 ```php
-function display_loadavg_error()
+function display_loadavg_error(): void
 ```
 Show an error message for load average blocking problems.
 
@@ -127,7 +127,7 @@ It stops further execution of the script.
 ### set_fatal_error_headers
 
 ```php
-function set_fatal_error_headers()
+function set_fatal_error_headers(): void
 ```
 Small utility function for fatal error pages.
 
@@ -137,7 +137,7 @@ Used by {@link display_db_error()}, {@link display_loadavg_error()},
 ### log_error_online
 
 ```php
-function log_error_online($error, $sprintf = array())
+function log_error_online(string $error, array $sprintf = array()): void
 ```
 Small utility function for fatal error pages.
 

@@ -10,7 +10,7 @@ count: 7
 ### activateAccount
 
 ```php
-function activateAccount($memID)
+function activateAccount(int $memID): void
 ```
 Activate an account.
 
@@ -23,7 +23,7 @@ Type|Parameter|Description
 ### issueWarning
 
 ```php
-function issueWarning($memID)
+function issueWarning(int $memID): void
 ```
 Issue/manage an user's warning status.
 
@@ -36,7 +36,7 @@ Type|Parameter|Description
 ### list_getUserWarningCount
 
 ```php
-function list_getUserWarningCount($memID)
+function list_getUserWarningCount(int $memID): int
 ```
 Get the number of warnings a user has. Callback for $listOptions['get_count'] in issueWarning()
 
@@ -49,7 +49,7 @@ Type|Parameter|Description
 ### list_getUserWarnings
 
 ```php
-function list_getUserWarnings($start, $items_per_page, $sort, $memID)
+function list_getUserWarnings(int $start, int $items_per_page, string $sort, int $memID): array
 ```
 Get the data about a user's warnings. Callback function for the list in issueWarning()
 
@@ -65,7 +65,7 @@ Type|Parameter|Description
 ### deleteAccount
 
 ```php
-function deleteAccount($memID)
+function deleteAccount(int $memID): void
 ```
 Present a screen to make sure the user wants to be deleted
 
@@ -78,7 +78,7 @@ Type|Parameter|Description
 ### deleteAccount2
 
 ```php
-function deleteAccount2($memID)
+function deleteAccount2(int $memID): void
 ```
 Actually delete an account.
 
@@ -91,7 +91,7 @@ Type|Parameter|Description
 ### subscriptions
 
 ```php
-function subscriptions($memID)
+function subscriptions(int $memID): void
 ```
 Function for doing all the paid subscription stuff - kinda.
 

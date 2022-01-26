@@ -10,7 +10,7 @@ count: 5
 ### getNotifyPrefs
 
 ```php
-function getNotifyPrefs($members, $prefs = '', $process_default = false)
+function getNotifyPrefs(int|array $members, string|array $prefs = '', bool $process_default = false): array
 ```
 Fetches the list of preferences (or a single/subset of preferences) for
 notifications for one or more users.
@@ -26,7 +26,7 @@ Type|Parameter|Description
 ### setNotifyPrefs
 
 ```php
-function setNotifyPrefs($memID, $prefs = array())
+function setNotifyPrefs(int $memID, array $prefs = array()): void
 ```
 Sets the list of preferences for a single user.
 
@@ -40,7 +40,7 @@ Type|Parameter|Description
 ### deleteNotifyPrefs
 
 ```php
-function deleteNotifyPrefs($memID, array $prefs)
+function deleteNotifyPrefs(int $memID, array $prefs): void
 ```
 Deletes notification preference
 
@@ -54,7 +54,7 @@ Type|Parameter|Description
 ### getMemberWithToken
 
 ```php
-function getMemberWithToken($type)
+function getMemberWithToken(string $type): array
 ```
 Verifies a member's unsubscribe token, then returns some member info
 
@@ -67,7 +67,7 @@ Type|Parameter|Description
 ### createUnsubscribeToken
 
 ```php
-function createUnsubscribeToken($memID, $email, $type = '', $itemID = 0)
+function createUnsubscribeToken(int $memID, string $email, string $type = '', int $itemID = 0): string
 ```
 Builds an unsubscribe token
 

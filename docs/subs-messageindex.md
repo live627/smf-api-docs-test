@@ -10,7 +10,7 @@ count: 1
 ### getBoardList
 
 ```php
-function getBoardList($boardListOptions = array())
+function getBoardList(array $boardListOptions = array()): array
 ```
 Generates the query to determine the list of available boards for a user
 Executes the query and returns the list

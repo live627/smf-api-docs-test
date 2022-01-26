@@ -10,7 +10,7 @@ count: 16
 ### SearchEngines
 
 ```php
-function SearchEngines()
+function SearchEngines(): void
 ```
 Entry point for this section.
 
@@ -19,7 +19,7 @@ Entry point for this section.
 ### ManageSearchEngineSettings
 
 ```php
-function ManageSearchEngineSettings($return_config = false)
+function ManageSearchEngineSettings(bool $return_config = false): void|array
 ```
 This is really just the settings page.
 
@@ -32,7 +32,7 @@ Type|Parameter|Description
 ### ViewSpiders
 
 ```php
-function ViewSpiders()
+function ViewSpiders(): void
 ```
 View a list of all the spiders we know about.
 
@@ -41,7 +41,7 @@ View a list of all the spiders we know about.
 ### list_getSpiders
 
 ```php
-function list_getSpiders($start, $items_per_page, $sort)
+function list_getSpiders(int $start, int $items_per_page, string $sort): array
 ```
 Callback function for createList()
 
@@ -56,7 +56,7 @@ Type|Parameter|Description
 ### list_getNumSpiders
 
 ```php
-function list_getNumSpiders()
+function list_getNumSpiders(): int
 ```
 Callback function for createList()
 
@@ -65,7 +65,7 @@ Callback function for createList()
 ### EditSpider
 
 ```php
-function EditSpider()
+function EditSpider(): void
 ```
 Here we can add, and edit, spider info!
 
@@ -74,7 +74,7 @@ Here we can add, and edit, spider info!
 ### SpiderCheck
 
 ```php
-function SpiderCheck()
+function SpiderCheck(): int
 ```
 Do we think the current user is a spider?
 
@@ -83,7 +83,7 @@ Do we think the current user is a spider?
 ### logSpider
 
 ```php
-function logSpider()
+function logSpider(): void
 ```
 Log the spider presence online.
 
@@ -92,7 +92,7 @@ Log the spider presence online.
 ### consolidateSpiderStats
 
 ```php
-function consolidateSpiderStats()
+function consolidateSpiderStats(): void
 ```
 This function takes any unprocessed hits and turns them into stats.
 
@@ -101,7 +101,7 @@ This function takes any unprocessed hits and turns them into stats.
 ### SpiderLogs
 
 ```php
-function SpiderLogs()
+function SpiderLogs(): void
 ```
 See what spiders have been up to.
 
@@ -110,7 +110,7 @@ See what spiders have been up to.
 ### list_getSpiderLogs
 
 ```php
-function list_getSpiderLogs($start, $items_per_page, $sort)
+function list_getSpiderLogs(int $start, int $items_per_page, string $sort): array
 ```
 Callback function for createList()
 
@@ -125,7 +125,7 @@ Type|Parameter|Description
 ### list_getNumSpiderLogs
 
 ```php
-function list_getNumSpiderLogs()
+function list_getNumSpiderLogs(): int
 ```
 Callback function for createList()
 
@@ -134,7 +134,7 @@ Callback function for createList()
 ### SpiderStats
 
 ```php
-function SpiderStats()
+function SpiderStats(): void
 ```
 Show the spider statistics.
 
@@ -143,7 +143,7 @@ Show the spider statistics.
 ### list_getSpiderStats
 
 ```php
-function list_getSpiderStats($start, $items_per_page, $sort)
+function list_getSpiderStats(int $start, int $items_per_page, string $sort): array
 ```
 Callback function for createList()
 Get a list of spider stats from the log_spider table
@@ -159,7 +159,7 @@ Type|Parameter|Description
 ### list_getNumSpiderStats
 
 ```php
-function list_getNumSpiderStats()
+function list_getNumSpiderStats(): int
 ```
 Callback function for createList()
 Get the number of spider stat rows from the log spider stats table
@@ -169,7 +169,7 @@ Get the number of spider stat rows from the log spider stats table
 ### recacheSpiderNames
 
 ```php
-function recacheSpiderNames()
+function recacheSpiderNames(): void
 ```
 Recache spider names?
 

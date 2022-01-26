@@ -10,7 +10,7 @@ count: 1
 ### utf8_compose_maps
 
 ```php
-function utf8_compose_maps()
+function utf8_compose_maps(): array
 ```
 Helper function for utf8_compose.
 

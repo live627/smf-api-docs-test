@@ -10,7 +10,7 @@ count: 11
 ### getServerVersions
 
 ```php
-function getServerVersions($checkFor)
+function getServerVersions(array $checkFor): array
 ```
 Get a list of versions that are currently installed on the server.
 
@@ -23,7 +23,7 @@ Type|Parameter|Description
 ### getFileVersions
 
 ```php
-function getFileVersions(&$versionOptions)
+function getFileVersions(array &$versionOptions): array
 ```
 Search through source, theme and language files to determine their version.
 
@@ -41,7 +41,7 @@ Type|Parameter|Description
 ### updateSettingsFile
 
 ```php
-function updateSettingsFile($config_vars, $keep_quotes = null, $rebuild = false)
+function updateSettingsFile(array $config_vars, ?bool $keep_quotes = null, bool $rebuild = false): bool
 ```
 Update the Settings.php file.
 
@@ -77,7 +77,7 @@ Type|Parameter|Description
 ### get_current_settings
 
 ```php
-function get_current_settings($mtime = null, $settingsFile = null)
+function get_current_settings(int $mtime = null, string $settingsFile = null): array
 ```
 Retrieves a copy of the current values of all settings defined in Settings.php.
 
@@ -93,7 +93,7 @@ Type|Parameter|Description
 ### safe_file_write
 
 ```php
-function safe_file_write($file, $data, $backup_file = null, $mtime = null, $append = false)
+function safe_file_write(string $file, string $data, string $backup_file = null, int $mtime = null, bool $append = false): bool
 ```
 Writes data to a file, optionally making a backup, while avoiding race conditions.
 
@@ -110,7 +110,7 @@ Type|Parameter|Description
 ### smf_var_export
 
 ```php
-function smf_var_export($var)
+function smf_var_export(mixed $var): mixed
 ```
 A wrapper around var_export whose output matches SMF coding conventions.
 
@@ -123,7 +123,7 @@ Type|Parameter|Description
 ### strip_php_comments
 
 ```php
-function strip_php_comments($code_str)
+function strip_php_comments(string $code_str): string
 ```
 Deletes all PHP comments from a string.
 
@@ -136,7 +136,7 @@ Type|Parameter|Description
 ### updateDbLastError
 
 ```php
-function updateDbLastError($time, $update = true)
+function updateDbLastError(int $time, bool $update = true): bool
 ```
 Saves the time of the last db error for the error log
 - Done separately from updateSettingsFile to avoid race conditions
@@ -153,7 +153,7 @@ Type|Parameter|Description
 ### updateAdminPreferences
 
 ```php
-function updateAdminPreferences()
+function updateAdminPreferences(): void
 ```
 Saves the admin's current preferences to the database.
 
@@ -162,7 +162,7 @@ Saves the admin's current preferences to the database.
 ### emailAdmins
 
 ```php
-function emailAdmins($template, $replacements = array(), $additional_recipients = array())
+function emailAdmins(string $template, array $replacements = array(), array $additional_recipients = array()): void
 ```
 Send all the administrators a lovely email.
 
@@ -179,7 +179,7 @@ Type|Parameter|Description
 ### sm_temp_dir
 
 ```php
-function sm_temp_dir()
+function sm_temp_dir(): string
 ```
 Locates the most appropriate temp directory.
 

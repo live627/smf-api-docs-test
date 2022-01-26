@@ -10,7 +10,7 @@ count: 6
 ### writeLog
 
 ```php
-function writeLog($force = false)
+function writeLog(bool $force = false): void
 ```
 Put this user in the online log.
 
@@ -23,7 +23,7 @@ Type|Parameter|Description
 ### logLastDatabaseError
 
 ```php
-function logLastDatabaseError()
+function logLastDatabaseError(): void
 ```
 Logs the last database error into a file.
 
@@ -33,7 +33,7 @@ and only update db_last_error.php if the first was successful.
 ### displayDebug
 
 ```php
-function displayDebug()
+function displayDebug(): void
 ```
 This function shows the debug information tracked when $db_show_debug = true
 in Settings.php
@@ -43,7 +43,7 @@ in Settings.php
 ### trackStats
 
 ```php
-function trackStats($stats = array())
+function trackStats(array $stats = array()): bool
 ```
 Track Statistics.
 
@@ -59,7 +59,7 @@ Type|Parameter|Description
 ### logAction
 
 ```php
-function logAction($action, array $extra = array(), $log_type = 'moderate')
+function logAction(string $action, array $extra = array(), string $log_type = 'moderate'): int
 ```
 This function logs an action to the database. It is a
 thin wrapper around {@link logActions()}.
@@ -77,7 +77,7 @@ item being logged. Typically this will include 'topic' for the topic's id.
 ### logActions
 
 ```php
-function logActions(array $logs)
+function logActions(array $logs): int
 ```
 Log changes to the forum, such as moderation events or administrative
 changes. This behaves just like {@link logAction()} in SMF 2.0, except

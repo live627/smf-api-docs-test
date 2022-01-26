@@ -10,7 +10,7 @@ count: 7
 ### ViewMembers
 
 ```php
-function ViewMembers()
+function ViewMembers(): void
 ```
 The main entrance point for the Manage Members screen.
 
@@ -24,7 +24,7 @@ Uses ManageMembers language file.
 ### ViewMemberlist
 
 ```php
-function ViewMemberlist()
+function ViewMemberlist(): void
 ```
 View all members list. It allows sorting on several columns, and deletion of
 selected members. It also handles the search query sent by
@@ -38,7 +38,7 @@ Uses a standard list (@see createList())
 ### SearchMembers
 
 ```php
-function SearchMembers()
+function SearchMembers(): void
 ```
 Search the member list, using one or more criteria.
 
@@ -49,7 +49,7 @@ form is submitted to action=admin;area=viewmembers;sa=query.
 ### MembersAwaitingActivation
 
 ```php
-function MembersAwaitingActivation()
+function MembersAwaitingActivation(): void
 ```
 List all members who are awaiting approval / activation, sortable on different columns.
 
@@ -62,7 +62,7 @@ Requires the moderate_forum permission.
 ### AdminApprove
 
 ```php
-function AdminApprove()
+function AdminApprove(): void
 ```
 This function handles the approval, rejection, activation or deletion of members.
 
@@ -74,7 +74,7 @@ with the same parameters as the calling page.
 ### jeffsdatediff
 
 ```php
-function jeffsdatediff($old)
+function jeffsdatediff(int $old): int
 ```
 Nifty function to calculate the number of days ago a given date was.
 
@@ -88,7 +88,7 @@ Type|Parameter|Description
 ### GetMemberActivationCounts
 
 ```php
-function GetMemberActivationCounts()
+function GetMemberActivationCounts(): void
 ```
 Fetches all the activation counts for ViewMembers.
 

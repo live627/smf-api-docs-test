@@ -10,7 +10,7 @@ count: 22
 ### smf_db_initiate
 
 ```php
-function smf_db_initiate($db_server, $db_name, $db_user, $db_passwd, $db_prefix, $db_options = array())
+function smf_db_initiate(string $db_server, string $db_name, string $db_user, string $db_passwd, string $db_prefix, array $db_options = array()): ?resource
 ```
 Maps the implementations in this file (smf_db_function_name)
  to the $smcFunc['db_function_name'] variable.
@@ -29,7 +29,7 @@ Type|Parameter|Description
 ### db_extend
 
 ```php
-function db_extend($type = 'extra')
+function db_extend(string $type = 'extra'): void
 ```
 Extend the database functionality. It calls the respective file's init
 to add the implementations in that file to $smcFunc array.
@@ -43,7 +43,7 @@ Type|Parameter|Description
 ### db_fix_prefix
 
 ```php
-function db_fix_prefix(&$db_prefix, $db_name)
+function db_fix_prefix(string &$db_prefix, string $db_name): void
 ```
 Fix up the prefix so it doesn't require the database to be selected.
 
@@ -57,7 +57,7 @@ Type|Parameter|Description
 ### smf_db_select
 
 ```php
-function smf_db_select($database, $connection = null)
+function smf_db_select(string $database, object $connection = null): bool
 ```
 Wrap mysqli_select_db so the connection does not need to be specified
 
@@ -71,7 +71,7 @@ Type|Parameter|Description
 ### smf_db_get_server_info
 
 ```php
-function smf_db_get_server_info($connection = null)
+function smf_db_get_server_info(object $connection = null): string
 ```
 Wrap mysqli_get_server_info so the connection does not need to be specified
 
@@ -84,7 +84,7 @@ Type|Parameter|Description
 ### smf_db_replacement__callback
 
 ```php
-function smf_db_replacement__callback($matches)
+function smf_db_replacement__callback(array $matches): string
 ```
 Callback for preg_replace_callback on the query.
 
@@ -99,7 +99,7 @@ Type|Parameter|Description
 ### smf_db_quote
 
 ```php
-function smf_db_quote($db_string, $db_values, $connection = null)
+function smf_db_quote(string $db_string, array $db_values, resource $connection = null): string
 ```
 Just like the db_query, escape and quote a string, but not executing the query.
 
@@ -114,7 +114,7 @@ Type|Parameter|Description
 ### smf_db_query
 
 ```php
-function smf_db_query($identifier, $db_string, $db_values = array(), $connection = null)
+function smf_db_query(string $identifier, string $db_string, array $db_values = array(), resource $connection = null): resource|bool
 ```
 Do a query.  Takes care of errors too.
 
@@ -130,7 +130,7 @@ Type|Parameter|Description
 ### smf_db_affected_rows
 
 ```php
-function smf_db_affected_rows($connection = null)
+function smf_db_affected_rows(resource $connection = null): int
 ```
 affected_rows
 
@@ -143,7 +143,7 @@ Type|Parameter|Description
 ### smf_db_insert_id
 
 ```php
-function smf_db_insert_id($table, $field = null, $connection = null)
+function smf_db_insert_id(string $table, string $field = null, resource $connection = null): int
 ```
 Gets the ID of the most recently inserted row.
 
@@ -158,7 +158,7 @@ Type|Parameter|Description
 ### smf_db_transaction
 
 ```php
-function smf_db_transaction($type = 'commit', $connection = null)
+function smf_db_transaction(string $type = 'commit', resource $connection = null): bool
 ```
 Do a transaction.
 
@@ -172,7 +172,7 @@ Type|Parameter|Description
 ### smf_db_error
 
 ```php
-function smf_db_error($db_string, $connection = null)
+function smf_db_error(string $db_string, object $connection = null): void
 ```
 Database error!
 Backtrace, log, try to fix.
@@ -187,7 +187,7 @@ Type|Parameter|Description
 ### smf_db_insert
 
 ```php
-function smf_db_insert($method, $table, $columns, $data, $keys, $returnmode = 0, $connection = null)
+function smf_db_insert(string $method, string $table, array $columns, array $data, array $keys, int $returnmode = 0, object $connection = null): mixed
 ```
 Inserts data into a table
 
@@ -206,7 +206,7 @@ Type|Parameter|Description
 ### smf_db_error_backtrace
 
 ```php
-function smf_db_error_backtrace($error_message, $log_message = '', $error_type = false, $file = null, $line = null)
+function smf_db_error_backtrace(string $error_message, string $log_message = '', string|bool $error_type = false, string $file = null, int $line = null): void|array
 ```
 This function tries to work out additional error information from a back trace.
 
@@ -223,7 +223,7 @@ Type|Parameter|Description
 ### smf_db_escape_wildcard_string
 
 ```php
-function smf_db_escape_wildcard_string($string, $translate_human_wildcards = false)
+function smf_db_escape_wildcard_string(string $string, bool $translate_human_wildcards = false): string
 ```
 Escape the LIKE wildcards so that they match the character and not the wildcard.
 
@@ -237,7 +237,7 @@ Type|Parameter|Description
 ### smf_is_resource
 
 ```php
-function smf_is_resource($result)
+function smf_is_resource(mixed $result): bool
 ```
 Validates whether the resource is a valid mysqli instance.
 
@@ -250,7 +250,7 @@ Type|Parameter|Description
 ### smf_db_fetch_all
 
 ```php
-function smf_db_fetch_all($request)
+function smf_db_fetch_all(resource $request): array
 ```
 Fetches all rows from a result as an array
 
@@ -263,7 +263,7 @@ Type|Parameter|Description
 ### smf_db_error_insert
 
 ```php
-function smf_db_error_insert($error_array)
+function smf_db_error_insert(array $error_array): void
 ```
 Function to save errors in database in a safe way
 
@@ -276,7 +276,7 @@ Type|Parameter|Description
 ### smf_db_custom_order
 
 ```php
-function smf_db_custom_order($field, $array_values, $desc = false)
+function smf_db_custom_order(string $field, array $array_values, bool $desc = false): string
 ```
 Function which constructs an optimize custom order string
 as an improved alternative to find_in_set()
@@ -292,7 +292,7 @@ Type|Parameter|Description
 ### smf_db_native_replace
 
 ```php
-function smf_db_native_replace()
+function smf_db_native_replace(): bool
 ```
 Function which return the information if the database supports native replace inserts
 
@@ -301,7 +301,7 @@ Function which return the information if the database supports native replace in
 ### smf_db_cte_support
 
 ```php
-function smf_db_cte_support()
+function smf_db_cte_support(): bool
 ```
 Function which return the information if the database supports cte with recursive
 
@@ -310,7 +310,7 @@ Function which return the information if the database supports cte with recursiv
 ### smf_db_escape_string
 
 ```php
-function smf_db_escape_string($string, $connection = null)
+function smf_db_escape_string(string $string, resource $connection = null): string
 ```
 Function which return the escaped string
 

@@ -10,7 +10,7 @@ count: 1
 ### utf8_casefold_maps
 
 ```php
-function utf8_casefold_maps()
+function utf8_casefold_maps(): array
 ```
 Helper function for utf8_casefold.
 

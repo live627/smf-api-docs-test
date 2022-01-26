@@ -10,7 +10,7 @@ count: 10
 ### updateReport
 
 ```php
-function updateReport($action, $value, $report_id)
+function updateReport(string $action, int $value, int|array $report_id): bool
 ```
 Updates a report with the given parameters. Logs each action via logAction()
 
@@ -25,7 +25,7 @@ Type|Parameter|Description
 ### countReports
 
 ```php
-function countReports($closed = 0)
+function countReports(int $closed = 0): int
 ```
 Counts how many reports are in total. Used for creating pagination.
 
@@ -38,7 +38,7 @@ Type|Parameter|Description
 ### getReports
 
 ```php
-function getReports($closed = 0)
+function getReports(int $closed = 0): array
 ```
 Get all possible reports the current user can see.
 
@@ -51,7 +51,7 @@ Type|Parameter|Description
 ### recountOpenReports
 
 ```php
-function recountOpenReports($type)
+function recountOpenReports(string $type): int
 ```
 Recount all open reports. Sets a SESSION var with the updated info.
 
@@ -64,7 +64,7 @@ Type|Parameter|Description
 ### getReportDetails
 
 ```php
-function getReportDetails($report_id)
+function getReportDetails(int $report_id): array|bool
 ```
 Gets additional information for a specific report.
 
@@ -77,7 +77,7 @@ Type|Parameter|Description
 ### getReportComments
 
 ```php
-function getReportComments($report_id)
+function getReportComments(int $report_id): array|bool
 ```
 Gets both report comments as well as any moderator comment.
 
@@ -90,7 +90,7 @@ Type|Parameter|Description
 ### getCommentModDetails
 
 ```php
-function getCommentModDetails($comment_id)
+function getCommentModDetails(int $comment_id): array|bool
 ```
 Gets specific details about a moderator comment. It also adds a permission for editing/deleting the comment,
 by default only admins and the author of the comment can edit/delete it.
@@ -104,7 +104,7 @@ Type|Parameter|Description
 ### saveModComment
 
 ```php
-function saveModComment($report_id, $data)
+function saveModComment(int $report_id, array $data): bool
 ```
 Inserts a new moderator comment to the DB.
 
@@ -118,7 +118,7 @@ Type|Parameter|Description
 ### editModComment
 
 ```php
-function editModComment($comment_id, $edited_comment)
+function editModComment(int $comment_id, string $edited_comment): bool
 ```
 Saves the new information whenever a moderator comment is edited.
 
@@ -132,7 +132,7 @@ Type|Parameter|Description
 ### deleteModComment
 
 ```php
-function deleteModComment($comment_id)
+function deleteModComment(int $comment_id): bool
 ```
 Deletes a moderator comment from the DB.
 

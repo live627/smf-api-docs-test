@@ -10,7 +10,7 @@ count: 2
 ### getLastPosts
 
 ```php
-function getLastPosts($latestPostOptions)
+function getLastPosts(array $latestPostOptions): array
 ```
 Get the latest posts of a forum.
 
@@ -23,7 +23,7 @@ Type|Parameter|Description
 ### cache_getLastPosts
 
 ```php
-function cache_getLastPosts($latestPostOptions)
+function cache_getLastPosts(array $latestPostOptions): void
 ```
 Callback-function for the cache for getLastPosts().
 

@@ -10,7 +10,7 @@ count: 12
 ### sha1_smf
 
 ```php
-function sha1_smf($str)
+function sha1_smf(string $str): string
 ```
 Define the old SMF sha1 function. Uses mhash if available
 
@@ -23,7 +23,7 @@ Type|Parameter|Description
 ### sha1_core
 
 ```php
-function sha1_core($x, $len)
+function sha1_core(string $x, int $len): string
 ```
 This is the core SHA-1 calculation routine, used by sha1().
 
@@ -37,7 +37,7 @@ Type|Parameter|Description
 ### sha1_ft
 
 ```php
-function sha1_ft($t, $b, $c, $d)
+function sha1_ft(int $t, int $b, int $c, int $d): int
 ```
 Helper function for the core SHA-1 calculation
 
@@ -53,7 +53,7 @@ Type|Parameter|Description
 ### sha1_kt
 
 ```php
-function sha1_kt($t)
+function sha1_kt(int $t): int
 ```
 Helper function for the core SHA-1 calculation
 
@@ -66,7 +66,7 @@ Type|Parameter|Description
 ### sha1_rol
 
 ```php
-function sha1_rol($num, $cnt)
+function sha1_rol(int $num, int $cnt): int
 ```
 Helper function for the core SHA-1 calculation
 
@@ -80,7 +80,7 @@ Type|Parameter|Description
 ### sha1_raw
 
 ```php
-function sha1_raw($text)
+function sha1_raw(string $text): string
 ```
 Available since: (PHP 5)
 If the optional raw_output is set to TRUE, then the sha1 digest is instead returned in raw binary format with a length of 20,
@@ -95,7 +95,7 @@ Type|Parameter|Description
 ### smf_crc32
 
 ```php
-function smf_crc32($number)
+function smf_crc32(string $number): string
 ```
 Compatibility function.
 
@@ -109,7 +109,7 @@ Type|Parameter|Description
 ### mb_ord
 
 ```php
-function mb_ord($string, $encoding = null)
+function mb_ord(string $string, ?string $encoding = null): int|bool
 ```
 Compatibility function.
 
@@ -124,7 +124,7 @@ If null, the current SMF encoding will be used, falling back to UTF-8.
 ### mb_chr
 
 ```php
-function mb_chr($codepoint, $encoding = null)
+function mb_chr(int $codepoint, ?string $encoding = null): string|bool
 ```
 Compatibility function.
 
@@ -139,7 +139,7 @@ If null, the current SMF encoding will be used, falling back to UTF-8.
 ### mb_ord_chr_encoding
 
 ```php
-function mb_ord_chr_encoding($encoding = null)
+function mb_ord_chr_encoding(string $encoding = null): string|bool
 ```
 Helper function for the mb_ord and mb_chr polyfills.
 
@@ -155,7 +155,7 @@ Type|Parameter|Description
 ### idn_to_ascii
 
 ```php
-function idn_to_ascii($domain, $flags = 0, $variant = 1, &$idna_info = null)
+function idn_to_ascii(string $domain, int $flags = 0, int $variant = 1, ?array &$idna_info = null): string|bool
 ```
 Compatibility function.
 
@@ -173,7 +173,7 @@ Type|Parameter|Description
 ### idn_to_utf8
 
 ```php
-function idn_to_utf8($domain, $flags = 0, $variant = 1, &$idna_info = null)
+function idn_to_utf8(string $domain, int $flags = 0, int $variant = 1, ?array &$idna_info = null): string|bool
 ```
 Compatibility function.
 

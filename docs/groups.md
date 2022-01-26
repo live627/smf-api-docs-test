@@ -10,7 +10,7 @@ count: 6
 ### Groups
 
 ```php
-function Groups()
+function Groups(): void
 ```
 Entry point function, permission checks, admin bars, etc.
 
@@ -20,7 +20,7 @@ It handles permission checks, and puts the moderation bar on as required.
 ### GroupList
 
 ```php
-function GroupList()
+function GroupList(): void
 ```
 This very simply lists the groups, nothing snazy.
 
@@ -29,7 +29,7 @@ This very simply lists the groups, nothing snazy.
 ### MembergroupMembers
 
 ```php
-function MembergroupMembers()
+function MembergroupMembers(): void
 ```
 Display members of a group, and allow adding of members to a group. Silly function name though ;)
 It can be called from ManageMembergroups if it needs templating within the admin environment.
@@ -44,7 +44,7 @@ It redirects to itself.
 ### GroupRequests
 
 ```php
-function GroupRequests()
+function GroupRequests(): void
 ```
 Show and manage all group requests.
 
@@ -53,7 +53,7 @@ Show and manage all group requests.
 ### list_getGroupRequestCount
 
 ```php
-function list_getGroupRequestCount($where, $where_parameters)
+function list_getGroupRequestCount(string $where, array $where_parameters): int
 ```
 Callback function for createList().
 
@@ -67,7 +67,7 @@ Type|Parameter|Description
 ### list_getGroupRequests
 
 ```php
-function list_getGroupRequests($start, $items_per_page, $sort, $where, $where_parameters)
+function list_getGroupRequests(int $start, int $items_per_page, string $sort, string $where, string $where_parameters): array
 ```
 Callback function for createList()
 

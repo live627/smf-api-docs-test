@@ -10,7 +10,7 @@ count: 4
 ### ManageCalendar
 
 ```php
-function ManageCalendar()
+function ManageCalendar(): void
 ```
 The main controlling function doesn't have much to do... yet.
 
@@ -21,7 +21,7 @@ Uses ManageCalendar language file.
 ### ModifyHolidays
 
 ```php
-function ModifyHolidays()
+function ModifyHolidays(): void
 ```
 The function that handles adding, and deleting holiday data
 
@@ -30,7 +30,7 @@ The function that handles adding, and deleting holiday data
 ### EditHoliday
 
 ```php
-function EditHoliday()
+function EditHoliday(): void
 ```
 This function is used for adding/editing a specific holiday
 
@@ -39,7 +39,7 @@ This function is used for adding/editing a specific holiday
 ### ModifyCalendarSettings
 
 ```php
-function ModifyCalendarSettings($return_config = false)
+function ModifyCalendarSettings(bool $return_config = false): void|array
 ```
 Show and allow to modify calendar settings. Obviously.
 

@@ -10,7 +10,7 @@ count: 2
 ### template_search_members
 
 ```php
-function template_search_members()
+function template_search_members(): void
 ```
 The admin member search form
 
@@ -19,7 +19,7 @@ The admin member search form
 ### template_admin_browse
 
 ```php
-function template_admin_browse()
+function template_admin_browse(): void
 ```
 The admin member list.
 

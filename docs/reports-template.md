@@ -10,7 +10,7 @@ count: 5
 ### template_report_type
 
 ```php
-function template_report_type()
+function template_report_type(): void
 ```
 Choose which type of report to run?
 
@@ -19,7 +19,7 @@ Choose which type of report to run?
 ### template_main
 
 ```php
-function template_main()
+function template_main(): void
 ```
 This is the standard template for showing reports.
 
@@ -28,7 +28,7 @@ This is the standard template for showing reports.
 ### template_print_above
 
 ```php
-function template_print_above()
+function template_print_above(): void
 ```
 Header of the print page!
 
@@ -37,7 +37,7 @@ Header of the print page!
 ### template_print
 
 ```php
-function template_print()
+function template_print(): void
 ```
 The main print page
 
@@ -46,7 +46,7 @@ The main print page
 ### template_print_below
 
 ```php
-function template_print_below()
+function template_print_below(): void
 ```
 Footer of the print page.
 

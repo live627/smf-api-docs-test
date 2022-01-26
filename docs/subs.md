@@ -10,7 +10,7 @@ count: 87
 ### updateStats
 
 ```php
-function updateStats($type, $parameter1 = null, $parameter2 = null)
+function updateStats(string $type, mixed $parameter1 = null, mixed $parameter2 = null): void
 ```
 Update some basic statistics.
 
@@ -41,7 +41,7 @@ Type|Parameter|Description
 ### updateMemberData
 
 ```php
-function updateMemberData($members, $data)
+function updateMemberData(mixed $members, array $data): void
 ```
 Updates the columns in the members table.
 
@@ -67,7 +67,7 @@ Type|Parameter|Description
 ### updateSettings
 
 ```php
-function updateSettings($changeArray, $update = false)
+function updateSettings(array $changeArray, bool $update = false): void
 ```
 Updates the settings table as well as $modSettings... only does one at a time if $update is true.
 
@@ -87,7 +87,7 @@ Type|Parameter|Description
 ### constructPageIndex
 
 ```php
-function constructPageIndex($base_url, &$start, $max_value, $num_per_page, $flexible_start = false, $show_prevnext = true)
+function constructPageIndex(string $base_url, int &$start, int $max_value, int $num_per_page, bool $flexible_start = false, bool $show_prevnext = true): string
 ```
 Constructs a page list.
 
@@ -115,7 +115,7 @@ Type|Parameter|Description
 ### comma_format
 
 ```php
-function comma_format($number, $override_decimal_count = false)
+function comma_format(float $number, bool|int $override_decimal_count = false): string
 ```
 - Formats a number.
 
@@ -131,7 +131,7 @@ Type|Parameter|Description
 ### timeformat
 
 ```php
-function timeformat($log_time, $show_today = true, $tzid = null)
+function timeformat(int $log_time, bool|string $show_today = true, ?string $tzid = null): string
 ```
 Format a time to make it look purdy.
 
@@ -155,7 +155,7 @@ Otherwise, the value of date_default_timezone_get() will be used.
 ### get_date_or_time_format
 
 ```php
-function get_date_or_time_format($type = '', $format = '')
+function get_date_or_time_format(string $type = '', string $format = ''): string
 ```
 Gets a version of a strftime() format that only shows the date or time components
 
@@ -169,7 +169,7 @@ Type|Parameter|Description
 ### smf_strftime
 
 ```php
-function smf_strftime(string $format, int $timestamp = null, string $tzid = null)
+function smf_strftime(string $format, ?int $timestamp = null, ?string $tzid = null): string
 ```
 Replacement for strftime() that is compatible with PHP 8.1+.
 
@@ -193,7 +193,7 @@ If null, uses default time zone.
 ### smf_gmstrftime
 
 ```php
-function smf_gmstrftime(string $format, int $timestamp = null)
+function smf_gmstrftime(string $format, ?int $timestamp = null): string
 ```
 Replacement for gmstrftime() that is compatible with PHP 8.1+.
 
@@ -208,7 +208,7 @@ If null, defaults to the current time.
 ### un_htmlspecialchars
 
 ```php
-function un_htmlspecialchars($string)
+function un_htmlspecialchars(string $string): string
 ```
 Replaces special entities in strings with the real characters.
 
@@ -222,7 +222,7 @@ Type|Parameter|Description
 ### sanitize_chars
 
 ```php
-function sanitize_chars($string, $level = 0, $substitute = null)
+function sanitize_chars(string $string, int $level = 0, ?string $substitute = null): string
 ```
 Replaces invalid characters with a substitute.
 
@@ -247,7 +247,7 @@ If not set, the Unicode replacement character (U+FFFD) will be used
 ### normalize_spaces
 
 ```php
-function normalize_spaces($string, $vspace = true, $hspace = false, $options = array())
+function normalize_spaces(string $string, bool $vspace = true, bool $hspace = false, array $options = array()): string
 ```
 Normalizes space characters and line breaks.
 
@@ -269,7 +269,7 @@ plain " " character. (Note: tabs are not replaced unless the
 ### shorten_subject
 
 ```php
-function shorten_subject($subject, $len)
+function shorten_subject(string $subject, int $len): string
 ```
 Shorten a subject + internationalization concerns.
 
@@ -286,7 +286,7 @@ Type|Parameter|Description
 ### forum_time
 
 ```php
-function forum_time($use_user_offset = true, $timestamp = null)
+function forum_time(bool $use_user_offset = true, int $timestamp = null): int
 ```
 Deprecated function that formerly applied manual offsets to Unix timestamps
 in order to provide a fake version of time zone support on ancient versions
@@ -302,7 +302,7 @@ Type|Parameter|Description
 ### permute
 
 ```php
-function permute($array)
+function permute(array $array): array
 ```
 Calculates all the possible permutations (orders) of array.
 
@@ -316,7 +316,7 @@ Type|Parameter|Description
 ### get_signature_allowed_bbc_tags
 
 ```php
-function get_signature_allowed_bbc_tags()
+function get_signature_allowed_bbc_tags(): array
 ```
 Return an array with allowed bbc tags for signatures, that can be passed to parse_bbc().
 
@@ -325,7 +325,7 @@ Return an array with allowed bbc tags for signatures, that can be passed to pars
 ### parse_bbc
 
 ```php
-function parse_bbc($message, $smileys = true, $cache_id = '', $parse_tags = array())
+function parse_bbc(string|bool $message, bool $smileys = true, string $cache_id = '', array $parse_tags = array()): string
 ```
 Parse bulletin board code in a string, as well as smileys optionally.
 
@@ -350,7 +350,7 @@ When a string, the message is parsed and bbc handled.
 ### parsesmileys
 
 ```php
-function parsesmileys(&$message)
+function parsesmileys(string &$message): void
 ```
 Parse smileys in the passed message.
 
@@ -367,7 +367,7 @@ Type|Parameter|Description
 ### highlight_php_code
 
 ```php
-function highlight_php_code($code)
+function highlight_php_code(string $code): string
 ```
 Highlight any code.
 
@@ -382,7 +382,7 @@ Type|Parameter|Description
 ### get_proxied_url
 
 ```php
-function get_proxied_url($url)
+function get_proxied_url(string $url): string
 ```
 Gets the appropriate URL to use for images (or whatever) when using SSL
 
@@ -396,7 +396,7 @@ Type|Parameter|Description
 ### redirectexit
 
 ```php
-function redirectexit($setLocation = '', $refresh = false, $permanent = false)
+function redirectexit(string $setLocation = '', bool $refresh = false, bool $permanent = false): void
 ```
 Make sure the browser doesn't come back and repost the form data.
 
@@ -411,7 +411,7 @@ Type|Parameter|Description
 ### obExit
 
 ```php
-function obExit($header = null, $do_footer = null, $from_index = false, $from_fatal_error = false)
+function obExit(bool $header = null, bool $do_footer = null, bool $from_index = false, bool $from_fatal_error = false): void
 ```
 Ends execution.  Takes care of template loading and remembering the previous URL.
 
@@ -427,7 +427,7 @@ Type|Parameter|Description
 ### url_image_size
 
 ```php
-function url_image_size($url)
+function url_image_size(string $url): array|false
 ```
 Get the size of a specified image with better error handling.
 
@@ -440,7 +440,7 @@ Type|Parameter|Description
 ### setupThemeContext
 
 ```php
-function setupThemeContext($forceload = false)
+function setupThemeContext(bool $forceload = false): void
 ```
 Sets up the basic theme context stuff.
 
@@ -453,7 +453,7 @@ Type|Parameter|Description
 ### setMemoryLimit
 
 ```php
-function setMemoryLimit($needed, $in_use = false)
+function setMemoryLimit(string $needed, bool $in_use = false): bool
 ```
 Helper function to set the system memory to a needed value
 - If the needed memory is greater than current, will attempt to get more
@@ -469,7 +469,7 @@ Type|Parameter|Description
 ### memoryReturnBytes
 
 ```php
-function memoryReturnBytes($val)
+function memoryReturnBytes(string $val): int
 ```
 Helper function to convert memory string settings to bytes
 
@@ -482,7 +482,7 @@ Type|Parameter|Description
 ### template_header
 
 ```php
-function template_header()
+function template_header(): void
 ```
 The header template
 
@@ -491,7 +491,7 @@ The header template
 ### theme_copyright
 
 ```php
-function theme_copyright()
+function theme_copyright(): void
 ```
 Show the copyright.
 
@@ -500,7 +500,7 @@ Show the copyright.
 ### template_footer
 
 ```php
-function template_footer()
+function template_footer(): void
 ```
 The template footer
 
@@ -509,7 +509,7 @@ The template footer
 ### template_javascript
 
 ```php
-function template_javascript($do_deferred = false)
+function template_javascript(bool $do_deferred = false): void
 ```
 Output the Javascript files
 	- tabbing in this function is to make the HTML source look good and proper
@@ -524,7 +524,7 @@ Type|Parameter|Description
 ### template_css
 
 ```php
-function template_css()
+function template_css(): void
 ```
 Output the CSS files
 
@@ -533,7 +533,7 @@ Output the CSS files
 ### custMinify
 
 ```php
-function custMinify($data, $type)
+function custMinify(array $data, string $type): array
 ```
 Get an array of previously defined files and adds them to our main minified files.
 
@@ -547,7 +547,7 @@ Type|Parameter|Description
 ### deleteAllMinified
 
 ```php
-function deleteAllMinified()
+function deleteAllMinified(): void
 ```
 Clears out old minimized CSS and JavaScript files and ensures $modSettings['browser_cache'] is up to date
 
@@ -556,7 +556,7 @@ Clears out old minimized CSS and JavaScript files and ensures $modSettings['brow
 ### getAttachmentFilename
 
 ```php
-function getAttachmentFilename($filename, $attachment_id, $dir = null, $new = false, $file_hash = '')
+function getAttachmentFilename(string $filename, int $attachment_id, ?string $dir = null, bool $new = false, string $file_hash = ''): string
 ```
 Get an attachment's encrypted filename. If $new is true, won't check for file existence.
 
@@ -573,7 +573,7 @@ Type|Parameter|Description
 ### ip2range
 
 ```php
-function ip2range($fullip)
+function ip2range(string $fullip): array
 ```
 Convert a single IP to a ranged IP.
 
@@ -586,7 +586,7 @@ Type|Parameter|Description
 ### host_from_ip
 
 ```php
-function host_from_ip($ip)
+function host_from_ip(string $ip): string
 ```
 Lookup an IP; try shell_exec first because we can do a timeout on it.
 
@@ -599,7 +599,7 @@ Type|Parameter|Description
 ### text2words
 
 ```php
-function text2words($text, $max_chars = 20, $encrypt = false)
+function text2words(string $text, int $max_chars = 20, bool $encrypt = false): array
 ```
 Chops a string into words and prepares them to be inserted into (or searched from) the database.
 
@@ -614,7 +614,7 @@ Type|Parameter|Description
 ### create_button
 
 ```php
-function create_button($name, $alt, $label = '', $custom = '', $force_use = false)
+function create_button(string $name, string $alt, string $label = '', string $custom = '', bool $force_use = false): string
 ```
 Creates an image/text button
 
@@ -631,7 +631,7 @@ Type|Parameter|Description
 ### setupMenuContext
 
 ```php
-function setupMenuContext()
+function setupMenuContext(): void
 ```
 Sets up all of the top menu buttons
 Saves them in the cache if it is available and on
@@ -642,7 +642,7 @@ Places the results in $context
 ### smf_seed_generator
 
 ```php
-function smf_seed_generator()
+function smf_seed_generator(): void
 ```
 Generate a random seed and ensure it's stored in settings.
 
@@ -651,7 +651,7 @@ Generate a random seed and ensure it's stored in settings.
 ### call_integration_hook
 
 ```php
-function call_integration_hook($hook, $parameters = array())
+function call_integration_hook(string $hook, array $parameters = array()): array
 ```
 Process functions of an integration hook.
 
@@ -666,7 +666,7 @@ Type|Parameter|Description
 ### add_integration_function
 
 ```php
-function add_integration_function($hook, $function, $permanent = true, $file = '', $object = false)
+function add_integration_function(string $hook, string $function, bool $permanent = true, string $file = '', bool $object = false): void
 ```
 Add a function for integration hook.
 
@@ -683,7 +683,7 @@ Type|Parameter|Description
 ### remove_integration_function
 
 ```php
-function remove_integration_function($hook, $function, $permanent = true, $file = '', $object = false)
+function remove_integration_function(string $hook, string $function, bool $permanent = true, string $file = '', bool $object = false): void
 ```
 Remove an integration hook function.
 
@@ -701,7 +701,7 @@ Type|Parameter|Description
 ### call_helper
 
 ```php
-function call_helper($string, $return = false)
+function call_helper(mixed $string, bool $return = false): string|array|bool
 ```
 Receives a string and tries to figure it out if its a method or a function.
 
@@ -717,7 +717,7 @@ Type|Parameter|Description
 ### load_file
 
 ```php
-function load_file($string)
+function load_file(string $string): string|bool
 ```
 Receives a string and tries to figure it out if it contains info to load a file.
 
@@ -731,7 +731,7 @@ Type|Parameter|Description
 ### fetch_web_data
 
 ```php
-function fetch_web_data($url, $post_data = '', $keep_alive = false, $redirection_level = 0)
+function fetch_web_data(string $url, string $post_data = '', bool $keep_alive = false, int $redirection_level = 0): string|false
 ```
 Get the contents of a URL, irrespective of allow_url_fopen.
 
@@ -750,7 +750,7 @@ Type|Parameter|Description
 ### get_mime_type
 
 ```php
-function get_mime_type($data, $is_path = false)
+function get_mime_type(string $data, string $is_path = false): string|bool
 ```
 Attempts to determine the MIME type of some data or a file.
 
@@ -764,7 +764,7 @@ Type|Parameter|Description
 ### check_mime_type
 
 ```php
-function check_mime_type($data, $type_pattern, $is_path = false)
+function check_mime_type(string $data, string $type_pattern, string $is_path = false): int
 ```
 Checks whether a file or data has the expected MIME type.
 
@@ -779,7 +779,7 @@ Type|Parameter|Description
 ### prepareLikesContext
 
 ```php
-function prepareLikesContext($topic)
+function prepareLikesContext(int $topic): array
 ```
 Prepares an array of "likes" info for the topic specified by $topic
 
@@ -792,7 +792,7 @@ Type|Parameter|Description
 ### sanitizeMSCutPaste
 
 ```php
-function sanitizeMSCutPaste($string)
+function sanitizeMSCutPaste(string $string): string
 ```
 Microsoft uses their own character set Code Page 1252 (CP1252), which is a
 superset of ISO 8859-1, defining several characters between DEC 128 and 159
@@ -808,7 +808,7 @@ Type|Parameter|Description
 ### replaceEntities__callback
 
 ```php
-function replaceEntities__callback($matches)
+function replaceEntities__callback(array $matches): string
 ```
 Decode numeric html entities to their ascii or UTF8 equivalent character.
 
@@ -823,7 +823,7 @@ Type|Parameter|Description
 ### fixchar__callback
 
 ```php
-function fixchar__callback($matches)
+function fixchar__callback(array $matches): string
 ```
 Converts html entities to utf8 equivalents
 
@@ -838,7 +838,7 @@ Type|Parameter|Description
 ### entity_fix__callback
 
 ```php
-function entity_fix__callback($matches)
+function entity_fix__callback(array $matches): string
 ```
 Strips out invalid html entities, replaces others with html style &#123; codes
 
@@ -852,7 +852,7 @@ Type|Parameter|Description
 ### get_gravatar_url
 
 ```php
-function get_gravatar_url($email_address)
+function get_gravatar_url(string $email_address): string
 ```
 Return a Gravatar URL based on
 - the supplied email address,
@@ -869,7 +869,7 @@ Type|Parameter|Description
 ### smf_list_timezones
 
 ```php
-function smf_list_timezones($when = 'now')
+function smf_list_timezones(string $when = 'now'): array
 ```
 Get a list of time zones.
 
@@ -884,7 +884,7 @@ Defaults to 'now'.
 ### getUserTimezone
 
 ```php
-function getUserTimezone($id_member = null)
+function getUserTimezone(int $id_member = null): string
 ```
 Gets a member's selected time zone identifier
 
@@ -897,7 +897,7 @@ Type|Parameter|Description
 ### inet_ptod
 
 ```php
-function inet_ptod($ip_address)
+function inet_ptod(string $ip_address): string|false
 ```
 Converts an IP address into binary
 
@@ -910,7 +910,7 @@ Type|Parameter|Description
 ### inet_dtop
 
 ```php
-function inet_dtop($bin)
+function inet_dtop(string $bin): string|false
 ```
 Converts a binary version of an IP address into a readable format
 
@@ -923,7 +923,7 @@ Type|Parameter|Description
 ### _safe_serialize
 
 ```php
-function _safe_serialize($value)
+function _safe_serialize(mixed $value): string
 ```
 Safe serialize() replacement. Recursive
 - output a strict subset of PHP's native serialized representation
@@ -938,7 +938,7 @@ Type|Parameter|Description
 ### safe_serialize
 
 ```php
-function safe_serialize($value)
+function safe_serialize(mixed $value): string
 ```
 Wrapper for _safe_serialize() that handles exceptions and multibyte encoding issues.
 
@@ -951,7 +951,7 @@ Type|Parameter|Description
 ### _safe_unserialize
 
 ```php
-function _safe_unserialize($str)
+function _safe_unserialize(string $str): mixed
 ```
 Safe unserialize() replacement
 - accepts a strict subset of PHP's native serialized representation
@@ -966,7 +966,7 @@ Type|Parameter|Description
 ### safe_unserialize
 
 ```php
-function safe_unserialize($str)
+function safe_unserialize(string $str): mixed
 ```
 Wrapper for _safe_unserialize() that handles exceptions and multibyte encoding issue
 
@@ -979,7 +979,7 @@ Type|Parameter|Description
 ### smf_chmod
 
 ```php
-function smf_chmod($file, $value = 0)
+function smf_chmod(string $file, int $value = 0): bool
 ```
 Tries different modes to make file/dirs writable. Wrapper function for chmod()
 
@@ -993,7 +993,7 @@ Type|Parameter|Description
 ### smf_json_decode
 
 ```php
-function smf_json_decode($json, $returnAsArray = false, $logIt = true)
+function smf_json_decode(string $json, bool $returnAsArray = false, bool $logIt = true): array
 ```
 Wrapper function for json_decode() with error handling.
 
@@ -1008,7 +1008,7 @@ Type|Parameter|Description
 ### isValidIP
 
 ```php
-function isValidIP($IPString)
+function isValidIP(string $IPString): bool
 ```
 Check the given String if he is a valid IPv4 or IPv6
 return true or false
@@ -1022,7 +1022,7 @@ Type|Parameter|Description
 ### smf_serverResponse
 
 ```php
-function smf_serverResponse($data = '', $type = 'content-type: application/json')
+function smf_serverResponse(string $data = '', string $type = 'content-type: application/json'): void
 ```
 Outputs a response.
 
@@ -1036,7 +1036,7 @@ Type|Parameter|Description
 ### set_tld_regex
 
 ```php
-function set_tld_regex($update = false)
+function set_tld_regex(bool $update = false): void
 ```
 Creates an optimized regex to match all known top level domains.
 
@@ -1058,7 +1058,7 @@ Type|Parameter|Description
 ### build_regex
 
 ```php
-function build_regex($strings, $delim = null, $returnArray = false)
+function build_regex(array $strings, string $delim = null, bool $returnArray = false): string|array
 ```
 Creates optimized regular expressions from an array of strings.
 
@@ -1088,7 +1088,7 @@ Type|Parameter|Description
 ### ssl_cert_found
 
 ```php
-function ssl_cert_found($url)
+function ssl_cert_found(string $url): void
 ```
 Check if the passed url has an SSL certificate.
 
@@ -1101,7 +1101,7 @@ Type|Parameter|Description
 ### https_redirect_active
 
 ```php
-function https_redirect_active($url)
+function https_redirect_active(string $url): void
 ```
 Check if the passed url has a redirect to https:// by querying headers.
 
@@ -1116,7 +1116,7 @@ Type|Parameter|Description
 ### build_query_board
 
 ```php
-function build_query_board($userid)
+function build_query_board(int $userid): void
 ```
 Build query_wanna_see_board and query_see_board for a userid
 
@@ -1129,7 +1129,7 @@ Type|Parameter|Description
 ### httpsOn
 
 ```php
-function httpsOn()
+function httpsOn(): bool
 ```
 Check if the connection is using https.
 
@@ -1138,7 +1138,7 @@ Check if the connection is using https.
 ### parse_iri
 
 ```php
-function parse_iri($iri, $component = -1)
+function parse_iri(string $iri, int $component = -1): mixed
 ```
 A wrapper for `parse_url($url)` that can handle URLs with international
 characters (a.k.a. IRIs)
@@ -1153,7 +1153,7 @@ Type|Parameter|Description
 ### validate_iri
 
 ```php
-function validate_iri($iri, $flags = 0)
+function validate_iri(string $iri, int $flags = 0): string|bool
 ```
 A wrapper for `filter_var($url, FILTER_VALIDATE_URL)` that can handle URLs
 with international characters (a.k.a. IRIs)
@@ -1168,7 +1168,7 @@ Type|Parameter|Description
 ### sanitize_iri
 
 ```php
-function sanitize_iri($iri)
+function sanitize_iri(string $iri): string|bool
 ```
 A wrapper for `filter_var($url, FILTER_SANITIZE_URL)` that can handle URLs
 with international characters (a.k.a. IRIs)
@@ -1183,7 +1183,7 @@ Type|Parameter|Description
 ### normalize_iri
 
 ```php
-function normalize_iri($iri)
+function normalize_iri(string $iri): string|bool
 ```
 Performs Unicode normalization on IRIs.
 
@@ -1198,7 +1198,7 @@ Type|Parameter|Description
 ### iri_to_url
 
 ```php
-function iri_to_url($iri)
+function iri_to_url(string $iri): string|bool
 ```
 Converts a URL with international characters (an IRI) into a pure ASCII URL
 
@@ -1212,7 +1212,7 @@ Type|Parameter|Description
 ### url_to_iri
 
 ```php
-function url_to_iri($url)
+function url_to_iri(string $url): string|bool
 ```
 Decodes a URL containing encoded international characters to UTF-8
 
@@ -1226,7 +1226,7 @@ Type|Parameter|Description
 ### check_cron
 
 ```php
-function check_cron()
+function check_cron(): void
 ```
 Ensures SMF's scheduled tasks are being run as intended
 
@@ -1237,7 +1237,7 @@ behaviour using "web cron" JavaScript calls.
 ### send_http_status
 
 ```php
-function send_http_status($code, $status = '')
+function send_http_status(int $code, string $status = ''): void
 ```
 Sends an appropriate HTTP status header based on a given status code
 
@@ -1251,7 +1251,7 @@ Type|Parameter|Description
 ### sentence_list
 
 ```php
-function sentence_list($list)
+function sentence_list(array $list): string
 ```
 Concatenates an array of strings into a grammatically correct sentence list
 
@@ -1265,7 +1265,7 @@ Type|Parameter|Description
 ### truncate_array
 
 ```php
-function truncate_array($array, $max_length = 1900, $deep = 3)
+function truncate_array(array $array, int $max_length = 1900, int $deep = 3): array
 ```
 Truncate an array to a specified length
 
@@ -1280,7 +1280,7 @@ Type|Parameter|Description
 ### array_length
 
 ```php
-function array_length($array, $deep = 3)
+function array_length(array $array, int $deep = 3): int
 ```
 array_length Recursive
 
@@ -1294,7 +1294,7 @@ Type|Parameter|Description
 ### is_filtered_request
 
 ```php
-function is_filtered_request(array $array, $req_var)
+function is_filtered_request(array $array, string $req_var): bool
 ```
 Compares existance request variables against an array.
 
@@ -1313,7 +1313,7 @@ Type|Parameter|Description
 ### cleanXml
 
 ```php
-function cleanXml($string)
+function cleanXml(string $string): string
 ```
 Clean up the XML to make sure it doesn't contain invalid characters.
 
@@ -1326,7 +1326,7 @@ Type|Parameter|Description
 ### JavaScriptEscape
 
 ```php
-function JavaScriptEscape($string)
+function JavaScriptEscape(string $string): string
 ```
 Escapes (replaces) characters in strings to make them safe for use in javascript
 

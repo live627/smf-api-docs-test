@@ -10,7 +10,7 @@ count: 26
 ### getBirthdayRange
 
 ```php
-function getBirthdayRange($low_date, $high_date)
+function getBirthdayRange(string $low_date, string $high_date): array
 ```
 Get all birthdays within the given time range.
 
@@ -25,7 +25,7 @@ Type|Parameter|Description
 ### getEventRange
 
 ```php
-function getEventRange($low_date, $high_date, $use_permissions = true)
+function getEventRange(string $low_date, string $high_date, bool $use_permissions = true): array
 ```
 Get all calendar events within the given time range.
 
@@ -43,7 +43,7 @@ Type|Parameter|Description
 ### getHolidayRange
 
 ```php
-function getHolidayRange($low_date, $high_date)
+function getHolidayRange(string $low_date, string $high_date): array
 ```
 Get all holidays within the given time range.
 
@@ -57,7 +57,7 @@ Type|Parameter|Description
 ### canLinkEvent
 
 ```php
-function canLinkEvent()
+function canLinkEvent(): void
 ```
 Does permission checks to see if an event can be linked to a board/topic.
 
@@ -69,7 +69,7 @@ if the user doesn't have proper permissions, an error will be shown.
 ### getTodayInfo
 
 ```php
-function getTodayInfo()
+function getTodayInfo(): array
 ```
 Returns date information about 'today' relative to the users time offset.
 
@@ -79,7 +79,7 @@ takes the users time offset into account.
 ### getCalendarGrid
 
 ```php
-function getCalendarGrid($selected_date, $calendarOptions, $is_previous = false, $has_picker = true)
+function getCalendarGrid(string $selected_date, array $calendarOptions, bool $is_previous = false, bool $has_picker = true): array
 ```
 Provides information (link, month, year) about the previous and next month.
 
@@ -95,7 +95,7 @@ Type|Parameter|Description
 ### getCalendarWeek
 
 ```php
-function getCalendarWeek($selected_date, $calendarOptions)
+function getCalendarWeek(string $selected_date, array $calendarOptions): array
 ```
 Returns the information needed to show a calendar for the given week.
 
@@ -109,7 +109,7 @@ Type|Parameter|Description
 ### getCalendarList
 
 ```php
-function getCalendarList($start_date, $end_date, $calendarOptions)
+function getCalendarList(string $start_date, string $end_date, array $calendarOptions): array
 ```
 Returns the information needed to show a list of upcoming events, birthdays, and holidays on the calendar.
 
@@ -124,7 +124,7 @@ Type|Parameter|Description
 ### loadDatePicker
 
 ```php
-function loadDatePicker($selector = 'input.date_input', $date_format = '')
+function loadDatePicker(string $selector = 'input.date_input', string $date_format = ''): void
 ```
 Loads the necessary JavaScript and CSS to create a datepicker.
 
@@ -138,7 +138,7 @@ Type|Parameter|Description
 ### loadTimePicker
 
 ```php
-function loadTimePicker($selector = 'input.time_input', $time_format = '')
+function loadTimePicker(string $selector = 'input.time_input', string $time_format = ''): void
 ```
 Loads the necessary JavaScript and CSS to create a timepicker.
 
@@ -152,7 +152,7 @@ Type|Parameter|Description
 ### loadDatePair
 
 ```php
-function loadDatePair($container, $date_class = '', $time_class = '')
+function loadDatePair(string $container, string $date_class = '', string $time_class = ''): void
 ```
 Loads the necessary JavaScript for Datepair.js.
 
@@ -167,7 +167,7 @@ Type|Parameter|Description
 ### cache_getOffsetIndependentEvents
 
 ```php
-function cache_getOffsetIndependentEvents($eventOptions)
+function cache_getOffsetIndependentEvents(array $eventOptions): array
 ```
 Retrieve all events for the given days, independently of the users offset.
 
@@ -182,7 +182,7 @@ Type|Parameter|Description
 ### cache_getRecentEvents
 
 ```php
-function cache_getRecentEvents($eventOptions)
+function cache_getRecentEvents(array $eventOptions): array
 ```
 cache callback function used to retrieve the upcoming birthdays, holidays, and events within the given period, taking into account the users time offset.
 
@@ -196,7 +196,7 @@ Type|Parameter|Description
 ### validateEventPost
 
 ```php
-function validateEventPost()
+function validateEventPost(): void
 ```
 Makes sure the calendar post is valid.
 
@@ -205,7 +205,7 @@ Makes sure the calendar post is valid.
 ### getEventPoster
 
 ```php
-function getEventPoster($event_id)
+function getEventPoster(int $event_id): int|bool
 ```
 Get the event's poster.
 
@@ -218,7 +218,7 @@ Type|Parameter|Description
 ### insertEvent
 
 ```php
-function insertEvent(&$eventOptions)
+function insertEvent(array &$eventOptions): void
 ```
 Consolidating the various INSERT statements into this function.
 
@@ -233,7 +233,7 @@ Type|Parameter|Description
 ### modifyEvent
 
 ```php
-function modifyEvent($event_id, &$eventOptions)
+function modifyEvent(int $event_id, array &$eventOptions): void
 ```
 modifies an event.
 
@@ -248,7 +248,7 @@ Type|Parameter|Description
 ### removeEvent
 
 ```php
-function removeEvent($event_id)
+function removeEvent(int $event_id): void
 ```
 Remove an event
 removes an event.
@@ -262,7 +262,7 @@ Type|Parameter|Description
 ### getEventProperties
 
 ```php
-function getEventProperties($event_id)
+function getEventProperties(int $event_id): array
 ```
 Gets all the events properties
 
@@ -275,7 +275,7 @@ Type|Parameter|Description
 ### getNewEventDatetimes
 
 ```php
-function getNewEventDatetimes()
+function getNewEventDatetimes(): array
 ```
 Gets an initial set of date and time values for creating a new event.
 
@@ -284,7 +284,7 @@ Gets an initial set of date and time values for creating a new event.
 ### setEventStartEnd
 
 ```php
-function setEventStartEnd($eventOptions = array())
+function setEventStartEnd(array $eventOptions = array()): array
 ```
 Set the start and end dates and times for a posted event for insertion into the database.
 
@@ -299,7 +299,7 @@ Type|Parameter|Description
 ### buildEventDatetimes
 
 ```php
-function buildEventDatetimes($row)
+function buildEventDatetimes(array $row): array
 ```
 Helper function for getEventRange, getEventProperties, getNewEventDatetimes, etc.
 
@@ -312,7 +312,7 @@ Type|Parameter|Description
 ### list_getHolidays
 
 ```php
-function list_getHolidays($start, $items_per_page, $sort)
+function list_getHolidays(int $start, int $items_per_page, string $sort): array
 ```
 Gets all of the holidays for the listing
 
@@ -327,7 +327,7 @@ Type|Parameter|Description
 ### list_getNumHolidays
 
 ```php
-function list_getNumHolidays()
+function list_getNumHolidays(): int
 ```
 Helper function to get the total number of holidays
 
@@ -336,7 +336,7 @@ Helper function to get the total number of holidays
 ### removeHolidays
 
 ```php
-function removeHolidays($holiday_ids)
+function removeHolidays(array $holiday_ids): void
 ```
 Remove a holiday from the calendar
 
@@ -349,7 +349,7 @@ Type|Parameter|Description
 ### convertDateToEnglish
 
 ```php
-function convertDateToEnglish($date)
+function convertDateToEnglish(string $date): string
 ```
 Helper function to convert date string to english
 so that date_parse can parse the date

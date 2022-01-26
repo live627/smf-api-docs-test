@@ -10,7 +10,7 @@ count: 20
 ### loadGeneralSettingParameters
 
 ```php
-function loadGeneralSettingParameters($subActions = array(), $defaultAction = null)
+function loadGeneralSettingParameters(array $subActions = array(), string $defaultAction = null): void
 ```
 This function makes sure the requested subaction does exists, if it doesn't, it sets a default action or.
 
@@ -24,7 +24,7 @@ Type|Parameter|Description
 ### ModifyFeatureSettings
 
 ```php
-function ModifyFeatureSettings()
+function ModifyFeatureSettings(): void
 ```
 This function passes control through to the relevant tab.
 
@@ -33,7 +33,7 @@ This function passes control through to the relevant tab.
 ### ModifyModSettings
 
 ```php
-function ModifyModSettings()
+function ModifyModSettings(): void
 ```
 This my friend, is for all the mod authors out there.
 
@@ -42,7 +42,7 @@ This my friend, is for all the mod authors out there.
 ### ModifyBasicSettings
 
 ```php
-function ModifyBasicSettings($return_config = false)
+function ModifyBasicSettings(bool $return_config = false): void|array
 ```
 Config array for changing the basic forum settings
 Accessed  from ?action=admin;area=featuresettings;sa=basic;
@@ -56,7 +56,7 @@ Type|Parameter|Description
 ### ModifyBBCSettings
 
 ```php
-function ModifyBBCSettings($return_config = false)
+function ModifyBBCSettings(bool $return_config = false): void|array
 ```
 Set a few Bulletin Board Code settings. It loads a list of Bulletin Board Code tags to allow disabling tags.
 
@@ -70,7 +70,7 @@ Type|Parameter|Description
 ### ModifyLayoutSettings
 
 ```php
-function ModifyLayoutSettings($return_config = false)
+function ModifyLayoutSettings(bool $return_config = false): void|array
 ```
 Allows modifying the global layout settings in the forum
 Accessed through ?action=admin;area=featuresettings;sa=layout;
@@ -84,7 +84,7 @@ Type|Parameter|Description
 ### ModifyLikesSettings
 
 ```php
-function ModifyLikesSettings($return_config = false)
+function ModifyLikesSettings(bool $return_config = false): void|array
 ```
 Config array for changing like settings
 Accessed  from ?action=admin;area=featuresettings;sa=likes;
@@ -98,7 +98,7 @@ Type|Parameter|Description
 ### ModifyMentionsSettings
 
 ```php
-function ModifyMentionsSettings($return_config = false)
+function ModifyMentionsSettings(bool $return_config = false): void|array
 ```
 Config array for changing like settings
 Accessed  from ?action=admin;area=featuresettings;sa=mentions;
@@ -112,7 +112,7 @@ Type|Parameter|Description
 ### ModifyWarningSettings
 
 ```php
-function ModifyWarningSettings($return_config = false)
+function ModifyWarningSettings(bool $return_config = false): void|array
 ```
 Moderation type settings - although there are fewer than we have you believe ;)
 
@@ -125,7 +125,7 @@ Type|Parameter|Description
 ### ModifyAntispamSettings
 
 ```php
-function ModifyAntispamSettings($return_config = false)
+function ModifyAntispamSettings(bool $return_config = false): void|array
 ```
 Let's try keep the spam to a minimum ah Thantos?
 
@@ -138,7 +138,7 @@ Type|Parameter|Description
 ### ModifySignatureSettings
 
 ```php
-function ModifySignatureSettings($return_config = false)
+function ModifySignatureSettings(bool $return_config = false): void|array
 ```
 You'll never guess what this function does.
 
@@ -151,7 +151,7 @@ Type|Parameter|Description
 ### pauseSignatureApplySettings
 
 ```php
-function pauseSignatureApplySettings()
+function pauseSignatureApplySettings(): void
 ```
 Just pause the signature applying thing.
 
@@ -160,7 +160,7 @@ Just pause the signature applying thing.
 ### ShowCustomProfiles
 
 ```php
-function ShowCustomProfiles()
+function ShowCustomProfiles(): void
 ```
 Show all the custom profile fields available to the user.
 
@@ -169,7 +169,7 @@ Show all the custom profile fields available to the user.
 ### list_getProfileFields
 
 ```php
-function list_getProfileFields($start, $items_per_page, $sort, $standardFields)
+function list_getProfileFields(int $start, int $items_per_page, string $sort, bool $standardFields): array
 ```
 Callback for createList().
 
@@ -185,7 +185,7 @@ Type|Parameter|Description
 ### list_getProfileFieldSize
 
 ```php
-function list_getProfileFieldSize()
+function list_getProfileFieldSize(): int
 ```
 Callback for createList().
 
@@ -194,7 +194,7 @@ Callback for createList().
 ### EditCustomProfiles
 
 ```php
-function EditCustomProfiles()
+function EditCustomProfiles(): void
 ```
 Edit some profile fields?
 
@@ -203,7 +203,7 @@ Edit some profile fields?
 ### custFieldsMaxOrder
 
 ```php
-function custFieldsMaxOrder()
+function custFieldsMaxOrder(): int
 ```
 Returns the maximum field_order value for the custom fields
 
@@ -212,7 +212,7 @@ Returns the maximum field_order value for the custom fields
 ### ModifyLogSettings
 
 ```php
-function ModifyLogSettings($return_config = false)
+function ModifyLogSettings(bool $return_config = false): void|array
 ```
 Allow to edit the settings on the pruning screen.
 
@@ -225,7 +225,7 @@ Type|Parameter|Description
 ### ModifyGeneralModSettings
 
 ```php
-function ModifyGeneralModSettings($return_config = false)
+function ModifyGeneralModSettings(bool $return_config = false): void|array
 ```
 If you have a general mod setting to add stick it here.
 
@@ -238,7 +238,7 @@ Type|Parameter|Description
 ### ModifyAlertsSettings
 
 ```php
-function ModifyAlertsSettings()
+function ModifyAlertsSettings(): void
 ```
 Handles modifying the alerts settings
 

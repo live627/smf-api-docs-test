@@ -10,7 +10,7 @@ count: 7
 ### PackageGet
 
 ```php
-function PackageGet()
+function PackageGet(): void
 ```
 Browse the list of package servers, add servers.
 
@@ -19,7 +19,7 @@ Browse the list of package servers, add servers.
 ### PackageServers
 
 ```php
-function PackageServers()
+function PackageServers(): void
 ```
 Load a list of package servers.
 
@@ -28,7 +28,7 @@ Load a list of package servers.
 ### PackageGBrowse
 
 ```php
-function PackageGBrowse()
+function PackageGBrowse(): void
 ```
 Browse a server's list of packages.
 
@@ -37,7 +37,7 @@ Browse a server's list of packages.
 ### PackageDownload
 
 ```php
-function PackageDownload()
+function PackageDownload(): void
 ```
 Download a package.
 
@@ -46,7 +46,7 @@ Download a package.
 ### PackageUpload
 
 ```php
-function PackageUpload()
+function PackageUpload(): void
 ```
 Upload a new package to the directory.
 
@@ -55,7 +55,7 @@ Upload a new package to the directory.
 ### PackageServerAdd
 
 ```php
-function PackageServerAdd()
+function PackageServerAdd(): void
 ```
 Add a package server to the list.
 
@@ -64,7 +64,7 @@ Add a package server to the list.
 ### PackageServerRemove
 
 ```php
-function PackageServerRemove()
+function PackageServerRemove(): void
 ```
 Remove a server from the list.
 

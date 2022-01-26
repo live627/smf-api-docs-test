@@ -10,7 +10,7 @@ count: 3
 ### template_popup
 
 ```php
-function template_popup()
+function template_popup(): void
 ```
 This displays a help popup thingy
 
@@ -19,7 +19,7 @@ This displays a help popup thingy
 ### template_find_members
 
 ```php
-function template_find_members()
+function template_find_members(): void
 ```
 The template for the popup for finding members
 
@@ -28,7 +28,7 @@ The template for the popup for finding members
 ### template_manual
 
 ```php
-function template_manual()
+function template_manual(): void
 ```
 The main help page
 

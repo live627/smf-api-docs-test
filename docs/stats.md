@@ -10,7 +10,7 @@ count: 3
 ### DisplayStats
 
 ```php
-function DisplayStats()
+function DisplayStats(): void
 ```
 Display some useful/interesting board statistics.
 
@@ -22,7 +22,7 @@ accessed from ?action=stats.
 ### getDailyStats
 
 ```php
-function getDailyStats($condition_string, $condition_parameters = array())
+function getDailyStats(string $condition_string, array $condition_parameters = array()): void
 ```
 Loads the statistics on a daily basis in $context.
 
@@ -36,7 +36,7 @@ Type|Parameter|Description
 ### SMStats
 
 ```php
-function SMStats()
+function SMStats(): void
 ```
 This is the function which returns stats to simplemachines.org IF enabled!
 called by simplemachines.org.

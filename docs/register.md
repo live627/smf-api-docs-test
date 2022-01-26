@@ -10,7 +10,7 @@ count: 7
 ### Register
 
 ```php
-function Register($reg_errors = array())
+function Register(array $reg_errors = array()): void
 ```
 Begin the registration process.
 
@@ -23,7 +23,7 @@ Type|Parameter|Description
 ### Register2
 
 ```php
-function Register2()
+function Register2(): void
 ```
 Actually register the member.
 
@@ -32,7 +32,7 @@ Actually register the member.
 ### Activate
 
 ```php
-function Activate()
+function Activate(): void
 ```
 Activate an users account.
 
@@ -41,7 +41,7 @@ Checks for mail changes, resends password if needed.
 ### CoppaForm
 
 ```php
-function CoppaForm()
+function CoppaForm(): void
 ```
 This function will display the contact information for the forum, as well a form to fill in.
 
@@ -50,7 +50,7 @@ This function will display the contact information for the forum, as well a form
 ### VerificationCode
 
 ```php
-function VerificationCode()
+function VerificationCode(): void
 ```
 Show the verification code or let it be heard.
 
@@ -59,7 +59,7 @@ Show the verification code or let it be heard.
 ### RegisterCheckUsername
 
 ```php
-function RegisterCheckUsername()
+function RegisterCheckUsername(): void
 ```
 See if a username already exists.
 
@@ -68,7 +68,7 @@ See if a username already exists.
 ### SendActivation
 
 ```php
-function SendActivation()
+function SendActivation(): void
 ```
 It doesn't actually send anything, this action just shows a message for a guest.
 

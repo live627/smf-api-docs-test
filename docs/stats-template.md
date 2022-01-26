@@ -10,7 +10,7 @@ count: 1
 ### template_main
 
 ```php
-function template_main()
+function template_main(): void
 ```
 The stats page.
 

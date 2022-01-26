@@ -10,7 +10,7 @@ count: 10
 ### SplitTopics
 
 ```php
-function SplitTopics()
+function SplitTopics(): void
 ```
 splits a topic into two topics.
 
@@ -22,7 +22,7 @@ is accessed with ?action=splittopics.
 ### SplitIndex
 
 ```php
-function SplitIndex()
+function SplitIndex(): void
 ```
 screen shown before the actual split.
 
@@ -36,7 +36,7 @@ shows the user three ways to split the current topic.
 ### SplitExecute
 
 ```php
-function SplitExecute()
+function SplitExecute(): void
 ```
 do the actual split.
 
@@ -51,7 +51,7 @@ uses splitTopic function to do the actual splitting.
 ### SplitSelectTopics
 
 ```php
-function SplitSelectTopics()
+function SplitSelectTopics(): void
 ```
 allows the user to select the messages to be split.
 
@@ -66,7 +66,7 @@ not-selected messages (;topic=1.x;start2=y).
 ### SplitSelectionExecute
 
 ```php
-function SplitSelectionExecute()
+function SplitSelectionExecute(): void
 ```
 do the actual split of a selection of topics.
 
@@ -77,7 +77,7 @@ uses splitTopic function to do the actual splitting.
 ### splitTopic
 
 ```php
-function splitTopic($split1_ID_TOPIC, $splitMessages, $new_subject)
+function splitTopic(int $split1_ID_TOPIC, array $splitMessages, string $new_subject): int
 ```
 general function to split off a topic.
 
@@ -98,7 +98,7 @@ Type|Parameter|Description
 ### MergeTopics
 
 ```php
-function MergeTopics()
+function MergeTopics(): void
 ```
 merges two or more topics into one topic.
 
@@ -110,7 +110,7 @@ is accessed with ?action=mergetopics.
 ### MergeIndex
 
 ```php
-function MergeIndex()
+function MergeIndex(): void
 ```
 allows to pick a topic to merge the current topic with.
 
@@ -122,7 +122,7 @@ allows to set a different target board.
 ### MergeExecute
 
 ```php
-function MergeExecute($topics = array())
+function MergeExecute(array $topics = array()): void
 ```
 set merge options and do the actual merge of two or more topics.
 
@@ -145,7 +145,7 @@ Type|Parameter|Description
 ### MergeDone
 
 ```php
-function MergeDone()
+function MergeDone(): void
 ```
 Shows a 'merge completed' screen.
 

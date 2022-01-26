@@ -10,7 +10,7 @@ count: 1
 ### BoardIndex
 
 ```php
-function BoardIndex()
+function BoardIndex(): void
 ```
 This function shows the board index.
 

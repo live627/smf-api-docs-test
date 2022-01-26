@@ -10,7 +10,7 @@ count: 8
 ### db_extra_init
 
 ```php
-function db_extra_init()
+function db_extra_init(): void
 ```
 Add the functions implemented in this file to the $smcFunc array.
 
@@ -19,7 +19,7 @@ Add the functions implemented in this file to the $smcFunc array.
 ### smf_db_backup_table
 
 ```php
-function smf_db_backup_table($table, $backup_table)
+function smf_db_backup_table(string $table, string $backup_table): resource
 ```
 Backup $table to $backup_table.
 
@@ -33,7 +33,7 @@ Type|Parameter|Description
 ### smf_db_optimize_table
 
 ```php
-function smf_db_optimize_table($table)
+function smf_db_optimize_table(string $table): int
 ```
 This function optimizes a table.
 
@@ -46,7 +46,7 @@ Type|Parameter|Description
 ### smf_db_list_tables
 
 ```php
-function smf_db_list_tables($db = false, $filter = false)
+function smf_db_list_tables(string|bool $db = false, string|bool $filter = false): array
 ```
 This function lists all tables in the database.
 
@@ -60,7 +60,7 @@ Type|Parameter|Description
 ### smf_db_table_sql
 
 ```php
-function smf_db_table_sql($tableName)
+function smf_db_table_sql(string $tableName): string
 ```
 Dumps the schema (CREATE) for a table.
 
@@ -73,7 +73,7 @@ Type|Parameter|Description
 ### smf_db_get_version
 
 ```php
-function smf_db_get_version()
+function smf_db_get_version(): string
 ```
 Get the version number.
 
@@ -82,7 +82,7 @@ Get the version number.
 ### smf_db_get_vendor
 
 ```php
-function smf_db_get_vendor()
+function smf_db_get_vendor(): string
 ```
 Return PostgreSQL
 
@@ -91,7 +91,7 @@ Return PostgreSQL
 ### smf_db_allow_persistent
 
 ```php
-function smf_db_allow_persistent()
+function smf_db_allow_persistent(): bool
 ```
 Figures out if persistent connection is allowed
 

@@ -10,7 +10,7 @@ count: 40
 ### ssi_shutdown
 
 ```php
-function ssi_shutdown()
+function ssi_shutdown(): void
 ```
 This shuts down the SSI and shows the footer.
 
@@ -19,7 +19,7 @@ This shuts down the SSI and shows the footer.
 ### ssi_version
 
 ```php
-function ssi_version($output_method = 'echo')
+function ssi_version(string $output_method = 'echo'): void|string
 ```
 Show the SMF version.
 
@@ -32,7 +32,7 @@ Type|Parameter|Description
 ### ssi_full_version
 
 ```php
-function ssi_full_version($output_method = 'echo')
+function ssi_full_version(string $output_method = 'echo'): void|string
 ```
 Show the full SMF version string.
 
@@ -45,7 +45,7 @@ Type|Parameter|Description
 ### ssi_software_year
 
 ```php
-function ssi_software_year($output_method = 'echo')
+function ssi_software_year(string $output_method = 'echo'): void|string
 ```
 Show the SMF software year.
 
@@ -58,7 +58,7 @@ Type|Parameter|Description
 ### ssi_copyright
 
 ```php
-function ssi_copyright($output_method = 'echo')
+function ssi_copyright(string $output_method = 'echo'): void|string
 ```
 Show the forum copyright. Only used in our ssi_examples files.
 
@@ -71,7 +71,7 @@ Type|Parameter|Description
 ### ssi_welcome
 
 ```php
-function ssi_welcome($output_method = 'echo')
+function ssi_welcome(string $output_method = 'echo'): void|array
 ```
 Display a welcome message, like: Hey, User, you have 0 messages, 0 are new.
 
@@ -84,7 +84,7 @@ Type|Parameter|Description
 ### ssi_menubar
 
 ```php
-function ssi_menubar($output_method = 'echo')
+function ssi_menubar(string $output_method = 'echo'): void|array
 ```
 Display a menu bar, like is displayed at the top of the forum.
 
@@ -97,7 +97,7 @@ Type|Parameter|Description
 ### ssi_logout
 
 ```php
-function ssi_logout($redirect_to = '', $output_method = 'echo')
+function ssi_logout(string $redirect_to = '', string $output_method = 'echo'): void|string
 ```
 Show a logout link.
 
@@ -111,7 +111,7 @@ Type|Parameter|Description
 ### ssi_recentPosts
 
 ```php
-function ssi_recentPosts($num_recent = 8, $exclude_boards = null, $include_boards = null, $output_method = 'echo', $limit_body = true)
+function ssi_recentPosts(int $num_recent = 8, ?array $exclude_boards = null, ?array $include_boards = null, string $output_method = 'echo', bool $limit_body = true): void|array
 ```
 Recent post list:   [board] Subject by Poster    Date
 
@@ -128,7 +128,7 @@ Type|Parameter|Description
 ### ssi_fetchPosts
 
 ```php
-function ssi_fetchPosts($post_ids = array(), $override_permissions = false, $output_method = 'echo')
+function ssi_fetchPosts(array $post_ids = array(), bool $override_permissions = false, string $output_method = 'echo'): void|array
 ```
 Fetches one or more posts by ID.
 
@@ -143,7 +143,7 @@ Type|Parameter|Description
 ### ssi_queryPosts
 
 ```php
-function ssi_queryPosts($query_where = '', $query_where_params = array(), $query_limit = 10, $query_order = 'm.id_msg DESC', $output_method = 'echo', $limit_body = false, $override_permissions = false)
+function ssi_queryPosts(string $query_where = '', array $query_where_params = array(), int $query_limit = 10, string $query_order = 'm.id_msg DESC', string $output_method = 'echo', bool $limit_body = false, bool|false $override_permissions = false): void|array
 ```
 This handles actually pulling post info. Called from other functions to eliminate duplication.
 
@@ -162,7 +162,7 @@ Type|Parameter|Description
 ### ssi_recentTopics
 
 ```php
-function ssi_recentTopics($num_recent = 8, $exclude_boards = null, $include_boards = null, $output_method = 'echo')
+function ssi_recentTopics(int $num_recent = 8, ?array $exclude_boards = null, ?array $include_boards = null, string $output_method = 'echo'): void|array
 ```
 Recent topic list:   [board] Subject by Poster   Date
 
@@ -178,7 +178,7 @@ Type|Parameter|Description
 ### ssi_topPoster
 
 ```php
-function ssi_topPoster($topNumber = 1, $output_method = 'echo')
+function ssi_topPoster(int $topNumber = 1, string $output_method = 'echo'): void|array
 ```
 Shows a list of top posters
 
@@ -192,7 +192,7 @@ Type|Parameter|Description
 ### ssi_topBoards
 
 ```php
-function ssi_topBoards($num_top = 10, $output_method = 'echo')
+function ssi_topBoards(int $num_top = 10, string $output_method = 'echo'): void|array
 ```
 Shows a list of top boards based on activity
 
@@ -206,7 +206,7 @@ Type|Parameter|Description
 ### ssi_topTopics
 
 ```php
-function ssi_topTopics($type = 'replies', $num_topics = 10, $output_method = 'echo')
+function ssi_topTopics(string $type = 'replies', int $num_topics = 10, string $output_method = 'echo'): void|array
 ```
 Shows a list of top topics based on views or replies
 
@@ -221,7 +221,7 @@ Type|Parameter|Description
 ### ssi_topTopicsReplies
 
 ```php
-function ssi_topTopicsReplies($num_topics = 10, $output_method = 'echo')
+function ssi_topTopicsReplies(int $num_topics = 10, string $output_method = 'echo'): void|array
 ```
 Top topics based on replies
 
@@ -235,7 +235,7 @@ Type|Parameter|Description
 ### ssi_topTopicsViews
 
 ```php
-function ssi_topTopicsViews($num_topics = 10, $output_method = 'echo')
+function ssi_topTopicsViews(int $num_topics = 10, string $output_method = 'echo'): void|array
 ```
 Top topics based on views
 
@@ -249,7 +249,7 @@ Type|Parameter|Description
 ### ssi_latestMember
 
 ```php
-function ssi_latestMember($output_method = 'echo')
+function ssi_latestMember(string $output_method = 'echo'): void|array
 ```
 Show a link to the latest member: Please welcome, Someone, our latest member.
 
@@ -262,7 +262,7 @@ Type|Parameter|Description
 ### ssi_randomMember
 
 ```php
-function ssi_randomMember($random_type = '', $output_method = 'echo')
+function ssi_randomMember(string $random_type = '', string $output_method = 'echo'): void|array
 ```
 Fetches a random member.
 
@@ -276,7 +276,7 @@ Type|Parameter|Description
 ### ssi_fetchMember
 
 ```php
-function ssi_fetchMember($member_ids = array(), $output_method = 'echo')
+function ssi_fetchMember(array $member_ids = array(), string $output_method = 'echo'): void|array
 ```
 Fetch specific members
 
@@ -290,7 +290,7 @@ Type|Parameter|Description
 ### ssi_fetchGroupMembers
 
 ```php
-function ssi_fetchGroupMembers($group_id = null, $output_method = 'echo')
+function ssi_fetchGroupMembers(int $group_id = null, string $output_method = 'echo'): void|array
 ```
 Get al members in the specified group
 
@@ -304,7 +304,7 @@ Type|Parameter|Description
 ### ssi_queryMembers
 
 ```php
-function ssi_queryMembers($query_where = null, $query_where_params = array(), $query_limit = '', $query_order = 'id_member DESC', $output_method = 'echo')
+function ssi_queryMembers(string $query_where = null, array $query_where_params = array(), string|int $query_limit = '', string $query_order = 'id_member DESC', string $output_method = 'echo'): void|array
 ```
 Pulls info about members based on the specified parameters. Used by other functions to eliminate duplication.
 
@@ -321,7 +321,7 @@ Type|Parameter|Description
 ### ssi_boardStats
 
 ```php
-function ssi_boardStats($output_method = 'echo')
+function ssi_boardStats(string $output_method = 'echo'): void|array
 ```
 Show some basic stats:   Total This: XXXX, etc.
 
@@ -334,7 +334,7 @@ Type|Parameter|Description
 ### ssi_whosOnline
 
 ```php
-function ssi_whosOnline($output_method = 'echo')
+function ssi_whosOnline(string $output_method = 'echo'): void|array
 ```
 Shows a list of online users:  YY Guests, ZZ Users and then a list.
 
@@ -347,7 +347,7 @@ Type|Parameter|Description
 ### ssi_logOnline
 
 ```php
-function ssi_logOnline($output_method = 'echo')
+function ssi_logOnline(string $output_method = 'echo'): void|array
 ```
 Just like whosOnline except it also logs the online presence.
 
@@ -360,7 +360,7 @@ Type|Parameter|Description
 ### ssi_login
 
 ```php
-function ssi_login($redirect_to = '', $output_method = 'echo')
+function ssi_login(string $redirect_to = '', string $output_method = 'echo'): void|bool
 ```
 Shows a login box
 
@@ -374,7 +374,7 @@ Type|Parameter|Description
 ### ssi_topPoll
 
 ```php
-function ssi_topPoll($output_method = 'echo')
+function ssi_topPoll(string $output_method = 'echo'): void|array
 ```
 Show the top poll based on votes
 
@@ -387,7 +387,7 @@ Type|Parameter|Description
 ### ssi_recentPoll
 
 ```php
-function ssi_recentPoll($topPollInstead = false, $output_method = 'echo')
+function ssi_recentPoll(bool $topPollInstead = false, string $output_method = 'echo'): void|array
 ```
 Shows the most recent poll
 
@@ -401,7 +401,7 @@ Type|Parameter|Description
 ### ssi_showPoll
 
 ```php
-function ssi_showPoll($topic = null, $output_method = 'echo')
+function ssi_showPoll(?int $topic = null, string $output_method = 'echo'): void|array
 ```
 Shows the poll from the specified topic
 
@@ -415,7 +415,7 @@ Type|Parameter|Description
 ### ssi_pollVote
 
 ```php
-function ssi_pollVote()
+function ssi_pollVote(): void
 ```
 Handles voting in a poll (done automatically)
 
@@ -424,7 +424,7 @@ Handles voting in a poll (done automatically)
 ### ssi_quickSearch
 
 ```php
-function ssi_quickSearch($output_method = 'echo')
+function ssi_quickSearch(string $output_method = 'echo'): void|string
 ```
 Shows a search box
 
@@ -437,7 +437,7 @@ Type|Parameter|Description
 ### ssi_news
 
 ```php
-function ssi_news($output_method = 'echo')
+function ssi_news(string $output_method = 'echo'): void|string
 ```
 Show a random forum news item
 
@@ -450,7 +450,7 @@ Type|Parameter|Description
 ### ssi_todaysBirthdays
 
 ```php
-function ssi_todaysBirthdays($output_method = 'echo')
+function ssi_todaysBirthdays(string $output_method = 'echo'): void|array
 ```
 Show today's birthdays.
 
@@ -463,7 +463,7 @@ Type|Parameter|Description
 ### ssi_todaysHolidays
 
 ```php
-function ssi_todaysHolidays($output_method = 'echo')
+function ssi_todaysHolidays(string $output_method = 'echo'): void|array
 ```
 Shows today's holidays.
 
@@ -476,7 +476,7 @@ Type|Parameter|Description
 ### ssi_todaysEvents
 
 ```php
-function ssi_todaysEvents($output_method = 'echo')
+function ssi_todaysEvents(string $output_method = 'echo'): void|array
 ```
 Shows today's events.
 
@@ -489,7 +489,7 @@ Type|Parameter|Description
 ### ssi_todaysCalendar
 
 ```php
-function ssi_todaysCalendar($output_method = 'echo')
+function ssi_todaysCalendar(string $output_method = 'echo'): void|array
 ```
 Shows today's calendar items (events, birthdays and holidays)
 
@@ -502,7 +502,7 @@ Type|Parameter|Description
 ### ssi_boardNews
 
 ```php
-function ssi_boardNews($board = null, $limit = null, $start = null, $length = null, $output_method = 'echo')
+function ssi_boardNews(?int $board = null, ?int $limit = null, ?int $start = null, ?int $length = null, string $output_method = 'echo'): void|array
 ```
 Show the latest news, with a template... by board.
 
@@ -519,7 +519,7 @@ Type|Parameter|Description
 ### ssi_recentEvents
 
 ```php
-function ssi_recentEvents($max_events = 7, $output_method = 'echo')
+function ssi_recentEvents(int $max_events = 7, string $output_method = 'echo'): void|array
 ```
 Show the most recent events
 
@@ -533,7 +533,7 @@ Type|Parameter|Description
 ### ssi_checkPassword
 
 ```php
-function ssi_checkPassword($id = null, $password = null, $is_username = false)
+function ssi_checkPassword(int|string $id = null, string $password = null, bool $is_username = false): bool
 ```
 Checks whether the specified password is correct for the specified user.
 
@@ -548,7 +548,7 @@ Type|Parameter|Description
 ### ssi_recentAttachments
 
 ```php
-function ssi_recentAttachments($num_attachments = 10, $attachment_ext = array(), $output_method = 'echo')
+function ssi_recentAttachments(int $num_attachments = 10, array $attachment_ext = array(), string $output_method = 'echo'): void|array
 ```
 Shows the most recent attachments that the user can see
 

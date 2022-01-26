@@ -10,7 +10,7 @@ count: 4
 ### template_main
 
 ```php
-function template_main()
+function template_main(): void
 ```
 The main notification bar.
 
@@ -19,7 +19,7 @@ The main notification bar.
 ### template_notify_board
 
 ```php
-function template_notify_board()
+function template_notify_board(): void
 ```
 Board notification bar.
 
@@ -28,7 +28,7 @@ Board notification bar.
 ### template_notify_announcements
 
 ```php
-function template_notify_announcements()
+function template_notify_announcements(): void
 ```
 
 
@@ -37,7 +37,7 @@ function template_notify_announcements()
 ### template_notify_pref_changed
 
 ```php
-function template_notify_pref_changed()
+function template_notify_pref_changed(): void
 ```
 Displays a message indicating the user's notification preferences were successfully changed
 

@@ -10,7 +10,7 @@ count: 5
 ### RepairBoards
 
 ```php
-function RepairBoards()
+function RepairBoards(): void
 ```
 Finds or repairs errors in the database to fix possible problems.
 
@@ -21,7 +21,7 @@ Accessed by ?action=admin;area=repairboards.
 ### pauseRepairProcess
 
 ```php
-function pauseRepairProcess($to_fix, $current_step_description, $max_substep = 0, $force = false)
+function pauseRepairProcess(array $to_fix, string $current_step_description, int $max_substep = 0, bool $force = false): void
 ```
 Show the not_done template to avoid CGI timeouts and similar.
 
@@ -39,7 +39,7 @@ Type|Parameter|Description
 ### loadForumTests
 
 ```php
-function loadForumTests()
+function loadForumTests(): void
 ```
 Load up all the tests we might want to do ;)
 
@@ -48,7 +48,7 @@ Load up all the tests we might want to do ;)
 ### findForumErrors
 
 ```php
-function findForumErrors($do_fix = false)
+function findForumErrors(bool $do_fix = false): array
 ```
 Checks for errors in steps, until 5 seconds have passed.
 
@@ -62,7 +62,7 @@ Type|Parameter|Description
 ### createSalvageArea
 
 ```php
-function createSalvageArea()
+function createSalvageArea(): void
 ```
 Create a salvage area for repair purposes, if one doesn't already exist.
 

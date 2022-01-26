@@ -10,7 +10,7 @@ count: 3
 ### ShowHelp
 
 ```php
-function ShowHelp()
+function ShowHelp(): void
 ```
 Redirect to the user help ;).
 
@@ -22,7 +22,7 @@ Uses Help template and Manual language file.
 ### HelpIndex
 
 ```php
-function HelpIndex()
+function HelpIndex(): void
 ```
 The main page for the Help section
 
@@ -31,7 +31,7 @@ The main page for the Help section
 ### ShowAdminHelp
 
 ```php
-function ShowAdminHelp()
+function ShowAdminHelp(): void
 ```
 Show some of the more detailed help to give the admin an idea...
 It shows a popup for administrative or user help.

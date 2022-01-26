@@ -10,7 +10,7 @@ count: 7
 ### deleteMembergroups
 
 ```php
-function deleteMembergroups($groups)
+function deleteMembergroups(int|array $groups): bool|string
 ```
 Delete one of more membergroups.
 
@@ -27,7 +27,7 @@ Type|Parameter|Description
 ### removeMembersFromGroups
 
 ```php
-function removeMembersFromGroups($members, $groups = null, $permissionCheckDone = false, $ignoreProtected = false)
+function removeMembersFromGroups(int|array $members, ?array $groups = null, bool $permissionCheckDone = false, bool $ignoreProtected = false): bool
 ```
 Remove one or more members from one or more membergroups.
 
@@ -45,7 +45,7 @@ Type|Parameter|Description
 ### addMembersToGroup
 
 ```php
-function addMembersToGroup($members, $group, $type = 'auto', $permissionCheckDone = false, $ignoreProtected = false)
+function addMembersToGroup(int|array $members, int $group, string $type = 'auto', bool $permissionCheckDone = false, bool $ignoreProtected = false): bool
 ```
 Add one or more members to a membergroup
 
@@ -74,7 +74,7 @@ Supported types:
 ### listMembergroupMembers_Href
 
 ```php
-function listMembergroupMembers_Href(&$members, $membergroup, $limit = null)
+function listMembergroupMembers_Href(array &$members, int $membergroup, int $limit = null): bool
 ```
 Gets the members of a supplied membergroup
 Returns them as a link for display
@@ -90,7 +90,7 @@ Type|Parameter|Description
 ### cache_getMembergroupList
 
 ```php
-function cache_getMembergroupList()
+function cache_getMembergroupList(): array
 ```
 Retrieve a list of (visible) membergroups used by the cache.
 
@@ -99,7 +99,7 @@ Retrieve a list of (visible) membergroups used by the cache.
 ### list_getMembergroups
 
 ```php
-function list_getMembergroups($start, $items_per_page, $sort, $membergroup_type)
+function list_getMembergroups(int $start, int $items_per_page, string $sort, string $membergroup_type): array
 ```
 Helper function to generate a list of membergroups for display
 
@@ -115,7 +115,7 @@ Type|Parameter|Description
 ### getGroupsWithPermissions
 
 ```php
-function getGroupsWithPermissions(array $group_permissions = array(), array $board_permissions = array(), $profile_id = 1)
+function getGroupsWithPermissions(array $group_permissions = array(), array $board_permissions = array(), int $profile_id = 1): array
 ```
 Retrieves a list of membergroups with the given permissions.
 

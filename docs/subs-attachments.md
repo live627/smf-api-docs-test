@@ -10,7 +10,7 @@ count: 15
 ### automanage_attachments_check_directory
 
 ```php
-function automanage_attachments_check_directory()
+function automanage_attachments_check_directory(): void|bool
 ```
 Check if the current directory is still valid or not.
 
@@ -19,7 +19,7 @@ If not creates the new directory
 ### automanage_attachments_create_directory
 
 ```php
-function automanage_attachments_create_directory($updir)
+function automanage_attachments_create_directory(string $updir): bool
 ```
 Creates a directory
 
@@ -32,7 +32,7 @@ Type|Parameter|Description
 ### is_path_allowed
 
 ```php
-function is_path_allowed($path)
+function is_path_allowed(string $path): bool
 ```
 Check if open_basedir restrictions are in effect.
 
@@ -45,7 +45,7 @@ Type|Parameter|Description
 ### automanage_attachments_by_space
 
 ```php
-function automanage_attachments_by_space()
+function automanage_attachments_by_space(): void|bool
 ```
 Called when a directory space limit is reached.
 
@@ -54,7 +54,7 @@ Creates a new directory and increments the directory suffix number.
 ### get_directory_tree_elements
 
 ```php
-function get_directory_tree_elements($directory)
+function get_directory_tree_elements(string $directory): array|bool
 ```
 Split a path into a list of all directories and subdirectories
 
@@ -67,7 +67,7 @@ Type|Parameter|Description
 ### attachments_init_dir
 
 ```php
-function attachments_init_dir(&$tree, &$count)
+function attachments_init_dir(array &$tree, int &$count): string|bool
 ```
 Return the first part of a path (i.e. c:\ or / + the first directory), used by automanage_attachments_create_directory
 
@@ -81,7 +81,7 @@ Type|Parameter|Description
 ### processAttachments
 
 ```php
-function processAttachments()
+function processAttachments(): void
 ```
 Moves an attachment to the proper directory and set the relevant data into $_SESSION['temp_attachments']
 
@@ -90,7 +90,7 @@ Moves an attachment to the proper directory and set the relevant data into $_SES
 ### attachmentChecks
 
 ```php
-function attachmentChecks($attachID)
+function attachmentChecks(int $attachID): bool
 ```
 Performs various checks on an uploaded file.
 
@@ -103,7 +103,7 @@ Type|Parameter|Description
 ### createAttachment
 
 ```php
-function createAttachment(&$attachmentOptions)
+function createAttachment(array &$attachmentOptions): bool
 ```
 Create an attachment, with the given array of parameters.
 
@@ -118,7 +118,7 @@ Type|Parameter|Description
 ### assignAttachments
 
 ```php
-function assignAttachments($attachIDs = array(), $msgID = 0)
+function assignAttachments(??? $attachIDs = array(), ??? $msgID = 0): bool
 ```
 Assigns the given attachments to the given message ID.
 
@@ -132,7 +132,7 @@ Type|Parameter|Description
 ### parseAttachBBC
 
 ```php
-function parseAttachBBC($attachID = 0)
+function parseAttachBBC(int $attachID = 0): mixed
 ```
 Gets an attach ID and tries to load all its info.
 
@@ -145,7 +145,7 @@ Type|Parameter|Description
 ### getRawAttachInfo
 
 ```php
-function getRawAttachInfo($attachIDs)
+function getRawAttachInfo(array $attachIDs): array
 ```
 Gets raw info directly from the attachments table.
 
@@ -158,7 +158,7 @@ Type|Parameter|Description
 ### getAttachMsgInfo
 
 ```php
-function getAttachMsgInfo($attachID)
+function getAttachMsgInfo(int $attachID): array
 ```
 Gets all needed message data associated with an attach ID
 
@@ -171,7 +171,7 @@ Type|Parameter|Description
 ### loadAttachmentContext
 
 ```php
-function loadAttachmentContext($id_msg, $attachments)
+function loadAttachmentContext(int $id_msg, array $attachments): array
 ```
 This loads an attachment's contextual data including, most importantly, its size if it is an image.
 
@@ -187,7 +187,7 @@ Type|Parameter|Description
 ### prepareAttachsByMsg
 
 ```php
-function prepareAttachsByMsg($msgIDs)
+function prepareAttachsByMsg(int $msgIDs): void
 ```
 prepare the Attachment api for all messages
 

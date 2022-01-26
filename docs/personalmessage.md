@@ -10,7 +10,7 @@ count: 23
 ### MessageMain
 
 ```php
-function MessageMain()
+function MessageMain(): void
 ```
 This helps organize things.
 
@@ -19,7 +19,7 @@ This helps organize things.
 ### messageIndexBar
 
 ```php
-function messageIndexBar($area)
+function messageIndexBar(string $area): void
 ```
 A menu to easily access different areas of the PM section
 
@@ -32,7 +32,7 @@ Type|Parameter|Description
 ### MessagePopup
 
 ```php
-function MessagePopup()
+function MessagePopup(): void
 ```
 The popup for when we ask for the popup from the user.
 
@@ -41,7 +41,7 @@ The popup for when we ask for the popup from the user.
 ### MessageFolder
 
 ```php
-function MessageFolder()
+function MessageFolder(): void
 ```
 A folder, ie. inbox/sent etc.
 
@@ -50,7 +50,7 @@ A folder, ie. inbox/sent etc.
 ### prepareMessageContext
 
 ```php
-function prepareMessageContext($type = 'subject', $reset = false)
+function prepareMessageContext(string $type = 'subject', bool $reset = false): bool|array
 ```
 Get a personal message for the theme.  (used to save memory.)
 
@@ -64,7 +64,7 @@ Type|Parameter|Description
 ### MessageSearch
 
 ```php
-function MessageSearch()
+function MessageSearch(): void
 ```
 Allows searching through personal messages.
 
@@ -73,7 +73,7 @@ Allows searching through personal messages.
 ### MessageSearch2
 
 ```php
-function MessageSearch2()
+function MessageSearch2(): void
 ```
 Actually do the search of personal messages.
 
@@ -82,7 +82,7 @@ Actually do the search of personal messages.
 ### MessagePost
 
 ```php
-function MessagePost()
+function MessagePost(): void
 ```
 Send a new message?
 
@@ -91,7 +91,7 @@ Send a new message?
 ### MessageDrafts
 
 ```php
-function MessageDrafts()
+function MessageDrafts(): void
 ```
 This function allows the user to view their PM drafts
 
@@ -100,7 +100,7 @@ This function allows the user to view their PM drafts
 ### messagePostError
 
 ```php
-function messagePostError($error_types, $named_recipients, $recipient_ids = array())
+function messagePostError(array $error_types, array $named_recipients, ??? $recipient_ids = array()): void
 ```
 An error in the message.
 
@@ -115,7 +115,7 @@ Type|Parameter|Description
 ### MessagePost2
 
 ```php
-function MessagePost2()
+function MessagePost2(): void
 ```
 Send it!
 
@@ -124,7 +124,7 @@ Send it!
 ### MessageActionsApply
 
 ```php
-function MessageActionsApply()
+function MessageActionsApply(): void
 ```
 This function performs all additional stuff.
 
@@ -133,7 +133,7 @@ This function performs all additional stuff.
 ### MessageKillAll
 
 ```php
-function MessageKillAll()
+function MessageKillAll(): void
 ```
 Delete ALL the messages!
 
@@ -142,7 +142,7 @@ Delete ALL the messages!
 ### MessagePrune
 
 ```php
-function MessagePrune()
+function MessagePrune(): void
 ```
 This function allows the user to delete all messages older than so many days.
 
@@ -151,7 +151,7 @@ This function allows the user to delete all messages older than so many days.
 ### deleteMessages
 
 ```php
-function deleteMessages($personal_messages, $folder = null, $owner = null)
+function deleteMessages(?array $personal_messages, ?string $folder = null, array|int|null $owner = null): void
 ```
 Delete the specified personal messages.
 
@@ -166,7 +166,7 @@ Type|Parameter|Description
 ### markMessages
 
 ```php
-function markMessages($personal_messages = null, $label = null, $owner = null)
+function markMessages(?array $personal_messages = null, ?int $label = null, ?int $owner = null): void
 ```
 Mark the specified personal messages read.
 
@@ -181,7 +181,7 @@ Type|Parameter|Description
 ### ManageLabels
 
 ```php
-function ManageLabels()
+function ManageLabels(): void
 ```
 This function handles adding, deleting and editing labels on messages.
 
@@ -190,7 +190,7 @@ This function handles adding, deleting and editing labels on messages.
 ### MessageSettings
 
 ```php
-function MessageSettings()
+function MessageSettings(): void
 ```
 Allows to edit Personal Message Settings.
 
@@ -202,7 +202,7 @@ Uses Profile language file.
 ### ReportMessage
 
 ```php
-function ReportMessage()
+function ReportMessage(): void
 ```
 Allows the user to report a personal message to an administrator.
 
@@ -213,7 +213,7 @@ Allows the user to report a personal message to an administrator.
 ### ManageRules
 
 ```php
-function ManageRules()
+function ManageRules(): void
 ```
 List all rules, and allow adding/entering etc.
 
@@ -222,7 +222,7 @@ List all rules, and allow adding/entering etc.
 ### ApplyRules
 
 ```php
-function ApplyRules($all_messages = false)
+function ApplyRules(bool $all_messages = false): void
 ```
 This will apply rules to all unread messages. If all_messages is set will, clearly, do it to all!
 
@@ -235,7 +235,7 @@ Type|Parameter|Description
 ### LoadRules
 
 ```php
-function LoadRules($reload = false)
+function LoadRules(bool $reload = false): void
 ```
 Load up all the rules for the current user.
 
@@ -248,7 +248,7 @@ Type|Parameter|Description
 ### isAccessiblePM
 
 ```php
-function isAccessiblePM($pmID, $validFor = 'in_or_outbox')
+function isAccessiblePM(int $pmID, string $validFor = 'in_or_outbox'): bool
 ```
 Check if the PM is available to the current user.
 

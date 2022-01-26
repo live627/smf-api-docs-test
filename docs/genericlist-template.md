@@ -10,7 +10,7 @@ count: 2
 ### template_show_list
 
 ```php
-function template_show_list($list_id = null)
+function template_show_list(string $list_id = null): void
 ```
 This template handles displaying a list
 
@@ -23,7 +23,7 @@ Type|Parameter|Description
 ### template_additional_rows
 
 ```php
-function template_additional_rows($row_position, $cur_list)
+function template_additional_rows(string $row_position, array $cur_list): void
 ```
 This template displays additional rows above or below the list.
 

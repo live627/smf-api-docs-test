@@ -10,7 +10,7 @@ count: 19
 ### validateSession
 
 ```php
-function validateSession($type = 'admin', $force = false)
+function validateSession(string $type = 'admin', string $force = false): void|string
 ```
 Check if the user is who he/she says he is
 Makes sure the user is who they claim to be by requiring a password to be typed in every hour.
@@ -26,7 +26,7 @@ Type|Parameter|Description
 ### is_not_guest
 
 ```php
-function is_not_guest($message = '')
+function is_not_guest(string $message = ''): void
 ```
 Require a user who is logged in. (not a guest.)
 Checks if the user is currently a guest, and if so asks them to login with a message telling them why.
@@ -40,7 +40,7 @@ Type|Parameter|Description
 ### is_not_banned
 
 ```php
-function is_not_banned($forceCheck = false)
+function is_not_banned(bool $forceCheck = false): void
 ```
 Do banning related stuff.  (ie. disallow access....)
 Checks if the user is banned, and if so dies with an error.
@@ -54,7 +54,7 @@ Type|Parameter|Description
 ### banPermissions
 
 ```php
-function banPermissions()
+function banPermissions(): void
 ```
 Fix permissions according to ban status.
 
@@ -63,7 +63,7 @@ Applies any states of banning by removing permissions the user cannot have.
 ### log_ban
 
 ```php
-function log_ban($ban_ids = array(), $email = null)
+function log_ban(array $ban_ids = array(), string $email = null): void
 ```
 Log a ban in the database.
 
@@ -78,7 +78,7 @@ Type|Parameter|Description
 ### isBannedEmail
 
 ```php
-function isBannedEmail($email, $restriction, $error)
+function isBannedEmail(string $email, string $restriction, string $error): void
 ```
 Checks if a given email address might be banned.
 
@@ -94,7 +94,7 @@ Type|Parameter|Description
 ### checkSession
 
 ```php
-function checkSession($type = 'post', $from_action = '', $is_fatal = true)
+function checkSession(string $type = 'post', string $from_action = '', bool $is_fatal = true): string
 ```
 Make sure the user's correct session was passed, and they came from here.
 
@@ -113,7 +113,7 @@ Type|Parameter|Description
 ### checkConfirm
 
 ```php
-function checkConfirm($action)
+function checkConfirm(string $action): bool|string
 ```
 Check if a specific confirm parameter was given.
 
@@ -126,7 +126,7 @@ Type|Parameter|Description
 ### createToken
 
 ```php
-function createToken($action, $type = 'post')
+function createToken(string $action, string $type = 'post'): array
 ```
 Lets give you a token of our appreciation.
 
@@ -140,7 +140,7 @@ Type|Parameter|Description
 ### validateToken
 
 ```php
-function validateToken($action, $type = 'post', $reset = true)
+function validateToken(string $action, string $type = 'post', bool $reset = true): bool
 ```
 Only patrons with valid tokens can ride this ride.
 
@@ -155,7 +155,7 @@ Type|Parameter|Description
 ### cleanTokens
 
 ```php
-function cleanTokens($complete = false)
+function cleanTokens(bool $complete = false): void
 ```
 Removes old unused tokens from session
 defaults to 3 hours before a token is considered expired
@@ -170,7 +170,7 @@ Type|Parameter|Description
 ### checkSubmitOnce
 
 ```php
-function checkSubmitOnce($action, $is_fatal = true)
+function checkSubmitOnce(string $action, bool $is_fatal = true): void|bool
 ```
 Check whether a form has been submitted twice.
 
@@ -188,7 +188,7 @@ Type|Parameter|Description
 ### allowedTo
 
 ```php
-function allowedTo($permission, $boards = null, $any = false)
+function allowedTo(string|array $permission, int|array $boards = null, bool $any = false): bool
 ```
 Check the user's permissions.
 
@@ -206,7 +206,7 @@ Type|Parameter|Description
 ### isAllowedTo
 
 ```php
-function isAllowedTo($permission, $boards = null, $any = false)
+function isAllowedTo(string|array $permission, int|array $boards = null, bool $any = false): void
 ```
 Fatal error if they cannot.
 
@@ -225,7 +225,7 @@ Type|Parameter|Description
 ### boardsAllowedTo
 
 ```php
-function boardsAllowedTo($permissions, $check_access = true, $simple = true)
+function boardsAllowedTo(string|array $permissions, bool $check_access = true, bool $simple = true): array
 ```
 Return the boards a user has a certain (board) permission on. (array(0) if all.)
  - returns a list of boards on which the user is allowed to do the specified permission.
@@ -243,7 +243,7 @@ Type|Parameter|Description
 ### spamProtection
 
 ```php
-function spamProtection($error_type, $only_return_result = false)
+function spamProtection(string $error_type, bool $only_return_result = false): bool
 ```
 This function attempts to protect from spammed messages and the like.
 
@@ -257,7 +257,7 @@ Type|Parameter|Description
 ### secureDirectory
 
 ```php
-function secureDirectory($paths, $attachments = false)
+function secureDirectory(string|array $paths, bool $attachments = false): bool|array
 ```
 A generic function to create a pair of index.php and .htaccess files in a directory
 
@@ -271,7 +271,7 @@ Type|Parameter|Description
 ### frameOptionsHeader
 
 ```php
-function frameOptionsHeader($override = null)
+function frameOptionsHeader(string $override = null): void
 ```
 This sets the X-Frame-Options header.
 
@@ -284,7 +284,7 @@ Type|Parameter|Description
 ### corsPolicyHeader
 
 ```php
-function corsPolicyHeader($set_header = true)
+function corsPolicyHeader(bool $set_header = true): void
 ```
 This sets the Access-Control-Allow-Origin header.
 

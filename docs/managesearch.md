@@ -10,7 +10,7 @@ count: 7
 ### ManageSearch
 
 ```php
-function ManageSearch()
+function ManageSearch(): void
 ```
 Main entry point for the admin search settings screen.
 
@@ -26,7 +26,7 @@ Uses Search language file.
 ### EditSearchSettings
 
 ```php
-function EditSearchSettings($return_config = false)
+function EditSearchSettings(bool $return_config = false): void|array
 ```
 Edit some general settings related to the search function.
 
@@ -40,7 +40,7 @@ Type|Parameter|Description
 ### EditWeights
 
 ```php
-function EditWeights()
+function EditWeights(): void
 ```
 Edit the relative weight of the search factors.
 
@@ -50,7 +50,7 @@ Requires the admin_forum permission.
 ### EditSearchMethod
 
 ```php
-function EditSearchMethod()
+function EditSearchMethod(): void
 ```
 Edit the search method and search index used.
 
@@ -63,7 +63,7 @@ Requires the admin_forum permission.
 ### CreateMessageIndex
 
 ```php
-function CreateMessageIndex()
+function CreateMessageIndex(): void
 ```
 Create a custom search index for the messages table.
 
@@ -75,7 +75,7 @@ Depending on the size of the message table, the process is divided in steps.
 ### loadSearchAPIs
 
 ```php
-function loadSearchAPIs()
+function loadSearchAPIs(): void
 ```
 Get the installed Search API implementations.
 
@@ -87,7 +87,7 @@ This function is used by EditSearchMethod to list all installed API implementati
 ### detectFulltextIndex
 
 ```php
-function detectFulltextIndex()
+function detectFulltextIndex(): void
 ```
 Checks if the message table already has a fulltext index created and returns the key name
 Determines if a db is capable of creating a fulltext index

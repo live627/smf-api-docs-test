@@ -10,7 +10,7 @@ count: 1
 ### createWaveFile
 
 ```php
-function createWaveFile($word)
+function createWaveFile(string $word): bool
 ```
 Creates a wave file that spells the letters of $word.
 

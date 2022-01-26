@@ -10,7 +10,7 @@ count: 7
 ### template_permission_index
 
 ```php
-function template_permission_index()
+function template_permission_index(): void
 ```
 The main manage permissions page
 
@@ -19,7 +19,7 @@ The main manage permissions page
 ### template_by_board
 
 ```php
-function template_by_board()
+function template_by_board(): void
 ```
 THe page that shows which permissions profile applies to each board
 
@@ -28,7 +28,7 @@ THe page that shows which permissions profile applies to each board
 ### template_edit_profiles
 
 ```php
-function template_edit_profiles()
+function template_edit_profiles(): void
 ```
 Edit permission profiles (predefined).
 
@@ -37,7 +37,7 @@ Edit permission profiles (predefined).
 ### template_modify_group
 
 ```php
-function template_modify_group()
+function template_modify_group(): void
 ```
 Modify a group's permissions
 
@@ -46,7 +46,7 @@ Modify a group's permissions
 ### template_modify_group_display
 
 ```php
-function template_modify_group_display($type)
+function template_modify_group_display(string $type): void
 ```
 The way of looking at permissions.
 
@@ -59,7 +59,7 @@ Type|Parameter|Description
 ### template_inline_permissions
 
 ```php
-function template_inline_permissions()
+function template_inline_permissions(): void
 ```
 A form for displaying inline permissions, such as on a settings page.
 
@@ -68,7 +68,7 @@ A form for displaying inline permissions, such as on a settings page.
 ### template_postmod_permissions
 
 ```php
-function template_postmod_permissions()
+function template_postmod_permissions(): void
 ```
 Edit post moderation permissions.
 

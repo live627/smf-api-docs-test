@@ -10,7 +10,7 @@ count: 32
 ### Ban
 
 ```php
-function Ban()
+function Ban(): void
 ```
 Ban center. The main entrance point for all ban center functions.
 
@@ -25,7 +25,7 @@ Uses ManageBans template.
 ### BanList
 
 ```php
-function BanList()
+function BanList(): void
 ```
 Shows a list of bans currently set.
 
@@ -39,7 +39,7 @@ Uses the main ManageBans template.
 ### list_getBans
 
 ```php
-function list_getBans($start, $items_per_page, $sort)
+function list_getBans(int $start, int $items_per_page, string $sort): array
 ```
 Get bans, what else? For the given options.
 
@@ -54,7 +54,7 @@ Type|Parameter|Description
 ### list_getNumBans
 
 ```php
-function list_getNumBans()
+function list_getNumBans(): int
 ```
 Get the total number of ban from the ban group table
 
@@ -63,7 +63,7 @@ Get the total number of ban from the ban group table
 ### BanEdit
 
 ```php
-function BanEdit()
+function BanEdit(): void
 ```
 This function is behind the screen for adding new bans and modifying existing ones.
 
@@ -78,7 +78,7 @@ Modifying existing bans:
 ### list_getBanItems
 
 ```php
-function list_getBanItems($start = 0, $items_per_page = 0, $sort = 0, $ban_group_id = 0)
+function list_getBanItems(int $start = 0, int $items_per_page = 0, int $sort = 0, int $ban_group_id = 0): array
 ```
 Retrieves all the ban items belonging to a certain ban group
 
@@ -94,7 +94,7 @@ Type|Parameter|Description
 ### list_getNumBanItems
 
 ```php
-function list_getNumBanItems()
+function list_getNumBanItems(): int
 ```
 Gets the number of ban items belonging to a certain ban group
 
@@ -103,7 +103,7 @@ Gets the number of ban items belonging to a certain ban group
 ### banLoadAdditionalIPs
 
 ```php
-function banLoadAdditionalIPs($member_id)
+function banLoadAdditionalIPs(int $member_id): array
 ```
 Finds additional IPs related to a certain user
 
@@ -116,7 +116,7 @@ Type|Parameter|Description
 ### banLoadAdditionalIPsMember
 
 ```php
-function banLoadAdditionalIPsMember($member_id)
+function banLoadAdditionalIPsMember(int $member_id): array
 ```
 Loads additional IPs used by a specific member
 
@@ -129,7 +129,7 @@ Type|Parameter|Description
 ### banLoadAdditionalIPsError
 
 ```php
-function banLoadAdditionalIPsError($member_id)
+function banLoadAdditionalIPsError(int $member_id): array
 ```
 Loads additional IPs used by a member from the error log
 
@@ -142,7 +142,7 @@ Type|Parameter|Description
 ### banEdit2
 
 ```php
-function banEdit2()
+function banEdit2(): void
 ```
 This function handles submitted forms that add, modify or remove ban triggers.
 
@@ -151,7 +151,7 @@ This function handles submitted forms that add, modify or remove ban triggers.
 ### saveTriggers
 
 ```php
-function saveTriggers(array $suggestions, $ban_group, $member = 0, $ban_id = 0)
+function saveTriggers(array $suggestions, int $ban_group, int $member = 0, int $ban_id = 0): array|bool
 ```
 Saves one or more ban triggers into a ban item: according to the suggestions
 checks the $_POST variable to verify if the trigger is present
@@ -168,7 +168,7 @@ Type|Parameter|Description
 ### removeBanTriggers
 
 ```php
-function removeBanTriggers($items_ids = array(), $group_id = false)
+function removeBanTriggers(array $items_ids = array(), bool|int $group_id = false): bool
 ```
 This function removes a bunch of triggers based on ids
 Doesn't clean the inputs
@@ -183,7 +183,7 @@ Type|Parameter|Description
 ### removeBanGroups
 
 ```php
-function removeBanGroups($group_ids)
+function removeBanGroups(array $group_ids): bool
 ```
 This function removes a bunch of ban groups based on ids
 Doesn't clean the inputs
@@ -197,7 +197,7 @@ Type|Parameter|Description
 ### removeBanLogs
 
 ```php
-function removeBanLogs($ids = array())
+function removeBanLogs(array $ids = array()): bool
 ```
 Removes logs - by default truncate the table
 Doesn't clean the inputs
@@ -211,7 +211,7 @@ Type|Parameter|Description
 ### validateTriggers
 
 ```php
-function validateTriggers(&$triggers)
+function validateTriggers(array &$triggers): array
 ```
 This function validates the ban triggers
 
@@ -224,7 +224,7 @@ Type|Parameter|Description
 ### addTriggers
 
 ```php
-function addTriggers($group_id = 0, $triggers = array(), $logs = array())
+function addTriggers(int $group_id = 0, array $triggers = array(), array $logs = array()): bool
 ```
 This function actually inserts the ban triggers into the database
 
@@ -239,7 +239,7 @@ Type|Parameter|Description
 ### updateTriggers
 
 ```php
-function updateTriggers($ban_item = 0, $group_id = 0, $trigger = array(), $logs = array())
+function updateTriggers(int $ban_item = 0, int $group_id = 0, array $trigger = array(), array $logs = array()): void
 ```
 This function updates an existing ban trigger into the database
 
@@ -255,7 +255,7 @@ Type|Parameter|Description
 ### logTriggersUpdates
 
 ```php
-function logTriggersUpdates($logs, $new = true, $removal = false)
+function logTriggersUpdates(array $logs, bool $new = true, bool $removal = false): void
 ```
 A small function to unify logging of triggers (updates and new)
 
@@ -272,7 +272,7 @@ Type|Parameter|Description
 ### updateBanGroup
 
 ```php
-function updateBanGroup($ban_info = array())
+function updateBanGroup(array $ban_info = array()): int
 ```
 Updates an existing ban group
 
@@ -285,7 +285,7 @@ Type|Parameter|Description
 ### insertBanGroup
 
 ```php
-function insertBanGroup($ban_info = array())
+function insertBanGroup(array $ban_info = array()): int
 ```
 Creates a new ban group
 If the group is successfully created the ID is returned
@@ -300,7 +300,7 @@ Type|Parameter|Description
 ### BanEditTrigger
 
 ```php
-function BanEditTrigger()
+function BanEditTrigger(): void
 ```
 This function handles the ins and outs of the screen for adding new ban
 triggers or modifying existing ones.
@@ -315,7 +315,7 @@ Editing existing ban triggers:
 ### BanBrowseTriggers
 
 ```php
-function BanBrowseTriggers()
+function BanBrowseTriggers(): void
 ```
 This handles the screen for showing the banned entities
 It is accessed by ?action=admin;area=ban;sa=browse
@@ -326,7 +326,7 @@ Uses a standard list (@see createList())
 ### list_getBanTriggers
 
 ```php
-function list_getBanTriggers($start, $items_per_page, $sort, $trigger_type)
+function list_getBanTriggers(int $start, int $items_per_page, string $sort, string $trigger_type): array
 ```
 Get ban triggers for the given parameters. Callback from $listOptions['get_items'] in BanBrowseTriggers()
 
@@ -342,7 +342,7 @@ Type|Parameter|Description
 ### list_getNumBanTriggers
 
 ```php
-function list_getNumBanTriggers($trigger_type)
+function list_getNumBanTriggers(string $trigger_type): int
 ```
 This returns the total number of ban triggers of the given type. Callback for $listOptions['get_count'] in BanBrowseTriggers().
 
@@ -355,7 +355,7 @@ Type|Parameter|Description
 ### BanLog
 
 ```php
-function BanLog()
+function BanLog(): void
 ```
 This handles the listing of ban log entries, and allows their deletion.
 
@@ -368,7 +368,7 @@ How it works:
 ### list_getBanLogEntries
 
 ```php
-function list_getBanLogEntries($start, $items_per_page, $sort)
+function list_getBanLogEntries(int $start, int $items_per_page, string $sort): array
 ```
 Load a list of ban log entries from the database.
 
@@ -383,7 +383,7 @@ Type|Parameter|Description
 ### list_getNumBanLogEntries
 
 ```php
-function list_getNumBanLogEntries()
+function list_getNumBanLogEntries(): int
 ```
 This returns the total count of ban log entries. Callback for $listOptions['get_count'] in BanLog().
 
@@ -392,7 +392,7 @@ This returns the total count of ban log entries. Callback for $listOptions['get_
 ### range2ip
 
 ```php
-function range2ip($low, $high)
+function range2ip(array $low, array $high): string
 ```
 Convert a range of given IP number into a single string.
 
@@ -406,7 +406,7 @@ Type|Parameter|Description
 ### checkExistingTriggerIP
 
 ```php
-function checkExistingTriggerIP($ip_array, $fullip = '')
+function checkExistingTriggerIP(array $ip_array, string $fullip = ''): bool|array
 ```
 Checks whether a given IP range already exists in the trigger list.
 
@@ -421,7 +421,7 @@ Type|Parameter|Description
 ### updateBanMembers
 
 ```php
-function updateBanMembers()
+function updateBanMembers(): void
 ```
 As it says... this tries to review the list of banned members, to match new bans.
 
@@ -430,7 +430,7 @@ Note: is_activated >= 10: a member is banned.
 ### getMemberData
 
 ```php
-function getMemberData($id)
+function getMemberData(int $id): array
 ```
 Gets basic member data for the ban
 

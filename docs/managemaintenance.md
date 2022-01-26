@@ -10,7 +10,7 @@ count: 28
 ### ManageMaintenance
 
 ```php
-function ManageMaintenance()
+function ManageMaintenance(): void
 ```
 Main dispatcher, the maintenance access point.
 
@@ -19,7 +19,7 @@ This, as usual, checks permissions, loads language files, and forwards to the ac
 ### MaintainDatabase
 
 ```php
-function MaintainDatabase()
+function MaintainDatabase(): void
 ```
 Supporting function for the database maintenance area.
 
@@ -28,7 +28,7 @@ Supporting function for the database maintenance area.
 ### MaintainRoutine
 
 ```php
-function MaintainRoutine()
+function MaintainRoutine(): void
 ```
 Supporting function for the routine maintenance area.
 
@@ -37,7 +37,7 @@ Supporting function for the routine maintenance area.
 ### MaintainMembers
 
 ```php
-function MaintainMembers()
+function MaintainMembers(): void
 ```
 Supporting function for the members maintenance area.
 
@@ -46,7 +46,7 @@ Supporting function for the members maintenance area.
 ### MaintainTopics
 
 ```php
-function MaintainTopics()
+function MaintainTopics(): void
 ```
 Supporting function for the topics maintenance area.
 
@@ -55,7 +55,7 @@ Supporting function for the topics maintenance area.
 ### MaintainFindFixErrors
 
 ```php
-function MaintainFindFixErrors()
+function MaintainFindFixErrors(): void
 ```
 Find and fix all errors on the forum.
 
@@ -64,7 +64,7 @@ Find and fix all errors on the forum.
 ### MaintainCleanCache
 
 ```php
-function MaintainCleanCache()
+function MaintainCleanCache(): void
 ```
 Wipes the whole cache.
 
@@ -73,7 +73,7 @@ Wipes the whole cache.
 ### MaintainEmptyUnimportantLogs
 
 ```php
-function MaintainEmptyUnimportantLogs()
+function MaintainEmptyUnimportantLogs(): void
 ```
 Empties all uninmportant logs
 
@@ -82,7 +82,7 @@ Empties all uninmportant logs
 ### Destroy
 
 ```php
-function Destroy()
+function Destroy(): void
 ```
 Oh noes! I'd document this but that would give it away
 
@@ -91,7 +91,7 @@ Oh noes! I'd document this but that would give it away
 ### ConvertMsgBody
 
 ```php
-function ConvertMsgBody()
+function ConvertMsgBody(): void
 ```
 Convert the column "body" of the table {db_prefix}messages from TEXT to MEDIUMTEXT and vice versa.
 
@@ -104,7 +104,7 @@ Accessed by ?action=admin;area=maintain;sa=database;activity=convertmsgbody.
 ### ConvertEntities
 
 ```php
-function ConvertEntities()
+function ConvertEntities(): void
 ```
 Converts HTML-entities to their UTF-8 character equivalents.
 
@@ -118,7 +118,7 @@ It is accessed by ?action=admin;area=maintain;sa=database;activity=convertentiti
 ### OptimizeTables
 
 ```php
-function OptimizeTables()
+function OptimizeTables(): void
 ```
 Optimizes all tables in the database and lists how much was saved.
 
@@ -130,7 +130,7 @@ It also updates the optimize scheduled task such that the tables are not automat
 ### AdminBoardRecount
 
 ```php
-function AdminBoardRecount()
+function AdminBoardRecount(): void
 ```
 Recount many forum totals that can be recounted automatically without harm.
 
@@ -151,7 +151,7 @@ It is accessed via ?action=admin;area=maintain;sa=database;activity=recount.
 ### VersionDetail
 
 ```php
-function VersionDetail()
+function VersionDetail(): void
 ```
 Perform a detailed version check.  A very good thing ;).
 
@@ -166,7 +166,7 @@ Accessed through ?action=admin;area=maintain;sa=routine;activity=version.
 ### MaintainReattributePosts
 
 ```php
-function MaintainReattributePosts()
+function MaintainReattributePosts(): void
 ```
 Re-attribute posts.
 
@@ -175,7 +175,7 @@ Re-attribute posts.
 ### MaintainPurgeInactiveMembers
 
 ```php
-function MaintainPurgeInactiveMembers()
+function MaintainPurgeInactiveMembers(): void
 ```
 Removing old members. Done and out!
 
@@ -184,7 +184,7 @@ Removing old members. Done and out!
 ### MaintainRemoveOldPosts
 
 ```php
-function MaintainRemoveOldPosts()
+function MaintainRemoveOldPosts(): void
 ```
 Removing old posts doesn't take much as we really pass through.
 
@@ -193,7 +193,7 @@ Removing old posts doesn't take much as we really pass through.
 ### MaintainRemoveOldDrafts
 
 ```php
-function MaintainRemoveOldDrafts()
+function MaintainRemoveOldDrafts(): void
 ```
 Removing old drafts
 
@@ -202,7 +202,7 @@ Removing old drafts
 ### MaintainMassMoveTopics
 
 ```php
-function MaintainMassMoveTopics()
+function MaintainMassMoveTopics(): void
 ```
 Moves topics from one board to another.
 
@@ -211,7 +211,7 @@ Moves topics from one board to another.
 ### MaintainRecountPosts
 
 ```php
-function MaintainRecountPosts()
+function MaintainRecountPosts(): void
 ```
 Recalculate all members post counts
 it requires the admin_forum permission.
@@ -235,7 +235,7 @@ function RebuildSettingsFile()
 ### list_integration_hooks
 
 ```php
-function list_integration_hooks()
+function list_integration_hooks(): void
 ```
 Generates a list of integration hooks for display
 Accessed through ?action=admin;area=maintain;sa=hooks;
@@ -246,7 +246,7 @@ Allows for removal or disabling of selected hooks
 ### get_files_recursive
 
 ```php
-function get_files_recursive(string $dirname) : array
+function get_files_recursive(string $dirname): array
 ```
 Gets all of the files in a directory and its children directories
 
@@ -259,7 +259,7 @@ Type|Parameter|Description
 ### get_integration_hooks_data
 
 ```php
-function get_integration_hooks_data($start, $per_page, $sort, $filtered_hooks, $normalized_boarddir, $normalized_sourcedir)
+function get_integration_hooks_data(int $start, int $per_page, string $sort, $filtered_hooks, $normalized_boarddir, $normalized_sourcedir): array
 ```
 Callback function for the integration hooks list (list_integration_hooks)
 Gets all of the hooks in the system and their status
@@ -275,7 +275,7 @@ Type|Parameter|Description
 ### get_integration_hooks
 
 ```php
-function get_integration_hooks()
+function get_integration_hooks(): array
 ```
 Parses modSettings to create integration hook array
 
@@ -284,7 +284,7 @@ Parses modSettings to create integration hook array
 ### parse_integration_hook
 
 ```php
-function parse_integration_hook(string $hook, string $rawData)
+function parse_integration_hook(string $hook, string $rawData): array
 ```
 Parses each hook data and returns an array.
 
@@ -298,12 +298,12 @@ Type|Parameter|Description
 ### get_defined_functions_in_file
 
 ```php
-function get_defined_functions_in_file(string $file) : array
+function get_defined_functions_in_file(string $file): array
 ```
 ### fixchardb__callback
 
 ```php
-function fixchardb__callback($matches)
+function fixchardb__callback(array $matches): string
 ```
 Converts html entities to utf8 equivalents
 special db wrapper for mysql based on the limitation of mysql/mb3

@@ -10,7 +10,7 @@ count: 11
 ### ReportsMain
 
 ```php
-function ReportsMain()
+function ReportsMain(): void
 ```
 Handling function for generating reports.
 
@@ -29,7 +29,7 @@ Accessed through ?action=admin;area=reports.
 ### BoardReport
 
 ```php
-function BoardReport()
+function BoardReport(): void
 ```
 Standard report about what settings the boards have.
 
@@ -42,7 +42,7 @@ functions to do so.
 ### BoardPermissionsReport
 
 ```php
-function BoardPermissionsReport()
+function BoardPermissionsReport(): void
 ```
 Generate a report on the current permissions by board and membergroup.
 
@@ -55,7 +55,7 @@ functions to do so.
 ### MemberGroupsReport
 
 ```php
-function MemberGroupsReport()
+function MemberGroupsReport(): void
 ```
 Show what the membergroups are made of.
 
@@ -68,7 +68,7 @@ functions to do so.
 ### GroupPermissionsReport
 
 ```php
-function GroupPermissionsReport()
+function GroupPermissionsReport(): void
 ```
 Show the large variety of group permissions assigned to each membergroup.
 
@@ -81,7 +81,7 @@ functions to do so.
 ### StaffReport
 
 ```php
-function StaffReport()
+function StaffReport(): void
 ```
 Report for showing all the forum staff members - quite a feat!
 functions ending with "Report" are responsible for generating data
@@ -94,7 +94,7 @@ functions to do so.
 ### newTable
 
 ```php
-function newTable($title = '', $default_value = '', $shading = 'all', $width_normal = 'auto', $align_normal = 'center', $width_shaded = 'auto', $align_shaded = 'auto')
+function newTable(string $title = '', string $default_value = '', string $shading = 'all', string $width_normal = 'auto', string $align_normal = 'center', string $width_shaded = 'auto', string $align_shaded = 'auto'): void
 ```
 This function creates a new table of data, most functions will only use it once.
 
@@ -116,7 +116,7 @@ Type|Parameter|Description
 ### addData
 
 ```php
-function addData($inc_data, $custom_table = null)
+function addData(array $inc_data, ?string $custom_table = null): void|false
 ```
 Adds an array of data into an existing table.
 
@@ -139,7 +139,7 @@ Type|Parameter|Description
 ### addSeparator
 
 ```php
-function addSeparator($title = '', $custom_table = null)
+function addSeparator(string $title = '', ?string $custom_table = null): void|bool
 ```
 Add a separator row, only really used when adding data by rows.
 
@@ -153,7 +153,7 @@ Type|Parameter|Description
 ### finishTables
 
 ```php
-function finishTables()
+function finishTables(): void
 ```
 This does the necessary count of table data before displaying them.
 
@@ -166,7 +166,7 @@ estimate width for the whole table * * if it can.
 ### setKeys
 
 ```php
-function setKeys($method = 'rows', $keys = array(), $reverse = false)
+function setKeys(string $method = 'rows', array $keys = array(), bool $reverse = false): void
 ```
 Set the keys in use by the tables - these ensure entries MUST exist if the data isn't sent.
 

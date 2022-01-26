@@ -10,7 +10,7 @@ count: 3
 ### db_search_init
 
 ```php
-function db_search_init()
+function db_search_init(): void
 ```
 Add the file functions to the $smcFunc array.
 
@@ -19,7 +19,7 @@ Add the file functions to the $smcFunc array.
 ### smf_db_search_support
 
 ```php
-function smf_db_search_support($search_type)
+function smf_db_search_support(string $search_type): bool
 ```
 This function will tell you whether this database type supports this search type.
 
@@ -32,7 +32,7 @@ Type|Parameter|Description
 ### smf_db_create_word_search
 
 ```php
-function smf_db_create_word_search($size)
+function smf_db_create_word_search(string $size): void
 ```
 Highly specific function, to create the custom word index table.
 

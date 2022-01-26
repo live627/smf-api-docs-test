@@ -10,7 +10,7 @@ count: 1
 ### showAttachment
 
 ```php
-function showAttachment()
+function showAttachment(): void
 ```
 Downloads an avatar or attachment based on $_GET['attach'], and increments the download count.
 

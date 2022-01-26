@@ -10,7 +10,7 @@ count: 7
 ### loadSession
 
 ```php
-function loadSession()
+function loadSession(): void
 ```
 Attempt to start the session, unless it already has been.
 
@@ -19,7 +19,7 @@ Attempt to start the session, unless it already has been.
 ### sessionOpen
 
 ```php
-function sessionOpen($save_path, $session_name)
+function sessionOpen(string $save_path, string $session_name): bool
 ```
 Implementation of sessionOpen() replacing the standard open handler.
 
@@ -33,7 +33,7 @@ Type|Parameter|Description
 ### sessionClose
 
 ```php
-function sessionClose()
+function sessionClose(): bool
 ```
 Implementation of sessionClose() replacing the standard close handler.
 
@@ -42,7 +42,7 @@ It simply returns true.
 ### sessionRead
 
 ```php
-function sessionRead($session_id)
+function sessionRead(string $session_id): string
 ```
 Implementation of sessionRead() replacing the standard read handler.
 
@@ -55,7 +55,7 @@ Type|Parameter|Description
 ### sessionWrite
 
 ```php
-function sessionWrite($session_id, $data)
+function sessionWrite(string $session_id, string $data): bool
 ```
 Implementation of sessionWrite() replacing the standard write handler.
 
@@ -69,7 +69,7 @@ Type|Parameter|Description
 ### sessionDestroy
 
 ```php
-function sessionDestroy($session_id)
+function sessionDestroy(string $session_id): bool
 ```
 Implementation of sessionDestroy() replacing the standard destroy handler.
 
@@ -82,7 +82,7 @@ Type|Parameter|Description
 ### sessionGC
 
 ```php
-function sessionGC($max_lifetime)
+function sessionGC(int $max_lifetime): bool
 ```
 Implementation of sessionGC() replacing the standard gc handler.
 

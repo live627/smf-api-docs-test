@@ -10,7 +10,7 @@ count: 23
 ### preparsecode
 
 ```php
-function preparsecode(&$message, $previewing = false)
+function preparsecode(string &$message, bool $previewing = false): void
 ```
 Takes a message and parses it, returning nothing.
 
@@ -25,7 +25,7 @@ Type|Parameter|Description
 ### un_preparsecode
 
 ```php
-function un_preparsecode($message)
+function un_preparsecode(string $message): void
 ```
 This is very simple, and just removes things done by preparsecode.
 
@@ -38,7 +38,7 @@ Type|Parameter|Description
 ### fixTags
 
 ```php
-function fixTags(&$message)
+function fixTags(string &$message): void
 ```
 Fix any URLs posted - ie. remove 'javascript:'.
 
@@ -51,7 +51,7 @@ Type|Parameter|Description
 ### fixTag
 
 ```php
-function fixTag(&$message, $myTag, $protocols, $embeddedUrl = false, $hasEqualSign = false, $hasExtra = false)
+function fixTag(string &$message, string $myTag, string $protocols, bool $embeddedUrl = false, bool $hasEqualSign = false, bool $hasExtra = false): void
 ```
 Fix a specific class of tag - ie. url with =.
 
@@ -69,7 +69,7 @@ Type|Parameter|Description
 ### sendmail
 
 ```php
-function sendmail($to, $subject, $message, $from = null, $message_id = null, $send_html = false, $priority = 3, $hotmail_fix = null, $is_private = false)
+function sendmail(array $to, string $subject, string $message, string $from = null, string $message_id = null, bool $send_html = false, int $priority = 3, bool $hotmail_fix = null, bool $is_private = false): bool
 ```
 This function sends an email to the specified recipient(s).
 
@@ -90,7 +90,7 @@ Type|Parameter|Description
 ### AddMailQueue
 
 ```php
-function AddMailQueue($flush = false, $to_array = array(), $subject = '', $message = '', $headers = '', $send_html = false, $priority = 3, $is_private = false)
+function AddMailQueue(bool $flush = false, array $to_array = array(), string $subject = '', string $message = '', string $headers = '', bool $send_html = false, int $priority = 3, bool $is_private = false): bool
 ```
 Add an email to the mail queue.
 
@@ -110,7 +110,7 @@ Type|Parameter|Description
 ### sendpm
 
 ```php
-function sendpm($recipients, $subject, $message, $store_outbox = false, $from = null, $pm_head = 0)
+function sendpm(array $recipients, string $subject, string $message, bool $store_outbox = false, array $from = null, int $pm_head = 0): array
 ```
 Sends an personal message from the specified person to the specified people
 ($from defaults to the user)
@@ -129,7 +129,7 @@ Type|Parameter|Description
 ### mimespecialchars
 
 ```php
-function mimespecialchars($string, $with_charset = true, $hotmail_fix = false, $line_break = "\r\n", $custom_charset = null)
+function mimespecialchars(string $string, bool $with_charset = true, bool $hotmail_fix = false, string $line_break = "\r\n", string $custom_charset = null): array
 ```
 Prepare text strings for sending as email body or header.
 
@@ -148,7 +148,7 @@ Type|Parameter|Description
 ### smtp_mail
 
 ```php
-function smtp_mail($mail_to_array, $subject, $message, $headers)
+function smtp_mail(array $mail_to_array, string $subject, string $message, string $headers): bool
 ```
 Sends mail, like mail() but over SMTP.
 
@@ -164,7 +164,7 @@ Type|Parameter|Description
 ### server_parse
 
 ```php
-function server_parse($message, $socket, $code, &$response = null)
+function server_parse(string $message, resource $socket, string $code, string &$response = null): bool
 ```
 Parse a message to the SMTP server.
 
@@ -181,7 +181,7 @@ Type|Parameter|Description
 ### SpellCheck
 
 ```php
-function SpellCheck()
+function SpellCheck(): void
 ```
 Spell checks the post for typos ;).
 
@@ -192,7 +192,7 @@ It is accessed via ?action=spellcheck.
 ### sendNotifications
 
 ```php
-function sendNotifications($topics, $type, $exclude = array(), $members_only = array())
+function sendNotifications(array $topics, string $type, array $exclude = array(), array $members_only = array()): void
 ```
 Sends a notification to members who have elected to receive emails
 when things happen to a topic, such as replies are posted.
@@ -212,7 +212,7 @@ Type|Parameter|Description
 ### createPost
 
 ```php
-function createPost(&$msgOptions, &$topicOptions, &$posterOptions)
+function createPost(array &$msgOptions, array &$topicOptions, array &$posterOptions): bool
 ```
 Create a post, either as new topic (id_topic = 0) or in an existing one.
 
@@ -230,7 +230,7 @@ Type|Parameter|Description
 ### modifyPost
 
 ```php
-function modifyPost(&$msgOptions, &$topicOptions, &$posterOptions)
+function modifyPost(array &$msgOptions, array &$topicOptions, array &$posterOptions): bool
 ```
 Modifying a post.
 
@@ -245,7 +245,7 @@ Type|Parameter|Description
 ### approvePosts
 
 ```php
-function approvePosts($msgs, $approve = true, $notify = true)
+function approvePosts(array $msgs, bool $approve = true, bool $notify = true): bool
 ```
 Approve (or not) some posts... without permission checks.
 
@@ -260,7 +260,7 @@ Type|Parameter|Description
 ### approveTopics
 
 ```php
-function approveTopics($topics, $approve = true)
+function approveTopics(array $topics, bool $approve = true): bool
 ```
 Approve topics?
 
@@ -274,7 +274,7 @@ Type|Parameter|Description
 ### updateLastMessages
 
 ```php
-function updateLastMessages($setboards, $id_msg = 0)
+function updateLastMessages(array $setboards, int $id_msg = 0): void|false
 ```
 Takes an array of board IDs and updates their last messages.
 
@@ -292,7 +292,7 @@ Type|Parameter|Description
 ### adminNotify
 
 ```php
-function adminNotify($type, $memberID, $member_name = null)
+function adminNotify(string $type, int $memberID, string $member_name = null): void
 ```
 This simple function gets a list of all administrators and sends them an email
  to let them know a new member has joined.
@@ -311,7 +311,7 @@ Type|Parameter|Description
 ### loadEmailTemplate
 
 ```php
-function loadEmailTemplate($template, $replacements = array(), $lang = '', $loadLang = true)
+function loadEmailTemplate(string $template, array $replacements = array(), string $lang = '', bool $loadLang = true): array
 ```
 Load a template from EmailTemplates language file.
 
@@ -327,7 +327,7 @@ Type|Parameter|Description
 ### user_info_callback
 
 ```php
-function user_info_callback($matches)
+function user_info_callback(array $matches): string
 ```
 Callback function for loademaitemplate on subject and body
 Uses capture group 1 in array
@@ -341,7 +341,7 @@ Type|Parameter|Description
 ### spell_init
 
 ```php
-function spell_init()
+function spell_init(): resource|bool
 ```
 spell_init()
 
@@ -350,7 +350,7 @@ Sets up a dictionary resource handle. Tries enchant first then falls through to 
 ### spell_check
 
 ```php
-function spell_check($dict, $word)
+function spell_check(resource $dict, string $word): bool
 ```
 spell_check()
 
@@ -364,7 +364,7 @@ Type|Parameter|Description
 ### spell_suggest
 
 ```php
-function spell_suggest($dict, $word)
+function spell_suggest(resource $dict, string $word): array
 ```
 spell_suggest()
 

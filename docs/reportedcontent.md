@@ -10,7 +10,7 @@ count: 7
 ### ReportedContent
 
 ```php
-function ReportedContent()
+function ReportedContent(): void
 ```
 Sets and call a function based on the given subaction. Acts as a dispatcher function.
 
@@ -22,7 +22,7 @@ Uses ModerationCenter language file.
 ### ShowReports
 
 ```php
-function ShowReports()
+function ShowReports(): void
 ```
 Shows all currently open reported posts.
 
@@ -31,7 +31,7 @@ Handles closing multiple reports
 ### ShowClosedReports
 
 ```php
-function ShowClosedReports()
+function ShowClosedReports(): void
 ```
 Shows all currently closed reported posts.
 
@@ -40,7 +40,7 @@ Shows all currently closed reported posts.
 ### ReportDetails
 
 ```php
-function ReportDetails()
+function ReportDetails(): void
 ```
 Shows detailed information about a report. such as report comments and moderator comments.
 
@@ -49,7 +49,7 @@ Shows a list of moderation actions for the specific report.
 ### HandleComment
 
 ```php
-function HandleComment()
+function HandleComment(): void
 ```
 Creates/Deletes moderator comments.
 
@@ -58,7 +58,7 @@ Creates/Deletes moderator comments.
 ### EditComment
 
 ```php
-function EditComment()
+function EditComment(): void
 ```
 Shows a textarea for editing a moderator comment.
 
@@ -67,7 +67,7 @@ Handles the edited comment and stores it on the DB.
 ### HandleReport
 
 ```php
-function HandleReport()
+function HandleReport(): void
 ```
 Performs closing/ignoring actions for a given report.
 

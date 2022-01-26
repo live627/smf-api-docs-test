@@ -10,7 +10,7 @@ count: 5
 ### modifyCategory
 
 ```php
-function modifyCategory($category_id, $catOptions)
+function modifyCategory(int $category_id, array $catOptions): void
 ```
 Edit the position and properties of a category.
 
@@ -25,7 +25,7 @@ Type|Parameter|Description
 ### createCategory
 
 ```php
-function createCategory($catOptions)
+function createCategory(array $catOptions): mixed
 ```
 Create a new category.
 
@@ -40,7 +40,7 @@ Type|Parameter|Description
 ### deleteCategories
 
 ```php
-function deleteCategories($categories, $moveBoardsTo = null)
+function deleteCategories(array $categories, int $moveBoardsTo = null): void
 ```
 Remove one or more categories.
 

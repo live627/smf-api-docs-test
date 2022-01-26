@@ -10,7 +10,7 @@ count: 11
 ### utf8_strtolower
 
 ```php
-function utf8_strtolower($string)
+function utf8_strtolower(string $string): string
 ```
 Converts the given UTF-8 string into lowercase.
 
@@ -25,7 +25,7 @@ Type|Parameter|Description
 ### utf8_strtoupper
 
 ```php
-function utf8_strtoupper($string)
+function utf8_strtoupper(string $string): string
 ```
 Convert the given UTF-8 string to uppercase.
 
@@ -40,7 +40,7 @@ Type|Parameter|Description
 ### utf8_casefold
 
 ```php
-function utf8_casefold($string)
+function utf8_casefold(string $string): string
 ```
 Casefolds the given UTF-8 string.
 
@@ -55,7 +55,7 @@ Type|Parameter|Description
 ### utf8_normalize_d
 
 ```php
-function utf8_normalize_d($string)
+function utf8_normalize_d(string $string): string
 ```
 Normalizes UTF-8 via Canonical Decomposition.
 
@@ -68,7 +68,7 @@ Type|Parameter|Description
 ### utf8_normalize_kd
 
 ```php
-function utf8_normalize_kd($string)
+function utf8_normalize_kd(string $string): string
 ```
 Normalizes UTF-8 via Compatibility Decomposition.
 
@@ -81,7 +81,7 @@ Type|Parameter|Description
 ### utf8_normalize_c
 
 ```php
-function utf8_normalize_c($string)
+function utf8_normalize_c(string $string): string
 ```
 Normalizes UTF-8 via Canonical Decomposition then Canonical Composition.
 
@@ -94,7 +94,7 @@ Type|Parameter|Description
 ### utf8_normalize_kc
 
 ```php
-function utf8_normalize_kc($string)
+function utf8_normalize_kc(string $string): string
 ```
 Normalizes UTF-8 via Compatibility Decomposition then Canonical Composition.
 
@@ -107,7 +107,7 @@ Type|Parameter|Description
 ### utf8_normalize_kc_casefold
 
 ```php
-function utf8_normalize_kc_casefold($string)
+function utf8_normalize_kc_casefold(string $string): string
 ```
 Casefolds UTF-8 via Compatibility Composition Casefolding.
 
@@ -120,7 +120,7 @@ Type|Parameter|Description
 ### utf8_decompose
 
 ```php
-function utf8_decompose($chars, $compatibility = false)
+function utf8_decompose(array $chars, $compatibility = false): array
 ```
 Helper function for utf8_normalize_d and utf8_normalize_kd.
 
@@ -133,7 +133,7 @@ Type|Parameter|Description
 ### utf8_compose
 
 ```php
-function utf8_compose($chars)
+function utf8_compose(array $chars): array
 ```
 Helper function for utf8_normalize_c and utf8_normalize_kc.
 
@@ -146,7 +146,7 @@ Type|Parameter|Description
 ### utf8_sanitize_invisibles
 
 ```php
-function utf8_sanitize_invisibles($string, $level, $substitute)
+function utf8_sanitize_invisibles(string $string, int $level, string $substitute): string
 ```
 Helper function for sanitize_chars() that deals with invisible characters.
 

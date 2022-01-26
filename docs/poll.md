@@ -10,7 +10,7 @@ count: 5
 ### Vote
 
 ```php
-function Vote()
+function Vote(): void
 ```
 Allow the user to vote.
 
@@ -25,7 +25,7 @@ Uses Post language file.
 ### LockVoting
 
 ```php
-function LockVoting()
+function LockVoting(): void
 ```
 Lock the voting for a poll.
 
@@ -39,7 +39,7 @@ Accessed via ?action=lockvoting.
 ### EditPoll
 
 ```php
-function EditPoll()
+function EditPoll(): void
 ```
 Display screen for editing or adding a poll.
 
@@ -57,7 +57,7 @@ Uses Poll template, main sub-template.
 ### EditPoll2
 
 ```php
-function EditPoll2()
+function EditPoll2(): void
 ```
 Update the settings for a poll, or add a new one.
 
@@ -74,7 +74,7 @@ Accessed via ?action=editpoll2.
 ### RemovePoll
 
 ```php
-function RemovePoll()
+function RemovePoll(): void
 ```
 Remove a poll from a topic without removing the topic.
 

@@ -10,7 +10,7 @@ count: 8
 ### RemoveTopic2
 
 ```php
-function RemoveTopic2()
+function RemoveTopic2(): void
 ```
 Completely remove an entire topic.
 
@@ -19,7 +19,7 @@ Redirects to the board when completed.
 ### DeleteMessage
 
 ```php
-function DeleteMessage()
+function DeleteMessage(): void
 ```
 Remove just a single post.
 
@@ -28,7 +28,7 @@ On completion redirect to the topic or to the board.
 ### RemoveOldTopics2
 
 ```php
-function RemoveOldTopics2()
+function RemoveOldTopics2(): void
 ```
 So long as you are sure... all old posts will be gone.
 
@@ -37,7 +37,7 @@ Used in ManageMaintenance.php to prune old topics.
 ### removeTopics
 
 ```php
-function removeTopics($topics, $decreasePostCount = true, $ignoreRecycling = false, $updateBoardCount = true)
+function removeTopics(array|int $topics, bool $decreasePostCount = true, bool $ignoreRecycling = false, bool $updateBoardCount = true): void
 ```
 Removes the passed id_topic's. (permissions are NOT checked here!).
 
@@ -53,7 +53,7 @@ Type|Parameter|Description
 ### removeMessage
 
 ```php
-function removeMessage($message, $decreasePostCount = true)
+function removeMessage(int $message, bool $decreasePostCount = true): bool
 ```
 Remove a specific message (including permission checks).
 
@@ -67,7 +67,7 @@ Type|Parameter|Description
 ### RestoreTopic
 
 ```php
-function RestoreTopic()
+function RestoreTopic(): void
 ```
 Move back a topic from the recycle board to its original board.
 
@@ -76,7 +76,7 @@ Move back a topic from the recycle board to its original board.
 ### mergePosts
 
 ```php
-function mergePosts($msgs, $from_topic, $target_topic)
+function mergePosts(array $msgs, int $from_topic, int $target_topic): void
 ```
 Take a load of messages from one place and stick them in a topic
 
@@ -91,7 +91,7 @@ Type|Parameter|Description
 ### removeDeleteConcurrence
 
 ```php
-function removeDeleteConcurrence()
+function removeDeleteConcurrence(): bool
 ```
 Try to determine if the topic has already been deleted by another user.
 

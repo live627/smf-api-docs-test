@@ -10,7 +10,7 @@ count: 14
 ### Packages
 
 ```php
-function Packages()
+function Packages(): void
 ```
 This is the notoriously defunct package manager..... :/.
 
@@ -19,7 +19,7 @@ This is the notoriously defunct package manager..... :/.
 ### PackageInstallTest
 
 ```php
-function PackageInstallTest()
+function PackageInstallTest(): void
 ```
 Test install a package.
 
@@ -28,7 +28,7 @@ Test install a package.
 ### PackageInstall
 
 ```php
-function PackageInstall()
+function PackageInstall(): void
 ```
 Apply another type of (avatar, language, etc.) package.
 
@@ -37,7 +37,7 @@ Apply another type of (avatar, language, etc.) package.
 ### PackageList
 
 ```php
-function PackageList()
+function PackageList(): void
 ```
 List the files in a package.
 
@@ -46,7 +46,7 @@ List the files in a package.
 ### ExamineFile
 
 ```php
-function ExamineFile()
+function ExamineFile(): void
 ```
 Display one of the files in a package.
 
@@ -55,7 +55,7 @@ Display one of the files in a package.
 ### PackageRemove
 
 ```php
-function PackageRemove()
+function PackageRemove(): void
 ```
 Delete a package.
 
@@ -64,7 +64,7 @@ Delete a package.
 ### PackageBrowse
 
 ```php
-function PackageBrowse()
+function PackageBrowse(): void
 ```
 Browse a list of installed packages.
 
@@ -73,7 +73,7 @@ Browse a list of installed packages.
 ### list_getPackages
 
 ```php
-function list_getPackages($start, $items_per_page, $sort, $params)
+function list_getPackages(int $start, int $items_per_page, string $sort, string $params): array
 ```
 Get a listing of all the packages
 
@@ -94,7 +94,7 @@ Type|Parameter|Description
 ### PackageOptions
 
 ```php
-function PackageOptions()
+function PackageOptions(): void
 ```
 Used when a temp FTP access is needed to package functions
 
@@ -103,7 +103,7 @@ Used when a temp FTP access is needed to package functions
 ### ViewOperations
 
 ```php
-function ViewOperations()
+function ViewOperations(): void
 ```
 List operations
 
@@ -112,7 +112,7 @@ List operations
 ### PackagePermissions
 
 ```php
-function PackagePermissions()
+function PackagePermissions(): void
 ```
 Allow the admin to reset permissions on files.
 
@@ -121,7 +121,7 @@ Allow the admin to reset permissions on files.
 ### fetchPerms__recursive
 
 ```php
-function fetchPerms__recursive($path, &$data, $level)
+function fetchPerms__recursive(string $path, array &$data, int $level): void
 ```
 Checkes the permissions of all the areas that will be affected by the package
 
@@ -136,7 +136,7 @@ Type|Parameter|Description
 ### PackagePermissionsAction
 
 ```php
-function PackagePermissionsAction()
+function PackagePermissionsAction(): void
 ```
 Actually action the permission changes they want.
 
@@ -145,7 +145,7 @@ Actually action the permission changes they want.
 ### PackageFTPTest
 
 ```php
-function PackageFTPTest()
+function PackageFTPTest(): void
 ```
 Test an FTP connection.
 

@@ -10,7 +10,7 @@ count: 17
 ### ThemesMain
 
 ```php
-function ThemesMain()
+function ThemesMain(): void
 ```
 Subaction handler - manages the action and delegates control to the proper
 sub-action.
@@ -23,7 +23,7 @@ Accessed via ?action=admin;area=theme.
 ### ThemeAdmin
 
 ```php
-function ThemeAdmin()
+function ThemeAdmin(): void
 ```
 This function allows administration of themes and their settings,
 as well as global theme settings.
@@ -38,7 +38,7 @@ Uses Admin language file
 ### ThemeList
 
 ```php
-function ThemeList()
+function ThemeList(): void
 ```
 This function lists the available themes and provides an interface to reset
 the paths of all the installed themes.
@@ -48,7 +48,7 @@ the paths of all the installed themes.
 ### SetThemeOptions
 
 ```php
-function SetThemeOptions()
+function SetThemeOptions(): void
 ```
 Administrative global settings.
 
@@ -57,7 +57,7 @@ Administrative global settings.
 ### SetThemeSettings
 
 ```php
-function SetThemeSettings()
+function SetThemeSettings(): void
 ```
 Administrative global settings.
 
@@ -70,7 +70,7 @@ Administrative global settings.
 ### RemoveTheme
 
 ```php
-function RemoveTheme()
+function RemoveTheme(): void
 ```
 Remove a theme from the database.
 
@@ -81,7 +81,7 @@ Remove a theme from the database.
 ### EnableTheme
 
 ```php
-function EnableTheme()
+function EnableTheme(): void
 ```
 Handles enabling/disabling a theme from the admin center
 
@@ -90,7 +90,7 @@ Handles enabling/disabling a theme from the admin center
 ### canPickTheme
 
 ```php
-function canPickTheme($id_member, $id_theme)
+function canPickTheme(int $id_member, int $id_theme): bool
 ```
 Determines if a user can change their theme.
 
@@ -104,7 +104,7 @@ Type|Parameter|Description
 ### PickTheme
 
 ```php
-function PickTheme()
+function PickTheme(): void
 ```
 Choose a theme from a list.
 
@@ -115,7 +115,7 @@ allows a user to pick a new theme with an interface.
 ### ThemeInstall
 
 ```php
-function ThemeInstall()
+function ThemeInstall(): void
 ```
 Installs new themes, calls the respective function according to the install type.
 
@@ -127,7 +127,7 @@ Accessed with ?action=admin;area=theme;sa=install.
 ### InstallFile
 
 ```php
-function InstallFile()
+function InstallFile(): array
 ```
 Installs a theme from a theme package.
 
@@ -136,7 +136,7 @@ Stores the theme files on a temp dir, on success it renames the dir to the new t
 ### InstallCopy
 
 ```php
-function InstallCopy()
+function InstallCopy(): array
 ```
 Makes a copy from the default theme, assigns a name for it and installs it.
 
@@ -145,7 +145,7 @@ Creates a new .xml file containing all the theme's info.
 ### InstallDir
 
 ```php
-function InstallDir()
+function InstallDir(): array
 ```
 Install a theme from a specific dir
 
@@ -154,7 +154,7 @@ Assumes the dir is located on the main Themes dir. Ends execution with fatal_lan
 ### WrapAction
 
 ```php
-function WrapAction()
+function WrapAction(): void
 ```
 Possibly the simplest and best example of how to use the template system.
 
@@ -166,7 +166,7 @@ Possibly the simplest and best example of how to use the template system.
 ### SetJavaScript
 
 ```php
-function SetJavaScript()
+function SetJavaScript(): void
 ```
 Set an option via javascript.
 
@@ -180,7 +180,7 @@ the page to reload.)
 ### EditTheme
 
 ```php
-function EditTheme()
+function EditTheme(): void
 ```
 Shows an interface for editing the templates.
 
@@ -190,7 +190,7 @@ Shows an interface for editing the templates.
 ### CopyTemplate
 
 ```php
-function CopyTemplate()
+function CopyTemplate(): void
 ```
 Makes a copy of a template file in a new location
 

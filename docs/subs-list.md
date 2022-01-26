@@ -10,7 +10,7 @@ count: 1
 ### createList
 
 ```php
-function createList($listOptions)
+function createList(array $listOptions): void
 ```
 Create a new list
 

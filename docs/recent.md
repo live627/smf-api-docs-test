@@ -10,7 +10,7 @@ count: 3
 ### getLastPost
 
 ```php
-function getLastPost()
+function getLastPost(): array
 ```
 Get the latest post made on the system
 
@@ -19,7 +19,7 @@ Get the latest post made on the system
 ### RecentPosts
 
 ```php
-function RecentPosts()
+function RecentPosts(): void
 ```
 Find the ten most recent posts.
 
@@ -28,7 +28,7 @@ Find the ten most recent posts.
 ### UnreadTopics
 
 ```php
-function UnreadTopics()
+function UnreadTopics(): void
 ```
 Find unread topics and replies.
 

@@ -10,7 +10,7 @@ count: 2
 ### getMembersOnlineStats
 
 ```php
-function getMembersOnlineStats($membersOnlineOptions)
+function getMembersOnlineStats(array $membersOnlineOptions): array
 ```
 Retrieve a list and several other statistics of the users currently online.
 
@@ -25,7 +25,7 @@ Type|Parameter|Description
 ### trackStatsUsersOnline
 
 ```php
-function trackStatsUsersOnline($total_users_online)
+function trackStatsUsersOnline(int $total_users_online): void
 ```
 Check if the number of users online is a record and store it.
 

@@ -10,7 +10,7 @@ count: 30
 ### read_tgz_file
 
 ```php
-function read_tgz_file($gzfilename, $destination, $single_file = false, $overwrite = false, $files_to_extract = null)
+function read_tgz_file(string $gzfilename, string $destination, bool $single_file = false, bool $overwrite = false, ?array $files_to_extract = null): array|false
 ```
 Reads an archive from either a remote location or from the local filesystem.
 
@@ -27,7 +27,7 @@ Type|Parameter|Description
 ### read_tgz_data
 
 ```php
-function read_tgz_data($data, $destination, $single_file = false, $overwrite = false, $files_to_extract = null)
+function read_tgz_data(string $data, ?string $destination, bool $single_file = false, bool $overwrite = false, ?array $files_to_extract = null): array|false
 ```
 Extracts a file or files from the .tar.gz contained in data.
 
@@ -58,7 +58,7 @@ Type|Parameter|Description
 ### read_zip_data
 
 ```php
-function read_zip_data($data, $destination, $single_file = false, $overwrite = false, $files_to_extract = null)
+function read_zip_data(string $data, string $destination, bool $single_file = false, bool $overwrite = false, array $files_to_extract = null): mixed
 ```
 Extract zip data.
 
@@ -76,7 +76,7 @@ Type|Parameter|Description
 ### url_exists
 
 ```php
-function url_exists($url)
+function url_exists(string $url): bool
 ```
 Checks the existence of a remote file since file_exists() does not do remote.
 
@@ -89,7 +89,7 @@ Type|Parameter|Description
 ### loadInstalledPackages
 
 ```php
-function loadInstalledPackages()
+function loadInstalledPackages(): array
 ```
 Loads and returns an array of installed packages.
 
@@ -98,7 +98,7 @@ default sort order is package_installed time
 ### getPackageInfo
 
 ```php
-function getPackageInfo($gzfilename)
+function getPackageInfo(string $gzfilename): array|string
 ```
 Loads a package's information and returns a representative array.
 
@@ -114,7 +114,7 @@ Type|Parameter|Description
 ### create_chmod_control
 
 ```php
-function create_chmod_control($chmodFiles = array(), $chmodOptions = array(), $restore_write_status = false)
+function create_chmod_control(array $chmodFiles = array(), array $chmodOptions = array(), bool $restore_write_status = false): array
 ```
 Create a chmod control for chmoding files.
 
@@ -129,7 +129,7 @@ Type|Parameter|Description
 ### packageRequireFTP
 
 ```php
-function packageRequireFTP($destination_url, $files = null, $return = false)
+function packageRequireFTP(string $destination_url, ?array $files = null, bool $return = false): array
 ```
 Use FTP functions to work with a package download/install
 
@@ -144,7 +144,7 @@ Type|Parameter|Description
 ### parsePackageInfo
 
 ```php
-function parsePackageInfo(&$packageXML, $testing_only = true, $method = 'install', $previous_version = '')
+function parsePackageInfo(\xmlArray &$packageXML, bool $testing_only = true, string $method = 'install', string $previous_version = ''): array
 ```
 Parses the actions in package-info.xml file from packages.
 
@@ -164,7 +164,7 @@ Type|Parameter|Description
 ### matchHighestPackageVersion
 
 ```php
-function matchHighestPackageVersion($versions, $reset, $the_version)
+function matchHighestPackageVersion(string $versions, bool $reset, string $the_version): string|bool
 ```
 Checks if version matches any of the versions in `$versions`.
 
@@ -181,7 +181,7 @@ Type|Parameter|Description
 ### matchPackageVersion
 
 ```php
-function matchPackageVersion($version, $versions)
+function matchPackageVersion(string $version, string $versions): bool
 ```
 Checks if the forum version matches any of the available versions from the package install xml.
 
@@ -197,7 +197,7 @@ Type|Parameter|Description
 ### compareVersions
 
 ```php
-function compareVersions($version1, $version2)
+function compareVersions(string $version1, string $version2): int
 ```
 Compares two versions and determines if one is newer, older or the same, returns
 - (-1) if version1 is lower than version2
@@ -214,7 +214,7 @@ Type|Parameter|Description
 ### parse_path
 
 ```php
-function parse_path($path)
+function parse_path(string $path): string
 ```
 Parses special identifiers out of the specified path.
 
@@ -227,7 +227,7 @@ Type|Parameter|Description
 ### deltree
 
 ```php
-function deltree($dir, $delete_dir = true)
+function deltree(string $dir, bool $delete_dir = true): void
 ```
 Deletes a directory, and all the files and direcories inside it.
 
@@ -241,7 +241,7 @@ Type|Parameter|Description
 ### mktree
 
 ```php
-function mktree($strPath, $mode)
+function mktree(string $strPath, int $mode): bool
 ```
 Creates the specified tree structure with the mode specified.
 
@@ -255,7 +255,7 @@ Type|Parameter|Description
 ### copytree
 
 ```php
-function copytree($source, $destination)
+function copytree(string $source, string $destination): void
 ```
 Copies one directory structure over to another.
 
@@ -269,7 +269,7 @@ Type|Parameter|Description
 ### listtree
 
 ```php
-function listtree($path, $sub_path = '')
+function listtree(string $path, string $sub_path = ''): array
 ```
 Create a tree listing for a given directory path
 
@@ -283,7 +283,7 @@ Type|Parameter|Description
 ### parseModification
 
 ```php
-function parseModification($file, $testing = true, $undo = false, $theme_paths = array())
+function parseModification(string $file, bool $testing = true, bool $undo = false, array $theme_paths = array()): array
 ```
 Parses a xml-style modification file (file).
 
@@ -299,7 +299,7 @@ Type|Parameter|Description
 ### parseBoardMod
 
 ```php
-function parseBoardMod($file, $testing = true, $undo = false, $theme_paths = array())
+function parseBoardMod(string $file, bool $testing = true, bool $undo = false, array $theme_paths = array()): array
 ```
 Parses a boardmod-style (.mod) modification file
 
@@ -315,7 +315,7 @@ Type|Parameter|Description
 ### package_get_contents
 
 ```php
-function package_get_contents($filename)
+function package_get_contents(string $filename): string
 ```
 Get the physical contents of a packages file
 
@@ -328,7 +328,7 @@ Type|Parameter|Description
 ### package_put_contents
 
 ```php
-function package_put_contents($filename, $data, $testing = false)
+function package_put_contents(string $filename, string $data, bool $testing = false): int
 ```
 Writes data to a file, almost exactly like the file_put_contents() function.
 
@@ -345,7 +345,7 @@ Type|Parameter|Description
 ### package_flush_cache
 
 ```php
-function package_flush_cache($trash = false)
+function package_flush_cache(bool $trash = false): void
 ```
 Flushes the cache from memory to the filesystem
 
@@ -358,7 +358,7 @@ Type|Parameter|Description
 ### package_chmod
 
 ```php
-function package_chmod($filename, $perm_state = 'writable', $track_change = false)
+function package_chmod(string $filename, string $perm_state = 'writable', bool $track_change = false): bool
 ```
 Try to make a file writable.
 
@@ -373,7 +373,7 @@ Type|Parameter|Description
 ### package_crypt
 
 ```php
-function package_crypt($pass)
+function package_crypt(string $pass): string
 ```
 Used to crypt the supplied ftp password in this session
 
@@ -386,7 +386,7 @@ Type|Parameter|Description
 ### package_unique_filename
 
 ```php
-function package_unique_filename($dir, $filename, $ext)
+function package_unique_filename(string $dir, string $filename, string $ext): string
 ```
 
 
@@ -401,7 +401,7 @@ Type|Parameter|Description
 ### package_create_backup
 
 ```php
-function package_create_backup($id = 'backup')
+function package_create_backup(string $id = 'backup'): bool
 ```
 Creates a backup of forum files prior to modifying them
 
@@ -414,7 +414,7 @@ Type|Parameter|Description
 ### smf_crc32
 
 ```php
-function smf_crc32($number)
+function smf_crc32(string $number): string
 ```
 crc32 doesn't work as expected on 64-bit functions - make our own.
 
@@ -427,7 +427,7 @@ Type|Parameter|Description
 ### package_validate_installtest
 
 ```php
-function package_validate_installtest($package)
+function package_validate_installtest(array $package): array
 ```
 Validate a package during install
 
@@ -440,7 +440,7 @@ Type|Parameter|Description
 ### package_validate
 
 ```php
-function package_validate($packages)
+function package_validate(array $packages): array
 ```
 Validate multiple packages.
 
@@ -453,7 +453,7 @@ Type|Parameter|Description
 ### package_validate_send
 
 ```php
-function package_validate_send($sendData)
+function package_validate_send(array $sendData): array
 ```
 Sending data off to validate packages.
 

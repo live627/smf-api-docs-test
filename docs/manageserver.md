@@ -10,7 +10,7 @@ count: 17
 ### ModifySettings
 
 ```php
-function ModifySettings()
+function ModifySettings(): void
 ```
 This is the main dispatcher. Sets up all the available sub-actions, all the tabs and selects
 the appropriate one based on the sub-action.
@@ -23,7 +23,7 @@ Uses edit_settings adminIndex.
 ### ModifyGeneralSettings
 
 ```php
-function ModifyGeneralSettings($return_config = false)
+function ModifyGeneralSettings(bool $return_config = false): void|array
 ```
 General forum settings - forum name, maintenance mode, etc.
 
@@ -41,7 +41,7 @@ Type|Parameter|Description
 ### AlignURLsWithSSLSetting
 
 ```php
-function AlignURLsWithSSLSetting($new_force_ssl = 0)
+function AlignURLsWithSSLSetting(int $new_force_ssl = 0): void
 ```
 Align URLs with SSL Setting.
 
@@ -69,7 +69,7 @@ Type|Parameter|Description
 ### BoardurlMatch
 
 ```php
-function BoardurlMatch($url = '')
+function BoardurlMatch(string $url = ''): bool
 ```
 $boardurl Match.
 
@@ -85,7 +85,7 @@ Type|Parameter|Description
 ### ModifyDatabaseSettings
 
 ```php
-function ModifyDatabaseSettings($return_config = false)
+function ModifyDatabaseSettings(bool $return_config = false): void|array
 ```
 Basic database and paths settings - database name, host, etc.
 
@@ -102,7 +102,7 @@ Type|Parameter|Description
 ### ModifyCookieSettings
 
 ```php
-function ModifyCookieSettings($return_config = false)
+function ModifyCookieSettings(bool $return_config = false): void|array
 ```
 This function handles cookies settings modifications.
 
@@ -115,7 +115,7 @@ Type|Parameter|Description
 ### ModifyGeneralSecuritySettings
 
 ```php
-function ModifyGeneralSecuritySettings($return_config = false)
+function ModifyGeneralSecuritySettings(bool $return_config = false): void|array
 ```
 Settings really associated with general security aspects.
 
@@ -128,7 +128,7 @@ Type|Parameter|Description
 ### ModifyCacheSettings
 
 ```php
-function ModifyCacheSettings($return_config = false)
+function ModifyCacheSettings(bool $return_config = false): void|array
 ```
 Simply modifying cache functions
 
@@ -141,7 +141,7 @@ Type|Parameter|Description
 ### ModifyExportSettings
 
 ```php
-function ModifyExportSettings($return_config = false)
+function ModifyExportSettings(bool $return_config = false): void|array
 ```
 Controls settings for data export functionality
 
@@ -154,7 +154,7 @@ Type|Parameter|Description
 ### ModifyLoadBalancingSettings
 
 ```php
-function ModifyLoadBalancingSettings($return_config = false)
+function ModifyLoadBalancingSettings(bool $return_config = false): void|array
 ```
 Allows to edit load balancing settings.
 
@@ -167,7 +167,7 @@ Type|Parameter|Description
 ### prepareServerSettingsContext
 
 ```php
-function prepareServerSettingsContext(&$config_vars)
+function prepareServerSettingsContext(array &$config_vars): void
 ```
 Helper function, it sets up the context for the manage server settings.
 
@@ -197,7 +197,7 @@ Type|Parameter|Description
 ### prepareDBSettingContext
 
 ```php
-function prepareDBSettingContext(&$config_vars)
+function prepareDBSettingContext(array &$config_vars): void
 ```
 Helper function, it sets up the context for database settings.
 
@@ -210,7 +210,7 @@ Type|Parameter|Description
 ### saveSettings
 
 ```php
-function saveSettings(&$config_vars)
+function saveSettings(array &$config_vars): void
 ```
 Helper function. Saves settings by putting them in Settings.php or saving them in the settings table.
 
@@ -225,7 +225,7 @@ Type|Parameter|Description
 ### saveDBSettings
 
 ```php
-function saveDBSettings(&$config_vars)
+function saveDBSettings(array &$config_vars): void
 ```
 Helper function for saving database settings.
 
@@ -238,7 +238,7 @@ Type|Parameter|Description
 ### ShowPHPinfoSettings
 
 ```php
-function ShowPHPinfoSettings()
+function ShowPHPinfoSettings(): void
 ```
 Allows us to see the servers php settings
 
@@ -248,7 +248,7 @@ Allows us to see the servers php settings
 ### loadCacheAPIs
 
 ```php
-function loadCacheAPIs()
+function loadCacheAPIs(): void
 ```
 Get the installed Cache API implementations.
 
@@ -257,7 +257,7 @@ Get the installed Cache API implementations.
 ### registerSMStats
 
 ```php
-function registerSMStats()
+function registerSMStats(): void
 ```
 Registers the site with the Simple Machines Stat collection. This function
 purposely does not use updateSettings.php as it will be called shortly after

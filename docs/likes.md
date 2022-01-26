@@ -10,7 +10,7 @@ count: 1
 ### BookOfUnknown
 
 ```php
-function BookOfUnknown()
+function BookOfUnknown(): void
 ```
 What's this?  I dunno, what are you talking about?  Never seen this before, nope.  No sir.
 

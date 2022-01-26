@@ -10,7 +10,7 @@ count: 6
 ### PlushSearch1
 
 ```php
-function PlushSearch1()
+function PlushSearch1(): void
 ```
 Ask the user what they want to search for.
 
@@ -25,7 +25,7 @@ What it does:
 ### PlushSearch2
 
 ```php
-function PlushSearch2()
+function PlushSearch2(): void
 ```
 Gather the results and show them.
 
@@ -40,7 +40,7 @@ What it does:
 ### prepareSearchContext
 
 ```php
-function prepareSearchContext($reset = false)
+function prepareSearchContext(bool $reset = false): array
 ```
 Callback to return messages - saves memory.
 
@@ -55,7 +55,7 @@ Type|Parameter|Description
 ### findSearchAPI
 
 ```php
-function findSearchAPI()
+function findSearchAPI(): \search_api_interface
 ```
 Creates a search API and returns the object.
 
@@ -64,7 +64,7 @@ Creates a search API and returns the object.
 ### searchSort
 
 ```php
-function searchSort($a, $b)
+function searchSort(string $a, string $b): int
 ```
 This function compares the length of two strings plus a little.
 
@@ -80,7 +80,7 @@ Type|Parameter|Description
 ### highlight
 
 ```php
-function highlight($text, array $words)
+function highlight(string $text, array $words): string
 ```
 Highlighting matching string
 

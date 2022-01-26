@@ -10,7 +10,7 @@ count: 5
 ### ManagePostSettings
 
 ```php
-function ManagePostSettings()
+function ManagePostSettings(): void
 ```
 The main entrance point for the 'Posts and topics' screen.
 
@@ -23,7 +23,7 @@ Requires (and checks for) the admin_forum permission.
 ### SetCensor
 
 ```php
-function SetCensor()
+function SetCensor(): void
 ```
 Shows an interface to set and test censored words.
 
@@ -35,7 +35,7 @@ Accessed from ?action=admin;area=postsettings;sa=censor.
 ### ModifyPostSettings
 
 ```php
-function ModifyPostSettings($return_config = false)
+function ModifyPostSettings(bool $return_config = false): void|array
 ```
 Modify any setting related to posts and posting.
 
@@ -49,7 +49,7 @@ Type|Parameter|Description
 ### ModifyTopicSettings
 
 ```php
-function ModifyTopicSettings($return_config = false)
+function ModifyTopicSettings(bool $return_config = false): void|array
 ```
 Modify any setting related to topics.
 
@@ -63,7 +63,7 @@ Type|Parameter|Description
 ### ModifyDraftSettings
 
 ```php
-function ModifyDraftSettings($return_config = false)
+function ModifyDraftSettings(bool $return_config = false): void|array
 ```
 Modify any setting related to drafts.
 

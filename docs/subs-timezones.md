@@ -10,7 +10,7 @@ count: 4
 ### get_tzid_metazones
 
 ```php
-function get_tzid_metazones($when = 'now')
+function get_tzid_metazones(string $when = 'now'): array
 ```
 Returns an array that instructs SMF how to map specific time zones
 (e.g. "America/Denver") onto the user-friendly "meta-zone" labels that
@@ -27,7 +27,7 @@ Defaults to 'now'.
 ### get_sorted_tzids_for_country
 
 ```php
-function get_sorted_tzids_for_country($country_code, $when = 'now')
+function get_sorted_tzids_for_country(string $country_code, string $when = 'now'): array
 ```
 Returns an array of all the time zones in a country, ranked according
 to population and/or political significance.
@@ -44,7 +44,7 @@ Defaults to 'now'.
 ### get_tzid_fallbacks
 
 ```php
-function get_tzid_fallbacks($tzids, $when = 'now')
+function get_tzid_fallbacks(array $tzids, string $when = 'now'): array
 ```
 Checks a list of time zone identifiers to make sure they are all defined in
 the installed version of the time zone database, and returns an array of
@@ -71,7 +71,7 @@ Defaults to 'now'.
 ### validate_iso_country_codes
 
 ```php
-function validate_iso_country_codes($country_codes, $as_csv = false)
+function validate_iso_country_codes(array|string $country_codes, bool $as_csv = false): array|string
 ```
 Validates a set of two-character ISO 3166-1 country codes.
 

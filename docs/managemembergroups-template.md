@@ -10,7 +10,7 @@ count: 6
 ### template_main
 
 ```php
-function template_main()
+function template_main(): void
 ```
 The main page listing all the groups.
 
@@ -19,7 +19,7 @@ The main page listing all the groups.
 ### template_new_group
 
 ```php
-function template_new_group()
+function template_new_group(): void
 ```
 Add a new membergroup.
 
@@ -28,7 +28,7 @@ Add a new membergroup.
 ### template_edit_group
 
 ```php
-function template_edit_group()
+function template_edit_group(): void
 ```
 Edit an existing membergroup.
 
@@ -37,7 +37,7 @@ Edit an existing membergroup.
 ### template_add_edit_group_boards_list
 
 ```php
-function template_add_edit_group_boards_list($collapse = true, $form_id = 'new_group')
+function template_add_edit_group_boards_list(bool $collapse = true, $form_id = 'new_group'): void
 ```
 The template for determining which boards a group has access to.
 
@@ -50,7 +50,7 @@ Type|Parameter|Description
 ### template_group_members
 
 ```php
-function template_group_members()
+function template_group_members(): void
 ```
 Template for viewing the members of a group.
 
@@ -59,7 +59,7 @@ Template for viewing the members of a group.
 ### template_group_request_reason
 
 ```php
-function template_group_request_reason()
+function template_group_request_reason(): void
 ```
 Allow the moderator to enter a reason to each user being rejected.
 

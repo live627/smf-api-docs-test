@@ -10,7 +10,7 @@ count: 4
 ### ReportToModerator
 
 ```php
-function ReportToModerator()
+function ReportToModerator(): void
 ```
 Report a post or profile to the moderator... ask for a comment.
 
@@ -23,7 +23,7 @@ Accessed through ?action=reporttm.
 ### ReportToModerator2
 
 ```php
-function ReportToModerator2()
+function ReportToModerator2(): void
 ```
 Send the emails.
 
@@ -35,7 +35,7 @@ Accessed through ?action=reporttm when posting.
 ### reportPost
 
 ```php
-function reportPost($msg, $reason)
+function reportPost(int $msg, string $reason): void
 ```
 Actually reports a post using information specified from a form
 
@@ -49,7 +49,7 @@ Type|Parameter|Description
 ### reportUser
 
 ```php
-function reportUser($id_member, $reason)
+function reportUser(int $id_member, string $reason): void
 ```
 Actually reports a user's profile using information specified from a form
 

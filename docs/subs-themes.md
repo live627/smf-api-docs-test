@@ -10,7 +10,7 @@ count: 8
 ### get_single_theme
 
 ```php
-function get_single_theme($id, array $variables = array())
+function get_single_theme(int $id, array $variables = array()): array
 ```
 Gets a single theme's info.
 
@@ -24,7 +24,7 @@ Type|Parameter|Description
 ### get_all_themes
 
 ```php
-function get_all_themes($enable_only = false)
+function get_all_themes(bool $enable_only = false): void
 ```
 Loads and returns all installed themes.
 
@@ -39,7 +39,7 @@ Type|Parameter|Description
 ### get_installed_themes
 
 ```php
-function get_installed_themes()
+function get_installed_themes(): void
 ```
 Loads and returns all installed themes.
 
@@ -50,7 +50,7 @@ $modSettings['knownThemes'] stores themes that the user is able to select.
 ### get_theme_info
 
 ```php
-function get_theme_info($path)
+function get_theme_info(string $path): array
 ```
 Reads an .xml file and returns the data as an array
 
@@ -63,7 +63,7 @@ Type|Parameter|Description
 ### theme_install
 
 ```php
-function theme_install($to_install = array())
+function theme_install(array $to_install = array()): int
 ```
 Inserts a theme's data to the DataBase.
 
@@ -76,7 +76,7 @@ Type|Parameter|Description
 ### remove_dir
 
 ```php
-function remove_dir($path)
+function remove_dir(string $path): bool
 ```
 Removes a directory from the themes dir.
 
@@ -89,7 +89,7 @@ Type|Parameter|Description
 ### remove_theme
 
 ```php
-function remove_theme($themeID)
+function remove_theme(int $themeID): bool
 ```
 Removes a theme from the DB, includes all possible places where the theme might be used.
 
@@ -102,7 +102,7 @@ Type|Parameter|Description
 ### get_file_listing
 
 ```php
-function get_file_listing($path, $relative)
+function get_file_listing(string $path, string $relative): array
 ```
 Generates a file listing for a given directory
 

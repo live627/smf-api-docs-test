@@ -10,7 +10,7 @@ count: 11
 ### deleteMembers
 
 ```php
-function deleteMembers($users, $check_not_admin = false)
+function deleteMembers(int|array $users, bool $check_not_admin = false): void
 ```
 Delete one or more members.
 
@@ -33,7 +33,7 @@ Type|Parameter|Description
 ### registerMember
 
 ```php
-function registerMember(&$regOptions, $return_errors = false)
+function registerMember(array &$regOptions, bool $return_errors = false): int|array
 ```
 Registers a member to the forum.
 
@@ -53,7 +53,7 @@ Type|Parameter|Description
 ### isReservedName
 
 ```php
-function isReservedName($name, $current_id_member = 0, $is_name = true, $fatal = true)
+function isReservedName(string $name, int $current_id_member = 0, bool $is_name = true, bool $fatal = true): bool|void
 ```
 Check if a name is in the reserved words list.
 
@@ -73,7 +73,7 @@ Type|Parameter|Description
 ### groupsAllowedTo
 
 ```php
-function groupsAllowedTo($permission, $board_id = null)
+function groupsAllowedTo(string $permission, int $board_id = null): array
 ```
 Retrieves a list of membergroups that have the given permission, either on
 a given board or in general.
@@ -89,7 +89,7 @@ Type|Parameter|Description
 ### membersAllowedTo
 
 ```php
-function membersAllowedTo($permission, $board_id = null)
+function membersAllowedTo(string $permission, int $board_id = null): array
 ```
 Retrieves a list of members that have a given permission
 (on a given board).
@@ -106,7 +106,7 @@ Type|Parameter|Description
 ### reattributePosts
 
 ```php
-function reattributePosts($memID, $email = false, $membername = false, $post_count = false)
+function reattributePosts(int $memID, bool|string $email = false, bool|string $membername = false, bool $post_count = false): array
 ```
 This function is used to reassociate members with relevant posts.
 
@@ -124,7 +124,7 @@ Type|Parameter|Description
 ### BuddyListToggle
 
 ```php
-function BuddyListToggle()
+function BuddyListToggle(): void
 ```
 This simple function adds/removes the passed user from the current users buddy list.
 
@@ -135,7 +135,7 @@ Redirects to ?action=profile;u=x.
 ### list_getMembers
 
 ```php
-function list_getMembers($start, $items_per_page, $sort, $where, $where_params = array(), $get_duplicates = false)
+function list_getMembers(int $start, int $items_per_page, string $sort, string $where, array $where_params = array(), bool $get_duplicates = false): array
 ```
 Callback for createList().
 
@@ -153,7 +153,7 @@ Type|Parameter|Description
 ### list_getNumMembers
 
 ```php
-function list_getNumMembers($where, $where_params = array())
+function list_getNumMembers(string $where, array $where_params = array()): int
 ```
 Callback for createList().
 
@@ -167,7 +167,7 @@ Type|Parameter|Description
 ### populateDuplicateMembers
 
 ```php
-function populateDuplicateMembers(&$members)
+function populateDuplicateMembers(array &$members): void
 ```
 Find potential duplicate registration members based on the same IP address
 
@@ -180,7 +180,7 @@ Type|Parameter|Description
 ### generateValidationCode
 
 ```php
-function generateValidationCode()
+function generateValidationCode(): string
 ```
 Generate a random validation code.
 

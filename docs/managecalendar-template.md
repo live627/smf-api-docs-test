@@ -10,7 +10,7 @@ count: 1
 ### template_edit_holiday
 
 ```php
-function template_edit_holiday()
+function template_edit_holiday(): void
 ```
 Editing or adding holidays.
 

@@ -10,7 +10,7 @@ count: 11
 ### template_init
 
 ```php
-function template_init()
+function template_init(): void
 ```
 Initialize the template... mainly little settings.
 
@@ -19,7 +19,7 @@ Initialize the template... mainly little settings.
 ### template_html_above
 
 ```php
-function template_html_above()
+function template_html_above(): void
 ```
 The main sub template above the content.
 
@@ -28,7 +28,7 @@ The main sub template above the content.
 ### template_body_above
 
 ```php
-function template_body_above()
+function template_body_above(): void
 ```
 The upper part of the main template layer. This is the stuff that shows above the main forum content.
 
@@ -37,7 +37,7 @@ The upper part of the main template layer. This is the stuff that shows above th
 ### template_body_below
 
 ```php
-function template_body_below()
+function template_body_below(): void
 ```
 The stuff shown immediately below the main content, including the footer
 
@@ -46,7 +46,7 @@ The stuff shown immediately below the main content, including the footer
 ### template_html_below
 
 ```php
-function template_html_below()
+function template_html_below(): void
 ```
 This shows any deferred JavaScript and closes out the HTML
 
@@ -55,7 +55,7 @@ This shows any deferred JavaScript and closes out the HTML
 ### theme_linktree
 
 ```php
-function theme_linktree($force_show = false)
+function theme_linktree(bool $force_show = false): void
 ```
 Show a linktree. This is that thing that shows "My Community | General Category | General Discussion".
 
@@ -68,7 +68,7 @@ Type|Parameter|Description
 ### template_menu
 
 ```php
-function template_menu()
+function template_menu(): void
 ```
 Show the menu up top. Something like [home] [help] [profile] [logout].
 
@@ -77,7 +77,7 @@ Show the menu up top. Something like [home] [help] [profile] [logout].
 ### template_button_strip
 
 ```php
-function template_button_strip($button_strip, $direction = '', $strip_options = array())
+function template_button_strip(array $button_strip, string $direction = '', array $strip_options = array()): void
 ```
 Generate a strip of buttons.
 
@@ -92,7 +92,7 @@ Type|Parameter|Description
 ### template_quickbuttons
 
 ```php
-function template_quickbuttons($list_items, $list_class = null, $output_method = 'echo')
+function template_quickbuttons(array $list_items, string $list_class = null, string $output_method = 'echo'): void|string
 ```
 Generate a list of quickbuttons.
 
@@ -107,7 +107,7 @@ Type|Parameter|Description
 ### template_maint_warning_above
 
 ```php
-function template_maint_warning_above()
+function template_maint_warning_above(): void
 ```
 The upper part of the maintenance warning box
 
@@ -116,7 +116,7 @@ The upper part of the maintenance warning box
 ### template_maint_warning_below
 
 ```php
-function template_maint_warning_below()
+function template_maint_warning_below(): void
 ```
 The lower part of the maintenance warning box.
 

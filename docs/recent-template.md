@@ -10,7 +10,7 @@ count: 3
 ### template_recent
 
 ```php
-function template_recent()
+function template_recent(): void
 ```
 Template for showing recent posts
 
@@ -19,7 +19,7 @@ Template for showing recent posts
 ### template_unread
 
 ```php
-function template_unread()
+function template_unread(): void
 ```
 Template for showing unread posts
 
@@ -28,7 +28,7 @@ Template for showing unread posts
 ### template_replies
 
 ```php
-function template_replies()
+function template_replies(): void
 ```
 Template for showing unread replies (eg new replies to topics you've posted in)
 

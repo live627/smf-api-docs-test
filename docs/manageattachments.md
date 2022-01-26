@@ -10,7 +10,7 @@ count: 21
 ### ManageAttachments
 
 ```php
-function ManageAttachments()
+function ManageAttachments(): void
 ```
 The main 'Attachments and Avatars' management function.
 
@@ -25,7 +25,7 @@ Uses template layer 'manage_files' for showing the tab bar.
 ### ManageAttachmentSettings
 
 ```php
-function ManageAttachmentSettings($return_config = false)
+function ManageAttachmentSettings(bool $return_config = false): void|array
 ```
 Allows to show/change attachment settings.
 
@@ -40,7 +40,7 @@ Type|Parameter|Description
 ### ManageAvatarSettings
 
 ```php
-function ManageAvatarSettings($return_config = false)
+function ManageAvatarSettings(bool $return_config = false): void|array
 ```
 This allows to show/change avatar settings.
 
@@ -55,7 +55,7 @@ Type|Parameter|Description
 ### BrowseFiles
 
 ```php
-function BrowseFiles()
+function BrowseFiles(): void
 ```
 Show a list of attachment or avatar files.
 
@@ -67,7 +67,7 @@ Paginates results.
 ### list_getFiles
 
 ```php
-function list_getFiles($start, $items_per_page, $sort, $browse_type)
+function list_getFiles(int $start, int $items_per_page, string $sort, string $browse_type): array
 ```
 Returns the list of attachments files (avatars or not), recorded
 in the database, per the parameters received.
@@ -84,7 +84,7 @@ Type|Parameter|Description
 ### list_getNumFiles
 
 ```php
-function list_getNumFiles($browse_type)
+function list_getNumFiles(string $browse_type): int
 ```
 Return the number of files of the specified type recorded in the database.
 
@@ -97,7 +97,7 @@ Type|Parameter|Description
 ### MaintainFiles
 
 ```php
-function MaintainFiles()
+function MaintainFiles(): void
 ```
 Show several file maintenance options.
 
@@ -108,7 +108,7 @@ number of avatars, attachment space available).
 ### RemoveAttachmentByAge
 
 ```php
-function RemoveAttachmentByAge()
+function RemoveAttachmentByAge(): void
 ```
 Remove attachments older than a given age.
 
@@ -120,7 +120,7 @@ It optionally adds a certain text to the messages the attachments
 ### RemoveAttachmentBySize
 
 ```php
-function RemoveAttachmentBySize()
+function RemoveAttachmentBySize(): void
 ```
 Remove attachments larger than a given size.
 
@@ -132,7 +132,7 @@ Optionally adds a certain text to the messages the attachments were
 ### RemoveAttachment
 
 ```php
-function RemoveAttachment()
+function RemoveAttachment(): void
 ```
 Remove a selection of attachments or avatars.
 
@@ -142,7 +142,7 @@ Called from the browse screen as submitted form by
 ### RemoveAllAttachments
 
 ```php
-function RemoveAllAttachments()
+function RemoveAllAttachments(): void
 ```
 Removes all attachments in a single click
 Called from the maintenance screen by
@@ -153,7 +153,7 @@ Called from the maintenance screen by
 ### removeAttachments
 
 ```php
-function removeAttachments($condition, $query_type = '', $return_affected_messages = false, $autoThumbRemoval = true)
+function removeAttachments(array $condition, string $query_type = '', bool $return_affected_messages = false, bool $autoThumbRemoval = true): void|int[]
 ```
 Removes attachments or avatars based on a given query condition.
 
@@ -173,7 +173,7 @@ Type|Parameter|Description
 ### RepairAttachments
 
 ```php
-function RepairAttachments()
+function RepairAttachments(): void
 ```
 This function should find attachments in the database that no longer exist and clear them, and fix filesize issues.
 
@@ -182,7 +182,7 @@ This function should find attachments in the database that no longer exist and c
 ### pauseAttachmentMaintenance
 
 ```php
-function pauseAttachmentMaintenance($to_fix, $max_substep = 0)
+function pauseAttachmentMaintenance(array $to_fix, int $max_substep = 0): void
 ```
 Function called in-between each round of attachments and avatar repairs.
 
@@ -197,7 +197,7 @@ Type|Parameter|Description
 ### ApproveAttach
 
 ```php
-function ApproveAttach()
+function ApproveAttach(): void
 ```
 Called from a mouse click, works out what we want to do with attachments and actions it.
 
@@ -206,7 +206,7 @@ Called from a mouse click, works out what we want to do with attachments and act
 ### ApproveAttachments
 
 ```php
-function ApproveAttachments($attachments)
+function ApproveAttachments(array $attachments): void|int
 ```
 Approve an attachment, or maybe even more - no permission check!
 
@@ -219,7 +219,7 @@ Type|Parameter|Description
 ### ManageAttachmentPaths
 
 ```php
-function ManageAttachmentPaths()
+function ManageAttachmentPaths(): void
 ```
 This function lists and allows updating of multiple attachments paths.
 
@@ -228,7 +228,7 @@ This function lists and allows updating of multiple attachments paths.
 ### list_getAttachDirs
 
 ```php
-function list_getAttachDirs()
+function list_getAttachDirs(): array
 ```
 Prepare the actual attachment directories to be displayed in the list.
 
@@ -237,7 +237,7 @@ Prepare the actual attachment directories to be displayed in the list.
 ### list_getBaseDirs
 
 ```php
-function list_getBaseDirs()
+function list_getBaseDirs(): void|array
 ```
 Prepare the base directories to be displayed in a list.
 
@@ -246,7 +246,7 @@ Prepare the base directories to be displayed in a list.
 ### attachDirStatus
 
 ```php
-function attachDirStatus($dir, $expected_files)
+function attachDirStatus(string $dir, int $expected_files): array
 ```
 Checks the status of an attachment directory and returns an array
  of the status key, if that status key signifies an error, and
@@ -262,7 +262,7 @@ Type|Parameter|Description
 ### TransferAttachments
 
 ```php
-function TransferAttachments()
+function TransferAttachments(): void
 ```
 Maintance function to move attachments from one directory to another
 

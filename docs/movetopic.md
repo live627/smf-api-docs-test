@@ -10,7 +10,7 @@ count: 4
 ### MoveTopic
 
 ```php
-function MoveTopic()
+function MoveTopic(): void
 ```
 This function allows to move a topic, making sure to ask the moderator
 to give reason for topic move.
@@ -26,7 +26,7 @@ Uses the MoveTopic template, main sub-template.
 ### MoveTopic2
 
 ```php
-function MoveTopic2()
+function MoveTopic2(): void
 ```
 Execute the move of a topic.
 
@@ -42,7 +42,7 @@ Uses Subs-Post.php
 ### moveTopics
 
 ```php
-function moveTopics($topics, $toBoard)
+function moveTopics(int|int[] $topics, int $toBoard): void
 ```
 Moves one or more topics to a specific board. (doesn't check permissions.)
 Determines the source boards for the supplied topics
@@ -59,7 +59,7 @@ Type|Parameter|Description
 ### moveTopicConcurrence
 
 ```php
-function moveTopicConcurrence()
+function moveTopicConcurrence(): void
 ```
 Called after a topic is moved to update $board_link and $topic_link to point to new location
 

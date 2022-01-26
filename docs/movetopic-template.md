@@ -10,7 +10,7 @@ count: 5
 ### template_move
 
 ```php
-function template_move()
+function template_move(): void
 ```
 Show an interface for selecting which board to move a post to.
 
@@ -19,7 +19,7 @@ Show an interface for selecting which board to move a post to.
 ### template_redirect_options
 
 ```php
-function template_redirect_options($type)
+function template_redirect_options(string $type): void
 ```
 Redirection topic options
 
@@ -32,7 +32,7 @@ Type|Parameter|Description
 ### template_merge_done
 
 ```php
-function template_merge_done()
+function template_merge_done(): void
 ```
 Confirmation page shown when finished merging topics.
 
@@ -41,7 +41,7 @@ Confirmation page shown when finished merging topics.
 ### template_merge
 
 ```php
-function template_merge()
+function template_merge(): void
 ```
 Merge topic page.
 
@@ -50,7 +50,7 @@ Merge topic page.
 ### template_merge_extra_options
 
 ```php
-function template_merge_extra_options()
+function template_merge_extra_options(): void
 ```
 Extra options related to merging topics.
 

@@ -10,7 +10,7 @@ count: 2
 ### template_main
 
 ```php
-function template_main()
+function template_main(): void
 ```
 This handles the Who's Online page
 
@@ -19,7 +19,7 @@ This handles the Who's Online page
 ### template_credits
 
 ```php
-function template_credits()
+function template_credits(): void
 ```
 This displays a nice credits page
 

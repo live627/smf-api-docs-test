@@ -10,7 +10,7 @@ count: 2
 ### MessageIndex
 
 ```php
-function MessageIndex()
+function MessageIndex(): void
 ```
 Show the list of topics in this board, along with any child boards.
 
@@ -19,7 +19,7 @@ Show the list of topics in this board, along with any child boards.
 ### QuickModeration
 
 ```php
-function QuickModeration()
+function QuickModeration(): void
 ```
 Handles moderation from the message index.
 

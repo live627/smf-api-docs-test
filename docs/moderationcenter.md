@@ -10,7 +10,7 @@ count: 25
 ### ModerationMain
 
 ```php
-function ModerationMain($dont_call = false)
+function ModerationMain(bool $dont_call = false): void
 ```
 Entry point for the moderation center.
 
@@ -23,7 +23,7 @@ Type|Parameter|Description
 ### ModerationHome
 
 ```php
-function ModerationHome()
+function ModerationHome(): void
 ```
 This function basically is the home page of the moderation center.
 
@@ -32,7 +32,7 @@ This function basically is the home page of the moderation center.
 ### ModBlockWatchedUsers
 
 ```php
-function ModBlockWatchedUsers()
+function ModBlockWatchedUsers(): void
 ```
 Show a list of the most active watched users.
 
@@ -41,7 +41,7 @@ Show a list of the most active watched users.
 ### ModBlockNotes
 
 ```php
-function ModBlockNotes()
+function ModBlockNotes(): void
 ```
 Show an area for the moderator to type into.
 
@@ -50,7 +50,7 @@ Show an area for the moderator to type into.
 ### ModBlockReportedPosts
 
 ```php
-function ModBlockReportedPosts()
+function ModBlockReportedPosts(): void
 ```
 Show a list of the most recent reported posts.
 
@@ -59,7 +59,7 @@ Show a list of the most recent reported posts.
 ### ModBlockGroupRequests
 
 ```php
-function ModBlockGroupRequests()
+function ModBlockGroupRequests(): void
 ```
 Show a list of all the group requests they can see.
 
@@ -68,7 +68,7 @@ Show a list of all the group requests they can see.
 ### ModBlockReportedMembers
 
 ```php
-function ModBlockReportedMembers()
+function ModBlockReportedMembers(): void
 ```
 Show a list of the most recent reported posts.
 
@@ -77,7 +77,7 @@ Show a list of the most recent reported posts.
 ### ReportedMembers
 
 ```php
-function ReportedMembers()
+function ReportedMembers(): void
 ```
 Browse all the reported users.
 
@@ -86,7 +86,7 @@ Browse all the reported users.
 ### ModerateGroups
 
 ```php
-function ModerateGroups()
+function ModerateGroups(): void
 ```
 Act as an entrace for all group related activity.
 
@@ -95,7 +95,7 @@ Act as an entrace for all group related activity.
 ### ShowNotice
 
 ```php
-function ShowNotice()
+function ShowNotice(): void
 ```
 Show a notice sent to a user.
 
@@ -104,7 +104,7 @@ Show a notice sent to a user.
 ### ViewWatchedUsers
 
 ```php
-function ViewWatchedUsers()
+function ViewWatchedUsers(): void
 ```
 View watched users.
 
@@ -113,7 +113,7 @@ View watched users.
 ### list_getWatchedUserCount
 
 ```php
-function list_getWatchedUserCount($approve_query)
+function list_getWatchedUserCount(string $approve_query): int
 ```
 Callback for createList().
 
@@ -126,7 +126,7 @@ Type|Parameter|Description
 ### list_getWatchedUsers
 
 ```php
-function list_getWatchedUsers($start, $items_per_page, $sort, $approve_query, $dummy)
+function list_getWatchedUsers(int $start, int $items_per_page, string $sort, string $approve_query, string $dummy): void
 ```
 Callback for createList().
 
@@ -143,7 +143,7 @@ Type|Parameter|Description
 ### list_getWatchedUserPostsCount
 
 ```php
-function list_getWatchedUserPostsCount($approve_query)
+function list_getWatchedUserPostsCount(string $approve_query): int
 ```
 Callback for createList().
 
@@ -156,7 +156,7 @@ Type|Parameter|Description
 ### list_getWatchedUserPosts
 
 ```php
-function list_getWatchedUserPosts($start, $items_per_page, $sort, $approve_query, $delete_boards)
+function list_getWatchedUserPosts(int $start, int $items_per_page, string $sort, string $approve_query, array $delete_boards): array
 ```
 Callback for createList().
 
@@ -173,7 +173,7 @@ Type|Parameter|Description
 ### ViewWarnings
 
 ```php
-function ViewWarnings()
+function ViewWarnings(): void
 ```
 Entry point for viewing warning related stuff.
 
@@ -182,7 +182,7 @@ Entry point for viewing warning related stuff.
 ### ViewWarningLog
 
 ```php
-function ViewWarningLog()
+function ViewWarningLog(): void
 ```
 Simply put, look at the warning log!
 
@@ -191,7 +191,7 @@ Simply put, look at the warning log!
 ### list_getWarningCount
 
 ```php
-function list_getWarningCount()
+function list_getWarningCount(): int
 ```
 Callback for createList().
 
@@ -200,7 +200,7 @@ Callback for createList().
 ### list_getWarnings
 
 ```php
-function list_getWarnings($start, $items_per_page, $sort)
+function list_getWarnings(int $start, int $items_per_page, string $sort): array
 ```
 Callback for createList().
 
@@ -215,7 +215,7 @@ Type|Parameter|Description
 ### ViewWarningTemplates
 
 ```php
-function ViewWarningTemplates()
+function ViewWarningTemplates(): void
 ```
 Load all the warning templates.
 
@@ -224,7 +224,7 @@ Load all the warning templates.
 ### list_getWarningTemplateCount
 
 ```php
-function list_getWarningTemplateCount()
+function list_getWarningTemplateCount(): int
 ```
 Callback for createList().
 
@@ -233,7 +233,7 @@ Callback for createList().
 ### list_getWarningTemplates
 
 ```php
-function list_getWarningTemplates($start, $items_per_page, $sort)
+function list_getWarningTemplates(int $start, int $items_per_page, string $sort): array
 ```
 Callback for createList().
 
@@ -248,7 +248,7 @@ Type|Parameter|Description
 ### ModifyWarningTemplate
 
 ```php
-function ModifyWarningTemplate()
+function ModifyWarningTemplate(): void
 ```
 Edit a warning template.
 
@@ -257,7 +257,7 @@ Edit a warning template.
 ### ModerationSettings
 
 ```php
-function ModerationSettings()
+function ModerationSettings(): void
 ```
 Change moderation preferences.
 
@@ -266,7 +266,7 @@ Change moderation preferences.
 ### ModEndSession
 
 ```php
-function ModEndSession()
+function ModEndSession(): void
 ```
 This ends a moderator session, requiring authentication to access the MCP again.
 

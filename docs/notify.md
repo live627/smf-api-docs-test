@@ -10,7 +10,7 @@ count: 3
 ### BoardNotify
 
 ```php
-function BoardNotify()
+function BoardNotify(): void
 ```
 Turn off/on notification for a particular board.
 
@@ -22,7 +22,7 @@ Accessed via ?action=notifyboard.
 ### TopicNotify
 
 ```php
-function TopicNotify()
+function TopicNotify(): void
 ```
 Turn off/on unread replies subscription for a topic as well as sets individual topic's alert preferences
 Must be called with a topic specified in the URL.
@@ -35,7 +35,7 @@ Accessed via ?action=notifytopic.
 ### AnnouncementsNotify
 
 ```php
-function AnnouncementsNotify()
+function AnnouncementsNotify(): void
 ```
 Turn off/on notifications for announcements.
 

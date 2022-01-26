@@ -10,7 +10,7 @@ count: 2
 ### LockTopic
 
 ```php
-function LockTopic()
+function LockTopic(): void
 ```
 Locks a topic... either by way of a moderator or the topic starter.
 
@@ -25,7 +25,7 @@ What this does:
 ### Sticky
 
 ```php
-function Sticky()
+function Sticky(): void
 ```
 Sticky a topic.
 

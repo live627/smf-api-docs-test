@@ -10,7 +10,7 @@ count: 42
 ### loadProfileFields
 
 ```php
-function loadProfileFields($force_reload = false)
+function loadProfileFields(bool $force_reload = false): void
 ```
 This defines every profile field known to man.
 
@@ -23,7 +23,7 @@ Type|Parameter|Description
 ### setupProfileContext
 
 ```php
-function setupProfileContext($fields)
+function setupProfileContext(array $fields): void
 ```
 Setup the context for a page load!
 
@@ -36,7 +36,7 @@ Type|Parameter|Description
 ### saveProfileFields
 
 ```php
-function saveProfileFields()
+function saveProfileFields(): void
 ```
 Save the profile changes.
 
@@ -45,7 +45,7 @@ Save the profile changes.
 ### saveProfileChanges
 
 ```php
-function saveProfileChanges(&$profile_vars, &$post_errors, $memID)
+function saveProfileChanges(array &$profile_vars, array &$post_errors, int $memID): void
 ```
 Save the profile changes
 
@@ -60,7 +60,7 @@ Type|Parameter|Description
 ### makeThemeChanges
 
 ```php
-function makeThemeChanges($memID, $id_theme)
+function makeThemeChanges(int $memID, int $id_theme): void
 ```
 Make any theme changes that are sent with the profile.
 
@@ -74,7 +74,7 @@ Type|Parameter|Description
 ### makeNotificationChanges
 
 ```php
-function makeNotificationChanges($memID)
+function makeNotificationChanges(int $memID): void
 ```
 Make any notification changes that need to be made.
 
@@ -87,7 +87,7 @@ Type|Parameter|Description
 ### makeCustomFieldChanges
 
 ```php
-function makeCustomFieldChanges($memID, $area, $sanitize = true, $returnErrors = false)
+function makeCustomFieldChanges(int $memID, string $area, bool $sanitize = true, bool $returnErrors = false): void|array
 ```
 Save any changes to the custom profile fields
 
@@ -103,7 +103,7 @@ Type|Parameter|Description
 ### editBuddyIgnoreLists
 
 ```php
-function editBuddyIgnoreLists($memID)
+function editBuddyIgnoreLists(int $memID): void
 ```
 Show all the users buddies, as well as a add/delete interface.
 
@@ -116,7 +116,7 @@ Type|Parameter|Description
 ### editBuddies
 
 ```php
-function editBuddies($memID)
+function editBuddies(int $memID): void
 ```
 Show all the users buddies, as well as a add/delete interface.
 
@@ -129,7 +129,7 @@ Type|Parameter|Description
 ### editIgnoreList
 
 ```php
-function editIgnoreList($memID)
+function editIgnoreList(int $memID): void
 ```
 Allows the user to view their ignore list, as well as the option to manage members on it.
 
@@ -142,7 +142,7 @@ Type|Parameter|Description
 ### account
 
 ```php
-function account($memID)
+function account(int $memID): void
 ```
 Handles the account section of the profile
 
@@ -155,7 +155,7 @@ Type|Parameter|Description
 ### forumProfile
 
 ```php
-function forumProfile($memID)
+function forumProfile(int $memID): void
 ```
 Handles the main "Forum Profile" section of the profile
 
@@ -168,7 +168,7 @@ Type|Parameter|Description
 ### getAvatars
 
 ```php
-function getAvatars($directory, $level)
+function getAvatars(string $directory, int $level): array
 ```
 Recursive function to retrieve server-stored avatar files
 
@@ -182,7 +182,7 @@ Type|Parameter|Description
 ### theme
 
 ```php
-function theme($memID)
+function theme(int $memID): void
 ```
 Handles the "Look and Layout" section of the profile
 
@@ -195,7 +195,7 @@ Type|Parameter|Description
 ### notification
 
 ```php
-function notification($memID)
+function notification(int $memID): void
 ```
 Display the notifications and settings for changes.
 
@@ -208,7 +208,7 @@ Type|Parameter|Description
 ### alert_configuration
 
 ```php
-function alert_configuration($memID, $defaultSettings = false)
+function alert_configuration(int $memID, bool $defaultSettings = false): void
 ```
 Handles configuration of alert preferences
 
@@ -222,7 +222,7 @@ Type|Parameter|Description
 ### alert_markread
 
 ```php
-function alert_markread($memID)
+function alert_markread(int $memID): void
 ```
 Marks all alerts as read for the specified user
 
@@ -235,7 +235,7 @@ Type|Parameter|Description
 ### alert_mark
 
 ```php
-function alert_mark($memID, $toMark, $read = 0)
+function alert_mark(int $memID, array|int $toMark, int $read = 0): int
 ```
 Marks a group of alerts as un/read
 
@@ -250,7 +250,7 @@ Type|Parameter|Description
 ### alert_delete
 
 ```php
-function alert_delete($toDelete, $memID = false)
+function alert_delete(int|array $toDelete, bool|int $memID = false): void|int
 ```
 Deletes a single or a group of alerts by ID
 
@@ -264,7 +264,7 @@ Type|Parameter|Description
 ### alert_purge
 
 ```php
-function alert_purge($memID = 0)
+function alert_purge(int $memID = 0): void
 ```
 Deletes all the alerts that a user has already read.
 
@@ -277,7 +277,7 @@ Type|Parameter|Description
 ### alert_count
 
 ```php
-function alert_count($memID, $unread = false)
+function alert_count(int $memID, bool $unread = false): int
 ```
 Counts how many alerts a user has - either unread or all depending on $unread
 We can't use db_num_rows here, as we have to determine what boards the user can see
@@ -293,7 +293,7 @@ Type|Parameter|Description
 ### alert_notifications_topics
 
 ```php
-function alert_notifications_topics($memID)
+function alert_notifications_topics(int $memID): void
 ```
 Handles alerts related to topics and posts
 
@@ -306,7 +306,7 @@ Type|Parameter|Description
 ### alert_notifications_boards
 
 ```php
-function alert_notifications_boards($memID)
+function alert_notifications_boards(int $memID): void
 ```
 Handles preferences related to board-level notifications
 
@@ -319,7 +319,7 @@ Type|Parameter|Description
 ### list_getTopicNotificationCount
 
 ```php
-function list_getTopicNotificationCount($memID)
+function list_getTopicNotificationCount(int $memID): int
 ```
 Determins how many topics a user has requested notifications for
 
@@ -332,7 +332,7 @@ Type|Parameter|Description
 ### list_getTopicNotifications
 
 ```php
-function list_getTopicNotifications($start, $items_per_page, $sort, $memID)
+function list_getTopicNotifications(int $start, int $items_per_page, string $sort, int $memID): array
 ```
 Gets information about all the topics a user has requested notifications for. Callback for the list in alert_notifications_topics
 
@@ -348,7 +348,7 @@ Type|Parameter|Description
 ### list_getBoardNotifications
 
 ```php
-function list_getBoardNotifications($start, $items_per_page, $sort, $memID)
+function list_getBoardNotifications(int $start, int $items_per_page, string $sort, int $memID): array
 ```
 Gets information about all the boards a user has requested notifications for. Callback for the list in alert_notifications_boards
 
@@ -364,7 +364,7 @@ Type|Parameter|Description
 ### loadThemeOptions
 
 ```php
-function loadThemeOptions($memID, $defaultSettings = false)
+function loadThemeOptions(int $memID, bool $defaultSettings = false): void
 ```
 Loads the theme options for a user
 
@@ -378,7 +378,7 @@ Type|Parameter|Description
 ### ignoreboards
 
 ```php
-function ignoreboards($memID)
+function ignoreboards(int $memID): void
 ```
 Handles the "ignored boards" section of the profile (if enabled)
 
@@ -391,7 +391,7 @@ Type|Parameter|Description
 ### profileLoadLanguages
 
 ```php
-function profileLoadLanguages()
+function profileLoadLanguages(): bool
 ```
 Load all the languages for the profile
 
@@ -400,7 +400,7 @@ Load all the languages for the profile
 ### profileLoadGroups
 
 ```php
-function profileLoadGroups()
+function profileLoadGroups(): true
 ```
 Handles the "manage groups" section of the profile
 
@@ -409,7 +409,7 @@ Handles the "manage groups" section of the profile
 ### profileLoadSignatureData
 
 ```php
-function profileLoadSignatureData()
+function profileLoadSignatureData(): true
 ```
 Load key signature context data.
 
@@ -418,7 +418,7 @@ Load key signature context data.
 ### profileLoadAvatarData
 
 ```php
-function profileLoadAvatarData()
+function profileLoadAvatarData(): true
 ```
 Load avatar context data.
 
@@ -427,7 +427,7 @@ Load avatar context data.
 ### profileSaveGroups
 
 ```php
-function profileSaveGroups(&$value)
+function profileSaveGroups(int &$value): true
 ```
 Save a members group.
 
@@ -440,7 +440,7 @@ Type|Parameter|Description
 ### profileSaveAvatarData
 
 ```php
-function profileSaveAvatarData(&$value)
+function profileSaveAvatarData(string &$value): bool|string
 ```
 The avatar is incredibly complicated, what with the options... and what not.
 
@@ -453,7 +453,7 @@ Type|Parameter|Description
 ### profileValidateSignature
 
 ```php
-function profileValidateSignature(&$value)
+function profileValidateSignature(string &$value): bool|string
 ```
 Validate the signature
 
@@ -466,7 +466,7 @@ Type|Parameter|Description
 ### profileValidateEmail
 
 ```php
-function profileValidateEmail($email, $memID = 0)
+function profileValidateEmail(string $email, int $memID = 0): bool|string
 ```
 Validate an email address.
 
@@ -480,7 +480,7 @@ Type|Parameter|Description
 ### profileReloadUser
 
 ```php
-function profileReloadUser()
+function profileReloadUser(): void
 ```
 Reload a user's settings.
 
@@ -489,7 +489,7 @@ Reload a user's settings.
 ### profileSendActivation
 
 ```php
-function profileSendActivation()
+function profileSendActivation(): void
 ```
 Send the user a new activation email if they need to reactivate!
 
@@ -498,7 +498,7 @@ Send the user a new activation email if they need to reactivate!
 ### groupMembership
 
 ```php
-function groupMembership($memID)
+function groupMembership(int $memID): void
 ```
 Function to allow the user to choose group membership etc.
 
@@ -511,7 +511,7 @@ Type|Parameter|Description
 ### groupMembership2
 
 ```php
-function groupMembership2($profile_vars, $post_errors, $memID)
+function groupMembership2(array $profile_vars, array $post_errors, int $memID): string
 ```
 This function actually makes all the group changes
 
@@ -526,7 +526,7 @@ Type|Parameter|Description
 ### tfasetup
 
 ```php
-function tfasetup($memID)
+function tfasetup(int $memID): void
 ```
 Provides interface to setup Two Factor Auth in SMF
 
@@ -539,7 +539,7 @@ Type|Parameter|Description
 ### tfadisable
 
 ```php
-function tfadisable($memID)
+function tfadisable(int $memID): void
 ```
 Provides interface to disable two-factor authentication in SMF
 

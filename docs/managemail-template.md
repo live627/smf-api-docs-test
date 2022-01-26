@@ -10,7 +10,7 @@ count: 2
 ### template_browse
 
 ```php
-function template_browse()
+function template_browse(): void
 ```
 Template for browsing the mail queue.
 
@@ -19,7 +19,7 @@ Template for browsing the mail queue.
 ### template_mailtest
 
 ```php
-function template_mailtest()
+function template_mailtest(): void
 ```
 Template for testing mail send.
 

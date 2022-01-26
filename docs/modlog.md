@@ -10,7 +10,7 @@ count: 3
 ### ViewModlog
 
 ```php
-function ViewModlog()
+function ViewModlog(): void
 ```
 Prepares the information from the moderation log for viewing.
 
@@ -24,7 +24,7 @@ Uses Modlog template, main sub-template.
 ### list_getModLogEntryCount
 
 ```php
-function list_getModLogEntryCount($query_string = '', $query_params = array(), $log_type = 1, $ignore_boards = false)
+function list_getModLogEntryCount(string $query_string = '', array $query_params = array(), int $log_type = 1, bool $ignore_boards = false): void
 ```
 Get the number of mod log entries.
 
@@ -40,7 +40,7 @@ Type|Parameter|Description
 ### list_getModLogEntries
 
 ```php
-function list_getModLogEntries($start, $items_per_page, $sort, $query_string = '', $query_params = array(), $log_type = 1, $ignore_boards = false)
+function list_getModLogEntries(int $start, int $items_per_page, string $sort, string $query_string = '', array $query_params = array(), int $log_type = 1, bool $ignore_boards = false): array
 ```
 Gets the moderation log entries that match the specified parameters.
 

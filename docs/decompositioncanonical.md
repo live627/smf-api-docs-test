@@ -10,7 +10,7 @@ count: 1
 ### utf8_normalize_d_maps
 
 ```php
-function utf8_normalize_d_maps()
+function utf8_normalize_d_maps(): array
 ```
 Helper function for utf8_normalize_d.
 

@@ -10,7 +10,7 @@ count: 1
 ### utf8_normalize_kd_maps
 
 ```php
-function utf8_normalize_kd_maps()
+function utf8_normalize_kd_maps(): array
 ```
 Helper function for utf8_normalize_kd.
 

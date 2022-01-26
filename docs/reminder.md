@@ -10,7 +10,7 @@ count: 6
 ### RemindMe
 
 ```php
-function RemindMe()
+function RemindMe(): void
 ```
 This is the controlling delegator
 
@@ -19,7 +19,7 @@ Uses Profile language files and Reminder template
 ### RemindPick
 
 ```php
-function RemindPick()
+function RemindPick(): void
 ```
 Allows the user to pick how they wish to be reminded
 
@@ -28,7 +28,7 @@ Allows the user to pick how they wish to be reminded
 ### setPassword
 
 ```php
-function setPassword()
+function setPassword(): void
 ```
 Allows the user to set their new password
 
@@ -37,7 +37,7 @@ Allows the user to set their new password
 ### setPassword2
 
 ```php
-function setPassword2()
+function setPassword2(): void
 ```
 Actually sets the new password
 
@@ -46,7 +46,7 @@ Actually sets the new password
 ### SecretAnswerInput
 
 ```php
-function SecretAnswerInput()
+function SecretAnswerInput(): void
 ```
 Allows the user to enter their secret answer
 
@@ -55,7 +55,7 @@ Allows the user to enter their secret answer
 ### SecretAnswer2
 
 ```php
-function SecretAnswer2()
+function SecretAnswer2(): void
 ```
 Validates the secret answer input by the user
 

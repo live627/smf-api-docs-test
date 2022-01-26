@@ -10,7 +10,7 @@ count: 6
 ### template_main
 
 ```php
-function template_main()
+function template_main(): void
 ```
 The main template for the post page.
 
@@ -19,7 +19,7 @@ The main template for the post page.
 ### template_spellcheck
 
 ```php
-function template_spellcheck()
+function template_spellcheck(): void
 ```
 The template for the spellchecker.
 
@@ -28,7 +28,7 @@ The template for the spellchecker.
 ### template_quotefast
 
 ```php
-function template_quotefast()
+function template_quotefast(): void
 ```
 The template for the AJAX quote feature
 
@@ -37,7 +37,7 @@ The template for the AJAX quote feature
 ### template_announce
 
 ```php
-function template_announce()
+function template_announce(): void
 ```
 The form for sending out an announcement
 
@@ -46,7 +46,7 @@ The form for sending out an announcement
 ### template_announcement_send
 
 ```php
-function template_announcement_send()
+function template_announcement_send(): void
 ```
 The confirmation/progress page, displayed after the admin has clicked the button to send the announcement.
 
@@ -55,7 +55,7 @@ The confirmation/progress page, displayed after the admin has clicked the button
 ### template_post_header
 
 ```php
-function template_post_header()
+function template_post_header(): void
 ```
 Prints the input fields in the form's header (subject, message icon, guest name & email, etc.)
 

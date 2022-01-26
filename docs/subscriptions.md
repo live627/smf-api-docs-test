@@ -10,7 +10,7 @@ count: 1
 ### generateSubscriptionError
 
 ```php
-function generateSubscriptionError($text, $debug = false)
+function generateSubscriptionError(string $text, bool $debug = false): void
 ```
 Log an error then exit
 

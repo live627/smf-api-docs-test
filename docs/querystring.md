@@ -10,7 +10,7 @@ count: 11
 ### cleanRequest
 
 ```php
-function cleanRequest()
+function cleanRequest(): void
 ```
 Clean the request variables - add html entities to GET and slashes if magic_quotes_gpc is Off.
 
@@ -25,7 +25,7 @@ What it does:
 ### isValidIPv6
 
 ```php
-function isValidIPv6($ip)
+function isValidIPv6(string $ip): bool
 ```
 Validates a IPv6 address. returns true if it is ipv6.
 
@@ -38,7 +38,7 @@ Type|Parameter|Description
 ### expandIPv6
 
 ```php
-function expandIPv6($addr, $strict_check = true)
+function expandIPv6(string $addr, bool $strict_check = true): string|bool
 ```
 Expands a IPv6 address to its full form.
 
@@ -52,7 +52,7 @@ Type|Parameter|Description
 ### matchIPtoCIDR
 
 ```php
-function matchIPtoCIDR($ip_address, $cidr_address)
+function matchIPtoCIDR(string $ip_address, string $cidr_address): bool
 ```
 Detect if a IP is in a CIDR address
 - returns true or false
@@ -67,7 +67,7 @@ Type|Parameter|Description
 ### escapestring__recursive
 
 ```php
-function escapestring__recursive($var)
+function escapestring__recursive(array|string $var): array|string
 ```
 Adds slashes to the array/variable.
 
@@ -83,7 +83,7 @@ Type|Parameter|Description
 ### htmlspecialchars__recursive
 
 ```php
-function htmlspecialchars__recursive($var, $level = 0)
+function htmlspecialchars__recursive(array|string $var, int $level = 0): array|string
 ```
 Adds html entities to the array/variable.  Uses two underscores to guard against overloading.
 
@@ -100,7 +100,7 @@ Type|Parameter|Description
 ### urldecode__recursive
 
 ```php
-function urldecode__recursive($var, $level = 0)
+function urldecode__recursive(array|string $var, int $level = 0): array|string
 ```
 Removes url stuff from the array/variable.  Uses two underscores to guard against overloading.
 
@@ -117,7 +117,7 @@ Type|Parameter|Description
 ### unescapestring__recursive
 
 ```php
-function unescapestring__recursive($var)
+function unescapestring__recursive(array|string $var): array|string
 ```
 Unescapes any array or variable.  Uses two underscores to guard against overloading.
 
@@ -133,7 +133,7 @@ Type|Parameter|Description
 ### stripslashes__recursive
 
 ```php
-function stripslashes__recursive($var, $level = 0)
+function stripslashes__recursive(array|string $var, int $level = 0): array|string
 ```
 Remove slashes recursively.  Uses two underscores to guard against overloading.
 
@@ -150,7 +150,7 @@ Type|Parameter|Description
 ### htmltrim__recursive
 
 ```php
-function htmltrim__recursive($var, $level = 0)
+function htmltrim__recursive(array|string $var, int $level = 0): array|string
 ```
 Trim a string including the HTML space, character 160.  Uses two underscores to guard against overloading.
 
@@ -167,7 +167,7 @@ Type|Parameter|Description
 ### ob_sessrewrite
 
 ```php
-function ob_sessrewrite($buffer)
+function ob_sessrewrite(string $buffer): string
 ```
 Rewrite URLs to include the session ID.
 

@@ -10,7 +10,7 @@ count: 1
 ### PrintTopic
 
 ```php
-function PrintTopic()
+function PrintTopic(): void
 ```
 Format a topic to be printer friendly.
 

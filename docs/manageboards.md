@@ -10,7 +10,7 @@ count: 8
 ### ManageBoards
 
 ```php
-function ManageBoards()
+function ManageBoards(): void
 ```
 The main dispatcher; doesn't do anything, just delegates.
 
@@ -23,7 +23,7 @@ Uses ManageBoards language file.
 ### ManageBoardsMain
 
 ```php
-function ManageBoardsMain()
+function ManageBoardsMain(): void
 ```
 The main control panel thing, the screen showing all boards and categories.
 
@@ -36,7 +36,7 @@ Uses ManageBoards template, main sub-template.
 ### EditCategory
 
 ```php
-function EditCategory()
+function EditCategory(): void
 ```
 Modify a specific category.
 
@@ -49,7 +49,7 @@ Requires manage_boards permission.
 ### EditCategory2
 
 ```php
-function EditCategory2()
+function EditCategory2(): void
 ```
 Function for handling a submitted form saving the category.
 
@@ -62,7 +62,7 @@ Redirects to ?action=admin;area=manageboards.
 ### EditBoard
 
 ```php
-function EditBoard()
+function EditBoard(): void
 ```
 Modify a specific board...
 screen for editing and repositioning a board.
@@ -75,7 +75,7 @@ also used to show the confirm deletion of category screen (sub-template confirm_
 ### EditBoard2
 
 ```php
-function EditBoard2()
+function EditBoard2(): void
 ```
 Make changes to/delete a board.
 
@@ -88,7 +88,7 @@ It requires manage_boards permission.
 ### ModifyCat
 
 ```php
-function ModifyCat()
+function ModifyCat(): void
 ```
 Used to retrieve data for modifying a board category
 
@@ -97,7 +97,7 @@ Used to retrieve data for modifying a board category
 ### EditBoardSettings
 
 ```php
-function EditBoardSettings($return_config = false)
+function EditBoardSettings(bool $return_config = false): void|array
 ```
 A screen to set a few general board and category settings.
 

@@ -10,7 +10,7 @@ count: 3
 ### template_control_richedit
 
 ```php
-function template_control_richedit($editor_id, $smileyContainer = null, $bbcContainer = null)
+function template_control_richedit(string $editor_id, ?bool $smileyContainer = null, ?bool $bbcContainer = null): void
 ```
 This function displays all the stuff you get with a richedit box - BBC, smileys, etc.
 
@@ -25,7 +25,7 @@ Type|Parameter|Description
 ### template_control_richedit_buttons
 
 ```php
-function template_control_richedit_buttons($editor_id)
+function template_control_richedit_buttons(string $editor_id): void
 ```
 This template shows the form buttons at the bottom of the editor
 
@@ -38,7 +38,7 @@ Type|Parameter|Description
 ### template_control_verification
 
 ```php
-function template_control_verification($verify_id, $display_type = 'all', $reset = false)
+function template_control_verification(int|string $verify_id, string $display_type = 'all', bool $reset = false): bool
 ```
 This template displays a verification form
 

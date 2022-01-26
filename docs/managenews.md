@@ -10,7 +10,7 @@ count: 8
 ### ManageNews
 
 ```php
-function ManageNews()
+function ManageNews(): void
 ```
 The news dispatcher; doesn't do anything, just delegates.
 
@@ -22,7 +22,7 @@ based on the requested sub-action.
 ### EditNews
 
 ```php
-function EditNews()
+function EditNews(): void
 ```
 Let the administrator(s) edit the news items for the forum.
 
@@ -37,7 +37,7 @@ Uses a standard list (@see createList())
 ### list_getNews
 
 ```php
-function list_getNews()
+function list_getNews(): array
 ```
 Prepares an array of the forum news items for display in the template
 
@@ -46,7 +46,7 @@ Prepares an array of the forum news items for display in the template
 ### SelectMailingMembers
 
 ```php
-function SelectMailingMembers()
+function SelectMailingMembers(): void
 ```
 This function allows a user to select the membergroups to send their
 mailing to.
@@ -58,7 +58,7 @@ Form is submitted to ?action=admin;area=news;mailingcompose.
 ### prepareMailingForPreview
 
 ```php
-function prepareMailingForPreview()
+function prepareMailingForPreview(): void
 ```
 Prepare subject and message of an email for the preview box
 Used in ComposeMailing and RetrievePreview (Xml.php)
@@ -68,7 +68,7 @@ Used in ComposeMailing and RetrievePreview (Xml.php)
 ### ComposeMailing
 
 ```php
-function ComposeMailing()
+function ComposeMailing(): void
 ```
 Shows a form to edit a forum mailing and its recipients.
 
@@ -79,7 +79,7 @@ Form is submitted to ?action=admin;area=news;sa=mailingsend.
 ### SendMailing
 
 ```php
-function SendMailing($clean_only = false)
+function SendMailing(bool $clean_only = false): void
 ```
 Handles the sending of the forum mailing in batches.
 
@@ -95,7 +95,7 @@ Type|Parameter|Description
 ### ModifyNewsSettings
 
 ```php
-function ModifyNewsSettings($return_config = false)
+function ModifyNewsSettings(bool $return_config = false): void|array
 ```
 Set general news and newsletter settings and permissions.
 

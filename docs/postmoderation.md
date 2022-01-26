@@ -10,7 +10,7 @@ count: 9
 ### PostModerationMain
 
 ```php
-function PostModerationMain()
+function PostModerationMain(): void
 ```
 This is a handling function for all things post moderation.
 
@@ -19,7 +19,7 @@ This is a handling function for all things post moderation.
 ### UnapprovedPosts
 
 ```php
-function UnapprovedPosts()
+function UnapprovedPosts(): void
 ```
 View all unapproved posts.
 
@@ -28,7 +28,7 @@ View all unapproved posts.
 ### UnapprovedAttachments
 
 ```php
-function UnapprovedAttachments()
+function UnapprovedAttachments(): void
 ```
 View all unapproved attachments.
 
@@ -37,7 +37,7 @@ View all unapproved attachments.
 ### list_getUnapprovedAttachments
 
 ```php
-function list_getUnapprovedAttachments($start, $items_per_page, $sort, $approve_query)
+function list_getUnapprovedAttachments(int $start, int $items_per_page, string $sort, string $approve_query): array
 ```
 Callback function for UnapprovedAttachments
 retrieve all the attachments waiting for approval the approver can approve
@@ -54,7 +54,7 @@ Type|Parameter|Description
 ### list_getNumUnapprovedAttachments
 
 ```php
-function list_getNumUnapprovedAttachments($approve_query)
+function list_getNumUnapprovedAttachments(string $approve_query): int
 ```
 Callback function for UnapprovedAttachments
 count all the attachments waiting for approval that this approver can approve
@@ -68,7 +68,7 @@ Type|Parameter|Description
 ### ApproveMessage
 
 ```php
-function ApproveMessage()
+function ApproveMessage(): void
 ```
 Approve a post, just the one.
 
@@ -77,7 +77,7 @@ Approve a post, just the one.
 ### approveMessages
 
 ```php
-function approveMessages($messages, $messageDetails, $current_view = 'replies')
+function approveMessages(array $messages, array $messageDetails, string $current_view = 'replies'): void
 ```
 Approve a batch of posts (or topics in their own right)
 
@@ -92,7 +92,7 @@ Type|Parameter|Description
 ### approveAllData
 
 ```php
-function approveAllData()
+function approveAllData(): void
 ```
 This is a helper function - basically approve everything!
 
@@ -101,7 +101,7 @@ This is a helper function - basically approve everything!
 ### removeMessages
 
 ```php
-function removeMessages($messages, $messageDetails, $current_view = 'replies')
+function removeMessages(array $messages, array $messageDetails, string $current_view = 'replies'): void
 ```
 Remove a batch of messages (or topics)
 

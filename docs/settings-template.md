@@ -10,7 +10,7 @@ count: 2
 ### template_options
 
 ```php
-function template_options()
+function template_options(): void
 ```
 This pseudo-template defines all the theme options
 
@@ -19,7 +19,7 @@ This pseudo-template defines all the theme options
 ### template_settings
 
 ```php
-function template_settings()
+function template_settings(): void
 ```
 This pseudo-template defines all the available theme settings (but not their actual values)
 

@@ -10,7 +10,7 @@ count: 4
 ### ModifyProfile
 
 ```php
-function ModifyProfile($post_errors = array())
+function ModifyProfile(array $post_errors = array()): void
 ```
 The main designating function for modifying profiles. Loads up info, determins what to do, etc.
 
@@ -23,7 +23,7 @@ Type|Parameter|Description
 ### profile_popup
 
 ```php
-function profile_popup($memID)
+function profile_popup(int $memID): void
 ```
 Set up the requirements for the profile popup - the area that is shown as the popup menu for the current user.
 
@@ -36,7 +36,7 @@ Type|Parameter|Description
 ### alerts_popup
 
 ```php
-function alerts_popup($memID)
+function alerts_popup(int $memID): void
 ```
 Set up the requirements for the alerts popup - the area that shows all the alerts just quickly for the current user.
 
@@ -49,7 +49,7 @@ Type|Parameter|Description
 ### loadCustomFields
 
 ```php
-function loadCustomFields($memID, $area = 'summary')
+function loadCustomFields(int $memID, string $area = 'summary'): void
 ```
 Load any custom fields for this area... no area means load all, 'summary' loads all public ones.
 

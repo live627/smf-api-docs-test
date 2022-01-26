@@ -10,7 +10,7 @@ count: 6
 ### ModifyMembergroups
 
 ```php
-function ModifyMembergroups()
+function ModifyMembergroups(): void
 ```
 Main dispatcher, the entrance point for all 'Manage Membergroup' actions.
 
@@ -25,7 +25,7 @@ Uses ManageMembers language file.
 ### MembergroupIndex
 
 ```php
-function MembergroupIndex()
+function MembergroupIndex(): void
 ```
 Shows an overview of the current membergroups.
 
@@ -39,7 +39,7 @@ Uses ManageMembergroups template, main.
 ### AddMembergroup
 
 ```php
-function AddMembergroup()
+function AddMembergroup(): void
 ```
 This function handles adding a membergroup and setting some initial properties.
 
@@ -51,7 +51,7 @@ Redirects to action=admin;area=membergroups;sa=edit;group=x.
 ### DeleteMembergroup
 
 ```php
-function DeleteMembergroup()
+function DeleteMembergroup(): void
 ```
 Deleting a membergroup by URL (not implemented).
 
@@ -62,7 +62,7 @@ Redirects to ?action=admin;area=membergroups.
 ### EditMembergroup
 
 ```php
-function EditMembergroup()
+function EditMembergroup(): void
 ```
 Editing a membergroup.
 
@@ -75,7 +75,7 @@ Redirects to ?action=admin;area=membergroups.
 ### ModifyMembergroupsettings
 
 ```php
-function ModifyMembergroupsettings()
+function ModifyMembergroupsettings(): void
 ```
 Set some general membergroup settings and permissions.
 

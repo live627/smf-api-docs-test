@@ -10,7 +10,7 @@ count: 4
 ### template_email_members
 
 ```php
-function template_email_members()
+function template_email_members(): void
 ```
 The template for sending newsletters
 
@@ -19,7 +19,7 @@ The template for sending newsletters
 ### template_email_members_compose
 
 ```php
-function template_email_members_compose()
+function template_email_members_compose(): void
 ```
 The form for composing a newsletter
 
@@ -28,7 +28,7 @@ The form for composing a newsletter
 ### template_email_members_send
 
 ```php
-function template_email_members_send()
+function template_email_members_send(): void
 ```
 The page shown while the newsletter is being sent
 
@@ -37,7 +37,7 @@ The page shown while the newsletter is being sent
 ### template_news_lists
 
 ```php
-function template_news_lists()
+function template_news_lists(): void
 ```
 The settings page.
 

@@ -10,7 +10,7 @@ count: 3
 ### template_ask
 
 ```php
-function template_ask()
+function template_ask(): void
 ```
 The form that asks how you want to split things
 
@@ -19,7 +19,7 @@ The form that asks how you want to split things
 ### template_main
 
 ```php
-function template_main()
+function template_main(): void
 ```
 A simple confirmation that things were split as expected, with links to the current board and the old and new topics.
 
@@ -28,7 +28,7 @@ A simple confirmation that things were split as expected, with links to the curr
 ### template_select
 
 ```php
-function template_select()
+function template_select(): void
 ```
 The form for selecting which posts to split.
 

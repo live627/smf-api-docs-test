@@ -10,7 +10,7 @@ count: 18
 ### markBoardsRead
 
 ```php
-function markBoardsRead($boards, $unread = false)
+function markBoardsRead(int|array $boards, bool $unread = false): void
 ```
 Mark a board or multiple boards read.
 
@@ -24,7 +24,7 @@ Type|Parameter|Description
 ### MarkRead
 
 ```php
-function MarkRead()
+function MarkRead(): void
 ```
 Mark one or more boards as read.
 
@@ -33,7 +33,7 @@ Mark one or more boards as read.
 ### getMsgMemberID
 
 ```php
-function getMsgMemberID($messageID)
+function getMsgMemberID(int $messageID): int
 ```
 Get the id_member associated with the specified message.
 
@@ -46,7 +46,7 @@ Type|Parameter|Description
 ### modifyBoard
 
 ```php
-function modifyBoard($board_id, &$boardOptions)
+function modifyBoard(int $board_id, array &$boardOptions): void
 ```
 Modify the settings and position of a board.
 
@@ -60,7 +60,7 @@ Type|Parameter|Description
 ### createBoard
 
 ```php
-function createBoard($boardOptions)
+function createBoard(array $boardOptions): int
 ```
 Create a new board and set its properties and position.
 
@@ -75,7 +75,7 @@ Type|Parameter|Description
 ### deleteBoards
 
 ```php
-function deleteBoards($boards_to_remove, $moveChildrenTo = null)
+function deleteBoards(array $boards_to_remove, int $moveChildrenTo = null): void
 ```
 Remove one or more boards.
 
@@ -94,7 +94,7 @@ Type|Parameter|Description
 ### reorderBoards
 
 ```php
-function reorderBoards()
+function reorderBoards(): void
 ```
 Put all boards in the right order and sorts the records of the boards table.
 
@@ -103,7 +103,7 @@ Used by modifyBoard(), deleteBoards(), modifyCategory(), and deleteCategories() 
 ### fixChildren
 
 ```php
-function fixChildren($parent, $newLevel, $newParent)
+function fixChildren(int $parent, int $newLevel, int $newParent): void
 ```
 Fixes the children of a board by setting their child_levels to new values.
 
@@ -118,7 +118,7 @@ Type|Parameter|Description
 ### getTreeOrder
 
 ```php
-function getTreeOrder()
+function getTreeOrder(): array
 ```
 Tries to load up the entire board order and category very very quickly
 Returns an array with two elements, cats and boards
@@ -128,7 +128,7 @@ Returns an array with two elements, cats and boards
 ### sortBoards
 
 ```php
-function sortBoards(array &$boards)
+function sortBoards(array &$boards): void
 ```
 Takes a board array and sorts it
 
@@ -141,7 +141,7 @@ Type|Parameter|Description
 ### sortCategories
 
 ```php
-function sortCategories(array &$categories)
+function sortCategories(array &$categories): void
 ```
 Takes a category array and sorts it
 
@@ -154,7 +154,7 @@ Type|Parameter|Description
 ### getBoardModerators
 
 ```php
-function getBoardModerators(array $boards)
+function getBoardModerators(array $boards): array
 ```
 Returns the given board's moderators, with their names and links
 
@@ -167,7 +167,7 @@ Type|Parameter|Description
 ### getBoardModeratorGroups
 
 ```php
-function getBoardModeratorGroups(array $boards)
+function getBoardModeratorGroups(array $boards): array
 ```
 Returns board's moderator groups with their names and link
 
@@ -180,7 +180,7 @@ Type|Parameter|Description
 ### getBoardTree
 
 ```php
-function getBoardTree()
+function getBoardTree(): void
 ```
 Load a lot of useful information regarding the boards and categories.
 
@@ -192,7 +192,7 @@ $cat_tree	properties of each category.
 ### recursiveBoards
 
 ```php
-function recursiveBoards(&$_boardList, &$_tree)
+function recursiveBoards(array &$_boardList, array &$_tree): void
 ```
 Recursively get a list of boards.
 
@@ -206,7 +206,7 @@ Type|Parameter|Description
 ### isChildOf
 
 ```php
-function isChildOf($child, $parent)
+function isChildOf(int $child, int $parent): bool
 ```
 Returns whether the child board id is actually a child of the parent (recursive).
 

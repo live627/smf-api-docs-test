@@ -10,7 +10,7 @@ count: 8
 ### SaveDraft
 
 ```php
-function SaveDraft(&$post_errors)
+function SaveDraft(array &$post_errors): bool
 ```
 Saves a post draft in the user_drafts table
 The core draft feature must be enabled, as well as the post draft option
@@ -26,7 +26,7 @@ Type|Parameter|Description
 ### SavePMDraft
 
 ```php
-function SavePMDraft(&$post_errors, $recipientList)
+function SavePMDraft(string &$post_errors, array $recipientList): bool
 ```
 Saves a PM draft in the user_drafts table
 The core draft feature must be enabled, as well as the pm draft option
@@ -42,7 +42,7 @@ Type|Parameter|Description
 ### ReadDraft
 
 ```php
-function ReadDraft($id_draft, $type = 0, $check = true, $load = false)
+function ReadDraft(int $id_draft, int $type = 0, bool $check = true, bool $load = false): bool|array
 ```
 Reads a draft in from the user_drafts table
 Validates that the draft is the user''s draft
@@ -60,7 +60,7 @@ Type|Parameter|Description
 ### DeleteDraft
 
 ```php
-function DeleteDraft($id_draft, $check = true)
+function DeleteDraft(int $id_draft, bool $check = true): bool
 ```
 Deletes one or many drafts from the DB
 Validates the drafts are from the user
@@ -76,7 +76,7 @@ Type|Parameter|Description
 ### ShowDrafts
 
 ```php
-function ShowDrafts($member_id, $topic = false, $draft_type = 0)
+function ShowDrafts(int $member_id, bool|int $topic = false, int $draft_type = 0): bool
 ```
 Loads in a group of drafts for the user of a given type (0/posts, 1/pm's)
 loads a specific draft for forum use if selected.
@@ -93,7 +93,7 @@ Type|Parameter|Description
 ### XmlDraft
 
 ```php
-function XmlDraft($id_draft)
+function XmlDraft(int $id_draft): void
 ```
 Returns an xml response to an autosave ajax request
 provides the id of the draft saved and the time it was saved
@@ -107,7 +107,7 @@ Type|Parameter|Description
 ### showProfileDrafts
 
 ```php
-function showProfileDrafts($memID, $draft_type = 0)
+function showProfileDrafts(int $memID, int $draft_type = 0): void
 ```
 Show all drafts of a given type by the current user
 Uses the showdraft template
@@ -123,7 +123,7 @@ Type|Parameter|Description
 ### showPMDrafts
 
 ```php
-function showPMDrafts($memID = -1)
+function showPMDrafts(int $memID = -1): void
 ```
 Show all PM drafts of the current user
 Uses the showpmdraft template

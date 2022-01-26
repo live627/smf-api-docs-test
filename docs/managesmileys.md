@@ -10,7 +10,7 @@ count: 14
 ### ManageSmileys
 
 ```php
-function ManageSmileys()
+function ManageSmileys(): void
 ```
 This is the dispatcher of smileys administration.
 
@@ -19,7 +19,7 @@ This is the dispatcher of smileys administration.
 ### EditSmileySettings
 
 ```php
-function EditSmileySettings($return_config = false)
+function EditSmileySettings(bool $return_config = false): void|array
 ```
 Handles modifying smileys settings.
 
@@ -32,7 +32,7 @@ Type|Parameter|Description
 ### EditSmileySets
 
 ```php
-function EditSmileySets()
+function EditSmileySets(): void
 ```
 List, add, remove, modify smileys sets.
 
@@ -41,7 +41,7 @@ List, add, remove, modify smileys sets.
 ### list_getSmileySets
 
 ```php
-function list_getSmileySets($start, $items_per_page, $sort)
+function list_getSmileySets(int $start, int $items_per_page, string $sort): array
 ```
 Callback function for createList().
 
@@ -56,7 +56,7 @@ Type|Parameter|Description
 ### list_getNumSmileySets
 
 ```php
-function list_getNumSmileySets()
+function list_getNumSmileySets(): int
 ```
 Callback function for createList().
 
@@ -65,7 +65,7 @@ Callback function for createList().
 ### AddSmiley
 
 ```php
-function AddSmiley()
+function AddSmiley(): void
 ```
 Add a smiley, that's right.
 
@@ -74,7 +74,7 @@ Add a smiley, that's right.
 ### EditSmileys
 
 ```php
-function EditSmileys()
+function EditSmileys(): void
 ```
 Add, remove, edit smileys.
 
@@ -83,7 +83,7 @@ Add, remove, edit smileys.
 ### list_getSmileys
 
 ```php
-function list_getSmileys($start, $items_per_page, $sort)
+function list_getSmileys(int $start, int $items_per_page, string $sort): array
 ```
 Callback function for createList().
 
@@ -98,7 +98,7 @@ Type|Parameter|Description
 ### list_getNumSmileys
 
 ```php
-function list_getNumSmileys()
+function list_getNumSmileys(): int
 ```
 Callback function for createList().
 
@@ -107,7 +107,7 @@ Callback function for createList().
 ### EditSmileyOrder
 
 ```php
-function EditSmileyOrder()
+function EditSmileyOrder(): void
 ```
 Allows to edit smileys order.
 
@@ -116,7 +116,7 @@ Allows to edit smileys order.
 ### InstallSmileySet
 
 ```php
-function InstallSmileySet()
+function InstallSmileySet(): void
 ```
 Install a smiley set.
 
@@ -125,7 +125,7 @@ Install a smiley set.
 ### ImportSmileys
 
 ```php
-function ImportSmileys($smileyPath, $create = false)
+function ImportSmileys(string $smileyPath, bool $create = false): void
 ```
 A function to import new smileys from an existing directory into the database.
 
@@ -139,7 +139,7 @@ Type|Parameter|Description
 ### EditMessageIcons
 
 ```php
-function EditMessageIcons()
+function EditMessageIcons(): void
 ```
 Handles editing message icons
 
@@ -148,7 +148,7 @@ Handles editing message icons
 ### list_getMessageIcons
 
 ```php
-function list_getMessageIcons($start, $items_per_page, $sort)
+function list_getMessageIcons(int $start, int $items_per_page, string $sort): array
 ```
 Callback function for createList().
 

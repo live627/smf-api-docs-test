@@ -10,7 +10,7 @@ count: 21
 ### ModifyPermissions
 
 ```php
-function ModifyPermissions()
+function ModifyPermissions(): void
 ```
 Dispatches to the right function based on the given subaction.
 
@@ -22,7 +22,7 @@ Uses ManagePermissions language file.
 ### PermissionIndex
 
 ```php
-function PermissionIndex()
+function PermissionIndex(): void
 ```
 Sets up the permissions by membergroup index page.
 
@@ -35,7 +35,7 @@ Uses ManagePermissions template file.
 ### PermissionByBoard
 
 ```php
-function PermissionByBoard()
+function PermissionByBoard(): void
 ```
 Handle permissions by board... more or less. :P
 
@@ -44,7 +44,7 @@ Handle permissions by board... more or less. :P
 ### SetQuickGroups
 
 ```php
-function SetQuickGroups()
+function SetQuickGroups(): void
 ```
 Handles permission modification actions from the upper part of the
 permission manager index.
@@ -54,7 +54,7 @@ permission manager index.
 ### ModifyMembergroup
 
 ```php
-function ModifyMembergroup()
+function ModifyMembergroup(): void
 ```
 Initializes the necessary to modify a membergroup's permissions.
 
@@ -63,7 +63,7 @@ Initializes the necessary to modify a membergroup's permissions.
 ### ModifyMembergroup2
 
 ```php
-function ModifyMembergroup2()
+function ModifyMembergroup2(): void
 ```
 This function actually saves modifications to a membergroup's board permissions.
 
@@ -72,7 +72,7 @@ This function actually saves modifications to a membergroup's board permissions.
 ### GeneralPermissionSettings
 
 ```php
-function GeneralPermissionSettings($return_config = false)
+function GeneralPermissionSettings(bool $return_config = false): void|array
 ```
 A screen to set some general settings for permissions.
 
@@ -85,7 +85,7 @@ Type|Parameter|Description
 ### setPermissionLevel
 
 ```php
-function setPermissionLevel($level, $group, $profile = 'null')
+function setPermissionLevel(string $level, int $group, string|int $profile = 'null'): void
 ```
 Set the permission level for a specific profile, group, or group for a profile.
 
@@ -100,7 +100,7 @@ Type|Parameter|Description
 ### loadAllPermissions
 
 ```php
-function loadAllPermissions()
+function loadAllPermissions(): void
 ```
 Load permissions into $context['permissions'].
 
@@ -109,7 +109,7 @@ Load permissions into $context['permissions'].
 ### init_inline_permissions
 
 ```php
-function init_inline_permissions($permissions, $excluded_groups = array())
+function init_inline_permissions(array $permissions, array $excluded_groups = array()): void
 ```
 Initialize a form with inline permissions settings.
 
@@ -133,7 +133,7 @@ Uses ManagePermissions template
 ### theme_inline_permissions
 
 ```php
-function theme_inline_permissions($permission)
+function theme_inline_permissions(string $permission): void
 ```
 Show a collapsible box to set a specific permission.
 
@@ -147,7 +147,7 @@ Type|Parameter|Description
 ### save_inline_permissions
 
 ```php
-function save_inline_permissions($permissions)
+function save_inline_permissions(array $permissions): void
 ```
 Save the permissions of a form containing inline permissions.
 
@@ -160,7 +160,7 @@ Type|Parameter|Description
 ### loadPermissionProfiles
 
 ```php
-function loadPermissionProfiles()
+function loadPermissionProfiles(): void
 ```
 Load permissions profiles.
 
@@ -169,7 +169,7 @@ Load permissions profiles.
 ### EditPermissionProfiles
 
 ```php
-function EditPermissionProfiles()
+function EditPermissionProfiles(): void
 ```
 Add/Edit/Delete profiles.
 
@@ -178,7 +178,7 @@ Add/Edit/Delete profiles.
 ### updateChildPermissions
 
 ```php
-function updateChildPermissions($parents, $profile = null)
+function updateChildPermissions(?array $parents, ?int $profile = null): void|false
 ```
 This function updates the permissions of any groups based off this group.
 
@@ -192,7 +192,7 @@ Type|Parameter|Description
 ### loadIllegalPermissions
 
 ```php
-function loadIllegalPermissions()
+function loadIllegalPermissions(): void
 ```
 Load permissions someone cannot grant.
 
@@ -201,7 +201,7 @@ Load permissions someone cannot grant.
 ### loadIllegalGuestPermissions
 
 ```php
-function loadIllegalGuestPermissions()
+function loadIllegalGuestPermissions(): void
 ```
 Loads the permissions that can not be given to guests.
 
@@ -211,7 +211,7 @@ Also populates $context['permissions_excluded'] with the info.
 ### loadIllegalBBCHtmlGroups
 
 ```php
-function loadIllegalBBCHtmlGroups()
+function loadIllegalBBCHtmlGroups(): void
 ```
 Loads a list of membergroups who cannot be granted the bbc_html permission.
 
@@ -220,7 +220,7 @@ Stores the groups in $context['permissions_excluded']['bbc_html'].
 ### removeIllegalBBCHtmlPermission
 
 ```php
-function removeIllegalBBCHtmlPermission($reload = false)
+function removeIllegalBBCHtmlPermission(bool $reload = false): void
 ```
 Removes the bbc_html permission from anyone who shouldn't have it
 
@@ -233,7 +233,7 @@ Type|Parameter|Description
 ### updateBoardManagers
 
 ```php
-function updateBoardManagers()
+function updateBoardManagers(): void
 ```
 Makes sure $modSettings['board_manager_groups'] is up to date.
 
@@ -242,7 +242,7 @@ Makes sure $modSettings['board_manager_groups'] is up to date.
 ### ModifyPostModeration
 
 ```php
-function ModifyPostModeration()
+function ModifyPostModeration(): void
 ```
 Present a nice way of applying post moderation.
 
