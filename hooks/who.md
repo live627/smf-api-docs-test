@@ -16,9 +16,10 @@ Type|Parameter|Description
 `array`|`&$allowedActions`|Hashmap of actions that require specific permissions
 
 Called from
-: `determineActions()` in `./Sources/Who.php`
+: [`determineActions()` in `./Sources/Who.php`](../docs/who.html#determineactions)
 
 Notes
+: Since 2.1
 : The example below will use `$txt['whoallow_mynewaction']` if the current user has either `mypermission` or `mysecondpermission`.
 : In this case, the current user is the one viewing the online log, not the one who's log is being viewed.
 
@@ -42,9 +43,10 @@ Type|Parameter|Description
 `array`|`$actions`|Hashmap of request components (`$_GET`)
 
 Called from
-: `determineActions()` in `./Sources/Who.php`
+: [`determineActions()` in `./Sources/Who.php`](../docs/who.html#determineactions)
 
 Notes
+: Since 1.1
 : `index.php?action=page;sa=something` results in $actions` being `array('action' => 'page', 'sa' => 'something')`
 : This is one of a select few hooks where you must `return` data instead of modifying a parameter.
 : The parameter is passed by *value*, not by *reference*. This means that any modifications to it will not be seen outside of your function!
@@ -54,7 +56,8 @@ Notes
 ```php
 function my_whos_online($actions)
 {
-	return 'stuff';
+	if (isset($actions['action']) && $actions['action'] === 'mynewaction' && allowedTo(['mypermission', 'mysecondpermission']))
+		return 'stuff'; // NOT a $txt key!
 }
 ```
 
@@ -83,17 +86,11 @@ Type|Parameter|Description
 `array`|`&$data`|Hashmap of session data for the template
 
 Called from
-: `determineActions()` in `./Sources/Who.php`
+: [`determineActions()` in `./Sources/Who.php`](../docs/who.html#determineactions)
 
 Notes
+: Since 2.1
 : Each element of `&$urls` has the following definition:
-
-    Type|Key|Description
-    ---|---|---
-    `string`|`0`|JSON encoded raw request data
-    `string`|`1`|The member id
-: Numeric values are strings because the native mysqld driver only returns strings.
-: Each element of `$urls` has the following definition:
 
     Type|Key|Description
     ---|---|---
