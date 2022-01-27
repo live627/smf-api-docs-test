@@ -22,6 +22,9 @@ It uses the main sub template in the Calendar template.
 It goes to the month and year passed in 'month' and 'year' by get or post.
 It is accessed through ?action=calendar.
 
+Integration hooks
+: integrate_calendar_buttons
+
 ### CalendarPost
 
 ```php

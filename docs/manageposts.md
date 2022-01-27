@@ -20,6 +20,9 @@ Defaults to sub-action 'posts'.
 Accessed from ?action=admin;area=postsettings.
 Requires (and checks for) the admin_forum permission.
 
+Integration hooks
+: integrate_manage_posts
+
 ### SetCensor
 
 ```php
@@ -31,6 +34,10 @@ It uses the censor_vulgar, censor_proper, censorWholeWord, and censorIgnoreCase
 settings.
 Requires the admin_forum permission.
 Accessed from ?action=admin;area=postsettings;sa=censor.
+
+Integration hooks
+: integrate_save_censors
+: integrate_censors
 
 ### ModifyPostSettings
 
@@ -46,6 +53,10 @@ Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether or not to return the $config_vars array (used for admin search)
 
+Integration hooks
+: integrate_modify_post_settings
+: integrate_save_post_settings
+
 ### ModifyTopicSettings
 
 ```php
@@ -59,6 +70,10 @@ Accessed from ?action=admin;area=postsettings;sa=topics.
 Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
+
+Integration hooks
+: integrate_modify_topic_settings
+: integrate_save_topic_settings
 
 ### ModifyDraftSettings
 

@@ -26,6 +26,10 @@ Will call the relevant report generation function.
 If generating report will call finishTables before returning.
 Accessed through ?action=admin;area=reports.
 
+Integration hooks
+: integrate_report_types
+: integrate_report_buttons
+
 ### BoardReport
 
 ```php
@@ -52,6 +56,9 @@ they are all called from ReportsMain.
 never access the context directly, but use the data handling
 functions to do so.
 
+Integration hooks
+: integrate_reports_boardperm
+
 ### MemberGroupsReport
 
 ```php
@@ -77,6 +84,9 @@ for reporting.
 they are all called from ReportsMain.
 never access the context directly, but use the data handling
 functions to do so.
+
+Integration hooks
+: integrate_reports_groupperm
 
 ### StaffReport
 

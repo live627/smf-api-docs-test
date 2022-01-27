@@ -16,6 +16,12 @@ Show the list of topics in this board, along with any child boards.
 
 
 
+Integration hooks
+: integrate_pre_messageindex
+: integrate_message_index
+: integrate_quick_mod_actions
+: integrate_messageindex_buttons
+
 ### QuickModeration
 
 ```php

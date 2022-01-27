@@ -20,6 +20,12 @@ Type|Parameter|Description
 ---|---|---
 `array`|`$post_errors`|Any errors that occurred
 
+Integration hooks
+: integrate_pre_profile_areas
+: integrate_verify_password
+: integrate_profile_save
+: integrate_reset_pass
+
 ### profile_popup
 
 ```php
@@ -32,6 +38,9 @@ Set up the requirements for the profile popup - the area that is shown as the po
 Type|Parameter|Description
 ---|---|---
 `int`|`$memID`|The ID of the member
+
+Integration hooks
+: integrate_profile_popup
 
 ### alerts_popup
 
@@ -59,4 +68,7 @@ Type|Parameter|Description
 ---|---|---
 `int`|`$memID`|The ID of the member
 `string`|`$area`|Which area to load fields for
+
+Integration hooks
+: integrate_load_custom_profile_fields
 

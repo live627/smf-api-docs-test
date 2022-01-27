@@ -22,6 +22,9 @@ Uses ManageAttachments template.
 Uses Admin language file.
 Uses template layer 'manage_files' for showing the tab bar.
 
+Integration hooks
+: integrate_manage_attachments
+
 ### ManageAttachmentSettings
 
 ```php
@@ -36,6 +39,10 @@ Uses 'attachments' sub template.
 Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether to return the array of config variables (used for admin search)
+
+Integration hooks
+: integrate_modify_attachment_settings
+: integrate_save_attachment_settings
 
 ### ManageAvatarSettings
 
@@ -52,6 +59,10 @@ Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether to return the config_vars array (used for admin search)
 
+Integration hooks
+: integrate_modify_avatar_settings
+: integrate_save_avatar_settings
+
 ### BrowseFiles
 
 ```php
@@ -63,6 +74,9 @@ Called by ?action=admin;area=manageattachments;sa=browse for attachments
  and ?action=admin;area=manageattachments;sa=browse;avatars for avatars.
 Allows sorting by name, date, size and member.
 Paginates results.
+
+Integration hooks
+: integrate_attachments_browse
 
 ### list_getFiles
 
@@ -139,6 +153,9 @@ Remove a selection of attachments or avatars.
 Called from the browse screen as submitted form by
 ?action=admin;area=manageattachments;sa=remove
 
+Integration hooks
+: integrate_attachment_remove
+
 ### RemoveAllAttachments
 
 ```php
@@ -170,6 +187,9 @@ Type|Parameter|Description
 `bool`|`$return_affected_messages`|Whether to return an array with the IDs of affected messages
 `bool`|`$autoThumbRemoval`|Whether to automatically remove any thumbnails associated with the removed files
 
+Integration hooks
+: integrate_remove_attachments
+
 ### RepairAttachments
 
 ```php
@@ -178,6 +198,9 @@ function RepairAttachments(): void
 This function should find attachments in the database that no longer exist and clear them, and fix filesize issues.
 
 
+
+Integration hooks
+: integrate_repair_attachments_nomsg
 
 ### pauseAttachmentMaintenance
 
@@ -215,6 +238,9 @@ Approve an attachment, or maybe even more - no permission check!
 Type|Parameter|Description
 ---|---|---
 `array`|`$attachments`|The IDs of the attachments to approve
+
+Integration hooks
+: integrate_approve_attachments
 
 ### ManageAttachmentPaths
 

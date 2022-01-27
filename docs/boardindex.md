@@ -18,3 +18,6 @@ It uses the BoardIndex template, and main sub template.
 It updates the most online statistics.
 It is accessed by ?action=boardindex.
 
+Integration hooks
+: integrate_mark_read_button
+

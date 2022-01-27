@@ -16,6 +16,10 @@ Load the $modSettings array.
 
 
 
+Integration hooks
+: integrate_load_average
+: integrate_pre_load
+
 ### loadUserSettings
 
 ```php
@@ -32,6 +36,12 @@ What it does:
 	- if validation fails for the user, $id_member is set to 0.
 	- updates the last visit time when needed.
 
+Integration hooks
+: integrate_verify_user
+: integrate_force_tfasetup
+: integrate_verify_tfa
+: integrate_user_info
+
 ### loadMinUserInfo
 
 ```php
@@ -44,6 +54,10 @@ Intended for use by background tasks that need to populate $user_info.
 Type|Parameter|Description
 ---|---|---
 `int&#124;array`|`$user_ids`|The users IDs to get the data for.
+
+Integration hooks
+: integrate_load_min_user_settings_columns
+: integrate_load_min_user_settings
 
 ### loadBoard
 
@@ -60,6 +74,10 @@ What it does:
 - determines the local moderators for the board.
 - adds group id 3 if the user is a local moderator for the board they are in.
 - prevents access if user is not in proper group nor a local moderator of the board.
+
+Integration hooks
+: integrate_load_board
+: integrate_board_info
 
 ### loadPermissions
 
@@ -85,6 +103,9 @@ Type|Parameter|Description
 `bool`|`$is_name`|Whether $users contains names
 `string`|`$set`|What kind of data to load (normal, profile, minimal)
 
+Integration hooks
+: integrate_load_member_data
+
 ### loadMemberContext
 
 ```php
@@ -98,6 +119,9 @@ Type|Parameter|Description
 ---|---|---
 `int`|`$user`|The ID of a user previously loaded by {@link loadMemberData()}
 `bool`|`$display_custom_fields`|Whether or not to display custom profile fields
+
+Integration hooks
+: integrate_member_context
 
 ### loadMemberCustomFields
 
@@ -149,6 +173,11 @@ Type|Parameter|Description
 ---|---|---
 `int`|`$id_theme`|The ID of the theme to load
 `bool`|`$initialize`|Whether or not to initialize a bunch of theme-related variables/settings
+
+Integration hooks
+: integrate_pre_load_theme
+: integrate_simple_actions
+: integrate_load_theme
 
 ### loadTemplate
 
@@ -400,6 +429,10 @@ Type|Parameter|Description
 `array`|`$params`|Parameters to be passed to the specified function
 `int`|`$level`|The cache level
 
+Integration hooks
+: pre_cache_quick_get
+: post_cache_quick_get
+
 ### cache_put_data
 
 ```php
@@ -421,6 +454,9 @@ Type|Parameter|Description
 `mixed`|`$value`|The data to cache
 `int`|`$ttl`|How long (in seconds) the data should be cached for
 
+Integration hooks
+: cache_put_data
+
 ### cache_get_data
 
 ```php
@@ -435,6 +471,9 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$key`|The key for the value to retrieve
 `int`|`$ttl`|The maximum age of the cached data
+
+Integration hooks
+: cache_get_data
 
 ### clean_cache
 
@@ -454,6 +493,9 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$type`|The cache type ('memcached', 'zend' or something else for SMF's file cache)
 
+Integration hooks
+: integrate_clean_cache
+
 ### set_avatar_data
 
 ```php
@@ -469,6 +511,9 @@ Makes assumptions based on the data provided, the following keys are required:
 Type|Parameter|Description
 ---|---|---
 `array`|`$data`|An array of raw info
+
+Integration hooks
+: integrate_set_avatar_data
 
 ### get_auth_secret
 

@@ -34,11 +34,17 @@ Does not use any templates, sub templates, or template layers.
 
 Uses Stats, Profile, Post, and PersonalMessage language files.
 
+Integration hooks
+: integrate_xmlfeeds
+
 ### buildXmlFeed
 
 ```php
 function buildXmlFeed($xml_format, $xml_data, $feed_meta, $subaction)
 ```
+Integration hooks
+: integrate_xml_data
+
 ### fix_possible_url
 
 ```php
@@ -52,6 +58,9 @@ Finds urls for local site and sanitizes them
 Type|Parameter|Description
 ---|---|---
 `string`|`$val`|A string containing a possible URL
+
+Integration hooks
+: integrate_fix_url
 
 ### cdata_parse
 

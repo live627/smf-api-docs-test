@@ -16,6 +16,9 @@ Main dispatcher, the maintenance access point.
 
 This, as usual, checks permissions, loads language files, and forwards to the actual workers.
 
+Integration hooks
+: integrate_manage_maintenance
+
 ### MaintainDatabase
 
 ```php
@@ -100,6 +103,9 @@ This is needed only for MySQL.
 During the conversion from MEDIUMTEXT to TEXT it check if any of the posts exceed the TEXT length and if so it aborts.
 This action is linked from the maintenance screen (if it's applicable).
 Accessed by ?action=admin;area=maintain;sa=database;activity=convertmsgbody.
+
+Integration hooks
+: integrate_convert_msgbody
 
 ### ConvertEntities
 

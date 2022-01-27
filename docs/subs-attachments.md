@@ -87,6 +87,9 @@ Moves an attachment to the proper directory and set the relevant data into $_SES
 
 
 
+Integration hooks
+: integrate_attachment_upload
+
 ### attachmentChecks
 
 ```php
@@ -115,6 +118,9 @@ Type|Parameter|Description
 ---|---|---
 `array`|`$attachmentOptions`|An array of attachment options
 
+Integration hooks
+: integrate_createAttachment
+
 ### assignAttachments
 
 ```php
@@ -129,6 +135,9 @@ Type|Parameter|Description
 `null`|`$attachIDs`|array of attachment IDs to assign.
 `null`|`$msgID`|integer the message ID.
 
+Integration hooks
+: integrate_assign_attachments
+
 ### parseAttachBBC
 
 ```php
@@ -141,6 +150,10 @@ Gets an attach ID and tries to load all its info.
 Type|Parameter|Description
 ---|---|---
 `int`|`$attachID`|the attachment ID to load info from.
+
+Integration hooks
+: integrate_pre_parseAttachBBC
+: integrate_post_parseAttachBBC
 
 ### getRawAttachInfo
 

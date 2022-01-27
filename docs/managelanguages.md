@@ -17,6 +17,9 @@ This is the main function for the languages area.
 It dispatches the requests.
 Loads the ManageLanguages template. (sub-actions will use it)
 
+Integration hooks
+: integrate_manage_languages
+
 ### AddLanguage
 
 ```php
@@ -91,6 +94,10 @@ Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether to return the $config_vars array (used in admin search)
 
+Integration hooks
+: integrate_language_settings
+: integrate_save_language_settings
+
 ### ModifyLanguage
 
 ```php
@@ -99,6 +106,10 @@ function ModifyLanguage(): void
 Edit a particular set of language entries.
 
 
+
+Integration hooks
+: integrate_modifylanguages
+: integrate_language_edit_helptext
 
 ### cleanLangString
 

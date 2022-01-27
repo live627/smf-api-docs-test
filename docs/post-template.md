@@ -16,6 +16,9 @@ The main template for the post page.
 
 
 
+Integration hooks
+: integrate_upload_template
+
 ### template_spellcheck
 
 ```php

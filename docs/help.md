@@ -19,6 +19,9 @@ It is accessed by ?action=help.
 
 Uses Help template and Manual language file.
 
+Integration hooks
+: integrate_manage_help
+
 ### HelpIndex
 
 ```php
@@ -41,4 +44,7 @@ the string from. ($helptxt or $txt?)
 It is accessed via ?action=helpadmin;help=?.
 
 Uses ManagePermissions language file, if the help starts with permissionhelp.
+
+Integration hooks
+: integrate_helpadmin
 

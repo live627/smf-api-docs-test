@@ -64,6 +64,9 @@ Type|Parameter|Description
 `mixed`|`$members`|An array of member IDs, the ID of a single member, or null to update this for all members
 `array`|`$data`|The info to update for the members
 
+Integration hooks
+: integrate_change_member_data
+
 ### updateSettings
 
 ```php
@@ -347,6 +350,14 @@ When a string, the message is parsed and bbc handled.
 `string`|`$cache_id`|The cache ID
 `array`|`$parse_tags`|If set, only parses these tags rather than all of them
 
+Integration hooks
+: integrate_pre_parsebbc
+: integrate_attach_bbc_validate
+: integrate_bbc_codes
+: integrate_bbc_print
+: integrate_autolinker_schemes
+: integrate_post_parsebbc
+
 ### parsesmileys
 
 ```php
@@ -363,6 +374,9 @@ Doesn't return anything, but rather modifies message directly.
 Type|Parameter|Description
 ---|---|---
 `string`|` &$message`|The message to parse smileys in
+
+Integration hooks
+: integrate_smileys
 
 ### highlight_php_code
 
@@ -393,6 +407,9 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$url`|The original URL of the requested resource
 
+Integration hooks
+: integrate_proxy
+
 ### redirectexit
 
 ```php
@@ -407,6 +424,9 @@ Type|Parameter|Description
 `string`|`$setLocation`|The URL to redirect them to
 `bool`|`$refresh`|Whether to use a meta refresh instead
 `bool`|`$permanent`|Whether to send a 301 Moved Permanently instead of a 302 Moved Temporarily
+
+Integration hooks
+: integrate_redirect
 
 ### obExit
 
@@ -423,6 +443,9 @@ Type|Parameter|Description
 `bool`|`$do_footer`|Whether to do the footer
 `bool`|`$from_index`|Whether we're coming from the board index
 `bool`|`$from_fatal_error`|Whether we're coming from a fatal error
+
+Integration hooks
+: integrate_exit
 
 ### url_image_size
 
@@ -449,6 +472,9 @@ Sets up the basic theme context stuff.
 Type|Parameter|Description
 ---|---|---
 `bool`|`$forceload`|Whether to load the theme even if it's already loaded
+
+Integration hooks
+: integrate_theme_context
 
 ### setMemoryLimit
 
@@ -488,6 +514,9 @@ The header template
 
 
 
+Integration hooks
+: integrate_security_files
+
 ### theme_copyright
 
 ```php
@@ -521,6 +550,9 @@ Type|Parameter|Description
 ---|---|---
 `bool`|`$do_deferred`|If true will only output the deferred JS (the stuff that goes right before the closing body tag)
 
+Integration hooks
+: integrate_pre_javascript_output
+
 ### template_css
 
 ```php
@@ -529,6 +561,9 @@ function template_css(): void
 Output the CSS files
 
 
+
+Integration hooks
+: integrate_pre_css_output
 
 ### custMinify
 
@@ -638,6 +673,10 @@ Saves them in the cache if it is available and on
 Places the results in $context
 
 
+
+Integration hooks
+: integrate_menu_buttons
+: integrate_current_action
 
 ### smf_seed_generator
 

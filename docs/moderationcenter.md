@@ -29,6 +29,9 @@ This function basically is the home page of the moderation center.
 
 
 
+Integration hooks
+: integrate_mod_centre_blocks
+
 ### ModBlockWatchedUsers
 
 ```php
@@ -178,6 +181,9 @@ function ViewWarnings(): void
 Entry point for viewing warning related stuff.
 
 
+
+Integration hooks
+: integrate_warning_log_actions
 
 ### ViewWarningLog
 

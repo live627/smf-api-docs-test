@@ -20,6 +20,9 @@ Everything here requires admin_forum permission.
 Uses ManageScheduledTasks template file
 Uses ManageScheduledTasks language file
 
+Integration hooks
+: integrate_manage_scheduled_tasks
+
 ### ScheduledTasks
 
 ```php
@@ -98,4 +101,8 @@ This handles settings related to scheduled tasks
 Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether or not to return the config vars. Used in the admin search.
+
+Integration hooks
+: integrate_scheduled_tasks_settings
+: integrate_save_scheduled_tasks_settings
 

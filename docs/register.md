@@ -29,6 +29,9 @@ Actually register the member.
 
 
 
+Integration hooks
+: integrate_activate
+
 ### Activate
 
 ```php
@@ -37,6 +40,9 @@ function Activate(): void
 Activate an users account.
 
 Checks for mail changes, resends password if needed.
+
+Integration hooks
+: integrate_activate
 
 ### CoppaForm
 

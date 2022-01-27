@@ -25,6 +25,9 @@ Type|Parameter|Description
 `string`|`$file`|The name of the file where this error occurred
 `int`|`$line`|The line where the error occurred
 
+Integration hooks
+: integrate_error_types
+
 ### fatal_error
 
 ```php
@@ -76,6 +79,9 @@ Type|Parameter|Description
 `string`|`$error_string`|The error message
 `string`|`$file`|The file where the error occurred
 `int`|`$line`|The line where the error occurred
+
+Integration hooks
+: integrate_output_error
 
 ### setup_fatal_error_context
 

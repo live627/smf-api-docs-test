@@ -16,6 +16,9 @@ Main dispatcher. This function checks permissions and passes control through to 
 
 
 
+Integration hooks
+: integrate_manage_mail
+
 ### BrowseMailQueue
 
 ```php
@@ -61,6 +64,10 @@ Allows to view and modify the mail settings.
 Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether to return the $config_vars array (used for admin search)
+
+Integration hooks
+: integrate_modify_mail_settings
+: integrate_save_mail_settings
 
 ### ClearMailQueue
 

@@ -19,6 +19,9 @@ It defaults to sub-action 'view'.
 Accessed from ?action=admin;area=paidsubscribe.
 It requires admin_forum permission for admin based actions.
 
+Integration hooks
+: integrate_manage_subscriptions
+
 ### ModifySubscriptionSettings
 
 ```php
@@ -52,6 +55,10 @@ function ModifySubscription(): void
 Adding, editing and deleting subscriptions.
 
 Accessed from ?action=admin;area=paidsubscribe;sa=modify.
+
+Integration hooks
+: integrate_delete_subscription
+: integrate_save_subscription
 
 ### ViewSubscribedUsers
 

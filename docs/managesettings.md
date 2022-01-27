@@ -30,6 +30,9 @@ This function passes control through to the relevant tab.
 
 
 
+Integration hooks
+: integrate_modify_features
+
 ### ModifyModSettings
 
 ```php
@@ -38,6 +41,9 @@ function ModifyModSettings(): void
 This my friend, is for all the mod authors out there.
 
 
+
+Integration hooks
+: integrate_modify_modifications
 
 ### ModifyBasicSettings
 
@@ -53,6 +59,10 @@ Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
 
+Integration hooks
+: integrate_modify_basic_settings
+: integrate_save_basic_settings
+
 ### ModifyBBCSettings
 
 ```php
@@ -66,6 +76,10 @@ Accessed from ?action=admin;area=featuresettings;sa=bbc.
 Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
+
+Integration hooks
+: integrate_modify_bbc_settings
+: integrate_save_bbc_settings
 
 ### ModifyLayoutSettings
 
@@ -81,6 +95,10 @@ Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
 
+Integration hooks
+: integrate_layout_settings
+: integrate_save_layout_settings
+
 ### ModifyLikesSettings
 
 ```php
@@ -94,6 +112,10 @@ Accessed  from ?action=admin;area=featuresettings;sa=likes;
 Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether or not to return the config_vars array
+
+Integration hooks
+: integrate_likes_settings
+: integrate_save_likes_settings
 
 ### ModifyMentionsSettings
 
@@ -109,6 +131,10 @@ Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
 
+Integration hooks
+: integrate_mentions_settings
+: integrate_save_mentions_settings
+
 ### ModifyWarningSettings
 
 ```php
@@ -121,6 +147,10 @@ Moderation type settings - although there are fewer than we have you believe ;)
 Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
+
+Integration hooks
+: integrate_warning_settings
+: integrate_save_warning_settings
 
 ### ModifyAntispamSettings
 
@@ -135,6 +165,10 @@ Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
 
+Integration hooks
+: integrate_spam_settings
+: integrate_save_spam_settings
+
 ### ModifySignatureSettings
 
 ```php
@@ -147,6 +181,11 @@ You'll never guess what this function does.
 Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
+
+Integration hooks
+: integrate_signature_settings
+: integrate_apply_signature_settings
+: integrate_save_signature_settings
 
 ### pauseSignatureApplySettings
 
@@ -222,6 +261,10 @@ Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
 
+Integration hooks
+: integrate_prune_settings
+: integrate_prune_settings
+
 ### ModifyGeneralModSettings
 
 ```php
@@ -234,6 +277,10 @@ If you have a general mod setting to add stick it here.
 Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
+
+Integration hooks
+: integrate_general_mod_settings
+: integrate_save_general_mod_settings
 
 ### ModifyAlertsSettings
 

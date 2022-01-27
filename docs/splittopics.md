@@ -95,6 +95,9 @@ Type|Parameter|Description
 `array`|`$splitMessages`|The IDs of the messages being split
 `string`|`$new_subject`|The subject of the new topic
 
+Integration hooks
+: integrate_split_topic
+
 ### MergeTopics
 
 ```php
@@ -141,6 +144,9 @@ the actual merge:
 Type|Parameter|Description
 ---|---|---
 `array`|`$topics`|The IDs of the topics to merge
+
+Integration hooks
+: integrate_merge_topic
 
 ### MergeDone
 

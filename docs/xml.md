@@ -16,6 +16,9 @@ The main handler and designator for AJAX stuff - jumpto, message icons and previ
 
 
 
+Integration hooks
+: integrate_XMLhttpMain_subActions
+
 ### GetJumpTo
 
 ```php

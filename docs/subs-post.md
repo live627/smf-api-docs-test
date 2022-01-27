@@ -22,6 +22,9 @@ Type|Parameter|Description
 `string`|`$message`|The mesasge
 `bool`|`$previewing`|Whether we're previewing
 
+Integration hooks
+: integrate_preparsecode
+
 ### un_preparsecode
 
 ```php
@@ -34,6 +37,9 @@ This is very simple, and just removes things done by preparsecode.
 Type|Parameter|Description
 ---|---|---
 `string`|`$message`|The message
+
+Integration hooks
+: integrate_unpreparsecode
 
 ### fixTags
 
@@ -87,6 +93,9 @@ Type|Parameter|Description
 `bool`|`$hotmail_fix`|Whether to apply the "hotmail fix"
 `bool`|`$is_private`|Whether this is private
 
+Integration hooks
+: integrate_outgoing_email
+
 ### AddMailQueue
 
 ```php
@@ -125,6 +134,10 @@ Type|Parameter|Description
 `bool`|`$store_outbox`|Whether to store it in the sender's outbox
 `array`|`$from`|An array with the id, name, and username of the member.
 `int`|`$pm_head`|The ID of the chain being replied to - if any.
+
+Integration hooks
+: integrate_personal_message
+: integrate_personal_message_after
 
 ### mimespecialchars
 
@@ -227,6 +240,13 @@ Type|Parameter|Description
 `array`|`$topicOptions`|An array of information/options for the topic
 `array`|`$posterOptions`|An array of information/options for the poster
 
+Integration hooks
+: integrate_create_post
+: integrate_after_create_post
+: integrate_before_create_topic
+: integrate_create_topic
+: integrate_modify_topic
+
 ### modifyPost
 
 ```php
@@ -242,6 +262,9 @@ Type|Parameter|Description
 `array`|` &$topicOptions`|An array of information/options for the topic
 `array`|` &$posterOptions`|An array of information/options for the poster
 
+Integration hooks
+: integrate_modify_post
+
 ### approvePosts
 
 ```php
@@ -256,6 +279,9 @@ Type|Parameter|Description
 `array`|`$msgs`|Array of message ids
 `bool`|`$approve`|Whether to approve the posts (if false, posts are unapproved)
 `bool`|`$notify`|Whether to notify users
+
+Integration hooks
+: integrate_after_approve_posts
 
 ### approveTopics
 

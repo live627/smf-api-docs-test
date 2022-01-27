@@ -16,6 +16,9 @@ This is a handling function for all things post moderation.
 
 
 
+Integration hooks
+: integrate_post_moderation
+
 ### UnapprovedPosts
 
 ```php

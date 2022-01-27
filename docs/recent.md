@@ -25,6 +25,9 @@ Find the ten most recent posts.
 
 
 
+Integration hooks
+: integrate_recent_RecentPosts
+
 ### UnreadTopics
 
 ```php
@@ -33,4 +36,8 @@ function UnreadTopics(): void
 Find unread topics and replies.
 
 
+
+Integration hooks
+: integrate_recent_buttons
+: integrate_unread_list
 

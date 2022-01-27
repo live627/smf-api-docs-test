@@ -159,6 +159,9 @@ Type|Parameter|Description
 `bool`|`$limit_body`|If true, will only show the first 384 characters of the post rather than all of it
 `bool&#124;false`|`$override_permissions`|Whether or not to ignore permissions. If true, will show all posts regardless of whether the user can actually see them
 
+Integration hooks
+: integrate_ssi_queryPosts
+
 ### ssi_recentTopics
 
 ```php
@@ -175,6 +178,9 @@ Type|Parameter|Description
 `null&#124;array`|`$include_boards`|If set, only include topics from the specified board(s)
 `string`|`$output_method`|The output method. If 'echo', displays a list of topics, otherwise returns an array of info about them
 
+Integration hooks
+: integrate_ssi_recentTopics
+
 ### ssi_topPoster
 
 ```php
@@ -188,6 +194,9 @@ Type|Parameter|Description
 ---|---|---
 `int`|`$topNumber`|How many top posters to list
 `string`|`$output_method`|The output method. If 'echo', will display a list of users, otherwise returns an array of info about them.
+
+Integration hooks
+: integrate_ssi_topPoster
 
 ### ssi_topBoards
 
@@ -203,6 +212,9 @@ Type|Parameter|Description
 `int`|`$num_top`|How many boards to display
 `string`|`$output_method`|The output method. If 'echo', displays a list of boards, otherwise returns an array of info about them.
 
+Integration hooks
+: integrate_ssi_topBoards
+
 ### ssi_topTopics
 
 ```php
@@ -217,6 +229,9 @@ Type|Parameter|Description
 `string`|`$type`|Can be either replies or views
 `int`|`$num_topics`|How many topics to display
 `string`|`$output_method`|The output method. If 'echo', displays a list of topics, otherwise returns an array of info about them.
+
+Integration hooks
+: integrate_ssi_topTopics
 
 ### ssi_topTopicsReplies
 
@@ -318,6 +333,9 @@ Type|Parameter|Description
 `string`|`$query_order`|The info for the ORDER BY clause of the query
 `string`|`$output_method`|The output method. If 'echo', displays a list of members, otherwise returns an array of info about them
 
+Integration hooks
+: integrate_ssi_queryMembers
+
 ### ssi_boardStats
 
 ```php
@@ -331,6 +349,9 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$output_method`|The output method. If 'echo', displays the stats, otherwise returns an array of info about them
 
+Integration hooks
+: integrate_ssi_boardStats
+
 ### ssi_whosOnline
 
 ```php
@@ -343,6 +364,9 @@ Shows a list of online users:  YY Guests, ZZ Users and then a list.
 Type|Parameter|Description
 ---|---|---
 `string`|`$output_method`|The output method. If 'echo', displays a list, otherwise returns an array of info about the online users.
+
+Integration hooks
+: integrate_ssi_whosOnline
 
 ### ssi_logOnline
 
@@ -398,6 +422,9 @@ Type|Parameter|Description
 `bool`|`$topPollInstead`|Whether to show the top poll (based on votes) instead of the most recent one
 `string`|`$output_method`|The output method. If 'echo', displays the poll, otherwise returns an array of info about it.
 
+Integration hooks
+: integrate_ssi_recentPoll
+
 ### ssi_showPoll
 
 ```php
@@ -411,6 +438,9 @@ Type|Parameter|Description
 ---|---|---
 `null&#124;int`|`$topic`|The topic to show the poll from. If null, $_REQUEST['ssi_topic'] will be used instead.
 `string`|`$output_method`|The output method. If 'echo', displays the poll, otherwise returns an array of info about it.
+
+Integration hooks
+: integrate_ssi_showPoll
 
 ### ssi_pollVote
 
@@ -447,6 +477,9 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$output_method`|The output method. If 'echo', shows the news item, otherwise returns it.
 
+Integration hooks
+: integrate_ssi_news
+
 ### ssi_todaysBirthdays
 
 ```php
@@ -459,6 +492,9 @@ Show today's birthdays.
 Type|Parameter|Description
 ---|---|---
 `string`|`$output_method`|The output method. If 'echo', displays a list of users, otherwise returns an array of info about them.
+
+Integration hooks
+: integrate_ssi_calendar
 
 ### ssi_todaysHolidays
 
@@ -473,6 +509,9 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$output_method`|The output method. If 'echo', displays a list of holidays, otherwise returns an array of info about them.
 
+Integration hooks
+: integrate_ssi_calendar
+
 ### ssi_todaysEvents
 
 ```php
@@ -486,6 +525,9 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$output_method`|The output method. If 'echo', displays a list of events, otherwise returns an array of info about them.
 
+Integration hooks
+: integrate_ssi_calendar
+
 ### ssi_todaysCalendar
 
 ```php
@@ -498,6 +540,9 @@ Shows today's calendar items (events, birthdays and holidays)
 Type|Parameter|Description
 ---|---|---
 `string`|`$output_method`|The output method. If 'echo', displays a list of calendar items, otherwise returns an array of info about them.
+
+Integration hooks
+: integrate_ssi_calendar
 
 ### ssi_boardNews
 
@@ -516,6 +561,9 @@ Type|Parameter|Description
 `null&#124;int`|`$length`|How many characters to show from each post. Defaults to $_GET['length'] or 0 (no limit) if not set.
 `string`|`$output_method`|The output method. If 'echo', displays the news items, otherwise returns an array of info about them.
 
+Integration hooks
+: integrate_ssi_boardNews
+
 ### ssi_recentEvents
 
 ```php
@@ -529,6 +577,9 @@ Type|Parameter|Description
 ---|---|---
 `int`|`$max_events`|The maximum number of events to show
 `string`|`$output_method`|The output method. If 'echo', displays the events, otherwise returns an array of info about them.
+
+Integration hooks
+: integrate_ssi_recentEvents
 
 ### ssi_checkPassword
 
@@ -559,4 +610,7 @@ Type|Parameter|Description
 `int`|`$num_attachments`|How many to show
 `array`|`$attachment_ext`|Only shows attachments with the specified extensions ('jpg', 'gif', etc.) if set
 `string`|`$output_method`|The output method. If 'echo', displays a table with links/info, otherwise returns an array with information about the attachments
+
+Integration hooks
+: integrate_ssi_recentAttachments
 

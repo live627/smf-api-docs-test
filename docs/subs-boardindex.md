@@ -25,3 +25,9 @@ Type|Parameter|Description
 ---|---|---
 `array`|`$board_index_options`|An array of boardindex options
 
+Integration hooks
+: integrate_pre_boardindex
+: integrate_boardindex_board
+: integrate_getboardtree
+: integrate_getboardtree
+

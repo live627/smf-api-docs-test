@@ -16,3 +16,7 @@ The main dispatcher.
 
 This delegates to each area.
 
+Integration hooks
+: integrate_pre_log_stats
+: integrate_actions
+

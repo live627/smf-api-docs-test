@@ -22,6 +22,10 @@ Type|Parameter|Description
 `int`|`$category_id`|The ID of the category
 `array`|`$catOptions`|An array containing data and options related to the category
 
+Integration hooks
+: integrate_pre_modify_category
+: integrate_modify_category
+
 ### createCategory
 
 ```php
@@ -36,6 +40,9 @@ returns the ID of the newly created category.
 Type|Parameter|Description
 ---|---|---
 `array`|`$catOptions`|An array of data and settings related to the new category. Should have at least 'cat_name' and can also have 'cat_desc', 'move_after' and 'is_collapsable'
+
+Integration hooks
+: integrate_create_category
 
 ### deleteCategories
 
@@ -54,6 +61,9 @@ Type|Parameter|Description
 ---|---|---
 `array`|`$categories`|The IDs of the categories to delete
 `int`|`$moveBoardsTo`|The ID of the category to move any boards to or null to delete the boards
+
+Integration hooks
+: integrate_delete_category
 
 ### setCategoryParsedDescription
 

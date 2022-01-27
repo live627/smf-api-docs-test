@@ -22,6 +22,9 @@ Shows a listing of registered members.
 
 Uses Memberlist template, main sub template.
 
+Integration hooks
+: integrate_memberlist_buttons
+
 ### MLAll
 
 ```php

@@ -38,6 +38,9 @@ Type|Parameter|Description
 `bool`|`$with_avatar`|Whether to load the avatar of the alert sender.
 `bool`|`$show_links`|Whether to show links in the constituent parts of the alert meessage.
 
+Integration hooks
+: integrate_fetch_alerts
+
 ### showAlerts
 
 ```php
@@ -63,6 +66,9 @@ Show all posts by a member
 Type|Parameter|Description
 ---|---|---
 `int`|`$memID`|The ID of the member
+
+Integration hooks
+: integrate_profile_showPosts
 
 ### showAttachments
 
@@ -162,6 +168,9 @@ Gets the user stats for display
 Type|Parameter|Description
 ---|---|---
 `int`|`$memID`|The ID of the member
+
+Integration hooks
+: integrate_profile_stats
 
 ### tracking
 
@@ -263,6 +272,9 @@ Handles tracking a particular IP address
 Type|Parameter|Description
 ---|---|---
 `int`|`$memID`|The ID of a member whose IP we want to track
+
+Integration hooks
+: integrate_profile_trackip
 
 ### TrackLogins
 

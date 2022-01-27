@@ -61,6 +61,9 @@ A complicated but relatively quick internal search.
 
 
 
+Integration hooks
+: integrate_admin_search
+
 ### AdminSearchMember
 
 ```php
@@ -87,6 +90,9 @@ function AdminLogs(): void
 This function decides which log to load.
 
 
+
+Integration hooks
+: integrate_manage_logs
 
 ### AdminEndSession
 

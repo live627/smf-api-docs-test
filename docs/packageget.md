@@ -16,6 +16,9 @@ Browse the list of package servers, add servers.
 
 ..
 
+Integration hooks
+: integrate_package_get
+
 ### PackageServers
 
 ```php
@@ -43,6 +46,9 @@ Download a package.
 
 
 
+Integration hooks
+: integrate_package_download
+
 ### PackageUpload
 
 ```php
@@ -51,6 +57,9 @@ function PackageUpload(): void
 Upload a new package to the directory.
 
 
+
+Integration hooks
+: integrate_package_upload
 
 ### PackageServerAdd
 

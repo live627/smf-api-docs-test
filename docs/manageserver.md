@@ -20,6 +20,9 @@ Redirects to the appropriate function based on the sub-action.
 
 Uses edit_settings adminIndex.
 
+Integration hooks
+: integrate_server_settings
+
 ### ModifyGeneralSettings
 
 ```php
@@ -37,6 +40,10 @@ Practically, this shows an interface for the settings in Settings.php to be chan
 Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether to return the $config_vars array (for pagination purposes)
+
+Integration hooks
+: integrate_general_settings
+: integrate_save_general_settings
 
 ### AlignURLsWithSSLSetting
 
@@ -99,6 +106,10 @@ Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
 
+Integration hooks
+: integrate_database_settings
+: integrate_save_database_settings
+
 ### ModifyCookieSettings
 
 ```php
@@ -111,6 +122,10 @@ This function handles cookies settings modifications.
 Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
+
+Integration hooks
+: integrate_cookie_settings
+: integrate_save_cookie_settings
 
 ### ModifyGeneralSecuritySettings
 
@@ -125,6 +140,10 @@ Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
 
+Integration hooks
+: integrate_general_security_settings
+: integrate_save_general_security_settings
+
 ### ModifyCacheSettings
 
 ```php
@@ -137,6 +156,10 @@ Simply modifying cache functions
 Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
+
+Integration hooks
+: integrate_modify_cache_settings
+: integrate_save_cache_settings
 
 ### ModifyExportSettings
 
@@ -151,6 +174,10 @@ Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
 
+Integration hooks
+: integrate_export_settings
+: integrate_save_export_settings
+
 ### ModifyLoadBalancingSettings
 
 ```php
@@ -163,6 +190,10 @@ Allows to edit load balancing settings.
 Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether or not to return the config_vars array
+
+Integration hooks
+: integrate_loadavg_settings
+: integrate_save_loadavg_settings
 
 ### prepareServerSettingsContext
 
@@ -206,6 +237,9 @@ Helper function, it sets up the context for database settings.
 Type|Parameter|Description
 ---|---|---
 `array`|`$config_vars`|An array of configuration variables
+
+Integration hooks
+: integrate_prepare_db_settings
 
 ### saveSettings
 
@@ -253,6 +287,9 @@ function loadCacheAPIs(): void
 Get the installed Cache API implementations.
 
 
+
+Integration hooks
+: integrate_load_cache_apis
 
 ### registerSMStats
 

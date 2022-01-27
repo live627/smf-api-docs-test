@@ -19,6 +19,9 @@ Called by ?action=managepermissions.
 
 Uses ManagePermissions language file.
 
+Integration hooks
+: integrate_manage_permissions
+
 ### PermissionIndex
 
 ```php
@@ -82,6 +85,10 @@ Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether to return the $config_vars array (used for admin search)
 
+Integration hooks
+: integrate_modify_permission_settings
+: integrate_save_permission_settings
+
 ### setPermissionLevel
 
 ```php
@@ -97,6 +104,9 @@ Type|Parameter|Description
 `int`|`$group`|The group to set the permission for
 `string&#124;int`|`$profile`|The ID of the permissions profile or 'null' if we're setting it for a group
 
+Integration hooks
+: integrate_load_permission_levels
+
 ### loadAllPermissions
 
 ```php
@@ -105,6 +115,9 @@ function loadAllPermissions(): void
 Load permissions into $context['permissions'].
 
 
+
+Integration hooks
+: integrate_load_permissions
 
 ### init_inline_permissions
 
@@ -198,6 +211,9 @@ Load permissions someone cannot grant.
 
 
 
+Integration hooks
+: integrate_load_illegal_permissions
+
 ### loadIllegalGuestPermissions
 
 ```php
@@ -207,6 +223,9 @@ Loads the permissions that can not be given to guests.
 
 Stores the permissions in $context['non_guest_permissions'].
 Also populates $context['permissions_excluded'] with the info.
+
+Integration hooks
+: integrate_load_illegal_guest_permissions
 
 ### loadIllegalBBCHtmlGroups
 
@@ -247,4 +266,7 @@ function ModifyPostModeration(): void
 Present a nice way of applying post moderation.
 
 
+
+Integration hooks
+: integrate_post_moderation_mapping
 

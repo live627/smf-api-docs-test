@@ -22,6 +22,9 @@ Type|Parameter|Description
 ---|---|---
 `array`|`$membersOnlineOptions`|An array of options for the list
 
+Integration hooks
+: integrate_online_stats
+
 ### trackStatsUsersOnline
 
 ```php

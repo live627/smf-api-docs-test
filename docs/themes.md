@@ -20,6 +20,9 @@ Checks the session by GET or POST to verify the sent data.
 Requires the user not be a guest. (@todo what?)
 Accessed via ?action=admin;area=theme.
 
+Integration hooks
+: integrate_manage_themes
+
 ### ThemeAdmin
 
 ```php
@@ -54,6 +57,9 @@ Administrative global settings.
 
 
 
+Integration hooks
+: integrate_theme_options
+
 ### SetThemeSettings
 
 ```php
@@ -66,6 +72,9 @@ Administrative global settings.
 - calls ThemeAdmin() if no theme is specified. (the theme center.)
 - requires admin_forum permission.
 - accessed with ?action=admin;area=theme;sa=list&th=xx.
+
+Integration hooks
+: integrate_theme_settings
 
 ### RemoveTheme
 
@@ -162,6 +171,9 @@ Possibly the simplest and best example of how to use the template system.
 - happens if $settings['catch_action'] is set and action isn't found
  in the action array.
 - can use a template, layers, sub_template, filename, and/or function.
+
+Integration hooks
+: integrate_wrap_action
 
 ### SetJavaScript
 

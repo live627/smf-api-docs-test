@@ -27,6 +27,9 @@ Type|Parameter|Description
 `int`|`$id`|The ID of the member to set the cookie for
 `string`|`$password`|The hashed password
 
+Integration hooks
+: integrate_cookie_data
+
 ### setTFACookie
 
 ```php
@@ -91,6 +94,9 @@ Question the verity of the admin by asking for his or her password.
 Type|Parameter|Description
 ---|---|---
 `string`|`$type`|What login type is this - can be 'admin' or 'moderate'
+
+Integration hooks
+: integrate_validateSession
 
 ### adminLogin_outputPostVars
 
@@ -174,6 +180,9 @@ Type|Parameter|Description
 `int`|`$memID`|The ID of the member
 `string`|`$username`|The new username. If set, also checks the validity of the username
 
+Integration hooks
+: integrate_reset_pass
+
 ### validateUsername
 
 ```php
@@ -189,6 +198,9 @@ Type|Parameter|Description
 `string`|`$username`|The username to validate
 `bool`|`$return_error`|Whether to return errors
 `bool`|`$check_reserved_name`|Whether to check this against the list of reserved names
+
+Integration hooks
+: integrate_validate_username
 
 ### validatePassword
 
@@ -208,6 +220,9 @@ Type|Parameter|Description
 `string`|`$username`|The username
 `array`|`$restrict_in`|An array of restricted strings that cannot be part of the password (email address, username, etc.)
 
+Integration hooks
+: integrate_validatePassword
+
 ### rebuildModCache
 
 ```php
@@ -218,6 +233,9 @@ Quickly find out what moderation authority this user has
 - stores the information on the current users moderation powers in $user_info['mod_cache'] and $_SESSION['mc']
 
 
+
+Integration hooks
+: integrate_mod_cache
 
 ### smf_setcookie
 
@@ -238,6 +256,9 @@ Type|Parameter|Description
 `bool`|`$secure`|= false
 `bool`|`$httponly`|= true
 `string`|`$samesite`|= lax
+
+Integration hooks
+: integrate_cookie
 
 ### hash_password
 

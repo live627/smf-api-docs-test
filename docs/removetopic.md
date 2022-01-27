@@ -50,6 +50,10 @@ Type|Parameter|Description
 `bool`|`$ignoreRecycling`|Whether to ignore recycling board settings
 `bool`|`$updateBoardCount`|Whether to adjust topic counts for the boards
 
+Integration hooks
+: integrate_remove_topics_before
+: integrate_remove_topics
+
 ### removeMessage
 
 ```php
@@ -63,6 +67,10 @@ Type|Parameter|Description
 ---|---|---
 `int`|`$message`|The message id
 `bool`|`$decreasePostCount`|Whether to decrease users' post counts
+
+Integration hooks
+: integrate_pre_remove_message
+: integrate_remove_message
 
 ### RestoreTopic
 

@@ -57,6 +57,10 @@ Type|Parameter|Description
 `int`|`$board_id`|The ID of the board
 `array`|` &$boardOptions`|An array of options related to the board
 
+Integration hooks
+: integrate_pre_modify_board
+: integrate_modify_board
+
 ### createBoard
 
 ```php
@@ -71,6 +75,9 @@ will be inherited.
 Type|Parameter|Description
 ---|---|---
 `array`|`$boardOptions`|An array of information for the new board
+
+Integration hooks
+: integrate_create_board
 
 ### deleteBoards
 
@@ -90,6 +97,9 @@ Type|Parameter|Description
 ---|---|---
 `array`|`$boards_to_remove`|The boards to remove
 `int`|`$moveChildrenTo`|The ID of the board to move the child boards to (null to remove the child boards, 0 to make them a top-level board)
+
+Integration hooks
+: integrate_delete_board
 
 ### reorderBoards
 
@@ -188,6 +198,10 @@ The information retrieved is stored in globals:
 $boards		properties of each board.
 $boardList	a list of boards grouped by category ID.
 $cat_tree	properties of each category.
+
+Integration hooks
+: integrate_pre_boardtree
+: integrate_boardtree_board
 
 ### recursiveBoards
 

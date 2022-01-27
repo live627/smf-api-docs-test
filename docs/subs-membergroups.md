@@ -24,6 +24,9 @@ Type|Parameter|Description
 ---|---|---
 `int&#124;array`|`$groups`|The ID of the group to delete or an array of IDs of groups to delete
 
+Integration hooks
+: integrate_delete_membergroups
+
 ### removeMembersFromGroups
 
 ```php
@@ -71,6 +74,9 @@ Supported types:
 `bool`|`$permissionCheckDone`|Whether we've already done a permission check
 `bool`|`$ignoreProtected`|Whether to ignore protected groups
 
+Integration hooks
+: integrate_add_members_to_group
+
 ### listMembergroupMembers_Href
 
 ```php
@@ -95,6 +101,9 @@ function cache_getMembergroupList(): array
 Retrieve a list of (visible) membergroups used by the cache.
 
 
+
+Integration hooks
+: integrate_getMembergroupList
 
 ### list_getMembergroups
 

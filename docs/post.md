@@ -24,6 +24,12 @@ Type|Parameter|Description
 ---|---|---
 `array`|`$post_errors`|Holds any errors found while tyring to post
 
+Integration hooks
+: integrate_post_start
+: integrate_preview_post
+: integrate_post_errors
+: integrate_post_end
+
 ### Post2
 
 ```php
@@ -35,6 +41,12 @@ requires various permissions depending on the action.
 handles attachment, post, and calendar saving.
 sends off notifications, and allows for announcements and moderation.
 accessed from ?action=post2.
+
+Integration hooks
+: integrate_post2_start
+: integrate_post2_pre
+: integrate_poll_add_edit
+: integrate_post2_end
 
 ### AnnounceTopic
 
@@ -80,6 +92,9 @@ gets a summary of the most recent posts in a topic.
 depends on the topicSummaryPosts setting.
 if you are editing a post, only shows posts previous to that post.
 
+Integration hooks
+: integrate_getTopic_previous_post
+
 ### QuoteFast
 
 ```php
@@ -100,4 +115,8 @@ Used to edit the body or subject of a message inline
 called from action=jsmodify from script and topic js
 
 
+
+Integration hooks
+: integrate_post_JavascriptModify
+: integrate_jsmodify_xml
 

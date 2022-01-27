@@ -21,6 +21,9 @@ Type|Parameter|Description
 `int`|`$id`|The theme ID to get the info from.
 `string[]`|`$variables`|
 
+Integration hooks
+: integrate_get_single_theme
+
 ### get_all_themes
 
 ```php
@@ -36,6 +39,9 @@ Type|Parameter|Description
 ---|---|---
 `bool`|`$enable_only`|Whether to fetch only enabled themes. Default is false.
 
+Integration hooks
+: integrate_get_all_themes
+
 ### get_installed_themes
 
 ```php
@@ -46,6 +52,9 @@ Loads and returns all installed themes.
 Stores all themes on $context['themes'] for easier use.
 
 $modSettings['knownThemes'] stores themes that the user is able to select.
+
+Integration hooks
+: integrate_get_installed_themes
 
 ### get_theme_info
 
@@ -72,6 +81,9 @@ Ends execution with fatal_lang_error() if an error appears.
 Type|Parameter|Description
 ---|---|---
 `array`|`$to_install`|An array containing all values to be stored into the DB.
+
+Integration hooks
+: integrate_theme_install
 
 ### remove_dir
 

@@ -230,6 +230,9 @@ Type|Parameter|Description
 ---|---|---
 `array`|`$eventOptions`|An array of event options ('title', 'span', 'start_date', 'end_date', etc.)
 
+Integration hooks
+: integrate_create_event
+
 ### modifyEvent
 
 ```php
@@ -245,6 +248,9 @@ Type|Parameter|Description
 `int`|`$event_id`|The ID of the event
 `array`|`$eventOptions`|An array of event information
 
+Integration hooks
+: integrate_modify_event
+
 ### removeEvent
 
 ```php
@@ -258,6 +264,9 @@ does no permission checks.
 Type|Parameter|Description
 ---|---|---
 `int`|`$event_id`|The ID of the event to remove
+
+Integration hooks
+: integrate_remove_event
 
 ### getEventProperties
 

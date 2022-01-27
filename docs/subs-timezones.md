@@ -24,6 +24,9 @@ Type|Parameter|Description
 May be a Unix timestamp or any string that strtotime() can understand.
 Defaults to 'now'.
 
+Integration hooks
+: integrate_metazones
+
 ### get_sorted_tzids_for_country
 
 ```php
@@ -40,6 +43,9 @@ Type|Parameter|Description
 `string`|`$when`|The date/time used to determine fallback values.
 May be a Unix timestamp or any string that strtotime() can understand.
 Defaults to 'now'.
+
+Integration hooks
+: integrate_country_timezones
 
 ### get_tzid_fallbacks
 
@@ -67,6 +73,9 @@ Type|Parameter|Description
 `string`|`$when`|The date/time used to determine substitute values.
 May be a Unix timestamp or any string that strtotime() can understand.
 Defaults to 'now'.
+
+Integration hooks
+: integrate_timezone_fallbacks
 
 ### validate_iso_country_codes
 

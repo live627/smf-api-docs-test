@@ -46,6 +46,11 @@ Type|Parameter|Description
 `mixed`|`$urls`|a single url (string) or an array of arrays, each inner array being (JSON-encoded request data, id_member)
 `string&#124;bool`|`$preferred_prefix`|= false
 
+Integration hooks
+: who_allowed
+: integrate_whos_online
+: whos_online_after
+
 ### Credits
 
 ```php
@@ -58,4 +63,7 @@ It prepares credit and copyright information for the credits page or the admin p
 Type|Parameter|Description
 ---|---|---
 `bool`|`$in_admin`|= false, if parameter is true the it will not load the sub-template nor the template file
+
+Integration hooks
+: integrate_credits
 

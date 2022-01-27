@@ -77,6 +77,9 @@ Type|Parameter|Description
 ---|---|---
 `int`|`$board_id`|The ID of the board
 
+Integration hooks
+: integrate_load_message_icons
+
 ### create_control_richedit
 
 ```php
@@ -89,6 +92,10 @@ Creates a box that can be used for richedit stuff like BBC, Smileys etc.
 Type|Parameter|Description
 ---|---|---
 `array`|`$editorOptions`|Various options for the editor
+
+Integration hooks
+: integrate_bbc_buttons
+: integrate_sceditor_options
 
 ### create_control_verification
 
@@ -104,6 +111,12 @@ Type|Parameter|Description
 `array`|` &$verificationOptions`|Options for the verification control
 `bool`|`$do_test`|Whether to check to see if the user entered the code correctly
 
+Integration hooks
+: integrate_create_control_verification_pre
+: integrate_create_control_verification_test
+: integrate_create_control_verification_refresh
+: integrate_create_control_verification_post
+
 ### AutoSuggestHandler
 
 ```php
@@ -116,6 +129,9 @@ This keeps track of all registered handling functions for auto suggest functiona
 Type|Parameter|Description
 ---|---|---
 `bool`|`$checkRegistered`|If set to something other than null, checks whether the callback function is registered
+
+Integration hooks
+: integrate_autosuggest
 
 ### AutoSuggest_Search_Member
 

@@ -20,6 +20,9 @@ Type|Parameter|Description
 ---|---|---
 `int`|`$memID`|The ID of the member whose account we're activating
 
+Integration hooks
+: integrate_activate
+
 ### issueWarning
 
 ```php

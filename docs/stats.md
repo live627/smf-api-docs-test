@@ -19,6 +19,9 @@ uses the Stats template and language file. (and main sub template.)
 requires the view_stats permission.
 accessed from ?action=stats.
 
+Integration hooks
+: integrate_forum_stats
+
 ### getDailyStats
 
 ```php

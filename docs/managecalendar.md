@@ -18,6 +18,9 @@ Just check permissions and delegate to the rest.
 
 Uses ManageCalendar language file.
 
+Integration hooks
+: integrate_manage_calendar
+
 ### ModifyHolidays
 
 ```php
@@ -48,4 +51,8 @@ Show and allow to modify calendar settings. Obviously.
 Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether to return the $config_vars array (used for admin search)
+
+Integration hooks
+: integrate_modify_calendar_settings
+: integrate_save_calendar_settings
 

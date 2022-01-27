@@ -36,6 +36,10 @@ What it does:
 - accessed from ?action=login2, by forms.
 On error, uses the same templates Login() uses.
 
+Integration hooks
+: integrate_validate_login
+: integrate_other_passwords
+
 ### LoginTFA
 
 ```php
@@ -63,6 +67,9 @@ Perform the logging in. (set cookie, call hooks, etc)
 
 
 
+Integration hooks
+: integrate_login
+
 ### Logout
 
 ```php
@@ -78,6 +85,9 @@ Type|Parameter|Description
 ---|---|---
 `bool`|`$internal`|If true, it doesn't check the session
 `bool`|`$redirect`|Whether or not to redirect the user after they log out
+
+Integration hooks
+: integrate_logout
 
 ### md5_hmac
 

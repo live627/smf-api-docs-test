@@ -30,6 +30,9 @@ Type|Parameter|Description
 `int&#124;array`|`$users`|The ID of a user or an array of user IDs
 `bool`|`$check_not_admin`|Whether to verify that the users aren't admins
 
+Integration hooks
+: integrate_delete_members
+
 ### registerMember
 
 ```php
@@ -49,6 +52,12 @@ Type|Parameter|Description
 ---|---|---
 `array`|`$regOptions`|An array of registration options
 `bool`|`$return_errors`|Whether to return the errors
+
+Integration hooks
+: integrate_register_check
+: integrate_register
+: integrate_post_register
+: integrate_register_after
 
 ### isReservedName
 
@@ -70,6 +79,9 @@ Type|Parameter|Description
 `bool`|`$is_name`|Whether we're checking against reserved names or just usernames
 `bool`|`$fatal`|Whether to die with a fatal error if the name is reserved
 
+Integration hooks
+: integrate_check_name
+
 ### groupsAllowedTo
 
 ```php
@@ -85,6 +97,9 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$permission`|The permission to check
 `int`|`$board_id`|= null If set, checks permissions for the specified board
+
+Integration hooks
+: integrate_groups_allowed_to
 
 ### membersAllowedTo
 
@@ -120,6 +135,9 @@ Type|Parameter|Description
 `bool&#124;string`|`$email`|If set, should be the email of the poster
 `bool&#124;string`|`$membername`|If set, the membername of the poster
 `bool`|`$post_count`|Whether to adjust post counts
+
+Integration hooks
+: integrate_reattribute_posts
 
 ### BuddyListToggle
 

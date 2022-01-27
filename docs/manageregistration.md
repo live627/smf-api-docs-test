@@ -21,6 +21,9 @@ Requires either the moderate_forum or the admin_forum permission.
 Uses Login language file
 Uses Register template.
 
+Integration hooks
+: integrate_manage_registrations
+
 ### AdminRegister
 
 ```php
@@ -68,6 +71,10 @@ Requires the admin_forum permission.
 Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
+
+Integration hooks
+: integrate_modify_registration_settings
+: integrate_save_registration_settings
 
 ### EditPrivacyPolicy
 

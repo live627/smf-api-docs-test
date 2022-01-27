@@ -81,6 +81,10 @@ Type|Parameter|Description
 `string`|`$format`|The desired output format. Currently accepts 'HTML' and 'XML_XSLT'.
 `int`|`$uid`|The ID of the member whose data we're exporting.
 
+Integration hooks
+: integrate_export_xslt_variables
+: integrate_export_xslt_stylesheet
+
 ### export_load_css_js
 
 ```php
@@ -89,4 +93,9 @@ function export_load_css_js(): void
 Loads and prepares CSS and JavaScript for insertion into an XSLT stylesheet.
 
 
+
+Integration hooks
+: integrate_pre_css_output
+: integrate_pre_javascript_output
+: integrate_pre_javascript_output
 

@@ -39,6 +39,9 @@ Accessed via ?action=movetopic2.
 
 Uses Subs-Post.php
 
+Integration hooks
+: integrate_movetopic2_end
+
 ### moveTopics
 
 ```php

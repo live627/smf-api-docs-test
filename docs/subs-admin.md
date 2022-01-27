@@ -74,6 +74,9 @@ Type|Parameter|Description
 `bool&#124;null`|`$keep_quotes`|Whether to strip slashes & trim quotes from string values. Defaults to auto-detection.
 `bool`|`$rebuild`|If true, attempts to rebuild with standard format. Default false.
 
+Integration hooks
+: integrate_update_settings_file
+
 ### get_current_settings
 
 ```php

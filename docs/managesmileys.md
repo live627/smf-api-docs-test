@@ -16,6 +16,9 @@ This is the dispatcher of smileys administration.
 
 
 
+Integration hooks
+: integrate_manage_smileys
+
 ### EditSmileySettings
 
 ```php
@@ -28,6 +31,10 @@ Handles modifying smileys settings.
 Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
+
+Integration hooks
+: integrate_modify_smiley_settings
+: integrate_save_smiley_settings
 
 ### EditSmileySets
 

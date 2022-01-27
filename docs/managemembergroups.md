@@ -22,6 +22,9 @@ Requires the manage_membergroups or the admin_forum permission.
 Uses ManageMembergroups template.
 Uses ManageMembers language file.
 
+Integration hooks
+: integrate_manage_membergroups
+
 ### MembergroupIndex
 
 ```php
@@ -48,6 +51,10 @@ It requires the manage_membergroups permission.
 Allows to use a predefined permission profile or copy one from another group.
 Redirects to action=admin;area=membergroups;sa=edit;group=x.
 
+Integration hooks
+: integrate_pre_add_membergroup
+: integrate_add_membergroup
+
 ### DeleteMembergroup
 
 ```php
@@ -72,6 +79,10 @@ It requires the manage_membergroups permission.
 Also handles the delete button of the edit form.
 Redirects to ?action=admin;area=membergroups.
 
+Integration hooks
+: integrate_save_membergroup
+: integrate_view_membergroup
+
 ### ModifyMembergroupsettings
 
 ```php
@@ -82,4 +93,8 @@ Set some general membergroup settings and permissions.
 Called by ?action=admin;area=membergroups;sa=settings
 Requires the admin_forum permission (and manage_permissions for changing permissions)
 Redirects to itself.
+
+Integration hooks
+: integrate_modify_membergroup_settings
+: integrate_save_membergroup_settings
 

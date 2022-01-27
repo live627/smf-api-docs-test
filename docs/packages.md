@@ -16,6 +16,9 @@ This is the notoriously defunct package manager..... :/.
 
 
 
+Integration hooks
+: integrate_manage_packages
+
 ### PackageInstallTest
 
 ```php
@@ -70,6 +73,9 @@ Browse a list of installed packages.
 
 
 
+Integration hooks
+: integrate_modification_types
+
 ### list_getPackages
 
 ```php
@@ -90,6 +96,9 @@ Type|Parameter|Description
 `int`|`$items_per_page`|The number of items to show per page (not used here)
 `string`|`$sort`|A string indicating how to sort the results
 `string`|`$params`|Type of packages
+
+Integration hooks
+: integrate_packages_sort_id
 
 ### PackageOptions
 

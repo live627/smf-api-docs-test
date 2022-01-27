@@ -20,6 +20,9 @@ It checks the permissions, based on the sub-action, and calls a function based o
 
 Uses ManageBoards language file.
 
+Integration hooks
+: integrate_manage_boards
+
 ### ManageBoardsMain
 
 ```php
@@ -33,6 +36,9 @@ It also handles the interface for moving boards.
 
 Uses ManageBoards template, main sub-template.
 
+Integration hooks
+: integrate_boards_main
+
 ### EditCategory
 
 ```php
@@ -45,6 +51,9 @@ Also used to show the confirm deletion of category screen
 (sub-template confirm_category_delete).
 Called by ?action=admin;area=manageboards;sa=cat
 Requires manage_boards permission.
+
+Integration hooks
+: integrate_edit_category
 
 ### EditCategory2
 
@@ -71,6 +80,9 @@ called by ?action=admin;area=manageboards;sa=board
 uses the modify_board sub-template of the ManageBoards template.
 requires manage_boards permission.
 also used to show the confirm deletion of category screen (sub-template confirm_board_delete).
+
+Integration hooks
+: integrate_edit_board
 
 ### EditBoard2
 
@@ -106,4 +118,8 @@ A screen to set a few general board and category settings.
 Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether to return the $config_vars array (used for admin search)
+
+Integration hooks
+: integrate_modify_board_settings
+: integrate_save_board_settings
 

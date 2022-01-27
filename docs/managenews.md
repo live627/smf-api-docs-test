@@ -19,6 +19,9 @@ Called by ?action=admin;area=news.
 It does the permission checks, and calls the appropriate function
 based on the requested sub-action.
 
+Integration hooks
+: integrate_manage_news
+
 ### EditNews
 
 ```php
@@ -105,4 +108,8 @@ Requires the forum_admin permission.
 Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
+
+Integration hooks
+: integrate_modify_news_settings
+: integrate_save_news_settings
 

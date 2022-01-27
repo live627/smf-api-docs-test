@@ -17,6 +17,9 @@ Entry point function, permission checks, admin bars, etc.
 It allows moderators and users to access the group showing functions.
 It handles permission checks, and puts the moderation bar on as required.
 
+Integration hooks
+: integrate_manage_groups
+
 ### GroupList
 
 ```php

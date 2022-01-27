@@ -22,6 +22,9 @@ It initializes the admin tabs.
 
 Uses ManageBans template.
 
+Integration hooks
+: integrate_manage_bans
+
 ### BanList
 
 ```php
@@ -75,6 +78,10 @@ Modifying existing bans:
  - uses the ban_edit sub template of the ManageBans template.
  - shows a list of ban triggers for the specified ban.
 
+Integration hooks
+: integrate_ban_edit_list
+: integrate_ban_edit_new
+
 ### list_getBanItems
 
 ```php
@@ -90,6 +97,9 @@ Type|Parameter|Description
 `int`|`$items_per_page`|How many items to show on each page
 `int`|`$sort`|Not used here
 `int`|`$ban_group_id`|The ID of the group to get the bans for
+
+Integration hooks
+: integrate_ban_list
 
 ### list_getNumBanItems
 
@@ -112,6 +122,9 @@ Finds additional IPs related to a certain user
 Type|Parameter|Description
 ---|---|---
 `int`|`$member_id`|The ID of the member to get additional IPs for
+
+Integration hooks
+: integrate_load_addtional_ip_ban
 
 ### banLoadAdditionalIPsMember
 
@@ -148,6 +161,10 @@ This function handles submitted forms that add, modify or remove ban triggers.
 
 
 
+Integration hooks
+: integrate_edit_bans
+: integrate_edit_bans_post
+
 ### saveTriggers
 
 ```php
@@ -165,6 +182,9 @@ Type|Parameter|Description
 `int`|`$member`|The ID of the member associated with this ban (if applicable)
 `int`|`$ban_id`|The ID of the ban (0 if this is a new ban)
 
+Integration hooks
+: integrate_save_triggers
+
 ### removeBanTriggers
 
 ```php
@@ -179,6 +199,9 @@ Type|Parameter|Description
 ---|---|---
 `array`|`$items_ids`|The items to remove
 `bool&#124;int`|`$group_id`|The ID of the group these triggers are associated with or false if deleting them from all groups
+
+Integration hooks
+: integrate_remove_triggers
 
 ### removeBanGroups
 

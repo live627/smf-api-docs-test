@@ -94,3 +94,6 @@ Type|Parameter|Description
 ---|---|---
 `array`|`$logs`|An array of log data
 
+Integration hooks
+: integrate_log_types
+

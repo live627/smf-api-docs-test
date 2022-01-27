@@ -16,6 +16,10 @@ Attempt to start the session, unless it already has been.
 
 
 
+Integration hooks
+: integrate_load_session
+: integrate_session_handlers
+
 ### sessionOpen
 
 ```php

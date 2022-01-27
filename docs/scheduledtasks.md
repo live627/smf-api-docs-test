@@ -25,6 +25,9 @@ Do some daily cleaning up.
 
 
 
+Integration hooks
+: integrate_daily_maintenance
+
 ### scheduled_daily_digest
 
 ```php
@@ -33,6 +36,10 @@ function scheduled_daily_digest(): void
 Send out a daily email of all subscribed topics.
 
 
+
+Integration hooks
+: integrate_daily_digest_lang
+: integrate_daily_digest_email
 
 ### scheduled_weekly_digest
 
@@ -122,6 +129,9 @@ function scheduled_weekly_maintenance(): void
 Weekly maintenance
 
 
+
+Integration hooks
+: integrate_weekly_maintenance
 
 ### scheduled_paid_subscriptions
 

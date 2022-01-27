@@ -43,6 +43,9 @@ Actually sets the new password
 
 
 
+Integration hooks
+: integrate_reset_pass
+
 ### SecretAnswerInput
 
 ```php
@@ -60,4 +63,7 @@ function SecretAnswer2(): void
 Validates the secret answer input by the user
 
 
+
+Integration hooks
+: integrate_reset_pass
 

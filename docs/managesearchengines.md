@@ -16,6 +16,9 @@ Entry point for this section.
 
 
 
+Integration hooks
+: integrate_manage_search_engines
+
 ### ManageSearchEngineSettings
 
 ```php
@@ -28,6 +31,10 @@ This is really just the settings page.
 Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether to return the config_vars array (used for admin search)
+
+Integration hooks
+: integrate_modify_search_engine_settings
+: integrate_save_search_engine_settings
 
 ### ViewSpiders
 

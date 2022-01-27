@@ -21,6 +21,9 @@ Requires the moderate_forum permission.
 Uses ManageMembers template
 Uses ManageMembers language file.
 
+Integration hooks
+: integrate_manage_members
+
 ### ViewMemberlist
 
 ```php
@@ -34,6 +37,9 @@ Called by ?action=admin;area=viewmembers;sa=all or ?action=admin;area=viewmember
 Requires the moderate_forum permission.
 
 Uses a standard list (@see createList())
+
+Integration hooks
+: integrate_view_members_params
 
 ### SearchMembers
 
@@ -70,6 +76,9 @@ Called by ?action=admin;area=viewmembers;sa=approve.
 Requires the moderate_forum permission.
 Redirects to ?action=admin;area=viewmembers;sa=browse
 with the same parameters as the calling page.
+
+Integration hooks
+: integrate_activate
 
 ### jeffsdatediff
 

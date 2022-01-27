@@ -22,6 +22,9 @@ Accessed via ?action=vote.
 
 Uses Post language file.
 
+Integration hooks
+: integrate_poll_vote
+
 ### LockVoting
 
 ```php
@@ -71,6 +74,9 @@ EditPoll and display the relevant error message.
 Upon successful completion of action will direct user back to topic.
 Accessed via ?action=editpoll2.
 
+Integration hooks
+: integrate_poll_add_edit
+
 ### RemovePoll
 
 ```php
@@ -83,4 +89,7 @@ Requires poll_remove_any permission, unless it's the poll starter
 with poll_remove_own permission.
 Upon successful completion of action will direct user back to topic.
 Accessed via ?action=removepoll.
+
+Integration hooks
+: integrate_poll_remove
 

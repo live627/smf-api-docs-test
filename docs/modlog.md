@@ -21,6 +21,9 @@ Accessed via ?action=moderate;area=modlog.
 
 Uses Modlog template, main sub-template.
 
+Integration hooks
+: integrate_viewModLog
+
 ### list_getModLogEntryCount
 
 ```php

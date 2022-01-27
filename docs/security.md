@@ -23,6 +23,10 @@ Type|Parameter|Description
 `string`|`$type`|What type of session this is
 `string`|`$force`|When true, require a password even if we normally wouldn't
 
+Integration hooks
+: integrate_validateSession
+: integrate_verify_password
+
 ### is_not_guest
 
 ```php
@@ -59,6 +63,10 @@ function banPermissions(): void
 Fix permissions according to ban status.
 
 Applies any states of banning by removing permissions the user cannot have.
+
+Integration hooks
+: integrate_post_ban_permissions
+: integrate_warn_permissions
 
 ### log_ban
 
@@ -203,6 +211,10 @@ Type|Parameter|Description
 `int&#124;array`|`$boards`|The ID of a board or an array of board IDs if we want to check board-level permissions
 `bool`|`$any`|Whether to check for permission on at least one board instead of all boards
 
+Integration hooks
+: integrate_allowed_to_general
+: integrate_allowed_to_board
+
 ### isAllowedTo
 
 ```php
@@ -222,6 +234,9 @@ Type|Parameter|Description
 `int&#124;array`|`$boards`|The ID of a single board or an array of board IDs if we're checking board-level permissions (null otherwise)
 `bool`|`$any`|Whether to check for permission on at least one board instead of all boards
 
+Integration hooks
+: integrate_heavy_permissions_session
+
 ### boardsAllowedTo
 
 ```php
@@ -240,6 +255,9 @@ Type|Parameter|Description
 `bool`|`$check_access`|Whether to check only the boards the user has access to
 `bool`|`$simple`|Whether to return a simple array of board IDs or one with permissions as the keys
 
+Integration hooks
+: integrate_boards_allowed_to
+
 ### spamProtection
 
 ```php
@@ -253,6 +271,9 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$error_type`|The error type. Also used as a $txt index (not an actual string).
 `bool`|`$only_return_result`|Whether you want the function to die with a fatal_lang_error.
+
+Integration hooks
+: integrate_spam_protection
 
 ### secureDirectory
 

@@ -23,6 +23,9 @@ Requires the admin_forum permission.
 Uses ManageSearch template.
 Uses Search language file.
 
+Integration hooks
+: integrate_manage_search
+
 ### EditSearchSettings
 
 ```php
@@ -37,6 +40,10 @@ Type|Parameter|Description
 ---|---|---
 `bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
 
+Integration hooks
+: integrate_modify_search_settings
+: integrate_save_search_settings
+
 ### EditWeights
 
 ```php
@@ -46,6 +53,10 @@ Edit the relative weight of the search factors.
 
 Called by ?action=admin;area=managesearch;sa=weights.
 Requires the admin_forum permission.
+
+Integration hooks
+: integrate_modify_search_weights
+: integrate_save_search_weights
 
 ### EditSearchMethod
 

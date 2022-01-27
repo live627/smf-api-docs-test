@@ -21,3 +21,6 @@ What this does:
 - Is accessed via ?action=viewquery.
 - Strings in this function have not been internationalized.
 
+Integration hooks
+: integrate_egg_nog
+

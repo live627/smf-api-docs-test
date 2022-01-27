@@ -47,6 +47,9 @@ A folder, ie. inbox/sent etc.
 
 
 
+Integration hooks
+: integrate_conversation_buttons
+
 ### prepareMessageContext
 
 ```php
@@ -60,6 +63,9 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$type`|The type of message
 `bool`|`$reset`|Whether to reset the internal pointer
+
+Integration hooks
+: integrate_prepare_pm_context
 
 ### MessageSearch
 
@@ -79,6 +85,9 @@ Actually do the search of personal messages.
 
 
 
+Integration hooks
+: integrate_search_pm_context
+
 ### MessagePost
 
 ```php
@@ -87,6 +96,9 @@ function MessagePost(): void
 Send a new message?
 
 
+
+Integration hooks
+: integrate_pm_post
 
 ### MessageDrafts
 
@@ -111,6 +123,9 @@ Type|Parameter|Description
 `array`|`$error_types`|An array of strings indicating which type of errors occurred
 `array`|`$named_recipients`|
 `null`|`$recipient_ids`|
+
+Integration hooks
+: integrate_pm_error
 
 ### MessagePost2
 
