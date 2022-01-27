@@ -45,7 +45,7 @@ Removes the passed id_topic's. (permissions are NOT checked here!).
 
 Type|Parameter|Description
 ---|---|---
-`array&#124;int`|`$topics`|The topics to remove (can be an id or an array of ids).
+`array`&#124;`int`|`$topics`|The topics to remove (can be an id or an array of ids).
 `bool`|`$decreasePostCount`|Whether to decrease the users' post counts
 `bool`|`$ignoreRecycling`|Whether to ignore recycling board settings
 `bool`|`$updateBoardCount`|Whether to adjust topic counts for the boards

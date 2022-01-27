@@ -120,8 +120,8 @@ Recent post list:   [board] Subject by Poster    Date
 Type|Parameter|Description
 ---|---|---
 `int`|`$num_recent`|How many recent posts to display
-`null&#124;array`|`$exclude_boards`|If set, doesn't show posts from the specified boards
-`null&#124;array`|`$include_boards`|If set, only includes posts from the specified boards
+`null`&#124;`array`|`$exclude_boards`|If set, doesn't show posts from the specified boards
+`null`&#124;`array`|`$include_boards`|If set, only includes posts from the specified boards
 `string`|`$output_method`|The output method. If 'echo', displays the posts, otherwise returns an array of information about them.
 `bool`|`$limit_body`|Whether or not to only show the first 384 characters of each post
 
@@ -157,7 +157,7 @@ Type|Parameter|Description
 `string`|`$query_order`|The ORDER BY clause for the query
 `string`|`$output_method`|The output method. If 'echo', displays the posts, otherwise returns an array of info about them.
 `bool`|`$limit_body`|If true, will only show the first 384 characters of the post rather than all of it
-`bool&#124;false`|`$override_permissions`|Whether or not to ignore permissions. If true, will show all posts regardless of whether the user can actually see them
+`bool`&#124;`false`|`$override_permissions`|Whether or not to ignore permissions. If true, will show all posts regardless of whether the user can actually see them
 
 Integration hooks
 : integrate_ssi_queryPosts
@@ -174,8 +174,8 @@ Recent topic list:   [board] Subject by Poster   Date
 Type|Parameter|Description
 ---|---|---
 `int`|`$num_recent`|How many recent topics to show
-`null&#124;array`|`$exclude_boards`|If set, exclude topics from the specified board(s)
-`null&#124;array`|`$include_boards`|If set, only include topics from the specified board(s)
+`null`&#124;`array`|`$exclude_boards`|If set, exclude topics from the specified board(s)
+`null`&#124;`array`|`$include_boards`|If set, only include topics from the specified board(s)
 `string`|`$output_method`|The output method. If 'echo', displays a list of topics, otherwise returns an array of info about them
 
 Integration hooks
@@ -329,7 +329,7 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$query_where`|The info for the WHERE clause of the query
 `array`|`$query_where_params`|The parameters for the WHERE clause
-`string&#124;int`|`$query_limit`|The number of rows to return or an empty string to return all
+`string`&#124;`int`|`$query_limit`|The number of rows to return or an empty string to return all
 `string`|`$query_order`|The info for the ORDER BY clause of the query
 `string`|`$output_method`|The output method. If 'echo', displays a list of members, otherwise returns an array of info about them
 
@@ -436,7 +436,7 @@ Shows the poll from the specified topic
 
 Type|Parameter|Description
 ---|---|---
-`null&#124;int`|`$topic`|The topic to show the poll from. If null, $_REQUEST['ssi_topic'] will be used instead.
+`null`&#124;`int`|`$topic`|The topic to show the poll from. If null, $_REQUEST['ssi_topic'] will be used instead.
 `string`|`$output_method`|The output method. If 'echo', displays the poll, otherwise returns an array of info about it.
 
 Integration hooks
@@ -555,10 +555,10 @@ Show the latest news, with a template... by board.
 
 Type|Parameter|Description
 ---|---|---
-`null&#124;int`|`$board`|The ID of the board to get the info from. Defaults to $board or $_GET['board'] if not set.
-`null&#124;int`|`$limit`|How many items to show. Defaults to $_GET['limit'] or 5 if not set.
-`null&#124;int`|`$start`|Start with the specified item. Defaults to $_GET['start'] or 0 if not set.
-`null&#124;int`|`$length`|How many characters to show from each post. Defaults to $_GET['length'] or 0 (no limit) if not set.
+`null`&#124;`int`|`$board`|The ID of the board to get the info from. Defaults to $board or $_GET['board'] if not set.
+`null`&#124;`int`|`$limit`|How many items to show. Defaults to $_GET['limit'] or 5 if not set.
+`null`&#124;`int`|`$start`|Start with the specified item. Defaults to $_GET['start'] or 0 if not set.
+`null`&#124;`int`|`$length`|How many characters to show from each post. Defaults to $_GET['length'] or 0 (no limit) if not set.
 `string`|`$output_method`|The output method. If 'echo', displays the news items, otherwise returns an array of info about them.
 
 Integration hooks
@@ -592,7 +592,7 @@ Checks whether the specified password is correct for the specified user.
 
 Type|Parameter|Description
 ---|---|---
-`int&#124;string`|`$id`|The ID or username of a user
+`int`&#124;`string`|`$id`|The ID or username of a user
 `string`|`$password`|The password to check
 `bool`|`$is_username`|If true, treats $id as a username rather than a user ID
 

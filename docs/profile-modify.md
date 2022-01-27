@@ -265,7 +265,7 @@ Marks a group of alerts as un/read
 Type|Parameter|Description
 ---|---|---
 `int`|`$memID`|The user ID.
-`array&#124;int`|`$toMark`|The ID of a single alert or an array of IDs. The function will convert single integers to arrays for better handling.
+`array`&#124;`int`|`$toMark`|The ID of a single alert or an array of IDs. The function will convert single integers to arrays for better handling.
 `int`|`$read`|To mark as read or unread, 1 for read, 0 or any other value different than 1 for unread.
 
 ### alert_delete
@@ -279,8 +279,8 @@ Deletes a single or a group of alerts by ID
 
 Type|Parameter|Description
 ---|---|---
-`int&#124;array`|``|The ID of a single alert to delete or an array containing the IDs of multiple alerts. The function will convert integers into an array for better handling.
-`bool&#124;int`|`$memID`|The user ID. Used to update the user unread alerts count.
+`int`&#124;`array`|``|The ID of a single alert to delete or an array containing the IDs of multiple alerts. The function will convert integers into an array for better handling.
+`bool`&#124;`int`|`$memID`|The user ID. Used to update the user unread alerts count.
 
 ### alert_purge
 

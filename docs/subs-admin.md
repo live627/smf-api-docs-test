@@ -3,7 +3,7 @@ layout: default
 group: func
 navtitle: Subs-Admin.php
 title: ./Sources/Subs-Admin.php
-count: 11
+count: 12
 ---
 * auto-gen TOC:
 {:toc}
@@ -38,6 +38,18 @@ Type|Parameter|Description
 ---|---|---
 `array`|` &$versionOptions`|An array of options. Can contain one or more of 'include_ssi', 'include_subscriptions', 'include_tasks' and 'sort_results'
 
+### get_settings_defs
+
+```php
+function get_settings_defs(): array
+```
+Describes properties of all known Settings.php variables and other content.
+
+Helper for updateSettingsFile(); also called by saveSettings().
+
+Integration hooks
+: integrate_update_settings_file
+
 ### updateSettingsFile
 
 ```php
@@ -68,14 +80,14 @@ updateSettingsFile() function, but it shouldn't be used often anyway.
   function expected strings to have been manually escaped and quoted). This
   behaviour can be controlled by the $keep_quotes parameter.
 
+MOD AUTHORS: If you are adding a setting to Settings.php, you should use the
+integrate_update_settings_file hook to define it in get_settings_defs().
+
 Type|Parameter|Description
 ---|---|---
 `array`|`$config_vars`|An array of one or more variables to update.
-`bool&#124;null`|`$keep_quotes`|Whether to strip slashes & trim quotes from string values. Defaults to auto-detection.
+`bool`&#124;`null`|`$keep_quotes`|Whether to strip slashes & trim quotes from string values. Defaults to auto-detection.
 `bool`|`$rebuild`|If true, attempts to rebuild with standard format. Default false.
-
-Integration hooks
-: integrate_update_settings_file
 
 ### get_current_settings
 

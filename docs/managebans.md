@@ -198,7 +198,7 @@ Doesn't clean the inputs
 Type|Parameter|Description
 ---|---|---
 `array`|`$items_ids`|The items to remove
-`bool&#124;int`|`$group_id`|The ID of the group these triggers are associated with or false if deleting them from all groups
+`bool`&#124;`int`|`$group_id`|The ID of the group these triggers are associated with or false if deleting them from all groups
 
 Integration hooks
 : integrate_remove_triggers

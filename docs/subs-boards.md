@@ -18,7 +18,7 @@ Mark a board or multiple boards read.
 
 Type|Parameter|Description
 ---|---|---
-`int&#124;array`|`$boards`|The ID of a single board or an array of boards
+`int`&#124;`array`|`$boards`|The ID of a single board or an array of boards
 `bool`|`$unread`|Whether we're marking them as unread
 
 ### MarkRead

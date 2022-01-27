@@ -53,7 +53,7 @@ Intended for use by background tasks that need to populate $user_info.
 
 Type|Parameter|Description
 ---|---|---
-`int&#124;array`|`$user_ids`|The users IDs to get the data for.
+`int`&#124;`array`|`$user_ids`|The users IDs to get the data for.
 
 Integration hooks
 : integrate_load_min_user_settings_columns
@@ -99,7 +99,7 @@ Loads an array of users' data by ID or member_name.
 
 Type|Parameter|Description
 ---|---|---
-`array&#124;string`|`$users`|An array of users by id or name or a single username/id
+`array`&#124;`string`|`$users`|An array of users by id or name or a single username/id
 `bool`|`$is_name`|Whether $users contains names
 `string`|`$set`|What kind of data to load (normal, profile, minimal)
 
@@ -134,8 +134,8 @@ Loads the user's custom profile fields
 
 Type|Parameter|Description
 ---|---|---
-`int&#124;array`|`$users`|A single user ID or an array of user IDs
-`string&#124;array`|`$params`|Either a string or an array of strings with profile field names
+`int`&#124;`array`|`$users`|A single user ID or an array of user IDs
+`string`&#124;`array`|`$params`|Either a string or an array of strings with profile field names
 
 ### detectBrowser
 
@@ -193,7 +193,7 @@ What this function does:
 Type|Parameter|Description
 ---|---|---
 `string`|`$template_name`|The name of the template to load
-`array&#124;string`|`$style_sheets`|The name of a single stylesheet or an array of names of stylesheets to load
+`array`&#124;`string`|`$style_sheets`|The name of a single stylesheet or an array of names of stylesheets to load
 `bool`|`$fatal`|If true, dies with an error message if the template cannot be found
 
 ### loadSubTemplate

@@ -61,7 +61,7 @@ Send a group of emails from the mail queue.
 
 Type|Parameter|Description
 ---|---|---
-`bool&#124;int`|`$number`|The number to send each loop through or false to use the standard limits
+`bool`&#124;`int`|`$number`|The number to send each loop through or false to use the standard limits
 `bool`|`$override_limit`|Whether to bypass the limit
 `bool`|`$force_send`|Whether to forcibly send the messages now (useful when using cron jobs)
 
@@ -76,7 +76,7 @@ Calculate the next time the passed tasks should be triggered.
 
 Type|Parameter|Description
 ---|---|---
-`string&#124;array`|`$tasks`|The ID of a single task or an array of tasks
+`string`&#124;`array`|`$tasks`|The ID of a single task or an array of tasks
 `bool`|`$forceUpdate`|Whether to force the tasks to run now
 
 ### next_time

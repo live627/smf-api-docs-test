@@ -88,6 +88,6 @@ Validates a set of two-character ISO 3166-1 country codes.
 
 Type|Parameter|Description
 ---|---|---
-`array&#124;string`|`$country_codes`|Array or CSV string of country codes.
+`array`&#124;`string`|`$country_codes`|Array or CSV string of country codes.
 `bool`|`$as_csv`|If true, return CSV string instead of array.
 

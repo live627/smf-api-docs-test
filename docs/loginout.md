@@ -130,7 +130,7 @@ Type|Parameter|Description
 ---|---|---
 `int`|`$id_member`|The ID of the member
 `string`|`$member_name`|The name of the member.
-`bool&#124;string`|`$password_flood_value`|False if we don't have a flood value, otherwise a string with a timestamp and number of tries separated by a |
+`bool`&#124;`string`|`$password_flood_value`|False if we don't have a flood value, otherwise a string with a timestamp and number of tries separated by a |
 `bool`|`$was_correct`|Whether or not the password was correct
 `bool`|`$tfa`|Whether we're validating for two-factor authentication
 

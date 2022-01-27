@@ -118,7 +118,7 @@ This is a complete polyfill.
 Type|Parameter|Description
 ---|---|---
 `string`|`$string`|A character.
-`string&#124;null`|`$encoding`|The character encoding.
+`string`&#124;`null`|`$encoding`|The character encoding.
 If null, the current SMF encoding will be used, falling back to UTF-8.
 
 ### mb_chr
@@ -133,7 +133,7 @@ This is a complete polyfill.
 Type|Parameter|Description
 ---|---|---
 `int`|`$codepoint`|A Unicode codepoint value.
-`string&#124;null`|`$encoding`|The character encoding.
+`string`&#124;`null`|`$encoding`|The character encoding.
 If null, the current SMF encoding will be used, falling back to UTF-8.
 
 ### mb_ord_chr_encoding
@@ -168,7 +168,7 @@ Type|Parameter|Description
 `string`|`$domain`|The domain to convert, which must be UTF-8 encoded.
 `int`|`$flags`|Ignored in this compatibility function.
 `int`|`$variant`|Ignored in this compatibility function.
-`array&#124;null`|`$idna_info`|Ignored in this compatibility function.
+`array`&#124;`null`|`$idna_info`|Ignored in this compatibility function.
 
 ### idn_to_utf8
 
@@ -186,5 +186,5 @@ Type|Parameter|Description
 `string`|`$domain`|Domain to convert, in an IDNA ASCII-compatible format.
 `int`|`$flags`|Ignored in this compatibility function.
 `int`|`$variant`|Ignored in this compatibility function.
-`array&#124;null`|`$idna_info`|Ignored in this compatibility function.
+`array`&#124;`null`|`$idna_info`|Ignored in this compatibility function.
 

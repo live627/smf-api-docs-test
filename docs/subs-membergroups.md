@@ -22,7 +22,7 @@ Takes members out of the deleted membergroups.
 
 Type|Parameter|Description
 ---|---|---
-`int&#124;array`|`$groups`|The ID of the group to delete or an array of IDs of groups to delete
+`int`&#124;`array`|`$groups`|The ID of the group to delete or an array of IDs of groups to delete
 
 Integration hooks
 : integrate_delete_membergroups
@@ -40,8 +40,8 @@ Non-admins are not able to remove members from the admin group.
 
 Type|Parameter|Description
 ---|---|---
-`int&#124;array`|`$members`|The ID of a member or an array of member IDs
-`null&#124;array`|``|The groups to remove the member(s) from. If null, the specified members are stripped from all their membergroups.
+`int`&#124;`array`|`$members`|The ID of a member or an array of member IDs
+`null`&#124;`array`|``|The groups to remove the member(s) from. If null, the specified members are stripped from all their membergroups.
 `bool`|`$permissionCheckDone`|Whether we've already checked permissions prior to calling this function
 `bool`|`$ignoreProtected`|Whether to ignore protected groups
 
@@ -58,7 +58,7 @@ Non-admins are not able to add members to the admin group.
 
 Type|Parameter|Description
 ---|---|---
-`int&#124;array`|`$members`|A single member or an array containing the IDs of members
+`int`&#124;`array`|`$members`|A single member or an array containing the IDs of members
 `int`|`$group`|The group to add them to
 `string`|`$type`|Specifies whether the group is added as primary or as additional group.
 Supported types:

@@ -20,7 +20,7 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$action`|The action to perform. Accepts "closed" and "ignore".
 `int`|`$value`|The new value to update.
-`int&#124;array`|`$report_id`|The affected report(s).
+`int`&#124;`array`|`$report_id`|The affected report(s).
 
 ### countReports
 

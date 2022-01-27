@@ -129,7 +129,7 @@ function comma_format(float $number, bool|int $override_decimal_count = false): 
 Type|Parameter|Description
 ---|---|---
 `float`|`$number`|A number
-`bool&#124;int`|`$override_decimal_count`|If set, will use the specified number of decimal places. Otherwise it's automatically determined
+`bool`&#124;`int`|`$override_decimal_count`|If set, will use the specified number of decimal places. Otherwise it's automatically determined
 
 ### timeformat
 
@@ -147,9 +147,9 @@ Format a time to make it look purdy.
 Type|Parameter|Description
 ---|---|---
 `int`|`$log_time`|A timestamp
-`bool&#124;string`|`$show_today`|Whether to show "Today"/"Yesterday" or just a date.
+`bool`&#124;`string`|`$show_today`|Whether to show "Today"/"Yesterday" or just a date.
 If a string is specified, that is used to temporarily override the date format.
-`null&#124;string`|`$tzid`|Time zone to use when generating the formatted string.
+`null`&#124;`string`|`$tzid`|Time zone to use when generating the formatted string.
 If empty, the user's time zone will be used.
 If set to 'forum', the value of $modSettings['default_timezone'] will be used.
 If set to a valid time zone identifier, that will be used.
@@ -188,9 +188,9 @@ so results may vary in a few cases from the results of strftime():
 Type|Parameter|Description
 ---|---|---
 `string`|`$format`|A strftime() format string.
-`int&#124;null`|`$timestamp`|A Unix timestamp.
+`int`&#124;`null`|`$timestamp`|A Unix timestamp.
 If null, defaults to the current time.
-`string&#124;null`|`$tzid`|Time zone identifier.
+`string`&#124;`null`|`$tzid`|Time zone identifier.
 If null, uses default time zone.
 
 ### smf_gmstrftime
@@ -205,7 +205,7 @@ Calls smf_strftime() with the $tzid parameter set to 'UTC'.
 Type|Parameter|Description
 ---|---|---
 `string`|`$format`|A strftime() format string.
-`int&#124;null`|`$timestamp`|A Unix timestamp.
+`int`&#124;`null`|`$timestamp`|A Unix timestamp.
 If null, defaults to the current time.
 
 ### un_htmlspecialchars
@@ -243,7 +243,7 @@ Type|Parameter|Description
 2: Disallow all formatting characters. Use for internal comparisions
    only, such as in the word censor, search contexts, etc.
 Default: 0.
-`string&#124;null`|`$substitute`|Replacement string for the invalid characters.
+`string`&#124;`null`|`$substitute`|Replacement string for the invalid characters.
 If not set, the Unicode replacement character (U+FFFD) will be used
 (or a fallback like "?" if necessary).
 
@@ -342,7 +342,7 @@ Parse bulletin board code in a string, as well as smileys optionally.
 
 Type|Parameter|Description
 ---|---|---
-`string&#124;bool`|`$message`|The message.
+`string`&#124;`bool`|`$message`|The message.
 When a empty string, nothing is done.
 When false we provide a list of BBC codes available.
 When a string, the message is parsed and bbc handled.
@@ -601,7 +601,7 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$filename`|The name of the file
 `int`|`$attachment_id`|The ID of the attachment
-`string&#124;null`|`$dir`|Which directory it should be in (null to use current one)
+`string`&#124;`null`|`$dir`|Which directory it should be in (null to use current one)
 `bool`|`$new`|Whether this is a new attachment
 `string`|`$file_hash`|The file hash
 
@@ -1365,15 +1365,16 @@ Type|Parameter|Description
 ### JavaScriptEscape
 
 ```php
-function JavaScriptEscape(string $string): string
+function JavaScriptEscape(string $string, bool $as_json = false): string
 ```
-Escapes (replaces) characters in strings to make them safe for use in javascript
+Escapes (replaces) characters in strings to make them safe for use in JavaScript
 
 
 
 Type|Parameter|Description
 ---|---|---
 `string`|`$string`|The string to escape
+`bool`|`$as_json`|If true, escape as double-quoted string. Default false.
 
 ### tokenTxtReplace
 

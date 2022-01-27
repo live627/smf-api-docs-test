@@ -22,7 +22,7 @@ Type|Parameter|Description
 `string`|`$destination`|The path to the desitnation directory
 `bool`|`$single_file`|If true returns the contents of the file specified by destination if it exists
 `bool`|`$overwrite`|Whether to overwrite existing files
-`null&#124;array`|`$files_to_extract`|Specific files to extract
+`null`&#124;`array`|`$files_to_extract`|Specific files to extract
 
 ### read_tgz_data
 
@@ -50,10 +50,10 @@ if files_to_extract is not equal to null only extracts file within this array.
 Type|Parameter|Description
 ---|---|---
 `string`|`$data`|The gzipped tarball
-`null&#124;string`|`$destination`|The destination
+`null`&#124;`string`|`$destination`|The destination
 `bool`|`$single_file`|Whether to only extract a single file
 `bool`|`$overwrite`|Whether to overwrite existing data
-`null&#124;array`|`$files_to_extract`|If set, only extracts the specified files
+`null`&#124;`array`|`$files_to_extract`|If set, only extracts the specified files
 
 ### read_zip_data
 
@@ -138,7 +138,7 @@ Use FTP functions to work with a package download/install
 Type|Parameter|Description
 ---|---|---
 `string`|`$destination_url`|The destination URL
-`null&#124;array`|`$files`|The files to CHMOD
+`null`&#124;`array`|`$files`|The files to CHMOD
 `bool`|`$return`|Whether to return an array of file info if there's an error
 
 ### parsePackageInfo
