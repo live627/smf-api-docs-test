@@ -14,7 +14,7 @@ call_integration_hook('integrate_update_settings_file', array(&$settings_defs))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&settings_defs`|desc
+`array`|`&$settings_defs`|desc
 
 Called from
 : [`get_settings_defs()` in `./Sources/Subs-Admin.php`](../docs/subs-admin.html#get_settings_defs)

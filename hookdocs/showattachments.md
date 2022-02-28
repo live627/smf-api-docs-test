@@ -27,7 +27,7 @@ call_integration_hook('integrate_download_request', array(&$attachRequest))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&attachRequest`|desc
+`array`|`&$attachRequest`|desc
 
 Called from
 : [`showAttachment()` in `./Sources/ShowAttachments.php`](../docs/showattachments.html#showattachment)

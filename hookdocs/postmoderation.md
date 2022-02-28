@@ -14,7 +14,7 @@ call_integration_hook('integrate_post_moderation', array(&$subActions))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&subActions`|desc
+`array`|`&$subActions`|desc
 
 Called from
 : [`PostModerationMain()` in `./Sources/PostModeration.php`](../docs/postmoderation.html#postmoderationmain)

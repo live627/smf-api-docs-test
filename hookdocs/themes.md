@@ -14,7 +14,7 @@ call_integration_hook('integrate_manage_themes', array(&$subActions))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&subActions`|desc
+`array`|`&$subActions`|desc
 
 Called from
 : [`ThemesMain()` in `./Sources/Themes.php`](../docs/themes.html#themesmain)

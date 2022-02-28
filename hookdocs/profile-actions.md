@@ -14,7 +14,7 @@ call_integration_hook('integrate_activate', array($user_profile[$memID]['member_
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$member_name`|desc
+`array`|`$memID['member_name']`|desc
 
 Called from
 : [`activateAccount()` in `./Sources/Profile-Actions.php`](../docs/profile-actions.html#activateaccount)

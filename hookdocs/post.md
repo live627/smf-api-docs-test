@@ -27,8 +27,8 @@ call_integration_hook('integrate_preview_post', array(&$form_message, &$form_sub
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&form_message`|desc
-`array`|`$&form_subject`|desc
+`array`|`&$form_message`|desc
+`array`|`&$form_subject`|desc
 
 Called from
 : [`Post()` in `./Sources/Post.php`](../docs/post.html#post)
@@ -44,8 +44,8 @@ call_integration_hook('integrate_post_errors', array(&$post_errors, &$minor_erro
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&post_errors`|desc
-`array`|`$&minor_errors`|desc
+`array`|`&$post_errors`|desc
+`array`|`&$minor_errors`|desc
 `array`|`$form_message`|desc
 `array`|`$form_subject`|desc
 
@@ -76,7 +76,7 @@ call_integration_hook('integrate_post2_start', array(&$post_errors))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&post_errors`|desc
+`array`|`&$post_errors`|desc
 
 Called from
 : [`Post2()` in `./Sources/Post.php`](../docs/post.html#post2)
@@ -92,7 +92,7 @@ call_integration_hook('integrate_post2_pre', array(&$post_errors))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&post_errors`|desc
+`array`|`&$post_errors`|desc
 
 Called from
 : [`Post2()` in `./Sources/Post.php`](../docs/post.html#post2)
@@ -109,7 +109,7 @@ call_integration_hook('integrate_poll_add_edit', array($id_poll, false))
 Type|Parameter|Description
 ---|---|---
 `array`|`$id_poll`|desc
-`array`|`$false`|desc
+`array`|`false`|desc
 
 Called from
 : [`Post2()` in `./Sources/Post.php`](../docs/post.html#post2)
@@ -138,7 +138,7 @@ call_integration_hook('integrate_getTopic_previous_post', array(&$row))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&row`|desc
+`array`|`&$row`|desc
 
 Called from
 : [`getTopic()` in `./Sources/Post.php`](../docs/post.html#gettopic)
@@ -154,7 +154,7 @@ call_integration_hook('integrate_post_JavascriptModify', array(&$post_errors, $r
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&post_errors`|desc
+`array`|`&$post_errors`|desc
 `array`|`$row`|desc
 
 Called from

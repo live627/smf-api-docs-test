@@ -14,9 +14,9 @@ call_integration_hook('integrate_display_topic', array(&$topic_selects, &$topic_
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&topic_selects`|desc
-`array`|`$&topic_tables`|desc
-`array`|`$&topic_parameters`|desc
+`array`|`&$topic_selects`|desc
+`array`|`&$topic_tables`|desc
+`array`|`&$topic_parameters`|desc
 
 Called from
 : [`Display()` in `./Sources/Display.php`](../docs/display.html#display)
@@ -45,8 +45,8 @@ call_integration_hook('integrate_display_message_list', array(&$messages, &$post
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&messages`|desc
-`array`|`$&posters`|desc
+`array`|`&$messages`|desc
+`array`|`&$posters`|desc
 
 Called from
 : [`Display()` in `./Sources/Display.php`](../docs/display.html#display)
@@ -62,9 +62,9 @@ call_integration_hook('integrate_query_message', array(&$msg_selects, &$msg_tabl
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&msg_selects`|desc
-`array`|`$&msg_tables`|desc
-`array`|`$&msg_parameters`|desc
+`array`|`&$msg_selects`|desc
+`array`|`&$msg_tables`|desc
+`array`|`&$msg_parameters`|desc
 
 Called from
 : [`Display()` in `./Sources/Display.php`](../docs/display.html#display)
@@ -80,7 +80,7 @@ call_integration_hook('integrate_display_buttons', array(&$context['normal_butto
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&normal_buttons`|desc
+`array`|`&$normal_buttons`|desc
 
 Called from
 : [`Display()` in `./Sources/Display.php`](../docs/display.html#display)
@@ -96,7 +96,7 @@ call_integration_hook('integrate_mod_buttons', array(&$context['mod_buttons']))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&mod_buttons`|desc
+`array`|`&$mod_buttons`|desc
 
 Called from
 : [`Display()` in `./Sources/Display.php`](../docs/display.html#display)
@@ -112,8 +112,8 @@ call_integration_hook('integrate_prepare_display_context', array(&$output, &$mes
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&output`|desc
-`array`|`$&message`|desc
+`array`|`&$output`|desc
+`array`|`&$message`|desc
 `array`|`$counter`|desc
 
 Called from

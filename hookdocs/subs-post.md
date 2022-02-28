@@ -14,7 +14,7 @@ call_integration_hook('integrate_preparsecode', array(&$message, $previewing))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&message`|desc
+`array`|`&$message`|desc
 `array`|`$previewing`|desc
 
 Called from
@@ -31,7 +31,7 @@ call_integration_hook('integrate_unpreparsecode', array(&$message))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&message`|desc
+`array`|`&$message`|desc
 
 Called from
 : [`un_preparsecode()` in `./Sources/Subs-Post.php`](../docs/subs-post.html#un_preparsecode)
@@ -47,10 +47,10 @@ call_integration_hook('integrate_outgoing_email', array(&$subject, &$message, &$
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&subject`|desc
-`array`|`$&message`|desc
-`array`|`$&headers`|desc
-`array`|`$&to_array`|desc
+`array`|`&$subject`|desc
+`array`|`&$message`|desc
+`array`|`&$headers`|desc
+`array`|`&$to_array`|desc
 
 Called from
 : [`sendmail()` in `./Sources/Subs-Post.php`](../docs/subs-post.html#sendmail)
@@ -66,10 +66,10 @@ call_integration_hook('integrate_personal_message', array(&$recipients, &$from, 
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&recipients`|desc
-`array`|`$&from`|desc
-`array`|`$&subject`|desc
-`array`|`$&message`|desc
+`array`|`&$recipients`|desc
+`array`|`&$from`|desc
+`array`|`&$subject`|desc
+`array`|`&$message`|desc
 
 Called from
 : [`sendpm()` in `./Sources/Subs-Post.php`](../docs/subs-post.html#sendpm)
@@ -85,12 +85,12 @@ call_integration_hook('integrate_personal_message_after', array(&$id_pm, &$log, 
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&id_pm`|desc
-`array`|`$&log`|desc
-`array`|`$&recipients`|desc
-`array`|`$&from`|desc
-`array`|`$&subject`|desc
-`array`|`$&message`|desc
+`array`|`&$id_pm`|desc
+`array`|`&$log`|desc
+`array`|`&$recipients`|desc
+`array`|`&$from`|desc
+`array`|`&$subject`|desc
+`array`|`&$message`|desc
 
 Called from
 : [`sendpm()` in `./Sources/Subs-Post.php`](../docs/subs-post.html#sendpm)
@@ -106,11 +106,11 @@ call_integration_hook('integrate_create_post', array(&$msgOptions, &$topicOption
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&msgOptions`|desc
-`array`|`$&topicOptions`|desc
-`array`|`$&posterOptions`|desc
-`array`|`$&message_columns`|desc
-`array`|`$&message_parameters`|desc
+`array`|`&$msgOptions`|desc
+`array`|`&$topicOptions`|desc
+`array`|`&$posterOptions`|desc
+`array`|`&$message_columns`|desc
+`array`|`&$message_parameters`|desc
 
 Called from
 : [`createPost()` in `./Sources/Subs-Post.php`](../docs/subs-post.html#createpost)
@@ -146,11 +146,11 @@ call_integration_hook('integrate_before_create_topic', array(&$msgOptions, &$top
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&msgOptions`|desc
-`array`|`$&topicOptions`|desc
-`array`|`$&posterOptions`|desc
-`array`|`$&topic_columns`|desc
-`array`|`$&topic_parameters`|desc
+`array`|`&$msgOptions`|desc
+`array`|`&$topicOptions`|desc
+`array`|`&$posterOptions`|desc
+`array`|`&$topic_columns`|desc
+`array`|`&$topic_parameters`|desc
 
 Called from
 : [`createPost()` in `./Sources/Subs-Post.php`](../docs/subs-post.html#createpost)
@@ -166,9 +166,9 @@ call_integration_hook('integrate_create_topic', array(&$msgOptions, &$topicOptio
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&msgOptions`|desc
-`array`|`$&topicOptions`|desc
-`array`|`$&posterOptions`|desc
+`array`|`&$msgOptions`|desc
+`array`|`&$topicOptions`|desc
+`array`|`&$posterOptions`|desc
 
 Called from
 : [`createPost()` in `./Sources/Subs-Post.php`](../docs/subs-post.html#createpost)
@@ -184,11 +184,11 @@ call_integration_hook('integrate_modify_topic', array(&$topics_columns, &$update
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&topics_columns`|desc
-`array`|`$&update_parameters`|desc
-`array`|`$&msgOptions`|desc
-`array`|`$&topicOptions`|desc
-`array`|`$&posterOptions`|desc
+`array`|`&$topics_columns`|desc
+`array`|`&$update_parameters`|desc
+`array`|`&$msgOptions`|desc
+`array`|`&$topicOptions`|desc
+`array`|`&$posterOptions`|desc
 
 Called from
 : [`createPost()` in `./Sources/Subs-Post.php`](../docs/subs-post.html#createpost)
@@ -204,12 +204,12 @@ call_integration_hook('integrate_modify_post', array(&$messages_columns, &$updat
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&messages_columns`|desc
-`array`|`$&update_parameters`|desc
-`array`|`$&msgOptions`|desc
-`array`|`$&topicOptions`|desc
-`array`|`$&posterOptions`|desc
-`array`|`$&messageInts`|desc
+`array`|`&$messages_columns`|desc
+`array`|`&$update_parameters`|desc
+`array`|`&$msgOptions`|desc
+`array`|`&$topicOptions`|desc
+`array`|`&$posterOptions`|desc
+`array`|`&$messageInts`|desc
 
 Called from
 : [`modifyPost()` in `./Sources/Subs-Post.php`](../docs/subs-post.html#modifypost)

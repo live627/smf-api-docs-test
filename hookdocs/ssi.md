@@ -2,10 +2,39 @@
 layout: default
 group: hooks
 title: SSI.php
-count: 18
+count: 20
 ---
 * auto-gen TOC:
 {:toc}
+### integrate_autoload
+
+```php
+call_integration_hook('integrate_autoload', array(&$classMap))
+```
+
+Type|Parameter|Description
+---|---|---
+`array`|`&$classMap`|desc
+
+Called from
+: [`()` in `./SSI.php`](../docs/ssi.html#)
+
+Notes
+: Since 2.1
+
+### integrate_SSI
+
+```php
+call_integration_hook('integrate_SSI')
+```
+
+
+Called from
+: [`()` in `./SSI.php`](../docs/ssi.html#)
+
+Notes
+: Since 2.1
+
 ### integrate_ssi_queryPosts
 
 ```php
@@ -14,7 +43,7 @@ call_integration_hook('integrate_ssi_queryPosts', array(&$posts))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&posts`|desc
+`array`|`&$posts`|desc
 
 Called from
 : [`ssi_queryPosts()` in `./SSI.php`](../docs/ssi.html#ssi_queryposts)
@@ -30,7 +59,7 @@ call_integration_hook('integrate_ssi_recentTopics', array(&$posts))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&posts`|desc
+`array`|`&$posts`|desc
 
 Called from
 : [`ssi_recentTopics()` in `./SSI.php`](../docs/ssi.html#ssi_recenttopics)
@@ -46,7 +75,7 @@ call_integration_hook('integrate_ssi_topPoster', array(&$return))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&return`|desc
+`array`|`&$return`|desc
 
 Called from
 : [`ssi_topPoster()` in `./SSI.php`](../docs/ssi.html#ssi_topposter)
@@ -62,7 +91,7 @@ call_integration_hook('integrate_ssi_topBoards', array(&$boards))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&boards`|desc
+`array`|`&$boards`|desc
 
 Called from
 : [`ssi_topBoards()` in `./SSI.php`](../docs/ssi.html#ssi_topboards)
@@ -78,7 +107,7 @@ call_integration_hook('integrate_ssi_topTopics', array(&$topics, $type))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&topics`|desc
+`array`|`&$topics`|desc
 `array`|`$type`|desc
 
 Called from
@@ -95,7 +124,7 @@ call_integration_hook('integrate_ssi_queryMembers', array(&$members))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&members`|desc
+`array`|`&$members`|desc
 
 Called from
 : [`ssi_queryMembers()` in `./SSI.php`](../docs/ssi.html#ssi_querymembers)
@@ -111,7 +140,7 @@ call_integration_hook('integrate_ssi_boardStats', array(&$totals))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&totals`|desc
+`array`|`&$totals`|desc
 
 Called from
 : [`ssi_boardStats()` in `./SSI.php`](../docs/ssi.html#ssi_boardstats)
@@ -127,7 +156,7 @@ call_integration_hook('integrate_ssi_whosOnline', array(&$return))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&return`|desc
+`array`|`&$return`|desc
 
 Called from
 : [`ssi_whosOnline()` in `./SSI.php`](../docs/ssi.html#ssi_whosonline)
@@ -143,7 +172,7 @@ call_integration_hook('integrate_ssi_recentPoll', array(&$return, $topPollInstea
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&return`|desc
+`array`|`&$return`|desc
 `array`|`$topPollInstead`|desc
 
 Called from
@@ -160,7 +189,7 @@ call_integration_hook('integrate_ssi_showPoll', array(&$return))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&return`|desc
+`array`|`&$return`|desc
 
 Called from
 : [`ssi_showPoll()` in `./SSI.php`](../docs/ssi.html#ssi_showpoll)
@@ -189,7 +218,7 @@ call_integration_hook('integrate_ssi_calendar', array(&$return, $eventOptions))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&return`|desc
+`array`|`&$return`|desc
 `array`|`$eventOptions`|desc
 
 Called from
@@ -206,7 +235,7 @@ call_integration_hook('integrate_ssi_calendar', array(&$return, $eventOptions))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&return`|desc
+`array`|`&$return`|desc
 `array`|`$eventOptions`|desc
 
 Called from
@@ -223,7 +252,7 @@ call_integration_hook('integrate_ssi_calendar', array(&$return, $eventOptions))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&return`|desc
+`array`|`&$return`|desc
 `array`|`$eventOptions`|desc
 
 Called from
@@ -240,7 +269,7 @@ call_integration_hook('integrate_ssi_calendar', array(&$return, $eventOptions))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&return`|desc
+`array`|`&$return`|desc
 `array`|`$eventOptions`|desc
 
 Called from
@@ -257,7 +286,7 @@ call_integration_hook('integrate_ssi_boardNews', array(&$return))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&return`|desc
+`array`|`&$return`|desc
 
 Called from
 : [`ssi_boardNews()` in `./SSI.php`](../docs/ssi.html#ssi_boardnews)
@@ -273,7 +302,7 @@ call_integration_hook('integrate_ssi_recentEvents', array(&$return))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&return`|desc
+`array`|`&$return`|desc
 
 Called from
 : [`ssi_recentEvents()` in `./SSI.php`](../docs/ssi.html#ssi_recentevents)
@@ -289,7 +318,7 @@ call_integration_hook('integrate_ssi_recentAttachments', array(&$attachments))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&attachments`|desc
+`array`|`&$attachments`|desc
 
 Called from
 : [`ssi_recentAttachments()` in `./SSI.php`](../docs/ssi.html#ssi_recentattachments)

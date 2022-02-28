@@ -14,8 +14,8 @@ call_integration_hook('integrate_pre_messageindex', array(&$sort_methods, &$sort
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&sort_methods`|desc
-`array`|`$&sort_methods_table`|desc
+`array`|`&$sort_methods`|desc
+`array`|`&$sort_methods_table`|desc
 
 Called from
 : [`MessageIndex()` in `./Sources/MessageIndex.php`](../docs/messageindex.html#messageindex)
@@ -31,12 +31,12 @@ call_integration_hook('integrate_message_index', array(&$message_index_selects, 
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&message_index_selects`|desc
-`array`|`$&message_index_tables`|desc
-`array`|`$&message_index_parameters`|desc
-`array`|`$&message_index_wheres`|desc
-`array`|`$&topic_ids`|desc
-`array`|`$&message_index_topic_wheres`|desc
+`array`|`&$message_index_selects`|desc
+`array`|`&$message_index_tables`|desc
+`array`|`&$message_index_parameters`|desc
+`array`|`&$message_index_wheres`|desc
+`array`|`&$topic_ids`|desc
+`array`|`&$message_index_topic_wheres`|desc
 
 Called from
 : [`MessageIndex()` in `./Sources/MessageIndex.php`](../docs/messageindex.html#messageindex)
@@ -65,7 +65,7 @@ call_integration_hook('integrate_messageindex_buttons', array(&$context['normal_
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&normal_buttons`|desc
+`array`|`&$normal_buttons`|desc
 
 Called from
 : [`MessageIndex()` in `./Sources/MessageIndex.php`](../docs/messageindex.html#messageindex)

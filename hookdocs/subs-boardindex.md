@@ -2,7 +2,7 @@
 layout: default
 group: hooks
 title: Subs-BoardIndex.php
-count: 4
+count: 3
 ---
 * auto-gen TOC:
 {:toc}
@@ -14,8 +14,8 @@ call_integration_hook('integrate_pre_boardindex', array(&$board_index_selects, &
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&board_index_selects`|desc
-`array`|`$&board_index_parameters`|desc
+`array`|`&$board_index_selects`|desc
+`array`|`&$board_index_parameters`|desc
 
 Called from
 : [`getBoardIndex()` in `./Sources/Subs-BoardIndex.php`](../docs/subs-boardindex.html#getboardindex)
@@ -31,25 +31,8 @@ call_integration_hook('integrate_boardindex_board', array(&$this_category, $row_
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&this_category`|desc
+`array`|`&$this_category`|desc
 `array`|`$row_board`|desc
-
-Called from
-: [`getBoardIndex()` in `./Sources/Subs-BoardIndex.php`](../docs/subs-boardindex.html#getboardindex)
-
-Notes
-: Since 2.1
-
-### integrate_getboardtree
-
-```php
-call_integration_hook('integrate_getboardtree', array($board_index_options, &$categories))
-```
-
-Type|Parameter|Description
----|---|---
-`array`|`$board_index_options`|desc
-`array`|`$&categories`|desc
 
 Called from
 : [`getBoardIndex()` in `./Sources/Subs-BoardIndex.php`](../docs/subs-boardindex.html#getboardindex)
@@ -66,7 +49,7 @@ call_integration_hook('integrate_getboardtree', array($board_index_options, &$th
 Type|Parameter|Description
 ---|---|---
 `array`|`$board_index_options`|desc
-`array`|`$&this_category`|desc
+`array`|`&$this_category`|desc
 
 Called from
 : [`getBoardIndex()` in `./Sources/Subs-BoardIndex.php`](../docs/subs-boardindex.html#getboardindex)

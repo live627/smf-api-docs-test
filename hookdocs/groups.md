@@ -14,7 +14,7 @@ call_integration_hook('integrate_manage_groups', array(&$subActions))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&subActions`|desc
+`array`|`&$subActions`|desc
 
 Called from
 : [`Groups()` in `./Sources/Groups.php`](../docs/groups.html#groups)

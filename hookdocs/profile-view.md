@@ -14,8 +14,8 @@ call_integration_hook('integrate_fetch_alerts', array(&$alerts, &$formats))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&alerts`|desc
-`array`|`$&formats`|desc
+`array`|`&$alerts`|desc
+`array`|`&$formats`|desc
 
 Called from
 : [`fetch_alerts()` in `./Sources/Profile-View.php`](../docs/profile-view.html#fetch_alerts)
@@ -45,7 +45,7 @@ call_integration_hook('integrate_profile_stats', array($memID, &$context['text_s
 Type|Parameter|Description
 ---|---|---
 `array`|`$memID`|desc
-`array`|`$&text_stats`|desc
+`array`|`&$text_stats`|desc
 
 Called from
 : [`statPanel()` in `./Sources/Profile-View.php`](../docs/profile-view.html#statpanel)

@@ -30,8 +30,8 @@ call_integration_hook('integrate_register_check', array(&$regOptions, &$reg_erro
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&regOptions`|desc
-`array`|`$&reg_errors`|desc
+`array`|`&$regOptions`|desc
+`array`|`&$reg_errors`|desc
 
 Called from
 : [`registerMember()` in `./Sources/Subs-Members.php`](../docs/subs-members.html#registermember)
@@ -47,10 +47,10 @@ call_integration_hook('integrate_register', array(&$regOptions, &$theme_vars, &$
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&regOptions`|desc
-`array`|`$&theme_vars`|desc
-`array`|`$&knownInts`|desc
-`array`|`$&knownFloats`|desc
+`array`|`&$regOptions`|desc
+`array`|`&$theme_vars`|desc
+`array`|`&$knownInts`|desc
+`array`|`&$knownFloats`|desc
 
 Called from
 : [`registerMember()` in `./Sources/Subs-Members.php`](../docs/subs-members.html#registermember)
@@ -66,9 +66,9 @@ call_integration_hook('integrate_post_register', array(&$regOptions, &$theme_var
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&regOptions`|desc
-`array`|`$&theme_vars`|desc
-`array`|`$&memberID`|desc
+`array`|`&$regOptions`|desc
+`array`|`&$theme_vars`|desc
+`array`|`&$memberID`|desc
 
 Called from
 : [`registerMember()` in `./Sources/Subs-Members.php`](../docs/subs-members.html#registermember)
@@ -102,7 +102,7 @@ call_integration_hook('integrate_check_name', array($checkName, &$is_reserved, $
 Type|Parameter|Description
 ---|---|---
 `array`|`$checkName`|desc
-`array`|`$&is_reserved`|desc
+`array`|`&$is_reserved`|desc
 `array`|`$current_id_member`|desc
 `array`|`$is_name`|desc
 
@@ -120,7 +120,7 @@ call_integration_hook('integrate_groups_allowed_to', array(&$member_groups, $per
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&member_groups`|desc
+`array`|`&$member_groups`|desc
 `array`|`$permission`|desc
 `array`|`$board_id`|desc
 
@@ -142,7 +142,7 @@ Type|Parameter|Description
 `array`|`$email`|desc
 `array`|`$membername`|desc
 `array`|`$post_count`|desc
-`array`|`$&updated`|desc
+`array`|`&$updated`|desc
 
 Called from
 : [`reattributePosts()` in `./Sources/Subs-Members.php`](../docs/subs-members.html#reattributeposts)

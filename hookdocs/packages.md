@@ -14,7 +14,7 @@ call_integration_hook('integrate_manage_packages', array(&$subActions))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&subActions`|desc
+`array`|`&$subActions`|desc
 
 Called from
 : [`Packages()` in `./Sources/Packages.php`](../docs/packages.html#packages)
@@ -43,8 +43,8 @@ call_integration_hook('integrate_packages_sort_id', array(&$sort_id, &$packages)
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&sort_id`|desc
-`array`|`$&packages`|desc
+`array`|`&$sort_id`|desc
+`array`|`&$packages`|desc
 
 Called from
 : [`list_getPackages()` in `./Sources/Packages.php`](../docs/packages.html#list_getpackages)

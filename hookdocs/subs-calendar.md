@@ -14,9 +14,9 @@ call_integration_hook('integrate_create_event', array(&$eventOptions, &$event_co
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&eventOptions`|desc
-`array`|`$&event_columns`|desc
-`array`|`$&event_parameters`|desc
+`array`|`&$eventOptions`|desc
+`array`|`&$event_columns`|desc
+`array`|`&$event_parameters`|desc
 
 Called from
 : [`insertEvent()` in `./Sources/Subs-Calendar.php`](../docs/subs-calendar.html#insertevent)
@@ -33,9 +33,9 @@ call_integration_hook('integrate_modify_event', array($event_id, &$eventOptions,
 Type|Parameter|Description
 ---|---|---
 `array`|`$event_id`|desc
-`array`|`$&eventOptions`|desc
-`array`|`$&event_columns`|desc
-`array`|`$&event_parameters`|desc
+`array`|`&$eventOptions`|desc
+`array`|`&$event_columns`|desc
+`array`|`&$event_parameters`|desc
 
 Called from
 : [`modifyEvent()` in `./Sources/Subs-Calendar.php`](../docs/subs-calendar.html#modifyevent)

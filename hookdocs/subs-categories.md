@@ -15,7 +15,7 @@ call_integration_hook('integrate_pre_modify_category', array($cat_id, &$catOptio
 Type|Parameter|Description
 ---|---|---
 `array`|`$cat_id`|desc
-`array`|`$&catOptions`|desc
+`array`|`&$catOptions`|desc
 
 Called from
 : [`modifyCategory()` in `./Sources/Subs-Categories.php`](../docs/subs-categories.html#modifycategory)
@@ -32,8 +32,8 @@ call_integration_hook('integrate_modify_category', array($cat_id, &$catUpdates, 
 Type|Parameter|Description
 ---|---|---
 `array`|`$cat_id`|desc
-`array`|`$&catUpdates`|desc
-`array`|`$&catParameters`|desc
+`array`|`&$catUpdates`|desc
+`array`|`&$catParameters`|desc
 
 Called from
 : [`modifyCategory()` in `./Sources/Subs-Categories.php`](../docs/subs-categories.html#modifycategory)
@@ -49,9 +49,9 @@ call_integration_hook('integrate_create_category', array(&$catOptions, &$cat_col
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&catOptions`|desc
-`array`|`$&cat_columns`|desc
-`array`|`$&cat_parameters`|desc
+`array`|`&$catOptions`|desc
+`array`|`&$cat_columns`|desc
+`array`|`&$cat_parameters`|desc
 
 Called from
 : [`createCategory()` in `./Sources/Subs-Categories.php`](../docs/subs-categories.html#createcategory)
@@ -68,7 +68,7 @@ call_integration_hook('integrate_delete_category', array($categories, &$moveBoar
 Type|Parameter|Description
 ---|---|---
 `array`|`$categories`|desc
-`array`|`$&moveBoardsTo`|desc
+`array`|`&$moveBoardsTo`|desc
 
 Called from
 : [`deleteCategories()` in `./Sources/Subs-Categories.php`](../docs/subs-categories.html#deletecategories)

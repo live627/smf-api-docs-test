@@ -16,9 +16,9 @@ Type|Parameter|Description
 ---|---|---
 `array`|`$member_names`|desc
 `array`|`$var`|desc
-`array`|`$&var`|desc
-`array`|`$&knownInts`|desc
-`array`|`$&knownFloats`|desc
+`array`|`&$var`|desc
+`array`|`&$knownInts`|desc
+`array`|`&$knownFloats`|desc
 
 Called from
 : [`updateMemberData()` in `./Sources/Subs.php`](../docs/subs.html#updatememberdata)
@@ -34,10 +34,10 @@ call_integration_hook('integrate_pre_parsebbc', array(&$message, &$smileys, &$ca
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&message`|desc
-`array`|`$&smileys`|desc
-`array`|`$&cache_id`|desc
-`array`|`$&parse_tags`|desc
+`array`|`&$message`|desc
+`array`|`&$smileys`|desc
+`array`|`&$cache_id`|desc
+`array`|`&$parse_tags`|desc
 
 Called from
 : [`parse_bbc()` in `./Sources/Subs.php`](../docs/subs.html#parse_bbc)
@@ -53,7 +53,7 @@ call_integration_hook('integrate_attach_bbc_validate', array(&$returnContext, $c
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&returnContext`|desc
+`array`|`&$returnContext`|desc
 `array`|`$currentAttachment`|desc
 `array`|`$tag`|desc
 `array`|`$data`|desc
@@ -74,8 +74,8 @@ call_integration_hook('integrate_bbc_codes', array(&$codes, &$no_autolink_tags))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&codes`|desc
-`array`|`$&no_autolink_tags`|desc
+`array`|`&$codes`|desc
+`array`|`&$no_autolink_tags`|desc
 
 Called from
 : [`parse_bbc()` in `./Sources/Subs.php`](../docs/subs.html#parse_bbc)
@@ -91,7 +91,7 @@ call_integration_hook('integrate_bbc_print', array(&$disabled))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&disabled`|desc
+`array`|`&$disabled`|desc
 
 Called from
 : [`parse_bbc()` in `./Sources/Subs.php`](../docs/subs.html#parse_bbc)
@@ -107,7 +107,7 @@ call_integration_hook('integrate_autolinker_schemes', array(&$schemes))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&schemes`|desc
+`array`|`&$schemes`|desc
 
 Called from
 : [`parse_bbc()` in `./Sources/Subs.php`](../docs/subs.html#parse_bbc)
@@ -123,10 +123,10 @@ call_integration_hook('integrate_post_parsebbc', array(&$message, &$smileys, &$c
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&message`|desc
-`array`|`$&smileys`|desc
-`array`|`$&cache_id`|desc
-`array`|`$&parse_tags`|desc
+`array`|`&$message`|desc
+`array`|`&$smileys`|desc
+`array`|`&$cache_id`|desc
+`array`|`&$parse_tags`|desc
 
 Called from
 : [`parse_bbc()` in `./Sources/Subs.php`](../docs/subs.html#parse_bbc)
@@ -142,8 +142,8 @@ call_integration_hook('integrate_smileys', array(&$smileyPregSearch, &$smileyPre
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&smileyPregSearch`|desc
-`array`|`$&smileyPregReplacements`|desc
+`array`|`&$smileyPregSearch`|desc
+`array`|`&$smileyPregReplacements`|desc
 
 Called from
 : [`parsesmileys()` in `./Sources/Subs.php`](../docs/subs.html#parsesmileys)
@@ -160,7 +160,7 @@ call_integration_hook('integrate_proxy', array($url, &$proxied_url))
 Type|Parameter|Description
 ---|---|---
 `array`|`$url`|desc
-`array`|`$&proxied_url`|desc
+`array`|`&$proxied_url`|desc
 
 Called from
 : [`get_proxied_url()` in `./Sources/Subs.php`](../docs/subs.html#get_proxied_url)
@@ -176,9 +176,9 @@ call_integration_hook('integrate_redirect', array(&$setLocation, &$refresh, &$pe
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&setLocation`|desc
-`array`|`$&refresh`|desc
-`array`|`$&permanent`|desc
+`array`|`&$setLocation`|desc
+`array`|`&$refresh`|desc
+`array`|`&$permanent`|desc
 
 Called from
 : [`redirectexit()` in `./Sources/Subs.php`](../docs/subs.html#redirectexit)
@@ -223,7 +223,7 @@ call_integration_hook('integrate_security_files', array(&$securityFiles))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&securityFiles`|desc
+`array`|`&$securityFiles`|desc
 
 Called from
 : [`template_header()` in `./Sources/Subs.php`](../docs/subs.html#template_header)
@@ -239,7 +239,7 @@ call_integration_hook('integrate_pre_javascript_output', array(&$do_deferred))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&do_deferred`|desc
+`array`|`&$do_deferred`|desc
 
 Called from
 : [`template_javascript()` in `./Sources/Subs.php`](../docs/subs.html#template_javascript)
@@ -268,7 +268,7 @@ call_integration_hook('integrate_menu_buttons', array(&$buttons))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&buttons`|desc
+`array`|`&$buttons`|desc
 
 Called from
 : [`setupMenuContext()` in `./Sources/Subs.php`](../docs/subs.html#setupmenucontext)
@@ -284,7 +284,7 @@ call_integration_hook('integrate_current_action', array(&$current_action))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&current_action`|desc
+`array`|`&$current_action`|desc
 
 Called from
 : [`setupMenuContext()` in `./Sources/Subs.php`](../docs/subs.html#setupmenucontext)

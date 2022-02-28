@@ -14,8 +14,8 @@ call_integration_hook('integrate_error_types', array(&$other_error_types, &$erro
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&other_error_types`|desc
-`array`|`$&error_type`|desc
+`array`|`&$other_error_types`|desc
+`array`|`&$error_type`|desc
 `array`|`$error_message`|desc
 `array`|`$file`|desc
 `array`|`$line`|desc

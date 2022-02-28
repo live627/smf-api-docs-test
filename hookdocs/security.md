@@ -14,7 +14,7 @@ call_integration_hook('integrate_validateSession', array(&$types))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&types`|desc
+`array`|`&$types`|desc
 
 Called from
 : [`validateSession()` in `./Sources/Security.php`](../docs/security.html#validatesession)
@@ -31,8 +31,8 @@ call_integration_hook('integrate_verify_password', array($user_info['username'],
 Type|Parameter|Description
 ---|---|---
 `array`|`$username`|desc
-`array`|`$`|desc
-`array`|`$false`|desc
+`array`|`$_POST[$type . '_pass']`|desc
+`array`|`false`|desc
 
 Called from
 : [`validateSession()` in `./Sources/Security.php`](../docs/security.html#validatesession)
@@ -48,7 +48,7 @@ call_integration_hook('integrate_post_ban_permissions', array(&$denied_permissio
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&denied_permissions`|desc
+`array`|`&$denied_permissions`|desc
 
 Called from
 : [`banPermissions()` in `./Sources/Security.php`](../docs/security.html#banpermissions)
@@ -64,7 +64,7 @@ call_integration_hook('integrate_warn_permissions', array(&$permission_change))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&permission_change`|desc
+`array`|`&$permission_change`|desc
 
 Called from
 : [`banPermissions()` in `./Sources/Security.php`](../docs/security.html#banpermissions)
@@ -80,7 +80,7 @@ call_integration_hook('integrate_allowed_to_general', array(&$user_permissions, 
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&user_permissions`|desc
+`array`|`&$user_permissions`|desc
 `array`|`$permission`|desc
 
 Called from
@@ -97,7 +97,7 @@ call_integration_hook('integrate_allowed_to_board', array(&$return, $permission,
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&return`|desc
+`array`|`&$return`|desc
 `array`|`$permission`|desc
 `array`|`$boards`|desc
 `array`|`$any`|desc
@@ -116,7 +116,7 @@ call_integration_hook('integrate_heavy_permissions_session', array(&$heavy_permi
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&heavy_permissions`|desc
+`array`|`&$heavy_permissions`|desc
 
 Called from
 : [`isAllowedTo()` in `./Sources/Security.php`](../docs/security.html#isallowedto)
@@ -132,7 +132,7 @@ call_integration_hook('integrate_boards_allowed_to', array(&$boards, $deny_board
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&boards`|desc
+`array`|`&$boards`|desc
 `array`|`$deny_boards`|desc
 `array`|`$permissions`|desc
 `array`|`$check_access`|desc
@@ -152,7 +152,7 @@ call_integration_hook('integrate_spam_protection', array(&$timeOverrides))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&timeOverrides`|desc
+`array`|`&$timeOverrides`|desc
 
 Called from
 : [`spamProtection()` in `./Sources/Security.php`](../docs/security.html#spamprotection)

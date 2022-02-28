@@ -9,11 +9,9 @@ count: 5
 ### integrate_attachment_upload
 
 ```php
-call_integration_hook('integrate_attachment_upload', array())
+call_integration_hook('integrate_attachment_upload')
 ```
 
-Type|Parameter|Description
----|---|---
 
 Called from
 : [`processAttachments()` in `./Sources/Subs-Attachments.php`](../docs/subs-attachments.html#processattachments)
@@ -29,8 +27,8 @@ call_integration_hook('integrate_createAttachment', array(&$attachmentOptions, &
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&attachmentOptions`|desc
-`array`|`$&attachmentInserts`|desc
+`array`|`&$attachmentOptions`|desc
+`array`|`&$attachmentInserts`|desc
 
 Called from
 : [`createAttachment()` in `./Sources/Subs-Attachments.php`](../docs/subs-attachments.html#createattachment)
@@ -46,8 +44,8 @@ call_integration_hook('integrate_assign_attachments', array(&$attachIDs, &$msgID
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&attachIDs`|desc
-`array`|`$&msgID`|desc
+`array`|`&$attachIDs`|desc
+`array`|`&$msgID`|desc
 
 Called from
 : [`assignAttachments()` in `./Sources/Subs-Attachments.php`](../docs/subs-attachments.html#assignattachments)
@@ -80,7 +78,7 @@ call_integration_hook('integrate_post_parseAttachBBC', array(&$attachContext))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&attachContext`|desc
+`array`|`&$attachContext`|desc
 
 Called from
 : [`parseAttachBBC()` in `./Sources/Subs-Attachments.php`](../docs/subs-attachments.html#parseattachbbc)

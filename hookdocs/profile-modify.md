@@ -32,7 +32,7 @@ call_integration_hook('integrate_load_profile_fields', array(&$profile_fields))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&profile_fields`|desc
+`array`|`&$profile_fields`|desc
 
 Called from
 : [`loadProfileFields()` in `./Sources/Profile-Modify.php`](../docs/profile-modify.html#loadprofilefields)
@@ -48,7 +48,7 @@ call_integration_hook('integrate_setup_profile_context', array(&$fields))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&fields`|desc
+`array`|`&$fields`|desc
 
 Called from
 : [`setupProfileContext()` in `./Sources/Profile-Modify.php`](../docs/profile-modify.html#setupprofilecontext)
@@ -64,14 +64,14 @@ call_integration_hook('integrate_save_custom_profile_fields', array(&$changes, &
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&changes`|desc
-`array`|`$&log_changes`|desc
-`array`|`$&errors`|desc
+`array`|`&$changes`|desc
+`array`|`&$log_changes`|desc
+`array`|`&$errors`|desc
 `array`|`$returnErrors`|desc
 `array`|`$memID`|desc
 `array`|`$area`|desc
 `array`|`$sanitize`|desc
-`array`|`$&deletes`|desc
+`array`|`&$deletes`|desc
 
 Called from
 : [`makeCustomFieldChanges()` in `./Sources/Profile-Modify.php`](../docs/profile-modify.html#makecustomfieldchanges)
@@ -104,7 +104,7 @@ call_integration_hook('integrate_add_buddies', array($memID, &$new_buddies))
 Type|Parameter|Description
 ---|---|---
 `array`|`$memID`|desc
-`array`|`$&new_buddies`|desc
+`array`|`&$new_buddies`|desc
 
 Called from
 : [`editBuddies()` in `./Sources/Profile-Modify.php`](../docs/profile-modify.html#editbuddies)
@@ -149,8 +149,8 @@ call_integration_hook('integrate_alert_types', array(&$alert_types, &$group_opti
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&alert_types`|desc
-`array`|`$&group_options`|desc
+`array`|`&$alert_types`|desc
+`array`|`&$group_options`|desc
 
 Called from
 : [`alert_configuration()` in `./Sources/Profile-Modify.php`](../docs/profile-modify.html#alert_configuration)
@@ -183,7 +183,7 @@ call_integration_hook('before_profile_save_avatar', array(&$value))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&value`|desc
+`array`|`&$value`|desc
 
 Called from
 : [`profileSaveAvatarData()` in `./Sources/Profile-Modify.php`](../docs/profile-modify.html#profilesaveavatardata)

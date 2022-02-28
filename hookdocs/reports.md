@@ -40,7 +40,7 @@ call_integration_hook('integrate_reports_boardperm', array(&$disabled_permission
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&disabled_permissions`|desc
+`array`|`&$disabled_permissions`|desc
 
 Called from
 : [`BoardPermissionsReport()` in `./Sources/Reports.php`](../docs/reports.html#boardpermissionsreport)
@@ -56,7 +56,7 @@ call_integration_hook('integrate_reports_groupperm', array(&$disabled_permission
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&disabled_permissions`|desc
+`array`|`&$disabled_permissions`|desc
 
 Called from
 : [`GroupPermissionsReport()` in `./Sources/Reports.php`](../docs/reports.html#grouppermissionsreport)

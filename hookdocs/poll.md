@@ -14,8 +14,8 @@ call_integration_hook('integrate_poll_vote', array(&$row['id_poll'], &$pollOptio
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&id_poll`|desc
-`array`|`$&pollOptions`|desc
+`array`|`&$id_poll`|desc
+`array`|`&$pollOptions`|desc
 
 Called from
 : [`Vote()` in `./Sources/Poll.php`](../docs/poll.html#vote)

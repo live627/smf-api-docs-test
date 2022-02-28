@@ -15,7 +15,7 @@ call_integration_hook('integrate_cookie_data', array($data, &$custom_data))
 Type|Parameter|Description
 ---|---|---
 `array`|`$data`|desc
-`array`|`$&custom_data`|desc
+`array`|`&$custom_data`|desc
 
 Called from
 : [`setLoginCookie()` in `./Sources/Subs-Auth.php`](../docs/subs-auth.html#setlogincookie)
@@ -31,7 +31,7 @@ call_integration_hook('integrate_validateSession', array(&$types))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&types`|desc
+`array`|`&$types`|desc
 
 Called from
 : [`adminLogin()` in `./Sources/Subs-Auth.php`](../docs/subs-auth.html#adminlogin)
@@ -66,7 +66,7 @@ call_integration_hook('integrate_validate_username', array($username, &$errors))
 Type|Parameter|Description
 ---|---|---
 `array`|`$username`|desc
-`array`|`$&errors`|desc
+`array`|`&$errors`|desc
 
 Called from
 : [`validateUsername()` in `./Sources/Subs-Auth.php`](../docs/subs-auth.html#validateusername)
@@ -85,7 +85,7 @@ Type|Parameter|Description
 `array`|`$password`|desc
 `array`|`$username`|desc
 `array`|`$restrict_in`|desc
-`array`|`$&pass_error`|desc
+`array`|`&$pass_error`|desc
 
 Called from
 : [`validatePassword()` in `./Sources/Subs-Auth.php`](../docs/subs-auth.html#validatepassword)

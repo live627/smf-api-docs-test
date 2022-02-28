@@ -14,7 +14,7 @@ call_integration_hook('integrate_upload_template')
 
 
 Called from
-: [`template_main()` in `./Themes/default/Post.template.php`](../docs/post-template.html#template_main)
+: [`addPollOption()` in `./Themes/default/Post.template.php`](../docs/post-template.html#addpolloption)
 
 Notes
 : Since 2.1

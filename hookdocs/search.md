@@ -27,7 +27,7 @@ call_integration_hook('integrate_search_weights', array(&$weight_factors))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&weight_factors`|desc
+`array`|`&$weight_factors`|desc
 
 Called from
 : [`PlushSearch2()` in `./Sources/Search.php`](../docs/search.html#plushsearch2)
@@ -43,7 +43,7 @@ call_integration_hook('integrate_search_sort_columns', array(&$sort_columns))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&sort_columns`|desc
+`array`|`&$sort_columns`|desc
 
 Called from
 : [`PlushSearch2()` in `./Sources/Search.php`](../docs/search.html#plushsearch2)
@@ -59,7 +59,7 @@ call_integration_hook('integrate_search_params', array(&$search_params))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&search_params`|desc
+`array`|`&$search_params`|desc
 
 Called from
 : [`PlushSearch2()` in `./Sources/Search.php`](../docs/search.html#plushsearch2)
@@ -75,7 +75,7 @@ call_integration_hook('integrate_search_blacklisted_words', array(&$blacklisted_
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&blacklisted_words`|desc
+`array`|`&$blacklisted_words`|desc
 
 Called from
 : [`PlushSearch2()` in `./Sources/Search.php`](../docs/search.html#plushsearch2)
@@ -104,8 +104,8 @@ call_integration_hook('integrate_subject_only_search_query', array(&$subject_que
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&subject_query`|desc
-`array`|`$&subject_query_params`|desc
+`array`|`&$subject_query`|desc
+`array`|`&$subject_query_params`|desc
 
 Called from
 : [`PlushSearch2()` in `./Sources/Search.php`](../docs/search.html#plushsearch2)
@@ -121,7 +121,7 @@ call_integration_hook('integrate_subject_search_query', array(&$subject_query))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&subject_query`|desc
+`array`|`&$subject_query`|desc
 
 Called from
 : [`PlushSearch2()` in `./Sources/Search.php`](../docs/search.html#plushsearch2)
@@ -137,7 +137,7 @@ call_integration_hook('integrate_main_search_query', array(&$main_query))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&main_query`|desc
+`array`|`&$main_query`|desc
 
 Called from
 : [`PlushSearch2()` in `./Sources/Search.php`](../docs/search.html#plushsearch2)
@@ -153,8 +153,8 @@ call_integration_hook('integrate_search_message_list', array(&$msg_list, &$poste
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&msg_list`|desc
-`array`|`$&posters`|desc
+`array`|`&$msg_list`|desc
+`array`|`&$posters`|desc
 
 Called from
 : [`PlushSearch2()` in `./Sources/Search.php`](../docs/search.html#plushsearch2)
@@ -183,8 +183,8 @@ call_integration_hook('integrate_search_message_context', array(&$output, &$mess
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&output`|desc
-`array`|`$&message`|desc
+`array`|`&$output`|desc
+`array`|`&$message`|desc
 `array`|`$counter`|desc
 
 Called from

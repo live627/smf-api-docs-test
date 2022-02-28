@@ -32,7 +32,7 @@ Type|Parameter|Description
 ---|---|---
 `array`|`$members`|desc
 `array`|`$group`|desc
-`array`|`$&group_names`|desc
+`array`|`&$group_names`|desc
 
 Called from
 : [`addMembersToGroup()` in `./Sources/Subs-Membergroups.php`](../docs/subs-membergroups.html#addmemberstogroup)
@@ -48,7 +48,7 @@ call_integration_hook('integrate_getMembergroupList', array(&$groupCache, $group
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&groupCache`|desc
+`array`|`&$groupCache`|desc
 `array`|`$group`|desc
 
 Called from

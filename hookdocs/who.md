@@ -14,7 +14,7 @@ call_integration_hook('who_allowed', array(&$allowedActions))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&allowedActions`|desc
+`array`|`&$allowedActions`|desc
 
 Called from
 : [`determineActions()` in `./Sources/Who.php`](../docs/who.html#determineactions)
@@ -46,8 +46,8 @@ call_integration_hook('whos_online_after', array(&$urls, &$data))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&urls`|desc
-`array`|`$&data`|desc
+`array`|`&$urls`|desc
+`array`|`&$data`|desc
 
 Called from
 : [`determineActions()` in `./Sources/Who.php`](../docs/who.html#determineactions)

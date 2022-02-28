@@ -14,7 +14,7 @@ call_integration_hook('integrate_metazones', array(&$tzid_metazones, $when))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&tzid_metazones`|desc
+`array`|`&$tzid_metazones`|desc
 `array`|`$when`|desc
 
 Called from
@@ -31,7 +31,7 @@ call_integration_hook('integrate_country_timezones', array(&$sorted_tzids, $coun
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&sorted_tzids`|desc
+`array`|`&$sorted_tzids`|desc
 `array`|`$country_code`|desc
 `array`|`$when`|desc
 
@@ -49,8 +49,8 @@ call_integration_hook('integrate_timezone_fallbacks', array(&$fallbacks, &$missi
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&fallbacks`|desc
-`array`|`$&missing`|desc
+`array`|`&$fallbacks`|desc
+`array`|`&$missing`|desc
 `array`|`$tzids`|desc
 `array`|`$when`|desc
 

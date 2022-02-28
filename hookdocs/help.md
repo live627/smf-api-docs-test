@@ -14,7 +14,7 @@ call_integration_hook('integrate_manage_help', array(&$subActions))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&subActions`|desc
+`array`|`&$subActions`|desc
 
 Called from
 : [`ShowHelp()` in `./Sources/Help.php`](../docs/help.html#showhelp)

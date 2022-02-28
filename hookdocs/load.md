@@ -56,7 +56,7 @@ call_integration_hook('integrate_force_tfasetup', array(&$force_tfasetup))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&force_tfasetup`|desc
+`array`|`&$force_tfasetup`|desc
 
 Called from
 : [`loadUserSettings()` in `./Sources/Load.php`](../docs/load.html#loadusersettings)
@@ -102,7 +102,7 @@ call_integration_hook('integrate_load_min_user_settings_columns', array(&$column
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&columns_to_load`|desc
+`array`|`&$columns_to_load`|desc
 
 Called from
 : [`loadMinUserInfo()` in `./Sources/Load.php`](../docs/load.html#loadminuserinfo)
@@ -118,7 +118,7 @@ call_integration_hook('integrate_load_min_user_settings', array(&$user_info_min)
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&user_info_min`|desc
+`array`|`&$user_info_min`|desc
 
 Called from
 : [`loadMinUserInfo()` in `./Sources/Load.php`](../docs/load.html#loadminuserinfo)
@@ -134,8 +134,8 @@ call_integration_hook('integrate_load_board', array(&$custom_column_selects, &$c
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&custom_column_selects`|desc
-`array`|`$&custom_column_parameters`|desc
+`array`|`&$custom_column_selects`|desc
+`array`|`&$custom_column_parameters`|desc
 
 Called from
 : [`loadBoard()` in `./Sources/Load.php`](../docs/load.html#loadboard)
@@ -151,7 +151,7 @@ call_integration_hook('integrate_board_info', array(&$board_info, $row))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&board_info`|desc
+`array`|`&$board_info`|desc
 `array`|`$row`|desc
 
 Called from
@@ -168,9 +168,9 @@ call_integration_hook('integrate_load_member_data', array(&$select_columns, &$se
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&select_columns`|desc
-`array`|`$&select_tables`|desc
-`array`|`$&set`|desc
+`array`|`&$select_columns`|desc
+`array`|`&$select_tables`|desc
+`array`|`&$set`|desc
 
 Called from
 : [`loadMemberData()` in `./Sources/Load.php`](../docs/load.html#loadmemberdata)
@@ -186,7 +186,7 @@ call_integration_hook('integrate_member_context', array(&$memberContext[$user], 
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&user`|desc
+`array`|`&$user`|desc
 `array`|`$user`|desc
 `array`|`$display_custom_fields`|desc
 
@@ -204,7 +204,7 @@ call_integration_hook('integrate_pre_load_theme', array(&$id_theme))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&id_theme`|desc
+`array`|`&$id_theme`|desc
 
 Called from
 : [`loadTheme()` in `./Sources/Load.php`](../docs/load.html#loadtheme)
@@ -220,11 +220,11 @@ call_integration_hook('integrate_simple_actions', array(&$simpleActions, &$simpl
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&simpleActions`|desc
-`array`|`$&simpleAreas`|desc
-`array`|`$&simpleSubActions`|desc
-`array`|`$&extraParams`|desc
-`array`|`$&xmlActions`|desc
+`array`|`&$simpleActions`|desc
+`array`|`&$simpleAreas`|desc
+`array`|`&$simpleSubActions`|desc
+`array`|`&$extraParams`|desc
+`array`|`&$xmlActions`|desc
 
 Called from
 : [`loadTheme()` in `./Sources/Load.php`](../docs/load.html#loadtheme)
@@ -240,7 +240,7 @@ call_integration_hook('integrate_load_theme')
 
 
 Called from
-: [`loadTheme()` in `./Sources/Load.php`](../docs/load.html#loadtheme)
+: [`triggerCron()` in `./Sources/Load.php`](../docs/load.html#triggercron)
 
 Notes
 : Since 2.1
@@ -253,11 +253,11 @@ call_integration_hook('pre_cache_quick_get', array(&$key, &$file, &$function, &$
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&key`|desc
-`array`|`$&file`|desc
-`array`|`$&function`|desc
-`array`|`$&params`|desc
-`array`|`$&level`|desc
+`array`|`&$key`|desc
+`array`|`&$file`|desc
+`array`|`&$function`|desc
+`array`|`&$params`|desc
+`array`|`&$level`|desc
 
 Called from
 : [`cache_quick_get()` in `./Sources/Load.php`](../docs/load.html#cache_quick_get)
@@ -273,7 +273,7 @@ call_integration_hook('post_cache_quick_get', array(&$cache_block))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&cache_block`|desc
+`array`|`&$cache_block`|desc
 
 Called from
 : [`cache_quick_get()` in `./Sources/Load.php`](../docs/load.html#cache_quick_get)
@@ -289,9 +289,9 @@ call_integration_hook('cache_put_data', array(&$key, &$value, &$ttl))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&key`|desc
-`array`|`$&value`|desc
-`array`|`$&ttl`|desc
+`array`|`&$key`|desc
+`array`|`&$value`|desc
+`array`|`&$ttl`|desc
 
 Called from
 : [`cache_put_data()` in `./Sources/Load.php`](../docs/load.html#cache_put_data)
@@ -307,9 +307,9 @@ call_integration_hook('cache_get_data', array(&$key, &$ttl, &$value))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&key`|desc
-`array`|`$&ttl`|desc
-`array`|`$&value`|desc
+`array`|`&$key`|desc
+`array`|`&$ttl`|desc
+`array`|`&$value`|desc
 
 Called from
 : [`cache_get_data()` in `./Sources/Load.php`](../docs/load.html#cache_get_data)
@@ -338,8 +338,8 @@ call_integration_hook('integrate_set_avatar_data', array(&$image, &$data))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&image`|desc
-`array`|`$&data`|desc
+`array`|`&$image`|desc
+`array`|`&$data`|desc
 
 Called from
 : [`set_avatar_data()` in `./Sources/Load.php`](../docs/load.html#set_avatar_data)

@@ -14,8 +14,8 @@ call_integration_hook('integrate_log_types', array(&$log_types, &$always_log))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&log_types`|desc
-`array`|`$&always_log`|desc
+`array`|`&$log_types`|desc
+`array`|`&$always_log`|desc
 
 Called from
 : [`logActions()` in `./Sources/Logging.php`](../docs/logging.html#logactions)

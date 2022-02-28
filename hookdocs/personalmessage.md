@@ -27,8 +27,8 @@ call_integration_hook('integrate_prepare_pm_context', array(&$output, &$message,
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&output`|desc
-`array`|`$&message`|desc
+`array`|`&$output`|desc
+`array`|`&$message`|desc
 `array`|`$counter`|desc
 
 Called from

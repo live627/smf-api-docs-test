@@ -15,7 +15,7 @@ call_integration_hook('integrate_pre_modify_board', array($id, &$boardOptions))
 Type|Parameter|Description
 ---|---|---
 `array`|`$id`|desc
-`array`|`$&boardOptions`|desc
+`array`|`&$boardOptions`|desc
 
 Called from
 : [`modifyBoard()` in `./Sources/Subs-Boards.php`](../docs/subs-boards.html#modifyboard)
@@ -33,8 +33,8 @@ Type|Parameter|Description
 ---|---|---
 `array`|`$id`|desc
 `array`|`$boardOptions`|desc
-`array`|`$&boardUpdates`|desc
-`array`|`$&boardUpdateParameters`|desc
+`array`|`&$boardUpdates`|desc
+`array`|`&$boardUpdateParameters`|desc
 
 Called from
 : [`modifyBoard()` in `./Sources/Subs-Boards.php`](../docs/subs-boards.html#modifyboard)
@@ -50,9 +50,9 @@ call_integration_hook('integrate_create_board', array(&$boardOptions, &$board_co
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&boardOptions`|desc
-`array`|`$&board_columns`|desc
-`array`|`$&board_parameters`|desc
+`array`|`&$boardOptions`|desc
+`array`|`&$board_columns`|desc
+`array`|`&$board_parameters`|desc
 
 Called from
 : [`createBoard()` in `./Sources/Subs-Boards.php`](../docs/subs-boards.html#createboard)
@@ -69,7 +69,7 @@ call_integration_hook('integrate_delete_board', array($boards_to_remove, &$moveC
 Type|Parameter|Description
 ---|---|---
 `array`|`$boards_to_remove`|desc
-`array`|`$&moveChildrenTo`|desc
+`array`|`&$moveChildrenTo`|desc
 
 Called from
 : [`deleteBoards()` in `./Sources/Subs-Boards.php`](../docs/subs-boards.html#deleteboards)
@@ -85,11 +85,11 @@ call_integration_hook('integrate_pre_boardtree', array(&$boardColumns, &$boardPa
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&boardColumns`|desc
-`array`|`$&boardParameters`|desc
-`array`|`$&boardJoins`|desc
-`array`|`$&boardWhere`|desc
-`array`|`$&boardOrder`|desc
+`array`|`&$boardColumns`|desc
+`array`|`&$boardParameters`|desc
+`array`|`&$boardJoins`|desc
+`array`|`&$boardWhere`|desc
+`array`|`&$boardOrder`|desc
 
 Called from
 : [`getBoardTree()` in `./Sources/Subs-Boards.php`](../docs/subs-boards.html#getboardtree)

@@ -14,7 +14,7 @@ call_integration_hook('integrate_package_get', array(&$subActions))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&subActions`|desc
+`array`|`&$subActions`|desc
 
 Called from
 : [`PackageGet()` in `./Sources/PackageGet.php`](../docs/packageget.html#packageget)

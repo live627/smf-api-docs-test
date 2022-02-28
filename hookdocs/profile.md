@@ -14,7 +14,7 @@ call_integration_hook('integrate_pre_profile_areas', array(&$profile_areas))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&profile_areas`|desc
+`array`|`&$profile_areas`|desc
 
 Called from
 : [`ModifyProfile()` in `./Sources/Profile.php`](../docs/profile.html#modifyprofile)
@@ -32,7 +32,7 @@ Type|Parameter|Description
 ---|---|---
 `array`|`$member_name`|desc
 `array`|`$password`|desc
-`array`|`$false`|desc
+`array`|`false`|desc
 
 Called from
 : [`ModifyProfile()` in `./Sources/Profile.php`](../docs/profile.html#modifyprofile)
@@ -48,8 +48,8 @@ call_integration_hook('integrate_profile_save', array(&$profile_vars, &$post_err
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&profile_vars`|desc
-`array`|`$&post_errors`|desc
+`array`|`&$profile_vars`|desc
+`array`|`&$post_errors`|desc
 `array`|`$memID`|desc
 `array`|`$cur_profile`|desc
 `array`|`$current_area`|desc
@@ -86,7 +86,7 @@ call_integration_hook('integrate_profile_popup', array(&$profile_items))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&profile_items`|desc
+`array`|`&$profile_items`|desc
 
 Called from
 : [`profile_popup()` in `./Sources/Profile.php`](../docs/profile.html#profile_popup)

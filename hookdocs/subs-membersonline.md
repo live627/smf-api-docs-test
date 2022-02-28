@@ -14,7 +14,7 @@ call_integration_hook('integrate_online_stats', array(&$membersOnlineStats))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&membersOnlineStats`|desc
+`array`|`&$membersOnlineStats`|desc
 
 Called from
 : [`getMembersOnlineStats()` in `./Sources/Subs-MembersOnline.php`](../docs/subs-membersonline.html#getmembersonlinestats)

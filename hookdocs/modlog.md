@@ -14,8 +14,8 @@ call_integration_hook('integrate_viewModLog', array(&$listOptions, &$moderation_
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&listOptions`|desc
-`array`|`$&moderation_menu_name`|desc
+`array`|`&$listOptions`|desc
+`array`|`&$moderation_menu_name`|desc
 
 Called from
 : [`ViewModlog()` in `./Sources/Modlog.php`](../docs/modlog.html#viewmodlog)

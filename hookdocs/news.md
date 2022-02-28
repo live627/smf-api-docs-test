@@ -14,7 +14,7 @@ call_integration_hook('integrate_xmlfeeds', array(&$subActions))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&subActions`|desc
+`array`|`&$subActions`|desc
 
 Called from
 : [`ShowXmlFeed()` in `./Sources/News.php`](../docs/news.html#showxmlfeed)
@@ -30,15 +30,15 @@ call_integration_hook('integrate_xml_data', array(&$xml_data, &$feed_meta, &$nam
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&xml_data`|desc
-`array`|`$&feed_meta`|desc
-`array`|`$&namespaces`|desc
-`array`|`$&extraFeedTags`|desc
-`array`|`$&forceCdataKeys`|desc
-`array`|`$&nsKeys`|desc
+`array`|`&$xml_data`|desc
+`array`|`&$feed_meta`|desc
+`array`|`&$namespaces`|desc
+`array`|`&$extraFeedTags`|desc
+`array`|`&$forceCdataKeys`|desc
+`array`|`&$nsKeys`|desc
 `array`|`$xml_format`|desc
 `array`|`$subaction`|desc
-`array`|`$&doctype`|desc
+`array`|`&$doctype`|desc
 
 Called from
 : [`buildXmlFeed()` in `./Sources/News.php`](../docs/news.html#buildxmlfeed)
@@ -54,7 +54,7 @@ call_integration_hook('integrate_fix_url', array(&$val))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&val`|desc
+`array`|`&$val`|desc
 
 Called from
 : [`fix_possible_url()` in `./Sources/News.php`](../docs/news.html#fix_possible_url)

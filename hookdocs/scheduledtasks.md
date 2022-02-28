@@ -27,7 +27,7 @@ call_integration_hook('integrate_daily_digest_lang', array(&$langtxt, $lang))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&langtxt`|desc
+`array`|`&$langtxt`|desc
 `array`|`$lang`|desc
 
 Called from
@@ -44,7 +44,7 @@ call_integration_hook('integrate_daily_digest_email', array(&$email, $types, $no
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&email`|desc
+`array`|`&$email`|desc
 `array`|`$types`|desc
 `array`|`$notify_types`|desc
 `array`|`$langtxt`|desc

@@ -14,7 +14,7 @@ call_integration_hook('integrate_get_single_theme', array(&$variables, $id))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&variables`|desc
+`array`|`&$variables`|desc
 `array`|`$id`|desc
 
 Called from
@@ -31,7 +31,7 @@ call_integration_hook('integrate_get_all_themes', array(&$themeValues, $enable_o
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&themeValues`|desc
+`array`|`&$themeValues`|desc
 `array`|`$enable_only`|desc
 
 Called from
@@ -48,7 +48,7 @@ call_integration_hook('integrate_get_installed_themes', array(&$themeValues))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&themeValues`|desc
+`array`|`&$themeValues`|desc
 
 Called from
 : [`get_installed_themes()` in `./Sources/Subs-Themes.php`](../docs/subs-themes.html#get_installed_themes)
@@ -64,7 +64,7 @@ call_integration_hook('integrate_theme_install', array(&$context['to_install'], 
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&to_install`|desc
+`array`|`&$to_install`|desc
 `array`|`$id_theme`|desc
 
 Called from

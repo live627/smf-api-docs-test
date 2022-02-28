@@ -14,7 +14,7 @@ call_integration_hook('integrate_load_message_icons', array(&$icons))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&icons`|desc
+`array`|`&$icons`|desc
 
 Called from
 : [`getMessageIcons()` in `./Sources/Subs-Editor.php`](../docs/subs-editor.html#getmessageicons)
@@ -30,8 +30,8 @@ call_integration_hook('integrate_bbc_buttons', array(&$context['bbc_tags'], &$ed
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&bbc_tags`|desc
-`array`|`$&editor_tag_map`|desc
+`array`|`&$bbc_tags`|desc
+`array`|`&$editor_tag_map`|desc
 
 Called from
 : [`create_control_richedit()` in `./Sources/Subs-Editor.php`](../docs/subs-editor.html#create_control_richedit)
@@ -47,7 +47,7 @@ call_integration_hook('integrate_sceditor_options', array(&$sce_options))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&sce_options`|desc
+`array`|`&$sce_options`|desc
 
 Called from
 : [`create_control_richedit()` in `./Sources/Subs-Editor.php`](../docs/subs-editor.html#create_control_richedit)
@@ -63,7 +63,7 @@ call_integration_hook('integrate_create_control_verification_pre', array(&$verif
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&verificationOptions`|desc
+`array`|`&$verificationOptions`|desc
 `array`|`$do_test`|desc
 
 Called from
@@ -81,7 +81,7 @@ call_integration_hook('integrate_create_control_verification_test', array($thisV
 Type|Parameter|Description
 ---|---|---
 `array`|`$thisVerification`|desc
-`array`|`$&verification_errors`|desc
+`array`|`&$verification_errors`|desc
 
 Called from
 : [`create_control_verification()` in `./Sources/Subs-Editor.php`](../docs/subs-editor.html#create_control_verification)
@@ -113,7 +113,7 @@ call_integration_hook('integrate_create_control_verification_post', array(&$veri
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&verification_errors`|desc
+`array`|`&$verification_errors`|desc
 `array`|`$do_test`|desc
 
 Called from
@@ -130,7 +130,7 @@ call_integration_hook('integrate_autosuggest', array(&$searchTypes))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&searchTypes`|desc
+`array`|`&$searchTypes`|desc
 
 Called from
 : [`AutoSuggestHandler()` in `./Sources/Subs-Editor.php`](../docs/subs-editor.html#autosuggesthandler)

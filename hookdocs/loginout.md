@@ -9,14 +9,13 @@ count: 4
 ### integrate_validate_login
 
 ```php
-call_integration_hook('integrate_validate_login', array($_POST['user'], isset($_POST['passwrd']) ? $_POST['passwrd'] : null, $modSettings['cookieTime']))
+call_integration_hook('integrate_validate_login', array($_POST['user'], isset($_POST['passwrd']))
 ```
 
 Type|Parameter|Description
 ---|---|---
 `array`|`$user`|desc
-`array`|`???`|desc
-`array`|`$cookieTime`|desc
+`array`|`isset($passwrd`|desc
 
 Called from
 : [`Login2()` in `./Sources/LogInOut.php`](../docs/loginout.html#login2)
@@ -32,7 +31,7 @@ call_integration_hook('integrate_other_passwords', array(&$other_passwords))
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$&other_passwords`|desc
+`array`|`&$other_passwords`|desc
 
 Called from
 : [`Login2()` in `./Sources/LogInOut.php`](../docs/loginout.html#login2)
@@ -49,7 +48,7 @@ call_integration_hook('integrate_login', array($user_settings['member_name'], nu
 Type|Parameter|Description
 ---|---|---
 `array`|`$member_name`|desc
-`array`|`$null`|desc
+`array`|`null`|desc
 `array`|`$cookieTime`|desc
 
 Called from
