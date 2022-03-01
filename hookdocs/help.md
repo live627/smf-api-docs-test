@@ -6,6 +6,8 @@ count: 2
 ---
 * auto-gen TOC:
 {:toc}
+
+## Help.php
 ### integrate_manage_help
 
 ```php

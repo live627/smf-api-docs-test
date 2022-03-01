@@ -6,6 +6,8 @@ count: 1
 ---
 * auto-gen TOC:
 {:toc}
+
+## Post.template.php
 ### integrate_upload_template
 
 ```php

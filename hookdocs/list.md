@@ -1,10 +1,8 @@
 ---
 layout: default
 group: hooks
-title: Mentions.php
+title: Subs-List.php
 count: 0
 ---
 * auto-gen TOC:
 {:toc}
-
-## Mentions.php

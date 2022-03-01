@@ -6,6 +6,8 @@ count: 1
 ---
 * auto-gen TOC:
 {:toc}
+
+## index.template.php
 ### integrate_' . $list_class . '_quickbuttons
 
 ```php

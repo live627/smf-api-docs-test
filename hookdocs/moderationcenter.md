@@ -6,6 +6,8 @@ count: 2
 ---
 * auto-gen TOC:
 {:toc}
+
+## ModerationCenter.php
 ### integrate_mod_centre_blocks
 
 ```php

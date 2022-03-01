@@ -6,6 +6,8 @@ count: 2
 ---
 * auto-gen TOC:
 {:toc}
+
+## Admin.php
 ### integrate_admin_search
 
 ```php
@@ -53,7 +55,7 @@ Type|Parameter|Description
 `array`|`&$subActions`|desc
 
 Called from
-: [`ManageAttachments()` in `./Sources/ManageAttachments.php`](../docs/admin.html#manageattachments)
+: [`ManageAttachments()` in `./Sources/ManageAttachments.php`](../docs/manageattachments.html#manageattachments)
 
 Notes
 : Since 2.1
@@ -69,7 +71,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`ManageAttachmentSettings()` in `./Sources/ManageAttachments.php`](../docs/admin.html#manageattachmentsettings)
+: [`ManageAttachmentSettings()` in `./Sources/ManageAttachments.php`](../docs/manageattachments.html#manageattachmentsettings)
 
 Notes
 : Since 2.1
@@ -82,7 +84,7 @@ call_integration_hook('integrate_save_attachment_settings')
 
 
 Called from
-: [`ManageAttachmentSettings()` in `./Sources/ManageAttachments.php`](../docs/admin.html#manageattachmentsettings)
+: [`ManageAttachmentSettings()` in `./Sources/ManageAttachments.php`](../docs/manageattachments.html#manageattachmentsettings)
 
 Notes
 : Since 2.1
@@ -98,7 +100,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`ManageAvatarSettings()` in `./Sources/ManageAttachments.php`](../docs/admin.html#manageavatarsettings)
+: [`ManageAvatarSettings()` in `./Sources/ManageAttachments.php`](../docs/manageattachments.html#manageavatarsettings)
 
 Notes
 : Since 2.1
@@ -111,7 +113,7 @@ call_integration_hook('integrate_save_avatar_settings')
 
 
 Called from
-: [`ManageAvatarSettings()` in `./Sources/ManageAttachments.php`](../docs/admin.html#manageavatarsettings)
+: [`ManageAvatarSettings()` in `./Sources/ManageAttachments.php`](../docs/manageattachments.html#manageavatarsettings)
 
 Notes
 : Since 2.1
@@ -129,7 +131,7 @@ Type|Parameter|Description
 `array`|`&$list_title`|desc
 
 Called from
-: [`BrowseFiles()` in `./Sources/ManageAttachments.php`](../docs/admin.html#browsefiles)
+: [`BrowseFiles()` in `./Sources/ManageAttachments.php`](../docs/manageattachments.html#browsefiles)
 
 Notes
 : Since 2.1
@@ -146,7 +148,7 @@ Type|Parameter|Description
 `array`|`$attachments`|desc
 
 Called from
-: [`RemoveAttachment()` in `./Sources/ManageAttachments.php`](../docs/admin.html#removeattachment)
+: [`RemoveAttachment()` in `./Sources/ManageAttachments.php`](../docs/manageattachments.html#removeattachment)
 
 Notes
 : Since 2.1
@@ -162,7 +164,7 @@ Type|Parameter|Description
 `array`|`$attach`|desc
 
 Called from
-: [`removeAttachments()` in `./Sources/ManageAttachments.php`](../docs/admin.html#removeattachments)
+: [`removeAttachments()` in `./Sources/ManageAttachments.php`](../docs/manageattachments.html#removeattachments)
 
 Notes
 : Since 2.1
@@ -180,7 +182,7 @@ Type|Parameter|Description
 `array`|`$substep + 500`|desc
 
 Called from
-: [`RepairAttachments()` in `./Sources/ManageAttachments.php`](../docs/admin.html#repairattachments)
+: [`RepairAttachments()` in `./Sources/ManageAttachments.php`](../docs/manageattachments.html#repairattachments)
 
 Notes
 : Since 2.1
@@ -196,7 +198,7 @@ Type|Parameter|Description
 `array`|`$attachments`|desc
 
 Called from
-: [`ApproveAttachments()` in `./Sources/ManageAttachments.php`](../docs/admin.html#approveattachments)
+: [`ApproveAttachments()` in `./Sources/ManageAttachments.php`](../docs/manageattachments.html#approveattachments)
 
 Notes
 : Since 2.1
@@ -214,7 +216,7 @@ Type|Parameter|Description
 `array`|`&$subActions`|desc
 
 Called from
-: [`Ban()` in `./Sources/ManageBans.php`](../docs/admin.html#ban)
+: [`Ban()` in `./Sources/ManageBans.php`](../docs/managebans.html#ban)
 
 Notes
 : Since 2.1
@@ -230,7 +232,7 @@ Type|Parameter|Description
 `array`|`&$listOptions`|desc
 
 Called from
-: [`BanEdit()` in `./Sources/ManageBans.php`](../docs/admin.html#banedit)
+: [`BanEdit()` in `./Sources/ManageBans.php`](../docs/managebans.html#banedit)
 
 Notes
 : Since 2.1
@@ -243,7 +245,7 @@ call_integration_hook('integrate_ban_edit_new')
 
 
 Called from
-: [`BanEdit()` in `./Sources/ManageBans.php`](../docs/admin.html#banedit)
+: [`BanEdit()` in `./Sources/ManageBans.php`](../docs/managebans.html#banedit)
 
 Notes
 : Since 2.1
@@ -259,7 +261,7 @@ Type|Parameter|Description
 `array`|`&$ban_items`|desc
 
 Called from
-: [`list_getBanItems()` in `./Sources/ManageBans.php`](../docs/admin.html#list_getbanitems)
+: [`list_getBanItems()` in `./Sources/ManageBans.php`](../docs/managebans.html#list_getbanitems)
 
 Notes
 : Since 2.1
@@ -275,7 +277,7 @@ Type|Parameter|Description
 `array`|`&$search_list`|desc
 
 Called from
-: [`banLoadAdditionalIPs()` in `./Sources/ManageBans.php`](../docs/admin.html#banloadadditionalips)
+: [`banLoadAdditionalIPs()` in `./Sources/ManageBans.php`](../docs/managebans.html#banloadadditionalips)
 
 Notes
 : Since 2.1
@@ -292,7 +294,7 @@ Type|Parameter|Description
 `array`|`empty($bg`|desc
 
 Called from
-: [`banEdit2()` in `./Sources/ManageBans.php`](../docs/admin.html#banedit2)
+: [`banEdit2()` in `./Sources/ManageBans.php`](../docs/managebans.html#banedit2)
 
 Notes
 : Since 2.1
@@ -305,7 +307,7 @@ call_integration_hook('integrate_edit_bans_post')
 
 
 Called from
-: [`banEdit2()` in `./Sources/ManageBans.php`](../docs/admin.html#banedit2)
+: [`banEdit2()` in `./Sources/ManageBans.php`](../docs/managebans.html#banedit2)
 
 Notes
 : Since 2.1
@@ -322,7 +324,7 @@ Type|Parameter|Description
 `array`|`&$ban_group`|desc
 
 Called from
-: [`saveTriggers()` in `./Sources/ManageBans.php`](../docs/admin.html#savetriggers)
+: [`saveTriggers()` in `./Sources/ManageBans.php`](../docs/managebans.html#savetriggers)
 
 Notes
 : Since 2.1
@@ -339,7 +341,7 @@ Type|Parameter|Description
 `array`|`$group_id`|desc
 
 Called from
-: [`removeBanTriggers()` in `./Sources/ManageBans.php`](../docs/admin.html#removebantriggers)
+: [`removeBanTriggers()` in `./Sources/ManageBans.php`](../docs/managebans.html#removebantriggers)
 
 Notes
 : Since 2.1
@@ -357,7 +359,7 @@ Type|Parameter|Description
 `array`|`&$subActions`|desc
 
 Called from
-: [`ManageBoards()` in `./Sources/ManageBoards.php`](../docs/admin.html#manageboards)
+: [`ManageBoards()` in `./Sources/ManageBoards.php`](../docs/manageboards.html#manageboards)
 
 Notes
 : Since 2.1
@@ -370,7 +372,7 @@ call_integration_hook('integrate_boards_main')
 
 
 Called from
-: [`ManageBoardsMain()` in `./Sources/ManageBoards.php`](../docs/admin.html#manageboardsmain)
+: [`ManageBoardsMain()` in `./Sources/ManageBoards.php`](../docs/manageboards.html#manageboardsmain)
 
 Notes
 : Since 2.1
@@ -383,7 +385,7 @@ call_integration_hook('integrate_edit_category')
 
 
 Called from
-: [`EditCategory()` in `./Sources/ManageBoards.php`](../docs/admin.html#editcategory)
+: [`EditCategory()` in `./Sources/ManageBoards.php`](../docs/manageboards.html#editcategory)
 
 Notes
 : Since 2.1
@@ -396,7 +398,7 @@ call_integration_hook('integrate_edit_board')
 
 
 Called from
-: [`EditBoard()` in `./Sources/ManageBoards.php`](../docs/admin.html#editboard)
+: [`EditBoard()` in `./Sources/ManageBoards.php`](../docs/manageboards.html#editboard)
 
 Notes
 : Since 2.1
@@ -412,7 +414,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`EditBoardSettings()` in `./Sources/ManageBoards.php`](../docs/admin.html#editboardsettings)
+: [`EditBoardSettings()` in `./Sources/ManageBoards.php`](../docs/manageboards.html#editboardsettings)
 
 Notes
 : Since 2.1
@@ -425,7 +427,7 @@ call_integration_hook('integrate_save_board_settings')
 
 
 Called from
-: [`EditBoardSettings()` in `./Sources/ManageBoards.php`](../docs/admin.html#editboardsettings)
+: [`EditBoardSettings()` in `./Sources/ManageBoards.php`](../docs/manageboards.html#editboardsettings)
 
 Notes
 : Since 2.1
@@ -443,7 +445,7 @@ Type|Parameter|Description
 `array`|`&$subActions`|desc
 
 Called from
-: [`ManageCalendar()` in `./Sources/ManageCalendar.php`](../docs/admin.html#managecalendar)
+: [`ManageCalendar()` in `./Sources/ManageCalendar.php`](../docs/managecalendar.html#managecalendar)
 
 Notes
 : Since 2.1
@@ -459,7 +461,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`ModifyCalendarSettings()` in `./Sources/ManageCalendar.php`](../docs/admin.html#modifycalendarsettings)
+: [`ModifyCalendarSettings()` in `./Sources/ManageCalendar.php`](../docs/managecalendar.html#modifycalendarsettings)
 
 Notes
 : Since 2.1
@@ -472,7 +474,7 @@ call_integration_hook('integrate_save_calendar_settings')
 
 
 Called from
-: [`ModifyCalendarSettings()` in `./Sources/ManageCalendar.php`](../docs/admin.html#modifycalendarsettings)
+: [`ModifyCalendarSettings()` in `./Sources/ManageCalendar.php`](../docs/managecalendar.html#modifycalendarsettings)
 
 Notes
 : Since 2.1
@@ -490,7 +492,7 @@ Type|Parameter|Description
 `array`|`&$subActions`|desc
 
 Called from
-: [`ManageLanguages()` in `./Sources/ManageLanguages.php`](../docs/admin.html#managelanguages)
+: [`ManageLanguages()` in `./Sources/ManageLanguages.php`](../docs/managelanguages.html#managelanguages)
 
 Notes
 : Since 2.1
@@ -506,7 +508,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`ModifyLanguageSettings()` in `./Sources/ManageLanguages.php`](../docs/admin.html#modifylanguagesettings)
+: [`ModifyLanguageSettings()` in `./Sources/ManageLanguages.php`](../docs/managelanguages.html#modifylanguagesettings)
 
 Notes
 : Since 2.1
@@ -522,7 +524,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`ModifyLanguageSettings()` in `./Sources/ManageLanguages.php`](../docs/admin.html#modifylanguagesettings)
+: [`ModifyLanguageSettings()` in `./Sources/ManageLanguages.php`](../docs/managelanguages.html#modifylanguagesettings)
 
 Notes
 : Since 2.1
@@ -541,7 +543,7 @@ Type|Parameter|Description
 `array`|`&$additional_string_types`|desc
 
 Called from
-: [`ModifyLanguage()` in `./Sources/ManageLanguages.php`](../docs/admin.html#modifylanguage)
+: [`ModifyLanguage()` in `./Sources/ManageLanguages.php`](../docs/managelanguages.html#modifylanguage)
 
 Notes
 : Since 2.1
@@ -557,7 +559,7 @@ Type|Parameter|Description
 `array`|`&$special_groups`|desc
 
 Called from
-: [`ModifyLanguage()` in `./Sources/ManageLanguages.php`](../docs/admin.html#modifylanguage)
+: [`ModifyLanguage()` in `./Sources/ManageLanguages.php`](../docs/managelanguages.html#modifylanguage)
 
 Notes
 : Since 2.1
@@ -575,7 +577,7 @@ Type|Parameter|Description
 `array`|`&$subActions`|desc
 
 Called from
-: [`ManageMail()` in `./Sources/ManageMail.php`](../docs/admin.html#managemail)
+: [`ManageMail()` in `./Sources/ManageMail.php`](../docs/managemail.html#managemail)
 
 Notes
 : Since 2.1
@@ -591,7 +593,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`ModifyMailSettings()` in `./Sources/ManageMail.php`](../docs/admin.html#modifymailsettings)
+: [`ModifyMailSettings()` in `./Sources/ManageMail.php`](../docs/managemail.html#modifymailsettings)
 
 Notes
 : Since 2.1
@@ -604,7 +606,7 @@ call_integration_hook('integrate_save_mail_settings')
 
 
 Called from
-: [`ModifyMailSettings()` in `./Sources/ManageMail.php`](../docs/admin.html#modifymailsettings)
+: [`ModifyMailSettings()` in `./Sources/ManageMail.php`](../docs/managemail.html#modifymailsettings)
 
 Notes
 : Since 2.1
@@ -622,7 +624,7 @@ Type|Parameter|Description
 `array`|`&$subActions`|desc
 
 Called from
-: [`ManageMaintenance()` in `./Sources/ManageMaintenance.php`](../docs/admin.html#managemaintenance)
+: [`ManageMaintenance()` in `./Sources/ManageMaintenance.php`](../docs/managemaintenance.html#managemaintenance)
 
 Notes
 : Since 2.1
@@ -638,7 +640,7 @@ Type|Parameter|Description
 `array`|`$body_type`|desc
 
 Called from
-: [`ConvertMsgBody()` in `./Sources/ManageMaintenance.php`](../docs/admin.html#convertmsgbody)
+: [`ConvertMsgBody()` in `./Sources/ManageMaintenance.php`](../docs/managemaintenance.html#convertmsgbody)
 
 Notes
 : Since 2.1
@@ -656,7 +658,7 @@ Type|Parameter|Description
 `array`|`&$subActions`|desc
 
 Called from
-: [`ModifyMembergroups()` in `./Sources/ManageMembergroups.php`](../docs/admin.html#modifymembergroups)
+: [`ModifyMembergroups()` in `./Sources/ManageMembergroups.php`](../docs/managemembergroups.html#modifymembergroups)
 
 Notes
 : Since 2.1
@@ -669,7 +671,7 @@ call_integration_hook('integrate_pre_add_membergroup')
 
 
 Called from
-: [`AddMembergroup()` in `./Sources/ManageMembergroups.php`](../docs/admin.html#addmembergroup)
+: [`AddMembergroup()` in `./Sources/ManageMembergroups.php`](../docs/managemembergroups.html#addmembergroup)
 
 Notes
 : Since 2.1
@@ -686,7 +688,7 @@ Type|Parameter|Description
 `array`|`$postCountBasedGroup`|desc
 
 Called from
-: [`AddMembergroup()` in `./Sources/ManageMembergroups.php`](../docs/admin.html#addmembergroup)
+: [`AddMembergroup()` in `./Sources/ManageMembergroups.php`](../docs/managemembergroups.html#addmembergroup)
 
 Notes
 : Since 2.1
@@ -702,7 +704,7 @@ Type|Parameter|Description
 `array`|`(int`|desc
 
 Called from
-: [`EditMembergroup()` in `./Sources/ManageMembergroups.php`](../docs/admin.html#editmembergroup)
+: [`EditMembergroup()` in `./Sources/ManageMembergroups.php`](../docs/managemembergroups.html#editmembergroup)
 
 Notes
 : Since 2.1
@@ -715,7 +717,7 @@ call_integration_hook('integrate_view_membergroup')
 
 
 Called from
-: [`EditMembergroup()` in `./Sources/ManageMembergroups.php`](../docs/admin.html#editmembergroup)
+: [`EditMembergroup()` in `./Sources/ManageMembergroups.php`](../docs/managemembergroups.html#editmembergroup)
 
 Notes
 : Since 2.1
@@ -731,7 +733,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`ModifyMembergroupsettings()` in `./Sources/ManageMembergroups.php`](../docs/admin.html#modifymembergroupsettings)
+: [`ModifyMembergroupsettings()` in `./Sources/ManageMembergroups.php`](../docs/managemembergroups.html#modifymembergroupsettings)
 
 Notes
 : Since 2.1
@@ -744,7 +746,7 @@ call_integration_hook('integrate_save_membergroup_settings')
 
 
 Called from
-: [`ModifyMembergroupsettings()` in `./Sources/ManageMembergroups.php`](../docs/admin.html#modifymembergroupsettings)
+: [`ModifyMembergroupsettings()` in `./Sources/ManageMembergroups.php`](../docs/managemembergroups.html#modifymembergroupsettings)
 
 Notes
 : Since 2.1
@@ -762,7 +764,7 @@ Type|Parameter|Description
 `array`|`&$subActions`|desc
 
 Called from
-: [`ViewMembers()` in `./Sources/ManageMembers.php`](../docs/admin.html#viewmembers)
+: [`ViewMembers()` in `./Sources/ManageMembers.php`](../docs/managemembers.html#viewmembers)
 
 Notes
 : Since 2.1
@@ -778,7 +780,7 @@ Type|Parameter|Description
 `array`|`&$params`|desc
 
 Called from
-: [`ViewMemberlist()` in `./Sources/ManageMembers.php`](../docs/admin.html#viewmemberlist)
+: [`ViewMemberlist()` in `./Sources/ManageMembers.php`](../docs/managemembers.html#viewmemberlist)
 
 Notes
 : Since 2.1
@@ -794,7 +796,7 @@ Type|Parameter|Description
 `array`|`$username`|desc
 
 Called from
-: [`AdminApprove()` in `./Sources/ManageMembers.php`](../docs/admin.html#adminapprove)
+: [`AdminApprove()` in `./Sources/ManageMembers.php`](../docs/managemembers.html#adminapprove)
 
 Notes
 : Since 2.1
@@ -812,7 +814,7 @@ Type|Parameter|Description
 `array`|`&$subActions`|desc
 
 Called from
-: [`ManageNews()` in `./Sources/ManageNews.php`](../docs/admin.html#managenews)
+: [`ManageNews()` in `./Sources/ManageNews.php`](../docs/managenews.html#managenews)
 
 Notes
 : Since 2.1
@@ -828,7 +830,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`ModifyNewsSettings()` in `./Sources/ManageNews.php`](../docs/admin.html#modifynewssettings)
+: [`ModifyNewsSettings()` in `./Sources/ManageNews.php`](../docs/managenews.html#modifynewssettings)
 
 Notes
 : Since 2.1
@@ -841,7 +843,7 @@ call_integration_hook('integrate_save_news_settings')
 
 
 Called from
-: [`ModifyNewsSettings()` in `./Sources/ManageNews.php`](../docs/admin.html#modifynewssettings)
+: [`ModifyNewsSettings()` in `./Sources/ManageNews.php`](../docs/managenews.html#modifynewssettings)
 
 Notes
 : Since 2.1
@@ -859,7 +861,7 @@ Type|Parameter|Description
 `array`|`&$subActions`|desc
 
 Called from
-: [`ManagePaidSubscriptions()` in `./Sources/ManagePaid.php`](../docs/admin.html#managepaidsubscriptions)
+: [`ManagePaidSubscriptions()` in `./Sources/ManagePaid.php`](../docs/managepaid.html#managepaidsubscriptions)
 
 Notes
 : Since 2.1
@@ -875,7 +877,7 @@ Type|Parameter|Description
 `array`|`$sub_id`|desc
 
 Called from
-: [`ModifySubscription()` in `./Sources/ManagePaid.php`](../docs/admin.html#modifysubscription)
+: [`ModifySubscription()` in `./Sources/ManagePaid.php`](../docs/managepaid.html#modifysubscription)
 
 Notes
 : Since 2.1
@@ -891,7 +893,7 @@ Type|Parameter|Description
 `array`|`???`|desc
 
 Called from
-: [`ModifySubscription()` in `./Sources/ManagePaid.php`](../docs/admin.html#modifysubscription)
+: [`ModifySubscription()` in `./Sources/ManagePaid.php`](../docs/managepaid.html#modifysubscription)
 
 Notes
 : Since 2.1
@@ -909,7 +911,7 @@ Type|Parameter|Description
 `array`|`&$subActions`|desc
 
 Called from
-: [`ModifyPermissions()` in `./Sources/ManagePermissions.php`](../docs/admin.html#modifypermissions)
+: [`ModifyPermissions()` in `./Sources/ManagePermissions.php`](../docs/managepermissions.html#modifypermissions)
 
 Notes
 : Since 2.1
@@ -925,7 +927,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`GeneralPermissionSettings()` in `./Sources/ManagePermissions.php`](../docs/admin.html#generalpermissionsettings)
+: [`GeneralPermissionSettings()` in `./Sources/ManagePermissions.php`](../docs/managepermissions.html#generalpermissionsettings)
 
 Notes
 : Since 2.1
@@ -938,7 +940,7 @@ call_integration_hook('integrate_save_permission_settings')
 
 
 Called from
-: [`GeneralPermissionSettings()` in `./Sources/ManagePermissions.php`](../docs/admin.html#generalpermissionsettings)
+: [`GeneralPermissionSettings()` in `./Sources/ManagePermissions.php`](../docs/managepermissions.html#generalpermissionsettings)
 
 Notes
 : Since 2.1
@@ -955,7 +957,7 @@ Type|Parameter|Description
 `array`|`&$boardLevels`|desc
 
 Called from
-: [`setPermissionLevel()` in `./Sources/ManagePermissions.php`](../docs/admin.html#setpermissionlevel)
+: [`setPermissionLevel()` in `./Sources/ManagePermissions.php`](../docs/managepermissions.html#setpermissionlevel)
 
 Notes
 : Since 2.1
@@ -975,7 +977,7 @@ Type|Parameter|Description
 `array`|`&$relabelPermissions`|desc
 
 Called from
-: [`loadAllPermissions()` in `./Sources/ManagePermissions.php`](../docs/admin.html#loadallpermissions)
+: [`loadAllPermissions()` in `./Sources/ManagePermissions.php`](../docs/managepermissions.html#loadallpermissions)
 
 Notes
 : Since 2.1
@@ -988,7 +990,7 @@ call_integration_hook('integrate_load_illegal_permissions')
 
 
 Called from
-: [`loadIllegalPermissions()` in `./Sources/ManagePermissions.php`](../docs/admin.html#loadillegalpermissions)
+: [`loadIllegalPermissions()` in `./Sources/ManagePermissions.php`](../docs/managepermissions.html#loadillegalpermissions)
 
 Notes
 : Since 2.1
@@ -1001,7 +1003,7 @@ call_integration_hook('integrate_load_illegal_guest_permissions')
 
 
 Called from
-: [`loadIllegalGuestPermissions()` in `./Sources/ManagePermissions.php`](../docs/admin.html#loadillegalguestpermissions)
+: [`loadIllegalGuestPermissions()` in `./Sources/ManagePermissions.php`](../docs/managepermissions.html#loadillegalguestpermissions)
 
 Notes
 : Since 2.1
@@ -1017,7 +1019,7 @@ Type|Parameter|Description
 `array`|`&$mappings`|desc
 
 Called from
-: [`ModifyPostModeration()` in `./Sources/ManagePermissions.php`](../docs/admin.html#modifypostmoderation)
+: [`ModifyPostModeration()` in `./Sources/ManagePermissions.php`](../docs/managepermissions.html#modifypostmoderation)
 
 Notes
 : Since 2.1
@@ -1035,7 +1037,7 @@ Type|Parameter|Description
 `array`|`&$subActions`|desc
 
 Called from
-: [`ManagePostSettings()` in `./Sources/ManagePosts.php`](../docs/admin.html#managepostsettings)
+: [`ManagePostSettings()` in `./Sources/ManagePosts.php`](../docs/manageposts.html#managepostsettings)
 
 Notes
 : Since 2.1
@@ -1051,7 +1053,7 @@ Type|Parameter|Description
 `array`|`&$updates`|desc
 
 Called from
-: [`SetCensor()` in `./Sources/ManagePosts.php`](../docs/admin.html#setcensor)
+: [`SetCensor()` in `./Sources/ManagePosts.php`](../docs/manageposts.html#setcensor)
 
 Notes
 : Since 2.1
@@ -1064,7 +1066,7 @@ call_integration_hook('integrate_censors')
 
 
 Called from
-: [`SetCensor()` in `./Sources/ManagePosts.php`](../docs/admin.html#setcensor)
+: [`SetCensor()` in `./Sources/ManagePosts.php`](../docs/manageposts.html#setcensor)
 
 Notes
 : Since 2.1
@@ -1080,7 +1082,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`ModifyPostSettings()` in `./Sources/ManagePosts.php`](../docs/admin.html#modifypostsettings)
+: [`ModifyPostSettings()` in `./Sources/ManagePosts.php`](../docs/manageposts.html#modifypostsettings)
 
 Notes
 : Since 2.1
@@ -1093,7 +1095,7 @@ call_integration_hook('integrate_save_post_settings')
 
 
 Called from
-: [`ModifyPostSettings()` in `./Sources/ManagePosts.php`](../docs/admin.html#modifypostsettings)
+: [`ModifyPostSettings()` in `./Sources/ManagePosts.php`](../docs/manageposts.html#modifypostsettings)
 
 Notes
 : Since 2.1
@@ -1109,7 +1111,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`ModifyTopicSettings()` in `./Sources/ManagePosts.php`](../docs/admin.html#modifytopicsettings)
+: [`ModifyTopicSettings()` in `./Sources/ManagePosts.php`](../docs/manageposts.html#modifytopicsettings)
 
 Notes
 : Since 2.1
@@ -1122,7 +1124,7 @@ call_integration_hook('integrate_save_topic_settings')
 
 
 Called from
-: [`ModifyTopicSettings()` in `./Sources/ManagePosts.php`](../docs/admin.html#modifytopicsettings)
+: [`ModifyTopicSettings()` in `./Sources/ManagePosts.php`](../docs/manageposts.html#modifytopicsettings)
 
 Notes
 : Since 2.1
@@ -1140,7 +1142,7 @@ Type|Parameter|Description
 `array`|`&$subActions`|desc
 
 Called from
-: [`RegCenter()` in `./Sources/ManageRegistration.php`](../docs/admin.html#regcenter)
+: [`RegCenter()` in `./Sources/ManageRegistration.php`](../docs/manageregistration.html#regcenter)
 
 Notes
 : Since 2.1
@@ -1156,7 +1158,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`ModifyRegistrationSettings()` in `./Sources/ManageRegistration.php`](../docs/admin.html#modifyregistrationsettings)
+: [`ModifyRegistrationSettings()` in `./Sources/ManageRegistration.php`](../docs/manageregistration.html#modifyregistrationsettings)
 
 Notes
 : Since 2.1
@@ -1169,7 +1171,7 @@ call_integration_hook('integrate_save_registration_settings')
 
 
 Called from
-: [`ModifyRegistrationSettings()` in `./Sources/ManageRegistration.php`](../docs/admin.html#modifyregistrationsettings)
+: [`ModifyRegistrationSettings()` in `./Sources/ManageRegistration.php`](../docs/manageregistration.html#modifyregistrationsettings)
 
 Notes
 : Since 2.1
@@ -1187,7 +1189,7 @@ Type|Parameter|Description
 `array`|`&$subActions`|desc
 
 Called from
-: [`ManageScheduledTasks()` in `./Sources/ManageScheduledTasks.php`](../docs/admin.html#managescheduledtasks)
+: [`ManageScheduledTasks()` in `./Sources/ManageScheduledTasks.php`](../docs/managescheduledtasks.html#managescheduledtasks)
 
 Notes
 : Since 2.1
@@ -1203,7 +1205,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`TaskSettings()` in `./Sources/ManageScheduledTasks.php`](../docs/admin.html#tasksettings)
+: [`TaskSettings()` in `./Sources/ManageScheduledTasks.php`](../docs/managescheduledtasks.html#tasksettings)
 
 Notes
 : Since 2.1
@@ -1219,7 +1221,7 @@ Type|Parameter|Description
 `array`|`&$save_vars`|desc
 
 Called from
-: [`TaskSettings()` in `./Sources/ManageScheduledTasks.php`](../docs/admin.html#tasksettings)
+: [`TaskSettings()` in `./Sources/ManageScheduledTasks.php`](../docs/managescheduledtasks.html#tasksettings)
 
 Notes
 : Since 2.1
@@ -1237,7 +1239,7 @@ Type|Parameter|Description
 `array`|`&$subActions`|desc
 
 Called from
-: [`ManageSearch()` in `./Sources/ManageSearch.php`](../docs/admin.html#managesearch)
+: [`ManageSearch()` in `./Sources/ManageSearch.php`](../docs/managesearch.html#managesearch)
 
 Notes
 : Since 2.1
@@ -1253,7 +1255,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`EditSearchSettings()` in `./Sources/ManageSearch.php`](../docs/admin.html#editsearchsettings)
+: [`EditSearchSettings()` in `./Sources/ManageSearch.php`](../docs/managesearch.html#editsearchsettings)
 
 Notes
 : Since 2.1
@@ -1266,7 +1268,7 @@ call_integration_hook('integrate_save_search_settings')
 
 
 Called from
-: [`EditSearchSettings()` in `./Sources/ManageSearch.php`](../docs/admin.html#editsearchsettings)
+: [`EditSearchSettings()` in `./Sources/ManageSearch.php`](../docs/managesearch.html#editsearchsettings)
 
 Notes
 : Since 2.1
@@ -1282,7 +1284,7 @@ Type|Parameter|Description
 `array`|`&$factors`|desc
 
 Called from
-: [`EditWeights()` in `./Sources/ManageSearch.php`](../docs/admin.html#editweights)
+: [`EditWeights()` in `./Sources/ManageSearch.php`](../docs/managesearch.html#editweights)
 
 Notes
 : Since 2.1
@@ -1295,7 +1297,7 @@ call_integration_hook('integrate_save_search_weights')
 
 
 Called from
-: [`EditWeights()` in `./Sources/ManageSearch.php`](../docs/admin.html#editweights)
+: [`EditWeights()` in `./Sources/ManageSearch.php`](../docs/managesearch.html#editweights)
 
 Notes
 : Since 2.1
@@ -1313,7 +1315,7 @@ Type|Parameter|Description
 `array`|`&$subActions`|desc
 
 Called from
-: [`SearchEngines()` in `./Sources/ManageSearchEngines.php`](../docs/admin.html#searchengines)
+: [`SearchEngines()` in `./Sources/ManageSearchEngines.php`](../docs/managesearchengines.html#searchengines)
 
 Notes
 : Since 2.1
@@ -1329,7 +1331,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`disableFields()` in `./Sources/ManageSearchEngines.php`](../docs/admin.html#disablefields)
+: [`disableFields()` in `./Sources/ManageSearchEngines.php`](../docs/managesearchengines.html#disablefields)
 
 Notes
 : Since 2.1
@@ -1342,7 +1344,7 @@ call_integration_hook('integrate_save_search_engine_settings')
 
 
 Called from
-: [`disableFields()` in `./Sources/ManageSearchEngines.php`](../docs/admin.html#disablefields)
+: [`disableFields()` in `./Sources/ManageSearchEngines.php`](../docs/managesearchengines.html#disablefields)
 
 Notes
 : Since 2.1
@@ -1360,7 +1362,7 @@ Type|Parameter|Description
 `array`|`&$subActions`|desc
 
 Called from
-: [`ModifySettings()` in `./Sources/ManageServer.php`](../docs/admin.html#modifysettings)
+: [`ModifySettings()` in `./Sources/ManageServer.php`](../docs/manageserver.html#modifysettings)
 
 Notes
 : Since 2.1
@@ -1376,7 +1378,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`ModifyGeneralSettings()` in `./Sources/ManageServer.php`](../docs/admin.html#modifygeneralsettings)
+: [`ModifyGeneralSettings()` in `./Sources/ManageServer.php`](../docs/manageserver.html#modifygeneralsettings)
 
 Notes
 : Since 2.1
@@ -1389,7 +1391,7 @@ call_integration_hook('integrate_save_general_settings')
 
 
 Called from
-: [`ModifyGeneralSettings()` in `./Sources/ManageServer.php`](../docs/admin.html#modifygeneralsettings)
+: [`ModifyGeneralSettings()` in `./Sources/ManageServer.php`](../docs/manageserver.html#modifygeneralsettings)
 
 Notes
 : Since 2.1
@@ -1405,7 +1407,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`ModifyDatabaseSettings()` in `./Sources/ManageServer.php`](../docs/admin.html#modifydatabasesettings)
+: [`ModifyDatabaseSettings()` in `./Sources/ManageServer.php`](../docs/manageserver.html#modifydatabasesettings)
 
 Notes
 : Since 2.1
@@ -1418,7 +1420,7 @@ call_integration_hook('integrate_save_database_settings')
 
 
 Called from
-: [`ModifyDatabaseSettings()` in `./Sources/ManageServer.php`](../docs/admin.html#modifydatabasesettings)
+: [`ModifyDatabaseSettings()` in `./Sources/ManageServer.php`](../docs/manageserver.html#modifydatabasesettings)
 
 Notes
 : Since 2.1
@@ -1434,7 +1436,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`hideGlobalCookies()` in `./Sources/ManageServer.php`](../docs/admin.html#hideglobalcookies)
+: [`hideGlobalCookies()` in `./Sources/ManageServer.php`](../docs/manageserver.html#hideglobalcookies)
 
 Notes
 : Since 2.1
@@ -1447,7 +1449,7 @@ call_integration_hook('integrate_save_cookie_settings')
 
 
 Called from
-: [`hideGlobalCookies()` in `./Sources/ManageServer.php`](../docs/admin.html#hideglobalcookies)
+: [`hideGlobalCookies()` in `./Sources/ManageServer.php`](../docs/manageserver.html#hideglobalcookies)
 
 Notes
 : Since 2.1
@@ -1463,7 +1465,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`ModifyGeneralSecuritySettings()` in `./Sources/ManageServer.php`](../docs/admin.html#modifygeneralsecuritysettings)
+: [`ModifyGeneralSecuritySettings()` in `./Sources/ManageServer.php`](../docs/manageserver.html#modifygeneralsecuritysettings)
 
 Notes
 : Since 2.1
@@ -1476,7 +1478,7 @@ call_integration_hook('integrate_save_general_security_settings')
 
 
 Called from
-: [`ModifyGeneralSecuritySettings()` in `./Sources/ManageServer.php`](../docs/admin.html#modifygeneralsecuritysettings)
+: [`ModifyGeneralSecuritySettings()` in `./Sources/ManageServer.php`](../docs/manageserver.html#modifygeneralsecuritysettings)
 
 Notes
 : Since 2.1
@@ -1492,7 +1494,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`ModifyCacheSettings()` in `./Sources/ManageServer.php`](../docs/admin.html#modifycachesettings)
+: [`ModifyCacheSettings()` in `./Sources/ManageServer.php`](../docs/manageserver.html#modifycachesettings)
 
 Notes
 : Since 2.1
@@ -1505,7 +1507,7 @@ call_integration_hook('integrate_save_cache_settings')
 
 
 Called from
-: [`ModifyCacheSettings()` in `./Sources/ManageServer.php`](../docs/admin.html#modifycachesettings)
+: [`ModifyCacheSettings()` in `./Sources/ManageServer.php`](../docs/manageserver.html#modifycachesettings)
 
 Notes
 : Since 2.1
@@ -1521,7 +1523,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`ModifyExportSettings()` in `./Sources/ManageServer.php`](../docs/admin.html#modifyexportsettings)
+: [`ModifyExportSettings()` in `./Sources/ManageServer.php`](../docs/manageserver.html#modifyexportsettings)
 
 Notes
 : Since 2.1
@@ -1534,7 +1536,7 @@ call_integration_hook('integrate_save_export_settings')
 
 
 Called from
-: [`ModifyExportSettings()` in `./Sources/ManageServer.php`](../docs/admin.html#modifyexportsettings)
+: [`ModifyExportSettings()` in `./Sources/ManageServer.php`](../docs/manageserver.html#modifyexportsettings)
 
 Notes
 : Since 2.1
@@ -1550,7 +1552,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`ModifyLoadBalancingSettings()` in `./Sources/ManageServer.php`](../docs/admin.html#modifyloadbalancingsettings)
+: [`ModifyLoadBalancingSettings()` in `./Sources/ManageServer.php`](../docs/manageserver.html#modifyloadbalancingsettings)
 
 Notes
 : Since 2.1
@@ -1563,7 +1565,7 @@ call_integration_hook('integrate_save_loadavg_settings')
 
 
 Called from
-: [`ModifyLoadBalancingSettings()` in `./Sources/ManageServer.php`](../docs/admin.html#modifyloadbalancingsettings)
+: [`ModifyLoadBalancingSettings()` in `./Sources/ManageServer.php`](../docs/manageserver.html#modifyloadbalancingsettings)
 
 Notes
 : Since 2.1
@@ -1579,7 +1581,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`prepareDBSettingContext()` in `./Sources/ManageServer.php`](../docs/admin.html#preparedbsettingcontext)
+: [`prepareDBSettingContext()` in `./Sources/ManageServer.php`](../docs/manageserver.html#preparedbsettingcontext)
 
 Notes
 : Since 2.1
@@ -1595,7 +1597,7 @@ Type|Parameter|Description
 `array`|`&$loadedApis`|desc
 
 Called from
-: [`loadCacheAPIs()` in `./Sources/ManageServer.php`](../docs/admin.html#loadcacheapis)
+: [`loadCacheAPIs()` in `./Sources/ManageServer.php`](../docs/manageserver.html#loadcacheapis)
 
 Notes
 : Since 2.1
@@ -1613,7 +1615,7 @@ Type|Parameter|Description
 `array`|`&$subActions`|desc
 
 Called from
-: [`ModifyFeatureSettings()` in `./Sources/ManageSettings.php`](../docs/admin.html#modifyfeaturesettings)
+: [`ModifyFeatureSettings()` in `./Sources/ManageSettings.php`](../docs/managesettings.html#modifyfeaturesettings)
 
 Notes
 : Since 2.1
@@ -1629,7 +1631,7 @@ Type|Parameter|Description
 `array`|`&$subActions`|desc
 
 Called from
-: [`ModifyModSettings()` in `./Sources/ManageSettings.php`](../docs/admin.html#modifymodsettings)
+: [`ModifyModSettings()` in `./Sources/ManageSettings.php`](../docs/managesettings.html#modifymodsettings)
 
 Notes
 : Since 2.1
@@ -1645,7 +1647,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`ModifyBasicSettings()` in `./Sources/ManageSettings.php`](../docs/admin.html#modifybasicsettings)
+: [`ModifyBasicSettings()` in `./Sources/ManageSettings.php`](../docs/managesettings.html#modifybasicsettings)
 
 Notes
 : Since 2.1
@@ -1658,7 +1660,7 @@ call_integration_hook('integrate_save_basic_settings')
 
 
 Called from
-: [`ModifyBasicSettings()` in `./Sources/ManageSettings.php`](../docs/admin.html#modifybasicsettings)
+: [`ModifyBasicSettings()` in `./Sources/ManageSettings.php`](../docs/managesettings.html#modifybasicsettings)
 
 Notes
 : Since 2.1
@@ -1674,7 +1676,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`ModifyBBCSettings()` in `./Sources/ManageSettings.php`](../docs/admin.html#modifybbcsettings)
+: [`ModifyBBCSettings()` in `./Sources/ManageSettings.php`](../docs/managesettings.html#modifybbcsettings)
 
 Notes
 : Since 2.1
@@ -1690,7 +1692,7 @@ Type|Parameter|Description
 `array`|`$bbcTags`|desc
 
 Called from
-: [`ModifyBBCSettings()` in `./Sources/ManageSettings.php`](../docs/admin.html#modifybbcsettings)
+: [`ModifyBBCSettings()` in `./Sources/ManageSettings.php`](../docs/managesettings.html#modifybbcsettings)
 
 Notes
 : Since 2.1
@@ -1706,7 +1708,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`ModifyLayoutSettings()` in `./Sources/ManageSettings.php`](../docs/admin.html#modifylayoutsettings)
+: [`ModifyLayoutSettings()` in `./Sources/ManageSettings.php`](../docs/managesettings.html#modifylayoutsettings)
 
 Notes
 : Since 2.1
@@ -1719,7 +1721,7 @@ call_integration_hook('integrate_save_layout_settings')
 
 
 Called from
-: [`ModifyLayoutSettings()` in `./Sources/ManageSettings.php`](../docs/admin.html#modifylayoutsettings)
+: [`ModifyLayoutSettings()` in `./Sources/ManageSettings.php`](../docs/managesettings.html#modifylayoutsettings)
 
 Notes
 : Since 2.1
@@ -1735,7 +1737,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`ModifyLikesSettings()` in `./Sources/ManageSettings.php`](../docs/admin.html#modifylikessettings)
+: [`ModifyLikesSettings()` in `./Sources/ManageSettings.php`](../docs/managesettings.html#modifylikessettings)
 
 Notes
 : Since 2.1
@@ -1748,7 +1750,7 @@ call_integration_hook('integrate_save_likes_settings')
 
 
 Called from
-: [`ModifyLikesSettings()` in `./Sources/ManageSettings.php`](../docs/admin.html#modifylikessettings)
+: [`ModifyLikesSettings()` in `./Sources/ManageSettings.php`](../docs/managesettings.html#modifylikessettings)
 
 Notes
 : Since 2.1
@@ -1764,7 +1766,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`ModifyMentionsSettings()` in `./Sources/ManageSettings.php`](../docs/admin.html#modifymentionssettings)
+: [`ModifyMentionsSettings()` in `./Sources/ManageSettings.php`](../docs/managesettings.html#modifymentionssettings)
 
 Notes
 : Since 2.1
@@ -1777,7 +1779,7 @@ call_integration_hook('integrate_save_mentions_settings')
 
 
 Called from
-: [`ModifyMentionsSettings()` in `./Sources/ManageSettings.php`](../docs/admin.html#modifymentionssettings)
+: [`ModifyMentionsSettings()` in `./Sources/ManageSettings.php`](../docs/managesettings.html#modifymentionssettings)
 
 Notes
 : Since 2.1
@@ -1793,7 +1795,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`ModifyWarningSettings()` in `./Sources/ManageSettings.php`](../docs/admin.html#modifywarningsettings)
+: [`ModifyWarningSettings()` in `./Sources/ManageSettings.php`](../docs/managesettings.html#modifywarningsettings)
 
 Notes
 : Since 2.1
@@ -1809,7 +1811,7 @@ Type|Parameter|Description
 `array`|`&$save_vars`|desc
 
 Called from
-: [`ModifyWarningSettings()` in `./Sources/ManageSettings.php`](../docs/admin.html#modifywarningsettings)
+: [`ModifyWarningSettings()` in `./Sources/ManageSettings.php`](../docs/managesettings.html#modifywarningsettings)
 
 Notes
 : Since 2.1
@@ -1825,7 +1827,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`ModifyAntispamSettings()` in `./Sources/ManageSettings.php`](../docs/admin.html#modifyantispamsettings)
+: [`ModifyAntispamSettings()` in `./Sources/ManageSettings.php`](../docs/managesettings.html#modifyantispamsettings)
 
 Notes
 : Since 2.1
@@ -1841,7 +1843,7 @@ Type|Parameter|Description
 `array`|`&$save_vars`|desc
 
 Called from
-: [`ModifyAntispamSettings()` in `./Sources/ManageSettings.php`](../docs/admin.html#modifyantispamsettings)
+: [`ModifyAntispamSettings()` in `./Sources/ManageSettings.php`](../docs/managesettings.html#modifyantispamsettings)
 
 Notes
 : Since 2.1
@@ -1857,7 +1859,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`ModifySignatureSettings()` in `./Sources/ManageSettings.php`](../docs/admin.html#modifysignaturesettings)
+: [`ModifySignatureSettings()` in `./Sources/ManageSettings.php`](../docs/managesettings.html#modifysignaturesettings)
 
 Notes
 : Since 2.1
@@ -1875,7 +1877,7 @@ Type|Parameter|Description
 `array`|`$disabledTags`|desc
 
 Called from
-: [`ModifySignatureSettings()` in `./Sources/ManageSettings.php`](../docs/admin.html#modifysignaturesettings)
+: [`ModifySignatureSettings()` in `./Sources/ManageSettings.php`](../docs/managesettings.html#modifysignaturesettings)
 
 Notes
 : Since 2.1
@@ -1892,7 +1894,7 @@ Type|Parameter|Description
 `array`|`&$bbcTags`|desc
 
 Called from
-: [`ModifySignatureSettings()` in `./Sources/ManageSettings.php`](../docs/admin.html#modifysignaturesettings)
+: [`ModifySignatureSettings()` in `./Sources/ManageSettings.php`](../docs/managesettings.html#modifysignaturesettings)
 
 Notes
 : Since 2.1
@@ -1910,7 +1912,7 @@ Type|Parameter|Description
 `array`|`false`|desc
 
 Called from
-: [`ModifyLogSettings()` in `./Sources/ManageSettings.php`](../docs/admin.html#modifylogsettings)
+: [`ModifyLogSettings()` in `./Sources/ManageSettings.php`](../docs/managesettings.html#modifylogsettings)
 
 Notes
 : Since 2.1
@@ -1928,7 +1930,7 @@ Type|Parameter|Description
 `array`|`true`|desc
 
 Called from
-: [`togglePruned()` in `./Sources/ManageSettings.php`](../docs/admin.html#togglepruned)
+: [`togglePruned()` in `./Sources/ManageSettings.php`](../docs/managesettings.html#togglepruned)
 
 Notes
 : Since 2.1
@@ -1944,7 +1946,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`ModifyGeneralModSettings()` in `./Sources/ManageSettings.php`](../docs/admin.html#modifygeneralmodsettings)
+: [`ModifyGeneralModSettings()` in `./Sources/ManageSettings.php`](../docs/managesettings.html#modifygeneralmodsettings)
 
 Notes
 : Since 2.1
@@ -1960,7 +1962,7 @@ Type|Parameter|Description
 `array`|`&$save_vars`|desc
 
 Called from
-: [`ModifyGeneralModSettings()` in `./Sources/ManageSettings.php`](../docs/admin.html#modifygeneralmodsettings)
+: [`ModifyGeneralModSettings()` in `./Sources/ManageSettings.php`](../docs/managesettings.html#modifygeneralmodsettings)
 
 Notes
 : Since 2.1
@@ -1978,7 +1980,7 @@ Type|Parameter|Description
 `array`|`&$subActions`|desc
 
 Called from
-: [`ManageSmileys()` in `./Sources/ManageSmileys.php`](../docs/admin.html#managesmileys)
+: [`ManageSmileys()` in `./Sources/ManageSmileys.php`](../docs/managesmileys.html#managesmileys)
 
 Notes
 : Since 2.1
@@ -1994,7 +1996,7 @@ Type|Parameter|Description
 `array`|`&$config_vars`|desc
 
 Called from
-: [`EditSmileySettings()` in `./Sources/ManageSmileys.php`](../docs/admin.html#editsmileysettings)
+: [`EditSmileySettings()` in `./Sources/ManageSmileys.php`](../docs/managesmileys.html#editsmileysettings)
 
 Notes
 : Since 2.1
@@ -2007,7 +2009,25 @@ call_integration_hook('integrate_save_smiley_settings')
 
 
 Called from
-: [`EditSmileySettings()` in `./Sources/ManageSmileys.php`](../docs/admin.html#editsmileysettings)
+: [`EditSmileySettings()` in `./Sources/ManageSmileys.php`](../docs/managesmileys.html#editsmileysettings)
+
+Notes
+: Since 2.1
+
+
+## Subs-Admin.php
+### integrate_update_settings_file
+
+```php
+call_integration_hook('integrate_update_settings_file', array(&$settings_defs))
+```
+
+Type|Parameter|Description
+---|---|---
+`array`|`&$settings_defs`|desc
+
+Called from
+: [`get_settings_defs()` in `./Sources/Subs-Admin.php`](../docs/subs-admin.html#get_settings_defs)
 
 Notes
 : Since 2.1

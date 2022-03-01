@@ -30,7 +30,7 @@ Notes
     `string`|`0`|Name of a function to search
     `string`|`1`|Partial querystring to assemble result links
 
-: Will not search the followwing typeds:
+: Will not search the following types:
     - permissions
     - desc
 
@@ -50,6 +50,8 @@ function my_admin_search(array &$language_files, array &$include_files, array &$
 }
 ```
 And in MySourceFile.php, return `$config_vars` when `$return_config` is `true`.
+
+```php
 function MyModSettings(bool $return_config = false)
 {
 	$config_vars = // array...
@@ -62,6 +64,7 @@ function MyModSettings(bool $return_config = false)
 ```php
 call_integration_hook('integrate_modify_modifications', array(&$subActions)
 ```
+
 Type|Parameter|Description
 ---|---|---
 `var`|`&$subActions`|
@@ -77,6 +80,7 @@ Notes
 ```php
 call_integration_hook('integrate_general_mod_settings', array(&$config_vars)
 ```
+
 Type|Parameter|Description
 ---|---|---
 `var`|`&$config_vars`|
@@ -92,6 +96,7 @@ Notes
 ```php
 call_integration_hook('integrate_save_general_mod_settings', array(&$save_vars)
 ```
+
 Type|Parameter|Description
 ---|---|---
 `var`|`&$save_vars`|
@@ -107,6 +112,8 @@ Notes
 }
 ```
 And in MySourceFile.php, return `$config_vars` when `$return_config` is `true`.
+
+```php
 function MyModSettings(bool $return_config = false)
 {
 	$config_vars = // array...

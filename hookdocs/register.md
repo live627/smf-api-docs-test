@@ -6,6 +6,8 @@ count: 2
 ---
 * auto-gen TOC:
 {:toc}
+
+## Register.php
 ### integrate_activate
 
 ```php

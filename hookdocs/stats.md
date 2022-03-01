@@ -6,6 +6,8 @@ count: 1
 ---
 * auto-gen TOC:
 {:toc}
+
+## Stats.php
 ### integrate_forum_stats
 
 ```php
