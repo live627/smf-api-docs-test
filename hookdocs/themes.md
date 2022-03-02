@@ -2,7 +2,7 @@
 layout: default
 group: hooks
 title: Themes.php
-count: 4
+count: 8
 ---
 * auto-gen TOC:
 {:toc}

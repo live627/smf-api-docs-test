@@ -2,7 +2,7 @@
 layout: default
 group: hooks
 title: Profile.php
-count: 6
+count: 27
 ---
 * auto-gen TOC:
 {:toc}

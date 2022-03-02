@@ -2,7 +2,7 @@
 layout: default
 group: hooks
 title: BoardIndex.php
-count: 1
+count: 4
 ---
 * auto-gen TOC:
 {:toc}
