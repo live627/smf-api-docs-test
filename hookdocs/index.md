@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: index.php
+title: Index
 count: 3
 ---
 * auto-gen TOC:

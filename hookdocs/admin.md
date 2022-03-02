@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Admin.php
+title: Admin
 count: 129
 ---
 * auto-gen TOC:

@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: ScheduledTasks.php
+title: Scheduledtasks
 count: 4
 ---
 * auto-gen TOC:

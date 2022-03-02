@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Subs-Auth.php
+title: Auth
 count: 7
 ---
 * auto-gen TOC:

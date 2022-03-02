@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Groups.php
+title: Groups
 count: 1
 ---
 * auto-gen TOC:

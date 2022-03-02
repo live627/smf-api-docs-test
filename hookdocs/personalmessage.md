@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: PersonalMessage.php
+title: Personalmessage
 count: 5
 ---
 * auto-gen TOC:

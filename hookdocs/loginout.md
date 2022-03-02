@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: LogInOut.php
+title: Loginout
 count: 4
 ---
 * auto-gen TOC:

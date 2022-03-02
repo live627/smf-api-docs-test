@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: ShowAttachments.php
+title: Showattachments
 count: 2
 ---
 * auto-gen TOC:

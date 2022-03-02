@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: News.php
+title: News
 count: 3
 ---
 * auto-gen TOC:

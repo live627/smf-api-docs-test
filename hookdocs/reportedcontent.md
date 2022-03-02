@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: ReportedContent.php
+title: Reportedcontent
 count: 0
 ---
 * auto-gen TOC:

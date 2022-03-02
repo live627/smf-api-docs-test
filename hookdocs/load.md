@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Load.php
+title: Load
 count: 21
 ---
 * auto-gen TOC:

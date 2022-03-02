@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Reminder.php
+title: Reminder
 count: 2
 ---
 * auto-gen TOC:

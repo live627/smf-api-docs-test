@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Who.php
+title: Who
 count: 4
 ---
 * auto-gen TOC:

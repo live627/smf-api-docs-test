@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Recent.php
+title: Recent
 count: 3
 ---
 * auto-gen TOC:

@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: RemoveTopic.php
+title: Removetopic
 count: 4
 ---
 * auto-gen TOC:

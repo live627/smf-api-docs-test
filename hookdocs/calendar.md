@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Calendar.php
+title: Calendar
 count: 4
 ---
 * auto-gen TOC:

@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Session.php
+title: Session
 count: 2
 ---
 * auto-gen TOC:

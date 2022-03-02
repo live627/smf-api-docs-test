@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Stats.php
+title: Stats
 count: 1
 ---
 * auto-gen TOC:

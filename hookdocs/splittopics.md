@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: SplitTopics.php
+title: Splittopics
 count: 2
 ---
 * auto-gen TOC:

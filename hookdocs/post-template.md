@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Post.template.php
+title: Post-template
 count: 1
 ---
 * auto-gen TOC:

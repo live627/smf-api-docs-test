@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Logging.php
+title: Logging
 count: 1
 ---
 * auto-gen TOC:

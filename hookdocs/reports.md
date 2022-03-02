@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Reports.php
+title: Reports
 count: 4
 ---
 * auto-gen TOC:

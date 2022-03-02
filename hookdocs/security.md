@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Security.php
+title: Security
 count: 9
 ---
 * auto-gen TOC:

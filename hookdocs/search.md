@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Search.php
+title: Search
 count: 12
 ---
 * auto-gen TOC:

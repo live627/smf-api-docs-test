@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Subs-Timezones.php
+title: Timezones
 count: 3
 ---
 * auto-gen TOC:

@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Subs.php
+title: Subs
 count: 17
 ---
 * auto-gen TOC:

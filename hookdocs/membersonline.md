@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Subs-MembersOnline.php
+title: Membersonline
 count: 1
 ---
 * auto-gen TOC:

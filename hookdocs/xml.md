@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Xml.php
+title: Xml
 count: 1
 ---
 * auto-gen TOC:

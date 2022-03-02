@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Subs-Menu.php
+title: Menu
 count: 1
 ---
 * auto-gen TOC:

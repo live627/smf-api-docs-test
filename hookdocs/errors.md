@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Errors.php
+title: Errors
 count: 2
 ---
 * auto-gen TOC:

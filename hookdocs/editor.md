@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Subs-Editor.php
+title: Editor
 count: 8
 ---
 * auto-gen TOC:

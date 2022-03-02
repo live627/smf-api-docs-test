@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Register.php
+title: Register
 count: 2
 ---
 * auto-gen TOC:

@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Subs-Membergroups.php
+title: Membergroups
 count: 3
 ---
 * auto-gen TOC:

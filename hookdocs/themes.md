@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Themes.php
+title: Themes
 count: 8
 ---
 * auto-gen TOC:

@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: ViewQuery.php
+title: Viewquery
 count: 1
 ---
 * auto-gen TOC:

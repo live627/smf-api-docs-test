@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Subs-Boards.php
+title: Boards
 count: 6
 ---
 * auto-gen TOC:

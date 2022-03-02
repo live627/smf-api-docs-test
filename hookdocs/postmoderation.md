@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: PostModeration.php
+title: Postmoderation
 count: 1
 ---
 * auto-gen TOC:

@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: MessageIndex.php
+title: Messageindex
 count: 4
 ---
 * auto-gen TOC:

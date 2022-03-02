@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: MoveTopic.php
+title: Movetopic
 count: 1
 ---
 * auto-gen TOC:

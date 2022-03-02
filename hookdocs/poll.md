@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Poll.php
+title: Poll
 count: 3
 ---
 * auto-gen TOC:

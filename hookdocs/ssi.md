@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: SSI.php
+title: Ssi
 count: 20
 ---
 * auto-gen TOC:

@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Subs-Categories.php
+title: Categories
 count: 4
 ---
 * auto-gen TOC:

@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Modlog.php
+title: Modlog
 count: 1
 ---
 * auto-gen TOC:

@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Packages.php
+title: Packages
 count: 3
 ---
 * auto-gen TOC:

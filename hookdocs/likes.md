@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Likes.php
+title: Likes
 count: 4
 ---
 * auto-gen TOC:

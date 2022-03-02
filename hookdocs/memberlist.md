@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Memberlist.php
+title: Memberlist
 count: 1
 ---
 * auto-gen TOC:

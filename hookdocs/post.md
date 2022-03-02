@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Post.php
+title: Post
 count: 23
 ---
 * auto-gen TOC:

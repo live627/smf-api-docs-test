@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: ModerationCenter.php
+title: Moderationcenter
 count: 2
 ---
 * auto-gen TOC:

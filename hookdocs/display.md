@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Display.php
+title: Display
 count: 7
 ---
 * auto-gen TOC:

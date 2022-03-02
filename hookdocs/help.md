@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Help.php
+title: Help
 count: 2
 ---
 * auto-gen TOC:

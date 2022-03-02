@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: PackageGet.php
+title: Packageget
 count: 3
 ---
 * auto-gen TOC:

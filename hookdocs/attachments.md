@@ -1,7 +1,7 @@
 ---
 layout: default
 group: hooks
-title: Attachments.php
+title: Attachments
 count: 6
 ---
 * auto-gen TOC:
