@@ -4,9 +4,7 @@ group: hooks
 title: Messageindex
 count: 4
 ---
-* auto-gen TOC:
 {:toc}
-
 ## MessageIndex.php
 ### integrate_pre_messageindex
 

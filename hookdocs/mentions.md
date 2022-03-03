@@ -4,7 +4,5 @@ group: hooks
 title: Mentions
 count: 0
 ---
-* auto-gen TOC:
 {:toc}
-
 ## Mentions.php

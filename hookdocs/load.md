@@ -4,9 +4,7 @@ group: hooks
 title: Load
 count: 21
 ---
-* auto-gen TOC:
 {:toc}
-
 ## Load.php
 ### integrate_load_average
 

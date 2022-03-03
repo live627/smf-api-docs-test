@@ -4,9 +4,7 @@ group: hooks
 title: Poll
 count: 3
 ---
-* auto-gen TOC:
 {:toc}
-
 ## Poll.php
 ### integrate_poll_vote
 

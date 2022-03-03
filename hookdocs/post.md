@@ -4,9 +4,7 @@ group: hooks
 title: Post
 count: 23
 ---
-* auto-gen TOC:
 {:toc}
-
 ## Post.php
 ### integrate_post_start
 

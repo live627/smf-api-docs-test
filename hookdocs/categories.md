@@ -4,8 +4,8 @@ group: hooks
 title: Categories
 count: 4
 ---
-* auto-gen TOC:
 {:toc}
+## Subs-Categories.php
 ### integrate_pre_modify_category
 
 ```php

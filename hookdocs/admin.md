@@ -4,9 +4,7 @@ group: hooks
 title: Admin
 count: 129
 ---
-* auto-gen TOC:
 {:toc}
-
 ## Admin.php
 ### integrate_admin_search
 

@@ -4,9 +4,7 @@ group: hooks
 title: News
 count: 3
 ---
-* auto-gen TOC:
 {:toc}
-
 ## News.php
 ### integrate_xmlfeeds
 

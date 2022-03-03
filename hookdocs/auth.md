@@ -4,8 +4,8 @@ group: hooks
 title: Auth
 count: 7
 ---
-* auto-gen TOC:
 {:toc}
+## Subs-Auth.php
 ### integrate_cookie_data
 
 ```php

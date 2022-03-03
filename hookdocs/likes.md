@@ -4,9 +4,7 @@ group: hooks
 title: Likes
 count: 4
 ---
-* auto-gen TOC:
 {:toc}
-
 ## Likes.php
 ### integrate_valid_likes
 
