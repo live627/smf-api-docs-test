@@ -4,6 +4,7 @@ group: hooks
 title: Attachments
 count: 8
 ---
+* auto-gen TOC:
 {:toc}
 ## Attachments.php
 ### integrate_attachment_upload

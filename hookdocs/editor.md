@@ -4,6 +4,7 @@ group: hooks
 title: Editor
 count: 8
 ---
+* auto-gen TOC:
 {:toc}
 ## Subs-Editor.php
 ### integrate_load_message_icons

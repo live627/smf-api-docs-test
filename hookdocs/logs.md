@@ -4,6 +4,7 @@ group: hooks
 title: Logs
 count: 3
 ---
+* auto-gen TOC:
 {:toc}
 
 ## Errors.php

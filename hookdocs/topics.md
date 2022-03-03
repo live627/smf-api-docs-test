@@ -4,6 +4,7 @@ group: hooks
 title: Topics
 count: 7
 ---
+* auto-gen TOC:
 {:toc}
 ## MoveTopic.php
 ### integrate_movetopic2_end

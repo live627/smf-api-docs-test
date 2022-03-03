@@ -1,9 +1,10 @@
 ---
 layout: default
 group: hooks
-title: Auth
+title: Authentication
 count: 7
 ---
+* auto-gen TOC:
 {:toc}
 ## Subs-Auth.php
 ### integrate_cookie_data

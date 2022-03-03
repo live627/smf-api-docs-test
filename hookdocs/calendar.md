@@ -4,6 +4,7 @@ group: hooks
 title: Calendar
 count: 4
 ---
+* auto-gen TOC:
 {:toc}
 ## Calendar.php
 ### integrate_calendar_buttons

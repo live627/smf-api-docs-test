@@ -4,6 +4,7 @@ group: hooks
 title: Themes
 count: 8
 ---
+* auto-gen TOC:
 {:toc}
 ## Themes.php
 ### integrate_manage_themes

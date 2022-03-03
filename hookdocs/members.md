@@ -4,6 +4,7 @@ group: hooks
 title: Members
 count: 48
 ---
+* auto-gen TOC:
 {:toc}
 ## Groups.php
 ### integrate_manage_groups
@@ -521,8 +522,7 @@ Called from
 : [`Activate()` in `./Sources/Register.php`](../docs/register.html#activate)
 
 Notes
-: Since 2.1
-
+: Since 1.1
 
 ## Reminder.php
 ### integrate_reset_pass
@@ -541,7 +541,7 @@ Called from
 : [`setPassword2()` in `./Sources/Reminder.php`](../docs/reminder.html#setpassword2)
 
 Notes
-: Since 2.1
+: Since 1.1
 
 ### integrate_reset_pass
 
@@ -559,7 +559,7 @@ Called from
 : [`SecretAnswer2()` in `./Sources/Reminder.php`](../docs/reminder.html#secretanswer2)
 
 Notes
-: Since 2.1
+: Since 1.1
 
 ## Subs-Membergroups.php
 ### integrate_delete_membergroups
@@ -628,7 +628,7 @@ Called from
 : [`deleteMembers()` in `./Sources/Subs-Members.php`](../docs/subs-members.html#deletemembers)
 
 Notes
-: Since 2.1
+: Since 1.1
 
 ### integrate_register_check
 
@@ -664,7 +664,7 @@ Called from
 : [`registerMember()` in `./Sources/Subs-Members.php`](../docs/subs-members.html#registermember)
 
 Notes
-: Since 2.1
+: Since 1.1
 
 ### integrate_post_register
 

@@ -2,8 +2,9 @@
 layout: default
 group: hooks
 title: Post
-count: 23
+count: 24
 ---
+* auto-gen TOC:
 {:toc}
 ## Post.php
 ### integrate_post_start
@@ -408,3 +409,16 @@ Called from
 Notes
 : Since 2.1
 
+## Post.template.php
+### integrate_upload_template
+
+```php
+call_integration_hook('integrate_upload_template')
+```
+
+
+Called from
+: [`addPollOption()` in `./Themes/default/Post.template.php`](../docs/post-template.html#addpolloption)
+
+Notes
+: Since 2.1

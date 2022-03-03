@@ -4,6 +4,7 @@ group: hooks
 title: Security
 count: 9
 ---
+* auto-gen TOC:
 {:toc}
 ## Security.php
 ### integrate_validateSession
@@ -38,7 +39,7 @@ Called from
 : [`validateSession()` in `./Sources/Security.php`](../docs/security.html#validatesession)
 
 Notes
-: Since 2.1
+: Since 1.1
 
 ### integrate_post_ban_permissions
 

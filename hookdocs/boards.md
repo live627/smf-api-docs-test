@@ -4,6 +4,7 @@ group: hooks
 title: Boards
 count: 10
 ---
+* auto-gen TOC:
 {:toc}
 ## BoardIndex.php
 ### integrate_mark_read_button
