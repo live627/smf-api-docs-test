@@ -1,14 +1,14 @@
 {% include head.html %}
     <article> {{ content }}
-        <dl>{% for g in site.data.groups %}
-            <dt>
-                {{ g[1].name }}
-            </dt>{% for p in site.pages | sort: 'title' %}{% if g[0] == p.groupname %}
+        <dl>
+            <dt>{% assign filename = page.groupname %}
+                {{ site.data.groups[filename].name }}
+            </dt>{% for p in site.pages | sort: 'title' %}{% if filename == p.group %}
             <dd>
                 <a href="{{ site.baseurl }}{{ p.url }}">
                     {{ p.title }}
                 </a>{% if p.count %} — {{ p.count }} {{ site.data.groups[p.group].counter }}{% endif %}
-            </dd>{% endif %}{% endfor %}{% endfor %}
+            </dd>{% endif %}{% endfor %}
         </dl>
     </article>
 {% include foot.html %}
