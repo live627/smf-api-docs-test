@@ -1,3 +1,7 @@
+mods:
+    name: Modifications
+themes:
+    name: Themes
 func:
     name: Function Database
     counter: functions
