@@ -99,6 +99,7 @@ Notes
 : This is a regular PHP [`callable`](https://www.php.net/manual/en/language.types.callable.php), called with [`call_user_func()`](https://www.php.net/manual/en/function.call-user-func.php) As such, static methods are allowed(`MyClass::myMethod`).
 : The files are assumed to be in `$sourcedir` (`./Sources`).
 : The result is that, when you navigate to `./index.php?action=mynewaction`, the file `MyFile.php` in the Sources directory is loaded and the function `MyFunction()` is called.
+: If a mod is using `integrate_autoload`, it should set the first param in each `$actionArray` entry to the boolean value `false` to avoid redundant calls to `require_once`.
 
 *Example usage*
 
