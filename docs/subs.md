@@ -147,14 +147,8 @@ Format a time to make it look purdy.
 Type|Parameter|Description
 ---|---|---
 `int`|`$log_time`|A timestamp
-`bool`&#124;`string`|`$show_today`|Whether to show "Today"/"Yesterday" or just a date\.
+`bool`&#124;`string`|`$show_today`|Whether to show "Today"/"Yesterday" or just a date\.\
 If a string is specified, that is used to temporarily override the date format\.
-`null`&#124;`string`|`$tzid`|Time zone to use when generating the formatted string\.
-If empty, the user's time zone will be used\.
-If set to 'forum', the value of $modSettings\['default\_timezone'\] will be used\.
-If set to a valid time zone identifier, that will be used\.
-Otherwise, the value of date\_default\_timezone\_get\(\) will be used\.
-
 ### get_date_or_time_format
 
 ```php
