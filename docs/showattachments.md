@@ -23,5 +23,4 @@ Views to attachments do not increase hits and are not logged in the "Who's Onlin
 Integration hooks
 : integrate_pre_download_request
 : integrate_download_request
-: integrate_download_headers
 

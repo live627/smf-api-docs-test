@@ -92,7 +92,7 @@ Edit language related settings.
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether to return the $config\_vars array \(used in admin search\)
+`bool`|`$return_config`|Whether to return the $config_vars array (used in admin search)
 
 Integration hooks
 : integrate_language_settings

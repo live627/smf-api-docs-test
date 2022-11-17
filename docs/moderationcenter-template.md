@@ -81,7 +81,7 @@ Callback function for showing a watched users post in the table.
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$post`|An array of data about the post\.
+`array`|`$post`|An array of data about the post.
 
 ### template_moderation_settings
 

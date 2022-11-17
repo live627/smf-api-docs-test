@@ -12,7 +12,7 @@ count: 4
 ```php
 function utf8_regex_properties(): array
 ```
-Helper function for utf8_sanitize_invisibles and utf8_convert_case.
+Helper function for utf8_sanitize_invisibles.
 
 Character class lists compiled from:
 https://unicode.org/Public/UNIDATA/DerivedCoreProperties.txt

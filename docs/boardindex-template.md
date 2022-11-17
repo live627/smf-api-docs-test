@@ -45,7 +45,7 @@ Outputs the board icon for a standard board.
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$board`|Current board information\.
+`array`|`$board`|Current board information.
 
 ### template_bi_redirect_icon
 
@@ -58,7 +58,7 @@ Outputs the board icon for a redirect.
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$board`|Current board information\.
+`array`|`$board`|Current board information.
 
 ### template_bi_board_info
 
@@ -71,7 +71,7 @@ Outputs the board info for a standard board or redirect.
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$board`|Current board information\.
+`array`|`$board`|Current board information.
 
 ### template_bi_board_stats
 
@@ -84,7 +84,7 @@ Outputs the board stats for a standard board.
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$board`|Current board information\.
+`array`|`$board`|Current board information.
 
 ### template_bi_redirect_stats
 
@@ -97,7 +97,7 @@ Outputs the board stats for a redirect.
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$board`|Current board information\.
+`array`|`$board`|Current board information.
 
 ### template_bi_board_lastpost
 
@@ -110,7 +110,7 @@ When on a mobile device, this may be hidden if no last post exists.
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$board`|Current board information\.
+`array`|`$board`|Current board information.
 
 ### template_bi_board_children
 
@@ -123,7 +123,7 @@ Outputs the board children for a standard board.
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$board`|Current board information\.
+`array`|`$board`|Current board information.
 
 ### template_boardindex_outer_below
 

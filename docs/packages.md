@@ -92,8 +92,8 @@ checking it against {@link loadInstalledPackages()}.
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$start`|The item to start with \(not used here\)
-`int`|`$items_per_page`|The number of items to show per page \(not used here\)
+`int`|`$start`|The item to start with (not used here)
+`int`|`$items_per_page`|The number of items to show per page (not used here)
 `string`|`$sort`|A string indicating how to sort the results
 `string`|`$params`|Type of packages
 

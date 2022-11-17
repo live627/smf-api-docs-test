@@ -67,10 +67,10 @@ Type|Parameter|Description
 `string`|`$where`|The WHERE clause for the query
 `array`|`$where_parameters`|The parameters for the WHERE clause
 
-### list_getGroupRequests2
+### list_getGroupRequests
 
 ```php
-function list_getGroupRequests2(int $start, int $items_per_page, string $sort, string $where, array $where_parameters): array
+function list_getGroupRequests(int $start, int $items_per_page, string $sort, string $where, string $where_parameters): array
 ```
 Callback function for createList()
 
@@ -80,7 +80,7 @@ Type|Parameter|Description
 ---|---|---
 `int`|`$start`|The result to start with
 `int`|`$items_per_page`|The number of items per page
-`string`|`$sort`|An SQL sort expression \(column/direction\)
+`string`|`$sort`|An SQL sort expression (column/direction)
 `string`|`$where`|Data for the WHERE clause
-`array`|`$where_parameters`|Parameter values to be inserted into the WHERE clause
+`string`|`$where_parameters`|Parameter values to be inserted into the WHERE clause
 

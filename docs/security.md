@@ -3,7 +3,7 @@ layout: default
 group: func
 navtitle: Security.php
 title: ./Sources/Security.php
-count: 20
+count: 19
 ---
 * auto-gen TOC:
 {:toc}
@@ -96,7 +96,7 @@ Performs an immediate ban if the turns turns out positive.
 Type|Parameter|Description
 ---|---|---
 `string`|`$email`|The email to check
-`string`|`$restriction`|What type of restriction \(cannot\_post, cannot\_register, etc\.\)
+`string`|`$restriction`|What type of restriction (cannot_post, cannot_register, etc.)
 `string`|`$error`|The error message to display if they are indeed banned
 
 ### checkSession
@@ -114,7 +114,7 @@ Also optionally checks the referring action if passed. (note that the referring 
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$type`|The type of check \(post, get, request\)
+`string`|`$type`|The type of check (post, get, request)
 `string`|`$from_action`|The action this is coming from
 `bool`|`$is_fatal`|Whether to die with a fatal error if the check fails
 
@@ -143,7 +143,7 @@ Lets give you a token of our appreciation.
 Type|Parameter|Description
 ---|---|---
 `string`|`$action`|The action to create the token for
-`string`|`$type`|The type of token \('post', 'get' or 'request'\)
+`string`|`$type`|The type of token ('post', 'get' or 'request')
 
 ### validateToken
 
@@ -157,7 +157,7 @@ Only patrons with valid tokens can ride this ride.
 Type|Parameter|Description
 ---|---|---
 `string`|`$action`|The action to validate the token for
-`string`|`$type`|The type of request \(get, request, or post\)
+`string`|`$type`|The type of request (get, request, or post)
 `bool`|`$reset`|Whether to reset the token and display an error if validation fails
 
 ### cleanTokens
@@ -190,7 +190,7 @@ Frees a sequence number without checking if action == 'free'.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$action`|The action \- can be 'register', 'check' or 'free'
+`string`|`$action`|The action - can be 'register', 'check' or 'free'
 `bool`|`$is_fatal`|Whether to die with a fatal error
 
 ### allowedTo
@@ -207,8 +207,8 @@ Always returns true if the user is an administrator.
 
 Type|Parameter|Description
 ---|---|---
-`string` &#124; `array`|`$permission`|A single permission to check or an array of permissions to check
-`int` &#124; `array`|`$boards`|The ID of a board or an array of board IDs if we want to check board\-level permissions
+`string`&#124;`array`|`$permission`|A single permission to check or an array of permissions to check
+`int`&#124;`array`|`$boards`|The ID of a board or an array of board IDs if we want to check board-level permissions
 `bool`|`$any`|Whether to check for permission on at least one board instead of all boards
 
 Integration hooks
@@ -230,8 +230,8 @@ If they are a guest and cannot do it, this calls is_not_guest().
 
 Type|Parameter|Description
 ---|---|---
-`string` &#124; `array`|`$permission`|A single permission to check or an array of permissions to check
-`int` &#124; `array`|`$boards`|The ID of a single board or an array of board IDs if we're checking board\-level permissions \(null otherwise\)
+`string`&#124;`array`|`$permission`|A single permission to check or an array of permissions to check
+`int`&#124;`array`|`$boards`|The ID of a single board or an array of board IDs if we're checking board-level permissions (null otherwise)
 `bool`|`$any`|Whether to check for permission on at least one board instead of all boards
 
 Integration hooks
@@ -251,7 +251,7 @@ If check_access is true will also make sure the group has proper access to that 
 
 Type|Parameter|Description
 ---|---|---
-`string` &#124; `array`|`$permissions`|A single permission to check or an array of permissions to check
+`string`&#124;`array`|`$permissions`|A single permission to check or an array of permissions to check
 `bool`|`$check_access`|Whether to check only the boards the user has access to
 `bool`|`$simple`|Whether to return a simple array of board IDs or one with permissions as the keys
 
@@ -261,7 +261,7 @@ Integration hooks
 ### spamProtection
 
 ```php
-function spamProtection(string $error_type, bool $only_return_result = true): bool
+function spamProtection(string $error_type, bool $only_return_result = false): bool
 ```
 This function attempts to protect from spammed messages and the like.
 
@@ -269,8 +269,8 @@ The time taken depends on error_type - generally uses the modSetting.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$error_type`|The error type\. Also used as a $txt index \(not an actual string\)\.
-`bool`|`$only_return_result`|Whether you want the function to die with a fatal\_lang\_error\.
+`string`|`$error_type`|The error type. Also used as a $txt index (not an actual string).
+`bool`|`$only_return_result`|Whether you want the function to die with a fatal_lang_error.
 
 Integration hooks
 : integrate_spam_protection
@@ -286,7 +286,7 @@ A generic function to create a pair of index.php and .htaccess files in a direct
 
 Type|Parameter|Description
 ---|---|---
-`string` &#124; `array`|`$paths`|The \(absolute\) directory path
+`string`&#124;`array`|`$paths`|The (absolute) directory path
 `bool`|`$attachments`|Whether this is an attachment directory
 
 ### frameOptionsHeader
@@ -300,20 +300,8 @@ This sets the X-Frame-Options header.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$override`|An option to override \(either 'SAMEORIGIN' or 'DENY'\)
+`string`|`$override`|An option to override (either 'SAMEORIGIN' or 'DENY')
 
-### get_allowed_http_origin
-
-```php
-/*
- * Determines if the HTTP origin is an authorized one.
- *
- * @param string $origin
- *
- * @since 2.1
- */
-function get_allowed_http_origin($origin)
-```
 ### corsPolicyHeader
 
 ```php
@@ -325,5 +313,5 @@ This sets the Access-Control-Allow-Origin header.
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$set_header`|\(Default: true\): When false, we will do the logic, but not send the headers\.  The relevant logic is still saved in the $context and can be sent manually\.
+`bool`|`$set_header`|(Default: true): When false, we will do the logic, but not send the headers.  The relevant logic is still saved in the $context and can be sent manually.
 

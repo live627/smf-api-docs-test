@@ -30,7 +30,7 @@ This is really just the settings page.
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether to return the config\_vars array \(used for admin search\)
+`bool`|`$return_config`|Whether to return the config_vars array (used for admin search)
 
 Integration hooks
 : integrate_modify_search_engine_settings
@@ -56,7 +56,7 @@ Callback function for createList()
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$start`|The item to start with \(for pagination purposes\)
+`int`|`$start`|The item to start with (for pagination purposes)
 `int`|`$items_per_page`|The number of items to show per page
 `string`|`$sort`|A string indicating how to sort the results
 
@@ -125,7 +125,7 @@ Callback function for createList()
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$start`|The item to start with \(for pagination purposes\)
+`int`|`$start`|The item to start with (for pagination purposes)
 `int`|`$items_per_page`|How many items to show per page
 `string`|`$sort`|A string indicating how to sort the results
 
@@ -159,7 +159,7 @@ Get a list of spider stats from the log_spider table
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$start`|The item to start with \(for pagination purposes\)
+`int`|`$start`|The item to start with (for pagination purposes)
 `int`|`$items_per_page`|The number of items to show per page
 `string`|`$sort`|A string indicating how to sort the results
 

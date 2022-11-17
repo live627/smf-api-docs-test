@@ -18,7 +18,7 @@ Get a list of versions that are currently installed on the server.
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$checkFor`|An array of what to check versions for \- can contain one or more of 'gd', 'imagemagick', 'db\_server', 'phpa', 'memcache', 'php' or 'server'
+`array`|`$checkFor`|An array of what to check versions for - can contain one or more of 'gd', 'imagemagick', 'db_server', 'phpa', 'memcache', 'php' or 'server'
 
 ### getFileVersions
 
@@ -36,7 +36,7 @@ Get detailed version information about the physical SMF files on the server.
 
 Type|Parameter|Description
 ---|---|---
-`array`|` &$versionOptions`|An array of options\. Can contain one or more of 'include\_ssi', 'include\_subscriptions', 'include\_tasks' and 'sort\_results'
+`array`|` &$versionOptions`|An array of options. Can contain one or more of 'include_ssi', 'include_subscriptions', 'include_tasks' and 'sort_results'
 
 ### get_settings_defs
 
@@ -85,9 +85,9 @@ integrate_update_settings_file hook to define it in get_settings_defs().
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$config_vars`|An array of one or more variables to update\.
-`bool` &#124; `null`|`$keep_quotes`|Whether to strip slashes \& trim quotes from string values\. Defaults to auto\-detection\.
-`bool`|`$rebuild`|If true, attempts to rebuild with standard format\. Default false\.
+`array`|`$config_vars`|An array of one or more variables to update.
+`bool`&#124;`null`|`$keep_quotes`|Whether to strip slashes & trim quotes from string values. Defaults to auto-detection.
+`bool`|`$rebuild`|If true, attempts to rebuild with standard format. Default false.
 
 ### get_current_settings
 
@@ -102,8 +102,8 @@ values as recorded in the settings file.
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$mtime`|Timestamp of last known good configuration\. Defaults to time SMF started\.
-`string`|`$settingsFile`|The settings file\. Defaults to SMF's standard Settings\.php\.
+`int`|`$mtime`|Timestamp of last known good configuration. Defaults to time SMF started.
+`string`|`$settingsFile`|The settings file. Defaults to SMF's standard Settings.php.
 
 ### safe_file_write
 
@@ -116,11 +116,11 @@ Writes data to a file, optionally making a backup, while avoiding race condition
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$file`|The filepath of the file where the data should be written\.
-`string`|`$data`|The data to be written to $file\.
-`string`|`$backup_file`|The filepath where the backup should be saved\. Default null\.
-`int`|`$mtime`|If modification time of $file is more recent than this Unix timestamp, the write operation will abort\. Defaults to time that the script started execution\.
-`bool`|`$append`|If true, the data will be appended instead of overwriting the existing content of the file\. Default false\.
+`string`|`$file`|The filepath of the file where the data should be written.
+`string`|`$data`|The data to be written to $file.
+`string`|`$backup_file`|The filepath where the backup should be saved. Default null.
+`int`|`$mtime`|If modification time of $file is more recent than this Unix timestamp, the write operation will abort. Defaults to time that the script started execution.
+`bool`|`$append`|If true, the data will be appended instead of overwriting the existing content of the file. Default false.
 
 ### smf_var_export
 
@@ -146,7 +146,7 @@ Deletes all PHP comments from a string.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$code_str`|A string containing PHP code\.
+`string`|`$code_str`|A string containing PHP code.
 
 ### updateDbLastError
 
@@ -163,7 +163,7 @@ Saves the time of the last db error for the error log
 Type|Parameter|Description
 ---|---|---
 `int`|`$time`|The timestamp of the last DB error
-`bool`|``|True If we should update the current db\_last\_error context as well\.  This may be useful in cases where the current context needs to know a error was logged since the last check\.
+`bool`|``|True If we should update the current db_last_error context as well.  This may be useful in cases where the current context needs to know a error was logged since the last check.
 
 ### updateAdminPreferences
 
@@ -189,7 +189,7 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$template`|Which email template to use
 `array`|`$replacements`|An array of items to replace the variables in the template
-`array`|`$additional_recipients`|An array of arrays of info for additional recipients\. Should have 'id', 'email' and 'name' for each\.
+`array`|`$additional_recipients`|An array of arrays of info for additional recipients. Should have 'id', 'email' and 'name' for each.
 
 ### sm_temp_dir
 

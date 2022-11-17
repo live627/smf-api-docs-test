@@ -18,5 +18,5 @@ Create a new list
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$listOptions`|An array of options for the list \- 'id', 'columns', 'items\_per\_page', 'get\_count', etc\.
+`array`|`$listOptions`|An array of options for the list - 'id', 'columns', 'items_per_page', 'get_count', etc.
 

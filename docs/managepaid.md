@@ -35,7 +35,7 @@ Accessed from ?action=admin;area=paidsubscribe;sa=settings.
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether or not to return the $config\_vars array \(used for admin search\)
+`bool`|`$return_config`|Whether or not to return the $config_vars array (used for admin search)
 
 ### ViewSubscriptions
 
@@ -98,7 +98,7 @@ Return the subscribed users list, for the given parameters.
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$start`|The item to start with \(for pagination purposes\)
+`int`|`$start`|The item to start with (for pagination purposes)
 `int`|`$items_per_page`|How many items to show on each page
 `string`|`$sort`|A string indicating how to sort the results
 `int`|`$id_sub`|The ID of the subscription
@@ -140,7 +140,7 @@ Type|Parameter|Description
 ---|---|---
 `int`|`$id_subscribe`|The subscription ID
 `int`|`$id_member`|The ID of the member
-`int` &#124; `string`|`$renewal`|0 if we're forcing start/end time, otherwise a string indicating how long to renew the subscription for \('D', 'W', 'M' or 'Y'\)
+`int`&#124;`string`|`$renewal`|0 if we're forcing start/end time, otherwise a string indicating how long to renew the subscription for ('D', 'W', 'M' or 'Y')
 `int`|`$forceStartTime`|If set, forces the subscription to start at the specified time
 `int`|`$forceEndTime`|If set, forces the subscription to end at the specified time
 

@@ -39,7 +39,7 @@ returns the ID of the newly created category.
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$catOptions`|An array of data and settings related to the new category\. Should have at least 'cat\_name' and can also have 'cat\_desc', 'move\_after' and 'is\_collapsable'
+`array`|`$catOptions`|An array of data and settings related to the new category. Should have at least 'cat_name' and can also have 'cat_desc', 'move_after' and 'is_collapsable'
 
 Integration hooks
 : integrate_create_category

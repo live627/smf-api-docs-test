@@ -39,7 +39,7 @@ Callback for $listOptions['get_items'] in BrowseMailQueue()
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$start`|The item to start with \(for pagination purposes\)
+`int`|`$start`|The item to start with (for pagination purposes)
 `int`|`$items_per_page`|How many items to show on each page
 `string`|`$sort`|A string indicating how to sort the results
 
@@ -63,7 +63,7 @@ Allows to view and modify the mail settings.
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether to return the $config\_vars array \(used for admin search\)
+`bool`|`$return_config`|Whether to return the $config_vars array (used for admin search)
 
 Integration hooks
 : integrate_modify_mail_settings

@@ -3,7 +3,7 @@ layout: default
 group: func
 navtitle: ModerationCenter.php
 title: ./Sources/ModerationCenter.php
-count: 24
+count: 25
 ---
 * auto-gen TOC:
 {:toc}
@@ -77,6 +77,15 @@ Show a list of the most recent reported posts.
 
 
 
+### ReportedMembers
+
+```php
+function ReportedMembers(): void
+```
+Browse all the reported users.
+
+..
+
 ### ModerateGroups
 
 ```php
@@ -128,11 +137,11 @@ Callback for createList().
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$start`|The item to start with \(for pagination purposes\)
+`int`|`$start`|The item to start with (for pagination purposes)
 `int`|`$items_per_page`|The number of items to show per page
 `string`|`$sort`|A string indicating how to sort things
-`string`|`$approve_query`|A query for approving things\. Not used here\.
-`string`|`$dummy`|Not used here\.
+`string`|`$approve_query`|A query for approving things. Not used here.
+`string`|`$dummy`|Not used here.
 
 ### list_getWatchedUserPostsCount
 
@@ -158,9 +167,9 @@ Callback for createList().
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$start`|The item to start with \(for pagination purposes\)
+`int`|`$start`|The item to start with (for pagination purposes)
 `int`|`$items_per_page`|The number of items to show per page
-`string`|`$sort`|A string indicating how to sort the results \(not used here\)
+`string`|`$sort`|A string indicating how to sort the results (not used here)
 `string`|`$approve_query`|A query to only pull approved items
 `int[]`|`$delete_boards`|An array containing the IDs of boards we can delete posts in
 
@@ -205,7 +214,7 @@ Callback for createList().
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$start`|The item to start with \(for pagination purposes\)
+`int`|`$start`|The item to start with (for pagination purposes)
 `int`|`$items_per_page`|The number of items to show per page
 `string`|`$sort`|A string indicating how to sort the results
 
@@ -238,7 +247,7 @@ Callback for createList().
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$start`|The item to start with \(for pagination purposes\)
+`int`|`$start`|The item to start with (for pagination purposes)
 `int`|`$items_per_page`|The number of items to show per page
 `string`|`$sort`|A string indicating how to sort the results
 

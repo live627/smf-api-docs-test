@@ -34,7 +34,7 @@ Update some basic statistics.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$type`|Stat type \- can be 'member', 'message', 'topic', 'subject' or 'postgroups'
+`string`|`$type`|Stat type - can be 'member', 'message', 'topic', 'subject' or 'postgroups'
 `mixed`|`$parameter1`|A parameter for updating the stats
 `mixed`|`$parameter2`|A 2nd parameter for updating the stats
 
@@ -84,7 +84,7 @@ Updates the settings table as well as $modSettings... only does one at a time if
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$changeArray`|An array of info about what we're changing in 'setting' =\> 'value' format
+`array`|`$changeArray`|An array of info about what we're changing in 'setting' => 'value' format
 `bool`|`$update`|Whether to use an UPDATE query instead of a REPLACE query
 
 ### constructPageIndex
@@ -108,12 +108,12 @@ $pageindex = constructPageIndex($scripturl . '?board=' . $board, $_REQUEST['star
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$base_url`|The basic URL to be used for each link\.
-`int`|` &$start`|The start position, by reference\. If this is not a multiple of the number of items per page, it is sanitized to be so and the value will persist upon the function's return\.
-`int`|`$max_value`|The total number of items you are paginating for\.
-`int`|`$num_per_page`|The number of items to be displayed on a given page\. $start will be forced to be a multiple of this value\.
-`bool`|`$flexible_start`|Whether a ;start=x component should be introduced into the URL automatically \(see above\)
-`bool`|`$show_prevnext`|Whether the Previous and Next links should be shown \(should be on only when navigating the list\)
+`string`|`$base_url`|The basic URL to be used for each link.
+`int`|` &$start`|The start position, by reference. If this is not a multiple of the number of items per page, it is sanitized to be so and the value will persist upon the function's return.
+`int`|`$max_value`|The total number of items you are paginating for.
+`int`|`$num_per_page`|The number of items to be displayed on a given page. $start will be forced to be a multiple of this value.
+`bool`|`$flexible_start`|Whether a ;start=x component should be introduced into the URL automatically (see above)
+`bool`|`$show_prevnext`|Whether the Previous and Next links should be shown (should be on only when navigating the list)
 
 ### comma_format
 
@@ -129,7 +129,7 @@ function comma_format(float $number, bool|int $override_decimal_count = false): 
 Type|Parameter|Description
 ---|---|---
 `float`|`$number`|A number
-`bool` &#124; `int`|`$override_decimal_count`|If set, will use the specified number of decimal places\. Otherwise it's automatically determined
+`bool`&#124;`int`|`$override_decimal_count`|If set, will use the specified number of decimal places. Otherwise it's automatically determined
 
 ### timeformat
 
@@ -147,13 +147,13 @@ Format a time to make it look purdy.
 Type|Parameter|Description
 ---|---|---
 `int`|`$log_time`|A timestamp
-`bool` &#124; `string`|`$show_today`|Whether to show "Today"/"Yesterday" or just a date\.
-If a string is specified, that is used to temporarily override the date format\.
-`null` &#124; `string`|`$tzid`|Time zone to use when generating the formatted string\.
-If empty, the user's time zone will be used\.
-If set to 'forum', the value of $modSettings\['default\_timezone'\] will be used\.
-If set to a valid time zone identifier, that will be used\.
-Otherwise, the value of date\_default\_timezone\_get\(\) will be used\.
+`bool`&#124;`string`|`$show_today`|Whether to show "Today"/"Yesterday" or just a date.
+If a string is specified, that is used to temporarily override the date format.
+`null`&#124;`string`|`$tzid`|Time zone to use when generating the formatted string.
+If empty, the user's time zone will be used.
+If set to 'forum', the value of $modSettings['default_timezone'] will be used.
+If set to a valid time zone identifier, that will be used.
+Otherwise, the value of date_default_timezone_get() will be used.
 
 ### get_date_or_time_format
 
@@ -166,8 +166,8 @@ Gets a version of a strftime() format that only shows the date or time component
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$type`|Either 'date' or 'time'\.
-`string`|`$format`|A strftime\(\) format to process\. Defaults to $user\_info\['time\_format'\]\.
+`string`|`$type`|Either 'date' or 'time'.
+`string`|`$format`|A strftime() format to process. Defaults to $user_info['time_format'].
 
 ### smf_strftime
 
@@ -187,11 +187,11 @@ so results may vary in a few cases from the results of strftime():
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$format`|A strftime\(\) format string\.
-`int` &#124; `null`|`$timestamp`|A Unix timestamp\.
-If null, defaults to the current time\.
-`string` &#124; `null`|`$tzid`|Time zone identifier\.
-If null, uses default time zone\.
+`string`|`$format`|A strftime() format string.
+`int`&#124;`null`|`$timestamp`|A Unix timestamp.
+If null, defaults to the current time.
+`string`&#124;`null`|`$tzid`|Time zone identifier.
+If null, uses default time zone.
 
 ### smf_gmstrftime
 
@@ -204,9 +204,9 @@ Calls smf_strftime() with the $tzid parameter set to 'UTC'.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$format`|A strftime\(\) format string\.
-`int` &#124; `null`|`$timestamp`|A Unix timestamp\.
-If null, defaults to the current time\.
+`string`|`$format`|A strftime() format string.
+`int`&#124;`null`|`$timestamp`|A Unix timestamp.
+If null, defaults to the current time.
 
 ### un_htmlspecialchars
 
@@ -236,16 +236,16 @@ explanation.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$string`|The string to sanitize\.
-`int`|`$level`|Controls filtering of invisible formatting characters\.
-0: Allow valid formatting characters\. Use for sanitizing text in posts\.
-1: Allow necessary formatting characters\. Use for sanitizing usernames\.
-2: Disallow all formatting characters\. Use for internal comparisions
-   only, such as in the word censor, search contexts, etc\.
-Default: 0\.
-`string` &#124; `null`|`$substitute`|Replacement string for the invalid characters\.
-If not set, the Unicode replacement character \(U\+FFFD\) will be used
-\(or a fallback like "?" if necessary\)\.
+`string`|`$string`|The string to sanitize.
+`int`|`$level`|Controls filtering of invisible formatting characters.
+0: Allow valid formatting characters. Use for sanitizing text in posts.
+1: Allow necessary formatting characters. Use for sanitizing usernames.
+2: Disallow all formatting characters. Use for internal comparisions
+   only, such as in the word censor, search contexts, etc.
+Default: 0.
+`string`&#124;`null`|`$substitute`|Replacement string for the invalid characters.
+If not set, the Unicode replacement character (U+FFFD) will be used
+(or a fallback like "?" if necessary).
 
 ### normalize_spaces
 
@@ -258,16 +258,16 @@ Normalizes space characters and line breaks.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$string`|The string to sanitize\.
+`string`|`$string`|The string to sanitize.
 `bool`|`$vspace`|If true, replaces all line breaks and vertical space
-characters with "\\n"\. Default: true\.
+characters with "\n". Default: true.
 `bool`|`$hspace`|If true, replaces horizontal space characters with a
-plain " " character\. \(Note: tabs are not replaced unless the
-'replace\_tabs' option is supplied\.\) Default: false\.
-`array`|`$options`|An array of boolean options\. Possible values are:
-\- no\_breaks: Vertical spaces are replaced by " " instead of "\\n"\.
-\- replace\_tabs: If true, tabs are are replaced by " " chars\.
-\- collapse\_hspace: If true, removes extra horizontal spaces\.
+plain " " character. (Note: tabs are not replaced unless the
+'replace_tabs' option is supplied.) Default: false.
+`array`|`$options`|An array of boolean options. Possible values are:
+- no_breaks: Vertical spaces are replaced by " " instead of "\n".
+- replace_tabs: If true, tabs are are replaced by " " chars.
+- collapse_hspace: If true, removes extra horizontal spaces.
 
 ### shorten_subject
 
@@ -300,7 +300,7 @@ of PHP. It now simply returns an unaltered timestamp.
 Type|Parameter|Description
 ---|---|---
 `bool`|`$use_user_offset`|This parameter is deprecated and nonfunctional
-`int`|`$timestamp`|A timestamp \(null to use current time\)
+`int`|`$timestamp`|A timestamp (null to use current time)
 
 ### permute
 
@@ -342,10 +342,10 @@ Parse bulletin board code in a string, as well as smileys optionally.
 
 Type|Parameter|Description
 ---|---|---
-`string` &#124; `bool`|`$message`|The message\.
-When a empty string, nothing is done\.
-When false we provide a list of BBC codes available\.
-When a string, the message is parsed and bbc handled\.
+`string`&#124;`bool`|`$message`|The message.
+When a empty string, nothing is done.
+When false we provide a list of BBC codes available.
+When a string, the message is parsed and bbc handled.
 `bool`|`$smileys`|Whether to parse smileys as well
 `string`|`$cache_id`|The cache ID
 `array`|`$parse_tags`|If set, only parses these tags rather than all of them
@@ -548,7 +548,7 @@ Output the Javascript files
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$do_deferred`|If true will only output the deferred JS \(the stuff that goes right before the closing body tag\)
+`bool`|`$do_deferred`|If true will only output the deferred JS (the stuff that goes right before the closing body tag)
 
 Integration hooks
 : integrate_pre_javascript_output
@@ -576,8 +576,8 @@ Sets a one day cache to avoid re-creating a file on every request.
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$data`|The files to minify\.
-`string`|`$type`|either css or js\.
+`array`|`$data`|The files to minify.
+`string`|`$type`|either css or js.
 
 ### deleteAllMinified
 
@@ -601,7 +601,7 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$filename`|The name of the file
 `int`|`$attachment_id`|The ID of the attachment
-`string` &#124; `null`|`$dir`|Which directory it should be in \(null to use current one\)
+`string`&#124;`null`|`$dir`|Which directory it should be in (null to use current one)
 `bool`|`$new`|Whether this is a new attachment
 `string`|`$file_hash`|The file hash
 
@@ -657,11 +657,11 @@ Creates an image/text button
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$name`|The name of the button \(should be a main\_icons class or the name of an image\)
+`string`|`$name`|The name of the button (should be a main_icons class or the name of an image)
 `string`|`$alt`|The alt text
 `string`|`$label`|The $txt string to use as the label
-`string`|`$custom`|Custom text/html to add to the img tag \(only when using an actual image\)
-`bool`|`$force_use`|Whether to force use of this when template\_create\_button is available
+`string`|`$custom`|Custom text/html to add to the img tag (only when using an actual image)
+`bool`|`$force_use`|Whether to force use of this when template_create_button is available
 
 ### setupMenuContext
 
@@ -713,11 +713,11 @@ does nothing if the function is already added.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$hook`|The complete hook name\.
-`string`|`$function`|The function name\. Can be a call to a method via Class::method\.
-`bool`|`$permanent`|If true, updates the value in settings table\.
-`string`|`$file`|The file\. Must include one of the following wildcards: $boarddir, $sourcedir, $themedir, example: $sourcedir/Test\.php
-`bool`|`$object`|Indicates if your class will be instantiated when its respective hook is called\. If true, your function must be a method\.
+`string`|`$hook`|The complete hook name.
+`string`|`$function`|The function name. Can be a call to a method via Class::method.
+`bool`|`$permanent`|If true, updates the value in settings table.
+`string`|`$file`|The file. Must include one of the following wildcards: $boarddir, $sourcedir, $themedir, example: $sourcedir/Test.php
+`bool`|`$object`|Indicates if your class will be instantiated when its respective hook is called. If true, your function must be a method.
 
 ### remove_integration_function
 
@@ -731,11 +731,11 @@ Does nothing if the function is not available.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$hook`|The complete hook name\.
-`string`|`$function`|The function name\. Can be a call to a method via Class::method\.
+`string`|`$hook`|The complete hook name.
+`string`|`$function`|The function name. Can be a call to a method via Class::method.
 `bool`|`$permanent`|Irrelevant for the function itself but need to declare it to match
-`string`|`$file`|The filename\. Must include one of the following wildcards: $boarddir, $sourcedir, $themedir, example: $sourcedir/Test\.php
-`bool`|`$object`|Indicates if your class will be instantiated when its respective hook is called\. If true, your function must be a method\.
+`string`|`$file`|The filename. Must include one of the following wildcards: $boarddir, $sourcedir, $themedir, example: $sourcedir/Test.php
+`bool`|`$object`|Indicates if your class will be instantiated when its respective hook is called. If true, your function must be a method.
 
 ### call_helper
 
@@ -750,8 +750,8 @@ Prepare and returns a callable depending on the type of method/function found.
 
 Type|Parameter|Description
 ---|---|---
-`mixed`|`$string`|The string containing a function name or a static call\. The function can also accept a closure, object or a callable array \(object/class, valid\_callable\)
-`bool`|`$return`|If true, the function will not call the function/method but instead will return the formatted string\.
+`mixed`|`$string`|The string containing a function name or a static call. The function can also accept a closure, object or a callable array (object/class, valid_callable)
+`bool`|`$return`|If true, the function will not call the function/method but instead will return the formatted string.
 
 ### load_file
 
@@ -765,7 +765,7 @@ The string should be format as follows File.php|. You can use the following wild
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$string`|The string containing a valid format\.
+`string`|`$string`|The string containing a valid format.
 
 ### fetch_web_data
 
@@ -797,8 +797,8 @@ Attempts to determine the MIME type of some data or a file.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$data`|The data to check, or the path or URL of a file to check\.
-`string`|`$is_path`|If true, $data is a path or URL to a file\.
+`string`|`$data`|The data to check, or the path or URL of a file to check.
+`string`|`$is_path`|If true, $data is a path or URL to a file.
 
 ### check_mime_type
 
@@ -811,9 +811,9 @@ Checks whether a file or data has the expected MIME type.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$data`|The data to check, or the path or URL of a file to check\.
-`string`|`$type_pattern`|A regex pattern to match the acceptable MIME types\.
-`string`|`$is_path`|If true, $data is a path or URL to a file\.
+`string`|`$data`|The data to check, or the path or URL of a file to check.
+`string`|`$type_pattern`|A regex pattern to match the acceptable MIME types.
+`string`|`$is_path`|If true, $data is a path or URL to a file.
 
 ### prepareLikesContext
 
@@ -826,7 +826,7 @@ Prepares an array of "likes" info for the topic specified by $topic
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$topic`|The topic ID to fetch the info from\.
+`int`|`$topic`|The topic ID to fetch the info from.
 
 ### sanitizeMSCutPaste
 
@@ -857,7 +857,7 @@ Does basic scan to ensure characters are inside a valid range
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$matches`|An array of matches \(relevant info should be the 3rd item\)
+`array`|`$matches`|An array of matches (relevant info should be the 3rd item)
 
 ### fixchar__callback
 
@@ -872,7 +872,7 @@ Does basic checks to keep characters inside a viewable range.
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$matches`|An array of matches \(relevant info should be the 2nd item in the array\)
+`array`|`$matches`|An array of matches (relevant info should be the 2nd item in the array)
 
 ### entity_fix__callback
 
@@ -886,7 +886,7 @@ strpos, strlen, substr etc
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$matches`|An array of matches \(relevant info should be the 3rd item in the array\)
+`array`|`$matches`|An array of matches (relevant info should be the 3rd item in the array)
 
 ### get_gravatar_url
 
@@ -916,9 +916,9 @@ Get a list of time zones.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$when`|The date/time for which to calculate the time zone values\.
-May be a Unix timestamp or any string that strtotime\(\) can understand\.
-Defaults to 'now'\.
+`string`|`$when`|The date/time for which to calculate the time zone values.
+May be a Unix timestamp or any string that strtotime() can understand.
+Defaults to 'now'.
 
 ### getUserTimezone
 
@@ -931,7 +931,7 @@ Gets a member's selected time zone identifier
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$id_member`|The member id to look up\. If not provided, the current user's id will be used\.
+`int`|`$id_member`|The member id to look up. If not provided, the current user's id will be used.
 
 ### inet_ptod
 
@@ -957,7 +957,7 @@ Converts a binary version of an IP address into a readable format
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$bin`|An IP address in IPv4, IPv6 \(Either string \(postgresql\) or binary \(other databases\)\)
+`string`|`$bin`|An IP address in IPv4, IPv6 (Either string (postgresql) or binary (other databases))
 
 ### _safe_serialize
 
@@ -1026,8 +1026,8 @@ Tries different modes to make file/dirs writable. Wrapper function for chmod()
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$file`|The file/dir full path\.
-`int`|`$value`|Not needed, added for legacy reasons\.
+`string`|`$file`|The file/dir full path.
+`int`|`$value`|Not needed, added for legacy reasons.
 
 ### smf_json_decode
 
@@ -1040,9 +1040,9 @@ Wrapper function for json_decode() with error handling.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$json`|The string to decode\.
-`bool`|`$returnAsArray`|To return the decoded string as an array or an object, SMF only uses Arrays but to keep on compatibility with json\_decode its set to false as default\.
-`bool`|`$logIt`|To specify if the error will be logged if theres any\.
+`string`|`$json`|The string to decode.
+`bool`|`$returnAsArray`|To return the decoded string as an array or an object, SMF only uses Arrays but to keep on compatibility with json_decode its set to false as default.
+`bool`|`$logIt`|To specify if the error will be logged if theres any.
 
 ### isValidIP
 
@@ -1070,7 +1070,7 @@ It assumes the data is already a string.
 Type|Parameter|Description
 ---|---|---
 `string`|`$data`|The data to print
-`string`|`$type`|The content type\. Defaults to Json\.
+`string`|`$type`|The content type. Defaults to Json.
 
 ### set_tld_regex
 
@@ -1092,7 +1092,7 @@ overwritten on the next scheduled update.
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$update`|If true, fetch and process the latest official list of TLDs from iana\.org\.
+`bool`|`$update`|If true, fetch and process the latest official list of TLDs from iana.org.
 
 ### build_regex
 
@@ -1120,9 +1120,9 @@ matches.
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$strings`|An array of strings to make a regex for\.
-`string`|`$delim`|An optional delimiter character to pass to preg\_quote\(\)\.
-`bool`|`$returnArray`|If true, returns an array of regexes\.
+`array`|`$strings`|An array of strings to make a regex for.
+`string`|`$delim`|An optional delimiter character to pass to preg_quote().
+`bool`|`$returnArray`|If true, returns an array of regexes.
 
 ### ssl_cert_found
 
@@ -1135,7 +1135,7 @@ Returns true if a cert was found & false if not.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$url`|to check, in $boardurl format \(no trailing slash\)\.
+`string`|`$url`|to check, in $boardurl format (no trailing slash).
 
 ### https_redirect_active
 
@@ -1150,7 +1150,7 @@ returns true, it may be caused by SMF, not necessarily an .htaccess redirect.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$url`|to check, in $boardurl format \(no trailing slash\)\.
+`string`|`$url`|to check, in $boardurl format (no trailing slash).
 
 ### build_query_board
 
@@ -1186,8 +1186,8 @@ characters (a.k.a. IRIs)
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$iri`|The IRI to parse\.
-`int`|`$component`|Optional parameter to pass to parse\_url\(\)\.
+`string`|`$iri`|The IRI to parse.
+`int`|`$component`|Optional parameter to pass to parse_url().
 
 ### validate_iri
 
@@ -1201,8 +1201,8 @@ with international characters (a.k.a. IRIs)
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$iri`|The IRI to test\.
-`int`|`$flags`|Optional flags to pass to filter\_var\(\)
+`string`|`$iri`|The IRI to test.
+`int`|`$flags`|Optional flags to pass to filter_var()
 
 ### sanitize_iri
 
@@ -1217,7 +1217,7 @@ feed the result of this function to iri_to_url()
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$iri`|The IRI to sanitize\.
+`string`|`$iri`|The IRI to sanitize.
 
 ### normalize_iri
 
@@ -1232,7 +1232,7 @@ and NFC normalization for the rest.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$iri`|The IRI to normalize\.
+`string`|`$iri`|The IRI to normalize.
 
 ### iri_to_url
 
@@ -1246,7 +1246,7 @@ standard URL encoding on the rest.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$iri`|A IRI that may or may not contain non\-ASCII characters\.
+`string`|`$iri`|A IRI that may or may not contain non-ASCII characters.
 
 ### url_to_iri
 
@@ -1260,7 +1260,7 @@ standard URL decoding on the rest.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$url`|The pure ASCII version of a URL\.
+`string`|`$url`|The pure ASCII version of a URL.
 
 ### check_cron
 
@@ -1285,7 +1285,7 @@ Sends an appropriate HTTP status header based on a given status code
 Type|Parameter|Description
 ---|---|---
 `int`|`$code`|The status code
-`string`|`$status`|The string for the status\. Set automatically if not provided\.
+`string`|`$status`|The string for the status. Set automatically if not provided.
 
 ### sentence_list
 
@@ -1299,7 +1299,7 @@ for the currently loaded language.
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$list`|An array of strings to concatenate\.
+`array`|`$list`|An array of strings to concatenate.
 
 ### truncate_array
 
@@ -1314,7 +1314,7 @@ Type|Parameter|Description
 ---|---|---
 `array`|`$array`|The array to truncate
 `int`|`$max_length`|The upperbound on the length
-`int`|`$deep`|How levels in an multidimensional array should the function take into account\.
+`int`|`$deep`|How levels in an multidimensional array should the function take into account.
 
 ### array_length
 
@@ -1374,7 +1374,7 @@ Escapes (replaces) characters in strings to make them safe for use in JavaScript
 Type|Parameter|Description
 ---|---|---
 `string`|`$string`|The string to escape
-`bool`|`$as_json`|If true, escape as double\-quoted string\. Default false\.
+`bool`|`$as_json`|If true, escape as double-quoted string. Default false.
 
 ### tokenTxtReplace
 

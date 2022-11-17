@@ -54,7 +54,7 @@ Template for displaying a single personal message.
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$message`|An array of information about the message to display\.
+`array`|`$message`|An array of information about the message to display.
 
 ### template_subject_list
 

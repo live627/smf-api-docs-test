@@ -27,7 +27,7 @@ ban entries, theme settings, moderator positions, poll and votes.
 
 Type|Parameter|Description
 ---|---|---
-`int` &#124; `array`|`$users`|The ID of a user or an array of user IDs
+`int`&#124;`array`|`$users`|The ID of a user or an array of user IDs
 `bool`|`$check_not_admin`|Whether to verify that the users aren't admins
 
 Integration hooks
@@ -75,7 +75,7 @@ current member.
 Type|Parameter|Description
 ---|---|---
 `string`|`$name`|The name to check
-`int`|`$current_id_member`|The ID of the current member \(to avoid false positives with the current member\)
+`int`|`$current_id_member`|The ID of the current member (to avoid false positives with the current member)
 `bool`|`$is_name`|Whether we're checking against reserved names or just usernames
 `bool`|`$fatal`|Whether to die with a fatal error if the name is reserved
 
@@ -132,8 +132,8 @@ If add_to_post_count is set, the member's post count is increased.
 Type|Parameter|Description
 ---|---|---
 `int`|`$memID`|The ID of the original poster
-`bool` &#124; `string`|`$email`|If set, should be the email of the poster
-`bool` &#124; `string`|`$membername`|If set, the membername of the poster
+`bool`&#124;`string`|`$email`|If set, should be the email of the poster
+`bool`&#124;`string`|`$membername`|If set, the membername of the poster
 `bool`|`$post_count`|Whether to adjust post counts
 
 Integration hooks
@@ -161,12 +161,12 @@ Callback for createList().
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$start`|Which item to start with \(for pagination purposes\)
+`int`|`$start`|Which item to start with (for pagination purposes)
 `int`|`$items_per_page`|How many items to show per page
 `string`|`$sort`|An SQL query indicating how to sort the results
 `string`|`$where`|An SQL query used to filter the results
 `array`|`$where_params`|An array of parameters for $where
-`bool`|`$get_duplicates`|Whether to get duplicates \(used for the admin member list\)
+`bool`|`$get_duplicates`|Whether to get duplicates (used for the admin member list)
 
 ### list_getNumMembers
 

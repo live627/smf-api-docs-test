@@ -27,7 +27,7 @@ This function will tell you whether this database type supports this search type
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$search_type`|The search type\.
+`string`|`$search_type`|The search type.
 
 ### smf_db_create_word_search
 
@@ -40,5 +40,5 @@ Highly specific function, to create the custom word index table.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$size`|The size of the desired index\.
+`string`|`$size`|The size of the desired index.
 

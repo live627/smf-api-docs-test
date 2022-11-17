@@ -93,7 +93,7 @@ Redirects to ?action=admin;area=news;sa=mailingmembers after everything has been
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$clean_only`|If set, it will only clean the variables, put them in context, then return\.
+`bool`|`$clean_only`|If set, it will only clean the variables, put them in context, then return.
 
 ### ModifyNewsSettings
 
@@ -107,7 +107,7 @@ Requires the forum_admin permission.
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether or not to return the config\_vars array \(used for admin search\)
+`bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
 
 Integration hooks
 : integrate_modify_news_settings

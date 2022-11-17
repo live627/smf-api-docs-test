@@ -18,8 +18,8 @@ This function makes sure the requested subaction does exists, if it doesn't, it 
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$subActions`|An array containing all possible subactions\.
-`string`|`$defaultAction`|The default action to be called if no valid subaction was found\.
+`array`|`$subActions`|An array containing all possible subactions.
+`string`|`$defaultAction`|The default action to be called if no valid subaction was found.
 
 ### ModifyFeatureSettings
 
@@ -57,7 +57,7 @@ Accessed  from ?action=admin;area=featuresettings;sa=basic;
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether or not to return the config\_vars array \(used for admin search\)
+`bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
 
 Integration hooks
 : integrate_modify_basic_settings
@@ -75,7 +75,7 @@ Accessed from ?action=admin;area=featuresettings;sa=bbc.
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether or not to return the config\_vars array \(used for admin search\)
+`bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
 
 Integration hooks
 : integrate_modify_bbc_settings
@@ -93,7 +93,7 @@ Accessed through ?action=admin;area=featuresettings;sa=layout;
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether or not to return the config\_vars array \(used for admin search\)
+`bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
 
 Integration hooks
 : integrate_layout_settings
@@ -111,7 +111,7 @@ Accessed  from ?action=admin;area=featuresettings;sa=likes;
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether or not to return the config\_vars array
+`bool`|`$return_config`|Whether or not to return the config_vars array
 
 Integration hooks
 : integrate_likes_settings
@@ -129,7 +129,7 @@ Accessed  from ?action=admin;area=featuresettings;sa=mentions;
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether or not to return the config\_vars array \(used for admin search\)
+`bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
 
 Integration hooks
 : integrate_mentions_settings
@@ -146,7 +146,7 @@ Moderation type settings - although there are fewer than we have you believe ;)
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether or not to return the config\_vars array \(used for admin search\)
+`bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
 
 Integration hooks
 : integrate_warning_settings
@@ -163,7 +163,7 @@ Let's try keep the spam to a minimum ah Thantos?
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether or not to return the config\_vars array \(used for admin search\)
+`bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
 
 Integration hooks
 : integrate_spam_settings
@@ -180,7 +180,7 @@ You'll never guess what this function does.
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether or not to return the config\_vars array \(used for admin search\)
+`bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
 
 Integration hooks
 : integrate_signature_settings
@@ -216,7 +216,7 @@ Callback for createList().
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$start`|The item to start with \(used for pagination purposes\)
+`int`|`$start`|The item to start with (used for pagination purposes)
 `int`|`$items_per_page`|The number of items to display per page
 `string`|`$sort`|A string indicating how to sort the results
 `bool`|`$standardFields`|Whether or not to include standard fields as well
@@ -259,7 +259,7 @@ Allow to edit the settings on the pruning screen.
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether or not to return the config\_vars array \(used for admin search\)
+`bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
 
 Integration hooks
 : integrate_prune_settings
@@ -276,7 +276,7 @@ If you have a general mod setting to add stick it here.
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether or not to return the config\_vars array \(used for admin search\)
+`bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
 
 Integration hooks
 : integrate_general_mod_settings

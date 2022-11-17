@@ -53,7 +53,7 @@ Optionally loads the draft in to context or superglobal for loading in to the fo
 Type|Parameter|Description
 ---|---|---
 `int`|`$id_draft`|ID of the draft to load
-`int`|`$type`|Type of draft \- 0 for post or 1 for PM
+`int`|`$type`|Type of draft - 0 for post or 1 for PM
 `bool`|`$check`|Validate that this draft belongs to the current user
 `bool`|`$load`|Whether or not to load the data into variables for use on a form
 
@@ -87,8 +87,8 @@ Will load a draft if selected is supplied via post
 Type|Parameter|Description
 ---|---|---
 `int`|`$member_id`|ID of the member to show drafts for
-`bool` &#124; `int`|`$topic`|If $type is 1, this can be set to only load drafts for posts in the specific topic
-`int`|`$draft_type`|The type of drafts to show \- 0 for post drafts, 1 for PM drafts
+`bool`&#124;`int`|`$topic`|If $type is 1, this can be set to only load drafts for posts in the specific topic
+`int`|`$draft_type`|The type of drafts to show - 0 for post drafts, 1 for PM drafts
 
 ### XmlDraft
 

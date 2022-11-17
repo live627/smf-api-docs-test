@@ -3,7 +3,7 @@ layout: default
 group: func
 navtitle: Subs-Charset.php
 title: ./Sources/Subs-Charset.php
-count: 12
+count: 11
 ---
 * auto-gen TOC:
 {:toc}
@@ -52,21 +52,6 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$string`|The string
 
-### utf8_convert_case
-
-```php
-function utf8_convert_case(string $string, string $case, bool $simple = false): string
-```
-Converts the case of the given UTF-8 string.
-
-
-
-Type|Parameter|Description
----|---|---
-`string`|`$string`|The string\.
-`string`|`$case`|One of 'upper', 'lower', 'fold', 'title', 'ucfirst', or 'ucwords'\.
-`bool`|`$simple`|If true, use simple maps instead of full maps\. Default: false\.
-
 ### utf8_normalize_d
 
 ```php
@@ -78,7 +63,7 @@ Normalizes UTF-8 via Canonical Decomposition.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$string`|A UTF\-8 string
+`string`|`$string`|A UTF-8 string
 
 ### utf8_normalize_kd
 
@@ -91,7 +76,7 @@ Normalizes UTF-8 via Compatibility Decomposition.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$string`|A UTF\-8 string\.
+`string`|`$string`|A UTF-8 string.
 
 ### utf8_normalize_c
 
@@ -104,7 +89,7 @@ Normalizes UTF-8 via Canonical Decomposition then Canonical Composition.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$string`|A UTF\-8 string
+`string`|`$string`|A UTF-8 string
 
 ### utf8_normalize_kc
 
@@ -135,7 +120,7 @@ Type|Parameter|Description
 ### utf8_decompose
 
 ```php
-function utf8_decompose(array $chars, bool $compatibility = false): array
+function utf8_decompose(array $chars, $compatibility = false): array
 ```
 Helper function for utf8_normalize_d and utf8_normalize_kd.
 
@@ -144,7 +129,6 @@ Helper function for utf8_normalize_d and utf8_normalize_kd.
 Type|Parameter|Description
 ---|---|---
 `array`|`$chars`|Array of Unicode characters
-`bool`|`$compatibility`|If true, perform compatibility decomposition\. Default false\.
 
 ### utf8_compose
 
@@ -175,11 +159,11 @@ devices.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$string`|The string to sanitize\.
-`int`|`$level`|Controls how invisible formatting characters are handled\.
-0: Allow valid formatting characters\. Use for sanitizing text in posts\.
-1: Allow necessary formatting characters\. Use for sanitizing usernames\.
-2: Disallow all formatting characters\. Use for internal comparisions
-   only, such as in the word censor, search contexts, etc\.
-`string`|`$substitute`|Replacement string for the invalid characters\.
+`string`|`$string`|The string to sanitize.
+`int`|`$level`|Controls how invisible formatting characters are handled.
+0: Allow valid formatting characters. Use for sanitizing text in posts.
+1: Allow necessary formatting characters. Use for sanitizing usernames.
+2: Disallow all formatting characters. Use for internal comparisions
+   only, such as in the word censor, search contexts, etc.
+`string`|`$substitute`|Replacement string for the invalid characters.
 

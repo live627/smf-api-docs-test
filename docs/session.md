@@ -94,5 +94,5 @@ Callback for garbage collection.
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$max_lifetime`|The maximum lifetime \(in seconds\) \- prevents deleting of sessions older than this
+`int`|`$max_lifetime`|The maximum lifetime (in seconds) - prevents deleting of sessions older than this
 

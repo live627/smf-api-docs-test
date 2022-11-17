@@ -132,8 +132,8 @@ Assigns the given attachments to the given message ID.
 
 Type|Parameter|Description
 ---|---|---
-`null`|`$attachIDs`|array of attachment IDs to assign\.
-`null`|`$msgID`|integer the message ID\.
+`null`|`$attachIDs`|array of attachment IDs to assign.
+`null`|`$msgID`|integer the message ID.
 
 Integration hooks
 : integrate_assign_attachments
@@ -149,7 +149,7 @@ Gets an attach ID and tries to load all its info.
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$attachID`|the attachment ID to load info from\.
+`int`|`$attachID`|the attachment ID to load info from.
 
 Integration hooks
 : integrate_pre_parseAttachBBC
@@ -166,7 +166,7 @@ Gets raw info directly from the attachments table.
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$attachIDs`|An array of attachments IDs\.
+`array`|`$attachIDs`|An array of attachments IDs.
 
 ### getAttachMsgInfo
 
@@ -179,7 +179,7 @@ Gets all needed message data associated with an attach ID
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$attachID`|the attachment ID to load info from\.
+`int`|`$attachID`|the attachment ID to load info from.
 
 ### loadAttachmentContext
 
@@ -195,7 +195,7 @@ the max_image_width and max_image_height settings.
 Type|Parameter|Description
 ---|---|---
 `int`|`$id_msg`|ID of the post to load attachments for
-`array`|`$attachments`|An array of already loaded attachments\. This function no longer depends on having $topic declared, thus, you need to load the actual topic ID for each attachment\.
+`array`|`$attachments`|An array of already loaded attachments. This function no longer depends on having $topic declared, thus, you need to load the actual topic ID for each attachment.
 
 ### prepareAttachsByMsg
 
@@ -208,5 +208,5 @@ prepare the Attachment api for all messages
 
 Type|Parameter|Description
 ---|---|---
-`int`|``|array $msgIDs the message ID to load info from\.
+`int`|``|array $msgIDs the message ID to load info from.
 

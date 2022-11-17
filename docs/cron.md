@@ -49,7 +49,7 @@ The error handling function
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$error_level`|One of the PHP error level constants \(see \)
+`int`|`$error_level`|One of the PHP error level constants (see )
 `string`|`$error_string`|The error message
 `string`|`$file`|The file where the error occurred
 `int`|`$line`|What line of the specified file the error occurred on

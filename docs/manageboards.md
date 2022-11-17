@@ -117,7 +117,7 @@ A screen to set a few general board and category settings.
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether to return the $config\_vars array \(used for admin search\)
+`bool`|`$return_config`|Whether to return the $config_vars array (used for admin search)
 
 Integration hooks
 : integrate_modify_board_settings

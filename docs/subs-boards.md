@@ -18,7 +18,7 @@ Mark a board or multiple boards read.
 
 Type|Parameter|Description
 ---|---|---
-`int` &#124; `array`|`$boards`|The ID of a single board or an array of boards
+`int`&#124;`array`|`$boards`|The ID of a single board or an array of boards
 `bool`|`$unread`|Whether we're marking them as unread
 
 ### MarkRead
@@ -96,7 +96,7 @@ updates the statistics to reflect the new situation.
 Type|Parameter|Description
 ---|---|---
 `array`|`$boards_to_remove`|The boards to remove
-`int`|`$moveChildrenTo`|The ID of the board to move the child boards to \(null to remove the child boards, 0 to make them a top\-level board\)
+`int`|`$moveChildrenTo`|The ID of the board to move the child boards to (null to remove the child boards, 0 to make them a top-level board)
 
 Integration hooks
 : integrate_delete_board

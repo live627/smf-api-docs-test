@@ -23,7 +23,7 @@ Sets the SMF-style login cookie and session based on the id_member and password 
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$cookie_length`|How many seconds the cookie should last\. If negative, forces logout\.
+`int`|`$cookie_length`|How many seconds the cookie should last. If negative, forces logout.
 `int`|`$id`|The ID of the member to set the cookie for
 `string`|`$password`|The hashed password
 
@@ -43,7 +43,7 @@ Type|Parameter|Description
 ---|---|---
 `int`|`$cookie_length`|How long the cookie should last, in seconds
 `int`|`$id`|The ID of the member
-`string`|`$secret`|Should be a salted secret using hash\_salt
+`string`|`$secret`|Should be a salted secret using hash_salt
 
 ### url_parts
 
@@ -93,7 +93,7 @@ Question the verity of the admin by asking for his or her password.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$type`|What login type is this \- can be 'admin' or 'moderate'
+`string`|`$type`|What login type is this - can be 'admin' or 'moderate'
 
 Integration hooks
 : integrate_validateSession
@@ -138,7 +138,7 @@ Finds members by email address, username, or real name.
 Type|Parameter|Description
 ---|---|---
 `array`|`$names`|The names of members to search for
-`bool`|`$use_wildcards`|Whether to use wildcards\. Accepts wildcards ? and \* in the pattern if true
+`bool`|`$use_wildcards`|Whether to use wildcards. Accepts wildcards ? and * in the pattern if true
 `bool`|`$buddies_only`|Whether to only search for the user's buddies
 `int`|`$max`|The maximum number of results
 
@@ -178,7 +178,7 @@ Generates a random password for a user and emails it to them.
 Type|Parameter|Description
 ---|---|---
 `int`|`$memID`|The ID of the member
-`string`|`$username`|The new username\. If set, also checks the validity of the username
+`string`|`$username`|The new username. If set, also checks the validity of the username
 
 Integration hooks
 : integrate_reset_pass
@@ -218,7 +218,7 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$password`|The desired password
 `string`|`$username`|The username
-`array`|`$restrict_in`|An array of restricted strings that cannot be part of the password \(email address, username, etc\.\)
+`array`|`$restrict_in`|An array of restricted strings that cannot be part of the password (email address, username, etc.)
 
 Integration hooks
 : integrate_validatePassword

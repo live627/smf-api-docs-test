@@ -18,7 +18,7 @@ Gets a single theme's info.
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$id`|The theme ID to get the info from\.
+`int`|`$id`|The theme ID to get the info from.
 `string[]`|`$variables`|
 
 Integration hooks
@@ -37,7 +37,7 @@ $modSettings['knownThemes'] stores themes that the user is able to select.
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$enable_only`|Whether to fetch only enabled themes\. Default is false\.
+`bool`|`$enable_only`|Whether to fetch only enabled themes. Default is false.
 
 Integration hooks
 : integrate_get_all_themes
@@ -67,7 +67,7 @@ Removes the entire theme if the .xml file couldn't be found or read.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$path`|The absolute path to the xml file\.
+`string`|`$path`|The absolute path to the xml file.
 
 ### theme_install
 
@@ -80,7 +80,7 @@ Ends execution with fatal_lang_error() if an error appears.
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$to_install`|An array containing all values to be stored into the DB\.
+`array`|`$to_install`|An array containing all values to be stored into the DB.
 
 Integration hooks
 : integrate_theme_install
@@ -123,5 +123,5 @@ Generates a file listing for a given directory
 Type|Parameter|Description
 ---|---|---
 `string`|`$path`|The full path to the directory
-`string`|`$relative`|The relative path \(relative to the Themes directory\)
+`string`|`$relative`|The relative path (relative to the Themes directory)
 

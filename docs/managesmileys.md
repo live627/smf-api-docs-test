@@ -30,7 +30,7 @@ Handles modifying smileys settings.
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether or not to return the config\_vars array \(used for admin search\)
+`bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
 
 Integration hooks
 : integrate_modify_smiley_settings
@@ -56,8 +56,8 @@ Callback function for createList().
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$start`|The item to start with \(not used here\)
-`int`|`$items_per_page`|The number of items to show per page \(not used here\)
+`int`|`$start`|The item to start with (not used here)
+`int`|`$items_per_page`|The number of items to show per page (not used here)
 `string`|`$sort`|A string indicating how to sort the results
 
 ### list_getNumSmileySets
@@ -98,8 +98,8 @@ Callback function for createList().
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$start`|The item to start with \(not used here\)
-`int`|`$items_per_page`|The number of items to show per page \(not used here\)
+`int`|`$start`|The item to start with (not used here)
+`int`|`$items_per_page`|The number of items to show per page (not used here)
 `string`|`$sort`|A string indicating how to sort the results
 
 ### list_getNumSmileys
@@ -163,7 +163,7 @@ Callback function for createList().
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$start`|The item to start with \(not used here\)
-`int`|`$items_per_page`|The number of items to display per page \(not used here\)
-`string`|`$sort`|A string indicating how to sort the items \(not used here\)
+`int`|`$start`|The item to start with (not used here)
+`int`|`$items_per_page`|The number of items to display per page (not used here)
+`string`|`$sort`|A string indicating how to sort the items (not used here)
 

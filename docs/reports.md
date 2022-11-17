@@ -115,13 +115,13 @@ Keeps track of the current table count using context variable table_count.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$title`|Title to be displayed with this data table\.
-`string`|`$default_value`|Value to be displayed if a key is missing from a row\.
-`string`|`$shading`|Should the left, top or both \(all\) parts of the table beshaded?
-`string`|`$width_normal`|The width of an unshaded column \(auto means not defined\)\.
-`string`|`$align_normal`|The alignment of data in an unshaded column\.
-`string`|`$width_shaded`|The width of a shaded column \(auto means not defined\)\.
-`string`|`$align_shaded`|The alignment of data in a shaded column\.
+`string`|`$title`|Title to be displayed with this data table.
+`string`|`$default_value`|Value to be displayed if a key is missing from a row.
+`string`|`$shading`|Should the left, top or both (all) parts of the table beshaded?
+`string`|`$width_normal`|The width of an unshaded column (auto means not defined).
+`string`|`$align_normal`|The alignment of data in an unshaded column.
+`string`|`$width_shaded`|The width of a shaded column (auto means not defined).
+`string`|`$align_shaded`|The alignment of data in a shaded column.
 
 ### addData
 
@@ -144,7 +144,7 @@ once the incoming data has been sanitized, it is added to the table.
 Type|Parameter|Description
 ---|---|---
 `array`|`$inc_data`|The data to include
-`null` &#124; `string`|`$custom_table`|= null The ID of a custom table to put the data in
+`null`&#124;`string`|`$custom_table`|= null The ID of a custom table to put the data in
 
 ### addSeparator
 
@@ -158,7 +158,7 @@ Add a separator row, only really used when adding data by rows.
 Type|Parameter|Description
 ---|---|---
 `string`|`$title`|The title of the separator
-`null` &#124; `string`|`$custom_table`|The ID of the custom table
+`null`&#124;`string`|`$custom_table`|The ID of the custom table
 
 ### finishTables
 
@@ -191,7 +191,7 @@ are used as opposed to the keys(!
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$method`|The method\. Can be 'rows' or 'columns'
+`string`|`$method`|The method. Can be 'rows' or 'columns'
 `array`|`$keys`|The keys
 `bool`|`$reverse`|Whether we want to use the values as the keys
 

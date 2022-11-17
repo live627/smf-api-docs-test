@@ -20,9 +20,9 @@ most people think of as time zones (e.g. "Mountain Time").
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$when`|The date/time used to determine fallback values\.
-May be a Unix timestamp or any string that strtotime\(\) can understand\.
-Defaults to 'now'\.
+`string`|`$when`|The date/time used to determine fallback values.
+May be a Unix timestamp or any string that strtotime() can understand.
+Defaults to 'now'.
 
 Integration hooks
 : integrate_metazones
@@ -39,10 +39,10 @@ to population and/or political significance.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$country_code`|The two\-character ISO\-3166 code for a country\.
-`string`|`$when`|The date/time used to determine fallback values\.
-May be a Unix timestamp or any string that strtotime\(\) can understand\.
-Defaults to 'now'\.
+`string`|`$country_code`|The two-character ISO-3166 code for a country.
+`string`|`$when`|The date/time used to determine fallback values.
+May be a Unix timestamp or any string that strtotime() can understand.
+Defaults to 'now'.
 
 Integration hooks
 : integrate_country_timezones
@@ -69,10 +69,10 @@ the TZDB changelog at https://data.iana.org/time-zones/tzdb/NEWS
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$tzids`|The time zone identifiers to check\.
-`string`|`$when`|The date/time used to determine substitute values\.
-May be a Unix timestamp or any string that strtotime\(\) can understand\.
-Defaults to 'now'\.
+`array`|`$tzids`|The time zone identifiers to check.
+`string`|`$when`|The date/time used to determine substitute values.
+May be a Unix timestamp or any string that strtotime() can understand.
+Defaults to 'now'.
 
 Integration hooks
 : integrate_timezone_fallbacks
@@ -88,6 +88,6 @@ Validates a set of two-character ISO 3166-1 country codes.
 
 Type|Parameter|Description
 ---|---|---
-`array` &#124; `string`|`$country_codes`|Array or CSV string of country codes\.
-`bool`|`$as_csv`|If true, return CSV string instead of array\.
+`array`&#124;`string`|`$country_codes`|Array or CSV string of country codes.
+`bool`|`$as_csv`|If true, return CSV string instead of array.
 

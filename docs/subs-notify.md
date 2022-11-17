@@ -19,9 +19,9 @@ notifications for one or more users.
 
 Type|Parameter|Description
 ---|---|---
-`int` &#124; `array`|`$members`|A user id or an array of \(integer\) user ids to load preferences for
-`string` &#124; `array`|`$prefs`|An empty string to load all preferences, or a string \(or array\) of preference name\(s\) to load
-`bool`|`$process_default`|Whether to apply the default values to the members' values or not\.
+`int`&#124;`array`|`$members`|A user id or an array of (integer) user ids to load preferences for
+`string`&#124;`array`|`$prefs`|An empty string to load all preferences, or a string (or array) of preference name(s) to load
+`bool`|`$process_default`|Whether to apply the default values to the members' values or not.
 
 ### setNotifyPrefs
 
@@ -35,7 +35,7 @@ Sets the list of preferences for a single user.
 Type|Parameter|Description
 ---|---|---
 `int`|`$memID`|The user whose preferences you are setting
-`array`|`$prefs`|An array key of pref \-\> value
+`array`|`$prefs`|An array key of pref -> value
 
 ### deleteNotifyPrefs
 
@@ -62,7 +62,7 @@ Verifies a member's unsubscribe token, then returns some member info
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$type`|The type of notification the token is for \(e\.g\. 'board', 'topic', etc\.\)
+`string`|`$type`|The type of notification the token is for (e.g. 'board', 'topic', etc.)
 
 ### createUnsubscribeToken
 
@@ -77,6 +77,6 @@ Type|Parameter|Description
 ---|---|---
 `int`|`$memID`|The id of the member that this token is for
 `string`|`$email`|The member's email address
-`string`|`$type`|The type of notification the token is for \(e\.g\. 'board', 'topic', etc\.\)
-`int`|`$itemID`|The id of the notification item, if applicable\.
+`string`|`$type`|The type of notification the token is for (e.g. 'board', 'topic', etc.)
+`int`|`$itemID`|The id of the notification item, if applicable.
 

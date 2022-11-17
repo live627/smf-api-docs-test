@@ -78,7 +78,7 @@ What it does:
 
 Type|Parameter|Description
 ---|---|---
-`array` &#124; `string`|`$var`|A string or array of strings to escape
+`array`&#124;`string`|`$var`|A string or array of strings to escape
 
 ### htmlspecialchars__recursive
 
@@ -94,8 +94,8 @@ What it does:
 
 Type|Parameter|Description
 ---|---|---
-`array` &#124; `string`|`$var`|The string or array of strings to add entites to
-`int`|`$level`|Which level we're at within the array \(if called recursively\)
+`array`&#124;`string`|`$var`|The string or array of strings to add entites to
+`int`|`$level`|Which level we're at within the array (if called recursively)
 
 ### urldecode__recursive
 
@@ -111,8 +111,8 @@ What it does:
 
 Type|Parameter|Description
 ---|---|---
-`array` &#124; `string`|`$var`|The string or array of strings to decode
-`int`|`$level`|Which level we're at within the array \(if called recursively\)
+`array`&#124;`string`|`$var`|The string or array of strings to decode
+`int`|`$level`|Which level we're at within the array (if called recursively)
 
 ### unescapestring__recursive
 
@@ -128,7 +128,7 @@ What it does:
 
 Type|Parameter|Description
 ---|---|---
-`array` &#124; `string`|`$var`|The string or array of strings to unescape
+`array`&#124;`string`|`$var`|The string or array of strings to unescape
 
 ### stripslashes__recursive
 
@@ -144,8 +144,8 @@ What it does:
 
 Type|Parameter|Description
 ---|---|---
-`array` &#124; `string`|`$var`|The string or array of strings to strip slashes from
-`int`|`$level`|= 0 What level we're at within the array \(if called recursively\)
+`array`&#124;`string`|`$var`|The string or array of strings to strip slashes from
+`int`|`$level`|= 0 What level we're at within the array (if called recursively)
 
 ### htmltrim__recursive
 
@@ -161,8 +161,8 @@ What it does:
 
 Type|Parameter|Description
 ---|---|---
-`array` &#124; `string`|`$var`|The string or array of strings to trim
-`int`|`$level`|= 0 How deep we're at within the array \(if called recursively\)
+`array`&#124;`string`|`$var`|The string or array of strings to trim
+`int`|`$level`|= 0 How deep we're at within the array (if called recursively)
 
 ### ob_sessrewrite
 
