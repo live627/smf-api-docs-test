@@ -3,7 +3,7 @@ layout: default
 group: func
 navtitle: Subs-ReportedContent.php
 title: ./Sources/Subs-ReportedContent.php
-count: 10
+count: 11
 ---
 * auto-gen TOC:
 {:toc}
@@ -21,6 +21,20 @@ Type|Parameter|Description
 `string`|`$action`|The action to perform. Accepts "closed" and "ignore".
 `int`|`$value`|The new value to update.
 `int`&#124;`array`|`$report_id`|The affected report(s).
+
+### clearReportAlerts
+
+```php
+function clearReportAlerts(string $log_report, array $extra): void
+```
+Upon close/ignore, mark unread alerts as read.
+
+
+
+Type|Parameter|Description
+---|---|---
+`string`|`$log_report`|- what action is being taken
+`array`|`$extra`|- detailed info about the report
 
 ### countReports
 

@@ -3,7 +3,7 @@ layout: default
 group: func
 navtitle: Security.php
 title: ./Sources/Security.php
-count: 19
+count: 20
 ---
 * auto-gen TOC:
 {:toc}
@@ -261,7 +261,7 @@ Integration hooks
 ### spamProtection
 
 ```php
-function spamProtection(string $error_type, bool $only_return_result = false): bool
+function spamProtection(string $error_type, bool $only_return_result = true): bool
 ```
 This function attempts to protect from spammed messages and the like.
 
@@ -302,6 +302,18 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$override`|An option to override (either 'SAMEORIGIN' or 'DENY')
 
+### get_allowed_http_origin
+
+```php
+/*
+ * Determines if the HTTP origin is an authorized one.
+ *
+ * @param string $origin
+ *
+ * @since 2.1
+ */
+function get_allowed_http_origin($origin)
+```
 ### corsPolicyHeader
 
 ```php

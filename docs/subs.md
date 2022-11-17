@@ -109,7 +109,7 @@ $pageindex = constructPageIndex($scripturl . '?board=' . $board, $_REQUEST['star
 Type|Parameter|Description
 ---|---|---
 `string`|`$base_url`|The basic URL to be used for each link.
-`int`|` &$start`|The start position, by reference. If this is not a multiple of the number of items per page, it is sanitized to be so and the value will persist upon the function's return.
+`int`|`\&$start`|The start position, by reference. If this is not a multiple of the number of items per page, it is sanitized to be so and the value will persist upon the function's return.
 `int`|`$max_value`|The total number of items you are paginating for.
 `int`|`$num_per_page`|The number of items to be displayed on a given page. $start will be forced to be a multiple of this value.
 `bool`|`$flexible_start`|Whether a ;start=x component should be introduced into the URL automatically (see above)
@@ -148,12 +148,12 @@ Type|Parameter|Description
 ---|---|---
 `int`|`$log_time`|A timestamp
 `bool`&#124;`string`|`$show_today`|Whether to show "Today"/"Yesterday" or just a date.
-If a string is specified, that is used to temporarily override the date format.
+||If a string is specified, that is used to temporarily override the date format.
 `null`&#124;`string`|`$tzid`|Time zone to use when generating the formatted string.
-If empty, the user's time zone will be used.
-If set to 'forum', the value of $modSettings['default_timezone'] will be used.
-If set to a valid time zone identifier, that will be used.
-Otherwise, the value of date_default_timezone_get() will be used.
+||If empty, the user's time zone will be used.
+||If set to 'forum', the value of $modSettings['default_timezone'] will be used.
+||If set to a valid time zone identifier, that will be used.
+||Otherwise, the value of date_default_timezone_get() will be used.
 
 ### get_date_or_time_format
 
@@ -189,9 +189,9 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$format`|A strftime() format string.
 `int`&#124;`null`|`$timestamp`|A Unix timestamp.
-If null, defaults to the current time.
+||If null, defaults to the current time.
 `string`&#124;`null`|`$tzid`|Time zone identifier.
-If null, uses default time zone.
+||If null, uses default time zone.
 
 ### smf_gmstrftime
 
@@ -206,7 +206,7 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$format`|A strftime() format string.
 `int`&#124;`null`|`$timestamp`|A Unix timestamp.
-If null, defaults to the current time.
+||If null, defaults to the current time.
 
 ### un_htmlspecialchars
 
@@ -238,14 +238,14 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$string`|The string to sanitize.
 `int`|`$level`|Controls filtering of invisible formatting characters.
-0: Allow valid formatting characters. Use for sanitizing text in posts.
-1: Allow necessary formatting characters. Use for sanitizing usernames.
-2: Disallow all formatting characters. Use for internal comparisions
-   only, such as in the word censor, search contexts, etc.
-Default: 0.
+||0: Allow valid formatting characters. Use for sanitizing text in posts.
+||1: Allow necessary formatting characters. Use for sanitizing usernames.
+||2: Disallow all formatting characters. Use for internal comparisions
+||   only, such as in the word censor, search contexts, etc.
+||Default: 0.
 `string`&#124;`null`|`$substitute`|Replacement string for the invalid characters.
-If not set, the Unicode replacement character (U+FFFD) will be used
-(or a fallback like "?" if necessary).
+||If not set, the Unicode replacement character (U+FFFD) will be used
+||(or a fallback like "?" if necessary).
 
 ### normalize_spaces
 
@@ -260,14 +260,14 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$string`|The string to sanitize.
 `bool`|`$vspace`|If true, replaces all line breaks and vertical space
-characters with "\n". Default: true.
+||characters with "\n". Default: true.
 `bool`|`$hspace`|If true, replaces horizontal space characters with a
-plain " " character. (Note: tabs are not replaced unless the
-'replace_tabs' option is supplied.) Default: false.
+||plain " " character. (Note: tabs are not replaced unless the
+||'replace_tabs' option is supplied.) Default: false.
 `array`|`$options`|An array of boolean options. Possible values are:
-- no_breaks: Vertical spaces are replaced by " " instead of "\n".
-- replace_tabs: If true, tabs are are replaced by " " chars.
-- collapse_hspace: If true, removes extra horizontal spaces.
+||- no_breaks: Vertical spaces are replaced by " " instead of "\n".
+||- replace_tabs: If true, tabs are are replaced by " " chars.
+||- collapse_hspace: If true, removes extra horizontal spaces.
 
 ### shorten_subject
 
@@ -343,9 +343,9 @@ Parse bulletin board code in a string, as well as smileys optionally.
 Type|Parameter|Description
 ---|---|---
 `string`&#124;`bool`|`$message`|The message.
-When a empty string, nothing is done.
-When false we provide a list of BBC codes available.
-When a string, the message is parsed and bbc handled.
+||When a empty string, nothing is done.
+||When false we provide a list of BBC codes available.
+||When a string, the message is parsed and bbc handled.
 `bool`|`$smileys`|Whether to parse smileys as well
 `string`|`$cache_id`|The cache ID
 `array`|`$parse_tags`|If set, only parses these tags rather than all of them
@@ -373,7 +373,7 @@ Doesn't return anything, but rather modifies message directly.
 
 Type|Parameter|Description
 ---|---|---
-`string`|` &$message`|The message to parse smileys in
+`string`|`\&$message`|The message to parse smileys in
 
 Integration hooks
 : integrate_smileys
@@ -917,8 +917,8 @@ Get a list of time zones.
 Type|Parameter|Description
 ---|---|---
 `string`|`$when`|The date/time for which to calculate the time zone values.
-May be a Unix timestamp or any string that strtotime() can understand.
-Defaults to 'now'.
+||May be a Unix timestamp or any string that strtotime() can understand.
+||Defaults to 'now'.
 
 ### getUserTimezone
 

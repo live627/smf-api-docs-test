@@ -60,8 +60,8 @@ Save the profile changes
 
 Type|Parameter|Description
 ---|---|---
-`array`|` &$profile_vars`|The items to save
-`array`|` &$post_errors`|An array of information about any errors that occurred
+`array`|`\&$profile_vars`|The items to save
+`array`|`\&$post_errors`|An array of information about any errors that occurred
 `int`|`$memID`|The ID of the member whose profile we're saving
 
 ### makeThemeChanges
@@ -456,7 +456,7 @@ Save a members group.
 
 Type|Parameter|Description
 ---|---|---
-`int`|` &$value`|The ID of the (new) primary group
+`int`|`\&$value`|The ID of the (new) primary group
 
 Integration hooks
 : integrate_profile_profileSaveGroups
@@ -472,7 +472,7 @@ The avatar is incredibly complicated, what with the options... and what not.
 
 Type|Parameter|Description
 ---|---|---
-`string`|` &$value`|What kind of avatar we're expecting. Can be 'none', 'server_stored', 'gravatar', 'external' or 'upload'
+`string`|`\&$value`|What kind of avatar we're expecting. Can be 'none', 'server_stored', 'gravatar', 'external' or 'upload'
 
 Integration hooks
 : before_profile_save_avatar
@@ -489,7 +489,7 @@ Validate the signature
 
 Type|Parameter|Description
 ---|---|---
-`string`|` &$value`|The new signature
+`string`|`\&$value`|The new signature
 
 ### profileValidateEmail
 

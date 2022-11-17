@@ -139,9 +139,9 @@ Type|Parameter|Description
 ---|---|---
 `array`|`$permissions`|The permissions to display inline
 `array`|`$excluded_groups`|The IDs of one or more groups to exclude
-
-Uses ManagePermissions language
-Uses ManagePermissions template
+||
+||Uses ManagePermissions language
+||Uses ManagePermissions template
 
 ### theme_inline_permissions
 

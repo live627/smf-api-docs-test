@@ -119,7 +119,7 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$string`|A character.
 `string`&#124;`null`|`$encoding`|The character encoding.
-If null, the current SMF encoding will be used, falling back to UTF-8.
+||If null, the current SMF encoding will be used, falling back to UTF-8.
 
 ### mb_chr
 
@@ -134,7 +134,7 @@ Type|Parameter|Description
 ---|---|---
 `int`|`$codepoint`|A Unicode codepoint value.
 `string`&#124;`null`|`$encoding`|The character encoding.
-If null, the current SMF encoding will be used, falling back to UTF-8.
+||If null, the current SMF encoding will be used, falling back to UTF-8.
 
 ### mb_ord_chr_encoding
 
@@ -159,14 +159,17 @@ function idn_to_ascii(string $domain, int $flags = 0, int $variant = 1, ?array &
 ```
 Compatibility function.
 
-This is not a complete polyfill. The $flags, $variant, and $idna_info
-parameters are included for compatibility with the standard PHP
-function, but only the default values are supported.
+This is not a complete polyfill:
+
+- $flags only supports IDNA_DEFAULT, IDNA_NONTRANSITIONAL_TO_ASCII,
+  and IDNA_USE_STD3_RULES.
+- $variant is ignored, because INTL_IDNA_VARIANT_UTS46 is always used.
+- $idna_info is ignored.
 
 Type|Parameter|Description
 ---|---|---
 `string`|`$domain`|The domain to convert, which must be UTF-8 encoded.
-`int`|`$flags`|Ignored in this compatibility function.
+`int`|`$flags`|A subset of possible IDNA_* flags.
 `int`|`$variant`|Ignored in this compatibility function.
 `array`&#124;`null`|`$idna_info`|Ignored in this compatibility function.
 
@@ -177,9 +180,12 @@ function idn_to_utf8(string $domain, int $flags = 0, int $variant = 1, ?array &$
 ```
 Compatibility function.
 
-This is not a complete polyfill. The $flags, $variant, and $idna_info
-parameters are included for compatibility with the standard PHP
-function, but only the default values are supported.
+This is not a complete polyfill:
+
+- $flags only supports IDNA_DEFAULT, IDNA_NONTRANSITIONAL_TO_UNICODE,
+  and IDNA_USE_STD3_RULES.
+- $variant is ignored, because INTL_IDNA_VARIANT_UTS46 is always used.
+- $idna_info is ignored.
 
 Type|Parameter|Description
 ---|---|---

@@ -3,7 +3,7 @@ layout: default
 group: func
 navtitle: Subs-Post.php
 title: ./Sources/Subs-Post.php
-count: 23
+count: 24
 ---
 * auto-gen TOC:
 {:toc}
@@ -258,9 +258,9 @@ Modifying a post.
 
 Type|Parameter|Description
 ---|---|---
-`array`|` &$msgOptions`|An array of information/options for the post
-`array`|` &$topicOptions`|An array of information/options for the topic
-`array`|` &$posterOptions`|An array of information/options for the poster
+`array`|`\&$msgOptions`|An array of information/options for the post
+`array`|`\&$topicOptions`|An array of information/options for the topic
+`array`|`\&$posterOptions`|An array of information/options for the poster
 
 Integration hooks
 : integrate_modify_post
@@ -296,6 +296,20 @@ Type|Parameter|Description
 ---|---|---
 `array`|`$topics`|Array of topic ids
 `bool`|`$approve`|Whether to approve the topics. If false, unapproves them instead
+
+### clearApprovalAlerts
+
+```php
+function clearApprovalAlerts(array $content_ids, string $content_action): void
+```
+Upon approval, clear unread alerts.
+
+
+
+Type|Parameter|Description
+---|---|---
+`int[]`|`$content_ids`|either id_msgs or id_topics
+`string`|`$content_action`|will be either 'unapproved_post' or 'unapproved_topic'
 
 ### updateLastMessages
 

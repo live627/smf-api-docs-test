@@ -46,7 +46,7 @@ Type|Parameter|Description
 ### fatal_lang_error
 
 ```php
-function fatal_lang_error(string $error, string|false $log = 'general', array $sprintf = array(), int $status = 403): void
+function fatal_lang_error(string $error, string|false $log = 'general', string|array $sprintf = array(), int $status = 403): void
 ```
 Shows a fatal error with a message stored in the language file.
 
@@ -61,7 +61,7 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$error`|The error message
 `string`&#124;`false`|`$log`|The type of error, or false to not log it
-`array`|`$sprintf`|An array of data to be sprintf()'d into the specified message
+`string`&#124;`array`|`$sprintf`|An array of data to be sprintf()'d into the specified message
 `int`|`$status`|= false The HTTP status code associated with this error
 
 ### smf_error_handler

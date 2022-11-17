@@ -61,16 +61,16 @@ Type|Parameter|Description
 `int`&#124;`array`|`$members`|A single member or an array containing the IDs of members
 `int`|`$group`|The group to add them to
 `string`|`$type`|Specifies whether the group is added as primary or as additional group.
-Supported types:
-	- only_primary      - Assigns a membergroup as primary membergroup, but only
-						  if a member has not yet a primary membergroup assigned,
-						  unless the member is already part of the membergroup.
-	- only_additional   - Assigns a membergroup to the additional membergroups,
-						  unless the member is already part of the membergroup.
-	- force_primary     - Assigns a membergroup as primary membergroup no matter
-						  what the previous primary membergroup was.
-	- auto              - Assigns a membergroup to the primary group if it's still
-						  available. If not, assign it to the additional group.
+||Supported types:
+||	- only_primary      - Assigns a membergroup as primary membergroup, but only
+||						  if a member has not yet a primary membergroup assigned,
+||						  unless the member is already part of the membergroup.
+||	- only_additional   - Assigns a membergroup to the additional membergroups,
+||						  unless the member is already part of the membergroup.
+||	- force_primary     - Assigns a membergroup as primary membergroup no matter
+||						  what the previous primary membergroup was.
+||	- auto              - Assigns a membergroup to the primary group if it's still
+||						  available. If not, assign it to the additional group.
 `bool`|`$permissionCheckDone`|Whether we've already done a permission check
 `bool`|`$ignoreProtected`|Whether to ignore protected groups
 
@@ -89,7 +89,7 @@ Returns them as a link for display
 
 Type|Parameter|Description
 ---|---|---
-`array`|` &$members`|The IDs of the members
+`array`|`\&$members`|The IDs of the members
 `int`|`$membergroup`|The ID of the group
 `int`|`$limit`|How many members to show (null for no limit)
 

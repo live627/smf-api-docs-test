@@ -156,7 +156,7 @@ Parses the actions in package-info.xml file from packages.
 
 Type|Parameter|Description
 ---|---|---
-`\xmlArray`|` &$packageXML`|The info from the package-info file
+`\xmlArray`|`\&$packageXML`|The info from the package-info file
 `bool`|`$testing_only`|Whether we're only testing
 `string`|`$method`|The method ('install', 'upgrade', or 'uninstall')
 `string`|`$previous_version`|The previous version of the mod, if method is 'upgrade'
@@ -197,7 +197,7 @@ Type|Parameter|Description
 ### compareVersions
 
 ```php
-function compareVersions(string $version1, string $version2): int
+function compareVersions(string $version1, string $version2): void
 ```
 Compares two versions and determines if one is newer, older or the same, returns
 - (-1) if version1 is lower than version2

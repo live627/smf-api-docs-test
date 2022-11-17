@@ -3,7 +3,7 @@ layout: default
 group: func
 navtitle: ModerationCenter.php
 title: ./Sources/ModerationCenter.php
-count: 25
+count: 24
 ---
 * auto-gen TOC:
 {:toc}
@@ -76,15 +76,6 @@ function ModBlockReportedMembers(): void
 Show a list of the most recent reported posts.
 
 
-
-### ReportedMembers
-
-```php
-function ReportedMembers(): void
-```
-Browse all the reported users.
-
-..
 
 ### ModerateGroups
 

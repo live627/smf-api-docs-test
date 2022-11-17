@@ -108,7 +108,7 @@ Type|Parameter|Description
 ```php
 function smf_db_change_column(string $table_name, string $old_column, array $column_info): bool
 ```
-Change a column.
+Change a column.  You only need to specify the column attributes that are changing.
 
 
 
@@ -117,6 +117,8 @@ Type|Parameter|Description
 `string`|`$table_name`|The name of the table this column is in
 `string`|`$old_column`|The name of the column we want to change
 `array`|`$column_info`|An array of info about the "new" column definition (see {@link smf_db_create_table()})
+||Note that $column_info also supports two additional parameters that only make sense when changing columns:
+||- drop_default - to drop a default that was previously specified
 
 ### smf_db_add_index
 

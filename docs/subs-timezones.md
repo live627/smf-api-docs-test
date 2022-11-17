@@ -21,8 +21,8 @@ most people think of as time zones (e.g. "Mountain Time").
 Type|Parameter|Description
 ---|---|---
 `string`|`$when`|The date/time used to determine fallback values.
-May be a Unix timestamp or any string that strtotime() can understand.
-Defaults to 'now'.
+||May be a Unix timestamp or any string that strtotime() can understand.
+||Defaults to 'now'.
 
 Integration hooks
 : integrate_metazones
@@ -41,8 +41,8 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$country_code`|The two-character ISO-3166 code for a country.
 `string`|`$when`|The date/time used to determine fallback values.
-May be a Unix timestamp or any string that strtotime() can understand.
-Defaults to 'now'.
+||May be a Unix timestamp or any string that strtotime() can understand.
+||Defaults to 'now'.
 
 Integration hooks
 : integrate_country_timezones
@@ -71,8 +71,8 @@ Type|Parameter|Description
 ---|---|---
 `array`|`$tzids`|The time zone identifiers to check.
 `string`|`$when`|The date/time used to determine substitute values.
-May be a Unix timestamp or any string that strtotime() can understand.
-Defaults to 'now'.
+||May be a Unix timestamp or any string that strtotime() can understand.
+||Defaults to 'now'.
 
 Integration hooks
 : integrate_timezone_fallbacks

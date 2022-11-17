@@ -36,7 +36,7 @@ Get detailed version information about the physical SMF files on the server.
 
 Type|Parameter|Description
 ---|---|---
-`array`|` &$versionOptions`|An array of options. Can contain one or more of 'include_ssi', 'include_subscriptions', 'include_tasks' and 'sort_results'
+`array`|`\&$versionOptions`|An array of options. Can contain one or more of 'include_ssi', 'include_subscriptions', 'include_tasks' and 'sort_results'
 
 ### get_settings_defs
 

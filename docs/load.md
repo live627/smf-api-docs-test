@@ -91,17 +91,17 @@ Load this user's permissions.
 ### loadMemberData
 
 ```php
-function loadMemberData(array|string $users, bool $is_name = false, string $set = 'normal'): array
+function loadMemberData(mixed $users, bool $is_name = false, string $set = 'normal'): array
 ```
-Loads an array of users' data by ID or member_name.
+Loads user data, either by id or member_name, and can load one or many users' data together.
 
-
+User data is loaded with minimal processing into the global `$user_profiles` array, keyed by user id.
 
 Type|Parameter|Description
 ---|---|---
-`array`&#124;`string`|`$users`|An array of users by id or name or a single username/id
-`bool`|`$is_name`|Whether $users contains names
-`string`|`$set`|What kind of data to load (normal, profile, minimal)
+`mixed`|`$users`|This can be either a single value or an array, representing a single user or multiple users.
+`bool`|`$is_name`|If this parameter is true, treat the value(s) in `$users` as user names, otherwise they are numeric user ids.
+`string`|`$set`|Complexity of data to load, from `minimal`, `normal`, `profile`, each successively increasing in complexity.
 
 Integration hooks
 : integrate_load_member_data
@@ -109,11 +109,11 @@ Integration hooks
 ### loadMemberContext
 
 ```php
-function loadMemberContext(int $user, bool $display_custom_fields = false): bool|array
+function loadMemberContext(int $user, bool $display_custom_fields = false): bool
 ```
-Loads the user's basic values... meant for template/theme usage.
+Processes all the data previously loaded by {@link loadMemberData()} into a form more readily usable for SMF.
 
-
+The results are stored in the global `$memberContext` array, keyed by user id.
 
 Type|Parameter|Description
 ---|---|---
@@ -182,7 +182,7 @@ Integration hooks
 ### loadTemplate
 
 ```php
-function loadTemplate(string $template_name, array|string $style_sheets = array(), bool $fatal = true): bool
+function loadTemplate(string|false $template_name, array|string $style_sheets = array(), bool $fatal = true): bool
 ```
 Load a template - if the theme doesn't include it, use the default.
 
@@ -192,14 +192,14 @@ What this function does:
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$template_name`|The name of the template to load
+`string`&#124;`false`|`$template_name`|The name of the template to load
 `array`&#124;`string`|`$style_sheets`|The name of a single stylesheet or an array of names of stylesheets to load
 `bool`|`$fatal`|If true, dies with an error message if the template cannot be found
 
 ### loadSubTemplate
 
 ```php
-function loadSubTemplate(string $sub_template_name, bool $fatal = false): void
+function loadSubTemplate(string $sub_template_name, bool|string $fatal = false): void
 ```
 Load a sub-template.
 
@@ -211,7 +211,7 @@ for debugging purposes.
 Type|Parameter|Description
 ---|---|---
 `string`|`$sub_template_name`|The name of the sub-template to load
-`bool`|`$fatal`|Whether to die with an error if the sub-template can't be loaded
+`bool`&#124;`string`|`$fatal`|Whether to die with an error if the sub-template can't be loaded
 
 ### loadCSSFile
 
@@ -226,16 +226,16 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$fileName`|The name of the file to load
 `array`|`$params`|An array of parameters
-Keys are the following:
-	- ['external'] (true/false): define if the file is a externally located file. Needs to be set to true if you are loading an external file
-	- ['default_theme'] (true/false): force use of default theme url
-	- ['force_current'] (true/false): if this is false, we will attempt to load the file from the default theme if not found in the current theme
- - ['validate'] (true/false): if true script will validate the local file exists
- - ['rtl'] (string): additional file to load in RTL mode
- - ['seed'] (true/false/string): if true or null, use cache stale, false do not, or used a supplied string
- - ['minimize'] boolean to add your file to the main minimized file. Useful when you have a file thats loaded everywhere and for everyone.
- - ['order_pos'] int define the load order, when not define it's loaded in the middle, before index.css = -500, after index.css = 500, middle = 3000, end (i.e. after responsive.css) = 10000
- - ['attributes'] array extra attributes to add to the element
+||Keys are the following:
+||	- ['external'] (true/false): define if the file is a externally located file. Needs to be set to true if you are loading an external file
+||	- ['default_theme'] (true/false): force use of default theme url
+||	- ['force_current'] (true/false): if this is false, we will attempt to load the file from the default theme if not found in the current theme
+|| - ['validate'] (true/false): if true script will validate the local file exists
+|| - ['rtl'] (string): additional file to load in RTL mode
+|| - ['seed'] (true/false/string): if true or null, use cache stale, false do not, or used a supplied string
+|| - ['minimize'] boolean to add your file to the main minimized file. Useful when you have a file thats loaded everywhere and for everyone.
+|| - ['order_pos'] int define the load order, when not define it's loaded in the middle, before index.css = -500, after index.css = 500, middle = 3000, end (i.e. after responsive.css) = 10000
+|| - ['attributes'] array extra attributes to add to the element
 `string`|`$id`|An ID to stick on the end of the filename for caching purposes
 
 ### addInlineCss
@@ -266,17 +266,17 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$fileName`|The name of the file to load
 `array`|`$params`|An array of parameter info
-Keys are the following:
-	- ['external'] (true/false): define if the file is a externally located file. Needs to be set to true if you are loading an external file
-	- ['default_theme'] (true/false): force use of default theme url
-	- ['defer'] (true/false): define if the file should load in <head> or before the closing <html> tag
-	- ['force_current'] (true/false): if this is false, we will attempt to load the file from the
-default theme if not found in the current theme
-- ['async'] (true/false): if the script should be loaded asynchronously (HTML5)
- - ['validate'] (true/false): if true script will validate the local file exists
- - ['seed'] (true/false/string): if true or null, use cache stale, false do not, or used a supplied string
- - ['minimize'] boolean to add your file to the main minimized file. Useful when you have a file thats loaded everywhere and for everyone.
- - ['attributes'] array extra attributes to add to the element
+||Keys are the following:
+||	- ['external'] (true/false): define if the file is a externally located file. Needs to be set to true if you are loading an external file
+||	- ['default_theme'] (true/false): force use of default theme url
+||	- ['defer'] (true/false): define if the file should load in <head> or before the closing <html> tag
+||	- ['force_current'] (true/false): if this is false, we will attempt to load the file from the
+||default theme if not found in the current theme
+||- ['async'] (true/false): if the script should be loaded asynchronously (HTML5)
+|| - ['validate'] (true/false): if true script will validate the local file exists
+|| - ['seed'] (true/false/string): if true or null, use cache stale, false do not, or used a supplied string
+|| - ['minimize'] boolean to add your file to the main minimized file. Useful when you have a file thats loaded everywhere and for everyone.
+|| - ['attributes'] array extra attributes to add to the element
 `string`|`$id`|An ID to stick on the end of the filename
 
 ### addJavaScriptVar
@@ -369,8 +369,11 @@ show_no_censored is enabled, does not censor, unless force is also set.
 
 Type|Parameter|Description
 ---|---|---
-`string`|` &$text`|The text to censor
+`string`|`\&$text`|The text to censor
 `bool`|`$force`|Whether to censor the text regardless of settings
+
+Integration hooks
+: integrate_word_censor
 
 ### template_include
 

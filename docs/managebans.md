@@ -188,7 +188,7 @@ Integration hooks
 ### removeBanTriggers
 
 ```php
-function removeBanTriggers(array $items_ids = array(), bool|int $group_id = false): bool
+function removeBanTriggers(int[]|int $items_ids = array(), bool|int $group_id = false): bool
 ```
 This function removes a bunch of triggers based on ids
 Doesn't clean the inputs
@@ -197,7 +197,7 @@ Doesn't clean the inputs
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$items_ids`|The items to remove
+`int[]`&#124;`int`|`$items_ids`|The items to remove
 `bool`&#124;`int`|`$group_id`|The ID of the group these triggers are associated with or false if deleting them from all groups
 
 Integration hooks
@@ -287,8 +287,8 @@ A small function to unify logging of triggers (updates and new)
 Type|Parameter|Description
 ---|---|---
 `array`|`$logs`|an array of logs, each log contains the following keys:
-- bantype: a known type of ban (ip_range, hostname, email, user, main_ip)
-- value: the value of the bantype (e.g. the IP or the email address banned)
+||- bantype: a known type of ban (ip_range, hostname, email, user, main_ip)
+||- value: the value of the bantype (e.g. the IP or the email address banned)
 `bool`|`$new`|Whether the trigger is new or an update of an existing one
 `bool`|`$removal`|Whether the trigger is being deleted
 
@@ -415,7 +415,7 @@ This returns the total count of ban log entries. Callback for $listOptions['get_
 ### range2ip
 
 ```php
-function range2ip(array $low, array $high): string
+function range2ip(string $low, string $high): string
 ```
 Convert a range of given IP number into a single string.
 
@@ -423,8 +423,8 @@ It's practically the reverse function of ip2range().
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$low`|The low end of the range in IPv4 format
-`array`|`$high`|The high end of the range in IPv4 format
+`string`|`$low`|The low end of the range in IPv4 format
+`string`|`$high`|The high end of the range in IPv4 format
 
 ### checkExistingTriggerIP
 

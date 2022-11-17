@@ -55,7 +55,7 @@ Used by ManageBoards.php to change the settings of a board.
 Type|Parameter|Description
 ---|---|---
 `int`|`$board_id`|The ID of the board
-`array`|` &$boardOptions`|An array of options related to the board
+`array`|`\&$boardOptions`|An array of options related to the board
 
 Integration hooks
 : integrate_pre_modify_board
@@ -146,7 +146,7 @@ Takes a board array and sorts it
 
 Type|Parameter|Description
 ---|---|---
-`array`|` &$boards`|The boards
+`array`|`\&$boards`|The boards
 
 ### sortCategories
 
@@ -159,7 +159,7 @@ Takes a category array and sorts it
 
 Type|Parameter|Description
 ---|---|---
-`array`|` &$categories`|The categories
+`array`|`\&$categories`|The categories
 
 ### getBoardModerators
 
@@ -214,8 +214,8 @@ Used by getBoardTree
 
 Type|Parameter|Description
 ---|---|---
-`array`|` &$_boardList`|The board list
-`array`|` &$_tree`|The board tree
+`array`|`\&$_boardList`|The board list
+`array`|`\&$_tree`|The board tree
 
 ### isChildOf
 

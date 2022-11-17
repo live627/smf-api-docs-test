@@ -252,7 +252,7 @@ Allows for removal or disabling of selected hooks
 ### get_files_recursive
 
 ```php
-function get_files_recursive(string $dirname): array
+function get_files_recursive(string $dirname): void
 ```
 Gets all of the files in a directory and its children directories
 
