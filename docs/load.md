@@ -53,7 +53,7 @@ Intended for use by background tasks that need to populate $user_info.
 
 Type|Parameter|Description
 ---|---|---
-`int` &#124; `array`|`$user_ids`|The users IDs to get the data for\.
+`int`&#124;`array`|`$user_ids`|The users IDs to get the data for\.
 
 Integration hooks
 : integrate_load_min_user_settings_columns
@@ -134,8 +134,8 @@ Loads the user's custom profile fields
 
 Type|Parameter|Description
 ---|---|---
-`int` &#124; `array`|`$users`|A single user ID or an array of user IDs
-`string` &#124; `array`|`$params`|Either a string or an array of strings with profile field names
+`int`&#124;`array`|`$users`|A single user ID or an array of user IDs
+`string`&#124;`array`|`$params`|Either a string or an array of strings with profile field names
 
 ### detectBrowser
 
@@ -192,8 +192,8 @@ What this function does:
 
 Type|Parameter|Description
 ---|---|---
-`string` &#124; `false`|`$template_name`|The name of the template to load
-`array` &#124; `string`|`$style_sheets`|The name of a single stylesheet or an array of names of stylesheets to load
+`string`&#124;`false`|`$template_name`|The name of the template to load
+`array`&#124;`string`|`$style_sheets`|The name of a single stylesheet or an array of names of stylesheets to load
 `bool`|`$fatal`|If true, dies with an error message if the template cannot be found
 
 ### loadSubTemplate
@@ -211,7 +211,7 @@ for debugging purposes.
 Type|Parameter|Description
 ---|---|---
 `string`|`$sub_template_name`|The name of the sub\-template to load
-`bool` &#124; `string`|`$fatal`|Whether to die with an error if the sub\-template can't be loaded
+`bool`&#124;`string`|`$fatal`|Whether to die with an error if the sub\-template can't be loaded
 
 ### loadCSSFile
 
@@ -369,7 +369,7 @@ show_no_censored is enabled, does not censor, unless force is also set.
 
 Type|Parameter|Description
 ---|---|---
-`string`|` &$text`|The text to censor
+`string`|`\&$text`|The text to censor
 `bool`|`$force`|Whether to censor the text regardless of settings
 
 Integration hooks

@@ -19,8 +19,8 @@ notifications for one or more users.
 
 Type|Parameter|Description
 ---|---|---
-`int` &#124; `array`|`$members`|A user id or an array of \(integer\) user ids to load preferences for
-`string` &#124; `array`|`$prefs`|An empty string to load all preferences, or a string \(or array\) of preference name\(s\) to load
+`int`&#124;`array`|`$members`|A user id or an array of \(integer\) user ids to load preferences for
+`string`&#124;`array`|`$prefs`|An empty string to load all preferences, or a string \(or array\) of preference name\(s\) to load
 `bool`|`$process_default`|Whether to apply the default values to the members' values or not\.
 
 ### setNotifyPrefs

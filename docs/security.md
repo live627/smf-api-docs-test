@@ -207,8 +207,8 @@ Always returns true if the user is an administrator.
 
 Type|Parameter|Description
 ---|---|---
-`string` &#124; `array`|`$permission`|A single permission to check or an array of permissions to check
-`int` &#124; `array`|`$boards`|The ID of a board or an array of board IDs if we want to check board\-level permissions
+`string`&#124;`array`|`$permission`|A single permission to check or an array of permissions to check
+`int`&#124;`array`|`$boards`|The ID of a board or an array of board IDs if we want to check board\-level permissions
 `bool`|`$any`|Whether to check for permission on at least one board instead of all boards
 
 Integration hooks
@@ -230,8 +230,8 @@ If they are a guest and cannot do it, this calls is_not_guest().
 
 Type|Parameter|Description
 ---|---|---
-`string` &#124; `array`|`$permission`|A single permission to check or an array of permissions to check
-`int` &#124; `array`|`$boards`|The ID of a single board or an array of board IDs if we're checking board\-level permissions \(null otherwise\)
+`string`&#124;`array`|`$permission`|A single permission to check or an array of permissions to check
+`int`&#124;`array`|`$boards`|The ID of a single board or an array of board IDs if we're checking board\-level permissions \(null otherwise\)
 `bool`|`$any`|Whether to check for permission on at least one board instead of all boards
 
 Integration hooks
@@ -251,7 +251,7 @@ If check_access is true will also make sure the group has proper access to that 
 
 Type|Parameter|Description
 ---|---|---
-`string` &#124; `array`|`$permissions`|A single permission to check or an array of permissions to check
+`string`&#124;`array`|`$permissions`|A single permission to check or an array of permissions to check
 `bool`|`$check_access`|Whether to check only the boards the user has access to
 `bool`|`$simple`|Whether to return a simple array of board IDs or one with permissions as the keys
 
@@ -286,7 +286,7 @@ A generic function to create a pair of index.php and .htaccess files in a direct
 
 Type|Parameter|Description
 ---|---|---
-`string` &#124; `array`|`$paths`|The \(absolute\) directory path
+`string`&#124;`array`|`$paths`|The \(absolute\) directory path
 `bool`|`$attachments`|Whether this is an attachment directory
 
 ### frameOptionsHeader

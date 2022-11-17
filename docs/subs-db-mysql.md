@@ -51,7 +51,7 @@ Fix up the prefix so it doesn't require the database to be selected.
 
 Type|Parameter|Description
 ---|---|---
-`string`|` &$db_prefix`|The table prefix
+`string`|`\&$db_prefix`|The table prefix
 `string`|`$db_name`|The database name
 
 ### smf_db_select
@@ -65,7 +65,7 @@ Wrap mysqli_select_db so the connection does not need to be specified
 
 Type|Parameter|Description
 ---|---|---
-`string`|` &$database`|The database
+`string`|`\&$database`|The database
 `object`|`$connection`|The connection object \(if null, $db\_connection is used\)
 
 ### smf_db_get_server_info
@@ -216,7 +216,7 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$error_message`|The error message
 `string`|`$log_message`|The message to log
-`string` &#124; `bool`|`$error_type`|What type of error this is
+`string`&#124;`bool`|`$error_type`|What type of error this is
 `string`|`$file`|The file the error occurred in
 `int`|`$line`|What line of $file the code which generated the error is on
 

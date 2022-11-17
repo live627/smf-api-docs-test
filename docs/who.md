@@ -44,7 +44,7 @@ Adding actions to this list is actually relatively easy...
 Type|Parameter|Description
 ---|---|---
 `mixed`|`$urls`|a single url \(string\) or an array of arrays, each inner array being \(JSON\-encoded request data, id\_member\)
-`string` &#124; `bool`|`$preferred_prefix`|= false
+`string`&#124;`bool`|`$preferred_prefix`|= false
 
 Integration hooks
 : who_allowed
