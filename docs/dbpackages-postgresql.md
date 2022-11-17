@@ -52,7 +52,7 @@ Type|Parameter|Description
 `array`|`$columns`|An array of column info in the specified format
 `array`|`$indexes`|An array of index info in the specified format
 `array`|`$parameters`|Currently not used
-`string`|`$if_exists`|What to do if the table exists.
+`string`|`$if_exists`|What to do if the table exists\.
 `string`|`$error`|
 
 ### smf_db_drop_table
@@ -82,9 +82,9 @@ This function adds a column.
 Type|Parameter|Description
 ---|---|---
 `string`|`$table_name`|The name of the table to add the column to
-`array`|`$column_info`|An array of column info (see {@link smf_db_create_table()})
+`array`|`$column_info`|An array of column info \(see \{@link smf\_db\_create\_table\(\)\}\)
 `array`|`$parameters`|Not used?
-`string`|`$if_exists`|What to do if the column exists. If 'update', column is updated.
+`string`|`$if_exists`|What to do if the column exists\. If 'update', column is updated\.
 `string`|`$error`|
 
 ### smf_db_remove_column
@@ -108,7 +108,7 @@ Type|Parameter|Description
 ```php
 function smf_db_change_column(string $table_name, string $old_column, array $column_info): bool
 ```
-Change a column.
+Change a column.  You only need to specify the column attributes that are changing.
 
 
 
@@ -116,7 +116,9 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$table_name`|The name of the table this column is in
 `string`|`$old_column`|The name of the column we want to change
-`array`|`$column_info`|An array of info about the "new" column definition (see {@link smf_db_create_table()})
+`array`|`$column_info`|An array of info about the "new" column definition \(see \{@link smf\_db\_create\_table\(\)\}\)
+Note that $column\_info also supports two additional parameters that only make sense when changing columns:
+\- drop\_default \- to drop a default that was previously specified
 
 ### smf_db_add_index
 
@@ -130,9 +132,9 @@ Add an index.
 Type|Parameter|Description
 ---|---|---
 `string`|`$table_name`|The name of the table to add the index to
-`array`|`$index_info`|An array of index info (see {@link smf_db_create_table()})
+`array`|`$index_info`|An array of index info \(see \{@link smf\_db\_create\_table\(\)\}\)
 `array`|`$parameters`|Not used?
-`string`|`$if_exists`|What to do if the index exists. If 'update', the definition will be updated.
+`string`|`$if_exists`|What to do if the index exists\. If 'update', the definition will be updated\.
 `string`|`$error`|
 
 ### smf_db_remove_index
@@ -162,8 +164,8 @@ Get the schema formatted name for a type.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$type_name`|The data type (int, varchar, smallint, etc.)
-`int`|`$type_size`|The size (8, 255, etc.)
+`string`|`$type_name`|The data type \(int, varchar, smallint, etc\.\)
+`int`|`$type_size`|The size \(8, 255, etc\.\)
 `bool`|`$reverse`|If true, returns specific types for a generic type
 
 ### smf_db_table_structure
@@ -191,7 +193,7 @@ Return column information for a table.
 Type|Parameter|Description
 ---|---|---
 `string`|`$table_name`|The name of the table to get column info for
-`bool`|`$detail`|Whether or not to return detailed info. If true, returns the column info. If false, just returns the column names.
+`bool`|`$detail`|Whether or not to return detailed info\. If true, returns the column info\. If false, just returns the column names\.
 `array`|`$parameters`|Not used?
 
 ### smf_db_list_indexes
@@ -206,6 +208,6 @@ Get index information.
 Type|Parameter|Description
 ---|---|---
 `string`|`$table_name`|The name of the table to get indexes for
-`bool`|`$detail`|Whether or not to return detailed info.
+`bool`|`$detail`|Whether or not to return detailed info\.
 `array`|`$parameters`|Not used?
 

@@ -49,7 +49,7 @@ retrieve all the attachments waiting for approval the approver can approve
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$start`|The item to start with (for pagination purposes)
+`int`|`$start`|The item to start with \(for pagination purposes\)
 `int`|`$items_per_page`|How many items to show on each page
 `string`|`$sort`|A string indicating how to sort the results
 `string`|`$approve_query`|Additional restrictions based on the boards the approver can see
@@ -90,7 +90,7 @@ Type|Parameter|Description
 ---|---|---
 `array`|`$messages`|The IDs of the messages to approve
 `array`|`$messageDetails`|An array of information about each message, for the log
-`string`|`$current_view`|What type of unapproved items we're approving - can be 'topics' or 'replies'
+`string`|`$current_view`|What type of unapproved items we're approving \- can be 'topics' or 'replies'
 
 ### approveAllData
 
@@ -114,5 +114,5 @@ Type|Parameter|Description
 ---|---|---
 `array`|`$messages`|The IDs of the messages to remove
 `array`|`$messageDetails`|An array of information about the messages for the log
-`string`|`$current_view`|What type of item we're removing - can be 'topics' or 'replies'
+`string`|`$current_view`|What type of item we're removing \- can be 'topics' or 'replies'
 

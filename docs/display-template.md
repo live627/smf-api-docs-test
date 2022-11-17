@@ -27,7 +27,7 @@ Template for displaying a single post.
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$message`|An array of information about the message to display. Should have 'id' and 'member'. Can also have 'first_new', 'is_ignored' and 'css_class'.
+`array`|`$message`|An array of information about the message to display\. Should have 'id' and 'member'\. Can also have 'first\_new', 'is\_ignored' and 'css\_class'\.
 
 ### template_quickreply
 

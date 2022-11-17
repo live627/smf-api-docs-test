@@ -43,9 +43,9 @@ Callback function for createList() in ScheduledTasks().
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$start`|The item to start with (not used here)
-`int`|`$items_per_page`|The number of items to display per page (not used here)
-`string`|`$sort`|A string indicating how to sort things (not used here)
+`int`|`$start`|The item to start with \(not used here\)
+`int`|`$items_per_page`|The number of items to display per page \(not used here\)
+`string`|`$sort`|A string indicating how to sort things \(not used here\)
 
 ### EditTask
 
@@ -76,7 +76,7 @@ Callback function for createList() in TaskLog().
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$start`|The item to start with (for pagination purposes)
+`int`|`$start`|The item to start with \(for pagination purposes\)
 `int`|`$items_per_page`|How many items to display per page
 `string`|`$sort`|A string indicating how to sort the results
 
@@ -100,7 +100,7 @@ This handles settings related to scheduled tasks
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether or not to return the config vars. Used in the admin search.
+`bool`|`$return_config`|Whether or not to return the config vars\. Used in the admin search\.
 
 Integration hooks
 : integrate_scheduled_tasks_settings

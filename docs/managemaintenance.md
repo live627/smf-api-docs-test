@@ -274,7 +274,7 @@ Gets all of the hooks in the system and their status
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$start`|The item to start with (for pagination purposes)
+`int`|`$start`|The item to start with \(for pagination purposes\)
 `int`|`$per_page`|How many items to display on each page
 `string`|`$sort`|A string indicating how to sort things
 
@@ -299,7 +299,7 @@ Parses each hook data and returns an array.
 Type|Parameter|Description
 ---|---|---
 `string`|`$hook`|
-`string`|`$rawData`|A string as it was saved to the DB.
+`string`|`$rawData`|A string as it was saved to the DB\.
 
 ### get_defined_functions_in_file
 
@@ -320,5 +320,5 @@ Does basic checks to keep characters inside a viewable range.
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$matches`|An array of matches (relevant info should be the 2nd item in the array)
+`array`|`$matches`|An array of matches \(relevant info should be the 2nd item in the array\)
 

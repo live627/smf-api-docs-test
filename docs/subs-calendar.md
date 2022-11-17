@@ -19,8 +19,8 @@ works with birthdays set for no year, or any other year, and respects month and 
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$low_date`|The low end of the range, inclusive, in YYYY-MM-DD format
-`string`|`$high_date`|The high end of the range, inclusive, in YYYY-MM-DD format
+`string`|`$low_date`|The low end of the range, inclusive, in YYYY\-MM\-DD format
+`string`|`$high_date`|The high end of the range, inclusive, in YYYY\-MM\-DD format
 
 ### getEventRange
 
@@ -36,8 +36,8 @@ Get all calendar events within the given time range.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$low_date`|The low end of the range, inclusive, in YYYY-MM-DD format
-`string`|`$high_date`|The high end of the range, inclusive, in YYYY-MM-DD format
+`string`|`$low_date`|The low end of the range, inclusive, in YYYY\-MM\-DD format
+`string`|`$high_date`|The high end of the range, inclusive, in YYYY\-MM\-DD format
 `bool`|`$use_permissions`|Whether to use permissions
 
 ### getHolidayRange
@@ -51,8 +51,8 @@ Get all holidays within the given time range.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$low_date`|The low end of the range, inclusive, in YYYY-MM-DD format
-`string`|`$high_date`|The high end of the range, inclusive, in YYYY-MM-DD format
+`string`|`$low_date`|The low end of the range, inclusive, in YYYY\-MM\-DD format
+`string`|`$high_date`|The high end of the range, inclusive, in YYYY\-MM\-DD format
 
 ### canLinkEvent
 
@@ -87,7 +87,7 @@ Provides information (link, month, year) about the previous and next month.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$selected_date`|A date in YYYY-MM-DD format
+`string`|`$selected_date`|A date in YYYY\-MM\-DD format
 `array`|`$calendarOptions`|An array of calendar options
 `bool`|`$is_previous`|Whether this is the previous month
 `bool`|`$has_picker`|Wheter to add javascript to handle a date picker
@@ -103,7 +103,7 @@ Returns the information needed to show a calendar for the given week.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$selected_date`|A date in YYYY-MM-DD format
+`string`|`$selected_date`|A date in YYYY\-MM\-DD format
 `array`|`$calendarOptions`|An array of calendar options
 
 ### getCalendarList
@@ -117,8 +117,8 @@ Returns the information needed to show a list of upcoming events, birthdays, and
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$start_date`|The start of a date range in YYYY-MM-DD format
-`string`|`$end_date`|The end of a date range in YYYY-MM-DD format
+`string`|`$start_date`|The start of a date range in YYYY\-MM\-DD format
+`string`|`$end_date`|The end of a date range in YYYY\-MM\-DD format
 `array`|`$calendarOptions`|An array of calendar options
 
 ### loadDatePicker
@@ -132,8 +132,8 @@ Loads the necessary JavaScript and CSS to create a datepicker.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$selector`|A CSS selector for the input field(s) that the datepicker should be attached to.
-`string`|`$date_format`|The date format to use, in strftime() format.
+`string`|`$selector`|A CSS selector for the input field\(s\) that the datepicker should be attached to\.
+`string`|`$date_format`|The date format to use, in strftime\(\) format\.
 
 ### loadTimePicker
 
@@ -146,7 +146,7 @@ Loads the necessary JavaScript and CSS to create a timepicker.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$selector`|A CSS selector for the input field(s) that the timepicker should be attached to.
+`string`|`$selector`|A CSS selector for the input field\(s\) that the timepicker should be attached to\.
 `string`|`$time_format`|A time format in strftime format
 
 ### loadDatePair
@@ -160,9 +160,9 @@ Datepair.js helps to keep date ranges sane in the UI.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$container`|CSS selector for the containing element of the date/time inputs to be paired.
-`string`|`$date_class`|The CSS class of the date inputs to be paired.
-`string`|`$time_class`|The CSS class of the time inputs to be paired.
+`string`|`$container`|CSS selector for the containing element of the date/time inputs to be paired\.
+`string`|`$date_class`|The CSS class of the date inputs to be paired\.
+`string`|`$time_class`|The CSS class of the time inputs to be paired\.
 
 ### cache_getOffsetIndependentEvents
 
@@ -177,7 +177,7 @@ used by the cache_getRecentEvents function to get the information needed to calc
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$eventOptions`|With the keys 'num_days_shown', 'include_holidays', 'include_birthdays' and 'include_events'
+`array`|`$eventOptions`|With the keys 'num\_days\_shown', 'include\_holidays', 'include\_birthdays' and 'include\_events'
 
 ### cache_getRecentEvents
 
@@ -191,7 +191,7 @@ used by the board index and SSI to show the upcoming events.
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$eventOptions`|An array of event options.
+`array`|`$eventOptions`|An array of event options\.
 
 ### validateEventPost
 
@@ -228,7 +228,7 @@ Does not check any permissions of any sort.
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$eventOptions`|An array of event options ('title', 'span', 'start_date', 'end_date', etc.)
+`array`|`$eventOptions`|An array of event options \('title', 'span', 'start\_date', 'end\_date', etc\.\)
 
 Integration hooks
 : integrate_create_event
@@ -303,7 +303,7 @@ If passed an array that defines any time or date parameters, they will be used. 
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$eventOptions`|An array of optional time and date parameters (span, start_year, end_month, etc., etc.)
+`array`|`$eventOptions`|An array of optional time and date parameters \(span, start\_year, end\_month, etc\., etc\.\)
 
 ### buildEventDatetimes
 
@@ -329,7 +329,7 @@ Gets all of the holidays for the listing
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$start`|The item to start with (for pagination purposes)
+`int`|`$start`|The item to start with \(for pagination purposes\)
 `int`|`$items_per_page`|How many items to show on each page
 `string`|`$sort`|A string indicating how to sort the results
 

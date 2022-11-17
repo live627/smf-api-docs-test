@@ -60,7 +60,7 @@ Get the data about a user's warnings. Callback function for the list in issueWar
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$start`|The item to start with (for pagination purposes)
+`int`|`$start`|The item to start with \(for pagination purposes\)
 `int`|`$items_per_page`|How many items to show on each page
 `string`|`$sort`|A string indicating how to sort the results
 `int`|`$memID`|The member ID

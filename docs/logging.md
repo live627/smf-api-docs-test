@@ -69,10 +69,10 @@ thin wrapper around {@link logActions()}.
 Type|Parameter|Description
 ---|---|---
 `string`|`$action`|A code for the report; a list of such strings
-can be found in Modlog.{language}.php (modlog_ac_ strings)
+can be found in Modlog\.\{language\}\.php \(modlog\_ac\_ strings\)
 `array`|`$extra`|An associated array of parameters for the
-item being logged. Typically this will include 'topic' for the topic's id.
-`string`|`$log_type`|A string reflecting the type of log.
+item being logged\. Typically this will include 'topic' for the topic's id\.
+`string`|`$log_type`|A string reflecting the type of log\.
 
 ### logActions
 

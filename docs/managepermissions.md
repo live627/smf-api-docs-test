@@ -83,7 +83,7 @@ A screen to set some general settings for permissions.
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether to return the $config_vars array (used for admin search)
+`bool`|`$return_config`|Whether to return the $config\_vars array \(used for admin search\)
 
 Integration hooks
 : integrate_modify_permission_settings
@@ -100,9 +100,9 @@ Set the permission level for a specific profile, group, or group for a profile.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$level`|The level ('restrict', 'standard', etc.)
+`string`|`$level`|The level \('restrict', 'standard', etc\.\)
 `int`|`$group`|The group to set the permission for
-`string`&#124;`int`|`$profile`|The ID of the permissions profile or 'null' if we're setting it for a group
+`string` &#124; `int`|`$profile`|The ID of the permissions profile or 'null' if we're setting it for a group
 
 Integration hooks
 : integrate_load_permission_levels
@@ -199,8 +199,8 @@ This function updates the permissions of any groups based off this group.
 
 Type|Parameter|Description
 ---|---|---
-`null`&#124;`array`|`$parents`|The parent groups
-`null`&#124;`int`|`$profile`|the ID of a permissions profile to update
+`null` &#124; `array`|`$parents`|The parent groups
+`null` &#124; `int`|`$profile`|the ID of a permissions profile to update
 
 ### loadIllegalPermissions
 
@@ -247,7 +247,7 @@ Removes the bbc_html permission from anyone who shouldn't have it
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$reload`|Before acting, refresh the list of membergroups who cannot be granted the bbc_html permission
+`bool`|`$reload`|Before acting, refresh the list of membergroups who cannot be granted the bbc\_html permission
 
 ### updateBoardManagers
 

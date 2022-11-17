@@ -39,7 +39,7 @@ Practically, this shows an interface for the settings in Settings.php to be chan
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether to return the $config_vars array (for pagination purposes)
+`bool`|`$return_config`|Whether to return the $config\_vars array \(for pagination purposes\)
 
 Integration hooks
 : integrate_general_settings
@@ -71,7 +71,7 @@ to these values do not work.  You gotta just brute force overwrite them based on
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$new_force_ssl`|is the current force_ssl setting.
+`int`|`$new_force_ssl`|is the current force\_ssl setting\.
 
 ### BoardurlMatch
 
@@ -87,7 +87,7 @@ The site admin must change URLs that are not aligned with $boardurl manually.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$url`|is the url to check.
+`string`|`$url`|is the url to check\.
 
 ### ModifyDatabaseSettings
 
@@ -104,7 +104,7 @@ Basic database and paths settings - database name, host, etc.
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
+`bool`|`$return_config`|Whether or not to return the config\_vars array \(used for admin search\)
 
 Integration hooks
 : integrate_database_settings
@@ -121,7 +121,7 @@ This function handles cookies settings modifications.
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
+`bool`|`$return_config`|Whether or not to return the config\_vars array \(used for admin search\)
 
 Integration hooks
 : integrate_cookie_settings
@@ -138,7 +138,7 @@ Settings really associated with general security aspects.
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
+`bool`|`$return_config`|Whether or not to return the config\_vars array \(used for admin search\)
 
 Integration hooks
 : integrate_general_security_settings
@@ -155,7 +155,7 @@ Simply modifying cache functions
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
+`bool`|`$return_config`|Whether or not to return the config\_vars array \(used for admin search\)
 
 Integration hooks
 : integrate_modify_cache_settings
@@ -172,7 +172,7 @@ Controls settings for data export functionality
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
+`bool`|`$return_config`|Whether or not to return the config\_vars array \(used for admin search\)
 
 Integration hooks
 : integrate_export_settings
@@ -189,7 +189,7 @@ Allows to edit load balancing settings.
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether or not to return the config_vars array
+`bool`|`$return_config`|Whether or not to return the config\_vars array
 
 Integration hooks
 : integrate_loadavg_settings

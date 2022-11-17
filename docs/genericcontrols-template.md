@@ -19,8 +19,8 @@ This function displays all the stuff you get with a richedit box - BBC, smileys,
 Type|Parameter|Description
 ---|---|---
 `string`|`$editor_id`|The editor ID
-`null`&#124;`bool`|`$smileyContainer`|If null, hides the smiley section regardless of settings
-`null`&#124;`bool`|`$bbcContainer`|If null, hides the bbcode buttons regardless of settings
+`null` &#124; `bool`|`$smileyContainer`|If null, hides the smiley section regardless of settings
+`null` &#124; `bool`|`$bbcContainer`|If null, hides the bbcode buttons regardless of settings
 
 ### template_control_richedit_buttons
 
@@ -46,7 +46,7 @@ This template displays a verification form
 
 Type|Parameter|Description
 ---|---|---
-`int`&#124;`string`|`$verify_id`|The verification control ID
-`string`|`$display_type`|What type to display. Can be 'single' to only show one verification option or 'all' to show all of them
+`int` &#124; `string`|`$verify_id`|The verification control ID
+`string`|`$display_type`|What type to display\. Can be 'single' to only show one verification option or 'all' to show all of them
 `bool`|`$reset`|Whether to reset the internal tracking counter
 

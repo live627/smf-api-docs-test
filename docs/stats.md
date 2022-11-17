@@ -34,7 +34,7 @@ called by DisplayStats().
 Type|Parameter|Description
 ---|---|---
 `string`|`$condition_string`|An SQL condition string
-`array`|`$condition_parameters`|Parameters for $condition_string
+`array`|`$condition_parameters`|Parameters for $condition\_string
 
 ### SMStats
 

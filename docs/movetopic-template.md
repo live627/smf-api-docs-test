@@ -27,7 +27,7 @@ Redirection topic options
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$type`|What type of topic this is for - currently 'merge' or 'move'. Used to display appropriate text strings...
+`string`|`$type`|What type of topic this is for \- currently 'merge' or 'move'\. Used to display appropriate text strings\.\.\.
 
 ### template_merge_done
 

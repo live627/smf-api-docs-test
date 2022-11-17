@@ -56,7 +56,7 @@ Used to re-econodes an image to a specified image format
 Type|Parameter|Description
 ---|---|---
 `string`|`$fileName`|The path to the file
-`int`|`$preferred_format`|The preferred format - 0 to automatically determine, 1 for gif, 2 for jpg, 3 for png, 6 for bmp and 15 for wbmp
+`int`|`$preferred_format`|The preferred format \- 0 to automatically determine, 1 for gif, 2 for jpg, 3 for png, 6 for bmp and 15 for wbmp
 
 ### checkImageContents
 
@@ -130,7 +130,7 @@ Type|Parameter|Description
 `string`|`$destination`|The path to the destination image
 `int`|`$max_width`|The maximum allowed width
 `int`|`$max_height`|The maximum allowed height
-`int`|`$preferred_format`|- The preferred format (0 to use jpeg, 1 for gif, 2 to force jpeg, 3 for png, 6 for bmp and 15 for wbmp)
+`int`|`$preferred_format`|\- The preferred format \(0 to use jpeg, 1 for gif, 2 to force jpeg, 3 for png, 6 for bmp and 15 for wbmp\)
 
 ### resizeImage
 
@@ -155,7 +155,7 @@ Type|Parameter|Description
 `int`|`$max_width`|The maximum allowed width
 `int`|`$max_height`|The maximum allowed height
 `bool`|`$force_resize`|= false Whether to forcibly resize it
-`int`|`$preferred_format`|- 1 for gif, 2 for jpeg, 3 for png, 6 for bmp or 15 for wbmp
+`int`|`$preferred_format`|\- 1 for gif, 2 for jpeg, 3 for png, 6 for bmp or 15 for wbmp
 
 ### imagecopyresamplebicubic
 
@@ -168,8 +168,8 @@ Used when imagecopyresample() is not available.
 
 Type|Parameter|Description
 ---|---|---
-`resource`|`$dst_img`|The destination image - a GD image resource
-`resource`|`$src_img`|The source image - a GD image resource
+`resource`|`$dst_img`|The destination image \- a GD image resource
+`resource`|`$src_img`|The source image \- a GD image resource
 `int`|`$dst_x`|The "x" coordinate of the destination image
 `int`|`$dst_y`|The "y" coordinate of the destination image
 `int`|`$src_x`|The "x" coordinate of the source image

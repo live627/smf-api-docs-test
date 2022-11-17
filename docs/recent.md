@@ -3,7 +3,7 @@ layout: default
 group: func
 navtitle: Recent.php
 title: ./Sources/Recent.php
-count: 3
+count: 4
 ---
 * auto-gen TOC:
 {:toc}
@@ -28,6 +28,11 @@ Find the ten most recent posts.
 Integration hooks
 : integrate_recent_RecentPosts
 
+### getBoardParams
+
+```php
+function getBoardParams(): array
+```
 ### UnreadTopics
 
 ```php

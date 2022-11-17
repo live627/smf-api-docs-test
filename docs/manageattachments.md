@@ -38,7 +38,7 @@ Uses 'attachments' sub template.
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether to return the array of config variables (used for admin search)
+`bool`|`$return_config`|Whether to return the array of config variables \(used for admin search\)
 
 Integration hooks
 : integrate_modify_attachment_settings
@@ -57,7 +57,7 @@ Show/set permissions for permissions: 'profile_server_avatar',
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether to return the config_vars array (used for admin search)
+`bool`|`$return_config`|Whether to return the config\_vars array \(used for admin search\)
 
 Integration hooks
 : integrate_modify_avatar_settings
@@ -93,7 +93,7 @@ Type|Parameter|Description
 `int`|`$start`|The item to start with
 `int`|`$items_per_page`|How many items to show per page
 `string`|`$sort`|A string indicating how to sort results
-`string`|`$browse_type`|can be one of 'avatars' or ... not. :P
+`string`|`$browse_type`|can be one of 'avatars' or \.\.\. not\. :P
 
 ### list_getNumFiles
 
@@ -106,7 +106,7 @@ Return the number of files of the specified type recorded in the database.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$browse_type`|can be one of 'avatars' or not. (in which case they're attachments)
+`string`|`$browse_type`|can be one of 'avatars' or not\. \(in which case they're attachments\)
 
 ### MaintainFiles
 
@@ -183,7 +183,7 @@ It does no permissions check.
 Type|Parameter|Description
 ---|---|---
 `array`|`$condition`|An array of conditions
-`string`|`$query_type`|The query type. Can be 'messages' or 'members'
+`string`|`$query_type`|The query type\. Can be 'messages' or 'members'
 `bool`|`$return_affected_messages`|Whether to return an array with the IDs of affected messages
 `bool`|`$autoThumbRemoval`|Whether to automatically remove any thumbnails associated with the removed files
 

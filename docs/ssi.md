@@ -79,7 +79,7 @@ Display a welcome message, like: Hey, User, you have 0 messages, 0 are new.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$output_method`|The output method. If 'echo', will display everything. Otherwise returns an array of user info.
+`string`|`$output_method`|The output method\. If 'echo', will display everything\. Otherwise returns an array of user info\.
 
 ### ssi_menubar
 
@@ -92,7 +92,7 @@ Display a menu bar, like is displayed at the top of the forum.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$output_method`|The output method. If 'echo', will display the menu, otherwise returns an array of menu data.
+`string`|`$output_method`|The output method\. If 'echo', will display the menu, otherwise returns an array of menu data\.
 
 ### ssi_logout
 
@@ -105,8 +105,8 @@ Show a logout link.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$redirect_to`|A URL to redirect the user to after they log out.
-`string`|`$output_method`|The output method. If 'echo', shows a logout link, otherwise returns the HTML for it.
+`string`|`$redirect_to`|A URL to redirect the user to after they log out\.
+`string`|`$output_method`|The output method\. If 'echo', shows a logout link, otherwise returns the HTML for it\.
 
 ### ssi_recentPosts
 
@@ -120,9 +120,9 @@ Recent post list:   [board] Subject by Poster    Date
 Type|Parameter|Description
 ---|---|---
 `int`|`$num_recent`|How many recent posts to display
-`null`&#124;`array`|`$exclude_boards`|If set, doesn't show posts from the specified boards
-`null`&#124;`array`|`$include_boards`|If set, only includes posts from the specified boards
-`string`|`$output_method`|The output method. If 'echo', displays the posts, otherwise returns an array of information about them.
+`null` &#124; `array`|`$exclude_boards`|If set, doesn't show posts from the specified boards
+`null` &#124; `array`|`$include_boards`|If set, only includes posts from the specified boards
+`string`|`$output_method`|The output method\. If 'echo', displays the posts, otherwise returns an array of information about them\.
 `bool`|`$limit_body`|Whether or not to only show the first 384 characters of each post
 
 ### ssi_fetchPosts
@@ -137,8 +137,8 @@ Fetches one or more posts by ID.
 Type|Parameter|Description
 ---|---|---
 `array`|`$post_ids`|An array containing the IDs of the posts to show
-`bool`|`$override_permissions`|Whether to ignore permissions. If true, will show posts even if the user doesn't have permission to see them.
-`string`|`$output_method`|The output method. If 'echo', displays the posts, otherwise returns an array of info about them
+`bool`|`$override_permissions`|Whether to ignore permissions\. If true, will show posts even if the user doesn't have permission to see them\.
+`string`|`$output_method`|The output method\. If 'echo', displays the posts, otherwise returns an array of info about them
 
 ### ssi_queryPosts
 
@@ -155,9 +155,9 @@ Type|Parameter|Description
 `array`|`$query_where_params`|An array of parameters for the WHERE clause
 `int`|`$query_limit`|The maximum number of rows to return
 `string`|`$query_order`|The ORDER BY clause for the query
-`string`|`$output_method`|The output method. If 'echo', displays the posts, otherwise returns an array of info about them.
+`string`|`$output_method`|The output method\. If 'echo', displays the posts, otherwise returns an array of info about them\.
 `bool`|`$limit_body`|If true, will only show the first 384 characters of the post rather than all of it
-`bool`&#124;`false`|`$override_permissions`|Whether or not to ignore permissions. If true, will show all posts regardless of whether the user can actually see them
+`bool` &#124; `false`|`$override_permissions`|Whether or not to ignore permissions\. If true, will show all posts regardless of whether the user can actually see them
 
 Integration hooks
 : integrate_ssi_queryPosts
@@ -174,9 +174,9 @@ Recent topic list:   [board] Subject by Poster   Date
 Type|Parameter|Description
 ---|---|---
 `int`|`$num_recent`|How many recent topics to show
-`null`&#124;`array`|`$exclude_boards`|If set, exclude topics from the specified board(s)
-`null`&#124;`array`|`$include_boards`|If set, only include topics from the specified board(s)
-`string`|`$output_method`|The output method. If 'echo', displays a list of topics, otherwise returns an array of info about them
+`null` &#124; `array`|`$exclude_boards`|If set, exclude topics from the specified board\(s\)
+`null` &#124; `array`|`$include_boards`|If set, only include topics from the specified board\(s\)
+`string`|`$output_method`|The output method\. If 'echo', displays a list of topics, otherwise returns an array of info about them
 
 Integration hooks
 : integrate_ssi_recentTopics
@@ -193,7 +193,7 @@ Shows a list of top posters
 Type|Parameter|Description
 ---|---|---
 `int`|`$topNumber`|How many top posters to list
-`string`|`$output_method`|The output method. If 'echo', will display a list of users, otherwise returns an array of info about them.
+`string`|`$output_method`|The output method\. If 'echo', will display a list of users, otherwise returns an array of info about them\.
 
 Integration hooks
 : integrate_ssi_topPoster
@@ -210,7 +210,7 @@ Shows a list of top boards based on activity
 Type|Parameter|Description
 ---|---|---
 `int`|`$num_top`|How many boards to display
-`string`|`$output_method`|The output method. If 'echo', displays a list of boards, otherwise returns an array of info about them.
+`string`|`$output_method`|The output method\. If 'echo', displays a list of boards, otherwise returns an array of info about them\.
 
 Integration hooks
 : integrate_ssi_topBoards
@@ -228,7 +228,7 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$type`|Can be either replies or views
 `int`|`$num_topics`|How many topics to display
-`string`|`$output_method`|The output method. If 'echo', displays a list of topics, otherwise returns an array of info about them.
+`string`|`$output_method`|The output method\. If 'echo', displays a list of topics, otherwise returns an array of info about them\.
 
 Integration hooks
 : integrate_ssi_topTopics
@@ -245,7 +245,7 @@ Top topics based on replies
 Type|Parameter|Description
 ---|---|---
 `int`|`$num_topics`|How many topics to show
-`string`|`$output_method`|The output method. If 'echo', displays a list of topics, otherwise returns an array of info about them
+`string`|`$output_method`|The output method\. If 'echo', displays a list of topics, otherwise returns an array of info about them
 
 ### ssi_topTopicsViews
 
@@ -259,7 +259,7 @@ Top topics based on views
 Type|Parameter|Description
 ---|---|---
 `int`|`$num_topics`|How many topics to show
-`string`|`$output_method`|The output method. If 'echo', displays a list of topics, otherwise returns an array of info about them
+`string`|`$output_method`|The output method\. If 'echo', displays a list of topics, otherwise returns an array of info about them
 
 ### ssi_latestMember
 
@@ -272,7 +272,7 @@ Show a link to the latest member: Please welcome, Someone, our latest member.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$output_method`|The output method. If 'echo', returns a string with a link to the latest member's profile, otherwise returns an array of info about them.
+`string`|`$output_method`|The output method\. If 'echo', returns a string with a link to the latest member's profile, otherwise returns an array of info about them\.
 
 ### ssi_randomMember
 
@@ -285,8 +285,8 @@ Fetches a random member.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$random_type`|If 'day', only fetches a new random member once a day.
-`string`|`$output_method`|The output method. If 'echo', displays a link to the member's profile, otherwise returns an array of info about them.
+`string`|`$random_type`|If 'day', only fetches a new random member once a day\.
+`string`|`$output_method`|The output method\. If 'echo', displays a link to the member's profile, otherwise returns an array of info about them\.
 
 ### ssi_fetchMember
 
@@ -300,7 +300,7 @@ Fetch specific members
 Type|Parameter|Description
 ---|---|---
 `array`|`$member_ids`|The IDs of the members to fetch
-`string`|`$output_method`|The output method. If 'echo', displays a list of links to the members' profiles, otherwise returns an array of info about them.
+`string`|`$output_method`|The output method\. If 'echo', displays a list of links to the members' profiles, otherwise returns an array of info about them\.
 
 ### ssi_fetchGroupMembers
 
@@ -314,7 +314,7 @@ Get al members in the specified group
 Type|Parameter|Description
 ---|---|---
 `int`|`$group_id`|The ID of the group to get members from
-`string`|`$output_method`|The output method. If 'echo', returns a list of group members, otherwise returns an array of info about them.
+`string`|`$output_method`|The output method\. If 'echo', returns a list of group members, otherwise returns an array of info about them\.
 
 ### ssi_queryMembers
 
@@ -329,9 +329,9 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$query_where`|The info for the WHERE clause of the query
 `array`|`$query_where_params`|The parameters for the WHERE clause
-`string`&#124;`int`|`$query_limit`|The number of rows to return or an empty string to return all
+`string` &#124; `int`|`$query_limit`|The number of rows to return or an empty string to return all
 `string`|`$query_order`|The info for the ORDER BY clause of the query
-`string`|`$output_method`|The output method. If 'echo', displays a list of members, otherwise returns an array of info about them
+`string`|`$output_method`|The output method\. If 'echo', displays a list of members, otherwise returns an array of info about them
 
 Integration hooks
 : integrate_ssi_queryMembers
@@ -347,7 +347,7 @@ Show some basic stats:   Total This: XXXX, etc.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$output_method`|The output method. If 'echo', displays the stats, otherwise returns an array of info about them
+`string`|`$output_method`|The output method\. If 'echo', displays the stats, otherwise returns an array of info about them
 
 Integration hooks
 : integrate_ssi_boardStats
@@ -363,7 +363,7 @@ Shows a list of online users:  YY Guests, ZZ Users and then a list.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$output_method`|The output method. If 'echo', displays a list, otherwise returns an array of info about the online users.
+`string`|`$output_method`|The output method\. If 'echo', displays a list, otherwise returns an array of info about the online users\.
 
 Integration hooks
 : integrate_ssi_whosOnline
@@ -379,7 +379,7 @@ Just like whosOnline except it also logs the online presence.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$output_method`|The output method. If 'echo', displays a list, otherwise returns an array of info about the online users.
+`string`|`$output_method`|The output method\. If 'echo', displays a list, otherwise returns an array of info about the online users\.
 
 ### ssi_login
 
@@ -393,7 +393,7 @@ Shows a login box
 Type|Parameter|Description
 ---|---|---
 `string`|`$redirect_to`|The URL to redirect the user to after they login
-`string`|`$output_method`|The output method. If 'echo' and the user is a guest, displays a login box, otherwise returns whether the user is a guest
+`string`|`$output_method`|The output method\. If 'echo' and the user is a guest, displays a login box, otherwise returns whether the user is a guest
 
 ### ssi_topPoll
 
@@ -406,7 +406,7 @@ Show the top poll based on votes
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$output_method`|The output method. If 'echo', displays the poll, otherwise returns an array of info about it
+`string`|`$output_method`|The output method\. If 'echo', displays the poll, otherwise returns an array of info about it
 
 ### ssi_recentPoll
 
@@ -419,8 +419,8 @@ Shows the most recent poll
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$topPollInstead`|Whether to show the top poll (based on votes) instead of the most recent one
-`string`|`$output_method`|The output method. If 'echo', displays the poll, otherwise returns an array of info about it.
+`bool`|`$topPollInstead`|Whether to show the top poll \(based on votes\) instead of the most recent one
+`string`|`$output_method`|The output method\. If 'echo', displays the poll, otherwise returns an array of info about it\.
 
 Integration hooks
 : integrate_ssi_recentPoll
@@ -436,8 +436,8 @@ Shows the poll from the specified topic
 
 Type|Parameter|Description
 ---|---|---
-`null`&#124;`int`|`$topic`|The topic to show the poll from. If null, $_REQUEST['ssi_topic'] will be used instead.
-`string`|`$output_method`|The output method. If 'echo', displays the poll, otherwise returns an array of info about it.
+`null` &#124; `int`|`$topic`|The topic to show the poll from\. If null, $\_REQUEST\['ssi\_topic'\] will be used instead\.
+`string`|`$output_method`|The output method\. If 'echo', displays the poll, otherwise returns an array of info about it\.
 
 Integration hooks
 : integrate_ssi_showPoll
@@ -462,7 +462,7 @@ Shows a search box
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$output_method`|The output method. If 'echo', displays a search box, otherwise returns the URL of the search page.
+`string`|`$output_method`|The output method\. If 'echo', displays a search box, otherwise returns the URL of the search page\.
 
 ### ssi_news
 
@@ -475,7 +475,7 @@ Show a random forum news item
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$output_method`|The output method. If 'echo', shows the news item, otherwise returns it.
+`string`|`$output_method`|The output method\. If 'echo', shows the news item, otherwise returns it\.
 
 Integration hooks
 : integrate_ssi_news
@@ -491,7 +491,7 @@ Show today's birthdays.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$output_method`|The output method. If 'echo', displays a list of users, otherwise returns an array of info about them.
+`string`|`$output_method`|The output method\. If 'echo', displays a list of users, otherwise returns an array of info about them\.
 
 Integration hooks
 : integrate_ssi_calendar
@@ -507,7 +507,7 @@ Shows today's holidays.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$output_method`|The output method. If 'echo', displays a list of holidays, otherwise returns an array of info about them.
+`string`|`$output_method`|The output method\. If 'echo', displays a list of holidays, otherwise returns an array of info about them\.
 
 Integration hooks
 : integrate_ssi_calendar
@@ -523,7 +523,7 @@ Shows today's events.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$output_method`|The output method. If 'echo', displays a list of events, otherwise returns an array of info about them.
+`string`|`$output_method`|The output method\. If 'echo', displays a list of events, otherwise returns an array of info about them\.
 
 Integration hooks
 : integrate_ssi_calendar
@@ -539,7 +539,7 @@ Shows today's calendar items (events, birthdays and holidays)
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$output_method`|The output method. If 'echo', displays a list of calendar items, otherwise returns an array of info about them.
+`string`|`$output_method`|The output method\. If 'echo', displays a list of calendar items, otherwise returns an array of info about them\.
 
 Integration hooks
 : integrate_ssi_calendar
@@ -555,11 +555,11 @@ Show the latest news, with a template... by board.
 
 Type|Parameter|Description
 ---|---|---
-`null`&#124;`int`|`$board`|The ID of the board to get the info from. Defaults to $board or $_GET['board'] if not set.
-`null`&#124;`int`|`$limit`|How many items to show. Defaults to $_GET['limit'] or 5 if not set.
-`null`&#124;`int`|`$start`|Start with the specified item. Defaults to $_GET['start'] or 0 if not set.
-`null`&#124;`int`|`$length`|How many characters to show from each post. Defaults to $_GET['length'] or 0 (no limit) if not set.
-`string`|`$output_method`|The output method. If 'echo', displays the news items, otherwise returns an array of info about them.
+`null` &#124; `int`|`$board`|The ID of the board to get the info from\. Defaults to $board or $\_GET\['board'\] if not set\.
+`null` &#124; `int`|`$limit`|How many items to show\. Defaults to $\_GET\['limit'\] or 5 if not set\.
+`null` &#124; `int`|`$start`|Start with the specified item\. Defaults to $\_GET\['start'\] or 0 if not set\.
+`null` &#124; `int`|`$length`|How many characters to show from each post\. Defaults to $\_GET\['length'\] or 0 \(no limit\) if not set\.
+`string`|`$output_method`|The output method\. If 'echo', displays the news items, otherwise returns an array of info about them\.
 
 Integration hooks
 : integrate_ssi_boardNews
@@ -576,7 +576,7 @@ Show the most recent events
 Type|Parameter|Description
 ---|---|---
 `int`|`$max_events`|The maximum number of events to show
-`string`|`$output_method`|The output method. If 'echo', displays the events, otherwise returns an array of info about them.
+`string`|`$output_method`|The output method\. If 'echo', displays the events, otherwise returns an array of info about them\.
 
 Integration hooks
 : integrate_ssi_recentEvents
@@ -592,7 +592,7 @@ Checks whether the specified password is correct for the specified user.
 
 Type|Parameter|Description
 ---|---|---
-`int`&#124;`string`|`$id`|The ID or username of a user
+`int` &#124; `string`|`$id`|The ID or username of a user
 `string`|`$password`|The password to check
 `bool`|`$is_username`|If true, treats $id as a username rather than a user ID
 
@@ -608,8 +608,8 @@ Shows the most recent attachments that the user can see
 Type|Parameter|Description
 ---|---|---
 `int`|`$num_attachments`|How many to show
-`array`|`$attachment_ext`|Only shows attachments with the specified extensions ('jpg', 'gif', etc.) if set
-`string`|`$output_method`|The output method. If 'echo', displays a table with links/info, otherwise returns an array with information about the attachments
+`array`|`$attachment_ext`|Only shows attachments with the specified extensions \('jpg', 'gif', etc\.\) if set
+`string`|`$output_method`|The output method\. If 'echo', displays a table with links/info, otherwise returns an array with information about the attachments
 
 Integration hooks
 : integrate_ssi_recentAttachments

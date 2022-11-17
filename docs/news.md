@@ -75,8 +75,8 @@ Called from getXmlProfile in News.php
 Type|Parameter|Description
 ---|---|---
 `string`|`$data`|XML data
-`string`|`$ns`|A namespace prefix for the XML data elements (used by mods, maybe)
-`bool`|`$force`|If true, enclose the XML data in cdata tags no matter what (used by mods, maybe)
+`string`|`$ns`|A namespace prefix for the XML data elements \(used by mods, maybe\)
+`bool`|`$force`|If true, enclose the XML data in cdata tags no matter what \(used by mods, maybe\)
 
 ### dumpTags
 
@@ -91,10 +91,10 @@ This function is recursively called to handle sub arrays of data.
 Type|Parameter|Description
 ---|---|---
 `array`|`$data`|The array to output as xml data
-`int`|`$i`|The amount of indentation to use.
-`string`|`$xml_format`|The format to use ('atom', 'rss', 'rss2' or empty for plain XML)
-`array`|`$forceCdataKeys`|A list of keys on which to force cdata wrapping (used by mods, maybe)
-`array`|`$nsKeys`|Key-value pairs of namespace prefixes to pass to cdata_parse() (used by mods, maybe)
+`int`|`$i`|The amount of indentation to use\.
+`string`|`$xml_format`|The format to use \('atom', 'rss', 'rss2' or empty for plain XML\)
+`array`|`$forceCdataKeys`|A list of keys on which to force cdata wrapping \(used by mods, maybe\)
+`array`|`$nsKeys`|Key\-value pairs of namespace prefixes to pass to cdata\_parse\(\) \(used by mods, maybe\)
 
 ### getXmlMembers
 
@@ -107,8 +107,8 @@ The array will be generated to match the format.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$xml_format`|The format to use. Can be 'atom', 'rdf', 'rss', 'rss2' or 'smf'
-`bool`|`$ascending`|If true, get the earliest members first. Default false.
+`string`|`$xml_format`|The format to use\. Can be 'atom', 'rdf', 'rss', 'rss2' or 'smf'
+`bool`|`$ascending`|If true, get the earliest members first\. Default false\.
 
 ### getXmlNews
 
@@ -122,8 +122,8 @@ The returned array will be generated to match the xml_format.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$xml_format`|The XML format. Can be 'atom', 'rdf', 'rss', 'rss2' or 'smf'.
-`bool`|`$ascending`|If true, get the oldest topics first. Default false.
+`string`|`$xml_format`|The XML format\. Can be 'atom', 'rdf', 'rss', 'rss2' or 'smf'\.
+`bool`|`$ascending`|If true, get the oldest topics first\. Default false\.
 
 ### getXmlRecent
 
@@ -136,7 +136,7 @@ The returned array will be generated to match the xml_format.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$xml_format`|The XML format. Can be 'atom', 'rdf', 'rss', 'rss2' or 'smf'
+`string`|`$xml_format`|The XML format\. Can be 'atom', 'rdf', 'rss', 'rss2' or 'smf'
 
 ### getXmlProfile
 
@@ -150,7 +150,7 @@ which will be generated to match the xml_format.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$xml_format`|The XML format. Can be 'atom', 'rdf', 'rss', 'rss2' or 'smf'
+`string`|`$xml_format`|The XML format\. Can be 'atom', 'rdf', 'rss', 'rss2' or 'smf'
 
 ### getXmlPosts
 
@@ -163,8 +163,8 @@ The returned array will be generated to match the xml_format.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$xml_format`|The XML format. Can be 'atom', 'rdf', 'rss', 'rss2' or 'smf'
-`bool`|`$ascending`|If true, get the oldest posts first. Default false.
+`string`|`$xml_format`|The XML format\. Can be 'atom', 'rdf', 'rss', 'rss2' or 'smf'
+`bool`|`$ascending`|If true, get the oldest posts first\. Default false\.
 
 ### getXmlPMs
 
@@ -177,6 +177,6 @@ Only the user can do this, and no one else -- not even the admin!
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$xml_format`|The XML format. Can be 'atom', 'rdf', 'rss', 'rss2' or 'smf'
-`bool`|`$ascending`|If true, get the oldest PMs first. Default false.
+`string`|`$xml_format`|The XML format\. Can be 'atom', 'rdf', 'rss', 'rss2' or 'smf'
+`bool`|`$ascending`|If true, get the oldest PMs first\. Default false\.
 

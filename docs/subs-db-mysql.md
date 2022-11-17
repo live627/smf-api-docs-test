@@ -38,7 +38,7 @@ to add the implementations in that file to $smcFunc array.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$type`|Indicates which additional file to load. ('extra', 'packages')
+`string`|`$type`|Indicates which additional file to load\. \('extra', 'packages'\)
 
 ### db_fix_prefix
 
@@ -66,7 +66,7 @@ Wrap mysqli_select_db so the connection does not need to be specified
 Type|Parameter|Description
 ---|---|---
 `string`|` &$database`|The database
-`object`|`$connection`|The connection object (if null, $db_connection is used)
+`object`|`$connection`|The connection object \(if null, $db\_connection is used\)
 
 ### smf_db_get_server_info
 
@@ -79,7 +79,7 @@ Wrap mysqli_get_server_info so the connection does not need to be specified
 
 Type|Parameter|Description
 ---|---|---
-`object`|`$connection`|The connection to use (if null, $db_connection is used)
+`object`|`$connection`|The connection to use \(if null, $db\_connection is used\)
 
 ### smf_db_replacement__callback
 
@@ -94,7 +94,7 @@ In addition, it performs checks and sanitization on the values sent to the datab
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$matches`|The matches from preg_replace_callback
+`array`|`$matches`|The matches from preg\_replace\_callback
 
 ### smf_db_quote
 
@@ -109,7 +109,7 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$db_string`|The database string
 `array`|`$db_values`|An array of values to be injected into the string
-`resource`|`$connection`|= null The connection to use (null to use $db_connection)
+`resource`|`$connection`|= null The connection to use \(null to use $db\_connection\)
 
 ### smf_db_query
 
@@ -122,10 +122,10 @@ Do a query.  Takes care of errors too.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$identifier`|An identifier. Only used in Postgres when we need to do things differently...
+`string`|`$identifier`|An identifier\. Only used in Postgres when we need to do things differently\.\.\.
 `string`|`$db_string`|The database string
-`array`|`$db_values`|= array() The values to be inserted into the string
-`resource`|`$connection`|= null The connection to use (null to use $db_connection)
+`array`|`$db_values`|= array\(\) The values to be inserted into the string
+`resource`|`$connection`|= null The connection to use \(null to use $db\_connection\)
 
 ### smf_db_affected_rows
 
@@ -138,7 +138,7 @@ affected_rows
 
 Type|Parameter|Description
 ---|---|---
-`resource`|`$connection`|A connection to use (if null, $db_connection is used)
+`resource`|`$connection`|A connection to use \(if null, $db\_connection is used\)
 
 ### smf_db_insert_id
 
@@ -151,9 +151,9 @@ Gets the ID of the most recently inserted row.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$table`|The table (only used for Postgres)
-`string`|`$field`|= null The specific field (not used here)
-`resource`|`$connection`|= null The connection (if null, $db_connection is used)
+`string`|`$table`|The table \(only used for Postgres\)
+`string`|`$field`|= null The specific field \(not used here\)
+`resource`|`$connection`|= null The connection \(if null, $db\_connection is used\)
 
 ### smf_db_transaction
 
@@ -166,8 +166,8 @@ Do a transaction.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$type`|The step to perform (i.e. 'begin', 'commit', 'rollback')
-`resource`|`$connection`|The connection to use (if null, $db_connection is used)
+`string`|`$type`|The step to perform \(i\.e\. 'begin', 'commit', 'rollback'\)
+`resource`|`$connection`|The connection to use \(if null, $db\_connection is used\)
 
 ### smf_db_error
 
@@ -182,7 +182,7 @@ Backtrace, log, try to fix.
 Type|Parameter|Description
 ---|---|---
 `string`|`$db_string`|The DB string
-`object`|`$connection`|The connection to use (if null, $db_connection is used)
+`object`|`$connection`|The connection to use \(if null, $db\_connection is used\)
 
 ### smf_db_insert
 
@@ -195,13 +195,13 @@ Inserts data into a table
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$method`|The insert method - can be 'replace', 'ignore' or 'insert'
+`string`|`$method`|The insert method \- can be 'replace', 'ignore' or 'insert'
 `string`|`$table`|The table we're inserting the data into
-`array`|`$columns`|An array of the columns we're inserting the data into. Should contain 'column' => 'datatype' pairs
+`array`|`$columns`|An array of the columns we're inserting the data into\. Should contain 'column' =\> 'datatype' pairs
 `array`|`$data`|The data to insert
 `array`|`$keys`|The keys for the table, needs to be not empty on replace mode
-`int`|``|returnmode 0 = nothing(default), 1 = last row id, 2 = all rows id as array
-`object`|`$connection`|The connection to use (if null, $db_connection is used)
+`int`|``|returnmode 0 = nothing\(default\), 1 = last row id, 2 = all rows id as array
+`object`|`$connection`|The connection to use \(if null, $db\_connection is used\)
 
 ### smf_db_error_backtrace
 
@@ -216,7 +216,7 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$error_message`|The error message
 `string`|`$log_message`|The message to log
-`string`&#124;`bool`|`$error_type`|What type of error this is
+`string` &#124; `bool`|`$error_type`|What type of error this is
 `string`|`$file`|The file the error occurred in
 `int`|`$line`|What line of $file the code which generated the error is on
 
@@ -232,7 +232,7 @@ Escape the LIKE wildcards so that they match the character and not the wildcard.
 Type|Parameter|Description
 ---|---|---
 `string`|`$string`|The string to escape
-`bool`|`$translate_human_wildcards`|If true, turns human readable wildcards into SQL wildcards.
+`bool`|`$translate_human_wildcards`|If true, turns human readable wildcards into SQL wildcards\.
 
 ### smf_is_resource
 
@@ -271,7 +271,7 @@ Function to save errors in database in a safe way
 
 Type|Parameter|Description
 ---|---|---
-`array`|``|with keys in this order id_member, log_time, ip, url, message, session, error_type, file, line
+`array`|``|with keys in this order id\_member, log\_time, ip, url, message, session, error\_type, file, line
 
 ### smf_db_custom_order
 
@@ -286,7 +286,7 @@ as an improved alternative to find_in_set()
 Type|Parameter|Description
 ---|---|---
 `string`|`$field`|name
-`array`|`$array_values`|Field values sequenced in array via order priority. Must cast to int.
+`array`|`$array_values`|Field values sequenced in array via order priority\. Must cast to int\.
 `bool`|`$desc`|default false
 
 ### smf_db_native_replace
@@ -319,5 +319,5 @@ Function which return the escaped string
 Type|Parameter|Description
 ---|---|---
 `string`|``|the unescaped text
-`resource`|`$connection`|= null The connection to use (null to use $db_connection)
+`resource`|`$connection`|= null The connection to use \(null to use $db\_connection\)
 

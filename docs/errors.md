@@ -21,7 +21,7 @@ Example use:
 Type|Parameter|Description
 ---|---|---
 `string`|`$error_message`|The message to log
-`string`&#124;`bool`|`$error_type`|The type of error
+`string` &#124; `bool`|`$error_type`|The type of error
 `string`|`$file`|The name of the file where this error occurred
 `int`|`$line`|The line where the error occurred
 
@@ -40,13 +40,13 @@ It logs the error message if $log is specified.
 Type|Parameter|Description
 ---|---|---
 `string`|`$error`|The error message
-`string`&#124;`bool`|`$log`|= 'general' What type of error to log this as (false to not log it))
+`string` &#124; `bool`|`$log`|= 'general' What type of error to log this as \(false to not log it\)\)
 `int`|`$status`|The HTTP status code associated with this error
 
 ### fatal_lang_error
 
 ```php
-function fatal_lang_error(string $error, string|false $log = 'general', array $sprintf = array(), int $status = 403): void
+function fatal_lang_error(string $error, string|false $log = 'general', string|array $sprintf = array(), int $status = 403): void
 ```
 Shows a fatal error with a message stored in the language file.
 
@@ -60,8 +60,8 @@ This function stops execution and displays an error message by key.
 Type|Parameter|Description
 ---|---|---
 `string`|`$error`|The error message
-`string`&#124;`false`|`$log`|The type of error, or false to not log it
-`array`|`$sprintf`|An array of data to be sprintf()'d into the specified message
+`string` &#124; `false`|`$log`|The type of error, or false to not log it
+`string` &#124; `array`|`$sprintf`|An array of data to be sprintf\(\)'d into the specified message
 `int`|`$status`|= false The HTTP status code associated with this error
 
 ### smf_error_handler
@@ -75,7 +75,7 @@ It dies with fatal_error() if the error_level matches with error_reporting.
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$error_level`|A pre-defined error-handling constant (see {@link https://php.net/errorfunc.constants})
+`int`|`$error_level`|A pre\-defined error\-handling constant \(see \{@link https://php\.net/errorfunc\.constants\}\)
 `string`|`$error_string`|The error message
 `string`|`$file`|The file where the error occurred
 `int`|`$line`|The line where the error occurred
@@ -152,5 +152,5 @@ Used by fatal_error(), fatal_lang_error()
 Type|Parameter|Description
 ---|---|---
 `string`|`$error`|The error
-`array`|`$sprintf`|An array of data to be sprintf()'d into the specified message
+`array`|`$sprintf`|An array of data to be sprintf\(\)'d into the specified message
 

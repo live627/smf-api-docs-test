@@ -102,7 +102,7 @@ Type|Parameter|Description
 ---|---|---
 `array`|`$list_items`|An array with info for displaying the strip
 `string`|`$list_class`|Used for integration hooks and as a class name
-`string`|`$output_method`|The output method. If 'echo', simply displays the buttons, otherwise returns the HTML for them
+`string`|`$output_method`|The output method\. If 'echo', simply displays the buttons, otherwise returns the HTML for them
 
 ### template_maint_warning_above
 

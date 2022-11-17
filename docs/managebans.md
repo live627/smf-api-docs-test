@@ -50,7 +50,7 @@ Get bans, what else? For the given options.
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$start`|Which item to start with (for pagination purposes)
+`int`|`$start`|Which item to start with \(for pagination purposes\)
 `int`|`$items_per_page`|How many items to show on each page
 `string`|`$sort`|A string telling ORDER BY how to sort the results
 
@@ -93,7 +93,7 @@ Retrieves all the ban items belonging to a certain ban group
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$start`|Which item to start with (for pagination purposes)
+`int`|`$start`|Which item to start with \(for pagination purposes\)
 `int`|`$items_per_page`|How many items to show on each page
 `int`|`$sort`|Not used here
 `int`|`$ban_group_id`|The ID of the group to get the bans for
@@ -177,10 +177,10 @@ checks the $_POST variable to verify if the trigger is present
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$suggestions`|An array of suggestedtriggers (IP, email, etc.)
+`array`|`$suggestions`|An array of suggestedtriggers \(IP, email, etc\.\)
 `int`|`$ban_group`|The ID of the group we're saving bans for
-`int`|`$member`|The ID of the member associated with this ban (if applicable)
-`int`|`$ban_id`|The ID of the ban (0 if this is a new ban)
+`int`|`$member`|The ID of the member associated with this ban \(if applicable\)
+`int`|`$ban_id`|The ID of the ban \(0 if this is a new ban\)
 
 Integration hooks
 : integrate_save_triggers
@@ -188,7 +188,7 @@ Integration hooks
 ### removeBanTriggers
 
 ```php
-function removeBanTriggers(array $items_ids = array(), bool|int $group_id = false): bool
+function removeBanTriggers(int[]|int $items_ids = array(), bool|int $group_id = false): bool
 ```
 This function removes a bunch of triggers based on ids
 Doesn't clean the inputs
@@ -197,8 +197,8 @@ Doesn't clean the inputs
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$items_ids`|The items to remove
-`bool`&#124;`int`|`$group_id`|The ID of the group these triggers are associated with or false if deleting them from all groups
+`int[]` &#124; `int`|`$items_ids`|The items to remove
+`bool` &#124; `int`|`$group_id`|The ID of the group these triggers are associated with or false if deleting them from all groups
 
 Integration hooks
 : integrate_remove_triggers
@@ -255,7 +255,7 @@ Errors in $context['ban_errors']
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$group_id`|The ID of the group to add the triggers to (0 to create a new one)
+`int`|`$group_id`|The ID of the group to add the triggers to \(0 to create a new one\)
 `array`|`$triggers`|The triggers to add
 `array`|`$logs`|The log data
 
@@ -287,8 +287,8 @@ A small function to unify logging of triggers (updates and new)
 Type|Parameter|Description
 ---|---|---
 `array`|`$logs`|an array of logs, each log contains the following keys:
-- bantype: a known type of ban (ip_range, hostname, email, user, main_ip)
-- value: the value of the bantype (e.g. the IP or the email address banned)
+\- bantype: a known type of ban \(ip\_range, hostname, email, user, main\_ip\)
+\- value: the value of the bantype \(e\.g\. the IP or the email address banned\)
 `bool`|`$new`|Whether the trigger is new or an update of an existing one
 `bool`|`$removal`|Whether the trigger is being deleted
 
@@ -303,7 +303,7 @@ Errors in $context['ban_errors']
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$ban_info`|An array of info about the ban group. Should have name and may also have an id.
+`array`|`$ban_info`|An array of info about the ban group\. Should have name and may also have an id\.
 
 ### insertBanGroup
 
@@ -357,10 +357,10 @@ Get ban triggers for the given parameters. Callback from $listOptions['get_items
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$start`|The item to start with (for pagination purposes)
+`int`|`$start`|The item to start with \(for pagination purposes\)
 `int`|`$items_per_page`|How many items to show on each page
 `string`|`$sort`|A string telling ORDER BY how to sort the results
-`string`|`$trigger_type`|The trigger type - can be 'ip', 'hostname' or 'email'
+`string`|`$trigger_type`|The trigger type \- can be 'ip', 'hostname' or 'email'
 
 ### list_getNumBanTriggers
 
@@ -373,7 +373,7 @@ This returns the total number of ban triggers of the given type. Callback for $l
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$trigger_type`|The trigger type. Can be 'ip', 'hostname' or 'email'
+`string`|`$trigger_type`|The trigger type\. Can be 'ip', 'hostname' or 'email'
 
 ### BanLog
 
@@ -399,7 +399,7 @@ Load a list of ban log entries from the database.
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$start`|The item to start with (for pagination purposes)
+`int`|`$start`|The item to start with \(for pagination purposes\)
 `int`|`$items_per_page`|How many items to show on each page
 `string`|`$sort`|A string telling ORDER BY how to sort the results
 
@@ -415,7 +415,7 @@ This returns the total count of ban log entries. Callback for $listOptions['get_
 ### range2ip
 
 ```php
-function range2ip(array $low, array $high): string
+function range2ip(string $low, string $high): string
 ```
 Convert a range of given IP number into a single string.
 
@@ -423,8 +423,8 @@ It's practically the reverse function of ip2range().
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$low`|The low end of the range in IPv4 format
-`array`|`$high`|The high end of the range in IPv4 format
+`string`|`$low`|The low end of the range in IPv4 format
+`string`|`$high`|The high end of the range in IPv4 format
 
 ### checkExistingTriggerIP
 

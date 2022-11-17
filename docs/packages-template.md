@@ -153,7 +153,7 @@ Shows permissions for items within a directory (called from template_file_permis
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$ident`|A unique ID - typically the directory name
+`string`|`$ident`|A unique ID \- typically the directory name
 `array`|`$contents`|An array of items within the directory
 `int`|`$level`|How far to go inside the directory
 `bool`|`$has_more`|Whether there are more files to display besides what's in $contents

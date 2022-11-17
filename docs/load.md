@@ -53,7 +53,7 @@ Intended for use by background tasks that need to populate $user_info.
 
 Type|Parameter|Description
 ---|---|---
-`int`&#124;`array`|`$user_ids`|The users IDs to get the data for.
+`int` &#124; `array`|`$user_ids`|The users IDs to get the data for\.
 
 Integration hooks
 : integrate_load_min_user_settings_columns
@@ -91,17 +91,17 @@ Load this user's permissions.
 ### loadMemberData
 
 ```php
-function loadMemberData(array|string $users, bool $is_name = false, string $set = 'normal'): array
+function loadMemberData(mixed $users, bool $is_name = false, string $set = 'normal'): array
 ```
-Loads an array of users' data by ID or member_name.
+Loads user data, either by id or member_name, and can load one or many users' data together.
 
-
+User data is loaded with minimal processing into the global `$user_profiles` array, keyed by user id.
 
 Type|Parameter|Description
 ---|---|---
-`array`&#124;`string`|`$users`|An array of users by id or name or a single username/id
-`bool`|`$is_name`|Whether $users contains names
-`string`|`$set`|What kind of data to load (normal, profile, minimal)
+`mixed`|`$users`|This can be either a single value or an array, representing a single user or multiple users\.
+`bool`|`$is_name`|If this parameter is true, treat the value\(s\) in \`$users\` as user names, otherwise they are numeric user ids\.
+`string`|`$set`|Complexity of data to load, from \`minimal\`, \`normal\`, \`profile\`, each successively increasing in complexity\.
 
 Integration hooks
 : integrate_load_member_data
@@ -109,15 +109,15 @@ Integration hooks
 ### loadMemberContext
 
 ```php
-function loadMemberContext(int $user, bool $display_custom_fields = false): bool|array
+function loadMemberContext(int $user, bool $display_custom_fields = false): bool
 ```
-Loads the user's basic values... meant for template/theme usage.
+Processes all the data previously loaded by {@link loadMemberData()} into a form more readily usable for SMF.
 
-
+The results are stored in the global `$memberContext` array, keyed by user id.
 
 Type|Parameter|Description
 ---|---|---
-`int`|`$user`|The ID of a user previously loaded by {@link loadMemberData()}
+`int`|`$user`|The ID of a user previously loaded by \{@link loadMemberData\(\)\}
 `bool`|`$display_custom_fields`|Whether or not to display custom profile fields
 
 Integration hooks
@@ -134,8 +134,8 @@ Loads the user's custom profile fields
 
 Type|Parameter|Description
 ---|---|---
-`int`&#124;`array`|`$users`|A single user ID or an array of user IDs
-`string`&#124;`array`|`$params`|Either a string or an array of strings with profile field names
+`int` &#124; `array`|`$users`|A single user ID or an array of user IDs
+`string` &#124; `array`|`$params`|Either a string or an array of strings with profile field names
 
 ### detectBrowser
 
@@ -158,7 +158,7 @@ Wrapper function for detectBrowser
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$browser`|The browser we are checking for.
+`string`|`$browser`|The browser we are checking for\.
 
 ### loadTheme
 
@@ -172,7 +172,7 @@ Load a theme, by ID.
 Type|Parameter|Description
 ---|---|---
 `int`|`$id_theme`|The ID of the theme to load
-`bool`|`$initialize`|Whether or not to initialize a bunch of theme-related variables/settings
+`bool`|`$initialize`|Whether or not to initialize a bunch of theme\-related variables/settings
 
 Integration hooks
 : integrate_pre_load_theme
@@ -182,7 +182,7 @@ Integration hooks
 ### loadTemplate
 
 ```php
-function loadTemplate(string $template_name, array|string $style_sheets = array(), bool $fatal = true): bool
+function loadTemplate(string|false $template_name, array|string $style_sheets = array(), bool $fatal = true): bool
 ```
 Load a template - if the theme doesn't include it, use the default.
 
@@ -192,14 +192,14 @@ What this function does:
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$template_name`|The name of the template to load
-`array`&#124;`string`|`$style_sheets`|The name of a single stylesheet or an array of names of stylesheets to load
+`string` &#124; `false`|`$template_name`|The name of the template to load
+`array` &#124; `string`|`$style_sheets`|The name of a single stylesheet or an array of names of stylesheets to load
 `bool`|`$fatal`|If true, dies with an error message if the template cannot be found
 
 ### loadSubTemplate
 
 ```php
-function loadSubTemplate(string $sub_template_name, bool $fatal = false): void
+function loadSubTemplate(string $sub_template_name, bool|string $fatal = false): void
 ```
 Load a sub-template.
 
@@ -210,8 +210,8 @@ for debugging purposes.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$sub_template_name`|The name of the sub-template to load
-`bool`|`$fatal`|Whether to die with an error if the sub-template can't be loaded
+`string`|`$sub_template_name`|The name of the sub\-template to load
+`bool` &#124; `string`|`$fatal`|Whether to die with an error if the sub\-template can't be loaded
 
 ### loadCSSFile
 
@@ -227,15 +227,15 @@ Type|Parameter|Description
 `string`|`$fileName`|The name of the file to load
 `array`|`$params`|An array of parameters
 Keys are the following:
-	- ['external'] (true/false): define if the file is a externally located file. Needs to be set to true if you are loading an external file
-	- ['default_theme'] (true/false): force use of default theme url
-	- ['force_current'] (true/false): if this is false, we will attempt to load the file from the default theme if not found in the current theme
- - ['validate'] (true/false): if true script will validate the local file exists
- - ['rtl'] (string): additional file to load in RTL mode
- - ['seed'] (true/false/string): if true or null, use cache stale, false do not, or used a supplied string
- - ['minimize'] boolean to add your file to the main minimized file. Useful when you have a file thats loaded everywhere and for everyone.
- - ['order_pos'] int define the load order, when not define it's loaded in the middle, before index.css = -500, after index.css = 500, middle = 3000, end (i.e. after responsive.css) = 10000
- - ['attributes'] array extra attributes to add to the element
+	\- \['external'\] \(true/false\): define if the file is a externally located file\. Needs to be set to true if you are loading an external file
+	\- \['default\_theme'\] \(true/false\): force use of default theme url
+	\- \['force\_current'\] \(true/false\): if this is false, we will attempt to load the file from the default theme if not found in the current theme
+ \- \['validate'\] \(true/false\): if true script will validate the local file exists
+ \- \['rtl'\] \(string\): additional file to load in RTL mode
+ \- \['seed'\] \(true/false/string\): if true or null, use cache stale, false do not, or used a supplied string
+ \- \['minimize'\] boolean to add your file to the main minimized file\. Useful when you have a file thats loaded everywhere and for everyone\.
+ \- \['order\_pos'\] int define the load order, when not define it's loaded in the middle, before index\.css = \-500, after index\.css = 500, middle = 3000, end \(i\.e\. after responsive\.css\) = 10000
+ \- \['attributes'\] array extra attributes to add to the element
 `string`|`$id`|An ID to stick on the end of the filename for caching purposes
 
 ### addInlineCss
@@ -267,16 +267,16 @@ Type|Parameter|Description
 `string`|`$fileName`|The name of the file to load
 `array`|`$params`|An array of parameter info
 Keys are the following:
-	- ['external'] (true/false): define if the file is a externally located file. Needs to be set to true if you are loading an external file
-	- ['default_theme'] (true/false): force use of default theme url
-	- ['defer'] (true/false): define if the file should load in <head> or before the closing <html> tag
-	- ['force_current'] (true/false): if this is false, we will attempt to load the file from the
+	\- \['external'\] \(true/false\): define if the file is a externally located file\. Needs to be set to true if you are loading an external file
+	\- \['default\_theme'\] \(true/false\): force use of default theme url
+	\- \['defer'\] \(true/false\): define if the file should load in \<head\> or before the closing \<html\> tag
+	\- \['force\_current'\] \(true/false\): if this is false, we will attempt to load the file from the
 default theme if not found in the current theme
-- ['async'] (true/false): if the script should be loaded asynchronously (HTML5)
- - ['validate'] (true/false): if true script will validate the local file exists
- - ['seed'] (true/false/string): if true or null, use cache stale, false do not, or used a supplied string
- - ['minimize'] boolean to add your file to the main minimized file. Useful when you have a file thats loaded everywhere and for everyone.
- - ['attributes'] array extra attributes to add to the element
+\- \['async'\] \(true/false\): if the script should be loaded asynchronously \(HTML5\)
+ \- \['validate'\] \(true/false\): if true script will validate the local file exists
+ \- \['seed'\] \(true/false/string\): if true or null, use cache stale, false do not, or used a supplied string
+ \- \['minimize'\] boolean to add your file to the main minimized file\. Useful when you have a file thats loaded everywhere and for everyone\.
+ \- \['attributes'\] array extra attributes to add to the element
 `string`|`$id`|An ID to stick on the end of the filename
 
 ### addJavaScriptVar
@@ -309,7 +309,7 @@ Add a block of inline Javascript code to be executed later
 Type|Parameter|Description
 ---|---|---
 `string`|`$javascript`|Some JS code
-`bool`|`$defer`|Whether the script should load in <head> or before the closing <html> tag
+`bool`|`$defer`|Whether the script should load in \<head\> or before the closing \<html\> tag
 
 ### loadLanguage
 
@@ -372,6 +372,9 @@ Type|Parameter|Description
 `string`|` &$text`|The text to censor
 `bool`|`$force`|Whether to censor the text regardless of settings
 
+Integration hooks
+: integrate_word_censor
+
 ### template_include
 
 ```php
@@ -387,7 +390,7 @@ Load the template/language file using require
 Type|Parameter|Description
 ---|---|---
 `string`|`$filename`|The name of the file to include
-`bool`|`$once`|If true only includes the file once (like include_once)
+`bool`|`$once`|If true only includes the file once \(like include\_once\)
 
 ### loadDatabase
 
@@ -409,8 +412,8 @@ Try to load up a supported caching method. This is saved in $cacheAPI if we are 
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$overrideCache`|Try to use a different cache method other than that defined in $cache_accelerator.
-`bool`|`$fallbackSMF`|Use the default SMF method if the accelerator fails.
+`string`|`$overrideCache`|Try to use a different cache method other than that defined in $cache\_accelerator\.
+`bool`|`$fallbackSMF`|Use the default SMF method if the accelerator fails\.
 
 ### cache_quick_get
 
@@ -452,7 +455,7 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$key`|A key for this value
 `mixed`|`$value`|The data to cache
-`int`|`$ttl`|How long (in seconds) the data should be cached for
+`int`|`$ttl`|How long \(in seconds\) the data should be cached for
 
 Integration hooks
 : cache_put_data
@@ -491,7 +494,7 @@ For cache engines that do not distinguish on types, a full cache flush will be d
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$type`|The cache type ('memcached', 'zend' or something else for SMF's file cache)
+`string`|`$type`|The cache type \('memcached', 'zend' or something else for SMF's file cache\)
 
 Integration hooks
 : integrate_clean_cache

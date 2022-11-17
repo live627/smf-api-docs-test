@@ -18,11 +18,11 @@ Reads an archive from either a remote location or from the local filesystem.
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$gzfilename`|The path to the tar.gz file
+`string`|`$gzfilename`|The path to the tar\.gz file
 `string`|`$destination`|The path to the desitnation directory
 `bool`|`$single_file`|If true returns the contents of the file specified by destination if it exists
 `bool`|`$overwrite`|Whether to overwrite existing files
-`null`&#124;`array`|`$files_to_extract`|Specific files to extract
+`null` &#124; `array`|`$files_to_extract`|Specific files to extract
 
 ### read_tgz_data
 
@@ -50,10 +50,10 @@ if files_to_extract is not equal to null only extracts file within this array.
 Type|Parameter|Description
 ---|---|---
 `string`|`$data`|The gzipped tarball
-`null`&#124;`string`|`$destination`|The destination
+`null` &#124; `string`|`$destination`|The destination
 `bool`|`$single_file`|Whether to only extract a single file
 `bool`|`$overwrite`|Whether to overwrite existing data
-`null`&#124;`array`|`$files_to_extract`|If set, only extracts the specified files
+`null` &#124; `array`|`$files_to_extract`|If set, only extracts the specified files
 
 ### read_zip_data
 
@@ -68,9 +68,9 @@ Destination should not begin with a / if single_file is true.
 Type|Parameter|Description
 ---|---|---
 `string`|`$data`|ZIP data
-`string`|`$destination`|Null to display a listing of files in the archive, the destination for the files in the archive or the name of a single file to display (if $single_file is true)
-`bool`|`$single_file`|If true, returns the contents of the file specified by destination or false if the file can't be found (default value is false).
-`bool`|`$overwrite`|If true, will overwrite files with newer modication times. Default is false.
+`string`|`$destination`|Null to display a listing of files in the archive, the destination for the files in the archive or the name of a single file to display \(if $single\_file is true\)
+`bool`|`$single_file`|If true, returns the contents of the file specified by destination or false if the file can't be found \(default value is false\)\.
+`bool`|`$overwrite`|If true, will overwrite files with newer modication times\. Default is false\.
 `array`|`$files_to_extract`|
 
 ### url_exists
@@ -138,7 +138,7 @@ Use FTP functions to work with a package download/install
 Type|Parameter|Description
 ---|---|---
 `string`|`$destination_url`|The destination URL
-`null`&#124;`array`|`$files`|The files to CHMOD
+`null` &#124; `array`|`$files`|The files to CHMOD
 `bool`|`$return`|Whether to return an array of file info if there's an error
 
 ### parsePackageInfo
@@ -156,9 +156,9 @@ Parses the actions in package-info.xml file from packages.
 
 Type|Parameter|Description
 ---|---|---
-`\xmlArray`|` &$packageXML`|The info from the package-info file
+`\xmlArray`|` &$packageXML`|The info from the package\-info file
 `bool`|`$testing_only`|Whether we're only testing
-`string`|`$method`|The method ('install', 'upgrade', or 'uninstall')
+`string`|`$method`|The method \('install', 'upgrade', or 'uninstall'\)
 `string`|`$previous_version`|The previous version of the mod, if method is 'upgrade'
 
 ### matchHighestPackageVersion
@@ -175,7 +175,7 @@ Checks if version matches any of the versions in `$versions`.
 Type|Parameter|Description
 ---|---|---
 `string`|`$versions`|The versions that this package will install on
-`bool`|`$reset`|Whether to reset $near_version
+`bool`|`$reset`|Whether to reset $near\_version
 `string`|`$the_version`|The forum version
 
 ### matchPackageVersion
@@ -250,7 +250,7 @@ creates every directory in path until it finds one that already exists.
 Type|Parameter|Description
 ---|---|---
 `string`|`$strPath`|The path
-`int`|`$mode`|The permission mode for CHMOD (0666, etc.)
+`int`|`$mode`|The permission mode for CHMOD \(0666, etc\.\)
 
 ### copytree
 
@@ -278,7 +278,7 @@ Create a tree listing for a given directory path
 Type|Parameter|Description
 ---|---|---
 `string`|`$path`|The path
-`string`|`$sub_path`|The sub-path
+`string`|`$sub_path`|The sub\-path
 
 ### parseModification
 
@@ -293,7 +293,7 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$file`|The modification file to parse
 `bool`|`$testing`|Whether we're just doing a test
-`bool`|`$undo`|If true, specifies that the modifications should be undone. Used when uninstalling. Doesn't work with regex.
+`bool`|`$undo`|If true, specifies that the modifications should be undone\. Used when uninstalling\. Doesn't work with regex\.
 `array`|`$theme_paths`|An array of information about custom themes to apply the changes to
 
 ### parseBoardMod
@@ -309,7 +309,7 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$file`|The modification file to parse
 `bool`|`$testing`|Whether we're just doing a test
-`bool`|`$undo`|If true, specifies that the modifications should be undone. Used when uninstalling.
+`bool`|`$undo`|If true, specifies that the modifications should be undone\. Used when uninstalling\.
 `array`|`$theme_paths`|An array of information about custom themes to apply the changes to
 
 ### package_get_contents
@@ -367,7 +367,7 @@ Try to make a file writable.
 Type|Parameter|Description
 ---|---|---
 `string`|`$filename`|The name of the file
-`string`|`$perm_state`|The permission state - can be either 'writable' or 'execute'
+`string`|`$perm_state`|The permission state \- can be either 'writable' or 'execute'
 `bool`|`$track_change`|Whether to track this change
 
 ### package_crypt
@@ -461,5 +461,5 @@ Sending data off to validate packages.
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$sendData`|Json encoded data to be sent to the validation servers.
+`array`|`$sendData`|Json encoded data to be sent to the validation servers\.
 

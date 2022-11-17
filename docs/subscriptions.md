@@ -19,5 +19,5 @@ Log an error then exit
 Type|Parameter|Description
 ---|---|---
 `string`|`$text`|The error to log
-`bool`|`$debug`|If true, won't send an email if $modSettings['paid_email'] isn't set
+`bool`|`$debug`|If true, won't send an email if $modSettings\['paid\_email'\] isn't set
 

@@ -3,7 +3,7 @@ layout: default
 group: func
 navtitle: Subs-Post.php
 title: ./Sources/Subs-Post.php
-count: 23
+count: 24
 ---
 * auto-gen TOC:
 {:toc}
@@ -68,9 +68,9 @@ Type|Parameter|Description
 `string`|`$message`|The message
 `string`|`$myTag`|The tag
 `string`|`$protocols`|The protocols
-`bool`|`$embeddedUrl`|Whether it *can* be set to something
-`bool`|`$hasEqualSign`|Whether it *is* set to something
-`bool`|`$hasExtra`|Whether it can have extra cruft after the begin tag.
+`bool`|`$embeddedUrl`|Whether it \*can\* be set to something
+`bool`|`$hasEqualSign`|Whether it \*is\* set to something
+`bool`|`$hasExtra`|Whether it can have extra cruft after the begin tag\.
 
 ### sendmail
 
@@ -83,12 +83,12 @@ It uses the mail_type settings and webmaster_email variable.
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$to`|The email(s) to send to
+`array`|`$to`|The email\(s\) to send to
 `string`|`$subject`|Email subject, expected to have entities, and slashes, but not be parsed
 `string`|`$message`|Email body, expected to have slashes, no htmlentities
 `string`|`$from`|The address to use for replies
-`string`|`$message_id`|If specified, it will be used as local part of the Message-ID header.
-`bool`|`$send_html`|Whether or not the message is HTML vs. plain text
+`string`|`$message_id`|If specified, it will be used as local part of the Message\-ID header\.
+`bool`|`$send_html`|Whether or not the message is HTML vs\. plain text
 `int`|`$priority`|The priority of the message
 `bool`|`$hotmail_fix`|Whether to apply the "hotmail fix"
 `bool`|`$is_private`|Whether this is private
@@ -128,12 +128,12 @@ Sends an personal message from the specified person to the specified people
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$recipients`|An array containing the arrays 'to' and 'bcc', both containing id_member's.
+`array`|`$recipients`|An array containing the arrays 'to' and 'bcc', both containing id\_member's\.
 `string`|`$subject`|Should have no slashes and no html entities
 `string`|`$message`|Should have no slashes and no html entities
 `bool`|`$store_outbox`|Whether to store it in the sender's outbox
-`array`|`$from`|An array with the id, name, and username of the member.
-`int`|`$pm_head`|The ID of the chain being replied to - if any.
+`array`|`$from`|An array with the id, name, and username of the member\.
+`int`|`$pm_head`|The ID of the chain being replied to \- if any\.
 
 Integration hooks
 : integrate_personal_message
@@ -153,8 +153,8 @@ Otherwise the transport method '7bit' is used.
 Type|Parameter|Description
 ---|---|---
 `string`|`$string`|The string
-`bool`|`$with_charset`|Whether we're specifying a charset ($custom_charset must be set here)
-`bool`|`$hotmail_fix`|Whether to apply the hotmail fix  (all higher ASCII characters are converted to HTML entities to assure proper display of the mail)
+`bool`|`$with_charset`|Whether we're specifying a charset \($custom\_charset must be set here\)
+`bool`|`$hotmail_fix`|Whether to apply the hotmail fix  \(all higher ASCII characters are converted to HTML entities to assure proper display of the mail\)
 `string`|`$line_break`|The linebreak
 `string`|`$custom_charset`|If set, it uses this character set
 
@@ -169,7 +169,7 @@ It expects no slashes or entities.
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$mail_to_array`|Array of strings (email addresses)
+`array`|`$mail_to_array`|Array of strings \(email addresses\)
 `string`|`$subject`|Email subject
 `string`|`$message`|Email message
 `string`|`$headers`|Email headers
@@ -217,10 +217,10 @@ Uses Post language file
 
 Type|Parameter|Description
 ---|---|---
-`array`|`$topics`|Represents the topics the action is happening to.
-`string`|`$type`|Can be any of reply, sticky, lock, unlock, remove, move, merge, and split.  An appropriate message will be sent for each.
-`array`|`$exclude`|Members in the exclude array will not be processed for the topic with the same key.
-`array`|`$members_only`|Are the only ones that will be sent the notification if they have it on.
+`array`|`$topics`|Represents the topics the action is happening to\.
+`string`|`$type`|Can be any of reply, sticky, lock, unlock, remove, move, merge, and split\.  An appropriate message will be sent for each\.
+`array`|`$exclude`|Members in the exclude array will not be processed for the topic with the same key\.
+`array`|`$members_only`|Are the only ones that will be sent the notification if they have it on\.
 
 ### createPost
 
@@ -277,7 +277,7 @@ Approve (or not) some posts... without permission checks.
 Type|Parameter|Description
 ---|---|---
 `array`|`$msgs`|Array of message ids
-`bool`|`$approve`|Whether to approve the posts (if false, posts are unapproved)
+`bool`|`$approve`|Whether to approve the posts \(if false, posts are unapproved\)
 `bool`|`$notify`|Whether to notify users
 
 Integration hooks
@@ -295,7 +295,21 @@ Approve topics?
 Type|Parameter|Description
 ---|---|---
 `array`|`$topics`|Array of topic ids
-`bool`|`$approve`|Whether to approve the topics. If false, unapproves them instead
+`bool`|`$approve`|Whether to approve the topics\. If false, unapproves them instead
+
+### clearApprovalAlerts
+
+```php
+function clearApprovalAlerts(array $content_ids, string $content_action): void
+```
+Upon approval, clear unread alerts.
+
+
+
+Type|Parameter|Description
+---|---|---
+`int[]`|`$content_ids`|either id\_msgs or id\_topics
+`string`|`$content_action`|will be either 'unapproved\_post' or 'unapproved\_topic'
 
 ### updateLastMessages
 
@@ -330,9 +344,9 @@ Uses the Login language file
 
 Type|Parameter|Description
 ---|---|---
-`string`|`$type`|The type. Types supported are 'approval', 'activation', and 'standard'.
+`string`|`$type`|The type\. Types supported are 'approval', 'activation', and 'standard'\.
 `int`|`$memberID`|The ID of the member
-`string`|`$member_name`|The name of the member (if null, it is pulled from the database)
+`string`|`$member_name`|The name of the member \(if null, it is pulled from the database\)
 
 ### loadEmailTemplate
 
@@ -384,7 +398,7 @@ Determines whether or not the specified word is spelled correctly
 
 Type|Parameter|Description
 ---|---|---
-`resource`|`$dict`|An enchant or pspell dictionary resource set up by {@link spell_init()}
+`resource`|`$dict`|An enchant or pspell dictionary resource set up by \{@link spell\_init\(\)\}
 `string`|`$word`|A word to check the spelling of
 
 ### spell_suggest

@@ -51,7 +51,7 @@ Accessed from ?action=admin;area=postsettings;sa=posts.
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether or not to return the $config_vars array (used for admin search)
+`bool`|`$return_config`|Whether or not to return the $config\_vars array \(used for admin search\)
 
 Integration hooks
 : integrate_modify_post_settings
@@ -69,7 +69,7 @@ Accessed from ?action=admin;area=postsettings;sa=topics.
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
+`bool`|`$return_config`|Whether or not to return the config\_vars array \(used for admin search\)
 
 Integration hooks
 : integrate_modify_topic_settings
@@ -87,5 +87,5 @@ Accessed from ?action=admin;area=postsettings;sa=drafts
 
 Type|Parameter|Description
 ---|---|---
-`bool`|`$return_config`|Whether or not to return the config_vars array (used for admin search)
+`bool`|`$return_config`|Whether or not to return the config\_vars array \(used for admin search\)
 
