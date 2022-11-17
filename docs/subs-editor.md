@@ -108,7 +108,7 @@ Create a anti-bot verification control?
 
 Type|Parameter|Description
 ---|---|---
-`array`|`\&$verificationOptions`|Options for the verification control
+`array`|` &$verificationOptions`|Options for the verification control
 `bool`|`$do_test`|Whether to check to see if the user entered the code correctly
 
 Integration hooks

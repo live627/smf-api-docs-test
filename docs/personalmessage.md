@@ -174,9 +174,9 @@ Delete the specified personal messages.
 
 Type|Parameter|Description
 ---|---|---
-`array`&#124;`null`|`$personal_messages`|An array containing the IDs of PMs to delete or null to delete all of them
-`string`&#124;`null`|`$folder`|Which "folder" to delete PMs from \- 'sent' to delete them from the outbox, null or anything else to delete from the inbox
-`array`&#124;`int`&#124;`null`|`$owner`|An array of IDs of users whose PMs are being deleted, the ID of a single user or null to use the current user's ID
+`array` &#124; `null`|`$personal_messages`|An array containing the IDs of PMs to delete or null to delete all of them
+`string` &#124; `null`|`$folder`|Which "folder" to delete PMs from \- 'sent' to delete them from the outbox, null or anything else to delete from the inbox
+`array` &#124; `int` &#124; `null`|`$owner`|An array of IDs of users whose PMs are being deleted, the ID of a single user or null to use the current user's ID
 
 ### markMessages
 
@@ -189,9 +189,9 @@ Mark the specified personal messages read.
 
 Type|Parameter|Description
 ---|---|---
-`array`&#124;`null`|`$personal_messages`|An array of PM IDs to mark or null to mark all
-`int`&#124;`null`|`$label`|The ID of a label\. If set, only messages with this label will be marked\.
-`int`&#124;`null`|`$owner`|If owner is set, marks messages owned by that member id
+`array` &#124; `null`|`$personal_messages`|An array of PM IDs to mark or null to mark all
+`int` &#124; `null`|`$label`|The ID of a label\. If set, only messages with this label will be marked\.
+`int` &#124; `null`|`$owner`|If owner is set, marks messages owned by that member id
 
 ### ManageLabels
 

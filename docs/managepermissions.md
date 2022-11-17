@@ -102,7 +102,7 @@ Type|Parameter|Description
 ---|---|---
 `string`|`$level`|The level \('restrict', 'standard', etc\.\)
 `int`|`$group`|The group to set the permission for
-`string`&#124;`int`|`$profile`|The ID of the permissions profile or 'null' if we're setting it for a group
+`string` &#124; `int`|`$profile`|The ID of the permissions profile or 'null' if we're setting it for a group
 
 Integration hooks
 : integrate_load_permission_levels
@@ -199,8 +199,8 @@ This function updates the permissions of any groups based off this group.
 
 Type|Parameter|Description
 ---|---|---
-`null`&#124;`array`|`$parents`|The parent groups
-`null`&#124;`int`|`$profile`|the ID of a permissions profile to update
+`null` &#124; `array`|`$parents`|The parent groups
+`null` &#124; `int`|`$profile`|the ID of a permissions profile to update
 
 ### loadIllegalPermissions
 

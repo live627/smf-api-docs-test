@@ -54,8 +54,8 @@ The listing could be filtered according to $filter.
 
 Type|Parameter|Description
 ---|---|---
-`string`&#124;`bool`|`$db`|string The database name or false to use the current DB
-`string`&#124;`bool`|`$filter`|String to filter by or false to list all tables
+`string` &#124; `bool`|`$db`|string The database name or false to use the current DB
+`string` &#124; `bool`|`$filter`|String to filter by or false to list all tables
 
 ### smf_db_table_sql
 

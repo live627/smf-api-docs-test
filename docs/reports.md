@@ -144,7 +144,7 @@ once the incoming data has been sanitized, it is added to the table.
 Type|Parameter|Description
 ---|---|---
 `array`|`$inc_data`|The data to include
-`null`&#124;`string`|`$custom_table`|= null The ID of a custom table to put the data in
+`null` &#124; `string`|`$custom_table`|= null The ID of a custom table to put the data in
 
 ### addSeparator
 
@@ -158,7 +158,7 @@ Add a separator row, only really used when adding data by rows.
 Type|Parameter|Description
 ---|---|---
 `string`|`$title`|The title of the separator
-`null`&#124;`string`|`$custom_table`|The ID of the custom table
+`null` &#124; `string`|`$custom_table`|The ID of the custom table
 
 ### finishTables
 

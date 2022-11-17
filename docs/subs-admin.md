@@ -36,7 +36,7 @@ Get detailed version information about the physical SMF files on the server.
 
 Type|Parameter|Description
 ---|---|---
-`array`|`\&$versionOptions`|An array of options\. Can contain one or more of 'include\_ssi', 'include\_subscriptions', 'include\_tasks' and 'sort\_results'
+`array`|` &$versionOptions`|An array of options\. Can contain one or more of 'include\_ssi', 'include\_subscriptions', 'include\_tasks' and 'sort\_results'
 
 ### get_settings_defs
 
@@ -86,7 +86,7 @@ integrate_update_settings_file hook to define it in get_settings_defs().
 Type|Parameter|Description
 ---|---|---
 `array`|`$config_vars`|An array of one or more variables to update\.
-`bool`&#124;`null`|`$keep_quotes`|Whether to strip slashes \& trim quotes from string values\. Defaults to auto\-detection\.
+`bool` &#124; `null`|`$keep_quotes`|Whether to strip slashes \& trim quotes from string values\. Defaults to auto\-detection\.
 `bool`|`$rebuild`|If true, attempts to rebuild with standard format\. Default false\.
 
 ### get_current_settings

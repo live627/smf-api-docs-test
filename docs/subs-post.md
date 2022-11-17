@@ -258,9 +258,9 @@ Modifying a post.
 
 Type|Parameter|Description
 ---|---|---
-`array`|`\&$msgOptions`|An array of information/options for the post
-`array`|`\&$topicOptions`|An array of information/options for the topic
-`array`|`\&$posterOptions`|An array of information/options for the poster
+`array`|` &$msgOptions`|An array of information/options for the post
+`array`|` &$topicOptions`|An array of information/options for the topic
+`array`|` &$posterOptions`|An array of information/options for the poster
 
 Integration hooks
 : integrate_modify_post
