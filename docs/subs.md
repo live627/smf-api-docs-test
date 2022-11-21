@@ -172,7 +172,7 @@ Type|Parameter|Description
 ### smf_strftime
 
 ```php
-function smf_strftime(string $format, ?int $timestamp = null, ?string $tzid = null): string
+function smf_strftime(string $format, int $timestamp = null, string $tzid = null): string
 ```
 Replacement for strftime() that is compatible with PHP 8.1+.
 
@@ -196,7 +196,7 @@ Type|Parameter|Description
 ### smf_gmstrftime
 
 ```php
-function smf_gmstrftime(string $format, ?int $timestamp = null): string
+function smf_gmstrftime(string $format, int $timestamp = null): string
 ```
 Replacement for gmstrftime() that is compatible with PHP 8.1+.
 

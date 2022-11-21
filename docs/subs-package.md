@@ -10,7 +10,7 @@ count: 30
 ### read_tgz_file
 
 ```php
-function read_tgz_file(string $gzfilename, string $destination, bool $single_file = false, bool $overwrite = false, ?array $files_to_extract = null): array|false
+function read_tgz_file(string $gzfilename, ?string $destination, bool $single_file = false, bool $overwrite = false, ?array $files_to_extract = null): array|false
 ```
 Reads an archive from either a remote location or from the local filesystem.
 
@@ -58,7 +58,7 @@ Type|Parameter|Description
 ### read_zip_data
 
 ```php
-function read_zip_data(string $data, string $destination, bool $single_file = false, bool $overwrite = false, array $files_to_extract = null): mixed
+function read_zip_data(string $data, ?string $destination, bool $single_file = false, bool $overwrite = false, ?array $files_to_extract = null): mixed
 ```
 Extract zip data.
 
