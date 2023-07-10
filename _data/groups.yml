@@ -2,6 +2,10 @@ mods:
     name: Modifications
 themes:
     name: Themes
+structs:
+    name: Structures
+other:
+    name: Other
 func:
     name: Function Database
     counter: functions
