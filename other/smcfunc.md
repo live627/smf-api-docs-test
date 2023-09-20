@@ -20,7 +20,7 @@ Type|Parameter|Description
 ### `$smcFunc['htmlspecialchars']`
 
 ```php
-function $smcFunc['entity_fix'](string $string, [int $quote_style = ENT_COMPAT, $charset = 'ISO-8859-1']): string
+function $smcFunc['htmlspecialchars'](string $string, [int $quote_style = ENT_COMPAT, $charset = 'ISO-8859-1']): string
 ```
 This function is similar to PHP's [`htmlspecialchars()`](http://php.net/htmlspecialchars) function; however, it additionally checks the encoding argument and takes care of HTML entities using regex.
 ### `$smcFunc['htmltrim']`
@@ -31,9 +31,10 @@ Returns the character count of string, as an integer.
 The following entities are counted as one character:
 - `&quot;`, `&amp;`, `&lt;`, `&gt;`, `&nbsp;`
 - Any decimal entity in the form of `&$123456;`
+
 ### `$smcFunc['strpos']` 
 ### `$smcFunc['substr']`
-Like [`substr()`](http://php.net/substr), but does not chop multibyte characters nor HTML entities.
+Like [`substr()`](http://php.net/substr), but does not chop multibyte characters nor HTML entities. Neither `$start` nor `$length` can be negative.
 ### `$smcFunc['strtolower']` 
 ### `$smcFunc['strtoupper']` 
 ### `$smcFunc['ucfirst']`
