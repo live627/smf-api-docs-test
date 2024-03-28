@@ -8,20 +8,19 @@ groupname: structs
 Number skeletons are a locale-agnostic way to configure a `NumberFormatter` in
 ICU. Number skeletons work in `MessageFormat`.
 
-Number skeletons consist of case-sensitive tokens that correspond to settings
-in ICU `NumberFormatter`. For example, to format a currency in compact notation
-with the sign always shown, you could use this skeleton:
+## Syntax
+
+- Number skeletons consist of case-sensitive token.
+- Tokens are space-separated, with exceptions for concise skeletons listed at
+the end of this document.
+- A token consists of a *stem* and zero or more *options*.
+- The stem is what occurs before the first `/` character in a token.
+- Each option is preceeded by `/`.
 
     sign-always compact-short currency/GBP
 
-This more concise syntax outputs the same thing:
-
-    +! K currency/GBP
-
-To use a skeleton in `MessageFormat`, use the "number" type and prefix the
-skeleton with `::`
-
-    {0, number, :: +! K currency/GBP}
+    └─ stem ──┘ └── stem ───┘ └─stem─┘ └option┘
+    └─ token ─┘ └── token ──┘ └── token ─┘
 
 ```php
 // Language file
@@ -33,51 +32,6 @@ $txt['sample'] = 'You have {0, number, :: +! K currency/GBP} left.';
 
 Output
  : You have £45.18 left.
-
-## Syntax
-
-A token consists of a *stem* and zero or more *options*.  The stem is what
-occurs before the first `"/"` character in a token, and the options are each of
-the subsequent `"/"`-delimited strings.  For example, `"compact-short"` and
-"currency" are stems, and `"GBP"` is an option.
-
-Tokens are space-separated, with exceptions for concise skeletons listed at
-the end of this document.
-
-Stems might also be dynamic strings (not a fixed list); these are called
-*blueprint stems*.  For example, to format a number with 2-3 significant
-digits, you could use the following stem:
-
-    @@#
-
-A few examples of number skeletons are shown below. The list of available
-stems and options can be found below in [Skeleton Stems and
-Options](#skeleton-stems-and-options).
-
-## Examples
-
-| Long Skeleton | Concise Skeleton | Input | en-US Output | Comments |
-|---|---|---|---|---|
-| `percent` | `%` | 25 | 25% |
-| `.00` | `.00` | 25 | 25.00 | Equivalent to `Precision::fixedFraction(2)` |
-| `percent .00` | `% .00` | 25 | 25.00% |
-| `scale/100` | `scale/100` | 0.3 | 30 | Multiply by 100 before formatting |
-| `percent scale/100` | `%x100` | 0.3 | 30% |
-| `measure-unit/length-meter` | `unit/meter` | 5 | 5 m | `UnitWidth` defaults to `Short` |
-| `measure-unit/length-meter` <br/> `unit-width-full-name` | `unit/meter` <br/> `unit-width-full-name` | 5 | 5 meters |
-| `currency/CAD` | `currency/CAD` | 10 | CA$10.00 |
-| `currency/CAD` <br/> `unit-width-narrow` | `currency/CAD` <br/> `unit-width-narrow` | 10 | $10.00 | Use the narrow symbol variant |
-| `compact-short` | `K` | 5000 | 5K |
-| `compact-long` | `KK` | 5000 | 5 thousand |
-| `compact-short` <br/> `currency/CAD` | `K currency/CAD` | 5000 | CA$5K |
-| - | - | 5000 | 5,000 |
-| `group-min2` | `,?` | 5000 | 5000 | Require 2 digits in group for separator |
-| `group-min2` | `,?` | 15000 | 15,000 |
-| `sign-always` | `+!` | 60 | +60 | Show sign on all numbers |
-| `sign-always` | `+!` | 0 | +0 |
-| `sign-except-zero` | `+?` | 60 | +60 | Show sign on all numbers except 0 |
-| `sign-except-zero` | `+?` | 0 | 0 |
-| `sign-accounting` <br/> `currency/CAD` | `() currency/CAD` | -40 | (CA$40.00) |
 
 ## Skeleton Stems and Options
 
@@ -157,7 +111,8 @@ As with the `measure-unit` stem, pass the unit identifier as the option:
 
 - `per-measure-unit/aaaa-bbbb`
 
-Note that if the `unit` stem is used, the denominator can be placed in the same
+Note
+ : If the `unit` stem is used, the denominator can be placed in the same
 token as the numerator.
 
 ### Unit Width
@@ -341,17 +296,12 @@ The grouping strategy can be specified by the following stems:
 - `group-on-aligned` or `,!` (concise)
 - `group-thousands` (no concise equivalent)
 
-For more details, see
-[`UNumberGroupingStrategy`](https://unicode-org.github.io/icu-docs/apidoc/released/icu4c/unumberformatter_8h.html).
-
 ### Symbols
 
 The following stems are allowed for specifying the number symbols:
 
 - `latin` (use Latin-script digits)
 - `numbering-system/nnnn` (use the `nnnn` numbering system)
-
-A custom `NDecimalFormatSymbols` instance is not supported at this time.
 
 ### Sign Display
 
@@ -367,15 +317,9 @@ The following stems specify sign display:
 - `sign-negative` or `+-` (concise)
 - `sign-accounting-negative` or `()-` (concise)
 
-For more details, see
-[`UNumberSignDisplay`](https://unicode-org.github.io/icu-docs/apidoc/released/icu4c/unumberformatter_8h.html).
-
 ### Decimal Separator Display
 
 The following stems specify decimal separator display:
 
 - `decimal-auto`
 - `decimal-always`
-
-For more details, see
-[`UNumberDecimalSeparatorDisplay`](https://unicode-org.github.io/icu-docs/apidoc/released/icu4c/unumberformatter_8h.html).
