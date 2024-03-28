@@ -16,12 +16,12 @@ the end of this document.
 - A token consists of a *stem* and zero or more *options*.
 - The stem is what occurs before the first `/` character in a token.
 - Each option is preceeded by `/`.
-
+```
     sign-always compact-short currency/GBP
 
     └─ stem ──┘ └── stem ───┘ └─stem─┘ └option┘
     └─ token ─┘ └── token ──┘ └── token ─┘
-
+```
 ```php
 // Language file
 $txt['sample'] = 'You have {0, number, :: +! K currency/GBP} left.';
